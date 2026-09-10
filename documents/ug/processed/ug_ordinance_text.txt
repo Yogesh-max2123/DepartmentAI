@@ -1,0 +1,2976 @@
+
+================================================================================
+PAGE 1
+================================================================================
+
+Approved by the Board of Governors in its Seventy-third (73rd) meeting held
+on August 10, 2023 vide Resolution No. 73.13 (A)
+ORDINANCES FOR BACHELORS’ PROGRAMME
+
+Motilal Nehru National Institute of Technology Allahabad
+Prayagraj, India-211004
+
+================================================================================
+PAGE 2
+================================================================================
+
+ii
+
+================================================================================
+PAGE 3
+================================================================================
+
+iii
+
+Vision and Mission
+
+VISION
+
+To attain a distinct identity for the Institute through technology innovation, knowledge
+creation and dissemination for the benefit of the society.
+
+MISSION
+
+To nurture an eco-system for continuous enhancement of value based teaching and
+learning process in the emerging areas of technology.
+
+To train quality human and knowledge resources in the service of society.
+
+To develop sustainable products and technologies.
+
+================================================================================
+PAGE 4
+================================================================================
+
+iv
+
+TABLE OF CONTENT
+PAGE
+
+PREAMBLE
+Vii
+
+NOMENCLATURE
+viii
+1
+INTRODUCTION
+1
+
+1.1
+Board of Governors (BoG)
+1
+
+1.2
+Senate
+1
+
+1.3
+Undergraduate Programmes
+1
+
+1.4
+Office of the Dean (Academic)
+2
+
+1.5
+Senate Undergraduate Committee (SUGC)
+2
+
+1.6
+Department Undergraduate Committee (DUGC)
+3
+
+1.7
+Board of Studies (BoS)
+4
+
+1.8
+Board of Academics (BoAc)
+4
+
+1.9
+Academic Mentor
+4
+2
+ACADEMIC SESSION
+4
+
+2.1
+Regular Semesters
+4
+
+2.2
+Summer Semester
+5
+
+2.3
+Academic Calendar
+5
+3
+ADMISSION
+5
+
+3.1
+Admission Procedure
+5
+
+3.2
+Admission Cancellation
+5
+
+3.3
+Admission Withdrawal
+5
+
+3.4
+Entry and Exit Options
+6
+4
+CURRICULUM
+6
+
+5
+REGISTRATION
+6
+
+5.1
+Late Registration
+7
+
+5.2
+Semester Load Requirements
+7
+
+5.2.1
+Normal Pace of Study
+7
+
+5.2.2
+Slow Pace of Study
+7
+
+5.3
+Cancellation and Withdrawal of Registration
+7
+
+5.4
+Branch Sliding Rules
+8
+
+5.5
+Registration for Minors
+8
+
+5.6
+Registration for B.Tech. Honours (with or without Minor)
+8
+
+5.7
+Registration for B.Tech. with Research (with or without Minor)
+8
+
+6
+TEACHING AND EVALUATION
+9
+
+6.1
+Teaching
+9
+
+6.1.1 Duration of Classes
+9
+
+6.1.2 Extra Academic Activities
+9
+
+6.1.3 Expert / Invited Lectures
+9
+
+6.2
+Evaluation
+10
+
+6.2.1
+Evaluation Process
+10
+
+6.2.2
+Paper Setting
+11
+
+================================================================================
+PAGE 5
+================================================================================
+
+v
+
+6.2.3
+Schedule of Examination
+11
+
+6.2.4
+Make-up Examination
+11
+
+6.2.5
+Grade Improvement Examination
+11
+
+6.2.6
+For the online courses and courses offered by other Institutions
+under MoU
+12
+
+6.3
+Grading System
+12
+
+6.3.1
+Grades and Grade Points
+12
+
+6.3.2     Grading Online Courses
+13
+
+6.3.3
+Semester Performance Index (SPI)
+13
+
+6.3.4
+Cumulative Performance Index (CPI)
+13
+
+6.3.5
+Grade Report
+13
+
+6.3.6
+Transcript
+14
+
+6.3.7
+Withholding of Grade Report
+14
+
+6.3.8      Marks Normalization for Multi-group Courses
+14
+
+7
+ACADEMIC PERFORMANCE REQUIREMENT
+14
+
+7.1
+Academic Deficiency (ACD)
+14
+
+7.2
+Minimum Performance Requirement for Respective Programmes
+14
+
+7.3
+Degradation of Programme
+15
+
+7.4
+Termination of Programme
+15
+
+7.5
+Appeal against Termination
+15
+8
+HOLIDAYS, VACATION, AND SEMESTER LEAVE
+15
+
+8.1
+Holidays
+15
+
+8.2
+Mid-Semester recess and Vacation
+16
+
+8.3
+Medical Leave
+16
+
+8.4
+Semester Leave
+16
+
+8.5
+Study Leave
+16
+
+8.6
+Extra-curricular Activity Leave
+16
+
+9
+PROGRAMME REQUIREMENTS
+16
+
+9.1
+Attendance Requirement
+16
+
+9.2
+Minimum and Maximum Duration
+17
+
+10
+DEGREES
+17
+
+10.1
+Award of Degree
+17
+
+10.2
+Withdrawal of the Degree
+17
+
+11
+SCHOLARSHIPS, PRIZES, AND MEDALS
+17
+
+11.1
+Scholarships
+17
+
+11.2
+Prizes and Medals
+17
+
+12
+CONDUCT AND DISCIPLINE
+17
+
+================================================================================
+PAGE 6
+================================================================================
+
+vi
+
+12.1
+Code of Conduct
+17
+
+12.2
+Ragging
+18
+
+12.3
+Disciplinary Actions and Related Matter
+18
+
+12.3.1 Proctorial Board
+18
+
+12.4
+Various Cells
+18
+
+12.5
+Unfair Means (UFM)
+18
+
+13
+AMENDMENTS
+19
+
+Annexure
+
+Forms: BP-01 to BP-13
+20-36
+
+================================================================================
+PAGE 7
+================================================================================
+
+vii
+
+PREAMBLE
+
+The provisions contained in these Ordinances for “BACHELORS’
+PROGRAMME” of Motilal Nehru National Institute of Technology
+Allahabad (MNNITA) govern the policies and procedures for the
+admission of students, imparting instructions, conducting examinations,
+evaluation, certification of students’ performance and the various forms
+of flexible academic under-graduate programmes being offered by the
+Institute to the students.
+The present Ordinances have been designed to promote flexible, multi-
+discipline and holistic education including life-long learning. The
+Ordinances also aim to provide regulated academic autonomy with
+delegated academic administrative empowerment at different levels.
+These Ordinances shall supersede all the corresponding earlier set of
+Ordinances for all “BACHELORS’ PROGRAMME” of the Institute,
+with all the amendments thereto, with effect from the date of approval
+of the Board of Governors (BOG) of the Institute, and shall be binding
+on the students admitted in the academic session 2022-23.
+However, the students admitted in earlier academic sessions, shall be
+governed by the Ordinances prevalent at the time of their admission.
+All Undergraduate Students are required to abide by these Ordinances
+for BACHELORS’ PROGRAMMES’ code of ethics and academic
+conduct.
+
+================================================================================
+PAGE 8
+================================================================================
+
+viii
+
+Nomenclature
+
+ACD
+Academic Deficiency
+AS
+Academic Session
+BP
+B.Tech. Programme
+BoAc
+Board of Academics
+BoG
+Board of Governors
+BoS
+Board of Studies
+B.Tech.
+Bachelor of Technology
+CPI
+Cumulative Performance Index
+DASA
+Direct Admission of Students Abroad
+DUGC
+Department Undergraduate Committee
+g
+grade points associated with the letter grades awarded to a student
+GoI
+Government of India
+ICCR
+Indian Council of Cultural Relations
+MEA
+Ministry of External Affairs
+MNNITA
+Motilal Nehru National Institute of Technology Allahabad
+MOOCs
+Massive Open Online Courses
+MoU
+Memorandum of understanding
+s/he
+she or he
+SMPC
+Senate Masters’ Programme Committee
+SPI
+Semester Performance Index
+SUGC
+Senate Under Graduate Committee
+UFM
+Unfair Means
+w
+weight or credit of the course
+
+================================================================================
+PAGE 9
+================================================================================
+
+1
+
+1.
+INTRODUCTION
+The objectives of all the Undergraduate Programmes at the Motilal Nehru National Institute of
+Technology Allahabad (MNNITA) are:
+
+To provide the highest level of education in Technology and Science, and to produce
+competent, creative, and imaginative Engineers and Scientists.
+
+To promote a spirit of free and objective enquiry in different fields of knowledge.
+
+To make a significant contribution towards the development of skilled technical manpower.
+
+To create an intellectual reservoir to meet the growing demands of the society and nation, and
+
+To attain a distinct identity for the Institute and oneself through technology innovation and
+dissemination for the benefit of the society and nation.
+
+To promote research and innovation and professional competence amongst students.
+
+To promote flexible, multi-discipline and holistic education including life-long learning.
+The Undergraduate Programmes are designed to achieve these objectives and to inculcate in the
+student concepts and intellectual skills, courage and integrity, awareness and sensitivity towards
+the needs and aspirations of the society in the national and global contexts.
+These ordinances set out the procedures and requirements of the Undergraduate Programmes of
+study that fall under the direct purview of the Senate Under Graduate Committee (SUGC).
+
+1.1
+Board of Governors (BoG)
+The Board of Governors of the Institute, hereinafter, referred to as BoG, is constituted as per the
+provisions contained in Sections 10 and 11of the National Institutes of Technology Act, 2007.
+BOG is one of the “Authorities of Institute”.
+
+1.2
+Senate
+The Senate of the Institute is constituted as per the provisions contained in Section 14 of the
+National Institutes of Technology Act, 2007. Subject to the provisions of the Act, the Senate of
+the Institute shall have the control over general regulations and be responsible for the maintenance
+of standards of instruction, education, and examination in the Institute and shall exercise such
+other powers and perform such other duties as may be conferred or imposed upon it by the
+Statutes. Director of the Institute acts as the Chairperson, Senate.
+
+1.3
+Undergraduate Programmes
+Six different variants of Bachelor of Technology programs are offered by the Institute. They are
+designated as Basic Degree viz. B.Tech., B.Tech. with Minor, B.Tech. Honours, B.Tech.
+Honoursand Minor, B.Tech. with Research, and B.Tech. with Research and Minor.
+
+The associated degree nomenclature of each of the undergraduate programmes is given
+below:
+Programme Type
+Degree nomenclature
+
+Basic Degree
+B.Tech. (_____________)
+Basic + Minor
+B.Tech. (_____________) and Minor in (_____________)
+Basic + Honours
+B.Tech. Honours (__________)
+Basic + Research
+B.Tech. (__________) with Research
+Basic + Honours + Minor
+B.Tech. Honours (__________) and Minor in (___________)
+Basic + Research + Minor
+B.Tech. (__________) with Research and Minor in (___________)
+
+(A) Basic Degree viz. B. Tech
+Basic Degree viz. B.Tech. Programme refers to normal/regular B.Tech. Undergraduate
+Programme without any specialty, where a student needs to earn minimum required 160-170
+credits relevant to her / his discipline.
+
+================================================================================
+PAGE 10
+================================================================================
+
+2
+
+(B) B.Tech. Honours
+B.Tech. (Honours) Programme refers to B.Tech. Undergraduate Programme with Honours
+indicating a higher quality and quantity of study in her / his own discipline. A student needs to
+earn additional 16-20 credits through specialized courses enhancing the professional competence
+and capabilities, above the minimum required credits for Basic Degree viz. B.Tech. degree,
+relevant to her / his discipline.
+
+(C) B.Tech. with Research
+B.Tech. with Research Programme refers to B.Tech. Undergraduate Programme with Research
+where a student needs to earn additional 16-20 credits through Research / PG level courses, above
+the minimum required credits for Basic Degree viz. B. Tech., relevant to her / his discipline
+enabling her / him to pursue M.Tech. in one year or direct admission in PhD Programme
+
+(D)  Basic Degree viz. B. Tech./ B.Tech. Honours/ B.Tech. with Research, with Minor
+Basic Degree viz. B. Tech./ B.Tech. Honours/ B.Tech. with Research, with Minor(s)
+programmes refer to B.Tech. Programmes undertaken by students with multidiscipline study of
+additional discipline(s), in addition to the discipline in which a student has been admitted. Opting
+for such additional Minor disciplines of study would be limited to two. For each of such
+Programmes with Minor, a student needs to earn additional 16-24 credits (for each minor) through
+prescribed courses related to the Minor, above the minimum required credits for B.Tech. degree
+relevant to her / his discipline.
+Presently 4-year Bachelor of Technology (B.Tech.) Programmes in the Institute are being offered
+in eight disciplines of engineering and technology viz. Biotechnology, Chemical Engineering,
+Civil Engineering, Computer Science and Engineering, Electrical Engineering, Electronics and
+Communication Engineering, Mechanical Engineering, and Production and Industrial
+Engineering.
+Institute may start new under-graduate programme(s) in other disciplines after due approval of the
+Senate and the Board of Governors.
+
+1.4
+Office of the Dean (Academic)
+The Office of the Dean (Academic) is responsible for the implementation of the decisions taken
+on academic matters by the Senate of the Institute, SUGC and other duly constituted Senate
+Committees. The office of the Dean (Academic) shall (i) receive, process and maintain all records
+related to the Undergraduate Programmes including curricula, courses offered, academic calendar,
+registration, semester leave, examinations, grades and award of degrees and medals/ prizes (ii)
+disseminate information pertaining to all academic matters (iii) issue necessary Memoranda /
+Orders (iv) act as a channel of communication between the students, instructors, departments /
+interdisciplinary programme / schools / cells / centres and the SUGC. The Undergraduate Section
+of the office of Dean (Academic) shall assist the SUGC in its functioning.
+
+1.5
+Senate Undergraduate Committee (SUGC)
+The Senate Undergraduate Committee, hereinafter, referred to as SUGC, is established according
+to the bye-laws of the Senate. The SUGC, is one of the standing committees of the Senate, shall
+consist of following members:
+(i)
+Chairperson, SUGC nominated by the Senate / Chairperson, Senate from amongst the
+members of the Senate.
+(ii) Outgoing Chairperson, SUGC.
+(iii) Chairperson, Senate Masters’ Programme Committee (SMPC).
+(iv) Two Senate nominees from amongst the Senate members.
+(v) Convener, DUGC of all Academic Departments and the Interdisciplinary Programmes.
+(vi) Three undergraduate students (one each from second, third and fourth year, and all from
+different departments and at least one female student). The student members shall be
+nominated by Dean (Academic).
+
+================================================================================
+PAGE 11
+================================================================================
+
+3
+
+The tenure of the Chairperson, SUGC and Senate nominees shall be normally of two years. The
+tenure of student nominees shall be of one year. The student members shall not participate in
+SUGC meetings when the cases of academic evaluation of a student is being considered, although
+the students' opinion might be sought prior to taking any decision. The SUGC must meet at least
+twice in every Semester. The Chairperson, SUGC shall keep record of its decisions.
+The SUGC shall have jurisdiction in the recommendation of the following matters concerning the
+Undergraduate Programmes of the Institute:
+
+Introduction of new Course(s),
+
+Desirable modification of Courses already approved,
+
+Modification of the credit value of Courses,
+
+To help in conducting of oral and written Examinations, award of degree,
+
+To consider the recommendations of the DUGCs, and
+
+Other related matters as may be referred to it by the Senate from time to time.
+The functions of the SUGC shall be of general policy determination, coordination and review,
+however, the Senate shall retain the power of final decision. In the discharge of its responsibilities,
+the SUGC shall make full use of the appraisals and recommendations of the various Academic
+Departments.
+
+1.6
+Department Undergraduate Committee (DUGC)
+Each Department shall have a Department Undergraduate Committee, hereinafter, referred to as
+DUGC, consisting of the following:
+(i)
+Head of the Department as ex-officio Chairperson.
+(ii) Convener, Department Masters’ Programme Committee / Convener, Department Doctoral
+Programme Committee.
+(iii) Three to five faculty members to be chosen from the Department.
+(iv) One professor from another Department.
+(v) Three Departmental UG students, one each from the second year, third year, and final year of
+UG Programmes offered by the Department, respectively. The student members shall be
+nominated for a period of one year.
+(vi) Convener, DUGC is to be nominated by Head of the Department among the faculty members
+of the Department.
+The faculty members from the Department shall comprise at least one Professor (if available), one
+Associate Professor, and one Assistant Professor. The Convener, DUGC and other members of
+the DUGC shall be proposed by the Head of the Department along with the recommendation of
+Departmental faculty advisory committee for a term of two years starting from the month of July
+of the Academic Session.
+The proposed DUGC shall be approved by the Chairperson, SUGC.
+The DUGC shall be responsible for the following:
+a)
+ monitoring of quality of instructions to students.
+b) proposing and implementing new Courses and desirable modification of courses already
+approved.
+c)
+attending to the problems of UG students and advising them in academic matters.
+d) coordinating grade submission to the office of Dean (Academic).
+e)
+obtaining feedback of the performance appraisal of the Course Instructors from the students
+in the prescribed format [Form: BP-01 & BP-02].
+f)
+advising the students with regard to opting online courses or courses offered by other
+Institutions.
+g) mapping the marks/ grades earned by students under Clause (vi) as above, for preparation of
+grade sheet.
+h) advising students for selection of minor, core engineering supported courses,
+Honours&Research courses & processing the allotment of these courses in association with
+Dean academic office. Associated modalities will be evolved by the concerned departments
+as per the requirements.
+
+================================================================================
+PAGE 12
+================================================================================
+
+4
+
+1.7
+Board of Studies (BoS)
+There will be a Board of Studies, hereinafter, referred to as BoS, for every Department. BoS
+functions will include framing the content of various courses, reviewing and updating the content
+and introducing new courses of study on a regular basis.
+The composition of the BoS is as below:
+(i) The Head of the Department as Chairperson.
+(ii) All Professors / Associate Professors / Assistant Professors of the Department.
+(iii) Members nominated by the Dean (Academic) on the recommendation of the Head of the
+Department as given below:
+a) One Professor / Associate professor from physics, chemistry, mathematics, humanities
+and allied Departments nominated by respective Head of the Department.
+b) One subject expert from IISc / IITs / NITs.
+c) One subject expert with at least 10 years of experience in the relevant field from a
+Central/ State Organization/ R&D labs or from a reputed Industry.
+d) One Alumni with at least 10 years of experience in the relevant field from a reputed R&D
+/ Industry.
+The BoS shall be constituted by the Department for a period of two years. The meetings of the
+BoS shall be arranged at least once in a year. The Board of Studies will have a power to advise the
+Department and prepare, revise or update content of courses as per the guidelines stipulated by the
+Senate. The duly considered recommendations of the BoS will be submitted to the BoAc for
+further consideration.
+
+1.8
+Board of Academics (BoAc)
+There will be a Board of Academics, hereinafter, referred to as BoAc, for every Department. The
+constitution and role of the BoAc shall be as per guidelines of NIT Statutes, as amended from
+time to time. The BoAc will scrutinize the changes in existing curriculum or new proposals. The
+duly considered recommendations of the BoAc will be submitted to the Senate for discussion and
+approval.
+
+1.9
+Academic Mentor(s)
+To help the students in planning their courses of study and to render general advice regarding their
+Academic Programme, the concerned Head of the Department will assign faculty member(s) to
+every batch of students, who will be called as an Academic Mentor. The duty hours of mentors
+(normally two hours per week) will be counted towards as her / his academic load. The group of
+students thus assigned will continue to be under the guidance of the Academic Mentor(s) till they
+complete the programme until otherwise changed. Academic Mentor(s) will provide guidance and
+advise students on a wide range of academic and allied topics through academic mentoring
+sessions. Such session shall be decided by the particular Academic Mentor and assigned group of
+students. Academic Mentor(s) can act as space for dialogic education, where academics and
+students can discuss students' studies and overall progress.
+
+2.
+ACADEMIC SESSION (AS)
+The Academic Session, hereinafter, referred to as AS, of the Institute is divided into two Regular
+Semesters - Odd semester & Even semester of nearly one year of duration. Summer Semester will
+be optional, and will be decided by the Department based on the availability of the faculty
+members and other resources. Additionally, each AS should be documented through Academic
+Calendar.
+
+2.1
+Regular Semesters
+The Regular Semesters of AS are termed as Odd and Even Semesters.
+The Odd Semester and the Even Semester usually commence in July and January every year,
+respectively. Each regular Semester (Odd and Even) are twelve weeks in duration for the purpose
+of instructions. In addition, two weeks of each Semester are earmarked for the End-Semester
+Examination and one week during the Semester is for Mid-Semester Examination.
+
+================================================================================
+PAGE 13
+================================================================================
+
+5
+
+2.2
+Summer Semester
+Summer Semester is the third semester in the AS and will be conducted with the discretion of the
+Department. However, in exceptional cases, office of Dean (Academic) may take decision in
+consultation with the concerned Department for the interest of the students. For students, studying
+in Summer Semester is optional. Summer Semester runs between declaration of results of even
+semester and the commencement of the classes of next AS. Summer semester is of 3-4weeks
+duration for teaching and guidance of the students. Students can appear in Grade Improvement
+Examination after their Summer Semester.
+
+2.3
+Academic Calendar
+The exact dates of all the important events, such as online registration, physical reporting in the
+institute / deeksharambh, Orientation, Registration, Late Registration, Commencement of Classes,
+Adding and Dropping of Courses, Submission of Documents, Mid semester Examinations,
+Submission of Grades, Holidays, Vacation, Mid-Semester Recess, Official Students Activities
+etc., during the AS are specified in the Academic Calendar of the Institute as approved by the
+Senate. The Dean (Academic) shall notify the Academic Calendar of each Semester or for an AS
+after approval of the Senate, before the commencement of the semester. Any modification /
+change in Academic Calendar due to an emergent situation shall be proposed by the Dean
+(Academic) for the approval by the Chairperson, Senate and subsequently, to be reported to the
+Senate for ratification.
+
+3.
+ADMISSION
+3.1
+Admission Procedure
+(a) Admission to various Programmes shall be made once in a year as per the guidelines framed
+by the Government of India (GoI) from time to time.
+(b) Admissions may be offered through a centralized counseling process as applicable.
+(c) A few admissions may be offered under the Cultural Exchange Fellowship Programme of the
+GoI, administered by the Indian Council of Cultural Relations (ICCR) and Direct Admission
+of Students Abroad (DASA) and Ministry of External Affairs (MEA) as per rules of the
+respective scheme.
+(d) Reservation shall be as per the GoI guidelines framed from time to time.
+(e)  Students shall pursue their respective B.Tech. Programme allocated to them at the time of
+admission. The Senate may allow a slide of branch at the beginning of the second year based
+on academic performance in the first year, as per the branch sliding rules described in Clause
+5.4.
+Admission to any Undergraduate Programme of the Institute requires that the applicant shall
+complete all the registration formalities laid down in Section 5.
+
+3.2
+Admission Cancellation
+All students admitted to any Programme shall submit copies of their mark-sheets, provisional
+certificates, transfer certificate / migration, etc., of the qualifying examination and other
+documents to the office of the Dean (Academic) by the last date specified for the purpose in the
+academic calendar. The Dean (Academic), in consultation with the Director, may cancel the
+admission of any student who fails to submit the prescribed documents by the specified date or to
+meet other stipulated requirement(s). The Senate Chairperson may also cancel the admission at
+any later stage if it is found that the student had supplied some false information or suppressed
+relevant information while seeking admission or s/he was involved in the act of indiscipline as per
+Clause 12.
+
+3.3
+Admission Withdrawal
+The Senate Chairperson may grant permission to withdraw from a Programme after considering
+the circumstances faced by the student and the recommendations of the convener DUGC,
+
+================================================================================
+PAGE 14
+================================================================================
+
+6
+
+concerned HOD and chairperson SUGC [Form: BP-03]. The students may also be permitted to
+exercise Exit Options as per Clause 3.4.
+
+3.4       Entry and Exit Options
+For the students who want to opt for multiple entry /exit option for the Programme, the rules are
+as follows:
+(i)
+Students may be allowed to re-enter the Programme within five (5) years from the date of
+leaving the Institution. Total exclusive / effective study duration of the Programme shall be as
+per clause 9.2. However, under extraordinary situation, a suitable decision may be taken by
+the Chairperson, Senate.
+(ii)
+As per NEP 2020, multiple exit stages with some kind of authorized exit certificates may be
+introduced by the senate.
+
+4.
+CURRICULUM (B. Tech. Programme)
+The details of six variants of Basic B. Tech. programmes offered by the Institute to the students
+are given below:
+4 Year B.Tech. Programmes
+S.
+No
+Programme
+Composition
+Credit Distribution
+Remarks
+Basic
+Degree
+Minor
+Honours
+Research
+Total
+1
+B.Tech
+B.Tech
+Regular
+160-170
+-
+-
+-
+160-170
+Course Structure in line
+with NEP 2020
+2
+B.Tech with Minor
+B.Tech +
+Minor
+160-170
+16-24
+-
+-
+176-194
+Course Structure in line
+with NEP 2020 with multi -
+discipline learning and for
+additional skill-set
+3
+B.TechHonours
+B.Tech +
+Honours
+160-170
+-
+16-20
+-
+176-190
+Basket of Honours Course
+Works in general to be
+independent
+of
+M.Tech
+Specialization but may also
+contain subjects of M.Tech
+4
+B.TechHonours and
+Minor
+B.Tech +
+Honours +
+Minor
+160-170
+16-24
+16-20
+-
+192-214
+5
+B.TechwithResearch
+B.Techwith
+Research
+160-170
+-
+-
+16-20
+176-190
+Basket of Research Course
+Works invariably to be from
+M.Tech Specialization
+6
+B.Techwith
+Research and
+Minor
+B.Techwith
+Research +
+Minor
+160-170
+16-24
+-
+16-20
+192-214
+
+Following five categories of courses are offered by various departments in B Tech Programme(s)
+Course Category Nomenclature
+Acronym
+Professional competence enhancing course(s)
+PCE
+Core Engineering Foundation Course(s)
+CEF
+Core Engineering Supporting Course (s)
+CES
+Core Engineering Essentials Course(s)
+CEE
+Extra Academic Activity related courses
+EEA
+
+Note: The Committee considered the proposal of Chairman, SUGC, on the Mapping of First &
+Second Semester of B.Tech. programme (prior to Academic Session 2022-23) with First &
+Second Semester of B.Tech. programme w.e.f. Academic Session 2022-23, and it was resolved
+that the DUGC of the associated department(s) will establish the equivalence of each course for
+content and credits. In case of a difference in content, additional classes for covering the
+unmatched course content will be allocated to bring the equivalence.
+
+5.
+REGISTRATION
+The office of the Dean (Academic) coordinates the registration process with the assistance of the
+Departments. All students shall register in each semester for the courses to be pursued by them, as
+per the programme requirements, on the dates specified in the academic calendar. The details of
+the registration process are given below:
+
+================================================================================
+PAGE 15
+================================================================================
+
+7
+
+(i)
+The registration process involves payment of fees and clearance of outstanding dues (if any),
+and signing of the registration roll provided by the office of the Dean (Academic) for
+physical registration, without which the registration process will remain incomplete.
+(ii) All students, including those on authorized leave, shall continue to register until they
+complete the programme. Students on authorized leave, shall be required to mandatorily
+register for zero credits.
+(iii) The student registering for a particular semester (other than first semester) must fulfill the
+academic performance requirements specified in Section 7. Those students who after
+registering in the semester wish to avail leave for the period more than as admissible in the
+Ordinances may be advised for the semester leave as specified in Section 8.
+(iv) The candidate admitted in the first year in any programme is required to submit documents
+of having passed the qualifying examination by the specified date to get her /his registration
+regularized.
+(v) Students registering from V semester onwards have to fulfill the academic requirements as
+per clause 7.1.
+The sole responsibility for registration shall rest with the student concerned.
+
+5.1
+Late Registration
+Late registration is discouraged.
+However, late registration will be permitted with a financial fine as decided from time to time up
+to two weeks from the notified last date of registration. No registration shall be allowed after the
+notified last date of late registration during the semester except in special cases with the
+permission of Dean (Academic) on the recommendation of Head of the concerned Department.
+
+5.2
+Semester Load Requirements
+A student shall register for theory and practical courses every semester as per the respective
+programme. Each course carries a weight in terms of credit units depending upon the nature of the
+course (theory / practical / theory & practical) which, in turn, is determined by the number of
+contact hours (lectures and tutorials), laboratory hours and additional hours that a student is
+expected to devote per week. Only approved courses shall be offered during a semester.
+A student may opt a normal or slow pace of study depending upon her /his academic capacity. A
+student opting for slow pace shall have to intimate the same at the time of registration in the odd
+semester [Form: BP-04]
+
+5.2.1
+Normal Pace of Study
+Normally a student shall be expected to study all the courses offered as per the normal curriculum
+of the programme every semester and shall try to complete the degree requirement in the
+stipulated time, as applicable.
+
+5.2.2
+Slow Pace of Study
+In case, a student finds it difficult to cope up with the normal curriculum load of a semester, s/he
+may opt for a slow pace only after the completion of the second semester. The opting-out of a
+desired course by a student will be approved by the Head of the concerned Department based on
+the recommendation of convener DUGC as per the requirements in the subsequent semester(s).
+A slow pace of study shall allow the student to register for minimum two-thirds (2/3) of the
+normal semester academic load requirements.
+
+5.3
+Cancellation and Withdrawal of Registration
+(i) Cancellation of Registration: Registration in a semester shall stand cancelled at any stage if
+the student fails to fulfill the laid down criteria for registration in that semester.
+(ii) Withdrawal of Registration: The Dean (Academic) may grant permission to withdraw from
+a Programme (i.e., permanent exit from the programme) after considering the circumstances
+faced by the student and on the recommendations of the DUGC and SUGC.
+
+================================================================================
+PAGE 16
+================================================================================
+
+8
+
+5.4
+Branch Sliding Rules
+A student may be allowed for sliding of branch based on her/his academic performance in the first
+year, subjected to the guidelines framed by the Institute from time to time. Students whose
+branches are changed because of branch sliding will be required to earn additional credits viz.
+credits over and above the total credit requirement of the associated branch-specific programme
+for the left out courses, which the student will study to meet the academic requirements for
+completing the programme.  The credits earned in the B. Tech. I and II Semesters in the branch-
+specific courses of previous branch viz. branch allotted in I year, will not be accounted for
+meeting the credit requirement of the branch, after sliding.
+For example: The branch of a student who was admitted in B. Tech. I year in Chemical
+Engineering has been changed to B. Tech. ECE in III Semester because of branch sliding.
+Assuming that the B. Tech.  ECE programme has total credits of 160, and there are 03 ECE
+branch specific courses in B. Tech. I year ECE with aggregate credits of 9, then the student will
+be required to complete these 03 ECE branch specific courses of B. Tech. I year ECE with
+aggregate credits of 9, as stipulated above. Thus, the student will be required to earn a total of 169
+credits [160+9] by taking branch specific courses of B. Tech.  I year [I and II Semester] of ECE,
+before becoming eligible for the award of B. Tech. Degree in ECE.
+
+5.5
+Registration for Minor Programme(s)
+(i)
+A student may be allowed to register for Minor Programme(s) before the commencement of
+3rd/4th semester if s/he fulfils the eligibility requirements for minor programmes at the time
+of registration as per the clause 7.2. [Form: BP-05]
+(ii) A student can register for a maximum of two Minor credit courses for one or more than one
+Minors in a particular semester.
+(iii) The student will apply for registration of Minor credit courses [Form: BP-06] by the notified
+last date of Minor registration.
+(iv) The total number of seats for each Minor will normally be limited to 10% to 20% of the total
+sanctioned intake of the particular B.Tech. programme of respective department. However,
+the departments may increase the upper limit based upon their resources.
+(v) The minimum number of students for running any Minor programme will be five (5).
+
+5.6
+Registration for B.Tech. Honours (with or without Minor)
+The composition of the courses will be decided by the department. The department shall suggest a
+composition of three compulsory courses with remaining as electives
+(i)
+A student may be allowed to register for Honours credit courses from 5th semester onwards
+if s/he fulfils the eligibility requirements for Honours courses at the time of registration.
+[Form: BP-07]
+(ii) The student will apply for registration to Honours credit courses [Form: BP-08] by the
+notified last date of Honours registration.
+(iii) The number of seats for each Honours course offered by a particular Department will
+normally be limited to 10% to 20% of the sanctioned intake of the B.Tech. programme
+offered by the respective Department. However, the departments may increase the upper limit
+based upon their resources.
+(iv) The minimum number of students for running any Honours course will be five (5).
+
+5.7
+Registration for B.Tech. with Research (with or without Minor)
+(i)
+A student may be allowed to register for Research credit courses from 5th semester onwards
+if s/he fulfils the eligibility requirements for Research programmes at the time of registration.
+[Form: BP-07]
+(ii) The student will apply for registration of Research credit courses [Form: BP-08] by the
+notified last date of Research registration.
+
+================================================================================
+PAGE 17
+================================================================================
+
+9
+
+(iii) The number of seats for each Research programme offered by a particular Department will
+normally be limited to 10-20% of the sanctioned intake of the B.Tech. Programmes offered
+by the respective Department. However, the departments may increase the upper limit based
+upon their resources.
+(iv) The minimum number of students for running any Research programme will be five (5).
+
+6.
+TEACHING AND EVALUATION
+6.1
+Teaching
+(i)
+Medium- The medium of instructions shall be English/ Regional language (Hindi).
+(ii) List of Courses- The list of courses for a specific B.Tech. Programme to be offered by a
+Department/ Interdisciplinary Programme is finalized before the beginning of the Semester
+and it will be notified by office of the Dean (Academic).
+(iii) Conduct of Courses-The Course Coordinator conducts each course with the assistance of
+the required number of Faculty Members. The Course Coordinator is responsible for
+conducting the course, holding the Examinations, evaluating the performance of the
+students, awarding grades at the end of the Semester and at the end of the Grade
+Improvement Examination, and transmitting the grades to the office of the Dean (Academic)
+within the prescribed time limit with the assistance of Course Instructor(s).
+(iv) Teaching Assignments-The Parent Department (coordinating Department) will appoint a
+coordinator for each course. For courses of interdisciplinary nature, the course coordinators
+and associated faculty members shall be decided mutually by the Heads of the concerned
+Departments.
+The departments may also advise students to take online courses and / or MOOCs and / or
+courses offered by other Institution sunder MoU. The Head of the Department shall appoint
+coordinator(s) for advising and mentoring & compilation of results for students who have
+opted online courses and / or MOOCs and / or courses offered by other Institutions under
+MoU. Maximum 20% of the total credits in a base programme can be opted through online
+subjects to a maximum of 03 courses per semester.
+
+Audit Courses:
+A student may also opt for audit course(s)from any Department, which may enhance her /
+his academics.
+A student may opt for maximum two audit courses in addition to the prescribed Academic
+Load requirement with the permission of the concerned DUGC at the beginning of a
+semester [Form: BP-09]. There will, however, be no obligation on the part of the
+Department to reschedule the time-table if any clash arises. Under this arrangement, the
+student is simply auditing the course and the grade awarded to her / him in that course(s)
+shall be mentioned in her /his Grade report, however, shall not be considered for SPI
+calculations. Audit courses can be dropped any time during the Semester but not later than
+two weeks prior to the end of classes.
+
+6.1.1  Duration of Classes
+Official time for classes is from 8:00 am to 6:00 pm. Students of a specific class must follow the
+timetable as notified by the respective Department. However, in case of academic requirement
+classes may also be held on weekends / holidays with prior notifications.
+
+6.1.2  Extra Academic Activities
+Extra Academic Activity classes will be held beyond the regular academic schedule and according
+to a notified time table as when decided by the Department / Dean (Academic).
+
+6.1.3  Expert / Invited Lectures
+Departments may conduct at least one Expert / Invited Lecture from an eminent professional for
+each offered course in the department for enriching knowledge and subject awareness of the
+
+================================================================================
+PAGE 18
+================================================================================
+
+10
+
+students along with interaction of students with professionals. These lectures/ interactions will be
+compulsory for all the concerned students, and will be considered as an academic audit activity.
+
+6.2
+Evaluation
+6.2.1  Evaluation Process
+The evaluation of students in a Course shall be a continuous process and is based on their
+performances in the Examinations, Class tests, Quizzes / Short tests, Tutorials, Assignments,
+Laboratory work, Make-up Examinations (if applicable), Studios, etc.
+The weightages of Examinations and regular assessment for awarding of Grades shall be as
+follows.
+
+(i) Theory Type of Courses: This type of course includes either lecture (at least 2 hours) or /
+and tutorial classes.
+Mid-Sem Exam
+Assessment
+End-Sem Exam
+25% (90 minutes duration)
+25%
+50% (150 minutes duration)
+Assessment marks shall be awarded on the basis of Attendance, Surprise Tests, Quizzes,
+Assignments, Tutorials, etc.
+
+(ii) Theory and Practical Type of Courses: This type of course includes either lecture (at least
+2 hours) or / and tutorial & practical classes.
+Theory Part (70%)
+Practical Part (30%)
+Mid-Sem Exam
+Assessment
+End-Sem Exam
+Assessment
+End-Sem Exam
+20% (90 minutes
+duration)
+10%
+40% (150 minutes
+duration)
+15%
+15%
+Assessment marks shall be awarded on the basis of Attendance, Assignments, Tutorials,
+Class tests, Quizzes / Short tests, day-to-day assessment of performance in all the Laboratory
+sessions as applicable.
+
+(iii) Practical Type of Courses: This type of course includes either practical or one lecture &
+practical classes.
+Assessment
+End-Sem Exam
+50%
+50%
+The End-Sem Exam marks shall be of equal weightage of practical examination and viva-
+voce.
+Assessment marks shall be awarded on the basis of Attendance, Assignments, Quizzes /
+Short tests, day-to-day assessment of performance in all the Lab Sessions evaluated through
+daily preparedness for conducting experiments, participation in conduct of experiments,
+report writing & submission, etc.
+
+(iv) Project: The project evaluation shall be carried out by the concerned Department. The
+modalities may be decided by the Department. However, the Department may consider the
+guidelines as follows.
+The project evaluation shall be carried out by a Project Allotment & Evaluation
+Committee (PAEC) constituted by the Head of the Department. The department may also
+include experts from industry or CFTI as external member in PAEC.
+The continuous assessment of the project work by the PAEC (except Assessment by project
+supervisor(s) component) will be as follows:
+S. No
+Assessment
+Weightage
+Semester Schedule
+1
+Problem definition / Synopsis /
+etc.
+10%
+During the 1st & 3rd week
+2
+Progress-I
+20%
+During the 4th& 6th week
+
+================================================================================
+PAGE 19
+================================================================================
+
+11
+
+3
+Progress-II
+20%
+During the 7th to 9th week
+4
+Final Assessment (End-Sem
+Exam)
+50%
+End of Semester
+
+Assessment by project supervisor(s)component will be 25% of total marks.
+
+At the completion of a project, the student will submit a project report which will be evaluated by
+the Project allotment & evaluation committee during final assessment. The evaluation will be
+based on the report, presentation and a Viva-voce examination on the project. The similarity index
+of the project report shall be followed as per the existing institute guidelines in force.
+
+6.2.2
+Paper Setting
+For each Theory Course, the Course Coordinator, appointed by the Head of the respective
+Department, shall normally set the paper in consultation with the associated Faculty Member(s), if
+required. Each question in the question paper should be mapped with the Course Outcome (CO)
+of the corresponding course.
+
+6.2.3
+Schedule of Examination
+The Mid-Semester examination shall be of one hour and thirty minutes duration. The End-
+Semester and the Grade Improvement Examination shall be of two hours and thirty minutes
+duration. The schedule for practical examination shall be announced by the concerned Head of the
+Department. All the examinations including practical examinations shall be usually held during
+the periods / days specified in the academic calendar. The make-up examination shall be
+coordinated by the concerned Department as per the guidelines issued by the office of the Dean
+Academic.
+
+6.2.4
+Make-up Examination
+Institute discourages the students for opting Make-up examination. If a student, for bonafide
+reasons, which are beyond the control such as illness, etc., fails to appear in the mid-semester
+examination in one or more course(s), s/he may make a request to the concerned course
+coordinator for consideration within seven days of the last scheduled examination. Such a request
+must be made on the prescribed form [Form: BP-10] available in the ordinances, giving reasons
+for the failure to appear along with documents in support of the given reason. The request for
+makeup test will be permitted by the Chairperson, SUGC.
+If a student fails to appear or in submission of assignments, etc., it is entirely up to the course
+coordinator to decide whether or not to provide an opportunity for make-up examination. In case
+of a make-up test for mid-semester examination, the upper limit for awarding marks will be 70%
+of the maximum marks (i.e., maximum 17.5 out of 25) irrespective of marks secured in the make-
+up examination.
+
+6.2.5
+Grade Improvement Examination
+The Grade Improvement Examination will usually be held during a specified week of the
+subsequent semesters notified in the Academic Calendar of the Institute. Grade Improvement
+Examination shall be scheduled by the office of the Dean (Academic). The modalities of the
+Grade Improvement Examination shall be as follows:
+(i) Only those students who were registered for the Courses during the regular Semester, and
+who failed or failed to appear in the end-semester examination and having satisfactory
+attendance are eligible for the Grade Improvement Examination.
+(ii) The ACD students be allowed to appear in the Grade Improvement Examination with the
+combination of all the courses [Theory & Practical] with the prescribed examination fee
+[Form: BP-11] with the combination of F, X, ABS and, N to remove ACD. However, the
+maximum number of such courses will be five only. The academic performance
+requirements for the award of degree will remain unaltered.
+
+================================================================================
+PAGE 20
+================================================================================
+
+12
+
+(iii) Late registration for Grade Improvement Examination shall not be permitted; however,
+permission may be granted under special conditions after the approval of Dean (Academic).
+(iv) The weightage of different components for the computation of Grades of the Course for
+which the student appears in the Grade Improvement Examination, shall be as follows:
+a)  For Theory Courses:
+The weightage for the Grade Improvement Examination shall be 75%. The assessment marks
+(25%) shall be carried forward from the regular semester.
+b)  For Practical Courses:
+The weightage for the Grade Improvement Examination shall be 50% based on equal weightage
+of practical examination and viva-voce. The assessment marks (50%) shall be carried forward
+from the regular semester.
+c)  For Theory & Practical Courses:
+The weightage for the Grade Improvement Examination for theory part shall be 60% and the
+weightage for practical part shall be 15%. The assessment marks (10%) for theory part and the
+marks (15%) for practical part shall be carried forward from the regular semester.
+
+6.2.6  For Online Courses and Courses Offered by Other Institutions Under MoU
+For these courses, the evaluation process adopted by the respective agency / Institution shall be
+applicable as per Clause 6.3.2. The marks / grades obtained shall be tabulated on the tabulation
+portal/sheet by the coordinator of online courses after mapping in accordance with the Institute
+grading system. The mapping shall be done by the DUGC.
+If a student fails to clear any examination of any of these courses, s/he shall be allowed to repeat
+the same course or a substitute course with an equivalent credit after the recommendation of
+DUGC.
+
+6.3
+Grading System
+6.3.1  Grades and Grade Points
+At the end of the end semester / Grade Improvement Examination, a student is awarded a letter
+grade in each of her /his courses by course coordinator considering her /his performance in the
+various examinations, quizzes, assignments, laboratory work (if any), etc., besides regularity of
+attendance in classes. The grades shall be submitted through online process along with duly
+signed print out of the grade sheet to the office of Dean (Academic) positively within the
+prescribed time limit after the end-semester / Grade Improvement Examination.
+Same methodology shall be adopted for mapping the grades / marks earned by student opting
+online courses or courses offered by other Institutions under MoU.
+The system of grading to be followed will be Relative Grading System for all courses including
+project work. The HoD shall ensure that the course instructor/coordinator uses normal distribution
+curve to award, ensuring that majority of the students fall in the middle range of the grades.
+A student shall be awarded a letter grade in each course in which s/he is registered for, indicating
+her /his overall performance in that course. There are nine letter grades: A+, A, B+, B, C, D, F, N,
+and ABS. The correspondence between grades and points (on a 10-point scale) / rating is given
+below:
+Letter Grade
+A+
+A
+B+
+B
+C
+D
+F/N/ABS
+Grade Points
+10
+9
+8
+7
+6
+4
+0
+
+A student, who is not allowed to appear in the end-semester examination for any reason, such as
+shortage of attendance / disciplinary action / or alike, shall be awarded N grade. A student, who
+could not appear in end semester Examination for reasons other than Shortage of Attendance/
+Disciplinary Action/ or alike shall be awarded ABS grade.
+There are additional letter grades, viz., S, X and W which stand for satisfactory, unsatisfactory,
+and withheld temporarily, respectively.
+
+================================================================================
+PAGE 21
+================================================================================
+
+13
+
+In order to have appropriate evaluation correspondence with online courses / courses from other
+institutions, etc., it is desirable that A+ may be awarded to the students securing more than or
+equal to 85% marks and a student securing less than 30% marks may be awarded grade F.
+
+An ACD student shall be required to clear her/his X/N/F/ABS grade by appearing in the
+subsequent Grade Improvement Examination or summer semester as the case may be.
+
+6.3.2
+Grading Online Courses
+The grades equivalence of the marks obtained (as stated in the marks sheet of the student) by a
+student in a course work through online courses / MOOCs / courses offered by other Institutions
+under MoU shall be adopted as given below.
+Equivalent Grades
+A+
+A
+B+
+B
+C
+D
+F
+% Marks obtained (as per the marks sheet of the
+student) by a student   in a course work, through
+MOOCs
+≥85
+84-75
+74-65
+64-55
+54-45
+44-40
+<40
+
+The SUGC, on the basis on recommendation of DUGC  shall decide on other matter pertaining to
+credits, duration, normalization of marks etc. of the online course.
+
+6.3.3  Semester Performance Index (SPI)
+The semester performance index (SPI) is a weighted average of the grade points earned by a
+student in all the courses credited, and describes her / his academic performance in a semester. If
+the grade points associated with the letter grades awarded to a student are
+1
+2
+3
+,
+,
+,.............,
+m
+g
+g
+g
+g in
+m courses and the corresponding weights (or credits of the courses) are
+1
+2
+3
+, w , w ,.............,
+m
+w
+w ,
+then SPI is given by
+
+
+
+
+
+m
+i
+i
+m
+i
+i
+i
+w
+g
+w
+SPI
+1
+1
+
+S and X grades shall not be considered in the computation of the SPI.
+
+6.3.4
+ Cumulative Performance Index (CPI)
+The cumulative performance index (CPI) indicates the overall academic performance of a student
+in all the courses registered up to and including the latest completed semester term. It shall be
+computed in the same manner as the SPI, considering all the courses, and is given by:
+
+
+
+
+
+n
+i
+i
+n
+i
+i
+i
+w
+g
+w
+CPI
+1
+1
+
+Whenever a student is permitted to repeat or substitute a course, the new letter grade replaces the
+better of the old and new letter grades in the computation of the CPI; however, both the grades
+appear on her /his grade report and transcript.
+To convert the CPI into % of notional marks, the CPI may be multiplied by 10.
+
+6.3.5  Grade Report
+A copy of the grade report shall be issued to each student at the end of the semester. A duplicate
+copy, if required, can be obtained on payment of the prescribed fee.
+
+================================================================================
+PAGE 22
+================================================================================
+
+14
+
+6.3.6  Transcript
+A transcript contains the record of the grades obtained in each and all courses, project and seminar
+registered by a student during his entire B. Tech. programme. It also includes the courses which
+have been repeated and / or replaced.
+
+6.3.7
+ Withholding of Grade Report
+The grade report of a student shall be withheld if s/he has not paid her /his dues, or if there is a
+case of indiscipline pending against her / him.
+
+6.3.8
+Marks Normalization for Multi-Group Courses
+The Departments may evolve a suitable methodology to normalize the marks awarded in different
+groups being handled by different faculty members in a same batch for a particular course so as to
+remove statistical bias for more representative evaluation of the whole class.
+
+7.
+ACADEMIC PERFORMANCE REQUIREMENT
+7.1
+ACademic Deficiency (ACD)
+A student who does not fulfill any of the following conditions shall be categorized as
+“Academically Deficient (ACD)”:
+(i) His / her SPI and CPI are equal to or greater than 4.0.
+(ii) S/he does not have ABS or N or F or X grade in any registered course or academic activities of
+any B.Tech. Programme.
+7.2
+Minimum Performance Requirement for Respective Programmes
+(i)   Generally, a student is desired to be promoted to the subsequent odd semester of the academic
+Programme without any ACD. However, if having ACD, s/he shall be allowed to register in
+subsequent Grade Improvement Examination/back paper /summer for clearing ACD related to her
+/his approved courses, fulfilling other terms & conditions of the Institute.
+(ii) An ACD student can register in the subsequent semester of the academic programme irrespective
+of her / his academic performances.
+(iii) An academically deficient student may be permitted to re-register for courses in which s/he has
+ABS or N or F or X grades, provided s/he fulfills all other requirements.
+(iv)An academically deficient student may be permitted to register either in regular semester as back
+paper(s) or Grade Improvement Examination for the courses in which s/he has ABS or N or F or X
+grade.
+
+Note: Students with more than 5 courses in ACD category are advised to register in their previous
+year, as applicable, so that their academic perseverance is protected.
+
+However, the additional minimum performance requirements for respective B.Tech. Programmes
+are as follows:
+(A) Basic B.Tech.
+A student enrolled in Basic B. Tech. Programme is promoted to the subsequent higher semesters
+as per the above conditions. However, students should not have more than 20 credits in backlog
+courses to register for courses from the Vth semester onwards.
+
+(B) B.Tech. and Minor Programme(s)
+A student is allowed to register for B. Tech. Programme with Minor only if s/he fulfils the
+following conditions:
+(i)
+It is mandatory for the student to clear all the courses in her / his first attempts in the I, II and
+III semesters, as applicable, with a minimum SPI / and CPl 6.5.
+(ii)
+Allotment of the minor will be purely based on merit to be decided by the Department
+offering the Minor programme on the basis of SPI / CPI.
+(iii) If a student’s academic performance falls below the requirement mentioned in the point
+(7.2.B.i), then s/he has toclear the deficiency before opting another Minor course(s) in
+subsequent semesters.
+
+================================================================================
+PAGE 23
+================================================================================
+
+15
+
+(C) B.Tech. Honours (with or without Minor)
+A student is allowed to register for B. Tech. Programme with Honours only if s/he fulfills the
+following conditions:
+(i)
+Students who have cleared all the courses of first to fourth semester in their first attempts and
+have obtained a CPI not less than 8.0 are eligible to register for the HonoursProgramme.
+(ii)
+Honourscourse(s) allotment will be based on merit to be decided by the respective
+Departments on the basis of CPI.
+(iii)
+(iii)If a student’s academic performance falls below the requirement mentioned in the point
+(7.2.C.i), then s/he has to clear the deficiency before opting for another Honours course(s) in
+subsequent semesters.
+
+(D) B.Tech.with Research (with or without Minor)
+A student is allowed to register for B. Tech. Programme with Research only if s/he fulfils the
+following conditions:
+(i)
+Students who have cleared all the courses of first to fourth semester in their first attempts and
+have obtained a CPI not less than 7.5 are eligible to register for the Research Programme.
+(ii)
+Researchcourse(s) allotment will be based on merit to be decided by the respective
+Departments on the basis of CPI.
+(iii)
+If a student’s academic performance falls below the requirement mentioned in the point
+(7.2.D.i), then s/he has to clear the deficiency before opting for another Research course(s) in
+subsequent semesters.
+
+7.3
+Degradation of Programme
+If a student of B. Tech. with Minor / B.Tech. Honours / B.Tech. with Research is Academically
+Deficient and is not able to remove his / her Academic Deficiency within one Academic Year (or
+within program duration in case of VII & VIII semesters) of acquiring the same, through relevant
+Grade Improvement Examination, then her / his Programme would immediately be degraded to
+the Basic B.Tech. Programme and her / his Minor / Honours / Research courses (if any) would be
+dropped immediately. The ACD students be allowed to register in 3/5/7 Semester without any
+year drop.
+
+7.4
+Termination of Programme
+There may be termination of the B.Tech. Programme of a student on the ground of unsatisfactory
+Academic Performance. The Undergraduate Programme of a student may be terminated by the
+Senate if s/he is academically deficient and has not been able to remove her / his academic
+deficiencies for any year of B. Tech. Programme within total permissible duration of completing
+the B.Tech. Programme, as per normal / slow pace.
+
+7.5
+Appeal against Termination
+A student whose Programme is terminated on account of inadequate academic performance or
+otherwise has the right to appeal to the Chairperson, Senate through DUGC and SUGC for
+reconsideration. While making the appeal against termination, s/he shall give reasons for her / his
+poor academic performance and / or to explain why her / his case merits reconsideration, in the
+prescribed format [Form: BP-11]. The Chairperson, Senate shall take a final decision after
+considering all the available inputs. However, the Chairperson, Senate shall not entertain any
+further appeal for review unless substantial additional information is brought to her / his notice.
+An appeal shall not be entertained more than twice from the same student.
+
+8.
+HOLIDAYS, VACATION, AND SEMESTER LEAVE
+8.1
+Holidays
+Students shall be entitled for Institute holidays as notified in the Academic Calendar or by the
+competent authority.
+
+================================================================================
+PAGE 24
+================================================================================
+
+16
+
+8.2
+Mid-Semester recess and Vacation
+Students are entitled to avail mid-semester recess and vacation as specified in the academic
+calendar.
+
+8.3
+Medical Leave
+Under serious / exceptional medical condition, accident, etc. (to be endorsed by the institute
+medical officer / Govt. Hospitals/ Specialized Hospitals), recommended by DUGC and approved
+by the concerned Head of the Department. The student may be allowed for Medical leave for
+maximum (cumulative) of 15 days in a given semester [Form BP-12].
+For extraordinary situations, the application may be decided by DUGC on case to case basis.
+All other academic requirements must be fulfilled by the student. In case the student requires
+Medical Leave longer than above-mentioned period, the student has to compulsorily go for
+Semester Leave / Semester Drop, as appropriate and accepted by DUGC and SUGC, and may be
+allowed to appear in Grade Improvement Examination (s) or / and Summer Semester
+appropriately to avoid Academic loss.
+
+8.4
+Semester Leave
+For bonafide reasons and / or in exceptional circumstances, a student may be allowed to withdraw
+temporarily for a Semester with prior approval of Dean (Academic) on the recommendations of
+the SUGC. Such Semester leave(s) of absence shall not exceed two Semesters with or without a
+break during the entire period of the Academic Programme including Semester Leave. In any
+case, the total duration of the Programme shall not exceed the maximum permissible duration of
+six (6) years. The student shall submit an application (Form: BP-12) prior to the start of the
+semester or during the semester to the Head of the Department, which will be processed through
+DUGC. However, such student is required to register in the semester with zero credit. For any
+registered student, refund of registration fee shall not be allowed and his credit shall be treated as
+zero.
+Further, a student can opt for semester leave for joining in any other institutions/ organizations
+under MoU and her / his credit transfer is possible.
+
+8.5
+Study Leave
+A student wishing to pursue any approved academic activity in other institutions/ organizations
+may opt for study leave not more than 15 days in a semester of academic programme. The student
+shall submit an application [Form: BP-12] to the Head of the Department and will be approved by
+the Head on the recommendation of DUGC.
+
+8.6
+Extra-curricular Activity Leave
+A student wishing to pursue any approved Extra-curricular Activity in other institutions/
+organizations may opt for Extra-curricular Activity Leave not more than 15 days (under normal
+condition) in a semester of academic programme. Extra-curricular Activity Leave will be
+recommended by President Student Activity Centre (SAC) and approved by Chairperson, SUGC
+&reported to Department for compulsory consideration.
+
+9.
+PROGRAMME REQUIREMENTS
+9.1
+Attendance Requirement
+The Institute is of residential nature and therefore all the students are required to have full /
+maximum attendance for the courses. However, in order to meet eventualities, a relaxation of 25%
+attendance may be granted. The student shall not be allowed to appear in the end-semester
+examination of a course, if the attendance in that course falls below 75% and shall be accordingly
+awarded F grade.
+However, as per Sec. 8, the student may be allowed an extraordinary attendance relaxation and
+student shall be responsible for fulfillment of all other academic requirements.
+
+================================================================================
+PAGE 25
+================================================================================
+
+17
+
+9.2
+Minimum and Maximum Duration
+For the students who want to complete the Programme in one stretch the minimum and maximum
+duration requirements for undergraduate Programme are as under:
+
+Minimum and Maximum duration for normal pace: Four years and or Six years, respectively.
+
+Minimum and maximum duration for slow pace: Four years and Seven years, respectively.
+
+10.
+DEGREES
+10.1
+Award of Degree
+A student who has completed all the Programme requirements specified in Sections 7-9, paid all
+dues to the Institute and the hostels, and has no case of indiscipline pending against her / him shall
+be recommended by the Senate to the Board of Governors (BOG) for the award of the appropriate
+degree in the ensuing convocation. The degree shall be awarded only after the BOG accords its
+approval. However, a student may be provided a provisional certificate of completion of the
+respective Programme by the Dean (Academic), till the convocation is held.
+
+10.2
+Withdrawal of the Degree
+Under extremely exceptional circumstances, where any gross violation of the graduation
+requirements is detected at a later stage, the Senate may recommend to the Board of Governors
+for the withdrawal of degree already awarded.
+
+11.
+ SCHOLARSHIPS, PRIZES, AND MEDALS
+The Senate shall determine the general policy regarding recommendations for the award of the
+different types of scholarships, Stipends, medals and prizes available to Institute students.
+
+11.1
+Scholarships
+A number of merit-cum-means scholarships, endowment scholarships / fellowships etc. are
+granted by the government, the Institute, NGOs & other bodies, and individuals. These
+scholarships shall be awarded according to the guidelines for eligibility and durations specified by
+the funding agency. In case of sponsored scholarship instituted by individuals/ societies the
+scholarship shall be established with approval of the Chairperson, Senate.
+These scholarships shall be liable to be withdrawn, partially or fully, in case of misconduct,
+deliberate concealment of material, facts and/ or giving false information.
+A student leaving the Institute on her /his own accord without completing the Programme of study
+may be required to refund the amount of scholarship, etc. received during the academic session in
+which s/he leaves the Institute. For more information on the scholarships, refer to the webpage of
+the Student Welfare Office.
+
+11.2
+Prizes and Medals
+To promote and recognize academic excellence, constructive leadership and overall growth and
+development of students, the Department may award a number of prizes and medals, established
+by the Institute on its own or through endowments / grants made by donors, with the approval of
+the Chairperson, Senate. For more information on the prizes and medal, refer to the webpage of
+the Student Welfare Office.
+
+12.
+CONDUCT AND DISCIPLINE
+12.1
+Code of Conduct
+Each student shall conduct herself / himself in a manner befitting her /his association with the
+Institute. S/he is expected not to indulge in any activity, which is likely to bring down the prestige
+of the Institute. S/he shall also show due respect and courtesy to the faculty members, officers and
+employees of the Institute, and good neighborly behavior to fellow students. Due attention and
+courtesy are to be paid to visitors to the Institute and residents of the campus.
+Lack of courtesy and decorum, unbecoming conduct (both within and outside the Institute),
+willful damage and / or removal of Institute property or belongings of fellow students, disturbing
+others in their studies, adoption of unfair means during examinations, breach of rules and
+
+================================================================================
+PAGE 26
+================================================================================
+
+18
+
+regulations of the Institute, noisy and unseemly behaviour, harassment of any faculty member or
+staff or student, and similar other undesirable activities shall constitute violation of the code of
+conduct for students.
+
+12.2
+Ragging
+Ragging in any form is strictly prohibited and considered a serious criminal offence and violation
+of the code of conduct. Involvement of a student/ students in ragging may lead to her/ his /their
+expulsion from the Institute. All the senior students would be required to submit an undertaking
+every year / semester in this regard during the time of enrolment. The Anti- Ragging Committee
+of the institute would monitor / address the complaints related to ragging and depending upon the
+nature and gravity of the offence as established by the Anti-Ragging Committee, the possible
+punishments for those found guilty would be decided.
+
+12.3
+Disciplinary Actions and Related Matter
+Violation of the code of conduct shall invite disciplinary action which may include punishment
+such as reprimand, disciplinary probation, fine, and debarring from examinations, withdrawal of
+scholarship and / or placement services, withholding of grades and / or degrees, debarring /
+cancellation of registration, and expulsion from the hostel and / or the Institute.
+For indiscipline of a student in a class, the course instructor may
+(i)
+debar her / his from attending a few subsequent classes for which s/he shall not be liable to
+get relaxation in attendance / favourable consideration in mercy appeal, and
+(ii) report the matter to Dean (Student Welfare) through proctorial board for necessary
+disciplinary action.
+
+12.3.1  Proctorial Board
+Rules and regulation framed by the Institute, to be followed in order to maintain the cordial
+atmosphere in the campus (among the students, faculty members and non-teaching staff) which
+are monitored by Proctorial Board, hereinafter, referred to as PB. The PB headed by the Chief
+Proctor (disciplinary authority of the Institute) helps students from any difficulty and to see that
+the disciplinary rules are followed properly.
+
+12.4
+Various Cells
+In addition to the details mentioned in the previous sections pertaining to the matters of conduct
+and discipline, the students can approach the following cells for the redressal of their grievances
+related to various issues:
+(a) Grievance Cell: For the redressal of the grievances of faculty, staff and students.
+(b) SC / ST Cell: To resolve all the affairs / problems related to the SC / ST Officers, Employees
+and Students of the Institute.
+(c) Equal Opportunity Cell (EOC): To ensure equity, equal opportunity and social inclusion of
+the community at large.
+(d) Internal Complaint Committee: to address the complaints related to sexual discrimination /
+harassment of women.
+
+12.5
+Unfair Means (UFM)
+Unfair means shall comprise of followings.
+(i)
+Copying from the papers / mobile electronic equipment, or materials in the possession of the
+student.
+(ii) Copying from the answer book of neighboring students
+(iii) Possession of the relevant material
+(iv) Disturbing the smooth conduct of Examination
+(v) Misbehaviour with the invigilator
+(vi) Any other undesirable act.
+Unfair means Committee shall consist of:
+
+================================================================================
+PAGE 27
+================================================================================
+
+19
+
+(i)
+Dean (Academic)
+(ii) Dean (Student Welfare)
+(iii) Chief Proctor
+(iv) Concerned Head of Department/Cell
+(v) Senate Nominee
+The procedure to deal with the cases of Unfair Means (UFM):
+(a) Any use of UFM detected by course instructor / invigilators / members of observer committee
+shall be reported to Dean (Academic), Head of the concerned Department and course instructor in
+the prescribed format [Form: BP-13], on the same day.
+(b) After the student is caught using UFM her /his answer books along with the question paper and
+material used in UFM shall be kept in a separate envelope and the student shall be issued a fresh
+answer book and question paper on which s/he may continue for the remaining period of
+examination.
+(c) Head of the Department shall issue a show cause notice to the student seeking her / his
+clarification on the charges; within one day of reporting of the case. The clarification of the
+student shall be obtained within two days and the same shall be given to course Instructor for
+getting her / his comments.
+(d) The course instructor shall examine the contents of the material used for UFM and verify, if the
+same is relevant to the subject and up to what extent the material has been used in answering the
+questions attempted in the answer book.
+(e) The course instructor shall present the case to the unfair means committee.
+(f) Unfair means committee shall meet soon after six days of the completion of semester
+examination. The committee shall give opportunity to the student concerned for explanation and
+recommend the award of punishment. The recommendation of the punishment may be made on
+the basis of following:
+(i)
+Copying from the papers / mobile electronic equipment / materials in the possession of
+the student (cancellation of that day’s examination or of examination of the current
+session).
+(ii) If the student has misbehaved with invigilator, the matter may be referred to the
+proctorial board for suitable recommendation.
+(iii) Copying from the answer book of neighbouring student (cancellation of the subject
+examination).
+1.
+If the decision is not taken by the date of grade entry the grades entered will be ‘W’ and the
+result of such student shall not be declared along with other students.
+2.
+The recommendations of the unfair means committee will be implemented after getting the
+approval of the Chairperson, Senate / Director.
+3.
+A student who feels aggrieved with the punishment awarded, may, however, appeal to the
+Chairperson, Senate stating clearly the case and explaining her / his position, seeking
+reconsideration of the decision.
+
+13.
+AMENDMENTS
+Notwithstanding anything contained in the Ordinance, the Senate of the Motilal Nehru National
+Institute of Technology Allahabad, reserves the right to modify / amend without notice, the
+Curricula, Procedures, Requirements, Examinations, Admissions and Rules pertaining to its
+Bachelors’ Degree Programmes.
+
+================================================================================
+PAGE 28
+================================================================================
+
+20
+
+Form: BP-01
+(Clause 1.6 V)
+
+Motilal Nehru National Institute of Technology Allahabad
+
+FEED BACK FORM FOR THEORY COURSES
+
+(To be filled by students registered in the course)
+
+The objective of this form is to obtain feedback from the students so that the course can be improved further.
+
+Course Number & Course Title:                                                      Semester/Session & Year:
+
+Course Instructor’s Name:                                                             Department:
+
+Your own performance in the course so far (please circle one):     Top 25%   /  Next 25%   /  Below 50%
+
+(mark  ‘ X’  in the appropriate box)
+
+Course  Organisation
+Range
+5
+4
+3
+2
+1
+Range
+
+1.
+Objectives and plan of the course were
+specified
+
+Very clearly
+
+very
+poorly
+2.
+Coverage and depth of course plan was
+Excellent
+
+very poor
+3.
+The topics provided new knowledge
+Mostly
+
+Hardly
+4.
+Prescribed reading material was available
+Mostly
+
+Hardly
+
+Presentation  and  Interaction
+Range
+5
+4
+3
+2
+1
+Range
+
+1.
+In terms of organization, clarity and
+presentation of fundamental concepts, the
+lectures were
+
+Excellent
+
+Poor
+
+2.
+Instructor’s oral presentation in terms of
+audibility and articulation was
+
+Excellent
+
+Poor
+
+3.
+Instructor’s blackboard (or overhead)
+presentation in terms of organization and
+legibility was
+
+Excellent
+
+Poor
+
+4. Encouragement given by the instructor to think
+and reason, logically and objectively was
+
+Excellent
+
+Poor
+
+5.
+Instructor’s responses to questions asked in
+class were
+
+Clear
+
+Vague
+
+6.
+The availability and approachability of the
+Instructor outside class hours were
+
+Excellent
+
+Poor
+
+7.
+Instructor’s attitude towards teaching of this
+course was
+
+Enthusiastic
+
+Indifferent
+
+8.
+The overall quality of teaching in this course
+was
+
+Outstanding
+
+Poor
+
+contd.
+BP-01 (i)
+
+================================================================================
+PAGE 29
+================================================================================
+
+21
+
+Examinations / Tests
+Range
+5
+4
+3
+2
+1
+Range
+
+1.
+
+The tests reflected the course plan
+Very
+closely
+
+Poorly
+
+2.
+Rather than rote learning, understanding was
+tested
+
+Thoroughly
+
+Hardly
+3.
+Examinations were of appropriate level/length
+Always
+
+Rarely
+
+4.
+Answer scripts were promptly checked and
+returned
+
+Always
+
+Rarely
+5.
+The evaluation was fair and transparent
+Mostly
+
+Rarely
+
+6.
+The evaluations helped in understanding the
+subject better
+
+Always
+
+Rarely
+OVERALL  RATING  :
+Excellent
+
+Poor
+
+General Comments:
+
+    In addition to the class hours, how many hours per week did you put in for this course?
+
+    The work load in this course in comparison to other courses of this Semester was:
+very little   /   just right   /   too heavy
+    In relation to the general level of understanding of the class, the level of lectures was:
+too low   /   just right   /   too high
+    Were the lectures held regularly and on time?
+
+ If the course had a self study component (such as assignment, seminars, small projects and literature
+survey) comment on how it helped /inspired you to learn/probe further.
+
+    What did you like / dislike most about this course?
+
+    Would you rate this course as one of the five best courses  you have had so far?    Yes   /   No
+
+--------------------------------------------------------------------------------------------------------
+
+If you have any other comments not covered by this questionnaire, please write below:
+
+--------------------------------------------------------------------------------------------------------
+
+If there is any Instructor designed feedback question, please write the response below:
+
+================================================================================
+PAGE 30
+================================================================================
+
+22
+
+Motilal Nehru National Institute of Technology Allahabad
+FEED BACK FORM FOR PRACTICAL-COURSES
+Form: BP-02
+(Clause 1.6 V)
+
+The objective of this form is to obtain feedback from the students so that the practical sessions can be further improved.
+
+Course Number  &  Course Title:                                                   Semester/Session & Year:.
+Course Instructor’s Name:                                                              Department:
+Your own performance in the course so far (please circle one):     Top 25%   /  Next 25%   /  Below 50%
+
+( mark  ‘ X’  in the appropriate box)
+
+Presentation  and  Interaction
+Range
+5
+4
+3
+2
+1
+Range
+1.
+The Experiments provided new insights
+Always
+
+Rarely
+
+2. Methodical and systematic work was
+emphasized
+
+Always
+
+Rarely
+
+3. Handouts/laboratory manuals were available
+in advance
+
+Always
+
+Never
+
+4. Your preparation before going to laboratory
+was
+
+Excellent
+
+Poor
+
+5. Instructor’s feedback on your report was
+prompt
+
+Often
+
+Rarely
+
+6. Instructor’s feedback on your report was
+useful
+
+Often
+
+Rarely
+
+7. During the practical sessions, your interaction
+with the instructor was useful
+
+Often
+
+Rarely
+
+8.
+Availability and approachability of the
+Instructor outside class hours was (respond, if
+applicable)
+
+Excellent
+
+Poor
+
+9. Encouragement given by the Instructor to
+think and be creative was
+
+Excellent
+
+Poor
+OVERALL  RATING  :
+Excellent
+
+Poor
+
+Additional Comments:
+
+If you have any other comments not covered by this questionnaire, please write below:
+
+If there is any Instructor designed feedback question, please write the response below:
+
+================================================================================
+PAGE 31
+================================================================================
+
+23
+
+Form: BP-03
+ (Clause 3.3)
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR ADMISSION WITHDRWAL FROM PROGRAMME
+
+Name of the student      :
+Registration No.              :
+Branch                             :
+Session and Semester   :
+Year of Joining                 :
+Email ID (in block CAPS):
+
+Reasons for withdrawal :
+
+Any Supporting Documents:
+
+Signature of the Student (with Date)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Remarks of Convener, DUGC
+
+:
+
+Recommendation of the HOD
+
+:
+Remarks of Chairperson, SUGC
+:
+Approval of the Chairperson, Senate
+:
+
+================================================================================
+PAGE 32
+================================================================================
+
+24
+
+Form: BP-04
+ (Clause 5.2)
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR INTIMATION OF SLOW PACE OF STUDY
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+Current Session and Semester
+:
+Email ID (in block letters)
+:
+Reasons for opting for the slow pace of study (Attached separate sheet if required):
+
+Courses student have registered for the current semester:
+
+Sl. No.
+
+Course Code
+
+Course Name
+
+Credit
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Course student would like to opt-out:
+
+Sl. No.
+
+Course Code
+
+Course Name
+
+Credit
+1
+
+2
+
+Signature of the Student with date :
+Remarks of Convenor (DUGC)     :
+
+Approval of HoD*
+:
+*Approved copy to be submitted to office of Dean, Academic for record and necessary action.
+
+================================================================================
+PAGE 33
+================================================================================
+
+25
+
+Form: BP-05
+ (Clause 5.5(i))
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR REGISTRATION OF MINOR PROGRAMME(S)
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+Current Session and Semester
+:
+Has the student cleared all the courses (Sem. I-II) in the first attempt
+:
+
+Yes/ No
+Current SPI and CPI
+
+:
+
+Number of Minor Programme(s), the student would like to apply (maximum allotment-two): one        / two
+
+Preferences of Minor Programme-1:
+Sl. No.
+Minor Discipline
+Department
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Preferences of Minor Programme-2:
+Sl. No.
+Minor Discipline
+Department
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+Signature of the Student with date  :
+Remarks of Convenor (DUGC)    :
+       (Parent Department)
+Recommendation of HoD
+:
+    (Parent Department)
+ To be forwarded to office of the Dean, Academic for necessary action and record
+
+================================================================================
+PAGE 34
+================================================================================
+
+26
+
+Form: BP-06
+ ((Clause 5.5(iii))
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR REGISTRATION OF MINOR CREDIT COURSES
+(To be submitted separately for each Minor Programme(s))
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+Current Session and Semester
+:
+Current SPI and CPI
+
+:
+
+Preferences of Minor Credit Courses:
+Sl.
+No.
+Course
+Code
+Course Name
+Department
+Credit
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Signature of the Student with date  :
+Remarks of Convenor (DUGC)    :
+       (Parent Department)
+
+Recommendation of HoD
+:
+    (Parent Department)
+Remarks of Convenor (DUGC)    :
+    (Target Department)
+Approved by HOD*
+:
+(Target department)
+
+*Approved copy to be submitted to office of Dean, Academic for record and necessary action.
+
+================================================================================
+PAGE 35
+================================================================================
+
+27
+
+Form: BP-07
+ (Clause 5.6(i) & 5.7(i))
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR REGISTRATION OF HONOURS/RESEARCH PROGRAMME
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+Current Session and Semester
+:
+Has the student cleared all the courses (Sem. I-IV) in the first attempt :
+
+Yes        / No
+Current CPI
+
+:
+Whether the student like to apply for Honours or Research or both:
+(A student shall be allowed to register with only one of the above programmes as per the criteria mentioned in clause 5.6, 5.7 & 7.2)
+Preferences for Honours/ Research Programme:
+Sl. No.
+Honours/ Research with discipline
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+Signature of the Student with date  :
+
+Remarks of Convenor (DUGC)    :
+
+Approval of HOD
+:
+
+*Approved copy to be submitted to office of Dean, Academic for record and necessary action.
+
+================================================================================
+PAGE 36
+================================================================================
+
+28
+
+Form: BP-08
+ (Clause 5.6(ii) & 5.7(ii))
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR REGISTRATION OF HONOURS/RESEARCH CREDIT COURSES
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+Current Session and Semester
+:
+Current CPI
+
+:
+
+Honour / Research Credit Courses: (Strikeout whichever is not applicable)
+
+Sl. No.
+Course Code
+Course Name
+Department
+Credit
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+Signature of the Student with date  :
+
+Remarks of Convenor (DUGC)    :
+
+Approval of HOD*
+:
+
+*Approved copy to be submitted to office of Dean, Academic for record and necessary action.
+
+================================================================================
+PAGE 37
+================================================================================
+
+29
+
+Form: BP-09
+ (Clause 6.1v)
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR REGISTRATION TO AUDIT COURSES
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+Current Session and Semester
+:
+
+Audit Course(s):
+
+Sl.
+No.
+Course Code
+Course Name
+Department
+Credit
+Approval of
+the course
+coordinator
+1
+
+2
+
+Signature of the Student with date  :
+
+Remarks of Convenor (DUGC)    :
+       (Parent Department)
+
+Approval of HOD*
+:
+    (Parent Department)
+
+*Approved copy to be submitted to office of Dean, Academic for record and necessary action.
+
+================================================================================
+PAGE 38
+================================================================================
+
+30
+
+Form: BP-10
+ (Clause 6.2.4)
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR MAKE-UP EXAMINATION
+(To be submitted within seven days of the last scheduled examination)
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+Current Session and Semester
+:
+
+Courses
+for
+make-up
+Examination
+
+Sl.
+No.
+Course
+Code
+Course Name
+
+Department
+Approval of the
+course coordinator(s)
+1
+
+2
+
+3
+
+4
+
+5
+
+Reasons for the failure to appear in the mid-semester examination with supporting documents:
+
+Signature of the Student with Date:
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Remarks of Convenor (DUGC)                 :
+
+Recommendation of HoD                          :
+
+Approval of Chairperson SUGC                    :             Approved / Not-approved
+
+================================================================================
+PAGE 39
+================================================================================
+
+31
+
+Form: BP-11
+(Clause 6.2.5)
+
+Motilal Nehru National Institute of Technology Allahabad
+
+   COURSE REGISTRATION FORM FOR BACK PAPER/ GRADE IMPROVEMENT
+EXAMINATION
+
+(In triplicate: A copy each for Dean (Academic) / Department / Student)
+
+Name of the student      :
+Registration No.              :
+Branch                             :
+Session and Semester   :
+Applied for (Tick):
+
+Back Paper / Grade Improvement Examination
+
+Sl. No.
+
+Course Code
+
+Course Name
+
+Credit
+1
+
+2
+
+3
+
+4
+
+5
+
+Signature of the Student with Date:
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Remarks of Convenor (DUGC)                 :
+
+Recommendation of HoD                          :
+
+Approval of Chairperson SUGC                    :             Approved / Not-approved
+
+================================================================================
+PAGE 40
+================================================================================
+
+32
+
+Form: BP-11
+ (Clause 7.5)
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR APPEAL AGAINST TERMINATION
+
+Name of the student
+:
+Registration No.
+ :
+Branch
+ :
+CPI
+
+:
+Reason for Termination
+
+:
+
+State the valid reasons for the appeal against termination with supporting documents:
+
+Signature of the Student with Date:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Remarks of Convenor (DUGC)                 :
+
+Recommendation of HoD                          :
+
+Remarks of Chairperson, SUGC                    :
+
+Approval of the Chairperson, Senate
+
+: Approved / Not-approved
+
+================================================================================
+PAGE 41
+================================================================================
+
+33
+
+Motilal Nehru National Institute of Technology Allahabad
+Medical/ Semester/Study Leave Application
+
+Name  of  the  Student                              :
+Registration  No.
+ :
+Programme / Branch /Semester
+:
+Type of Leave Applied for
+
+:
+Reason for Leave
+ :
+Duration for which leave is required
+:
+
+Supporting Documents Attached              :
+Form: BP-12
+(Clauses:
+8.3,8.4,8.5)
+
+Signature of the Student with Date:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Remarks of Convenor (DUGC)                 :
+
+Recommendation of HoD                          :
+
+Signature of the Approving Authority*       :   Approved / Not approved
+
+*Approving Authority for Medical leave and Semester Leave is Chairperson SUGC; Approving Authority for Study
+Leave is HOD;
+
+*Approved copy to be submitted to office of Dean, Academic for record and necessary action.
+
+================================================================================
+PAGE 42
+================================================================================
+
+34
+
+Note:
+
+Motilal Nehru National Institute of Technology Allahabad
+
+FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS
+Form: BP-13
+(Clause 12.5)
+
+1.   One form should be used for one case only.
+
+2.   Please send one question paper along with the case(s)
+
+(A) To be filled in by the instructor/invigilators/members  of observer Committee:
+
+1.   Name of Examination                      :
+
+2.   Name of student                              :
+
+3.   Registration No.                               :
+
+4.   Programme/Branch                         :
+
+5.   Room No.                                          :
+
+6. Subject/ paper in which the
+student  is  suspected  or
+reported to have used or
+attempted to use unfair means
+or shown disorderly conduct.
+
+Subject                                Subject Code
+
+7.   Date & time of incident                   :
+
+8.   Type of Unfair Means Material.      :
+
+(i)    Copying    from    the    answer    book    of
+
+neighboring student.
+
+(ii)  Misbehaved with invigilator.
+
+Date......................                        Signature  and Full Name  of the instructor/invigilators/members  of observer
+
+Committee
+
+(IN BLOCK LETTERS)
+
+================================================================================
+PAGE 43
+================================================================================
+
+35
+
+(B) Student’s Statement:
+
+I have read the report of the instructor/invigilators/members  of observer Committee made against me as
+given in column No. A and submit the following statements.
+
+I undertake that this statement has been given by me under no pressure or fear.
+
+1.
+Do
+you      agree      with      the      report      of      the
+instructor/invigilators/members of observer Committee
+made against you?
+
+Yes/ No
+2.
+If you agree with the report, then:
+(a)  Why   did   you   bring   the material referred to in the
+above report?
+
+(b)  Did you make any use of it?
+(c)  What explanation have you to   offer   for   your
+misconduct / Disorderly conduct as mentioned in the
+report?
+(d)  Have any other thing to say, by    way    of    self-
+defense or clarification?  (If necessary, an extra sheet
+may be used).
+
+3.
+If you do not agree with the report then give your
+explanation,    if   any, in your defense against the report
+of
+the    instructor/invigilators/members     of    observer
+Committee.
+
+N.B.:
+Signature of Student
+
+================================================================================
+PAGE 44
+================================================================================
+
+36
+
+(i)          The student shall be given extra time, before leaving the Examination
+Hall in order to compensate him/her for the loss of time spent during
+enquiry and filling this form.
+
+(D)        Statement of Witness if any:
+
+Statement of the witness, if any, in case the student denies the allegations of
+the instructor/invigilators/members  of observer Committee or refuses to give
+his/her statement on the spot or runs away from the examination hall without
+giving his statement.
+
+================================================================================
+PAGE 45
+================================================================================
+
+37
+
+Notes
+
+================================================================================
+PAGE 46
+================================================================================
+
+38
+
+Notes
+
+================================================================================
+PAGE 47
+================================================================================
+
+39
+
+Notes
+
+================================================================================
+PAGE 48
+================================================================================
+
+40
+
+Notes
+
+================================================================================
+PAGE 49
+================================================================================
+
+41
+
+Notes
+
+================================================================================
+PAGE 50
+================================================================================
+
+42
+
+4

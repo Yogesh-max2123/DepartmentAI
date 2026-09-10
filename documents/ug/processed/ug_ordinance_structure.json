@@ -1,0 +1,1217 @@
+{
+  "document": {
+    "name": "MNNIT UG Ordinance",
+    "source_file": "UG Ordinance.pdf",
+    "total_pages": 50,
+    "body_pages": [
+      9,
+      27
+    ],
+    "form_pages": [
+      28,
+      44
+    ],
+    "notes_pages": [
+      45,
+      50
+    ]
+  },
+  "sections": [
+    {
+      "number": "1",
+      "title": "INTRODUCTION",
+      "start_page": 9,
+      "source_title": "INTRODUCTION",
+      "end_page": 12,
+      "page_count": 4,
+      "clauses": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8",
+        "1.9"
+      ]
+    },
+    {
+      "number": "2",
+      "title": "ACADEMIC SESSION",
+      "start_page": 12,
+      "source_title": "ACADEMIC SESSION (AS)",
+      "end_page": 13,
+      "page_count": 2,
+      "clauses": [
+        "2.1",
+        "2.2",
+        "2.3"
+      ]
+    },
+    {
+      "number": "3",
+      "title": "ADMISSION",
+      "start_page": 13,
+      "source_title": "ADMISSION",
+      "end_page": 14,
+      "page_count": 2,
+      "clauses": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4"
+      ]
+    },
+    {
+      "number": "4",
+      "title": "CURRICULUM (B. Tech. Programme)",
+      "start_page": 14,
+      "source_title": "CURRICULUM (B. Tech. Programme)",
+      "end_page": 14,
+      "page_count": 1,
+      "clauses": []
+    },
+    {
+      "number": "5",
+      "title": "REGISTRATION",
+      "start_page": 14,
+      "source_title": "REGISTRATION",
+      "end_page": 17,
+      "page_count": 4,
+      "clauses": [
+        "5.1",
+        "5.2",
+        "5.2.1",
+        "5.2.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7"
+      ]
+    },
+    {
+      "number": "6",
+      "title": "TEACHING AND EVALUATION",
+      "start_page": 17,
+      "source_title": "TEACHING AND EVALUATION",
+      "end_page": 22,
+      "page_count": 6,
+      "clauses": [
+        "6.1",
+        "6.1.1",
+        "6.1.2",
+        "6.1.3",
+        "6.2",
+        "6.2.1",
+        "6.2.2",
+        "6.2.3",
+        "6.2.4",
+        "6.2.5",
+        "6.2.6",
+        "6.3",
+        "6.3.1",
+        "6.3.2",
+        "6.3.3",
+        "6.3.4",
+        "6.3.5",
+        "6.3.6",
+        "6.3.7",
+        "6.3.8"
+      ]
+    },
+    {
+      "number": "7",
+      "title": "ACADEMIC PERFORMANCE REQUIREMENT",
+      "start_page": 22,
+      "source_title": "ACADEMIC PERFORMANCE REQUIREMENT",
+      "end_page": 23,
+      "page_count": 2,
+      "clauses": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5"
+      ]
+    },
+    {
+      "number": "8",
+      "title": "HOLIDAYS, VACATION, AND SEMESTER LEAVE",
+      "start_page": 23,
+      "source_title": "HOLIDAYS, VACATION, AND SEMESTER LEAVE",
+      "end_page": 24,
+      "page_count": 2,
+      "clauses": [
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.5",
+        "8.6"
+      ]
+    },
+    {
+      "number": "9",
+      "title": "PROGRAMME REQUIREMENTS",
+      "start_page": 24,
+      "source_title": "PROGRAMME REQUIREMENTS",
+      "end_page": 25,
+      "page_count": 2,
+      "clauses": [
+        "9.1",
+        "9.2"
+      ]
+    },
+    {
+      "number": "10",
+      "title": "DEGREES",
+      "start_page": 25,
+      "source_title": "DEGREES",
+      "end_page": 25,
+      "page_count": 1,
+      "clauses": [
+        "10.1",
+        "10.2"
+      ]
+    },
+    {
+      "number": "11",
+      "title": "SCHOLARSHIPS, PRIZES, AND MEDALS",
+      "start_page": 25,
+      "source_title": "SCHOLARSHIPS, PRIZES, AND MEDALS",
+      "end_page": 25,
+      "page_count": 1,
+      "clauses": [
+        "11.1",
+        "11.2"
+      ]
+    },
+    {
+      "number": "12",
+      "title": "CONDUCT AND DISCIPLINE",
+      "start_page": 25,
+      "source_title": "CONDUCT AND DISCIPLINE",
+      "end_page": 27,
+      "page_count": 3,
+      "clauses": [
+        "12.1",
+        "12.2",
+        "12.3",
+        "12.3.1",
+        "12.4",
+        "12.5"
+      ]
+    },
+    {
+      "number": "13",
+      "title": "AMENDMENTS",
+      "start_page": 27,
+      "source_title": "AMENDMENTS",
+      "end_page": 27,
+      "page_count": 1,
+      "clauses": []
+    }
+  ],
+  "clauses": [
+    {
+      "number": "1.1",
+      "title": "Board of Governors (BoG)",
+      "section": "1",
+      "start_page": 9,
+      "end_page": 9,
+      "page_count": 1
+    },
+    {
+      "number": "1.2",
+      "title": "Senate",
+      "section": "1",
+      "start_page": 9,
+      "end_page": 9,
+      "page_count": 1
+    },
+    {
+      "number": "1.3",
+      "title": "Undergraduate Programmes",
+      "section": "1",
+      "start_page": 9,
+      "end_page": 10,
+      "page_count": 2
+    },
+    {
+      "number": "1.4",
+      "title": "Office of the Dean (Academic)",
+      "section": "1",
+      "start_page": 10,
+      "end_page": 10,
+      "page_count": 1
+    },
+    {
+      "number": "1.5",
+      "title": "Senate Undergraduate Committee (SUGC)",
+      "section": "1",
+      "start_page": 10,
+      "end_page": 11,
+      "page_count": 2
+    },
+    {
+      "number": "1.6",
+      "title": "Department Undergraduate Committee (DUGC)",
+      "section": "1",
+      "start_page": 11,
+      "end_page": 12,
+      "page_count": 2
+    },
+    {
+      "number": "1.7",
+      "title": "Board of Studies (BoS)",
+      "section": "1",
+      "start_page": 12,
+      "end_page": 12,
+      "page_count": 1
+    },
+    {
+      "number": "1.8",
+      "title": "Board of Academics (BoAc)",
+      "section": "1",
+      "start_page": 12,
+      "end_page": 12,
+      "page_count": 1
+    },
+    {
+      "number": "1.9",
+      "title": "Academic Mentor(s)",
+      "section": "1",
+      "start_page": 12,
+      "end_page": 12,
+      "page_count": 1
+    },
+    {
+      "number": "2.1",
+      "title": "Regular Semesters",
+      "section": "2",
+      "start_page": 12,
+      "end_page": 13,
+      "page_count": 2
+    },
+    {
+      "number": "2.2",
+      "title": "Summer Semester",
+      "section": "2",
+      "start_page": 13,
+      "end_page": 13,
+      "page_count": 1
+    },
+    {
+      "number": "2.3",
+      "title": "Academic Calendar",
+      "section": "2",
+      "start_page": 13,
+      "end_page": 13,
+      "page_count": 1
+    },
+    {
+      "number": "3.1",
+      "title": "Admission Procedure",
+      "section": "3",
+      "start_page": 13,
+      "end_page": 13,
+      "page_count": 1
+    },
+    {
+      "number": "3.2",
+      "title": "Admission Cancellation",
+      "section": "3",
+      "start_page": 13,
+      "end_page": 13,
+      "page_count": 1
+    },
+    {
+      "number": "3.3",
+      "title": "Admission Withdrawal",
+      "section": "3",
+      "start_page": 13,
+      "end_page": 14,
+      "page_count": 2
+    },
+    {
+      "number": "3.4",
+      "title": "Entry and Exit Options",
+      "section": "3",
+      "start_page": 14,
+      "end_page": 15,
+      "page_count": 2
+    },
+    {
+      "number": "5.1",
+      "title": "Late Registration",
+      "section": "5",
+      "start_page": 15,
+      "end_page": 15,
+      "page_count": 1
+    },
+    {
+      "number": "5.2",
+      "title": "Semester Load Requirements",
+      "section": "5",
+      "start_page": 15,
+      "end_page": 15,
+      "page_count": 1
+    },
+    {
+      "number": "5.2.1",
+      "title": "Normal Pace of Study",
+      "section": "5",
+      "start_page": 15,
+      "end_page": 15,
+      "page_count": 1
+    },
+    {
+      "number": "5.2.2",
+      "title": "Slow Pace of Study",
+      "section": "5",
+      "start_page": 15,
+      "end_page": 15,
+      "page_count": 1
+    },
+    {
+      "number": "5.3",
+      "title": "Cancellation and Withdrawal of Registration",
+      "section": "5",
+      "start_page": 15,
+      "end_page": 16,
+      "page_count": 2
+    },
+    {
+      "number": "5.4",
+      "title": "Branch Sliding Rules",
+      "section": "5",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "5.5",
+      "title": "Registration for Minor Programme(s)",
+      "section": "5",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "5.6",
+      "title": "Registration for B.Tech. Honours (with or without Minor)",
+      "section": "5",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "5.7",
+      "title": "Registration for B.Tech. with Research (with or without Minor)",
+      "section": "5",
+      "start_page": 16,
+      "end_page": 17,
+      "page_count": 2
+    },
+    {
+      "number": "6.1",
+      "title": "Teaching",
+      "section": "6",
+      "start_page": 17,
+      "end_page": 17,
+      "page_count": 1
+    },
+    {
+      "number": "6.1.1",
+      "title": "Duration of Classes",
+      "section": "6",
+      "start_page": 17,
+      "end_page": 17,
+      "page_count": 1
+    },
+    {
+      "number": "6.1.2",
+      "title": "Extra Academic Activities",
+      "section": "6",
+      "start_page": 17,
+      "end_page": 17,
+      "page_count": 1
+    },
+    {
+      "number": "6.1.3",
+      "title": "Expert / Invited Lectures",
+      "section": "6",
+      "start_page": 17,
+      "end_page": 18,
+      "page_count": 2
+    },
+    {
+      "number": "6.2",
+      "title": "Evaluation",
+      "section": "6",
+      "start_page": 18,
+      "end_page": 18,
+      "page_count": 1
+    },
+    {
+      "number": "6.2.1",
+      "title": "Evaluation Process",
+      "section": "6",
+      "start_page": 18,
+      "end_page": 19,
+      "page_count": 2
+    },
+    {
+      "number": "6.2.2",
+      "title": "Paper Setting",
+      "section": "6",
+      "start_page": 19,
+      "end_page": 19,
+      "page_count": 1
+    },
+    {
+      "number": "6.2.3",
+      "title": "Schedule of Examination",
+      "section": "6",
+      "start_page": 19,
+      "end_page": 19,
+      "page_count": 1
+    },
+    {
+      "number": "6.2.4",
+      "title": "Make-up Examination",
+      "section": "6",
+      "start_page": 19,
+      "end_page": 19,
+      "page_count": 1
+    },
+    {
+      "number": "6.2.5",
+      "title": "Grade Improvement Examination",
+      "section": "6",
+      "start_page": 19,
+      "end_page": 20,
+      "page_count": 2
+    },
+    {
+      "number": "6.2.6",
+      "title": "For Online Courses and Courses Offered by Other Institutions Under MoU",
+      "section": "6",
+      "start_page": 20,
+      "end_page": 20,
+      "page_count": 1
+    },
+    {
+      "number": "6.3",
+      "title": "Grading System",
+      "section": "6",
+      "start_page": 20,
+      "end_page": 20,
+      "page_count": 1
+    },
+    {
+      "number": "6.3.1",
+      "title": "Grades and Grade Points",
+      "section": "6",
+      "start_page": 20,
+      "end_page": 21,
+      "page_count": 2
+    },
+    {
+      "number": "6.3.2",
+      "title": "Grading Online Courses",
+      "section": "6",
+      "start_page": 21,
+      "end_page": 21,
+      "page_count": 1
+    },
+    {
+      "number": "6.3.3",
+      "title": "Semester Performance Index (SPI)",
+      "section": "6",
+      "start_page": 21,
+      "end_page": 21,
+      "page_count": 1
+    },
+    {
+      "number": "6.3.4",
+      "title": "Cumulative Performance Index (CPI)",
+      "section": "6",
+      "start_page": 21,
+      "end_page": 21,
+      "page_count": 1
+    },
+    {
+      "number": "6.3.5",
+      "title": "Grade Report",
+      "section": "6",
+      "start_page": 21,
+      "end_page": 22,
+      "page_count": 2
+    },
+    {
+      "number": "6.3.6",
+      "title": "Transcript",
+      "section": "6",
+      "start_page": 22,
+      "end_page": 22,
+      "page_count": 1
+    },
+    {
+      "number": "6.3.7",
+      "title": "Withholding of Grade Report",
+      "section": "6",
+      "start_page": 22,
+      "end_page": 22,
+      "page_count": 1
+    },
+    {
+      "number": "6.3.8",
+      "title": "Marks Normalization for Multi-Group Courses",
+      "section": "6",
+      "start_page": 22,
+      "end_page": 22,
+      "page_count": 1
+    },
+    {
+      "number": "7.1",
+      "title": "ACademic Deficiency (ACD)",
+      "section": "7",
+      "start_page": 22,
+      "end_page": 22,
+      "page_count": 1
+    },
+    {
+      "number": "7.2",
+      "title": "Minimum Performance Requirement for Respective Programmes",
+      "section": "7",
+      "start_page": 22,
+      "end_page": 23,
+      "page_count": 2
+    },
+    {
+      "number": "7.3",
+      "title": "Degradation of Programme",
+      "section": "7",
+      "start_page": 23,
+      "end_page": 23,
+      "page_count": 1
+    },
+    {
+      "number": "7.4",
+      "title": "Termination of Programme",
+      "section": "7",
+      "start_page": 23,
+      "end_page": 23,
+      "page_count": 1
+    },
+    {
+      "number": "7.5",
+      "title": "Appeal against Termination",
+      "section": "7",
+      "start_page": 23,
+      "end_page": 23,
+      "page_count": 1
+    },
+    {
+      "number": "8.1",
+      "title": "Holidays",
+      "section": "8",
+      "start_page": 23,
+      "end_page": 24,
+      "page_count": 2
+    },
+    {
+      "number": "8.2",
+      "title": "Mid-Semester recess and Vacation",
+      "section": "8",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "8.3",
+      "title": "Medical Leave",
+      "section": "8",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "8.4",
+      "title": "Semester Leave",
+      "section": "8",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "8.5",
+      "title": "Study Leave",
+      "section": "8",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "8.6",
+      "title": "Extra-curricular Activity Leave",
+      "section": "8",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "9.1",
+      "title": "Attendance Requirement",
+      "section": "9",
+      "start_page": 24,
+      "end_page": 25,
+      "page_count": 2
+    },
+    {
+      "number": "9.2",
+      "title": "Minimum and Maximum Duration",
+      "section": "9",
+      "start_page": 25,
+      "end_page": 25,
+      "page_count": 1
+    },
+    {
+      "number": "10.1",
+      "title": "Award of Degree",
+      "section": "10",
+      "start_page": 25,
+      "end_page": 25,
+      "page_count": 1
+    },
+    {
+      "number": "10.2",
+      "title": "Withdrawal of the Degree",
+      "section": "10",
+      "start_page": 25,
+      "end_page": 25,
+      "page_count": 1
+    },
+    {
+      "number": "11.1",
+      "title": "Scholarships",
+      "section": "11",
+      "start_page": 25,
+      "end_page": 25,
+      "page_count": 1
+    },
+    {
+      "number": "11.2",
+      "title": "Prizes and Medals",
+      "section": "11",
+      "start_page": 25,
+      "end_page": 25,
+      "page_count": 1
+    },
+    {
+      "number": "12.1",
+      "title": "Code of Conduct",
+      "section": "12",
+      "start_page": 25,
+      "end_page": 26,
+      "page_count": 2
+    },
+    {
+      "number": "12.2",
+      "title": "Ragging",
+      "section": "12",
+      "start_page": 26,
+      "end_page": 26,
+      "page_count": 1
+    },
+    {
+      "number": "12.3",
+      "title": "Disciplinary Actions and Related Matter",
+      "section": "12",
+      "start_page": 26,
+      "end_page": 26,
+      "page_count": 1
+    },
+    {
+      "number": "12.3.1",
+      "title": "Proctorial Board",
+      "section": "12",
+      "start_page": 26,
+      "end_page": 26,
+      "page_count": 1
+    },
+    {
+      "number": "12.4",
+      "title": "Various Cells",
+      "section": "12",
+      "start_page": 26,
+      "end_page": 26,
+      "page_count": 1
+    },
+    {
+      "number": "12.5",
+      "title": "Unfair Means (UFM)",
+      "section": "12",
+      "start_page": 26,
+      "end_page": 27,
+      "page_count": 2
+    }
+  ],
+  "forms": [
+    {
+      "form_id": "BP-01",
+      "start_page": 28,
+      "end_page": 29,
+      "page_count": 2,
+      "title": "FEED BACK FORM FOR THEORY COURSES",
+      "clauses": [
+        "1.6"
+      ]
+    },
+    {
+      "form_id": "BP-02",
+      "start_page": 30,
+      "end_page": 30,
+      "page_count": 1,
+      "title": "FEED BACK FORM FOR PRACTICAL-COURSES",
+      "clauses": [
+        "1.6"
+      ]
+    },
+    {
+      "form_id": "BP-03",
+      "start_page": 31,
+      "end_page": 31,
+      "page_count": 1,
+      "title": "FORM FOR ADMISSION WITHDRWAL FROM PROGRAMME",
+      "clauses": [
+        "3.3"
+      ]
+    },
+    {
+      "form_id": "BP-04",
+      "start_page": 32,
+      "end_page": 32,
+      "page_count": 1,
+      "title": "FORM FOR INTIMATION OF SLOW PACE OF STUDY",
+      "clauses": [
+        "5.2"
+      ]
+    },
+    {
+      "form_id": "BP-05",
+      "start_page": 33,
+      "end_page": 33,
+      "page_count": 1,
+      "title": "FORM FOR REGISTRATION OF MINOR PROGRAMME(S)",
+      "clauses": [
+        "5.5(i)"
+      ]
+    },
+    {
+      "form_id": "BP-06",
+      "start_page": 34,
+      "end_page": 34,
+      "page_count": 1,
+      "title": "FORM FOR REGISTRATION OF MINOR CREDIT COURSES",
+      "clauses": [
+        "5.5(iii)"
+      ]
+    },
+    {
+      "form_id": "BP-07",
+      "start_page": 35,
+      "end_page": 35,
+      "page_count": 1,
+      "title": "FORM FOR REGISTRATION OF HONOURS/RESEARCH PROGRAMME",
+      "clauses": [
+        "5.6",
+        "5.6(i)"
+      ]
+    },
+    {
+      "form_id": "BP-08",
+      "start_page": 36,
+      "end_page": 36,
+      "page_count": 1,
+      "title": "FORM FOR REGISTRATION OF HONOURS/RESEARCH CREDIT COURSES",
+      "clauses": [
+        "5.6(ii)"
+      ]
+    },
+    {
+      "form_id": "BP-09",
+      "start_page": 37,
+      "end_page": 37,
+      "page_count": 1,
+      "title": "FORM FOR REGISTRATION TO AUDIT COURSES",
+      "clauses": [
+        "6.1"
+      ]
+    },
+    {
+      "form_id": "BP-10",
+      "start_page": 38,
+      "end_page": 38,
+      "page_count": 1,
+      "title": "FORM FOR MAKE-UP EXAMINATION",
+      "clauses": [
+        "6.2.4"
+      ]
+    },
+    {
+      "form_id": "BP-11",
+      "start_page": 39,
+      "end_page": 39,
+      "page_count": 1,
+      "title": "",
+      "clauses": [
+        "6.2.5"
+      ]
+    },
+    {
+      "form_id": "BP-11",
+      "start_page": 40,
+      "end_page": 40,
+      "page_count": 1,
+      "title": "FORM FOR APPEAL AGAINST TERMINATION",
+      "clauses": [
+        "7.5"
+      ]
+    },
+    {
+      "form_id": "BP-12",
+      "start_page": 41,
+      "end_page": 41,
+      "page_count": 1,
+      "title": "Medical/ Semester/Study Leave Application",
+      "clauses": []
+    },
+    {
+      "form_id": "BP-13",
+      "start_page": 42,
+      "end_page": 44,
+      "page_count": 3,
+      "title": "FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS",
+      "clauses": [
+        "12.5"
+      ]
+    }
+  ],
+  "form_references": {
+    "BP-01": [
+      {
+        "page": 11,
+        "clause_context": null,
+        "text": "in the prescribed format [Form: BP-01 & BP-02]."
+      }
+    ],
+    "BP-03": [
+      {
+        "page": 14,
+        "clause_context": null,
+        "text": "concerned HOD and chairperson SUGC [Form: BP-03]. The students may also be permitted to"
+      }
+    ],
+    "BP-04": [
+      {
+        "page": 15,
+        "clause_context": null,
+        "text": "semester [Form: BP-04]"
+      }
+    ],
+    "BP-05": [
+      {
+        "page": 16,
+        "clause_context": null,
+        "text": "of registration as per the clause 7.2. [Form: BP-05]"
+      }
+    ],
+    "BP-06": [
+      {
+        "page": 16,
+        "clause_context": null,
+        "text": "(iii) The student will apply for registration of Minor credit courses [Form: BP-06] by the notified"
+      }
+    ],
+    "BP-07": [
+      {
+        "page": 16,
+        "clause_context": null,
+        "text": "[Form: BP-07]"
+      },
+      {
+        "page": 16,
+        "clause_context": null,
+        "text": "[Form: BP-07]"
+      }
+    ],
+    "BP-08": [
+      {
+        "page": 16,
+        "clause_context": null,
+        "text": "(ii) The student will apply for registration to Honours credit courses [Form: BP-08] by the"
+      },
+      {
+        "page": 16,
+        "clause_context": null,
+        "text": "(ii) The student will apply for registration of Research credit courses [Form: BP-08] by the"
+      }
+    ],
+    "BP-09": [
+      {
+        "page": 17,
+        "clause_context": null,
+        "text": "semester [Form: BP-09]. There will, however, be no obligation on the part of the"
+      }
+    ],
+    "BP-10": [
+      {
+        "page": 19,
+        "clause_context": null,
+        "text": "must be made on the prescribed form [Form: BP-10] available in the ordinances, giving reasons"
+      }
+    ],
+    "BP-11": [
+      {
+        "page": 19,
+        "clause_context": null,
+        "text": "[Form: BP-11] with the combination of F, X, ABS and, N to remove ACD. However, the"
+      },
+      {
+        "page": 23,
+        "clause_context": null,
+        "text": "prescribed format [Form: BP-11]. The Chairperson, Senate shall take a final decision after"
+      }
+    ],
+    "BP-12": [
+      {
+        "page": 24,
+        "clause_context": null,
+        "text": "six (6) years. The student shall submit an application (Form: BP-12) prior to the start of the"
+      },
+      {
+        "page": 24,
+        "clause_context": null,
+        "text": "shall submit an application [Form: BP-12] to the Head of the Department and will be approved by"
+      }
+    ],
+    "BP-13": [
+      {
+        "page": 27,
+        "clause_context": null,
+        "text": "the prescribed format [Form: BP-13], on the same day."
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page": 1,
+      "page_type": "front_matter"
+    },
+    {
+      "page": 2,
+      "page_type": "front_matter"
+    },
+    {
+      "page": 3,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 4,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 5,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 6,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 7,
+      "page_type": "preamble_or_nomenclature"
+    },
+    {
+      "page": 8,
+      "page_type": "preamble_or_nomenclature"
+    },
+    {
+      "page": 9,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 10,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 11,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 12,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 13,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 14,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 15,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 16,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 17,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 18,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 19,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 20,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 21,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 22,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 23,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 24,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 25,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 26,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 27,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 28,
+      "page_type": "form"
+    },
+    {
+      "page": 29,
+      "page_type": "form"
+    },
+    {
+      "page": 30,
+      "page_type": "form"
+    },
+    {
+      "page": 31,
+      "page_type": "form"
+    },
+    {
+      "page": 32,
+      "page_type": "form"
+    },
+    {
+      "page": 33,
+      "page_type": "form"
+    },
+    {
+      "page": 34,
+      "page_type": "form"
+    },
+    {
+      "page": 35,
+      "page_type": "form"
+    },
+    {
+      "page": 36,
+      "page_type": "form"
+    },
+    {
+      "page": 37,
+      "page_type": "form"
+    },
+    {
+      "page": 38,
+      "page_type": "form"
+    },
+    {
+      "page": 39,
+      "page_type": "form"
+    },
+    {
+      "page": 40,
+      "page_type": "form"
+    },
+    {
+      "page": 41,
+      "page_type": "form"
+    },
+    {
+      "page": 42,
+      "page_type": "form"
+    },
+    {
+      "page": 43,
+      "page_type": "form"
+    },
+    {
+      "page": 44,
+      "page_type": "form"
+    },
+    {
+      "page": 45,
+      "page_type": "notes"
+    },
+    {
+      "page": 46,
+      "page_type": "notes"
+    },
+    {
+      "page": 47,
+      "page_type": "notes"
+    },
+    {
+      "page": 48,
+      "page_type": "notes"
+    },
+    {
+      "page": 49,
+      "page_type": "notes"
+    },
+    {
+      "page": 50,
+      "page_type": "notes"
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": []
+  }
+}
