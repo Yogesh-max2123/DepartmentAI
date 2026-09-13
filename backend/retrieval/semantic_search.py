@@ -1,10 +1,10 @@
 import os
 import re
-import math
-import psycopg2
 from collections import Counter
-from sentence_transformers import SentenceTransformer
+
+import psycopg2
 from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer
 
 
 # ---------------------------------------------------------
@@ -13,20 +13,26 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+MODEL_NAME = (
+    "sentence-transformers/"
+    "paraphrase-multilingual-MiniLM-L12-v2"
+)
 
-# Number of candidates retrieved from pgvector before reranking.
-CANDIDATE_K = 15
+# Number of candidates retrieved from pgvector
+# before lexical reranking.
+CANDIDATE_K = 25
 
 # Number of final results returned.
-TOP_K = 1
+TOP_K = 5
 
 DB_HOST = "localhost"
 DB_PORT = 5432
 DB_NAME = "departmentai"
 DB_USER = "postgres"
 
-DB_PASSWORD = os.getenv("DEPARTMENTAI_DB_PASSWORD")
+DB_PASSWORD = os.getenv(
+    "DEPARTMENTAI_DB_PASSWORD"
+)
 
 
 # ---------------------------------------------------------
@@ -41,7 +47,10 @@ model = SentenceTransformer(
 )
 
 print("Embedding model loaded.")
-print(f"Embedding dimension: {model.get_embedding_dimension()}")
+print(
+    f"Embedding dimension: "
+    f"{model.get_embedding_dimension()}"
+)
 
 
 # ---------------------------------------------------------
@@ -50,7 +59,8 @@ print(f"Embedding dimension: {model.get_embedding_dimension()}")
 
 if not DB_PASSWORD:
     raise RuntimeError(
-        "DEPARTMENTAI_DB_PASSWORD environment variable is not set."
+        "DEPARTMENTAI_DB_PASSWORD "
+        "environment variable is not set."
     )
 
 print("Connecting to PostgreSQL...")
@@ -76,38 +86,56 @@ def tokenize(text: str):
 
     Example:
         "B.Tech. Degree requirements"
-        ->
+
+    becomes approximately:
+
         ["b", "tech", "degree", "requirements"]
     """
 
+    if not text:
+        return []
+
     text = text.lower()
 
-    # Keep alphanumeric words.
-    tokens = re.findall(r"[a-z0-9]+", text)
+    return re.findall(
+        r"[a-z0-9]+",
+        text
+    )
 
-    return tokens
 
+# ---------------------------------------------------------
+# Keyword / Lexical Scoring
+# ---------------------------------------------------------
 
-def calculate_keyword_score(question: str, chunk_text: str):
+def calculate_keyword_score(
+    question: str,
+    chunk_text: str,
+    section_title: str = ""
+):
     """
-    Calculate lexical overlap between the question and chunk.
+    Calculate lexical relevance between the question
+    and retrieved chunk.
 
-    Gives more importance to:
-    - words appearing in both question and chunk
-    - repeated matching terms
-    - exact phrase matches
+    Improvements:
+    - Considers section title.
+    - Removes common question words.
+    - Rewards query-term coverage.
+    - Rewards exact two-word phrase matches.
+    - Applies a small penalty when a generic question
+      is matched by strongly branch-specific content.
     """
 
     question_tokens = tokenize(question)
     chunk_tokens = tokenize(chunk_text)
+    section_tokens = tokenize(section_title)
 
     if not question_tokens or not chunk_tokens:
         return 0.0
 
-    question_counter = Counter(question_tokens)
-    chunk_counter = Counter(chunk_tokens)
+    # -----------------------------------------------------
+    # Stop words
+    # -----------------------------------------------------
 
-    # Remove extremely common English question words.
     stop_words = {
         "what",
         "are",
@@ -146,42 +174,131 @@ def calculate_keyword_score(question: str, chunk_text: str):
     if not meaningful_question_tokens:
         return 0.0
 
-    # Count how many meaningful question terms occur in the chunk.
+    # -----------------------------------------------------
+    # Sets for efficient matching
+    # -----------------------------------------------------
+
+    question_set = set(
+        meaningful_question_tokens
+    )
+
+    chunk_set = set(
+        chunk_tokens
+    )
+
+    section_set = set(
+        section_tokens
+    )
+
+    # -----------------------------------------------------
+    # Query-term coverage
+    # -----------------------------------------------------
+
     matched_terms = 0
 
-    for token in set(meaningful_question_tokens):
-        if token in chunk_counter:
+    for token in question_set:
+
+        if (
+            token in chunk_set
+            or token in section_set
+        ):
             matched_terms += 1
 
     coverage_score = (
-        matched_terms / len(set(meaningful_question_tokens))
+        matched_terms /
+        len(question_set)
     )
 
     # -----------------------------------------------------
     # Exact phrase bonus
     # -----------------------------------------------------
 
-    normalized_question = " ".join(question_tokens)
-    normalized_chunk = " ".join(chunk_tokens)
+    normalized_chunk = " ".join(
+        chunk_tokens
+    )
+
+    normalized_section = " ".join(
+        section_tokens
+    )
 
     phrase_bonus = 0.0
 
-    # Look for meaningful two-word combinations.
-    for i in range(len(meaningful_question_tokens) - 1):
+    for i in range(
+        len(meaningful_question_tokens) - 1
+    ):
+
         phrase = (
             meaningful_question_tokens[i]
             + " "
             + meaningful_question_tokens[i + 1]
         )
 
-        if phrase in normalized_chunk:
-            phrase_bonus += 0.1
+        if (
+            phrase in normalized_chunk
+            or phrase in normalized_section
+        ):
+            phrase_bonus += 0.10
 
-    phrase_bonus = min(phrase_bonus, 0.3)
+    # Do not allow phrase bonuses to dominate
+    # the lexical score.
+    phrase_bonus = min(
+        phrase_bonus,
+        0.30
+    )
 
-    score = min(1.0, coverage_score + phrase_bonus)
+    score = (
+        coverage_score
+        + phrase_bonus
+    )
 
-    return score
+    # -----------------------------------------------------
+    # Generic-vs-specific penalty
+    # -----------------------------------------------------
+    #
+    # If the user asks a generic question such as:
+    #
+    # "What are the requirements for a B.Tech degree?"
+    #
+    # a chunk containing only branch-specific information
+    # such as ECE should receive a small penalty when the
+    # branch was not mentioned in the question.
+    #
+    # This penalty is intentionally small.
+    # -----------------------------------------------------
+
+    branch_terms = {
+        "ece",
+        "cse",
+        "biotechnology",
+        "chemical",
+        "civil",
+        "electrical",
+        "mechanical",
+        "production",
+        "industrial"
+    }
+
+    question_all_tokens = set(
+        question_tokens
+    )
+
+    unspecified_branch_terms = (
+        branch_terms
+        - question_all_tokens
+    )
+
+    branch_matches = (
+        unspecified_branch_terms
+        & chunk_set
+    )
+
+    if branch_matches:
+        score -= 0.10
+
+    return max(
+        0.0,
+        min(1.0, score)
+    )
 
 
 # ---------------------------------------------------------
@@ -194,10 +311,15 @@ def semantic_search(question: str):
 
     1. Generate question embedding.
     2. Retrieve CANDIDATE_K semantically similar chunks.
-    3. Calculate keyword relevance.
+    3. Calculate lexical relevance.
     4. Combine semantic + lexical scores.
-    5. Return the best result.
+    5. Return the highest-ranked TOP_K results.
     """
+
+    if not question.strip():
+        raise ValueError(
+            "Question cannot be empty."
+        )
 
     # -----------------------------------------------------
     # Generate question embedding
@@ -220,6 +342,7 @@ def semantic_search(question: str):
     cursor = conn.cursor()
 
     try:
+
         query = """
         SELECT
             kc.metadata->>'chunk_id' AS chunk_id,
@@ -231,12 +354,18 @@ def semantic_search(question: str):
             kc.page_end,
             s.section_number,
             s.title AS section_title,
-            1 - (kc.embedding <=> %s::vector) AS similarity
+            1 - (kc.embedding <=> %s::vector)
+                AS similarity
+
         FROM knowledge_chunks kc
+
         LEFT JOIN sections s
             ON kc.section_id = s.id
+
         WHERE kc.embedding IS NOT NULL
+
         ORDER BY kc.embedding <=> %s::vector
+
         LIMIT %s;
         """
 
@@ -252,6 +381,7 @@ def semantic_search(question: str):
         candidates = cursor.fetchall()
 
     finally:
+
         # Cursor is temporary.
         # Database connection remains open.
         cursor.close()
@@ -280,17 +410,19 @@ def semantic_search(question: str):
             semantic_score
         ) = result
 
-        keyword_score = calculate_keyword_score(
-            question,
-            chunk_text
+        keyword_score = (
+            calculate_keyword_score(
+                question,
+                chunk_text,
+                section_title
+            )
         )
 
         # -------------------------------------------------
         # Combined relevance score
         # -------------------------------------------------
         #
-        # Semantic similarity gets the larger weight.
-        # Keyword matching provides an additional signal.
+        # Semantic similarity remains dominant.
         #
         # 80% semantic
         # 20% lexical
@@ -299,7 +431,7 @@ def semantic_search(question: str):
         combined_score = (
             0.80 * float(semantic_score)
             +
-            0.20 * keyword_score
+            0.20 * float(keyword_score)
         )
 
         reranked_results.append(
@@ -313,9 +445,15 @@ def semantic_search(question: str):
                 "page_end": page_end,
                 "section_number": section_number,
                 "section_title": section_title,
-                "semantic_score": float(semantic_score),
-                "keyword_score": keyword_score,
-                "combined_score": combined_score
+                "semantic_score": float(
+                    semantic_score
+                ),
+                "keyword_score": float(
+                    keyword_score
+                ),
+                "combined_score": float(
+                    combined_score
+                )
             }
         )
 
@@ -337,38 +475,86 @@ def semantic_search(question: str):
 
 def display_result(results):
     """
-    Display the highest-ranked retrieved chunk.
+    Display all final retrieved results.
     """
 
     if not results:
-        print("\nNo relevant information found.")
+        print(
+            "\nNo relevant information found."
+        )
         return
 
-    result = results[0]
-
-    print("\n" + "=" * 70)
-    print("TOP RETRIEVED RESULT")
-    print("=" * 70)
-
     print(
-        f"\nSemantic similarity: "
-        f"{result['semantic_score']:.4f}"
+        "\n"
+        + "=" * 70
     )
 
     print(
-        f"Keyword relevance: "
-        f"{result['keyword_score']:.4f}"
+        f"TOP {len(results)} RETRIEVED RESULTS"
     )
 
     print(
-        f"Combined relevance: "
-        f"{result['combined_score']:.4f}"
+        "=" * 70
     )
 
-    print("\nRetrieved Text:")
-    print("-" * 70)
-    print(result["chunk_text"])
-    print("-" * 70)
+    for index, result in enumerate(
+        results,
+        start=1
+    ):
+
+        print()
+        print(
+            f"[{index}] "
+            f"Chunk ID: {result['chunk_id']}"
+        )
+
+        print(
+            f"Section: "
+            f"{result['section_number']} - "
+            f"{result['section_title']}"
+        )
+
+        print(
+            f"Clause: "
+            f"{result['clause_number']}"
+        )
+
+        print(
+            f"Pages: "
+            f"{result['page_start']}-"
+            f"{result['page_end']}"
+        )
+
+        print(
+            f"Semantic similarity: "
+            f"{result['semantic_score']:.4f}"
+        )
+
+        print(
+            f"Keyword relevance: "
+            f"{result['keyword_score']:.4f}"
+        )
+
+        print(
+            f"Combined relevance: "
+            f"{result['combined_score']:.4f}"
+        )
+
+        print(
+            "\nRetrieved Text:"
+        )
+
+        print(
+            "-" * 70
+        )
+
+        print(
+            result["chunk_text"]
+        )
+
+        print(
+            "-" * 70
+        )
 
 
 # ---------------------------------------------------------
@@ -377,19 +563,29 @@ def display_result(results):
 
 def main():
 
-    print("\n" + "=" * 70)
-    print("DepartmentAI Semantic Retrieval")
-    print("=" * 70)
+    print(
+        "\n"
+        + "=" * 70
+    )
+
+    print(
+        "DepartmentAI Semantic Retrieval"
+    )
+
+    print(
+        "=" * 70
+    )
 
     print(
         "\nEmbedding model loaded once."
         "\nPostgreSQL connection established once."
         f"\nSemantic candidates: Top {CANDIDATE_K}"
-        f"\nFinal result: Top {TOP_K}"
+        f"\nFinal results: Top {TOP_K}"
     )
 
     print(
-        "\nAsk multiple questions without reconnecting."
+        "\nAsk multiple questions without "
+        "reloading the model or reconnecting."
         "\nType 'exit' or 'quit' to stop.\n"
     )
 
@@ -397,24 +593,34 @@ def main():
 
         while True:
 
-            question = input("Question: ").strip()
+            question = input(
+                "Question: "
+            ).strip()
 
             if not question:
                 continue
 
-            if question.lower() in {"exit", "quit"}:
+            if question.lower() in {
+                "exit",
+                "quit"
+            }:
                 break
 
             try:
 
-                results = semantic_search(question)
+                results = semantic_search(
+                    question
+                )
 
-                display_result(results)
+                display_result(
+                    results
+                )
 
             except Exception as e:
 
                 print(
-                    f"\nError while performing semantic search: {e}"
+                    "\nError while performing "
+                    f"semantic search: {e}"
                 )
 
     finally:
@@ -427,9 +633,13 @@ def main():
 
             conn.close()
 
-            print("\nDatabase connection closed.")
+            print(
+                "\nDatabase connection closed."
+            )
 
-        print("DepartmentAI semantic retrieval stopped.")
+        print(
+            "DepartmentAI semantic retrieval stopped."
+        )
 
 
 # ---------------------------------------------------------
