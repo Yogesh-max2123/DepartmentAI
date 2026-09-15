@@ -1,15 +1,15 @@
+import re
+
 from backend.database.connection import get_connection
 from backend.llm.gemini_client import generate_answer
-import re
 
 
 def analyze_application_eligibility(application_id):
     """
-    Analyze an application's eligibility against its stored
-    ordinance requirements and submitted document evidence.
+    Analyze application eligibility against extracted ordinance requirements.
 
-    This module provides an AI-assisted analysis only.
-    It does NOT make the final academic decision.
+    AI provides an eligibility assessment based on the available evidence.
+    Final academic decisions must be made by authorized officials/committees.
     """
 
     conn = get_connection()
@@ -17,10 +17,7 @@ def analyze_application_eligibility(application_id):
     try:
         with conn.cursor() as cursor:
 
-            # -------------------------------------------------
             # Get application
-            # -------------------------------------------------
-
             cursor.execute(
                 """
                 SELECT
@@ -41,15 +38,13 @@ def analyze_application_eligibility(application_id):
                     f"Application with id {application_id} does not exist."
                 )
 
-            # -------------------------------------------------
-            # Get extracted document text
-            # -------------------------------------------------
-
+            # Get application documents and extracted text
             cursor.execute(
                 """
                 SELECT
                     ad.id,
                     ad.file_name,
+                    ad.document_type,
                     de.extracted_text
                 FROM application_documents ad
                 LEFT JOIN document_extractions de
@@ -62,10 +57,33 @@ def analyze_application_eligibility(application_id):
 
             documents = cursor.fetchall()
 
-            # -------------------------------------------------
-            # Get application requirements
-            # -------------------------------------------------
+            # Build document evidence
+            document_evidence_parts = []
 
+            for document in documents:
+                document_id = document[0]
+                file_name = document[1]
+                document_type = document[2]
+                extracted_text = document[3]
+
+                if extracted_text:
+                    document_evidence_parts.append(
+                        f"""
+Document ID: {document_id}
+File Name: {file_name}
+Document Type: {document_type or "UNKNOWN"}
+
+Extracted Text:
+{extracted_text}
+"""
+                    )
+
+            if document_evidence_parts:
+                document_context = "\n".join(document_evidence_parts)
+            else:
+                document_context = "No extracted document evidence is available."
+
+            # Get requirements
             cursor.execute(
                 """
                 SELECT
@@ -82,192 +100,174 @@ def analyze_application_eligibility(application_id):
 
             requirements = cursor.fetchall()
 
-        # -----------------------------------------------------
-        # Build document evidence
-        # -----------------------------------------------------
+            if not requirements:
+                return {
+                    "application_id": application_id,
+                    "requirements_analyzed": 0,
+                    "results": [],
+                }
 
-        document_parts = []
-
-        for document in documents:
-            document_id = document[0]
-            file_name = document[1]
-            extracted_text = document[2] or ""
-
-            if extracted_text.strip():
-                document_parts.append(
-                    f"""
-DOCUMENT ID: {document_id}
-FILE NAME: {file_name}
-
-EXTRACTED TEXT:
-{extracted_text}
-"""
-                )
-
-        document_context = "\n".join(document_parts)
-
-        if not document_context.strip():
-            document_context = (
-                "No extracted text is currently available "
-                "from the submitted application documents."
+            # Remove previous eligibility results for this application.
+            # This makes repeated analysis runs idempotent and prevents
+            # duplicate eligibility records.
+            cursor.execute(
+                """
+                DELETE FROM eligibility_results
+                WHERE application_id = %s;
+                """,
+                (application_id,),
             )
 
-        results = []
+            results = []
 
-        # -----------------------------------------------------
-        # Analyze every requirement
-        # -----------------------------------------------------
+            # Analyze every requirement
+            for requirement in requirements:
 
-        for requirement in requirements:
+                requirement_id = requirement[0]
+                requirement_description = requirement[1]
+                source_chunk_id = requirement[3]
 
-            requirement_id = requirement[0]
-            requirement_description = requirement[1]
-            requirement_type = requirement[2]
-            source_chunk_id = requirement[3]
+                question = f"""
+Determine whether the submitted application evidence satisfies the
+following academic ordinance requirement.
 
-            question = f"""
-Analyze the applicant's eligibility for the following
-official academic requirement.
-
-APPLICATION TYPE:
-{application[1]}
-
-APPLICATION TITLE:
-{application[2] or ""}
-
-APPLICATION DESCRIPTION:
-{application[3] or ""}
-
-OFFICIAL ORDINANCE REQUIREMENT:
+Requirement:
 {requirement_description}
 
-SUBMITTED DOCUMENT EVIDENCE:
-{document_context}
+Application:
+Application Type: {application[1]}
+Title: {application[2] or ""}
+Description: {application[3] or ""}
 
-Determine whether the available evidence shows that the
-requirement is:
+Use ONLY the provided document evidence.
 
-MET
-NOT_MET
-UNCLEAR
-
-Rules:
-1. Use only the official requirement and submitted document
-   evidence provided above.
-2. Do not use outside knowledge.
-3. Do not invent missing information.
-4. If the documents do not provide enough evidence, return
-   UNCLEAR.
-5. Do not make a final approval or rejection decision.
-6. Briefly explain the evidence supporting the result.
-7. Preserve important numbers and conditions from the
-   ordinance.
-
-Return the result in this exact format:
+Return the result exactly in this format:
 
 RESULT: MET | NOT_MET | UNCLEAR
 CONFIDENCE: <number between 0 and 1>
 EVIDENCE: <brief explanation>
+
+Rules:
+- MET: the available evidence clearly satisfies the requirement.
+- NOT_MET: the available evidence clearly shows that the requirement
+  is not satisfied.
+- UNCLEAR: the available evidence is insufficient to determine whether
+  the requirement is satisfied.
+- Do not make a final official academic decision.
 """
 
-            try:
-                analysis = generate_answer(
-                    question,
-                    requirement_description
-                    + "\n\n"
-                    + document_context,
-                )
-
-                result = "UNCLEAR"
-                confidence = 0.0
-
-                analysis_upper = analysis.upper()
-
-                if "RESULT: MET" in analysis_upper:
-                    result = "MET"
-                elif "RESULT: NOT_MET" in analysis_upper:
-                    result = "NOT_MET"
-
-                confidence_match = re.search(
-                    r"CONFIDENCE:\s*([01](?:\.\d+)?)",
-                    analysis,
-                    re.IGNORECASE,
-                )
-
-                if confidence_match:
-                    confidence = float(confidence_match.group(1))
-
-                    # Safety check: confidence must remain between 0 and 1.
-                    confidence = max(0.0, min(1.0, confidence))
-
-                evidence = analysis.strip()
-
-            except Exception as e:
-                result = "UNCLEAR"
-                confidence = 0.0
-                evidence = (
-                    f"Eligibility analysis could not be completed: {e}"
-                )
-
-            # -------------------------------------------------
-            # Store result
-            # -------------------------------------------------
-
-            conn = get_connection()
-
-            try:
-                with conn.cursor() as cursor:
-                    cursor.execute(
-                        """
-                        INSERT INTO eligibility_results (
-                            application_id,
-                            requirement_id,
-                            result,
-                            evidence,
-                            confidence,
-                            analysis_reference
-                        )
-                        VALUES (
-                            %s, %s, %s, %s, %s, %s
-                        )
-                        RETURNING id;
-                        """,
-                        (
-                            application_id,
-                            requirement_id,
-                            result,
-                            evidence,
-                            confidence,
-                            f"knowledge_chunk:{source_chunk_id}",
-                        ),
+                try:
+                    analysis = generate_answer(
+                        question,
+                        requirement_description
+                        + "\n\n"
+                        + document_context,
                     )
 
-                conn.commit()
+                    # Parse result
+                    analysis_upper = analysis.upper()
 
-            except Exception:
-                conn.rollback()
-                raise
+                    if "RESULT: MET" in analysis_upper:
+                        result_status = "MET"
+                    elif "RESULT: NOT_MET" in analysis_upper:
+                        result_status = "NOT_MET"
+                    else:
+                        result_status = "UNCLEAR"
 
-            finally:
-                conn.close()
+                    # Parse confidence
+                    confidence_match = re.search(
+                        r"CONFIDENCE:\s*([01](?:\.\d+)?)",
+                        analysis,
+                        re.IGNORECASE,
+                    )
 
-            results.append(
-                {
-                    "requirement_id": requirement_id,
-                    "requirement_type": requirement_type,
-                    "source_chunk_id": source_chunk_id,
-                    "result": result,
-                    "confidence": confidence,
-                    "evidence": evidence,
-                }
-            )
+                    if confidence_match:
+                        confidence = float(confidence_match.group(1))
+                        confidence = max(
+                            0.0,
+                            min(1.0, confidence),
+                        )
+                    else:
+                        confidence = 0.0
+
+                    # Parse evidence
+                    evidence_match = re.search(
+                        r"EVIDENCE:\s*(.*)",
+                        analysis,
+                        re.IGNORECASE | re.DOTALL,
+                    )
+
+                    if evidence_match:
+                        evidence = evidence_match.group(1).strip()
+                    else:
+                        evidence = analysis.strip()
+
+                except Exception as e:
+                    # If the LLM request fails, keep the result as UNCLEAR
+                    # rather than treating the requirement as satisfied or
+                    # not satisfied.
+                    result_status = "UNCLEAR"
+                    confidence = 0.0
+                    evidence = (
+                        "Eligibility analysis could not be completed: "
+                        f"{str(e)}"
+                    )
+
+                # Store eligibility result
+                cursor.execute(
+                    """
+                    INSERT INTO eligibility_results (
+                        application_id,
+                        requirement_id,
+                        result,
+                        evidence,
+                        confidence,
+                        analysis_reference
+                    )
+                    VALUES (
+                        %s,
+                        %s,
+                        %s,
+                        %s,
+                        %s,
+                        %s
+                    )
+                    RETURNING id;
+                    """,
+                    (
+                        application_id,
+                        requirement_id,
+                        result_status,
+                        evidence,
+                        confidence,
+                        f"knowledge_chunk:{source_chunk_id}",
+                    ),
+                )
+
+                eligibility_result_id = cursor.fetchone()[0]
+
+                results.append(
+                    {
+                        "eligibility_result_id": eligibility_result_id,
+                        "requirement_id": requirement_id,
+                        "result": result_status,
+                        "evidence": evidence,
+                        "confidence": confidence,
+                        "source_chunk_id": source_chunk_id,
+                    }
+                )
+
+        conn.commit()
 
         return {
             "application_id": application_id,
-            "application_type": application[1],
-            "title": application[2],
+            "requirements_analyzed": len(results),
             "results": results,
         }
+
+    except Exception:
+        conn.rollback()
+        raise
 
     finally:
         conn.close()

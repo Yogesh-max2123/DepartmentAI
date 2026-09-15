@@ -10,6 +10,19 @@ from backend.services.document_extractor import extract_document_text
 from backend.services.document_classifier import classify_document
 from backend.services.application_retrieval import retrieve_ordinance_for_application
 from backend.services.eligibility_engine import analyze_application_eligibility
+from backend.services.deficiency_detector import detect_application_deficiencies
+from backend.services.application_service import (
+    create_application,
+    update_application_status,
+    get_application,
+    get_application_status_history,
+)
+from backend.services.committee_service import (
+    assign_to_committee,
+    record_committee_decision,
+    get_committee_reviews,
+)
+
 
 router = APIRouter()
 
@@ -26,6 +39,15 @@ class AskRequest(BaseModel):
 class AskResponse(BaseModel):
     answer: str
     sources: list
+class CommitteeAssignmentRequest(BaseModel):
+    committee_type: str
+
+
+class CommitteeDecisionRequest(BaseModel):
+    decision: str
+    decision_reason: str
+    decided_by: str
+
 
 
 @router.post("/ask", response_model=AskResponse)
@@ -323,6 +345,106 @@ def retrieve_application_ordinance(
 def analyze_application(application_id: int):
     try:
         return analyze_application_eligibility(application_id)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+@router.get("/applications/{application_id}/deficiencies")
+def detect_deficiencies(application_id: int):
+    try:
+        return detect_application_deficiencies(application_id)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    
+class ApplicationStatusUpdateRequest(BaseModel):
+    new_status: str
+    changed_by: str = "SYSTEM"
+    reason: str | None = None
+
+
+@router.patch("/applications/{application_id}/status")
+def update_status(
+    application_id: int,
+    request: ApplicationStatusUpdateRequest,
+):
+    try:
+        return update_application_status(
+            application_id=application_id,
+            new_status=request.new_status,
+            changed_by=request.changed_by,
+            reason=request.reason,
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/applications/{application_id}/status-history")
+def get_status_history(application_id: int):
+    try:
+        application = get_application(application_id)
+
+        if application is None:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Application with id {application_id} does not exist.",
+            )
+
+        return {
+            "application_id": application_id,
+            "history": get_application_status_history(application_id),
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/applications/{application_id}/committee")
+def assign_application_to_committee(
+    application_id: int,
+    request: CommitteeAssignmentRequest,
+):
+    try:
+        return assign_to_committee(
+            application_id=application_id,
+            committee_type=request.committee_type,
+        )
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/applications/{application_id}/committee-reviews")
+def get_application_committee_reviews(application_id: int):
+    try:
+        return {
+            "application_id": application_id,
+            "reviews": get_committee_reviews(application_id),
+        }
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.patch("/committee-reviews/{review_id}/decision")
+def record_application_committee_decision(
+    review_id: int,
+    request: CommitteeDecisionRequest,
+):
+    try:
+        return record_committee_decision(
+            review_id=review_id,
+            decision=request.decision,
+            decision_reason=request.decision_reason,
+            decided_by=request.decided_by,
+        )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
