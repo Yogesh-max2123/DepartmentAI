@@ -20,7 +20,7 @@ MODEL_NAME = (
 
 # Number of candidates retrieved from pgvector
 # before lexical reranking.
-CANDIDATE_K = 25
+CANDIDATE_K = 50
 
 # Number of final results returned.
 TOP_K = 5

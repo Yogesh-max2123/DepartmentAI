@@ -1,6 +1,7 @@
 from backend.retrieval.semantic_search import semantic_search
 from backend.llm.gemini_client import generate_answer
 from backend.rag.conversation_manager import resolve_follow_up
+from backend.rag.guardrails import validate_question
 
 
 def build_context(results):
@@ -22,13 +23,37 @@ Pages: {result.get('page_start')}-{result.get('page_end')}
 
 def answer_question(question, conversation_history=None):
 
+    # ---------------------------------------------------------
+    # 1. Basic question validation
+    # ---------------------------------------------------------
     if not question or not question.strip():
-        raise ValueError("Question cannot be empty.")
+        return (
+            "Please enter a question.",
+            []
+        )
+
+    # ---------------------------------------------------------
+    # 2. Validate ORIGINAL user question BEFORE
+    #    conversation resolution.
+    #
+    #    This guarantees irrelevant questions such as
+    #    "Tell me a joke" or "How are you?" are blocked
+    #    without entering conversation resolution or RAG.
+    # ---------------------------------------------------------
+    guardrail_result = validate_question(question)
+
+    if not guardrail_result["allowed"]:
+        return (
+            guardrail_result["reason"],
+            []
+        )
 
     if conversation_history is None:
         conversation_history = []
 
-    # Resolve only the current follow-up question.
+    # ---------------------------------------------------------
+    # 3. Resolve follow-up question if conversation exists
+    # ---------------------------------------------------------
     if conversation_history:
         search_query = resolve_follow_up(
             question,
@@ -37,17 +62,30 @@ def answer_question(question, conversation_history=None):
     else:
         search_query = question
 
-    # EXISTING RAG RETRIEVAL — unchanged.
+    # ---------------------------------------------------------
+    # 4. Validate resolved standalone question
+    # ---------------------------------------------------------
+    guardrail_result = validate_question(search_query)
+
+    if not guardrail_result["allowed"]:
+        return (
+            guardrail_result["reason"],
+            []
+        )
+
+    # ---------------------------------------------------------
+    # 5. EXISTING RAG RETRIEVAL — unchanged
+    # ---------------------------------------------------------
     results = semantic_search(search_query)
 
-    # EXISTING ordinance context construction — unchanged.
+    # ---------------------------------------------------------
+    # 6. EXISTING ordinance context construction — unchanged
+    # ---------------------------------------------------------
     ordinance_context = build_context(results)
 
-    # IMPORTANT:
-    # Only the resolved standalone question and official ordinance
-    # context are sent to the final answer generator.
-    #
-    # Conversation history is NOT included here.
+    # ---------------------------------------------------------
+    # 7. EXISTING Gemini answer generation — unchanged
+    # ---------------------------------------------------------
     answer = generate_answer(
         search_query,
         ordinance_context
