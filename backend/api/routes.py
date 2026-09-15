@@ -22,7 +22,7 @@ from backend.services.committee_service import (
     record_committee_decision,
     get_committee_reviews,
 )
-
+from backend.services.audit_service import get_application_audit_logs
 
 router = APIRouter()
 
@@ -449,3 +449,28 @@ def record_application_committee_decision(
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/applications/{application_id}/audit-logs")
+def get_application_audit_logs_endpoint(application_id: int):
+    try:
+        application = get_application(application_id)
+
+        if application is None:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Application with id {application_id} does not exist."
+            )
+
+        return {
+            "application_id": application_id,
+            "audit_logs": get_application_audit_logs(application_id),
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )

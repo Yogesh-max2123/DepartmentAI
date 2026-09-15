@@ -2,6 +2,7 @@ from datetime import datetime
 
 from backend.database.connection import get_connection
 from backend.services.application_service import get_application
+from backend.services.audit_service import log_action
 
 
 VALID_COMMITTEES = {"DUGC", "DMPC", "DDPC"}
@@ -82,6 +83,18 @@ def assign_to_committee(application_id: int, committee_type: str):
             row = cursor.fetchone()
 
         conn.commit()
+
+        # Record committee assignment in the audit trail.
+        log_action(
+            application_id=application_id,
+            actor_type="SYSTEM",
+            actor_id="SYSTEM",
+            action="COMMITTEE_ASSIGNED",
+            details={
+                "committee_type": committee_type,
+                "review_status": "PENDING",
+            },
+        )
 
         return {
             "id": row[0],
@@ -314,6 +327,21 @@ def record_committee_decision(
             completed_review = cursor.fetchone()
 
         conn.commit()
+
+        # Record the human committee decision in the audit trail.
+        log_action(
+            application_id=application_id,
+            actor_type="COMMITTEE",
+            actor_id=decided_by.strip(),
+            action="COMMITTEE_DECISION_RECORDED",
+            details={
+                "review_id": review_id,
+                "committee_type": committee_type,
+                "decision": decision,
+                "decision_reason": decision_reason.strip(),
+                "status_history_id": history_id,
+            },
+        )
 
         return {
             "review": {

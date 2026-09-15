@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from backend.database.connection import get_connection
+from backend.services.audit_service import log_action
 
 
 # Allowed application status transitions.
@@ -131,6 +132,18 @@ def create_application(
             )
 
         conn.commit()
+
+        # Record application creation in the audit trail.
+        log_action(
+            application_id=application[0],
+            actor_type="SYSTEM",
+            actor_id="SYSTEM",
+            action="APPLICATION_CREATED",
+            details={
+                "application_number": application[1],
+                "application_type": application_type,
+            },
+        )
 
         return {
             "id": application[0],
@@ -314,6 +327,18 @@ def update_application_status(
             history_id = cursor.fetchone()[0]
 
         conn.commit()
+        log_action(
+            application_id=application_id,
+            actor_type="SYSTEM",
+            actor_id=changed_by,
+            action="STATUS_CHANGED",
+            details={
+                "old_status": current_status,
+                "new_status": new_status,
+                "reason": reason,
+                "history_id": history_id,
+            },
+        )
 
         return {
             "application_id": application_id,
