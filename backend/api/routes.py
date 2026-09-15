@@ -9,6 +9,7 @@ from backend.services.document_validator import validate_document
 from backend.services.document_extractor import extract_document_text
 from backend.services.document_classifier import classify_document
 from backend.services.application_retrieval import retrieve_ordinance_for_application
+from backend.services.eligibility_engine import analyze_application_eligibility
 
 router = APIRouter()
 
@@ -318,3 +319,11 @@ def retrieve_application_ordinance(
             status_code=500,
             detail=str(e)
         )
+@router.get("/applications/{application_id}/eligibility")
+def analyze_application(application_id: int):
+    try:
+        return analyze_application_eligibility(application_id)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
