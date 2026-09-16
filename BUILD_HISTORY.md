@@ -409,3 +409,31 @@ Sections detected: `1..16` (INTRODUCTION → WAIVER OF REQUIREMENTS IN SPECIAL C
 * No files were added, edited, or deleted inside it.
 * `DepartmentAI-MTech` is a fully self-contained repository with its own PDF copy,
   processed artifacts, source code, frontend, tests and documentation.
+
+---
+
+## 13. Deliverable
+
+The complete, ready-to-use deliverable is the zipped repository:
+
+```
+/workspace/DepartmentAI-MTech.zip
+```
+
+It contains the whole `DepartmentAI-MTech/` folder (including the `.git` directory, so
+the initial commit is preserved). Unzip it anywhere and open the folder in VS Code.
+
+The zipped repository was initialised as a git repository with one commit:
+
+```
+feat(mtech): add Masters' Programmes ordinance RAG knowledge base module
+```
+
+`.gitignore` already excludes `venv/`, `.env`, `__pycache__/`, logs, local databases and
+ML caches, so only source, docs, the source PDF and the generated `processed/` JSON
+artifacts are tracked (38 tracked files).
+
+The generated `processed/` JSON artifacts are included in the zip so the knowledge base
+can be inspected or ingested immediately without re-running the offline pipeline (though
+re-running it reproduces the exact same counts).
+
