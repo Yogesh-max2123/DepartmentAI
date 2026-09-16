@@ -3,28 +3,45 @@ from pydantic import BaseModel
 
 from backend.rag.qa_pipeline import answer_question
 from backend.rag.source_formatter import format_sources
-from backend.services.application_service import create_application
-from backend.services.document_service import upload_document
-from backend.services.document_validator import validate_document
-from backend.services.document_extractor import extract_document_text
-from backend.services.document_classifier import classify_document
-from backend.services.application_retrieval import retrieve_ordinance_for_application
-from backend.services.eligibility_engine import analyze_application_eligibility
-from backend.services.deficiency_detector import detect_application_deficiencies
+
 from backend.services.application_service import (
     create_application,
     update_application_status,
     get_application,
     get_application_status_history,
 )
+
+from backend.services.document_service import (
+    upload_document,
+    get_application_documents,
+)
+
+from backend.services.document_validator import validate_document
+from backend.services.document_extractor import extract_document_text
+from backend.services.document_classifier import classify_document
+from backend.services.application_retrieval import (
+    retrieve_ordinance_for_application,
+)
+from backend.services.eligibility_engine import (
+    analyze_application_eligibility,
+)
+from backend.services.deficiency_detector import (
+    detect_application_deficiencies,
+)
+
 from backend.services.committee_service import (
     assign_to_committee,
     record_committee_decision,
     get_committee_reviews,
 )
+
 from backend.services.audit_service import get_application_audit_logs
-from backend.services.ai_analysis_service import generate_application_analysis
-from backend.services.application_processing_service import process_application
+from backend.services.ai_analysis_service import (
+    generate_application_analysis,
+)
+from backend.services.application_processing_service import (
+    process_application,
+)
 
 router = APIRouter()
 
@@ -41,6 +58,12 @@ class AskRequest(BaseModel):
 class AskResponse(BaseModel):
     answer: str
     sources: list
+
+
+# ============================================================
+# Committee Requests
+# ============================================================
+
 class CommitteeAssignmentRequest(BaseModel):
     committee_type: str
 
@@ -51,30 +74,33 @@ class CommitteeDecisionRequest(BaseModel):
     decided_by: str
 
 
+# ============================================================
+# Ask / RAG
+# ============================================================
 
 @router.post("/ask", response_model=AskResponse)
 def ask_question(request: AskRequest):
     try:
         answer, results = answer_question(
             request.question,
-            request.conversation_history
+            request.conversation_history,
         )
 
         return {
             "answer": answer,
-            "sources": format_sources(results)
+            "sources": format_sources(results),
         }
 
     except ValueError as e:
         raise HTTPException(
             status_code=400,
-            detail=str(e)
+            detail=str(e),
         )
 
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail=str(e),
         )
 
 
@@ -98,7 +124,7 @@ class ApplicationCreateResponse(BaseModel):
 
 @router.post(
     "/applications",
-    response_model=ApplicationCreateResponse
+    response_model=ApplicationCreateResponse,
 )
 def create_new_application(request: ApplicationCreateRequest):
     try:
@@ -114,7 +140,37 @@ def create_new_application(request: ApplicationCreateRequest):
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail=str(e),
+        )
+
+
+# ============================================================
+# Get Application
+# ============================================================
+
+@router.get("/applications/{application_id}")
+def get_application_endpoint(application_id: int):
+    try:
+        application = get_application(application_id)
+
+        if application is None:
+            raise HTTPException(
+                status_code=404,
+                detail=(
+                    f"Application with id {application_id} "
+                    f"does not exist."
+                ),
+            )
+
+        return application
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
         )
 
 
@@ -136,7 +192,7 @@ class DocumentUploadResponse(BaseModel):
 
 @router.post(
     "/applications/{application_id}/documents",
-    response_model=DocumentUploadResponse
+    response_model=DocumentUploadResponse,
 )
 async def upload_application_document(
     application_id: int,
@@ -149,7 +205,7 @@ async def upload_application_document(
         if not file_content:
             raise HTTPException(
                 status_code=400,
-                detail="Uploaded file is empty."
+                detail="Uploaded file is empty.",
             )
 
         document = upload_document(
@@ -165,7 +221,7 @@ async def upload_application_document(
     except ValueError as e:
         raise HTTPException(
             status_code=400,
-            detail=str(e)
+            detail=str(e),
         )
 
     except HTTPException:
@@ -174,9 +230,43 @@ async def upload_application_document(
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail=str(e),
         )
-        
+
+
+@router.get(
+    "/applications/{application_id}/documents"
+)
+def get_documents_for_application(application_id: int):
+    try:
+        application = get_application(application_id)
+
+        if application is None:
+            raise HTTPException(
+                status_code=404,
+                detail=(
+                    f"Application with id {application_id} "
+                    f"does not exist."
+                ),
+            )
+
+        return {
+            "application_id": application_id,
+            "documents": get_application_documents(
+                application_id
+            ),
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
+
+
 # ============================================================
 # Document Validation
 # ============================================================
@@ -192,16 +282,19 @@ def validate_application_document(
         result = validate_document(document_id)
 
         # Make sure the document belongs to the requested application
-        if result.get("valid") and result.get("application_id") != application_id:
+        if (
+            result.get("valid")
+            and result.get("application_id") != application_id
+        ):
             raise HTTPException(
                 status_code=404,
-                detail="Document does not belong to this application."
+                detail="Document does not belong to this application.",
             )
 
         if not result.get("valid"):
             raise HTTPException(
                 status_code=400,
-                detail=result.get("reason")
+                detail=result.get("reason"),
             )
 
         return result
@@ -212,8 +305,9 @@ def validate_application_document(
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail=str(e),
         )
+
 
 # ============================================================
 # Document Text Extraction
@@ -229,11 +323,11 @@ def extract_application_document(
     try:
         result = extract_document_text(document_id)
 
-        # Make sure the document belongs to the requested application
+        # Make sure the returned document ID matches
         if result.get("document_id") != document_id:
             raise HTTPException(
                 status_code=404,
-                detail="Document not found."
+                detail="Document not found.",
             )
 
         # Verify application ownership
@@ -257,10 +351,16 @@ def extract_application_document(
         finally:
             conn.close()
 
-        if document is None or document[0] != application_id:
+        if document is None:
             raise HTTPException(
                 status_code=404,
-                detail="Document does not belong to this application."
+                detail="Document not found.",
+            )
+
+        if document[0] != application_id:
+            raise HTTPException(
+                status_code=404,
+                detail="Document does not belong to this application.",
             )
 
         return result
@@ -268,7 +368,7 @@ def extract_application_document(
     except ValueError as e:
         raise HTTPException(
             status_code=400,
-            detail=str(e)
+            detail=str(e),
         )
 
     except HTTPException:
@@ -277,8 +377,10 @@ def extract_application_document(
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail=str(e),
         )
+
+
 # ============================================================
 # Document Classification
 # ============================================================
@@ -296,7 +398,7 @@ def classify_application_document(
         if result.get("application_id") != application_id:
             raise HTTPException(
                 status_code=404,
-                detail="Document does not belong to this application."
+                detail="Document does not belong to this application.",
             )
 
         return result
@@ -304,7 +406,7 @@ def classify_application_document(
     except ValueError as e:
         raise HTTPException(
             status_code=400,
-            detail=str(e)
+            detail=str(e),
         )
 
     except HTTPException:
@@ -313,10 +415,10 @@ def classify_application_document(
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail=str(e),
         )
-        
-        
+
+
 # ============================================================
 # Application Ordinance Retrieval
 # ============================================================
@@ -335,39 +437,81 @@ def retrieve_application_ordinance(
     except ValueError as e:
         raise HTTPException(
             status_code=400,
-            detail=str(e)
+            detail=str(e),
         )
 
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail=str(e)
+            detail=str(e),
         )
-@router.get("/applications/{application_id}/eligibility")
+
+
+# ============================================================
+# Eligibility Analysis
+# ============================================================
+
+@router.get(
+    "/applications/{application_id}/eligibility"
+)
 def analyze_application(application_id: int):
     try:
-        return analyze_application_eligibility(application_id)
+        return analyze_application_eligibility(
+            application_id
+        )
+
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(
+            status_code=400,
+            detail=str(e),
+        )
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    
-@router.get("/applications/{application_id}/deficiencies")
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
+
+
+# ============================================================
+# Deficiency Detection
+# ============================================================
+
+@router.get(
+    "/applications/{application_id}/deficiencies"
+)
 def detect_deficiencies(application_id: int):
     try:
-        return detect_application_deficiencies(application_id)
+        return detect_application_deficiencies(
+            application_id
+        )
+
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(
+            status_code=400,
+            detail=str(e),
+        )
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
+
+
+# ============================================================
+# Application Status
+# ============================================================
+
 class ApplicationStatusUpdateRequest(BaseModel):
     new_status: str
     changed_by: str = "SYSTEM"
     reason: str | None = None
 
 
-@router.patch("/applications/{application_id}/status")
+@router.patch(
+    "/applications/{application_id}/status"
+)
 def update_status(
     application_id: int,
     request: ApplicationStatusUpdateRequest,
@@ -379,13 +523,27 @@ def update_status(
             changed_by=request.changed_by,
             reason=request.reason,
         )
+
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(
+            status_code=400,
+            detail=str(e),
+        )
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
 
 
-@router.get("/applications/{application_id}/status-history")
+# ============================================================
+# Application Status History
+# ============================================================
+
+@router.get(
+    "/applications/{application_id}/status-history"
+)
 def get_status_history(application_id: int):
     try:
         application = get_application(application_id)
@@ -393,20 +551,36 @@ def get_status_history(application_id: int):
         if application is None:
             raise HTTPException(
                 status_code=404,
-                detail=f"Application with id {application_id} does not exist.",
+                detail=(
+                    f"Application with id {application_id} "
+                    f"does not exist."
+                ),
             )
 
         return {
             "application_id": application_id,
-            "history": get_application_status_history(application_id),
+            "history": get_application_status_history(
+                application_id
+            ),
         }
 
     except HTTPException:
         raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
-@router.post("/applications/{application_id}/committee")
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
+
+
+# ============================================================
+# Committee Assignment
+# ============================================================
+
+@router.post(
+    "/applications/{application_id}/committee"
+)
 def assign_application_to_committee(
     application_id: int,
     request: CommitteeAssignmentRequest,
@@ -416,26 +590,58 @@ def assign_application_to_committee(
             application_id=application_id,
             committee_type=request.committee_type,
         )
+
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        raise HTTPException(
+            status_code=400,
+            detail=str(e),
+        )
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
 
 
-@router.get("/applications/{application_id}/committee-reviews")
-def get_application_committee_reviews(application_id: int):
+# ============================================================
+# Committee Reviews
+# ============================================================
+
+@router.get(
+    "/applications/{application_id}/committee-reviews"
+)
+def get_application_committee_reviews(
+    application_id: int,
+):
     try:
         return {
             "application_id": application_id,
-            "reviews": get_committee_reviews(application_id),
+            "reviews": get_committee_reviews(
+                application_id
+            ),
         }
+
     except ValueError as e:
-        raise HTTPException(status_code=404, detail=str(e))
+        raise HTTPException(
+            status_code=404,
+            detail=str(e),
+        )
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
 
 
-@router.patch("/committee-reviews/{review_id}/decision")
+# ============================================================
+# Committee Decision
+# ============================================================
+
+@router.patch(
+    "/committee-reviews/{review_id}/decision"
+)
 def record_application_committee_decision(
     review_id: int,
     request: CommitteeDecisionRequest,
@@ -447,25 +653,47 @@ def record_application_committee_decision(
             decision_reason=request.decision_reason,
             decided_by=request.decided_by,
         )
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
-@router.get("/applications/{application_id}/audit-logs")
-def get_application_audit_logs_endpoint(application_id: int):
+    except ValueError as e:
+        raise HTTPException(
+            status_code=400,
+            detail=str(e),
+        )
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
+
+
+# ============================================================
+# Audit Logs
+# ============================================================
+
+@router.get(
+    "/applications/{application_id}/audit-logs"
+)
+def get_application_audit_logs_endpoint(
+    application_id: int,
+):
     try:
         application = get_application(application_id)
 
         if application is None:
             raise HTTPException(
                 status_code=404,
-                detail=f"Application with id {application_id} does not exist."
+                detail=(
+                    f"Application with id {application_id} "
+                    f"does not exist."
+                ),
             )
 
         return {
             "application_id": application_id,
-            "audit_logs": get_application_audit_logs(application_id),
+            "audit_logs": get_application_audit_logs(
+                application_id
+            ),
         }
 
     except HTTPException:
@@ -476,11 +704,22 @@ def get_application_audit_logs_endpoint(application_id: int):
             status_code=500,
             detail=str(e),
         )
-        
-@router.post("/applications/{application_id}/ai-analysis")
-def generate_application_analysis_endpoint(application_id: int):
+
+
+# ============================================================
+# AI-Assisted Application Analysis
+# ============================================================
+
+@router.post(
+    "/applications/{application_id}/ai-analysis"
+)
+def generate_application_analysis_endpoint(
+    application_id: int,
+):
     try:
-        result = generate_application_analysis(application_id)
+        result = generate_application_analysis(
+            application_id
+        )
 
         return result
 
@@ -495,9 +734,18 @@ def generate_application_analysis_endpoint(application_id: int):
             status_code=500,
             detail=str(e),
         )
-        
-@router.post("/applications/{application_id}/process")
-def process_application_endpoint(application_id: int):
+
+
+# ============================================================
+# Complete Application Processing
+# ============================================================
+
+@router.post(
+    "/applications/{application_id}/process"
+)
+def process_application_endpoint(
+    application_id: int,
+):
     try:
         return process_application(application_id)
 
