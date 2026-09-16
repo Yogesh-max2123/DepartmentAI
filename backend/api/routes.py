@@ -23,6 +23,7 @@ from backend.services.committee_service import (
     get_committee_reviews,
 )
 from backend.services.audit_service import get_application_audit_logs
+from backend.services.ai_analysis_service import generate_application_analysis
 
 router = APIRouter()
 
@@ -468,6 +469,25 @@ def get_application_audit_logs_endpoint(application_id: int):
 
     except HTTPException:
         raise
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=str(e),
+        )
+        
+@router.post("/applications/{application_id}/ai-analysis")
+def generate_application_analysis_endpoint(application_id: int):
+    try:
+        result = generate_application_analysis(application_id)
+
+        return result
+
+    except ValueError as e:
+        raise HTTPException(
+            status_code=404,
+            detail=str(e),
+        )
 
     except Exception as e:
         raise HTTPException(
