@@ -18,17 +18,16 @@ MODEL_NAME = (
     "paraphrase-multilingual-MiniLM-L12-v2"
 )
 
-# Number of candidates retrieved from pgvector
-# before lexical reranking.
-CANDIDATE_K = 50
+# UPGRADE 1: Increased candidate pool from 50 to 100 for better recall
+CANDIDATE_K = 100
 
-# Number of final results returned.
-TOP_K = 5
+# UPGRADE 2: Increased final results from 5 to 8 to give LLM broader context
+TOP_K = 8
 
-DB_HOST = "localhost"
-DB_PORT = 5432
-DB_NAME = "departmentai"
-DB_USER = "postgres"
+DB_HOST = os.getenv("DEPARTMENTAI_DB_HOST", "localhost")
+DB_PORT = int(os.getenv("DEPARTMENTAI_DB_PORT", 5432))
+DB_NAME = os.getenv("DEPARTMENTAI_DB_NAME", "departmentai")
+DB_USER = os.getenv("DEPARTMENTAI_DB_USER", "postgres")
 
 DB_PASSWORD = os.getenv(
     "DEPARTMENTAI_DB_PASSWORD"
@@ -118,7 +117,7 @@ def calculate_keyword_score(
 
     Improvements:
     - Considers section title.
-    - Removes common question words.
+    - Removes common question words AND generic academic words.
     - Rewards query-term coverage.
     - Rewards exact two-word phrase matches.
     - Applies a small penalty when a generic question
@@ -133,36 +132,15 @@ def calculate_keyword_score(
         return 0.0
 
     # -----------------------------------------------------
-    # Stop words
+    # Stop words (UPGRADE 3: Added more generic academic words)
     # -----------------------------------------------------
 
     stop_words = {
-        "what",
-        "are",
-        "is",
-        "the",
-        "a",
-        "an",
-        "of",
-        "for",
-        "to",
-        "in",
-        "on",
-        "and",
-        "or",
-        "how",
-        "does",
-        "do",
-        "can",
-        "be",
-        "under",
-        "with",
-        "from",
-        "about",
-        "regarding",
-        "regard",
-        "student",
-        "students"
+        "what", "are", "is", "the", "a", "an", "of", "for", "to",
+        "in", "on", "and", "or", "how", "does", "do", "can", "be",
+        "under", "with", "from", "about", "regarding", "regard",
+        "student", "students", "programme", "program", "semester",
+        "year", "course", "institute", "department"
     }
 
     meaningful_question_tokens = [
@@ -237,13 +215,13 @@ def calculate_keyword_score(
             phrase in normalized_chunk
             or phrase in normalized_section
         ):
-            phrase_bonus += 0.10
+            phrase_bonus += 0.15  # Slightly increased bonus for exact phrase match
 
     # Do not allow phrase bonuses to dominate
     # the lexical score.
     phrase_bonus = min(
         phrase_bonus,
-        0.30
+        0.35
     )
 
     score = (
@@ -254,26 +232,9 @@ def calculate_keyword_score(
     # -----------------------------------------------------
     # Generic-vs-specific penalty
     # -----------------------------------------------------
-    #
-    # If the user asks a generic question such as:
-    #
-    # "What are the eligibility requirements for admission?"
-    #
-    # a chunk containing only programme-specific information
-    # such as MCA or MSW should receive a small penalty when
-    # the programme was not mentioned in the question.
-    #
-    # This penalty is intentionally small.
-    # -----------------------------------------------------
 
     programme_terms = {
-        "m.tech",
-        "mtech",
-        "mba",
-        "mca",
-        "m.sc",
-        "msc",
-        "msw"
+        "m.tech", "mtech", "mba", "mca", "m.sc", "msc", "msw"
     }
 
     question_all_tokens = set(
@@ -417,19 +378,20 @@ def semantic_search(question: str):
         )
 
         # -------------------------------------------------
-        # Combined relevance score
+        # Combined relevance score (UPGRADE 4: Re-balanced)
         # -------------------------------------------------
         #
-        # Semantic similarity remains dominant.
+        # Increased Keyword importance to 30% so exact matching
+        # words like "part-time" or "F grade" aren't lost.
         #
-        # 80% semantic
-        # 20% lexical
+        # 70% semantic
+        # 30% lexical
         # -------------------------------------------------
 
         combined_score = (
-            0.80 * float(semantic_score)
+            0.70 * float(semantic_score)
             +
-            0.20 * float(keyword_score)
+            0.30 * float(keyword_score)
         )
 
         reranked_results.append(

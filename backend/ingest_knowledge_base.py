@@ -1,10 +1,14 @@
+import argparse
 import json
 import os
+import sys
 from pathlib import Path
 
 import psycopg2
-from psycopg2.extras import Json
+from psycopg2.extras import Json, execute_batch
+from dotenv import load_dotenv
 
+load_dotenv()
 
 # ============================================================
 # Configuration
@@ -30,22 +34,11 @@ EMBEDDINGS_FILE = (
 
 SOURCE_FILE_NAME = "Ordinances for Masters Programme 2023.pdf"
 
-# Expected counts for the Masters' Ordinance knowledge base.
-#
-# 127 ordinance clause chunks
-# +
-#  12 form chunks
-# =
-# 139 total chunks
-EXPECTED_TOTAL_CHUNKS = 139
-EXPECTED_SECTIONS = 16
-
-DB_NAME = "departmentai"
-DB_USER = "postgres"
-DB_HOST = "localhost"
-DB_PORT = 5432
-
-# PostgreSQL password is read from the environment.
+# Database Configuration with environment fallbacks
+DB_NAME = os.getenv("DEPARTMENTAI_DB_NAME", "departmentai")
+DB_USER = os.getenv("DEPARTMENTAI_DB_USER", "postgres")
+DB_HOST = os.getenv("DEPARTMENTAI_DB_HOST", "localhost")
+DB_PORT = int(os.getenv("DEPARTMENTAI_DB_PORT", "5432"))
 DB_PASSWORD = os.getenv("DEPARTMENTAI_DB_PASSWORD")
 
 
@@ -55,16 +48,11 @@ DB_PASSWORD = os.getenv("DEPARTMENTAI_DB_PASSWORD")
 
 def validate_files():
     """Check that the required JSON files exist."""
-
     if not CHUNKS_FILE.exists():
-        raise FileNotFoundError(
-            f"Chunks file not found:\n{CHUNKS_FILE}"
-        )
+        raise FileNotFoundError(f"Chunks file not found:\n{CHUNKS_FILE}")
 
     if not EMBEDDINGS_FILE.exists():
-        raise FileNotFoundError(
-            f"Embeddings file not found:\n{EMBEDDINGS_FILE}"
-        )
+        raise FileNotFoundError(f"Embeddings file not found:\n{EMBEDDINGS_FILE}")
 
 
 # ============================================================
@@ -73,7 +61,6 @@ def validate_files():
 
 def load_json_files():
     """Load and validate the chunks and embeddings JSON files."""
-
     print("Loading knowledge-base files...")
 
     with open(CHUNKS_FILE, "r", encoding="utf-8") as file:
@@ -82,10 +69,7 @@ def load_json_files():
     with open(EMBEDDINGS_FILE, "r", encoding="utf-8") as file:
         embeddings_data = json.load(file)
 
-    # --------------------------------------------------------
-    # Validate top-level structure
-    # --------------------------------------------------------
-
+    # Validate top-level keys
     required_chunk_keys = {"document", "chunks", "validation"}
     required_embedding_keys = {
         "document",
@@ -98,20 +82,12 @@ def load_json_files():
     }
 
     missing_chunk_keys = required_chunk_keys - chunks_data.keys()
-
     if missing_chunk_keys:
-        raise ValueError(
-            f"Missing keys in chunks file: {missing_chunk_keys}"
-        )
+        raise ValueError(f"Missing keys in chunks file: {missing_chunk_keys}")
 
-    missing_embedding_keys = (
-        required_embedding_keys - embeddings_data.keys()
-    )
-
+    missing_embedding_keys = required_embedding_keys - embeddings_data.keys()
     if missing_embedding_keys:
-        raise ValueError(
-            f"Missing keys in embeddings file: {missing_embedding_keys}"
-        )
+        raise ValueError(f"Missing keys in embeddings file: {missing_embedding_keys}")
 
     chunks = chunks_data["chunks"]
     embedding_chunks = embeddings_data["chunks"]
@@ -119,46 +95,27 @@ def load_json_files():
     print(f"Chunks loaded: {len(chunks)}")
     print(f"Embeddings loaded: {len(embedding_chunks)}")
 
-    # --------------------------------------------------------
-    # Validate counts
-    # --------------------------------------------------------
-
-    if len(chunks) != EXPECTED_TOTAL_CHUNKS:
-        raise ValueError(
-            f"Expected {EXPECTED_TOTAL_CHUNKS} chunks, "
-            f"but found {len(chunks)}."
-        )
-
-    if len(embedding_chunks) != EXPECTED_TOTAL_CHUNKS:
-        raise ValueError(
-            f"Expected {EXPECTED_TOTAL_CHUNKS} embeddings, "
-            f"but found {len(embedding_chunks)}."
-        )
+    # Strict count integrity check between chunks and embeddings
+    if len(chunks) == 0:
+        raise ValueError("Chunks file contains 0 chunks.")
 
     if len(chunks) != len(embedding_chunks):
         raise ValueError(
-            f"Chunk/embedding count mismatch: "
-            f"{len(chunks)} chunks vs "
-            f"{len(embedding_chunks)} embeddings."
+            f"Chunk/embedding count mismatch: {len(chunks)} chunks vs {len(embedding_chunks)} embeddings."
         )
 
-    # --------------------------------------------------------
     # Validate embedding metadata
-    # --------------------------------------------------------
-
     embedding_dimension = embeddings_data["embedding_dimension"]
-
     if embedding_dimension != 384:
         raise ValueError(
-            f"Expected embedding dimension 384, "
-            f"but found {embedding_dimension}."
+            f"Expected embedding dimension 384, but found {embedding_dimension}."
         )
 
     embedding_model = embeddings_data["embedding_model"]
 
     print(f"Embedding model: {embedding_model}")
     print(f"Embedding dimension: {embedding_dimension}")
-    print(f"Normalized: {embeddings_data['normalized']}")
+    print(f"Normalized: {embeddings_data.get('normalized', False)}")
 
     return (
         chunks,
@@ -174,11 +131,10 @@ def load_json_files():
 
 def connect_database():
     """Connect to the DepartmentAI PostgreSQL database."""
-
     if not DB_PASSWORD:
         raise RuntimeError(
             "DEPARTMENTAI_DB_PASSWORD environment variable is not set.\n"
-            "Set it in PowerShell before running the ingestion script."
+            "Set it in your .env file or environment before running."
         )
 
     print("\nConnecting to PostgreSQL...")
@@ -192,7 +148,6 @@ def connect_database():
     )
 
     print("Database connection successful.")
-
     return connection
 
 
@@ -201,42 +156,26 @@ def connect_database():
 # ============================================================
 
 def build_embedding_lookup(embedding_chunks):
-    """
-    Build:
-
-        chunk_id -> embedding vector
-
-    This allows every chunk to be matched with its
-    corresponding embedding.
-    """
-
+    """Build: chunk_id -> embedding vector mapping."""
     embedding_lookup = {}
 
     for item in embedding_chunks:
+        chunk_id = item.get("chunk_id")
+        embedding = item.get("embedding")
 
-        if "chunk_id" not in item:
-            raise ValueError(
-                "An embedding record is missing 'chunk_id'."
-            )
+        if not chunk_id:
+            raise ValueError("An embedding record is missing 'chunk_id'.")
 
-        if "embedding" not in item:
-            raise ValueError(
-                f"Embedding missing for chunk {item['chunk_id']}."
-            )
-
-        chunk_id = item["chunk_id"]
-        embedding = item["embedding"]
+        if embedding is None:
+            raise ValueError(f"Embedding missing for chunk {chunk_id}.")
 
         if len(embedding) != 384:
             raise ValueError(
-                f"Invalid embedding dimension for {chunk_id}: "
-                f"{len(embedding)}"
+                f"Invalid embedding dimension for {chunk_id}: {len(embedding)}"
             )
 
         if chunk_id in embedding_lookup:
-            raise ValueError(
-                f"Duplicate embedding found for chunk: {chunk_id}"
-            )
+            raise ValueError(f"Duplicate embedding found for chunk: {chunk_id}")
 
         embedding_lookup[chunk_id] = embedding
 
@@ -247,22 +186,15 @@ def build_embedding_lookup(embedding_chunks):
 # Main ingestion
 # ============================================================
 
-def ingest_knowledge_base():
-
+def ingest_knowledge_base(replace_existing: bool = False):
     print("========================================")
-    print("DepartmentAI (M.Tech.) Knowledge Base Ingestion")
+    print("DepartmentAI Knowledge Base Ingestion")
     print("========================================")
 
-    # --------------------------------------------------------
     # 1. Validate files
-    # --------------------------------------------------------
-
     validate_files()
 
-    # --------------------------------------------------------
     # 2. Load JSON files
-    # --------------------------------------------------------
-
     (
         chunks,
         embedding_chunks,
@@ -270,34 +202,27 @@ def ingest_knowledge_base():
         embedding_dimension,
     ) = load_json_files()
 
-    # --------------------------------------------------------
     # 3. Build embedding lookup
-    # --------------------------------------------------------
+    embedding_lookup = build_embedding_lookup(embedding_chunks)
+    print(f"Embedding lookup created: {len(embedding_lookup)} records")
 
-    embedding_lookup = build_embedding_lookup(
-        embedding_chunks
-    )
-
-    print(
-        f"Embedding lookup created: "
-        f"{len(embedding_lookup)} records"
-    )
-
-    # --------------------------------------------------------
     # 4. Connect to database
-    # --------------------------------------------------------
-
     connection = connect_database()
-
     cursor = None
 
     try:
         cursor = connection.cursor()
 
-        # ----------------------------------------------------
-        # 5. Find the Masters' Ordinance document
-        # ----------------------------------------------------
+        # Pre-flight check: Verify pgvector extension
+        cursor.execute(
+            "SELECT extversion FROM pg_extension WHERE extname = 'vector';"
+        )
+        if not cursor.fetchone():
+            raise RuntimeError(
+                "The 'vector' extension is not enabled in this database. Run 'CREATE EXTENSION vector;' first."
+            )
 
+        # 5. Find the source document
         cursor.execute(
             """
             SELECT id
@@ -308,23 +233,18 @@ def ingest_knowledge_base():
             """,
             (SOURCE_FILE_NAME,),
         )
-
         document_row = cursor.fetchone()
 
         if document_row is None:
             raise RuntimeError(
-                "Masters' Ordinance document was not found "
-                "in the documents table."
+                f"Document '{SOURCE_FILE_NAME}' was not found in the 'documents' table. "
+                "Please insert the document record before running ingestion."
             )
 
         document_id = document_row[0]
-
         print(f"Document ID: {document_id}")
 
-        # ----------------------------------------------------
-        # 6. Load sections
-        # ----------------------------------------------------
-
+        # 6. Load sections mapping
         cursor.execute(
             """
             SELECT id, section_number
@@ -334,26 +254,13 @@ def ingest_knowledge_base():
             """,
             (document_id,),
         )
-
         section_rows = cursor.fetchall()
-
         section_lookup = {
-            str(section_number): section_id
-            for section_id, section_number in section_rows
+            str(sec_num): sec_id for sec_id, sec_num in section_rows
         }
+        print(f"Sections mapped: {len(section_lookup)}")
 
-        print(f"Sections found: {len(section_lookup)}")
-
-        if len(section_lookup) != EXPECTED_SECTIONS:
-            raise RuntimeError(
-                f"Expected {EXPECTED_SECTIONS} sections, "
-                f"but found {len(section_lookup)}."
-            )
-
-        # ----------------------------------------------------
-        # 7. Prevent duplicate ingestion
-        # ----------------------------------------------------
-
+        # 7. Check for existing chunks and handle replace
         cursor.execute(
             """
             SELECT COUNT(*)
@@ -362,78 +269,46 @@ def ingest_knowledge_base():
             """,
             (document_id,),
         )
-
         existing_count = cursor.fetchone()[0]
 
         if existing_count > 0:
-            raise RuntimeError(
-                f"knowledge_chunks already contains "
-                f"{existing_count} records for document "
-                f"ID {document_id}.\n"
-                "Ingestion stopped to prevent duplicates."
-            )
-
-        # ----------------------------------------------------
-        # 8. Insert chunks
-        # ----------------------------------------------------
-
-        print("\nStarting ingestion...\n")
-
-        inserted = 0
-
-        for chunk in chunks:
-
-            chunk_id = chunk["chunk_id"]
-
-            # ------------------------------------------------
-            # Match embedding
-            # ------------------------------------------------
-
-            if chunk_id not in embedding_lookup:
-                raise ValueError(
-                    f"No embedding found for chunk: {chunk_id}"
+            if replace_existing:
+                print(f"Replacing existing {existing_count} chunks for Document ID {document_id}...")
+                cursor.execute(
+                    "DELETE FROM knowledge_chunks WHERE document_id = %s;",
+                    (document_id,),
+                )
+            else:
+                raise RuntimeError(
+                    f"'knowledge_chunks' already contains {existing_count} records for document ID {document_id}.\n"
+                    "Ingestion stopped to prevent duplicates. Use '--replace' to overwrite."
                 )
 
+        # 8. Prepare batch records
+        print("\nPreparing batch records for insertion...")
+        records_to_insert = []
+
+        for chunk in chunks:
+            chunk_id = chunk["chunk_id"]
+
+            if chunk_id not in embedding_lookup:
+                raise ValueError(f"No embedding found for chunk: {chunk_id}")
+
             embedding = embedding_lookup[chunk_id]
-
-            # ------------------------------------------------
-            # Match section
-            # ------------------------------------------------
-
             section_number = chunk.get("section")
-
             section_id = None
 
             if section_number is not None:
                 section_id = section_lookup.get(str(section_number))
-
                 if section_id is None:
                     raise ValueError(
-                        f"No database section found for "
-                        f"section {section_number} "
-                        f"(chunk {chunk_id})."
+                        f"No database section found for section {section_number} (chunk {chunk_id})."
                     )
 
-            # ------------------------------------------------
-            # Forms
-            #
-            # Ordinance clause chunks list referenced forms in
-            # "forms_referenced"; form chunks carry their own
-            # "form_id" directly.
-            # ------------------------------------------------
-
-            forms_referenced = chunk.get(
-                "forms_referenced", []
-            )
-
+            forms_referenced = chunk.get("forms_referenced", [])
             form_id = chunk.get("form_id")
-
             if form_id is None and forms_referenced:
                 form_id = forms_referenced[0]
-
-            # ------------------------------------------------
-            # Metadata
-            # ------------------------------------------------
 
             metadata = {
                 "chunk_id": chunk_id,
@@ -452,49 +327,9 @@ def ingest_knowledge_base():
                 "forms_referenced": forms_referenced,
             }
 
-            # ------------------------------------------------
-            # Convert embedding to pgvector format
-            # ------------------------------------------------
+            embedding_string = "[" + ",".join(str(val) for val in embedding) + "]"
 
-            embedding_string = (
-                "["
-                + ",".join(str(value) for value in embedding)
-                + "]"
-            )
-
-            # ------------------------------------------------
-            # Insert record
-            # ------------------------------------------------
-
-            cursor.execute(
-                """
-                INSERT INTO knowledge_chunks (
-                    document_id,
-                    section_id,
-                    chunk_index,
-                    chunk_type,
-                    clause_number,
-                    chunk_text,
-                    page_start,
-                    page_end,
-                    form_id,
-                    metadata,
-                    embedding
-                )
-                VALUES (
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s::vector
-                );
-                """,
+            records_to_insert.append(
                 (
                     document_id,
                     section_id,
@@ -507,48 +342,72 @@ def ingest_knowledge_base():
                     form_id,
                     Json(metadata),
                     embedding_string,
-                ),
+                )
             )
 
-            inserted += 1
+        # 9. Batch Insertion via execute_batch
+        insert_sql = """
+            INSERT INTO knowledge_chunks (
+                document_id,
+                section_id,
+                chunk_index,
+                chunk_type,
+                clause_number,
+                chunk_text,
+                page_start,
+                page_end,
+                form_id,
+                metadata,
+                embedding
+            )
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s::vector);
+        """
 
-            if inserted % 25 == 0:
-                print(
-                    f"Inserted {inserted}/{len(chunks)} chunks..."
-                )
+        print(f"Executing batch insert for {len(records_to_insert)} chunks...")
+        execute_batch(cursor, insert_sql, records_to_insert, page_size=100)
 
-        # ----------------------------------------------------
-        # 9. Commit transaction
-        # ----------------------------------------------------
+        # 10. Automatically ensure Vector Index (HNSW) exists
+        print("Ensuring HNSW vector index on 'knowledge_chunks'...")
+        cursor.execute(
+            """
+            CREATE INDEX IF NOT EXISTS idx_knowledge_chunks_embedding
+            ON knowledge_chunks
+            USING hnsw (embedding vector_cosine_ops);
+            """
+        )
+
+        cursor.execute(
+            """
+            CREATE INDEX IF NOT EXISTS idx_knowledge_chunks_doc_sec
+            ON knowledge_chunks (document_id, section_id);
+            """
+        )
 
         connection.commit()
 
         print("\n========================================")
         print("Knowledge-base ingestion successful!")
         print("========================================")
-        print(f"Document ID:        {document_id}")
-        print(f"Chunks inserted:    {inserted}")
-        print(f"Embedding dimension:{embedding_dimension}")
-        print(f"Embedding model:    {embedding_model}")
+        print(f"Document ID:         {document_id}")
+        print(f"Chunks inserted:     {len(records_to_insert)}")
+        print(f"Embedding dimension: {embedding_dimension}")
+        print(f"Embedding model:     {embedding_model}")
         print("========================================")
 
     except Exception:
-        connection.rollback()
-
+        if connection:
+            connection.rollback()
         print("\n========================================")
         print("ERROR: Ingestion failed.")
         print("========================================")
         print("All database changes have been rolled back.")
-
         raise
 
     finally:
-
         if cursor is not None:
             cursor.close()
-
-        connection.close()
-
+        if connection is not None:
+            connection.close()
         print("Database connection closed.")
 
 
@@ -557,4 +416,14 @@ def ingest_knowledge_base():
 # ============================================================
 
 if __name__ == "__main__":
-    ingest_knowledge_base()
+    parser = argparse.ArgumentParser(
+        description="Ingest ordinance chunks and embeddings into PostgreSQL."
+    )
+    parser.add_argument(
+        "--replace",
+        action="store_true",
+        help="Overwrite existing chunks for this document instead of halting.",
+    )
+    args = parser.parse_args()
+
+    ingest_knowledge_base(replace_existing=args.replace)

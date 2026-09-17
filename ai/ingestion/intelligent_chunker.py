@@ -53,13 +53,13 @@ OUTPUT_JSON = (
 
 # Target size is deliberately moderate.
 # Later we can tune this after inspecting retrieval quality.
-TARGET_CHARS = 1800
+TARGET_CHARS = 2500
 
 # Maximum size before a clause is split.
-MAX_CHARS = 2400
+MAX_CHARS = 3200
 
 # Character overlap between consecutive chunks.
-OVERLAP_CHARS = 250
+OVERLAP_CHARS = 600
 
 # Only the actual ordinance body is chunked here.
 BODY_START = 9
