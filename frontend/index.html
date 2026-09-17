@@ -3,40 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>DepartmentAI</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="pages/login/login.css">
+
 </head>
 
 <body>
 
-    <div class="chat-container">
+    <div id="app" class="app-shell">
 
-        <header class="chat-header">
-            <h1>DepartmentAI</h1>
-            <p>Academic Governance & Knowledge Assistant</p>
-        </header>
+        <aside id="sidebar"></aside>
 
-        <main id="chat-box" class="chat-box">
-            <div class="message bot-message">
-                Hello! I am DepartmentAI. Ask me about the academic ordinance.
-            </div>
-        </main>
+        <div class="main-shell">
 
-        <div class="input-area">
-            <input
-                type="text"
-                id="question-input"
-                placeholder="Ask a question..."
-                autocomplete="off"
-            >
+            <header id="topbar"></header>
 
-            <button id="send-button">Send</button>
+            <main id="page-content" class="page-content"></main>
+
         </div>
 
     </div>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 
 </body>
 </html>
