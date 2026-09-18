@@ -34,3 +34,10 @@ htmlcov/
 
 # Hugging Face / ML caches
 .cache/
+
+# Module II generated/debug files
+module2/ingestion/debug_*.html
+
+# Python cache
+__pycache__/
+*.py[cod]
