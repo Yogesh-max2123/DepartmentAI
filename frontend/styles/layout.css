@@ -34,12 +34,20 @@
     padding: 22px 14px;
 }
 
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 4px 9px 26px;
+}
+
 .sidebar-brand {
     display: flex;
     align-items: center;
     gap: 11px;
-
-    padding: 4px 9px 26px;
+    min-width: 0;
 }
 
 .brand-mark {
@@ -305,6 +313,27 @@
     color: var(--text-primary);
 
     font-size: 18px;
+}
+
+.sidebar-close-button {
+    display: none;
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: transparent;
+    color: var(--text-secondary);
+
+    font-size: 18px;
+}
+
+.sidebar-close-button:hover {
+    background: var(--surface-soft);
+    color: var(--text-primary);
 }
 
 
@@ -627,6 +656,12 @@
 
     #sidebar.mobile-open {
         transform: translateX(0);
+    }
+
+    .sidebar-close-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .main-shell {

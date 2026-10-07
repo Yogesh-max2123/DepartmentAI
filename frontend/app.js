@@ -704,6 +704,9 @@ function setupApplicationEvents() {
     app.onclick =
         handleApplicationClick;
 
+    document.onkeydown =
+        handleDocumentKeydown;
+
 }
 
 
@@ -743,9 +746,12 @@ function handleApplicationClick(event) {
         const sidebar =
             document.getElementById("sidebar");
 
+        const isOpen =
+            sidebar?.classList.toggle("mobile-open");
 
-        sidebar?.classList.toggle(
-            "mobile-open"
+        mobileMenuButton.setAttribute(
+            "aria-expanded",
+            String(Boolean(isOpen))
         );
 
         return;
@@ -763,6 +769,50 @@ function handleApplicationClick(event) {
         logout();
 
     }
+
+    const closeMobileMenuButton =
+        event.target.closest(
+            "[data-action='close-mobile-menu']"
+        );
+
+
+    if (closeMobileMenuButton) {
+
+        closeMobileMenu();
+
+    }
+
+}
+
+
+function handleDocumentKeydown(event) {
+
+    if (event.key !== "Escape") {
+        return;
+    }
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    if (
+        sidebar?.classList.contains("mobile-open")
+    ) {
+        closeMobileMenu();
+    }
+
+}
+
+
+function closeMobileMenu() {
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const menuButton =
+        document.getElementById("mobile-menu-button");
+
+    sidebar?.classList.remove("mobile-open");
+    menuButton?.setAttribute("aria-expanded", "false");
 
 }
 

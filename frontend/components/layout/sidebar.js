@@ -148,11 +148,13 @@ export function renderSidebar(
     return `
         <div class="sidebar">
 
-            <div class="sidebar-brand">
+            <div class="sidebar-header">
 
-                <div class="brand-mark">
-                    D
-                </div>
+                <div class="sidebar-brand">
+
+                    <div class="brand-mark">
+                        D
+                    </div>
 
                 <div class="brand-text">
 
@@ -165,6 +167,15 @@ export function renderSidebar(
                     </div>
 
                 </div>
+
+                <button
+                    type="button"
+                    class="sidebar-close-button"
+                    data-action="close-mobile-menu"
+                    aria-label="Close navigation"
+                >
+                    ✕
+                </button>
 
             </div>
 
