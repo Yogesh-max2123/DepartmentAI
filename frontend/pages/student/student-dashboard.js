@@ -1,381 +1,149 @@
 export function renderStudentDashboard(currentUser = null) {
-
-    const studentName =
-        currentUser?.name || "Student";
-
-    const registrationNumber =
-        currentUser?.identifier || "—";
-
-
-    return `
-        <section class="dashboard-page student-dashboard">
-
-            <div class="dashboard-header">
-
-                <div class="dashboard-header-content">
-
-                    <span class="eyebrow">
-                        Student Workspace
-                    </span>
-
-                    <h1>
-                        Welcome, ${studentName}
-                    </h1>
-
-                    <p>
-                        Manage your academic applications,
-                        track their progress, and access
-                        DepartmentAI academic services.
-                    </p>
-
-                </div>
-
-
-                <div class="dashboard-identity">
-
-                    <div class="dashboard-avatar">
-                        ${getInitials(studentName)}
-                    </div>
-
-                    <div class="dashboard-identity-text">
-
-                        <strong>
-                            ${studentName}
-                        </strong>
-
-                        <span>
-                            ${registrationNumber}
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="dashboard-section">
-
-                <div class="section-heading">
-
-                    <div>
-                        <span class="section-kicker">
-                            Overview
-                        </span>
-
-                        <h2>
-                            Application Status
-                        </h2>
-                    </div>
-
-                    <span class="section-note">
-                        Your current application activity
-                    </span>
-
-                </div>
-
-
-                <div class="dashboard-stat-grid">
-
-                    ${renderStatCard(
-                        "Draft",
-                        "0",
-                        "Applications being prepared",
-                        "draft"
-                    )}
-
-                    ${renderStatCard(
-                        "Submitted",
-                        "0",
-                        "Applications submitted",
-                        "submitted"
-                    )}
-
-                    ${renderStatCard(
-                        "Under Review",
-                        "0",
-                        "Applications currently under review",
-                        "review"
-                    )}
-
-                    ${renderStatCard(
-                        "Completed",
-                        "0",
-                        "Completed application decisions",
-                        "completed"
-                    )}
-
-                </div>
-
-            </div>
-
-
-            <div class="dashboard-content-grid">
-
-                <div class="dashboard-panel">
-
-                    <div class="panel-header">
-
-                        <div>
-                            <span class="section-kicker">
-                                Applications
-                            </span>
-
-                            <h2>
-                                Recent Applications
-                            </h2>
-                        </div>
-
-                        <button
-                            type="button"
-                            class="text-button"
-                            data-page="applications"
-                        >
-                            View all
-                            <span>→</span>
-                        </button>
-
-                    </div>
-
-
-                    <div class="dashboard-empty-state">
-
-                        <div class="empty-state-icon">
-                            ▣
-                        </div>
-
-                        <h3>
-                            No applications yet
-                        </h3>
-
-                        <p>
-                            Applications you create will
-                            appear here with their current
-                            status and activity.
-                        </p>
-
-                        <button
-                            type="button"
-                            class="primary-button"
-                            data-page="create-application"
-                        >
-                            Create Application
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <div class="dashboard-panel">
-
-                    <div class="panel-header">
-
-                        <div>
-                            <span class="section-kicker">
-                                Services
-                            </span>
-
-                            <h2>
-                                Quick Actions
-                            </h2>
-                        </div>
-
-                    </div>
-
-
-                    <div class="quick-action-list">
-
-                        <button
-                            type="button"
-                            class="quick-action"
-                            data-page="create-application"
-                        >
-
-                            <span class="quick-action-icon">
-                                +
-                            </span>
-
-                            <span class="quick-action-content">
-
-                                <strong>
-                                    Create Application
-                                </strong>
-
-                                <small>
-                                    Start a new academic application
-                                </small>
-
-                            </span>
-
-                            <span class="quick-action-arrow">
-                                →
-                            </span>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="quick-action"
-                            data-page="applications"
-                        >
-
-                            <span class="quick-action-icon">
-                                ▣
-                            </span>
-
-                            <span class="quick-action-content">
-
-                                <strong>
-                                    My Applications
-                                </strong>
-
-                                <small>
-                                    View application history and status
-                                </small>
-
-                            </span>
-
-                            <span class="quick-action-arrow">
-                                →
-                            </span>
-
-                        </button>
-
-
-                        <button
-                            type="button"
-                            class="quick-action"
-                            data-page="assistant"
-                        >
-
-                            <span class="quick-action-icon">
-                                ✦
-                            </span>
-
-                            <span class="quick-action-content">
-
-                                <strong>
-                                    Academic Assistant
-                                </strong>
-
-                                <small>
-                                    Ask questions about academic rules
-                                </small>
-
-                            </span>
-
-                            <span class="quick-action-arrow">
-                                →
-                            </span>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="dashboard-info-panel">
-
-                <div class="info-panel-icon">
-                    ✦
-                </div>
-
-                <div class="info-panel-content">
-
-                    <span class="section-kicker">
-                        DepartmentAI Assistant
-                    </span>
-
-                    <h3>
-                        Need help understanding an academic requirement?
-                    </h3>
-
-                    <p>
-                        Use the Academic Assistant to ask questions
-                        about applicable academic rules and requirements.
-                        Responses are based on the department's official
-                        knowledge base.
-                    </p>
-
-                </div>
-
-                <button
-                    type="button"
-                    class="secondary-button"
-                    data-page="assistant"
-                >
-                    Open Assistant
-                </button>
-
-            </div>
-
-        </section>
-    `;
-}
-
-
-function renderStatCard(
-    label,
-    value,
-    description,
-    type
-) {
-
-    return `
-        <div class="dashboard-stat-card">
-
-            <div class="stat-card-top">
-
-                <span class="stat-card-label">
-                    ${label}
-                </span>
-
-                <span class="stat-card-indicator stat-${type}">
-                </span>
-
-            </div>
-
-            <div class="stat-card-value">
-                ${value}
-            </div>
-
-            <div class="stat-card-description">
-                ${description}
-            </div>
-
+  const studentName = currentUser?.name?.trim() || "";
+  const registrationNumber = currentUser?.identifier?.trim() || "";
+  const identity = [studentName, registrationNumber]
+    .filter(Boolean)
+    .map(escapeHTML);
+
+  return `
+    <section class="dashboard-page student-dashboard" aria-labelledby="student-workspace-title">
+      <header class="dashboard-header">
+        <div class="dashboard-header-content">
+          <span class="eyebrow">Student Workspace</span>
+          <h1 id="student-workspace-title">Student Workspace</h1>
+          <p class="dashboard-welcome">
+            ${studentName ? `Welcome, ${escapeHTML(studentName)}.` : "Welcome to your student workspace."}
+          </p>
+          <p>Academic services and institutional information for your department.</p>
         </div>
-    `;
-}
 
+        ${
+          identity.length
+            ? `
+          <div class="dashboard-identity" aria-label="Student identity">
+            <div class="dashboard-avatar" aria-hidden="true">${getInitials(studentName)}</div>
+            <div class="dashboard-identity-text">
+              ${studentName ? `<strong>${escapeHTML(studentName)}</strong>` : ""}
+              ${registrationNumber ? `<span>Registration number: ${escapeHTML(registrationNumber)}</span>` : ""}
+            </div>
+          </div>
+        `
+            : ""
+        }
+      </header>
+
+      <section class="dashboard-overview" aria-labelledby="application-overview-title">
+        <div>
+          <span class="section-kicker">Overview</span>
+          <h2 id="application-overview-title">Application overview</h2>
+        </div>
+        <p>
+          Application records and status counts are not available here because the current service does not provide a student application list.
+        </p>
+      </section>
+
+      <div class="dashboard-content-grid">
+        <section class="dashboard-panel" aria-labelledby="recent-applications-title">
+          <div class="panel-header">
+            <div>
+              <span class="section-kicker">Applications</span>
+              <h2 id="recent-applications-title">Recent applications</h2>
+            </div>
+            <button type="button" class="text-button" data-page="applications">
+              View all <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div class="dashboard-empty-state">
+            <div class="empty-state-icon" aria-hidden="true">▣</div>
+            <h3>Application records are unavailable</h3>
+            <p>
+              No records are shown because a student application-list service is not currently available. This does not indicate whether you have existing applications.
+            </p>
+            <button type="button" class="primary-button" data-page="create-application">
+              Create Application
+            </button>
+          </div>
+        </section>
+
+        <section class="dashboard-panel" aria-labelledby="quick-actions-title">
+          <div class="panel-header">
+            <div>
+              <span class="section-kicker">Services</span>
+              <h2 id="quick-actions-title">Quick actions</h2>
+            </div>
+          </div>
+
+          <div class="quick-action-list">
+            <button type="button" class="quick-action" data-page="create-application">
+              <span class="quick-action-icon" aria-hidden="true">+</span>
+              <span class="quick-action-content">
+                <strong>Create Application</strong>
+                <small>Start a new academic application</small>
+              </span>
+              <span class="quick-action-arrow" aria-hidden="true">→</span>
+            </button>
+            <button type="button" class="quick-action" data-page="applications">
+              <span class="quick-action-icon" aria-hidden="true">▣</span>
+              <span class="quick-action-content">
+                <strong>My Applications</strong>
+                <small>Open your application workspace</small>
+              </span>
+              <span class="quick-action-arrow" aria-hidden="true">→</span>
+            </button>
+            <button type="button" class="quick-action" data-page="assistant">
+              <span class="quick-action-icon" aria-hidden="true">✦</span>
+              <span class="quick-action-content">
+                <strong>Academic Assistant</strong>
+                <small>Ask about academic rules</small>
+              </span>
+              <span class="quick-action-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <aside class="dashboard-info-panel" aria-labelledby="assistant-panel-title">
+        <div class="info-panel-icon" aria-hidden="true">✦</div>
+        <div class="info-panel-content">
+          <span class="section-kicker">Academic guidance</span>
+          <h2 id="assistant-panel-title">DepartmentAI Academic Assistant</h2>
+          <p>
+            Get AI-assisted academic information based on approved institutional knowledge. Responses are guidance only; final academic decisions remain with authorized people.
+          </p>
+        </div>
+        <button type="button" class="secondary-button" data-page="assistant">
+          Open Assistant
+        </button>
+      </aside>
+    </section>
+  `;
+}
 
 function getInitials(name) {
+  if (!name) {
+    return "S";
+  }
 
-    if (!name) {
-        return "S";
-    }
+  const parts = name.trim().split(/\s+/).filter(Boolean);
 
+  if (parts.length === 1) {
+    return parts[0].substring(0, 2).toUpperCase();
+  }
 
-    const parts =
-        name
-            .trim()
-            .split(/\s+/)
-            .filter(Boolean);
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
 
+function escapeHTML(value) {
+  return value.replace(/[&<>"']/g, (character) => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    };
 
-    if (parts.length === 1) {
-        return parts[0]
-            .substring(0, 2)
-            .toUpperCase();
-    }
-
-
-    return (
-        parts[0][0] +
-        parts[parts.length - 1][0]
-    ).toUpperCase();
+    return entities[character];
+  });
 }

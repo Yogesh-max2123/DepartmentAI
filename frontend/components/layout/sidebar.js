@@ -1,151 +1,140 @@
 const navigationByRole = {
+  STUDENT: [
+    {
+      section: "Workspace",
+      items: [
+        {
+          page: "dashboard",
+          label: "Dashboard",
+          icon: "⌂",
+        },
+        {
+          page: "assistant",
+          label: "Academic Assistant",
+          icon: "✦",
+        },
+      ],
+    },
+    {
+      section: "Applications",
+      items: [
+        {
+          page: "applications",
+          label: "My Applications",
+          icon: "▣",
+        },
+        {
+          page: "create-application",
+          label: "Create Application",
+          icon: "+",
+        },
+      ],
+    },
+  ],
 
-    STUDENT: [
+  OFFICIAL: [
+    {
+      section: "Workspace",
+      items: [
         {
-            section: "Workspace",
-            items: [
-                {
-                    page: "dashboard",
-                    label: "Dashboard",
-                    icon: "⌂"
-                },
-                {
-                    page: "assistant",
-                    label: "Academic Assistant",
-                    icon: "✦"
-                }
-            ]
+          page: "dashboard",
+          label: "Dashboard",
+          icon: "⌂",
         },
         {
-            section: "Applications",
-            items: [
-                {
-                    page: "applications",
-                    label: "My Applications",
-                    icon: "▣"
-                },
-                {
-                    page: "create-application",
-                    label: "Create Application",
-                    icon: "+"
-                }
-            ]
-        }
-    ],
+          page: "assistant",
+          label: "Academic Assistant",
+          icon: "✦",
+        },
+      ],
+    },
+    {
+      section: "Applications",
+      items: [
+        {
+          page: "applications",
+          label: "Applications",
+          icon: "▣",
+        },
+        {
+          page: "application-processing",
+          label: "Application Processing",
+          icon: "◈",
+        },
+      ],
+    },
+    {
+      section: "Governance",
+      items: [
+        {
+          page: "committee",
+          label: "Committee Workspace",
+          icon: "◇",
+        },
+        {
+          page: "audit",
+          label: "Audit Trail",
+          icon: "◷",
+        },
+      ],
+    },
+  ],
 
-    OFFICIAL: [
+  DUGC: [
+    {
+      section: "Workspace",
+      items: [
         {
-            section: "Workspace",
-            items: [
-                {
-                    page: "dashboard",
-                    label: "Dashboard",
-                    icon: "⌂"
-                },
-                {
-                    page: "assistant",
-                    label: "Academic Assistant",
-                    icon: "✦"
-                }
-            ]
+          page: "dashboard",
+          label: "Dashboard",
+          icon: "⌂",
         },
         {
-            section: "Applications",
-            items: [
-                {
-                    page: "applications",
-                    label: "Applications",
-                    icon: "▣"
-                },
-                {
-                    page: "application-processing",
-                    label: "Application Processing",
-                    icon: "◈"
-                }
-            ]
+          page: "assistant",
+          label: "Academic Assistant",
+          icon: "✦",
+        },
+      ],
+    },
+    {
+      section: "Committee",
+      items: [
+        {
+          page: "applications",
+          label: "Assigned Applications",
+          icon: "▣",
         },
         {
-            section: "Governance",
-            items: [
-                {
-                    page: "committee",
-                    label: "Committee Workspace",
-                    icon: "◇"
-                },
-                {
-                    page: "audit",
-                    label: "Audit Trail",
-                    icon: "◷"
-                }
-            ]
-        }
-    ],
-
-    DUGC: [
-        {
-            section: "Workspace",
-            items: [
-                {
-                    page: "dashboard",
-                    label: "Dashboard",
-                    icon: "⌂"
-                },
-                {
-                    page: "assistant",
-                    label: "Academic Assistant",
-                    icon: "✦"
-                }
-            ]
+          page: "committee",
+          label: "Committee Review",
+          icon: "◇",
         },
         {
-            section: "Committee",
-            items: [
-                {
-                    page: "applications",
-                    label: "Assigned Applications",
-                    icon: "▣"
-                },
-                {
-                    page: "committee",
-                    label: "Committee Review",
-                    icon: "◇"
-                },
-                {
-                    page: "decision-history",
-                    label: "Decision History",
-                    icon: "◷"
-                }
-            ]
+          page: "decision-history",
+          label: "Decision History",
+          icon: "◷",
         },
+      ],
+    },
+    {
+      section: "Governance",
+      items: [
         {
-            section: "Governance",
-            items: [
-                {
-                    page: "audit",
-                    label: "Audit Trail",
-                    icon: "◈"
-                }
-            ]
-        }
-    ]
-
+          page: "audit",
+          label: "Audit Trail",
+          icon: "◈",
+        },
+      ],
+    },
+  ],
 };
 
+export function renderSidebar(activePage = "dashboard", currentUser = null) {
+  const role = currentUser?.role || "STUDENT";
 
-export function renderSidebar(
-    activePage = "dashboard",
-    currentUser = null
-) {
+  const navigation = navigationByRole[role] || navigationByRole.STUDENT;
 
-    const role =
-        currentUser?.role || "STUDENT";
-
-    const navigation =
-        navigationByRole[role] ||
-        navigationByRole.STUDENT;
-
-
-    return `
+  return `
         <div class="sidebar">
 
             <div class="sidebar-header">
@@ -168,6 +157,8 @@ export function renderSidebar(
 
                 </div>
 
+                </div>
+
                 <button
                     type="button"
                     class="sidebar-close-button"
@@ -182,20 +173,22 @@ export function renderSidebar(
 
             <nav class="sidebar-nav">
 
-                ${navigation.map(group => `
+                ${navigation
+                  .map(
+                    (group) => `
 
                     <div class="nav-section-label">
                         ${group.section}
                     </div>
 
-                    ${group.items.map(item => `
+                    ${group.items
+                      .map(
+                        (item) => `
 
                         <button
                             type="button"
                             class="nav-item ${
-                                activePage === item.page
-                                    ? "active"
-                                    : ""
+                              activePage === item.page ? "active" : ""
                             }"
                             data-page="${item.page}"
                         >
@@ -210,9 +203,13 @@ export function renderSidebar(
 
                         </button>
 
-                    `).join("")}
+                    `,
+                      )
+                      .join("")}
 
-                `).join("")}
+                `,
+                  )
+                  .join("")}
 
             </nav>
 
@@ -222,9 +219,7 @@ export function renderSidebar(
                 <button
                     type="button"
                     class="nav-item ${
-                        activePage === "settings"
-                            ? "active"
-                            : ""
+                      activePage === "settings" ? "active" : ""
                     }"
                     data-page="settings"
                 >

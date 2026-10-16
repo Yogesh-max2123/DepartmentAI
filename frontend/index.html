@@ -1,35 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>DepartmentAI</title>
 
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/dashboard.css">
-    <link rel="stylesheet" href="pages/login/login.css">
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/dashboard.css" />
+    <link rel="stylesheet" href="styles/applications.css" />
+    <link rel="stylesheet" href="styles/application-details.css" />
+    <link rel="stylesheet" href="pages/login/login.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <div id="app" class="app-shell">
+      <aside id="sidebar"></aside>
 
-        <aside id="sidebar"></aside>
+      <div class="main-shell">
+        <header id="topbar"></header>
 
-        <div class="main-shell">
-
-            <header id="topbar"></header>
-
-            <main id="page-content" class="page-content"></main>
-
-        </div>
-
+        <main id="page-content" class="page-content"></main>
+      </div>
     </div>
 
     <script type="module" src="app.js"></script>
-
-</body>
+  </body>
 </html>
