@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Dinesh Singh",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Dinesh Singh",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1519",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1519",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "2d7f180ed7a7d7fa5d441c763c829265bcc170527ff74daa9d31a32b8cf91b10",
+      "bytes": 3959,
+      "cached_at_utc": "2026-10-19T04:36:43.894053+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Dinesh Singh",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/40255-Publication%20update%2015.07.2026.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/40255-Publication%20update%2015.07.2026.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "bfbfad447cc70e9a044781643b58940e207fcc2477f2dbe48339eedb3663aa9c",
+      "bytes": 948579,
+      "cached_at_utc": "2026-10-19T04:36:45.057702+00:00"
+    }
+  }
+}

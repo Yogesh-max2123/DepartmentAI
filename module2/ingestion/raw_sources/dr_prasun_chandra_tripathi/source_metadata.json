@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Prasun Chandra Tripathi",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Prasun Chandra Tripathi",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1933",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1933",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "9f508910e9c63b45550a2cd2d34b6a100cffa21a92e828807343df1aba6386d5",
+      "bytes": 3933,
+      "cached_at_utc": "2026-10-19T04:37:32.991727+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Prasun Chandra Tripathi",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/23014-Prasun_publications.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/23014-Prasun_publications.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "57a725dc233385315c6d2adce1610ae6beeff570445fc7bddbec7a58e9df7e6f",
+      "bytes": 80518,
+      "cached_at_utc": "2026-10-19T04:37:33.535033+00:00"
+    }
+  }
+}

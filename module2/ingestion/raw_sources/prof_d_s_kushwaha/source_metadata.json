@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Prof. D.S. Kushwaha",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Prof. D.S. Kushwaha",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1529",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1529",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "92a432228f16585a86a800cdb94dbd1f7cd588a1fc835721a2f249b539c7c0b4",
+      "bytes": 4009,
+      "cached_at_utc": "2026-10-19T04:36:30.264057+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Prof. D.S. Kushwaha",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/36119-Updated_Publications_AllCategories_Descending%20-%20Jul%202026.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/36119-Updated_Publications_AllCategories_Descending%20-%20Jul%202026.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "9a86309ca2ccadd6ec5c8bc13ebc15351d36b2f9464d621f4742f929c70e9898",
+      "bytes": 929768,
+      "cached_at_utc": "2026-10-19T04:36:31.368249+00:00"
+    }
+  }
+}

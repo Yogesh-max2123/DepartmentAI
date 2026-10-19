@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Aditya Anshul",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Aditya Anshul",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1890",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1890",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "28606296af8fd534a538683fb3729991d15f4f7c65d611e70c37c5a5da09f453",
+      "bytes": 17173,
+      "cached_at_utc": "2026-10-19T04:37:26.553050+00:00"
+    }
+  }
+}

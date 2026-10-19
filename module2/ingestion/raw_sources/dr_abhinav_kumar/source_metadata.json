@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Abhinav Kumar",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Abhinav Kumar",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1835",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1835",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "9af18348f3899c508b2659295bc1edf9bbbbf229a22624882b4e26225333ef8f",
+      "bytes": 3925,
+      "cached_at_utc": "2026-10-19T04:37:17.281872+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Abhinav Kumar",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/85990-MyCV_15102026.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/85990-MyCV_15102026.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "a73dd5c513d0bedae31f9569770096d62c93d33e5a9e3bfb09767c7786dea02e",
+      "bytes": 156702,
+      "cached_at_utc": "2026-10-19T04:37:18.030188+00:00"
+    }
+  }
+}

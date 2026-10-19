@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Divyansh Thakur",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Divyansh Thakur",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1889",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1889",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "2efc472eca33969d499cdd5f5a5409419e5049516e962b6856db99026ebf3746",
+      "bytes": 6955,
+      "cached_at_utc": "2026-10-19T04:37:24.101093+00:00"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Ranvijay",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Ranvijay",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1655",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1655",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "f9ae4aef77a377dbba671ab18651efdab3979063a38b7ea388be507040debafc",
+      "bytes": 3910,
+      "cached_at_utc": "2026-10-19T04:36:38.836277+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Ranvijay",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/57379-Publication%20list.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/57379-Publication%20list.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "8a3d8d031defdd0e2d45f3612be60749cd5c53622ca82760bfee015f27afb46a",
+      "bytes": 95940,
+      "cached_at_utc": "2026-10-19T04:36:39.466338+00:00"
+    }
+  }
+}

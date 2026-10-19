@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Prof. Anil Kumar Singh",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Prof. Anil Kumar Singh",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1457",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1457",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "5fd8e0417e5a090764e47b992f27222fb204e3bfc9fb216c3f9a3c114362a05f",
+      "bytes": 3924,
+      "cached_at_utc": "2026-10-19T04:36:28.490402+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Prof. Anil Kumar Singh",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/89254-Journal%20and%20Publications.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/89254-Journal%20and%20Publications.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "b386c45bf68e9b62ad6583e7234978f1f97f0934281722913a038bcaa2ab979f",
+      "bytes": 138888,
+      "cached_at_utc": "2026-10-19T04:36:29.175578+00:00"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Neelam Dayal",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Neelam Dayal",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1921",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1921",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "281b2a01e06fde6c3c79c4bf61597f3f240c5769d914f2e5948494c2111bffa5",
+      "bytes": 3944,
+      "cached_at_utc": "2026-10-19T04:37:11.265099+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Neelam Dayal",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/87080-List%20of%20publications-1.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/87080-List%20of%20publications-1.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "170165c63566924da69f5e1c31862837c053c1a9be8bc75ecf3eddc3f3b2d4b2",
+      "bytes": 87584,
+      "cached_at_utc": "2026-10-19T04:37:11.879072+00:00"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Vibhav Prakash Singh",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Vibhav Prakash Singh",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1785",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1785",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "811c7c2ba07a78bccd018d6908b666ba02e33a2aaa5e8593626c5cd71147f53e",
+      "bytes": 3997,
+      "cached_at_utc": "2026-10-19T04:37:04.470151+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Vibhav Prakash Singh",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/56309-Resume_Vibhav_Prakash_Singh%20v11_uploading.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/56309-Resume_Vibhav_Prakash_Singh%20v11_uploading.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "9b8e716cb2eefe96e01201ceb930e4f558ea000890271219c073ad1eef38115e",
+      "bytes": 576123,
+      "cached_at_utc": "2026-10-19T04:37:05.509966+00:00"
+    }
+  }
+}

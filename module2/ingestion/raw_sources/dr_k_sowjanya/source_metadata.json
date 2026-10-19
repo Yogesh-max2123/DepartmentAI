@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. K. Sowjanya",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. K. Sowjanya",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1925",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1925",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "dfddc370e2b0c17a83b9b97244647b554c33523faa9142b7b592606ab10a3638",
+      "bytes": 3918,
+      "cached_at_utc": "2026-10-19T04:37:31.544231+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. K. Sowjanya",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/75337-Publications.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/75337-Publications.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "6b408a1fcffa771ae7cee97f7468e0c457ebaf00590469746bece286a9b89304",
+      "bytes": 196606,
+      "cached_at_utc": "2026-10-19T04:37:32.235872+00:00"
+    }
+  }
+}

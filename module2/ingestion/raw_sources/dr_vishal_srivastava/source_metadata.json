@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. VISHAL SRIVASTAVA",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. VISHAL SRIVASTAVA",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1865",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1865",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "00e59375c5216386a435df756ae1334539aa5ab594b97775a46d5e81622e3315",
+      "bytes": 11230,
+      "cached_at_utc": "2026-10-19T04:37:19.540007+00:00"
+    }
+  }
+}

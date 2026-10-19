@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Kapil",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Kapil",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1942",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1942",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "7d2837cad0aa2e342011caf9ed702cfc50556c2ba47b8928e60b9841a09fff6d",
+      "bytes": 3924,
+      "cached_at_utc": "2026-10-19T04:36:57.003146+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Kapil",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/30743-Kapil%20Papers%20Google%20Scholar.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/30743-Kapil%20Papers%20Google%20Scholar.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "eb2458bae82d6463618260feaa2bc1a4c8d715069c8e792d60d4ba1f2635f240",
+      "bytes": 674880,
+      "cached_at_utc": "2026-10-19T04:36:58.037911+00:00"
+    }
+  }
+}

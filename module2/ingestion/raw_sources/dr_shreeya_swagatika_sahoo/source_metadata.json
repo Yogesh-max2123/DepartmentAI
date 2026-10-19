@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Shreeya Swagatika Sahoo",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Shreeya Swagatika Sahoo",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1909",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1909",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "5a002af6fce9168ffdd912eb4bd0c5052d2603c5eecd2366580ef8f902bc3b46",
+      "bytes": 3961,
+      "cached_at_utc": "2026-10-19T04:37:27.983475+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Shreeya Swagatika Sahoo",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/80565-bibitem.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/80565-bibitem.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "e09f08d4b48bc89e5d0bf9b002acfe8caf76297851d53aef787f741c8c1b6ac8",
+      "bytes": 183061,
+      "cached_at_utc": "2026-10-19T04:37:28.624395+00:00"
+    }
+  }
+}

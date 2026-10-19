@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Joohi Chauhan",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Joohi Chauhan",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1871",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1871",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "fda5ca613f73723d30b23a29724ca30260b3d6d8a35ae7934fbb9059be4d7e95",
+      "bytes": 9015,
+      "cached_at_utc": "2026-10-19T04:37:12.959953+00:00"
+    }
+  }
+}

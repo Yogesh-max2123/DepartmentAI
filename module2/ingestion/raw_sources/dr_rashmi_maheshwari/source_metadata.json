@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Rashmi Maheshwari",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Rashmi Maheshwari",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1896",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1896",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "e5e8f213d833f35692dcb18830bf4c347271ab6d3c19d60c1f81b9e6d33f2e8e",
+      "bytes": 6252,
+      "cached_at_utc": "2026-10-19T04:37:27.298180+00:00"
+    }
+  }
+}

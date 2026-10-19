@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Abhimanyu Sahu",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Abhimanyu Sahu",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1831",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1831",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "7a6e4a3fbd0fd7062be072f740e4b2b5c0d241958f12c238365f638e5bb1f50a",
+      "bytes": 3942,
+      "cached_at_utc": "2026-10-19T04:37:14.659547+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Abhimanyu Sahu",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/99512-CV_Publication_ABS.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/99512-CV_Publication_ABS.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "cc00c48736e838494f9a9711b10615cf17a2b0f7e21fd7fa4d290b240aa6a289",
+      "bytes": 227445,
+      "cached_at_utc": "2026-10-19T04:37:15.435699+00:00"
+    }
+  }
+}

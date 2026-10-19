@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Prof. Anoj Kumar",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Prof. Anoj Kumar",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1478",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1478",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "db429a70ef520dd07cfb0cf3b2b3cd3b54439158e6765170f4c2bc2353b58df8",
+      "bytes": 18014,
+      "cached_at_utc": "2026-10-19T04:36:35.071422+00:00"
+    }
+  }
+}

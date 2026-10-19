@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Dushyant Kumar Singh",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Dushyant Kumar Singh",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1530",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1530",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "38b2112de1e6223564adccf1f8903893e688bd4b7151ae4faf1152a992dba78f",
+      "bytes": 3994,
+      "cached_at_utc": "2026-10-19T04:36:42.144897+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Dushyant Kumar Singh",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/64284-Publications_DKSingh.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/64284-Publications_DKSingh.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "b20d1b839cb7fea0a020de4b9b73591676abc93e3187846d4c11b7b8dfb1abcd",
+      "bytes": 197396,
+      "cached_at_utc": "2026-10-19T04:36:42.912806+00:00"
+    }
+  }
+}

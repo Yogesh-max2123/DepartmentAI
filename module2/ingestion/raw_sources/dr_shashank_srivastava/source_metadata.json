@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Shashank Srivastava",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Shashank Srivastava",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1720",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1720",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "14929687aeb8223542b8b1eb92e6cded3aa1003632b29e101a88cfce42d7bdc3",
+      "bytes": 3992,
+      "cached_at_utc": "2026-10-19T04:36:40.436025+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Shashank Srivastava",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/47170-Research%20Paper%20Information%2018%20July%202026.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/47170-Research%20Paper%20Information%2018%20July%202026.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "5fac84d86aa4f5f390b3e21631cff5bac246e6fece5597024b3aad3cda386b81",
+      "bytes": 299284,
+      "cached_at_utc": "2026-10-19T04:36:41.238164+00:00"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. DEEPAK GUPTA",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. DEEPAK GUPTA",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1841",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1841",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "1855acf2a28a2d553f3d703af2d34844fac2aefada8145ddece58721f416346a",
+      "bytes": 27236,
+      "cached_at_utc": "2026-10-19T04:36:59.383432+00:00"
+    }
+  }
+}

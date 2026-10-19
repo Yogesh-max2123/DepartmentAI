@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Anisha Kumari",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Anisha Kumari",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1913",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1913",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "c1a14a57e5212f6fd37f46f0ec190eb70d577a4b05e358b4abae418f5b845f24",
+      "bytes": 3952,
+      "cached_at_utc": "2026-10-19T04:37:30.165795+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Anisha Kumari",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/7644-publications.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/7644-publications.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "f8ebeb583b9dfba4da6734d2f139e9b64f4360318cf098ba56138ed547b6e294",
+      "bytes": 122684,
+      "cached_at_utc": "2026-10-19T04:37:30.776962+00:00"
+    }
+  }
+}

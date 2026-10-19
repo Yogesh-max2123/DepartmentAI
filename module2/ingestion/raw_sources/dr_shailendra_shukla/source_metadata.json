@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Shailendra Shukla",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Shailendra Shukla",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1746",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1746",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "a4d556dff74cc007f826601833a522da74b3a77af6239b034f11bf7e21734517",
+      "bytes": 3913,
+      "cached_at_utc": "2026-10-19T04:36:55.374260+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Shailendra Shukla",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/73532-publications.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/73532-publications.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "622dceaf53e07169149f5ae62f4bdb14e75a7ed9961b8bfbe4c18e19ce5baced",
+      "bytes": 83697,
+      "cached_at_utc": "2026-10-19T04:36:55.927253+00:00"
+    }
+  }
+}
