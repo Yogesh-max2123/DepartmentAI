@@ -1,4 +1,4 @@
-from backend.llm.gemini_client import generate_answer
+from backend.llm.gemini_client import generate_text
 
 
 def resolve_follow_up(question, conversation_history):
@@ -78,10 +78,7 @@ Correct output:
 What is the CPI requirement for the M.Tech. degree?
 """
 
-    resolved_question = generate_answer(
-        question,
-        prompt
-    ).strip()
+    resolved_question = generate_text(prompt).strip()
 
     # Safety fallback if the resolver returns nothing.
     if not resolved_question:

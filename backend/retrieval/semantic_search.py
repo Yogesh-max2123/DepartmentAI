@@ -264,15 +264,21 @@ def calculate_keyword_score(
 # Semantic Search
 # ---------------------------------------------------------
 
-def semantic_search(question: str):
+def semantic_search(
+    question: str,
+    top_k: int = TOP_K,
+    candidate_k: int = CANDIDATE_K,
+    chunk_types=None,
+):
     """
     Hybrid retrieval:
 
     1. Generate question embedding.
-    2. Retrieve CANDIDATE_K semantically similar chunks.
-    3. Calculate lexical relevance.
-    4. Combine semantic + lexical scores.
-    5. Return the highest-ranked TOP_K results.
+    2. Retrieve candidate_k semantically similar chunks.
+    3. Optionally restrict by chunk_type (ordinance, past_case, etc.).
+    4. Calculate lexical relevance.
+    5. Combine semantic + lexical scores.
+    6. Return the highest-ranked top_k results.
     """
 
     if not question.strip():
@@ -302,7 +308,16 @@ def semantic_search(question: str):
 
     try:
 
-        query = """
+        type_filter = ""
+        params = [embedding_string]
+
+        if chunk_types:
+            type_filter = "AND kc.chunk_type = ANY(%s)"
+            params.append(list(chunk_types))
+
+        params.extend([embedding_string, candidate_k])
+
+        query = f"""
         SELECT
             kc.metadata->>'chunk_id' AS chunk_id,
             kc.chunk_index,
@@ -313,6 +328,9 @@ def semantic_search(question: str):
             kc.page_end,
             s.section_number,
             s.title AS section_title,
+            kc.metadata->>'subject' AS subject,
+            kc.metadata->>'source_file' AS source_file,
+            kc.metadata->>'document' AS document_title,
             1 - (kc.embedding <=> %s::vector)
                 AS similarity
 
@@ -322,20 +340,14 @@ def semantic_search(question: str):
             ON kc.section_id = s.id
 
         WHERE kc.embedding IS NOT NULL
+        {type_filter}
 
         ORDER BY kc.embedding <=> %s::vector
 
         LIMIT %s;
         """
 
-        cursor.execute(
-            query,
-            (
-                embedding_string,
-                embedding_string,
-                CANDIDATE_K
-            )
-        )
+        cursor.execute(query, tuple(params))
 
         candidates = cursor.fetchall()
 
@@ -366,6 +378,9 @@ def semantic_search(question: str):
             page_end,
             section_number,
             section_title,
+            subject,
+            source_file,
+            document_title,
             semantic_score
         ) = result
 
@@ -405,6 +420,9 @@ def semantic_search(question: str):
                 "page_end": page_end,
                 "section_number": section_number,
                 "section_title": section_title,
+                "subject": subject,
+                "source_file": source_file,
+                "document_title": document_title,
                 "semantic_score": float(
                     semantic_score
                 ),
@@ -426,7 +444,82 @@ def semantic_search(question: str):
         reverse=True
     )
 
-    return reranked_results[:TOP_K]
+    return reranked_results[:top_k]
+
+
+# ---------------------------------------------------------
+# Recommendation-agent retrieval
+# ---------------------------------------------------------
+
+ORDINANCE_CHUNK_TYPES = (
+    "ordinance_clause",
+    "form",
+)
+
+PAST_CASE_CHUNK_TYPES = (
+    "past_case",
+)
+
+MINUTE_CHUNK_TYPES = (
+    "meeting_minute",
+)
+
+CIRCULAR_CHUNK_TYPES = (
+    "circular",
+)
+
+
+def retrieve_for_recommendation(question: str):
+    """
+    Retrieve a mixed evidence set for the Recommendation Agent:
+
+    ordinance clauses, similar previous cases, DMPC minutes,
+    and office orders / circulars.
+    """
+
+    groups = [
+        semantic_search(
+            question,
+            top_k=6,
+            candidate_k=80,
+            chunk_types=ORDINANCE_CHUNK_TYPES,
+        ),
+        semantic_search(
+            question,
+            top_k=3,
+            candidate_k=40,
+            chunk_types=PAST_CASE_CHUNK_TYPES,
+        ),
+        semantic_search(
+            question,
+            top_k=2,
+            candidate_k=30,
+            chunk_types=MINUTE_CHUNK_TYPES,
+        ),
+        semantic_search(
+            question,
+            top_k=2,
+            candidate_k=30,
+            chunk_types=CIRCULAR_CHUNK_TYPES,
+        ),
+    ]
+
+    combined = []
+    seen = set()
+
+    for group in groups:
+        for result in group:
+            chunk_id = result.get("chunk_id")
+            if chunk_id and chunk_id in seen:
+                continue
+            if chunk_id:
+                seen.add(chunk_id)
+            combined.append(result)
+
+    if combined:
+        return combined
+
+    return semantic_search(question)
 
 
 # ---------------------------------------------------------

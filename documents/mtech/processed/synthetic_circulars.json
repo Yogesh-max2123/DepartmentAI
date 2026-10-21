@@ -1,0 +1,186 @@
+{
+  "document": "Synthetic Departmental Office Orders and Circulars",
+  "source_file": "synthetic_circulars.json",
+  "chunk_type": "circular",
+  "synthetic": true,
+  "disclaimer": "Synthetic demonstration data generated from the official Masters' Programme ordinance. Not real institutional records.",
+  "grounded_in": "MNNIT Masters' Ordinance",
+  "source_ordinance": "Ordinances for Masters Programme 2023.pdf",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "ordinance_clauses_used": 24,
+  "generated_at": "2026-10-20T16:42:05.392905+00:00",
+  "total_records": 10,
+  "records": [
+    {
+      "circular_id": "MNNIT/AII/CSED/2022/01",
+      "circular_type": "circular",
+      "file_number": "CSED/DMPC/CIR/2022/01",
+      "issue_date": "2022-07-15",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Academic Calendar and Registration Guidelines for Masters' Programmes",
+      "applicable_clauses": [
+        "2.1",
+        "4.3"
+      ],
+      "content": "All M.Tech. students are hereby informed that the academic session and registration for the upcoming semester must strictly follow the Academic Calendar as regulated by the Office of the Dean (Academic). Students must ensure that their semester load requirements are fulfilled during the designated registration period.",
+      "text": "circular_id: MNNIT/AII/CSED/2022/01 | file_number: CSED/DMPC/CIR/2022/01 | issue_date: 2022-07-15 | subject: Academic Calendar and Registration Guidelines for Masters' Programmes | applicable_clauses: 2.1, 4.3 | content: All M.Tech. students are hereby informed that the academic session and registration for the upcoming semester must strictly follow the Academic Calendar as regulated by the Office of the Dean (Academic). Students must ensure that their semester load requirements are fulfilled during the designated registration period.",
+      "synthetic": true,
+      "record_index": 1
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2022/02",
+      "circular_type": "office_order",
+      "file_number": "CSED/DMPC/OO/2022/04",
+      "issue_date": "2022-08-10",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Strict Prohibition of Late Registration",
+      "applicable_clauses": [
+        "4.1"
+      ],
+      "content": "It is brought to the notice of all Masters' students that no registration shall be allowed after the notified last date of registration during the semester except in special cases with the permission of the Dean (Academic) / Chairperson, Senate.",
+      "text": "circular_id: MNNIT/AII/CSED/2022/02 | file_number: CSED/DMPC/OO/2022/04 | issue_date: 2022-08-10 | subject: Strict Prohibition of Late Registration | applicable_clauses: 4.1 | content: It is brought to the notice of all Masters' students that no registration shall be allowed after the notified last date of registration during the semester except in special cases with the permission of the Dean (Academic) / Chairperson, Senate.",
+      "synthetic": true,
+      "record_index": 2
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2022/03",
+      "circular_type": "circular",
+      "file_number": "CSED/DMPC/CIR/2022/09",
+      "issue_date": "2022-09-05",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Guidelines on Semester Leave and Medical Leave",
+      "applicable_clauses": [
+        "5.2",
+        "5.3"
+      ],
+      "content": "Students seeking leave exceeding permissible limits must note that semester leave up to a maximum of two semesters may be sanctioned for valid reasons. For serious medical conditions, medical leave of a maximum of 15 days in an academic year may be granted when endorsed by the institute medical officer or recognized hospitals.",
+      "text": "circular_id: MNNIT/AII/CSED/2022/03 | file_number: CSED/DMPC/CIR/2022/09 | issue_date: 2022-09-05 | subject: Guidelines on Semester Leave and Medical Leave | applicable_clauses: 5.2, 5.3 | content: Students seeking leave exceeding permissible limits must note that semester leave up to a maximum of two semesters may be sanctioned for valid reasons. For serious medical conditions, medical leave of a maximum of 15 days in an academic year may be granted when endorsed by the institute medical officer or recognized hospitals.",
+      "synthetic": true,
+      "record_index": 3
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2023/04",
+      "circular_type": "office_order",
+      "file_number": "CSED/DMPC/OO/2023/02",
+      "issue_date": "2023-01-20",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Supervisor Allocation and Academic Advising for Thesis Registration",
+      "applicable_clauses": [
+        "4.2"
+      ],
+      "content": "All postgraduate students registering for thesis credits are hereby informed that they must have a thesis supervisor assigned to them. Students shall be advised in the selection of courses and research direction by the DMPC of the department.",
+      "text": "circular_id: MNNIT/AII/CSED/2023/04 | file_number: CSED/DMPC/OO/2023/02 | issue_date: 2023-01-20 | subject: Supervisor Allocation and Academic Advising for Thesis Registration | applicable_clauses: 4.2 | content: All postgraduate students registering for thesis credits are hereby informed that they must have a thesis supervisor assigned to them. Students shall be advised in the selection of courses and research direction by the DMPC of the department.",
+      "synthetic": true,
+      "record_index": 4
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2023/05",
+      "circular_type": "circular",
+      "file_number": "CSED/DMPC/CIR/2023/05",
+      "issue_date": "2023-03-12",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Notice for DMPC Meeting on Thesis Submission Deadlines and Extensions",
+      "applicable_clauses": [
+        "7.1",
+        "7.2"
+      ],
+      "content": "Notice is hereby given that a DMPC meeting is scheduled to evaluate thesis submission timelines, minimum residence periods, maximum durations, and requests for programme extensions as per academic ordinances.",
+      "text": "circular_id: MNNIT/AII/CSED/2023/05 | file_number: CSED/DMPC/CIR/2023/05 | issue_date: 2023-03-12 | subject: Notice for DMPC Meeting on Thesis Submission Deadlines and Extensions | applicable_clauses: 7.1, 7.2 | content: Notice is hereby given that a DMPC meeting is scheduled to evaluate thesis submission timelines, minimum residence periods, maximum durations, and requests for programme extensions as per academic ordinances.",
+      "synthetic": true,
+      "record_index": 5
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2023/06",
+      "circular_type": "office_order",
+      "file_number": "CSED/DMPC/OO/2023/11",
+      "issue_date": "2023-07-28",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Stipend and Fellowship Release Protocols",
+      "applicable_clauses": [
+        "3.4.1.2",
+        "3.4.1.3"
+      ],
+      "content": "The release of monthly stipends for Full-Time Non-Stipendiary and Full-Time Sponsored students is contingent upon maintaining satisfactory academic performance and meeting the mandatory attendance records stipulated by the institute.",
+      "text": "circular_id: MNNIT/AII/CSED/2023/06 | file_number: CSED/DMPC/OO/2023/11 | issue_date: 2023-07-28 | subject: Stipend and Fellowship Release Protocols | applicable_clauses: 3.4.1.2, 3.4.1.3 | content: The release of monthly stipends for Full-Time Non-Stipendiary and Full-Time Sponsored students is contingent upon maintaining satisfactory academic performance and meeting the mandatory attendance records stipulated by the institute.",
+      "synthetic": true,
+      "record_index": 6
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2024/07",
+      "circular_type": "circular",
+      "file_number": "CSED/DMPC/CIR/2024/03",
+      "issue_date": "2024-01-15",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Mandatory Plagiarism and Similarity Checks Prior to Thesis Defense",
+      "applicable_clauses": [
+        "13.1"
+      ],
+      "content": "In compliance with degree requirements, all graduating Masters' students must defend their final thesis and clear the mandatory plagiarism verification report through DMPC before final submission to the Examination Board.",
+      "text": "circular_id: MNNIT/AII/CSED/2024/07 | file_number: CSED/DMPC/CIR/2024/03 | issue_date: 2024-01-15 | subject: Mandatory Plagiarism and Similarity Checks Prior to Thesis Defense | applicable_clauses: 13.1 | content: In compliance with degree requirements, all graduating Masters' students must defend their final thesis and clear the mandatory plagiarism verification report through DMPC before final submission to the Examination Board.",
+      "synthetic": true,
+      "record_index": 7
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2024/08",
+      "circular_type": "office_order",
+      "file_number": "CSED/DMPC/OO/2024/08",
+      "issue_date": "2024-04-10",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Procedure for Waiver of Course Requirements and Part-Time Admissions",
+      "applicable_clauses": [
+        "3.4.2",
+        "3.5.2"
+      ],
+      "content": "Part-time admissions processed via DMSC must adhere to screening criteria based on experience and employment records. Any procedural waivers must follow the official channels established by the Office of the Dean (Academic).",
+      "text": "circular_id: MNNIT/AII/CSED/2024/08 | file_number: CSED/DMPC/OO/2024/08 | issue_date: 2024-04-10 | subject: Procedure for Waiver of Course Requirements and Part-Time Admissions | applicable_clauses: 3.4.2, 3.5.2 | content: Part-time admissions processed via DMSC must adhere to screening criteria based on experience and employment records. Any procedural waivers must follow the official channels established by the Office of the Dean (Academic).",
+      "synthetic": true,
+      "record_index": 8
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2024/09",
+      "circular_type": "circular",
+      "file_number": "CSED/DMPC/CIR/2024/12",
+      "issue_date": "2024-07-20",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Transcript Generation and Withholding of Grade Reports",
+      "applicable_clauses": [
+        "8.3.5",
+        "8.3.6",
+        "8.3.7"
+      ],
+      "content": "Students are informed that grade reports and comprehensive transcripts containing grades for courses, thesis, and semester leaves are issued terminally. Grade reports will be withheld if students have pending institutional dues or disciplinary cases.",
+      "text": "circular_id: MNNIT/AII/CSED/2024/09 | file_number: CSED/DMPC/CIR/2024/12 | issue_date: 2024-07-20 | subject: Transcript Generation and Withholding of Grade Reports | applicable_clauses: 8.3.5, 8.3.6, 8.3.7 | content: Students are informed that grade reports and comprehensive transcripts containing grades for courses, thesis, and semester leaves are issued terminally. Grade reports will be withheld if students have pending institutional dues or disciplinary cases.",
+      "synthetic": true,
+      "record_index": 9
+    },
+    {
+      "circular_id": "MNNIT/AII/CSED/2024/10",
+      "circular_type": "office_order",
+      "file_number": "CSED/DMPC/OO/2024/15",
+      "issue_date": "2024-09-01",
+      "issuing_authority": "Head of Department / DMPC Convener",
+      "department": "Computer Science and Engineering Department",
+      "subject": "Implementation of Academic Ordinances and Cancellation of Admission",
+      "applicable_clauses": [
+        "1.4",
+        "1.5",
+        "3.5.3",
+        "13.2"
+      ],
+      "content": "Pursuant to decisions of the Senate, SMPC, and BoAc, the Office of the Dean (Academic) maintains records of admissions and terminations. The Dean (Academic), with the approval of the Senate, may cancel admission or withdraw degrees under rules governing academic indiscipline and ordinance violations.",
+      "text": "circular_id: MNNIT/AII/CSED/2024/10 | file_number: CSED/DMPC/OO/2024/15 | issue_date: 2024-09-01 | subject: Implementation of Academic Ordinances and Cancellation of Admission | applicable_clauses: 1.4, 1.5, 3.5.3, 13.2 | content: Pursuant to decisions of the Senate, SMPC, and BoAc, the Office of the Dean (Academic) maintains records of admissions and terminations. The Dean (Academic), with the approval of the Senate, may cancel admission or withdraw degrees under rules governing academic indiscipline and ordinance violations.",
+      "synthetic": true,
+      "record_index": 10
+    }
+  ]
+}

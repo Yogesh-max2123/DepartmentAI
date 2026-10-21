@@ -11,7 +11,7 @@
   "embedding_dimension": 384,
   "normalized": true,
   "total_chunks": 105,
-  "generated_at": "2026-09-17T19:20:42.161510",
+  "generated_at": "2026-10-20T22:10:13.087519",
   "chunks": [
     {
       "chunk_id": "mtech_1_1_1_001",

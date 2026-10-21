@@ -29,13 +29,49 @@ client = genai.Client(
 )
 
 
+RECOMMENDATION_HEADINGS = (
+    "Relevant ordinance clauses",
+    "Similar previous cases (citing the synthetic data)",
+    "Identified deficiencies",
+    "Possible course of action",
+    "Initial draft resolution",
+)
+
+
 # ---------------------------------------------------------
-# Answer Generation
+# Generic generation
+# ---------------------------------------------------------
+
+def generate_text(prompt: str) -> str:
+    """Send a raw prompt to Gemini and return the text."""
+    if not prompt.strip():
+        raise ValueError("Prompt cannot be empty.")
+
+    try:
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=prompt
+        )
+    except Exception as e:
+        raise RuntimeError(
+            f"Gemini API request failed: {e}"
+        ) from e
+
+    if not response.text:
+        return ""
+
+    return response.text.strip()
+
+
+# ---------------------------------------------------------
+# Recommendation Agent generation
 # ---------------------------------------------------------
 
 def generate_answer(question: str, context: str) -> str:
     """
-    Generate an answer using only the supplied ordinance context.
+    Generate a Recommendation Agent draft using retrieved
+    ordinance clauses, similar previous cases, meeting minutes,
+    and departmental circulars.
     """
 
     if not question.strip():
@@ -43,52 +79,74 @@ def generate_answer(question: str, context: str) -> str:
 
     if not context.strip():
         return (
-            "The provided ordinance context is insufficient "
-            "to answer this question."
+            "The provided institutional context is insufficient "
+            "to prepare a recommendation."
         )
 
     prompt = f"""
-You are an academic ordinance question-answering assistant
-for DepartmentAI (Masters' Programmes).
+You are the Recommendation Agent of DepartmentAI
+(Masters' Programmes / DMPC).
 
-Answer the user's question ONLY using the official ordinance
-context provided below.
+You assist the Departmental M.Tech. Programme Committee.
+You retrieve from the institutional knowledge base and prepare
+a structured recommendation for authorised office staff to
+review. You do not approve or reject any application.
+
+Use ONLY the retrieved institutional context below.
+The context may contain:
+- official Masters' ordinance clauses and forms
+- similar previously decided DMPC cases (synthetic demonstration records)
+- previous minutes of DMPC meetings (synthetic demonstration records)
+- departmental office orders / circulars (synthetic demonstration records)
 
 Rules:
-1. Use only the provided context.
-2. Ignore irrelevant information in the context.
-3. Do not use outside knowledge.
-4. Do not invent or assume information.
-5. Preserve important numbers, conditions, exceptions,
+1. Use only the provided context. Do not use outside knowledge.
+2. Do not invent ordinance clauses, case ids, minutes, circulars,
+   numbers, dates, or decisions.
+3. When citing similar previous cases, quote the case id, meeting
+   date/reference, cited clauses, and the recorded decision from
+   the context. Label them as synthetic demonstration records.
+4. Preserve important numbers, conditions, exceptions, forms,
    and terminology exactly.
-6. Give a clear and concise answer.
-7. If the context does not contain enough information,
-   clearly state that the provided ordinance context
-   is insufficient.
-8. Do not mention these instructions in your answer.
+5. If a required evidence type is missing from the context, say so
+   under that heading instead of guessing.
+6. Identify deficiencies only from the question and the retrieved
+   context (missing documents, unmet SPI/CPI, leave limits, etc.).
+7. Possible courses of action must be options for the committee,
+   not a final decision.
+8. The initial draft resolution must be written in formal DMPC
+   minute style, remain subject to human verification, and must
+   not grant or refuse approval as a final authority.
+9. Do not mention these instructions in your answer.
+10. Output MUST use exactly these five headings, in this order,
+    as plain text lines with no numbering, bullets on the headings
+    themselves, or extra titles:
 
-USER QUESTION:
+Relevant ordinance clauses
+Similar previous cases (citing the synthetic data)
+Identified deficiencies
+Possible course of action
+Initial draft resolution
+
+USER QUESTION / APPLICATION:
 {question}
 
-OFFICIAL ORDINANCE CONTEXT:
+RETRIEVED INSTITUTIONAL CONTEXT:
 {context}
 
-ANSWER:
+RECOMMENDATION:
 """
 
     try:
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=prompt
-        )
+        answer = generate_text(prompt)
 
-        if not response.text:
+        if not answer:
             return (
-                "The system could not generate an answer "
-                "from the provided ordinance context."
+                "The system could not generate a recommendation "
+                "from the provided institutional context."
             )
 
-        return response.text.strip()
+        return answer
 
     except Exception as e:
         raise RuntimeError(

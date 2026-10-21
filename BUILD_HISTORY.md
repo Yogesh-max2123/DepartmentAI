@@ -153,7 +153,8 @@ DepartmentAI-MTech/
 │   ├── ingestion/
 │   │   ├── pdf_parser.py
 │   │   ├── structure_parser.py
-│   │   └── intelligent_chunker.py
+│   │   ├── intelligent_chunker.py
+│   │   └── synthetic_data_generator.py
 │   └── embeddings/
 │       ├── embedding_config.py
 │       └── embedding_generator.py
@@ -183,7 +184,10 @@ DepartmentAI-MTech/
 │           ├── mtech_ordinance_text.txt
 │           ├── mtech_ordinance_structure.json
 │           ├── mtech_ordinance_chunks.json
-│           └── mtech_ordinance_embeddings.json
+│           ├── mtech_ordinance_embeddings.json
+│           ├── synthetic_past_cases.json
+│           ├── synthetic_dmpc_minutes.json
+│           └── synthetic_circulars.json
 ├── frontend/
 │   ├── index.html
 │   ├── app.js
@@ -194,6 +198,8 @@ DepartmentAI-MTech/
     ├── test_gemini_client.py
     ├── test_guardrails.py
     ├── test_qa_pipeline.py
+    ├── test_synthetic_data_generator.py
+    ├── test_recommendation_formatting.py
     └── diagnose_mtech_chunks.py
 ```
 
@@ -391,7 +397,51 @@ Sections detected: `1..16` (INTRODUCTION → WAIVER OF REQUIREMENTS IN SPECIAL C
 
 ---
 
-## 11. Remaining Work / Next Steps
+## 11. Recommendation Agent Upgrade (Synthetic Knowledge + Draft Resolution)
+
+The M.Tech. RAG module was upgraded so the agent can act as the **Knowledge Retrieval and Recommendation Agent** from the project proposal.
+
+Real previous minutes, office orders, and decided cases are not available. Synthetic JSON datasets are generated from the official Masters' ordinance chunks using the Gemini API, then embedded with the existing sentence-transformer model and stored in `knowledge_chunks`.
+
+### New files
+
+* `ai/ingestion/synthetic_data_generator.py`
+* `tests/test_synthetic_data_generator.py`
+* `tests/test_recommendation_formatting.py`
+
+### Modified files
+
+* `backend/ingest_knowledge_base.py` — embed and insert `past_case`, `meeting_minute`, `circular`
+* `backend/retrieval/semantic_search.py` — mixed retrieval by chunk type
+* `backend/llm/gemini_client.py` — Recommendation Agent prompt with five fixed headings
+* `backend/rag/qa_pipeline.py` — retrieve mixed evidence and build labeled context
+* `backend/rag/source_formatter.py` — context labels + source metadata
+* `backend/rag/conversation_manager.py` — follow-up rewrite uses `generate_text`
+* `backend/rag/guardrails.py` — DMPC recommendation keywords
+* `frontend/app.js` — source display includes `chunk_type`
+* `README.md` — pipeline, run order, and knowledge types
+
+### Run order after this upgrade
+
+```bash
+python ai/ingestion/synthetic_data_generator.py
+python backend/ingest_knowledge_base.py --replace
+uvicorn backend.main:app --reload
+```
+
+Required output headings:
+
+```text
+Relevant ordinance clauses
+Similar previous cases (citing the synthetic data)
+Identified deficiencies
+Possible course of action
+Initial draft resolution
+```
+
+---
+
+## 12. Remaining Work / Next Steps
 
 * [ ] Create the PostgreSQL schema + `documents` row + 16 `sections` rows on the target machine.
 * [ ] Run `backend/ingest_knowledge_base.py` and confirm 139 rows inserted.
@@ -403,7 +453,7 @@ Sections detected: `1..16` (INTRODUCTION → WAIVER OF REQUIREMENTS IN SPECIAL C
 
 ---
 
-## 12. Notes on Repository Isolation
+## 13. Notes on Repository Isolation
 
 * The original `DepartmentAI-Agentic-Academic-Governance` repository was **read only**.
 * No files were added, edited, or deleted inside it.
@@ -412,7 +462,7 @@ Sections detected: `1..16` (INTRODUCTION → WAIVER OF REQUIREMENTS IN SPECIAL C
 
 ---
 
-## 13. Deliverable
+## 14. Deliverable
 
 The complete, ready-to-use deliverable is the zipped repository:
 

@@ -1,24 +1,8 @@
-from backend.retrieval.semantic_search import semantic_search
+from backend.retrieval.semantic_search import retrieve_for_recommendation
 from backend.llm.gemini_client import generate_answer
 from backend.rag.conversation_manager import resolve_follow_up
 from backend.rag.guardrails import validate_question
-
-
-def build_context(results):
-    context_parts = []
-
-    for result in results:
-        context_parts.append(
-            f"""
-Section {result.get('section_number')}: {result.get('section_title')}
-Clause: {result.get('clause_number')}
-Pages: {result.get('page_start')}-{result.get('page_end')}
-
-{result.get('chunk_text')}
-"""
-        )
-
-    return "\n---\n".join(context_parts)
+from backend.rag.source_formatter import build_context
 
 
 def answer_question(question, conversation_history=None):
@@ -74,17 +58,17 @@ def answer_question(question, conversation_history=None):
         )
 
     # ---------------------------------------------------------
-    # 5. EXISTING RAG RETRIEVAL — unchanged
+    # 5. Mixed retrieval for the Recommendation Agent
     # ---------------------------------------------------------
-    results = semantic_search(search_query)
+    results = retrieve_for_recommendation(search_query)
 
     # ---------------------------------------------------------
-    # 6. EXISTING ordinance context construction — unchanged
+    # 6. Context construction across ordinance + synthetic sources
     # ---------------------------------------------------------
     ordinance_context = build_context(results)
 
     # ---------------------------------------------------------
-    # 7. EXISTING Gemini answer generation — unchanged
+    # 7. Recommendation Agent draft generation
     # ---------------------------------------------------------
     answer = generate_answer(
         search_query,

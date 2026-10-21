@@ -54,8 +54,29 @@ async function sendQuestion() {
             let sourceText = "Sources:\n\n";
 
             data.sources.forEach((source, index) => {
-                sourceText += `${index + 1}. Section ${source.section} - ${source.section_title}, `;
-                sourceText += `Clause ${source.clause}, Pages ${source.pages}\n`;
+                const kind = source.chunk_type || "ordinance_clause";
+                sourceText += `${index + 1}. [${kind}] ${source.chunk_id || ""}`.trim();
+
+                if (source.section) {
+                    sourceText += ` | Section ${source.section}`;
+                    if (source.section_title) {
+                        sourceText += ` - ${source.section_title}`;
+                    }
+                }
+
+                if (source.clause) {
+                    sourceText += ` | Clause ${source.clause}`;
+                }
+
+                if (source.subject) {
+                    sourceText += ` | ${source.subject}`;
+                }
+
+                if (source.pages) {
+                    sourceText += ` | Pages ${source.pages}`;
+                }
+
+                sourceText += "\n";
             });
 
             sourceMessage.textContent = sourceText;

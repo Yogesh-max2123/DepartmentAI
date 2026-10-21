@@ -66,6 +66,14 @@ ACADEMIC_KEYWORDS = {
     "leave",
     "extension",
     "graduation",
+    "circular",
+    "circulars",
+    "office order",
+    "meeting minutes",
+    "previous case",
+    "past case",
+    "draft resolution",
+    "recommendation",
 }
 
 

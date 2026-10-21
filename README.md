@@ -60,13 +60,17 @@ The major objectives of DepartmentAI are:
 
 ## High-Level Architecture
 
-The current system follows a RAG-based architecture:
+The current system follows a Recommendation-Agent RAG architecture:
 
 ```text
                     ┌─────────────────────┐
                     │       User          │
-                    │  Natural Language   │
-                    │      Question       │
+                    │  Question / Case    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │     Guardrails      │
                     └──────────┬──────────┘
                                │
                                ▼
@@ -79,10 +83,10 @@ The current system follows a RAG-based architecture:
                     ┌─────────────────────┐
                     │ PostgreSQL +        │
                     │      pgvector       │
-                    │ Semantic Retrieval  │
+                    │ Mixed Retrieval     │
+                    │ ordinance / cases / │
+                    │ minutes / circulars │
                     └──────────┬──────────┘
-                               │
-                         Top Candidates
                                │
                                ▼
                     ┌─────────────────────┐
@@ -90,18 +94,16 @@ The current system follows a RAG-based architecture:
                     │     Reranking       │
                     └──────────┬──────────┘
                                │
-                          Top 5–8 Chunks
-                               │
                                ▼
                     ┌─────────────────────┐
-                    │      LLM API        │
-                    │  Grounded Answer    │
+                    │ Recommendation Agent│
+                    │      Gemini API     │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
-                    │ Clean Natural       │
-                    │ Language Response   │
+                    │ Draft Resolution    │
+                    │  (five headings)    │
                     └─────────────────────┘
 ```
 
@@ -130,9 +132,15 @@ The current system follows a RAG-based architecture:
 
 This implementation focuses on the **Masters' Programmes Ordinance and DMPC/SMPC-related academic processes**.
 
-The current authoritative knowledge source is the:
+The current authoritative knowledge sources are:
 
 **MNNIT Allahabad Ordinances for Masters' Programmes (2023)**
+
+plus ordinance-grounded **synthetic** DMPC records that stand in for archives that are not available:
+
+* similar previously decided cases (`past_case`)
+* previous minutes of DMPC meetings (`meeting_minute`)
+* departmental office orders / circulars (`circular`)
 
 The ordinance was approved by the Board of Governors in its Seventy-third (73rd) meeting held on August 10, 2023 vide Resolution No. 73.13 (A).
 
@@ -166,7 +174,7 @@ DepartmentAI uses RAG to reduce hallucination and ensure that answers are based 
 The retrieval pipeline is:
 
 ```text
-Official Document
+Official Ordinance PDF
        │
        ▼
 PDF Extraction
@@ -177,26 +185,23 @@ Structure Detection
        ▼
 Intelligent Chunking
        │
-       ▼
-Embedding Generation
-       │
-       ▼
-PostgreSQL + pgvector
-       │
-       ▼
-Semantic Search
-       │
-       ▼
-Keyword / Semantic Reranking
-       │
-       ▼
-Relevant Context
-       │
-       ▼
-LLM
-       │
-       ▼
-Grounded Answer
+       ├──────────────────────────────┐
+       ▼                              ▼
+Embedding Generation         Gemini synthetic generator
+(ordinance chunks)           (cases / minutes / circulars)
+       │                              │
+       └──────────────┬───────────────┘
+                      ▼
+            PostgreSQL + pgvector
+                      │
+                      ▼
+         Mixed semantic + keyword retrieval
+                      │
+                      ▼
+            Recommendation Agent (Gemini)
+                      │
+                      ▼
+            Five-heading draft resolution
 ```
 
 ---
@@ -421,15 +426,24 @@ Send question + context to LLM
 Generate grounded answer
 ```
 
-The LLM is instructed to:
+The Recommendation Agent is instructed to:
 
-* Answer only using retrieved ordinance content.
-* Ignore unrelated portions of retrieved chunks.
-* Preserve important numbers and conditions.
-* Avoid hallucination.
-* Avoid adding external/general knowledge.
-* Clearly indicate when the retrieved content is insufficient.
-* Produce concise and understandable answers.
+* Use only retrieved ordinance clauses, similar previous cases, DMPC minutes, and circulars.
+* Cite synthetic previous cases by case id, date, clauses, and recorded decision.
+* Preserve important numbers, forms, and conditions.
+* Avoid hallucination and outside knowledge.
+* Identify deficiencies from the question and retrieved context.
+* Propose possible courses of action without making a final decision.
+* Draft an initial resolution for human review.
+* Format every answer with these exact headings:
+
+```text
+Relevant ordinance clauses
+Similar previous cases (citing the synthetic data)
+Identified deficiencies
+Possible course of action
+Initial draft resolution
+```
 
 ---
 
@@ -603,7 +617,8 @@ DepartmentAI-MTech/
 │   ├── ingestion/
 │   │   ├── pdf_parser.py
 │   │   ├── structure_parser.py
-│   │   └── intelligent_chunker.py
+│   │   ├── intelligent_chunker.py
+│   │   └── synthetic_data_generator.py
 │   │
 │   └── embeddings/
 │       ├── embedding_generator.py
@@ -618,7 +633,10 @@ DepartmentAI-MTech/
 │           ├── mtech_ordinance_text.txt
 │           ├── mtech_ordinance_structure.json
 │           ├── mtech_ordinance_chunks.json
-│           └── mtech_ordinance_embeddings.json
+│           ├── mtech_ordinance_embeddings.json
+│           ├── synthetic_past_cases.json
+│           ├── synthetic_dmpc_minutes.json
+│           └── synthetic_circulars.json
 │
 ├── backend/
 │   ├── ingest_knowledge_base.py
@@ -649,6 +667,8 @@ DepartmentAI-MTech/
 │   ├── test_gemini_client.py
 │   ├── test_guardrails.py
 │   ├── test_qa_pipeline.py
+│   ├── test_synthetic_data_generator.py
+│   ├── test_recommendation_formatting.py
 │   └── diagnose_mtech_chunks.py
 │
 ├── .env.example
@@ -762,32 +782,35 @@ The primary evaluation criterion is:
 
 | Component                        | Status         |
 | -------------------------------- | -------------- |
-| Project structure                | ✅ Complete     |
-| Python environment               | ✅ Complete     |
-| PDF parsing                      | ✅ Complete     |
-| Structure parsing                | ✅ Complete     |
-| Clause detection                 | ✅ Complete     |
-| Intelligent chunking             | ✅ Complete     |
-| 139 knowledge chunks             | ✅ Complete     |
-| Embedding generation             | ✅ Complete     |
-| 139 × 384 embeddings             | ✅ Complete     |
-| Local embedding model            | ✅ Complete     |
-| PostgreSQL 18                    | ✅ Complete     |
-| pgvector 0.8.6                   | ✅ Complete     |
-| Database schema                  | ✅ Complete     |
-| Document ingestion               | ✅ Complete     |
-| 139 chunks in PostgreSQL         | ✅ Complete     |
-| Semantic retrieval               | ✅ Complete     |
-| Keyword reranking                | ✅ Complete     |
-| LLM answer generation            | 🚧 In Progress |
-| Retrieval evaluation             | 🚧 In Progress |
-| Metadata correction              | ⏳ Planned      |
-| Traceability validation          | ⏳ Planned      |
-| FastAPI integration              | ⏳ Planned      |
-| Multilingual chatbot             | ⏳ Planned      |
-| Agentic workflows                | ⏳ Planned      |
-| DMPC automation                  | ⏳ Planned      |
-| SMPC automation                  | ⏳ Planned      |
+| Project structure                | Complete       |
+| Python environment               | Complete       |
+| PDF parsing                      | Complete       |
+| Structure parsing                | Complete       |
+| Clause detection                 | Complete       |
+| Intelligent chunking             | Complete       |
+| 139 knowledge chunks             | Complete       |
+| Embedding generation             | Complete       |
+| 139 x 384 embeddings             | Complete       |
+| Local embedding model            | Complete       |
+| PostgreSQL 18                    | Complete       |
+| pgvector 0.8.6                   | Complete       |
+| Database schema                  | Complete       |
+| Document ingestion               | Complete       |
+| 139 chunks in PostgreSQL         | Complete       |
+| Semantic retrieval               | Complete       |
+| Keyword reranking                | Complete       |
+| LLM recommendation generation    | Complete       |
+| Draft-resolution formatting      | Complete       |
+| Synthetic past cases / minutes / circulars | Complete |
+| Mixed retrieval (4 chunk types)  | Complete       |
+| Retrieval evaluation             | In Progress    |
+| Metadata correction              | Planned        |
+| Traceability validation          | Planned        |
+| FastAPI integration              | Complete       |
+| Multilingual chatbot             | Planned      |
+| Agentic workflows                | In Progress  |
+| DMPC automation                  | In Progress  |
+| SMPC automation                  | Planned      |
 
 ---
 
@@ -930,13 +953,19 @@ Never commit `.env`.
 
 ## 5. Build the Knowledge Base (Offline Pipeline)
 
-Run the ingestion, structure, chunking, and embedding stages:
+Run the ordinance ingestion, structure, chunking, and embedding stages:
 
 ```bash
 python ai/ingestion/pdf_parser.py
 python ai/ingestion/structure_parser.py
 python ai/ingestion/intelligent_chunker.py
 python ai/embeddings/embedding_generator.py
+```
+
+Generate synthetic DMPC cases, meeting minutes, and circulars from the ordinance chunks (requires `GEMINI_API_KEY`):
+
+```bash
+python ai/ingestion/synthetic_data_generator.py
 ```
 
 ## 6. Start PostgreSQL
@@ -961,8 +990,17 @@ WHERE extname = 'vector';
 
 ## 8. Load the Knowledge Base into PostgreSQL
 
+Ingest ordinance chunks and the synthetic datasets:
+
 ```bash
-python backend/ingest_knowledge_base.py
+python backend/ingest_knowledge_base.py --replace
+```
+
+Other options:
+
+```bash
+python backend/ingest_knowledge_base.py --synthetic-only --replace
+python backend/ingest_knowledge_base.py --skip-synthetic --replace
 ```
 
 ## 9. Run the API
@@ -975,11 +1013,35 @@ uvicorn backend.main:app --reload
 
 Open `frontend/index.html` in a browser (or serve it locally on port 5500).
 
+Try a DMPC-style prompt such as:
+
+```text
+A full-time M.Tech. student requests late registration after the deadline and Form MP-02 is missing. Prepare a DMPC recommendation.
+```
+
+The agent should return the five draft-resolution headings listed above.
+
 ---
 
 ## Current Implementation Notes
 
 The project intentionally avoids unnecessary infrastructure at the current development stage.
+
+---
+
+## Recommendation Agent Knowledge Types
+
+| `chunk_type`         | Source                                              | Real / synthetic |
+| -------------------- | --------------------------------------------------- | ---------------- |
+| `ordinance_clause`   | Masters' ordinance body                             | Real             |
+| `form`               | MP / GL annexure forms                              | Real             |
+| `past_case`          | `synthetic_past_cases.json`                         | Synthetic        |
+| `meeting_minute`     | `synthetic_dmpc_minutes.json`                       | Synthetic        |
+| `circular`           | `synthetic_circulars.json`                          | Synthetic        |
+
+Synthetic records are generated from the official ordinance clauses. They are demonstration stand-ins for previous minutes, office orders, and decided cases that are not available as real archives. The Recommendation Agent is instructed to cite them as synthetic demonstration records.
+
+---
 
 The current architecture does **not** require:
 
@@ -1084,9 +1146,11 @@ Current focus:
 The immediate milestone is:
 
 ```text
-Reliable Retrieval
+Reliable mixed retrieval
         +
-Grounded LLM Answer Generation
+Recommendation Agent draft resolution
+        +
+Ordinance-grounded synthetic DMPC knowledge
         +
 Evaluation
 ```
