@@ -472,6 +472,32 @@ def fetch_thesis_rows(faculty_id=None, faculty_ids=None, year_range=None,
             return [dict(zip(columns, row)) for row in cur.fetchall()]
 
 
+def fetch_thesis_source_urls(faculty_id=None, faculty_ids=None,
+                             department_wide=False, phd_only=False,
+                             program_level=None, limit=5):
+    """Return source URLs recorded for the requested faculty/programme scope.
+
+    These URLs are read from existing thesis-supervision rows; no source URL is
+    constructed or inferred.
+    """
+    conditions, params = _thesis_scope_sql(
+        faculty_id, faculty_ids, department_wide, phd_only, program_level
+    )
+    sql = f"""
+        SELECT DISTINCT NULLIF(BTRIM(ts.source_url), '') AS source_url
+        FROM m2_thesis_supervision ts
+        JOIN m2_faculties f ON f.id = ts.faculty_id
+        WHERE {' AND '.join(conditions)}
+          AND NULLIF(BTRIM(ts.source_url), '') IS NOT NULL
+        ORDER BY source_url
+        LIMIT %s
+    """
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params + [limit])
+            return [row[0] for row in cur.fetchall() if row and row[0]]
+
+
 def _export_format(question):
     q = (question or "").lower()
     if re.search(r"\b(xlsx|excel|spreadsheet)\b", q):
@@ -788,6 +814,17 @@ def run_thesis_analytics(question, faculty_id=None, faculty_ids=None,
             print(f"- Records with no registration year: {counts['records_without_registration_year']}")
             print(f"- Records with no completion year: {counts['records_without_completion_year']}")
             print("  Status rule: a completion year counts as completed; ongoing requires an explicit ongoing-like status and no completion year. Missing/unclear status is not inferred.")
+        source_urls = fetch_thesis_source_urls(
+            faculty_id=faculty_id, faculty_ids=faculty_ids,
+            department_wide=department_wide, phd_only=phd_only,
+            program_level=program_level,
+        )
+        if source_urls:
+            print("Official source URL(s) recorded in the database:")
+            for source_url in source_urls:
+                print(f"- {source_url}")
+        else:
+            print("Official source URL: No source URL is recorded for this scope in the database.")
         return True
 
     rows = fetch_thesis_rows(
