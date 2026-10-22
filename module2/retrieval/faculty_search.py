@@ -112,19 +112,21 @@ def resolve_faculty(question, records, faculty_name=None):
                 "matched",
             )
 
-        # Permit a full database name contained in the supplied name.
+        # Permit a database name embedded in a longer supplied phrase, but
+        # require a unique longest match. This supports prefixes such as
+        # "Professor Dr ..." without accidentally selecting a partial surname.
         matches = [
             key for key in name_to_ids
-            if f" {key} " in f" {requested_key} "
+            if key and f" {key} " in f" {requested_key} "
         ]
 
         if matches:
-            longest = max(matches, key=len)
-            return (
-                name_to_ids[longest],
-                name_to_display[longest],
-                "matched",
-            )
+            longest_length = max(len(key) for key in matches)
+            longest_matches = [key for key in matches if len(key) == longest_length]
+            if len(longest_matches) == 1:
+                key = longest_matches[0]
+                return name_to_ids[key], name_to_display[key], "matched"
+            return set(), None, "ambiguous"
 
         return set(), None, "unresolved"
 

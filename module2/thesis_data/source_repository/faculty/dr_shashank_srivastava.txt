@@ -1,0 +1,123 @@
+Dr. Shashank Srivastava
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	FloodKnight: SDN based Intelligent DDoS Defence System	Neelam Dayal	2019
+2	Optimal Controller Placement in Software Defined Networking	Ashutosh Kumar Singh	2020
+3	Enforcing Security Against Major Attacks in Named Data Networking,	Naveen Kumar	2021
+4	Design and Implementation of Software Defined Low Overhead Structured Peer-to-Peer Networks	Nitin Shukla, with Prof. Mayank Pandey	2021
+5	Improved Teaching-Learning Based Optimization Variants and their Application in Cloud Computing	Satya Deo Kumar Ram	2023
+6	Intelligent Detection and Mitigation of DDoS Attack in SDN	Naziya Aslam , with Prof. M.M Gore	2024
+Ph.D. Ongoing
+1	Adversarial Machine Learning	Siddheshwar Kumar	2021
+2	Computational Offloading in Edge computing	Poonam Yadav	2021
+3	Issues and Challenges in Generative AI	Abhishek Kant	2023
+4	Security attacks and countermeasures in Federated Learning	Aditya Bhushan	2025
+M.Tech Students
+1	Detection of Amplified Reflection DDoS Attack	Akanksha Tripathi	2020
+2	Intelligent DDoS Detection in SDN Environment	Ravi Prakash Pandey	2020
+3	Authentication For Internet of Things (IoT)	Nitish Kumar	2020
+4	Security in Named Data Networking	Anuj Gangwar	2019
+5	Blockchain Enabled E-Voting	Pundlik Rathod	2019
+6	Application of Blockchain in Healthcare	Ashish Bharti	2019
+7	Distributed SDN Controller System	Renuka Sahu	2018
+8	Software Defined Information-Centric Network	Shashi Kant Rawat	2018
+9	Video Over Software Defined CCNx	Gunjan Singh	2017
+10	Impact of route poisoning attack in SDN and its counter measure	Komal Nandkishore Karwa	2017
+11	Applying artificial neural network for predicting hospital readmission of diabetic patients	Saurabh	2017
+12	Differently Abled Humans & the Web	Rajat Kapoor	2017
+13	An efficient approach for video streaming using CCNx	Manoj Hembaram	2016
+14	Impact of Topology poisoning and route poisoning in SDN	Nivinder Kaur	2016
+15	Detection of Distributed Denial of Service Attack in SDN Controller	Prasenjit Maity	2015
+16	Network Management in SDN	Santosh Kumar	2015
+17	An approach for virtual machine image security	Anjali Pandey	2014
+18	Total secure approach to prevent cache based side channel attack in cloud environment	Meena Ajit Singh Ramasahai	2014
+19	A DHT based dynamical resource allocation protocol in cloud	Rajiv Kumar	2014
+20	Refinement of network intent using NLP in SDN	Abhishek Rai	2021
+21	Mitigation of DDoS Attack in SDN	Suryanshi Adaniya	2021
+22	Traceback of DDoS attack sources in SDN	Devesh Gupta	2021
+23	Vehicle Detection and Counting System using Deep Learning	Garima Saxena	2021
+24	Automated detection of COVID-19 cases with chest X-rays images	Prajakta Selukar	2021
+25	An Intelligent Solution for Computational Offloading in Mobile-Edge Computing	Satyam Patidar	2022
+26	Automated Violence Detection In Surveillance Videos Using Deep Transfer Learn- ing based CNN Model (VioDet)	Nikita Rani	2022
+27	Study of a Deep Learning Based Slicing Approach for 5G Network	Mukeshwar Gupta	2022
+28	Evaluating Meta-Heuristic Algorithms For Solving Virtual Network Function (VNF) Placement Problem	Naman Jain	2022
+29	DDOS Attack Detection By Applying Machine Learning Techniques	Shweta Baliram Rangari	2023
+30	Computation Offloading in Edge Computing	Rishi Pratap Singh	2023
+31	Recommender System using Public Blockchain	Gaurav Kumar	2023
+32	Optimizing Task Offloading in Edge Computing through Deep Reinforcement Learning and Load Prediction	Varsha Prajapati	2023
+33	Optimizing Language Models for Resource-Constrained Environments	Mansi Chaurasiya (2023CS12)	2025
+34	Evaluating & Enhancing Adversarial Robustness of Deep Vision Models	Jitesh Vijaykumar (2023DS11)	2025
+35	Image Synthesis using Generative AI	Tuneer Bhattacharya (2022DS07)	2024
+
+
+
+
+Dr. Dushyant Kumar Singh
+hesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Novel Techniques for Suspicious Activity Detection through Video Surveillance at Public Places	Neelam Dwivedi	2021
+2	Megastores Surveillance for Identifying Shoplifters and Shoplifting Activities	Mohd. Aquib Ansari	2022
+3	Exploring Facial Identity Issues and Their Novel Mitigation Approaches	Mayank Kumar Rusia	2023
+4	Generative Modelling for Automatic Content Creation Specific to Context-Aware Video Logs (vLog)	Lalit Kumar	2026
+Ph.D. Ongoing
+1	Study of Alzheimer Disease Brain Impairment and Methods for its Early Diagnosis	Shruti Pallawi	--/2021
+2	Assessing Brain State and Cognitive behavior of human being in different physiological conditions using EEG signal.	Rakesh Rai	--/2022
+3	Computer Vision	Himanshu Pandey	--/2024
+M.Tech Students
+1	Vision in Dark: Viewing the objects in dark images	Harshvardhan Patidar	2021
+2	An approach of de-raining noisy images for the image quality enhancement	Saurav Maurya	2021
+3	Modelling Hand Gestures for Sign Language Translation	Anshu Kumar	2020
+4	Recognizing Elderly Peoples in Surveillance Video using Body Posture Skeleton for Their Assistance	Vishnu Pratap Singh	2020
+5	A Deep Learning Approach for Image Denoising	Komal Bajaj	2019
+6	Malware Detection using Machine Learning Approaches	Saima Naz	2019
+7	An Efficient Approach for Handwritten Devanagiri Character Recognition based on Artificial Neural Network	Nikita Singh	2018
+8	Image Captioning to Understand Surroundings through Transfer Learning	Mohd Ali	2018
+9	Visibility Improvement and Object Detection in Foggy Images	Diwakar Kumar Paswan	2017
+10	Novel approach to multiple face detection in an image	Randeep Sahu	2016
+11	Dynamic approaches for Malware Analysis	Naveen Kumar Gupta	2015
+12	A novel approach to Emotion Recognition	Aasit Sahu	2015
+13	Object Tracking and Recognition in Real World Scenario	Ankur Gupta	2015
+14	Software Effort Estimation	Gurumeet Singh Bhatia	2014
+15	An approach to improved software effort estimation for software development	Ganesh Meena	2014
+16	A novel approach for High Speed 2D to 3D Conversion	Sanjay Yadav	2014
+17	A Novel Approach for Context Aware Video Summarization	Arohan B.	2022
+18	Face Frontalization using Progressive Generative Adversarial Networks	Sooraj Mishra	2022
+19	3D Object Modelling and Synthesis Techniques using Generative Models	Zeeshan Akhtar	2022
+20	Using deep learning for Yoga Asana Classification	Shivam Kashyap	2023
+21	Modeling the Steps of Suryanamsakar for Real-time Recognition Using ML/DL Methods	Akash Kumar Gupta	2023
+22	Securing Educational Spaces: A Deep Learning based Suspicious Activity Detection in Classrooms and Laboratories	Ansh Mahendra Shrivas	2024
+23	Monitoring Traffic Rules Violations at Traffic Squares through Computer Vision Methods	Rishabh Jain	2025
+24	Efficient Multi-Label Image Classification on Edge Devices using Quantized Multi-Head Attention Graph Models	Shreyansh Singh Chandel	2025
+25	Brain Signal Processing for Analyzing Brain State and Behaviour Modelling	Hemant Vishwakarma	2026
+26	Exploring Advance GCN Concepts for Activity Modelling using Domain Specific Knowledge	Abhinay Ghishing	2026
+B.Tech Students
+1	Computer Vision based Sports Activity Recognition	Shefali Rai (20174051), Sanjana Bharti (20174039), Saptarick Mishra (20174089)	2021
+2	Exercise Posture Correction using Pose Estimation and Geometrical Approach	Harsh Chaturvedi (20174088), Ankush Malik (20174160), Kumari Simran (20174105)	2021
+3	Eye Gaze Tracking for Virtual Keyboard Controls	Shruti Barnawal (20178063), Shivam Srivastava (20178025), Swetha Nagarajan (20178064)	2021
+4	Smart Emeotion Detector and Typing Assistant	Shruti Jagwani (20168019), Khyati Garg (20168052), Rajat Kumar Gupta (20168079), Nitesh Kumar (20168051)	2020
+5	Human Activity Recognition by Body Points Sequencing	Mayank Rana (20164041), Komal Khandelwal (20164100), Manvi Kishore (20164077), Juhi Verma (20164061)	2020
+6	Modelling Hand Gestures for Sign Language Translation	Ishank Tyagi (20164153), Divyansh Soni (20164137), Kailash Chand Saini (20164125), Chandan Jyoti Morang (20164153)	2020
+7	Assistive Agent using TFlite by CNN Quantization	Ankur Mishra (20153062), Akshit Sharma (20158010), Abhishek Kumar (20158060), Sourav Kumar (20158062), Suraj Shah (20148005)	2019
+8	Robust Detection of Duplicated Image Regions	Jatin Tayal (20154140), Lavkush Chauhan (20154059), Hemant Kushwah (20154119), Brajesh Singh (20154142), Lokajit Subbaraja (20154003)	2019
+9	Smart Agriculture Assistant	Sidhant Kohli (20154143), Shivam Kumar (20154063), Yugendra Kumar Sharma (20154067), Suraj Kumar Mall (20154094), Ved Prakash (20154124)	2019
+10	Activity Recognition in Live Video	Himanshu Patel (20145081), Arjav Jain (20148066), Kaushlam (20144120), Ajay Kumar Gond (20144137), Kante Suprabhat (20144152)	2018
+11	Scene Understanding via Real Time Object Detection and Visual Question Answering	Utkarsh Ojha (20145095), Utsav Adhikari (20144022), Varun Yadav (20144035), Vijay Prakash Dwivedi (20144013), Raj Kumar (20144084)	2018
+12	Smart Policing System	Sumit Paroothi (20148045), Shristi Jaiswal (20146021), Srikanth Karlapati (20148101), Uttej Cheedalla (20148103), Banoth Akhil Naik (20148105)	2018
+13	Alert system for theft control through real time surveillance	Manas Srivastava(20134106), Chandan Kumar(20134034), Mukesh Jaiswal(20134087), Jitendra Singh Negi(20134096), Jay Chand Shah(20134010)	2017
+14	Motion detection to reduce tiger poaching and attacks	Radhika Agrawal(20134014), Sonu Kumar Sharma(20134113), Nishi Mahto(20134011), Snehil Srivastava(20134002), Surendra Kumar Verma(20134041)	2017
+15	Classification of human actions based on image processing	Dhruvita Patel(20138071), Shubham Tripathi(20138070), Pendyala Jaychandra(20138063), Dibya Subedi(20138011), Priyadarshi Harsh(20138072)	2017
+16	Moving object detection in real time	Supriya Singh(20120053), Shalu Sneha(20128028), Nauman Ansari(20120025), Santosh Kumar Hebram(20128040), Brijesh Kumar(20128084)	2016
+17	Human detection and tracking with motion analysis	Pushkar P Goswami(20124040), Rajat Goyal(20124055), Sandeep Kumar(20121059), Rahul Singh Bhadauria(20124066), Sai Kiran Nelluri(20124106)	2016
+18	Malware analysis using soft computing techniques	Tulika Mithal(20110068), Kshitij Shah(20118049), Shreyansh Dubey(20119055), Vinod Pawar(20118060)	2015
+19	Real world object tracking	Usama Ahmed(20114066), Vikash Sharma(20114116), Sandeep Singh(20115028), Ram Sundar Mahto(20114121)	2015
+20	Human emotion detection by facial expression	Pranjal Sahay(20115096), Shubham Patel(20114028), Yogesh Meena(20114086), Deepankar(20114109)	2015
+21	Gesture recognition system for human computer interaction	Shashank Jain(20108022), Sherry(20108096), Abhinav Palash(20106022), Alok Kumar Yadav(20108105), Tushar Gangwar(20109020)	2014
+22	Dynamic environment exploration tool	Shiwani Jaiswal(20108013), Vijay Kumar Jain(20103011), Indrajeet Kumar Shah(20104143), Pradeep Kumar Mishra(20104123)	2014
+23	Remotely controlled home automation	Saurav Chandra, Anurag Sahu, Anjali Agarwal, Sachin Kushwaha, Ved Prakash	2014
+24	Proctoring Online Exam System	Rishabh Singh (20184095), Rounak Jain (20184180), Shashank Gupta (20184115), Shubh Gangwal (20184121))	2022
+25	Amuse Music Generation with Tunable Parameters	Atharva Khante (20188073), Animesh Kumar (20188075), Anjali Kumari (20188046), Deepak Kumar Gupta (20188082)	2022
+26	Sports Video Summarization	Rohit Kumar (20184009), Saurav Chaudhary (20184165), Vidushi Vigh (20184188), Rishu Kumar (20184010)	2022

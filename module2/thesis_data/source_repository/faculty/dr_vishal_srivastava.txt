@@ -1,0 +1,18 @@
+Dr. Vishal Srivastava
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	Military camouflage object detection using Metric Learning and AIoT	Ashish Kumar	2024
+2	Knowledge Graphs and Complex Networks representation using HPC Cluster and LLMs	Vikas Jai Singh Ydav	2025
+M.Tech Students
+1	Automatic Train protection system: KAVACH	Pradeep Kumar	2025
+2	Smart chatbot development through integration of AI, Big data and cloud platforms	Chandra Bhushan Yadav	2025
+3	Knowledge graph and region graph enhanced multi-model camouflaged object detection	Ankit Kumar (2024CS04)	2024-26
+4	Survey and comparative evaluation of model camouflage object detection method	Abhishek Kumar (2024IS05)	2024-26
+5	Comparative Analysis of Wavelet and Gradient Guided Refinement Network (WGRNet) with Existing Military Camouflage Object Detection Models.	Ayush Raj Purohit (2024IS01)	2024-26
+B.Tech Students
+1	Image summarization with segmentation	Ayush kumar (20214284), Ashutosh banate(20208031), keshav ram(20214281), lalaj rathore(20214523)	2025
+2	Hybrid CNN-LSTM Architecture for camouflage object segmentation	Tony jain (20214005), Vishesh Agrawal (20214024), Sumit kasaudhan(20214250), Sankalp Gautam(20214285)	2025
+3	Segment wise image captioning using deep learning and parallel processing	Vishal ke gupta(20214083), Shashwat mehrotra(20214547), Vikas Bharti( 20214282), Tanya Dixit(20214126))	2025

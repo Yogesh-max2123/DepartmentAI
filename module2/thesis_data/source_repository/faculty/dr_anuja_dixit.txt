@@ -1,0 +1,25 @@
+Dr. Anuja Dixit
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	Devising Improved Passive Techniques for Multimedia Forensics	Mansi Srivastava	2024
+M.Tech Students
+1	Forgery Identification and Localization in Videos	Ashutosh Kumar	2025
+2	Utilization of Digital Forensics for Image Forgery Detection	Pushpendra Kumar Bais	2025
+3	Devising Digital Forensic Techniques for Deepfake Detection (Jointly Supervised with Prof. M. M. Gore)	Umesh Kumar Bhatiya	2025
+4	Real-Time Multi-Modal Image Manipulation Detection Using Cross-Modal Transformer Fusion: A Multi-Stream Forensic Approach and Cross-Dataset Generalisation Analysis	Subhankar Roy	2026
+5	Deployment of Deep Learning based Techniques for Robust Image Forgery Detection	Abhay Singh	2026
+6	Video Forgery Detection Using Deep Learning: A Deep Study of EfficientNet-Transformer and BiLSTM-Attention Architectures	Abhishek Lal	2026
+B.Tech Students
+1	Identification of Tampered Videos using Forgery Detection System	Vipul Vibhas Singh, Vikas Kumar Patel, Seemant Singh, Sangram Singh	2025
+2	Entity Consistent Visuals Generation using Large Language Models	Harsh Wardhan Shukla, Ishaan Agarwal, B Anurag, Emad Shoaib	2025
+3	Design and Implementation of an Integrated CTF Platform	Aditya Mishra, Aditya Gulati, Amit Vaishnav, Aman Kumar	2025
+4	Motion-Descriptor-Based Framework for Anomaly Detection	Ishansh Khare, Mayank Bisht, Gugulothu Driti, Kumari Sheetal Chhaya	2025
+5	Detection of GAN-Generated Fake Images	Patel Sneh, Saurabh Chaudhary, Ravi Kumar Meena, Shibu	2025
+6	Detection of Morphing Attack in Face Images	Gudimetla Balaji Sai, Gangireddy Jagadeeswar Reddy, Himanshu Verma, Kondepogu Samuel Navanth	2025
+7	PRNU-based Camera Source and Tampering Detection	Idhant Singh, Nandani Jain, Inam Yadav, Khushi Singh	2025
+8	Video Forgery Detection Platform using VGG16, KPCA and Statistical Learning	Vaibhawi Ranjan	2026
+9	ImgForensicNet: A Deep Learning Framework for Pixel-Level Image Forgery Detection	Prasenjeet Kumar	2026
+10	RAG-Based PDF Summarization using Large Language Models Anticipation	Manshi Kumari	2026

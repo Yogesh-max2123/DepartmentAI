@@ -1,0 +1,12 @@
+Dr. Indu Dohare
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+M.Tech Students
+1	A Hybrid Intrusion Detection System using Machine Learning	Neelanshi Jaiswal (2023IS13)	May, 2025
+2	Graph Attention Networks based Intrusion Detection Systems for IoT	Yatindra Kumar Srivastava (2023DS25)	May, 2025
+B.Tech Students
+1	Optimized BNC Placement and Secure Communication for Energy Efficient WBANS	Arsalan Maboos (20214230) Ayush Singhal (20214007) Hruday Vinayak Vemavarapu (20214514), Bellamkonda Saivishal (20214117)	May, 2025
+2	Machine Learning-Based Anomaly Classification with Enhanced Detection for SolarSonic TraffieGuard	Shivam Kumar Gupta (20214082) Sneha Kumari (20214102) Snehashish Datta (20214153)	May, 2025
+3	Trust-Aware Routing for Edge Devices in Internet of Things	(Nandika Agrawal (20214030)) (Mukhee Ojaswini (20214110)) (Neha Raj (20214103)) (Mehak Singh (20214099))	May, 2025

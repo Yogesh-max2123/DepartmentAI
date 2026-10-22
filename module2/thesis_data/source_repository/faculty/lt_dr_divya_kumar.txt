@@ -1,0 +1,53 @@
+LT. (Dr.) Divya Kumar
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Multi-Criteria Task Scheduling in Heterogeneous Cloud Environment	Dhirendra Shukla	2021
+2	Reliability Analysis of Safety-Critical systems	Ankur Maurya	2016
+3	Computer Assisted Recognition of Stress, Anxiety and Depression (SAD) Levels in the Students for the Early Identification of Suicide Susceptible Students	Astha Singh	2025
+4	Design of Blockchain Enabled Healthcare System Using Convergence of ML and IoT Framework	Charu Krishna	2026
+5	Weight Sensor Based Solutions for Railway Signalling and Track Maintenance	Sharad Nigam	2025
+Ph.D. Ongoing
+1	Blockchain Applications	Amitesh	2018
+2	Machine Learning Based Early Prediction of Heart Diseases	Atul Kumar	2020
+3	Forensics and Computer Science	Arpit Dubey	2025
+4	Computer Science	Arjun Kumar Gupta	2026
+M.Tech Students
+1	Supply Chain Parameter Optimization Using Blockchain	Sai Srinath	2023
+2	Audio-Based Identification of Depression	Gargi Mishra	2023
+3	Computer-Assisted Identification of Depression Cues in Students	Manish Chaurasia	2022
+4	A Novel Driving Assistance System	Kushagra Agarwal	2022
+5	Predictive Maintenace Models for Assisting Railways and Airlines	Shreya Singh	2021
+6	A Machine Learning Approach for Classification of Lung Diseases	Kamran Hussain	2021
+7	Traceability in Supply Chain Using Blockchain	Sachin Sharma	2020
+8	Disaster Recovery for Virtual Machine and Machine Learning Based Phishing URL detection	Madurendra Purbay	2020
+9	Predictive Maintenance in Prognostics of Railway Track Defects	Ruchi	2020
+10	Time Petri Net-Based Modeling of Diamond Crossing	Gyan Prakash Shukla	2019
+11	Validation of GNSS Based Software and Enhancement of Test Result Analysis Framework	Brijesh Chaurasiya	2019
+12	Two Pass Encoder With SSIM Inspired Qp Adaption in h254	Shanu Sirothiya	2019
+13	Network Traffic Classification Techniques and Comparative Analysis Using Machine Learning Algorithms	Ashish Umrey	2019
+14	Multiprocessor Task Scheduling using Metaheuristics	Shah Parth Hitendra	2019
+15	Anomaly Detection Using Deep Learning Models	Ayush Jain	2018
+16	GA-based Feature Extraction & Study of TD Express Based Automation	Anisha Agarwal,	2018
+17	Role of Colors in Traffic Sign Recognition	Smriti Singh	2018
+18	ABC and Neural Networks for Ovarian Cancer Detection.	Aditya Singh	2017
+19	ABC and Neural Networks for Churn Prediction in Telecommunication Sector	Priyanka Paliwal	2017
+20	Bridge Structure Optimization Using Swarm Intelligence	Shashank Gupta	2016
+21	Meta-heuristic Algorithms for State Machine Minimizationâ€,	Shailendra P Singh	2016
+22	Human Emotion Recognition: An Empirical Study	Arnima Chaurasia	2016
+23	Meta-heuristic Based Optimized Folding of Peptides	Manoj Kumar Pal	2015
+24	Improved Continued Fraction Algorithm for Generalized Packing Problem	Sandeep Kumar Rao	2015
+25	ABC Based Optimization of Trusses & Space Structures Under Constraints	Sunil Kumar Singh	2015
+26	Optimization of Incompletely Specified Finite State Machine Using Evolutionary Algorithms	Vinay Kumar Verma	2015
+27	PSO Based Software Effort Estimation	Prince Bhatia	2014
+28	Crowd Localization Through Surveillance Camera	Ram Kripal Mishra	2014
+29	Localization of Thyroid Cartilages for Human Behavior Detection	Suraj Deb Barma	2014
+30	Role of Non-functional Requirements in Early Estimation of Software Effort Complexity	Shivangi Srivastav	2014
+31	Management of Inventories Using Blockchain	Sumer Sanjaykumar Khatri	2024
+32	Forecasting of Demands In Supply Chain Over Blockchains	Kaustav Bose	2024
+33	Predictions on the Survival of Patients Using healthdata	Ritik Kumar	2024
+34	Performance Comparison of Bagging Classifiers on Multi-core And Single-Core Processors	Aman Rawat	2024
+35	Computational Methods for Dynamic Crowd Movement After Violence and Fire Detection at Large-Scale Events	Swarnima Gautam	2025
+36	AI-Based Predictive Modelling for Risk Identification in Health and Environment	Eram Fatma	2025

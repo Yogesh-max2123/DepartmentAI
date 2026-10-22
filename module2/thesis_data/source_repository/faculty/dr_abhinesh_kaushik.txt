@@ -1,0 +1,14 @@
+Dr. Abhinesh Kaushik
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+M.Tech Students
+1	Improved 3D DV-Hop based on Dynamic Differential Evolution Algorithm	Vikas Mani	2021-2023
+2	Ant Colony Optimization Algorithm Approach for Localization in Wireless Sensor Networks	Sankhyesh Singh Thakur	2021-2023
+3	Localization in Wireless Sensor Networks using Machine Learning based Approximate Point in Triangle Technique	Aditi Agarwal	2022-2024
+4	Localization in Wireless Sensor Networks using Machine Learning based Centroid Localization Algorithm	Kritika Tanwar	2022-2024
+5	Localization In Wireless Sesnor Networks Using Machine Learning Based DV-Hop Algorithm	Arundhati Warade	2022-2024
+6	Blockchain- integrated collaborative intrusion detection Systems: enhancing network security	Rupal Lahre	2023-2025
+7	Energy-Efficient Connectivity in FANETs Using an Optimized Dragonfly Algorithm	Md. Tauseef	2023-2025
+8	Trust-Aware GA-Enhanced Fuzzy Leach with Dead-Hole detection for Energy-efficient Wireless Sensor Networks	Akanksha Shakya	2023-2025

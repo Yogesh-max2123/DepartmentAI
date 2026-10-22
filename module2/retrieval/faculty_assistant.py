@@ -8,7 +8,13 @@ This module reuses faculty_search.py and Module II's existing database.
 It does not modify Module I or create a second embedding cache.
 """
 
+import csv
+import io
+import json
 import re
+from contextlib import redirect_stdout
+from datetime import date, datetime
+from pathlib import Path
 from collections import deque
 
 from module2.database.connection import get_connection
@@ -28,25 +34,67 @@ MAX_LIST_LIMIT = 20
 
 
 def is_department_wide_question(question):
+    """Detect explicit department-wide requests, not generic 'faculty publications'."""
     q = (question or "").lower()
     phrases = (
         "csed", "cse department", "department-wide", "department wide",
         "all faculty", "all professors", "every faculty", "each professor",
-        "department publications", "faculty publications",
+        "department publications", "across the department", "all csed faculty",
+        "all cse faculty",
     )
     return any(phrase in q for phrase in phrases)
 
 
+def is_explicitly_department_wide_question(question):
+    """Return True only when the user clearly asks across faculty/department."""
+    q = (question or "").lower()
+    phrases = (
+        "department-wide", "department wide", "all faculty", "all professors",
+        "every faculty", "each professor", "all csed faculty", "all cse faculty",
+        "across the department", "department publications",
+    )
+    return any(phrase in q for phrase in phrases)
+
+
+def is_csed_faculty_related_question(question, has_faculty_context=False):
+    """Reject clearly unrelated requests instead of sending them to faculty RAG."""
+    q = (question or "").lower()
+    domain_terms = (
+        "faculty", "professor", "prof.", "dr.", "doctor", "research area",
+        "research interest", "qualification", "education", "degree",
+        "course", "taught", "publication", "publications", "paper", "papers",
+        "journal", "conference", "doi", "citation", "thesis", "theses",
+        "phd", "ph.d", "doctoral", "student", "students", "guided",
+        "supervised", "supervision", "achievement", "award", "recognition",
+        "responsibilit", "membership", "project", "research id", "orcid",
+        "scholar", "h-index", "orcid", "researchgate", "email", "phone",
+        "contact", "designation", "position", "office", "teaching",
+        "academic profile", "academic background", "tell me about", "who is",
+        "information about", "overview of", "latest", "recent", "profile",
+        "these areas", "this area",
+        "that professor", "this professor", "what about", "summarize", "summary",
+    )
+    if any(term in q for term in domain_terms):
+        return True
+    pronoun_followup = re.search(
+        r"\b(this|that|it|they|them|his|her|their|he|she|those|these)\b", q
+    )
+    return bool(has_faculty_context and len(q.split()) <= 12 and pronoun_followup)
+
+
 def extract_year_range(question):
-    """Return an explicitly stated two-year range, or None."""
+    """Return an explicit year range or a single requested year as (year, year)."""
     years = re.findall(r"\b(?:19|20)\d{2}\b", question or "")
-    if len(years) < 2:
+    if not years:
         return None
-    start, end = int(years[0]), int(years[1])
+    parsed = [int(value) for value in years[:2]]
+    if any(year < 1900 or year > 2100 for year in parsed):
+        return None
+    if len(parsed) == 1:
+        return parsed[0], parsed[0]
+    start, end = parsed
     if start > end:
         start, end = end, start
-    if start < 1900 or end > 2100:
-        return None
     return start, end
 
 
@@ -66,7 +114,7 @@ def asks_publication_count(question):
         phrase in q
         for phrase in (
             "how many", "number of", "count of", "count the",
-            "total number", "total publications",
+            "total number", "total publications", "how much",
         )
     )
     return count_intent and any(
@@ -87,12 +135,686 @@ def asks_latest_publications(question):
 
 def asks_publication_list(question):
     q = (question or "").lower()
-    return any(
-        phrase in q
-        for phrase in ("list publications", "list the publications",
-                       "show publications", "show the publications",
-                       "mention publications", "mention the publications")
+    has_publication_term = any(term in q for term in (
+        "publication", "publications", "paper", "papers", "journal article",
+    ))
+    has_list_intent = any(term in q for term in (
+        "list", "show", "mention", "get", "give me", "extract", "provide",
+    ))
+    return has_publication_term and has_list_intent and not asks_publication_count(question)
+
+
+def _asks_count(question):
+    q = (question or "").lower()
+    return any(term in q for term in (
+        "how many", "number of", "count of", "count the", "total number",
+        "total count", "how much",
+    ))
+
+
+def asks_phd_scope(question):
+    q = (question or "").lower()
+    return bool(re.search(r"\bph\s*\.?\s*d\b|\bdoctoral\b", q))
+
+
+def requested_thesis_programme(question):
+    """Return a programme filter only when the question explicitly names one."""
+    q = (question or "").lower()
+    if re.search(r"\bm\s*\.?\s*tech\b|\bmtech\b|\bmaster(?:'s)?\s+(?:of\s+)?technology\b", q):
+        return "M.Tech"
+    if asks_phd_scope(q):
+        return "Ph.D."
+    return None
+
+
+def asks_thesis_classification(question):
+    q = (question or "").lower()
+    return any(term in q for term in (
+        "unclassified", "not classified", "classification summary",
+        "programme level missing", "program level missing",
+        "missing programme level", "missing program level",
+    )) and any(term in q for term in (
+        "thesis", "theses", "student", "record", "programme", "program",
+        "classification", "unclassified",
+    ))
+
+
+def asks_thesis_count(question):
+    q = (question or "").lower()
+    thesis_term = any(term in q for term in (
+        "thesis", "theses", "phd", "ph.d", "doctoral", "m.tech", "mtech", "m tech", "students guided",
+        "students supervised", "phd guided", "phd supervised",
+    ))
+    return _asks_count(q) and thesis_term
+
+
+def asks_thesis_list(question):
+    q = (question or "").lower()
+    thesis_term = any(term in q for term in (
+        "thesis", "theses", "phd", "ph.d", "doctoral", "m.tech", "mtech", "m tech", "students guided",
+        "students supervised",
+    ))
+    list_term = any(term in q for term in (
+        "name", "names", "who", "which student", "students", "list", "show",
+        "mention", "guided", "supervised", "research topic", "research topics",
+        "student list", "students list",
+    ))
+    return thesis_term and list_term and not _asks_count(q)
+
+
+def _thesis_scope_sql(faculty_id=None, faculty_ids=None, department_wide=False,
+                      phd_only=False, program_level=None):
+    conditions = ["f.is_active IS DISTINCT FROM FALSE"]
+    params = []
+    if not department_wide:
+        if faculty_ids:
+            conditions.append("ts.faculty_id = ANY(%s)")
+            params.append(list(faculty_ids))
+        elif faculty_id is not None:
+            conditions.append("ts.faculty_id = %s")
+            params.append(faculty_id)
+    # Explicit programme requests must use the repaired authoritative DB labels.
+    requested_program = program_level or ("Ph.D." if phd_only else None)
+    if requested_program == "Ph.D.":
+        conditions.append("LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.program_level, '')), '[ .-]+', '', 'g')) IN ('phd', 'doctorofphilosophy', 'doctoral')")
+    elif requested_program == "M.Tech":
+        conditions.append("LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.program_level, '')), '[ .-]+', '', 'g')) IN ('mtech', 'masteroftechnology')")
+    return conditions, params
+
+
+
+
+_PLACEHOLDER_VALUES = {
+    "not specified on source page",
+    "not specified in source",
+    "not specified",
+    "not classified from source heading",
+    "not classified",
+    "unknown",
+    "n/a",
+    "na",
+    "none",
+    "null",
+    "",
+}
+
+
+def _meaningful_field(value):
+    """Return a non-placeholder field value, or None when the field is absent/placeholder."""
+    if value is None:
+        return None
+    cleaned = str(value).strip()
+    if cleaned.lower() in _PLACEHOLDER_VALUES:
+        return None
+    return cleaned or None
+
+
+def _thesis_status_category(status, completion_year):
+    """Classify only when stored status or completion year provides evidence."""
+    normalized = (_meaningful_field(status) or "").casefold()
+    normalized = re.sub(r"[\s_-]+", " ", normalized).strip()
+    if completion_year is not None or normalized in {
+        "completed", "complete", "finished", "awarded", "defended", "graduated"
+    }:
+        return "completed"
+    if normalized in {
+        "ongoing", "in progress", "pursuing", "under supervision", "registered"
+    }:
+        return "ongoing"
+    return "unspecified"
+
+
+def _thesis_row_metadata(row):
+    """Format only supported thesis metadata; suppress source placeholder strings."""
+    meta = []
+    program_level = _meaningful_field(row.get("program_level"))
+    status_value = _meaningful_field(row.get("status"))
+    if program_level:
+        meta.append(f"Programme level: {program_level}")
+    if row.get("registration_year") is not None:
+        meta.append(f"Registration year: {row['registration_year']}")
+    if row.get("completion_year") is not None:
+        meta.append(f"Completion year: {row['completion_year']}")
+    category = _thesis_status_category(row.get("status"), row.get("completion_year"))
+    if row.get("completion_year") is not None:
+        if status_value and _thesis_status_category(status_value, None) != "completed":
+            meta.append(
+                f"Status: completion year recorded; stored status also says {status_value} (verify consistency)"
+            )
+        elif status_value:
+            meta.append(f"Status: {status_value} (completion year recorded)")
+        else:
+            meta.append("Status: completed (completion year recorded)")
+    elif category == "completed":
+        meta.append(f"Status: {status_value}")
+    elif category == "ongoing":
+        meta.append(f"Status: {status_value}")
+    else:
+        meta.append("Status: Not specified/confirmed in stored data")
+    return meta
+
+
+def thesis_counts(faculty_id=None, faculty_ids=None, year_range=None,
+                  department_wide=False, phd_only=False, program_level=None):
+    """Exact thesis/student counts from PostgreSQL; no semantic retrieval involved."""
+    conditions, scope_params = _thesis_scope_sql(
+        faculty_id, faculty_ids, department_wide, phd_only, program_level
     )
+    if year_range:
+        start, end = year_range
+        sql = f"""
+            SELECT
+                COUNT(DISTINCT ts.id) AS total_records,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) AS unique_students,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.registration_year BETWEEN %s AND %s
+                ) AS registered_records_in_period,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) FILTER (
+                    WHERE ts.registration_year BETWEEN %s AND %s
+                ) AS students_registered_in_period,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.completion_year BETWEEN %s AND %s
+                ) AS completed_records_in_period,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) FILTER (
+                    WHERE ts.completion_year BETWEEN %s AND %s
+                ) AS students_completed_in_period,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.registration_year IS NULL
+                ) AS records_without_registration_year,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.completion_year IS NULL
+                ) AS records_without_completion_year,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE (ts.registration_year BETWEEN %s AND %s)
+                       OR (ts.completion_year BETWEEN %s AND %s)
+                ) AS total_records_in_period,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) FILTER (
+                    WHERE (ts.registration_year BETWEEN %s AND %s)
+                       OR (ts.completion_year BETWEEN %s AND %s)
+                ) AS unique_students_in_period,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.registration_year IS NULL
+                      AND ts.completion_year IS NULL
+                ) AS records_without_both_years
+            FROM m2_thesis_supervision ts
+            JOIN m2_faculties f ON f.id = ts.faculty_id
+            WHERE {' AND '.join(conditions)}
+        """
+        # SELECT placeholders precede WHERE placeholders in SQL order.
+        params = [
+            start, end, start, end, start, end, start, end,
+            start, end, start, end,
+        ] + scope_params
+    else:
+        sql = f"""
+            SELECT
+                COUNT(DISTINCT ts.id) AS total_records,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) AS unique_students,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.completion_year IS NOT NULL
+                       OR LOWER(BTRIM(COALESCE(ts.status, ''))) IN
+                          ('completed', 'complete', 'finished', 'awarded', 'defended', 'graduated')
+                ) AS completed_records,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) FILTER (
+                    WHERE ts.completion_year IS NOT NULL
+                       OR LOWER(BTRIM(COALESCE(ts.status, ''))) IN
+                          ('completed', 'complete', 'finished', 'awarded', 'defended', 'graduated')
+                ) AS completed_students,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.completion_year IS NULL
+                      AND LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.status, '')), '[\\s_-]+', ' ', 'g'))
+                          IN ('ongoing', 'in progress', 'pursuing', 'under supervision', 'registered')
+                ) AS ongoing_records,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) FILTER (
+                    WHERE ts.completion_year IS NULL
+                      AND LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.status, '')), '[\\s_-]+', ' ', 'g'))
+                          IN ('ongoing', 'in progress', 'pursuing', 'under supervision', 'registered')
+                ) AS ongoing_students,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.completion_year IS NULL
+                      AND LOWER(BTRIM(COALESCE(ts.status, ''))) NOT IN
+                          ('completed', 'complete', 'finished', 'awarded', 'defended', 'graduated')
+                      AND LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.status, '')), '[\\s_-]+', ' ', 'g'))
+                          NOT IN ('ongoing', 'in progress', 'pursuing', 'under supervision', 'registered')
+                ) AS status_unspecified_records,
+                COUNT(DISTINCT NULLIF(BTRIM(ts.student_name), '')) FILTER (
+                    WHERE ts.completion_year IS NULL
+                      AND LOWER(BTRIM(COALESCE(ts.status, ''))) NOT IN
+                          ('completed', 'complete', 'finished', 'awarded', 'defended', 'graduated')
+                      AND LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.status, '')), '[\\s_-]+', ' ', 'g'))
+                          NOT IN ('ongoing', 'in progress', 'pursuing', 'under supervision', 'registered')
+                ) AS status_unspecified_students,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.registration_year IS NULL
+                ) AS records_without_registration_year,
+                COUNT(DISTINCT ts.id) FILTER (
+                    WHERE ts.completion_year IS NULL
+                ) AS records_without_completion_year
+            FROM m2_thesis_supervision ts
+            JOIN m2_faculties f ON f.id = ts.faculty_id
+            WHERE {' AND '.join(conditions)}
+        """
+        params = scope_params
+
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            row = cur.fetchone()
+
+    if year_range:
+        return {
+            "total_records_in_scope": row[0],
+            "unique_students_in_scope": row[1],
+            "registered_records_in_period": row[2],
+            "students_registered_in_period": row[3],
+            "completed_records_in_period": row[4],
+            "students_completed_in_period": row[5],
+            "records_without_registration_year": row[6],
+            "records_without_completion_year": row[7],
+            "total_records_in_period": row[8],
+            "unique_students_in_period": row[9],
+            "records_without_both_years": row[10],
+        }
+    return {
+        "total_records": row[0],
+        "unique_students": row[1],
+        "completed_records": row[2],
+        "completed_students": row[3],
+        "ongoing_records": row[4],
+        "ongoing_students": row[5],
+        "status_unspecified_records": row[6],
+        "status_unspecified_students": row[7],
+        "records_without_registration_year": row[8],
+        "records_without_completion_year": row[9],
+    }
+
+
+def fetch_thesis_rows(faculty_id=None, faculty_ids=None, year_range=None,
+                      department_wide=False, phd_only=False, question="",
+                      program_level=None):
+    conditions, params = _thesis_scope_sql(
+        faculty_id, faculty_ids, department_wide, phd_only, program_level
+    )
+    q = (question or "").lower()
+    if any(term in q for term in ("completed", "graduated", "finished")):
+        conditions.append("""(
+            ts.completion_year IS NOT NULL
+            OR LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.status, '')), '[\\s_-]+', ' ', 'g'))
+               IN ('completed', 'complete', 'finished', 'awarded', 'defended', 'graduated')
+        )""")
+    elif any(term in q for term in ("ongoing", "currently supervising", "currently guiding", "in progress")):
+        conditions.append("""(
+            ts.completion_year IS NULL
+            AND LOWER(REGEXP_REPLACE(BTRIM(COALESCE(ts.status, '')), '[\\s_-]+', ' ', 'g'))
+                IN ('ongoing', 'in progress', 'pursuing', 'under supervision', 'registered')
+        )""")
+    if year_range:
+        year_column = "ts.completion_year" if any(term in (question or "").lower()
+            for term in ("completed", "completion", "graduated")) else "ts.registration_year"
+        conditions.append(f"{year_column} BETWEEN %s AND %s")
+        params.extend(year_range)
+
+    sql = f"""
+        SELECT f.full_name, ts.program_level, ts.student_name,
+               ts.research_topic, ts.registration_year, ts.completion_year,
+               ts.status, ts.details, ts.source_url
+        FROM m2_thesis_supervision ts
+        JOIN m2_faculties f ON f.id = ts.faculty_id
+        WHERE {' AND '.join(conditions)}
+        ORDER BY ts.completion_year DESC NULLS LAST,
+                 ts.registration_year DESC NULLS LAST,
+                 ts.student_name NULLS LAST, ts.id
+    """
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            columns = [item.name for item in cur.description]
+            return [dict(zip(columns, row)) for row in cur.fetchall()]
+
+
+def _export_format(question):
+    q = (question or "").lower()
+    if re.search(r"\b(xlsx|excel|spreadsheet)\b", q):
+        return "xlsx"
+    if re.search(r"\b(json)\b", q):
+        return "json"
+    if re.search(r"\b(tsv|tab[- ]separated)\b", q):
+        return "tsv"
+    if re.search(r"\b(csv)\b", q):
+        return "csv"
+    if re.search(r"\b(markdown|md file)\b", q):
+        return "md"
+    return None
+
+
+def _is_export_request(question):
+    q = (question or "").lower()
+    fmt = _export_format(q)
+    data_intent = any(term in q for term in (
+        "publication", "publications", "journal", "paper", "papers",
+        "thesis", "theses", "phd", "ph.d", "doctoral", "m.tech", "mtech", "student names",
+    ))
+    # A requested output format is itself sufficient to request a file export
+    # when the question clearly identifies a faculty-data domain.
+    return bool(fmt and data_intent)
+
+
+def _write_export(rows, file_stem, fmt):
+    if not rows:
+        print("No matching database records found; no export file was created.")
+        return None
+    export_dir = Path(__file__).resolve().parents[1] / "exports"
+    export_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+    path = export_dir / f"{file_stem}_{timestamp}.{fmt}"
+    columns = list(rows[0].keys())
+
+    if fmt in {"csv", "tsv"}:
+        with path.open("w", encoding="utf-8-sig", newline="") as handle:
+            writer = csv.DictWriter(
+                handle, fieldnames=columns,
+                delimiter="\t" if fmt == "tsv" else ",",
+                extrasaction="ignore",
+            )
+            writer.writeheader()
+            for row in rows:
+                writer.writerow({key: _serializable(value) for key, value in row.items()})
+    elif fmt == "json":
+        with path.open("w", encoding="utf-8") as handle:
+            json.dump(rows, handle, ensure_ascii=False, indent=2, default=str)
+    elif fmt == "md":
+        with path.open("w", encoding="utf-8") as handle:
+            handle.write("| " + " | ".join(columns) + " |\n")
+            handle.write("| " + " | ".join("---" for _ in columns) + " |\n")
+            for row in rows:
+                values = [str(_serializable(row.get(key, "")) or "").replace("|", "\\|").replace("\n", " ") for key in columns]
+                handle.write("| " + " | ".join(values) + " |\n")
+    elif fmt == "xlsx":
+        try:
+            from openpyxl import Workbook
+        except ImportError:
+            print("Excel export requires the already-installed openpyxl package. No file was created; request CSV instead if openpyxl is unavailable.")
+            return None
+        workbook = Workbook()
+        sheet = workbook.active
+        sheet.title = "Faculty Data"
+        sheet.append(columns)
+        for row in rows:
+            sheet.append([_serializable(row.get(key)) for key in columns])
+        sheet.freeze_panes = "A2"
+        sheet.auto_filter.ref = sheet.dimensions
+        workbook.save(path)
+    print(f"Exported {len(rows)} records to: {path}")
+    return path
+
+
+def _serializable(value):
+    if value is None:
+        return ""
+    if isinstance(value, (date, datetime)):
+        return value.isoformat()
+    return value
+
+
+def fetch_publication_export_rows(faculty_id=None, faculty_ids=None,
+                                  year_range=None, department_wide=False,
+                                  journal_only=False):
+    year_expr = _year_sql("p.publication_year")
+    conditions = ["f.is_active IS DISTINCT FROM FALSE"]
+    params = []
+    if not department_wide:
+        if faculty_ids:
+            conditions.append("fp.faculty_id = ANY(%s)")
+            params.append(list(faculty_ids))
+        elif faculty_id is not None:
+            conditions.append("fp.faculty_id = %s")
+            params.append(faculty_id)
+    if year_range:
+        conditions.append(f"{year_expr} BETWEEN %s AND %s")
+        params.extend(year_range)
+    if journal_only:
+        conditions.append("LOWER(COALESCE(p.publication_type, '')) LIKE '%%journal%%'")
+    sql = f"""
+        SELECT DISTINCT f.full_name AS faculty_name, p.id AS publication_id,
+               p.title, p.publication_type, p.journal_or_conference AS venue,
+               p.publisher, {year_expr} AS publication_year, p.publication_date,
+               p.volume, p.issue, p.pages, p.doi, p.authors,
+               p.source_url, p.source_document
+        FROM m2_publications p
+        JOIN m2_faculty_publications fp ON fp.publication_id = p.id
+        JOIN m2_faculties f ON f.id = fp.faculty_id
+        WHERE {' AND '.join(conditions)}
+        ORDER BY publication_year DESC NULLS LAST,
+                 p.publication_date DESC NULLS LAST, f.full_name, p.id
+    """
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            columns = [item.name for item in cur.description]
+            return [dict(zip(columns, row)) for row in cur.fetchall()]
+
+
+def run_export_query(question, faculty_id=None, faculty_ids=None,
+                     faculty_name=None, department_wide=False):
+    q = (question or "").lower()
+    has_export_verb = any(term in q for term in ("export", "download", "save as", "save the"))
+    has_data_target = any(term in q for term in (
+        "publication", "publications", "journal", "paper", "papers",
+        "thesis", "theses", "phd", "ph.d", "doctoral", "student names",
+    ))
+    if has_export_verb and has_data_target and not _export_format(question):
+        print("Please specify an export format: CSV, JSON, TSV, Excel (XLSX), or Markdown.")
+        return True
+    if not _is_export_request(question):
+        return False
+    fmt = _export_format(question)
+    year_range = extract_year_range(question)
+    q = question.lower()
+    phd_only = asks_phd_scope(question)
+    if any(term in q for term in ("thesis", "theses", "phd", "ph.d", "doctoral", "m.tech", "mtech", "student name", "student names")):
+        rows = fetch_thesis_rows(
+            faculty_id=faculty_id, faculty_ids=faculty_ids,
+            year_range=year_range, department_wide=department_wide,
+            phd_only=phd_only, question=question,
+            program_level=requested_thesis_programme(question),
+        )
+        stem = "faculty_thesis_supervision"
+    elif any(term in q for term in ("publication", "publications", "journal", "paper", "papers")):
+        rows = fetch_publication_export_rows(
+            faculty_id=faculty_id, faculty_ids=faculty_ids,
+            year_range=year_range, department_wide=department_wide,
+            journal_only=("journal" in q),
+        )
+        stem = "faculty_journal_publications" if "journal" in q else "faculty_publications"
+    else:
+        print("Export format was recognized, but the requested data type was unclear. Specify publications or thesis supervision.")
+        return True
+    if not rows:
+        print("No matching records found for the requested export filters.")
+        return True
+    _write_export(rows, stem, fmt)
+    if year_range:
+        print(f"Applied year filter: {year_range[0]}–{year_range[1]}.")
+    if faculty_name and not department_wide:
+        print(f"Faculty filter: {faculty_name}.")
+    if "journal" in q:
+        print("Publication-type filter: journal records only.")
+    return True
+
+
+def thesis_classification_summary(faculty_id=None, faculty_ids=None,
+                                  department_wide=False):
+    """Count thesis rows whose programme level is missing/unclassified.
+
+    Read-only diagnostic: it does not update or otherwise modify PostgreSQL.
+    """
+    conditions, params = _thesis_scope_sql(
+        faculty_id=faculty_id,
+        faculty_ids=faculty_ids,
+        department_wide=department_wide,
+        phd_only=False,
+    )
+    unknown = """(
+        ts.program_level IS NULL
+        OR BTRIM(ts.program_level) = ''
+        OR LOWER(BTRIM(ts.program_level)) IN (
+            'not specified on source page',
+            'not classified from source heading', 'unknown', 'n/a', 'na'
+        )
+        OR LOWER(BTRIM(ts.program_level)) LIKE '%%not classified%%'
+        OR LOWER(BTRIM(ts.program_level)) LIKE '%%not specified%%'
+    )"""
+    sql = f"""
+        SELECT COUNT(*) AS total,
+               COUNT(*) FILTER (WHERE {unknown}) AS unclassified
+        FROM m2_thesis_supervision ts
+        JOIN m2_faculties f ON f.id = ts.faculty_id
+        WHERE {' AND '.join(conditions)}
+    """
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            total, unclassified = cur.fetchone()
+    return int(total or 0), int(unclassified or 0)
+
+
+def print_phd_classification_warning(faculty_id=None, faculty_ids=None,
+                                    faculty_name=None, department_wide=False):
+    """Warn when a Ph.D.-only answer may be incomplete due to missing labels."""
+    total, unclassified = thesis_classification_summary(
+        faculty_id=faculty_id,
+        faculty_ids=faculty_ids,
+        department_wide=department_wide,
+    )
+    if unclassified:
+        scope = faculty_name or ("active CSED faculty" if department_wide else "the selected faculty")
+        print(
+            f"\nRETRIEVAL LIMITATION: {unclassified} of {total} thesis-supervision "
+            f"records for {scope} have no reliable program-level classification. "
+            "Any Ph.D.-only result below includes only records already labelled "
+            "Ph.D./doctoral and may be incomplete. No database records were changed."
+        )
+
+
+def run_thesis_analytics(question, faculty_id=None, faculty_ids=None,
+                         faculty_name=None, department_wide=False):
+    if _is_export_request(question):
+        return False  # Export handler will produce the complete record set.
+    is_count = asks_thesis_count(question)
+    is_list = asks_thesis_list(question)
+    if not (is_count or is_list):
+        return False
+
+    year_range = extract_year_range(question)
+    phd_only = asks_phd_scope(question)
+    program_level = requested_thesis_programme(question)
+    label = f"{program_level} thesis-supervision records" if program_level else "thesis-supervision records"
+    if department_wide:
+        scope = "active CSED faculty"
+    elif faculty_name:
+        scope = faculty_name
+    else:
+        scope = "the current CSED faculty dataset"
+
+    if is_count:
+        counts = thesis_counts(
+            faculty_id=faculty_id, faculty_ids=faculty_ids,
+            year_range=year_range, department_wide=department_wide,
+            phd_only=phd_only, program_level=program_level,
+        )
+        print(f"\nDatabase counts for {label} associated with {scope}:")
+        if year_range:
+            print(f"- Registration-year range: {year_range[0]}–{year_range[1]}")
+            total_scope_records = counts["total_records_in_scope"]
+            registration_years_missing = counts["records_without_registration_year"]
+            completion_years_missing = counts["records_without_completion_year"]
+            if total_scope_records and registration_years_missing == total_scope_records:
+                print(
+                    "- Theses registered in period: NOT DETERMINABLE "
+                    "(all records in scope have a missing registration_year; "
+                    f"the raw SQL match count is {counts['registered_records_in_period']})"
+                )
+                print(
+                    "- Distinct students registered in period: NOT DETERMINABLE "
+                    "(registration years are missing for all records in scope)"
+                )
+            else:
+                print(f"- Records registered in period: {counts['registered_records_in_period']}")
+                print(f"- Distinct named students registered in period: {counts['students_registered_in_period']}")
+            if total_scope_records and completion_years_missing == total_scope_records:
+                print(
+                    "- Theses completed in period: NOT DETERMINABLE "
+                    "(all records in scope have a missing completion_year; "
+                    f"the raw SQL match count is {counts['completed_records_in_period']})"
+                )
+                print(
+                    "- Distinct students completed in period: NOT DETERMINABLE "
+                    "(completion years are missing for all records in scope)"
+                )
+            else:
+                print(f"- Records completed in period: {counts['completed_records_in_period']}")
+                print(f"- Distinct named students completed in period: {counts['students_completed_in_period']}")
+            print(
+                f"- Total supervision records with a listed registration OR completion year in period: "
+                f"{counts['total_records_in_period']}"
+            )
+            print(
+                f"- Distinct named students with a listed registration OR completion year in period: "
+                f"{counts['unique_students_in_period']}"
+            )
+            print(f"- Records with no registration year: {registration_years_missing}")
+            print(f"- Records with no completion year: {completion_years_missing}")
+            print(f"- Records missing BOTH registration and completion years: {counts['records_without_both_years']}")
+            print("Registration counts use registration_year; completion counts use completion_year.")
+            if counts["records_without_both_years"]:
+                print(
+                    "Data-quality note: records missing both year fields cannot be assigned to any year range. "
+                    "The period totals may therefore exclude those records; verify them against the official profile."
+                )
+        else:
+            if program_level:
+                print(f"- {program_level} thesis-supervision records: {counts['total_records']}")
+                print(f"- Distinct named students in those records: {counts['unique_students']}")
+            else:
+                print(f"- Thesis-supervision records: {counts['total_records']}")
+                print(f"- Distinct named students: {counts['unique_students']}")
+            if program_level and any(term in question.lower() for term in ("completed", "graduated", "finished")):
+                print(f"- Requested result: {counts['completed_records']} completed {program_level} records / {counts['completed_students']} distinct named students.")
+            elif program_level and any(term in question.lower() for term in ("ongoing", "currently supervising", "currently guiding", "in progress")):
+                print(f"- Requested result: {counts['ongoing_records']} ongoing {program_level} records / {counts['ongoing_students']} distinct named students.")
+            print(f"- Completed theses (completion year or explicit completed status): {counts['completed_records']} records / {counts['completed_students']} distinct named students")
+            print(f"- Ongoing theses (explicit ongoing status, no completion year): {counts['ongoing_records']} records / {counts['ongoing_students']} distinct named students")
+            print(f"- Status not specified/confirmed: {counts['status_unspecified_records']} records / {counts['status_unspecified_students']} distinct named students")
+            print(f"- Records with no registration year: {counts['records_without_registration_year']}")
+            print(f"- Records with no completion year: {counts['records_without_completion_year']}")
+            print("  Status rule: a completion year counts as completed; ongoing requires an explicit ongoing-like status and no completion year. Missing/unclear status is not inferred.")
+        return True
+
+    rows = fetch_thesis_rows(
+        faculty_id=faculty_id, faculty_ids=faculty_ids,
+        year_range=year_range, department_wide=department_wide,
+        phd_only=phd_only, question=question, program_level=program_level,
+    )
+    if not rows:
+        print("No thesis-supervision records matched the requested faculty and year filters.")
+        return True
+    if year_range:
+        basis = "completion_year" if any(term in question.lower() for term in ("completed", "completion", "graduated")) else "registration_year"
+        print(f"\nThesis records filtered by {basis} {year_range[0]}–{year_range[1]} ({len(rows)} records):")
+    else:
+        if program_level:
+            print(f"\\n{program_level} thesis-supervision records for {scope} ({len(rows)} records):")
+        else:
+            print(f"\\nThesis-supervision records for {scope} ({len(rows)} records):")
+    for index, row in enumerate(rows, 1):
+        student = row.get("student_name") or "Student name not recorded"
+        topic = row.get("research_topic") or "Research topic not recorded"
+        print(f"{index}. {student} — {topic}")
+        meta = _thesis_row_metadata(row)
+        print("   " + " | ".join(meta))
+        if row.get("source_url"):
+            print(f"   Source: {row['source_url']}")
+    return True
 
 
 def _year_sql(expression="p.publication_year"):
@@ -118,7 +840,7 @@ def _year_sql(expression="p.publication_year"):
     )
 
 
-def publication_count(faculty_id=None, faculty_ids=None, year_range=None):
+def publication_count(faculty_id=None, faculty_ids=None, year_range=None, journal_only=False):
     """
     Count distinct publication records and faculty-publication links.
 
@@ -134,6 +856,8 @@ def publication_count(faculty_id=None, faculty_ids=None, year_range=None):
     if year_range:
         where.append(f"{year_expr} BETWEEN %s AND %s")
         params.extend(year_range)
+    if journal_only:
+        where.append("LOWER(COALESCE(p.publication_type, '')) LIKE '%%journal%%'")
 
     if faculty_ids:
         where.append("fp.faculty_id = ANY(%s)")
@@ -167,7 +891,7 @@ def publication_count(faculty_id=None, faculty_ids=None, year_range=None):
 
 
 def fetch_publication_list(faculty_id=None, faculty_ids=None, year_range=None,
-                           limit=5, recent_year_window=False):
+                           limit=5, recent_year_window=False, journal_only=False):
     """
     Fetch publication records directly from PostgreSQL.
 
@@ -189,6 +913,8 @@ def fetch_publication_list(faculty_id=None, faculty_ids=None, year_range=None,
     if year_range:
         conditions.append(f"{year_expr} BETWEEN %s AND %s")
         params.extend(year_range)
+    if journal_only:
+        conditions.append("LOWER(COALESCE(p.publication_type, '')) LIKE '%%journal%%'")
 
     recent_cte = ""
     recent_join = ""
@@ -204,6 +930,7 @@ def fetch_publication_list(faculty_id=None, faculty_ids=None, year_range=None,
                 WHERE f.is_active IS DISTINCT FROM FALSE
                   AND {year_expr} IS NOT NULL
                   {"AND fp.faculty_id = ANY(%s)" if scope_ids else ""}
+                  {"AND LOWER(COALESCE(p.publication_type, '')) LIKE '%%journal%%'" if journal_only else ""}
                 ORDER BY pub_year DESC
                 LIMIT 5
             )
@@ -314,10 +1041,12 @@ def run_analytics(question, faculty_id=None, faculty_ids=None,
         return False
 
     if is_count:
+        journal_only = "journal" in q
         counts = publication_count(
             faculty_id=None if department_wide else faculty_id,
             faculty_ids=None if department_wide else faculty_ids,
             year_range=year_range,
+            journal_only=journal_only,
         )
         scope = (
             "active CSED faculty profiles"
@@ -327,13 +1056,14 @@ def run_analytics(question, faculty_id=None, faculty_ids=None,
             else "CSED faculty profiles"
         )
         period = (
-            f" from {year_range[0]} to {year_range[1]}"
-            if year_range else ""
+            f" in {year_range[0]}" if year_range and year_range[0] == year_range[1]
+            else f" from {year_range[0]} to {year_range[1]}" if year_range else ""
         )
         if department_wide:
             range_label = (
-                f"the period {year_range[0]}–{year_range[1]}"
-                if year_range else "the available database period"
+                f"the year {year_range[0]}" if year_range and year_range[0] == year_range[1]
+                else f"the period {year_range[0]}–{year_range[1]}" if year_range
+                else "the available database period"
             )
             print(
                 f"\nFor {range_label}, the database does not independently "
@@ -344,6 +1074,8 @@ def run_analytics(question, faculty_id=None, faculty_ids=None,
             f"Publication count associated with {scope}{period}: "
             f"{counts['unique_publications']} unique publication records."
         )
+        if journal_only:
+            print("Publication-type filter: journal records only.")
         print(
             "- Faculty-publication associations: "
             f"{counts['faculty_publication_associations']}"
@@ -383,6 +1115,7 @@ def run_analytics(question, faculty_id=None, faculty_ids=None,
         year_range=year_range,
         limit=limit,
         recent_year_window=use_recent_window,
+        journal_only=("journal" in q),
     )
 
     if department_wide:
@@ -563,12 +1296,39 @@ def interactive_session():
         resolved_ids, explicit_name, status = resolve_faculty(
             question, _get_records()
         )
+        # A specific faculty match takes precedence over incidental mentions of
+        # CSED or "faculty publications". Only an explicit all-faculty request
+        # should override the resolved person scope.
+        if status == "matched":
+            department_wide = is_explicitly_department_wide_question(question)
 
         if status == "ambiguous":
             print("That faculty name is ambiguous. Please use the full name.")
             continue
         if status == "unresolved":
-            print("I could not match that name to the Module II faculty records.")
+            print(
+                "I could not match that name to the Module II MNNIT CSED faculty records. "
+                "I can answer using the CSED faculty dataset only; please check the faculty "
+                "name or ask about a faculty member listed in the department records."
+            )
+            continue
+
+        # Keep this assistant focused on the CSED faculty dataset. A named faculty
+        # query, a recognized CSED-wide query, or a contextual faculty follow-up is allowed.
+        has_existing_context = bool(active_faculty_name)
+        if (
+            status != "matched"
+            and not is_csed_faculty_related_question(
+                question, has_faculty_context=has_existing_context
+            )
+        ):
+            print(
+                "I can help with MNNIT CSED faculty records, including faculty "
+                "profiles, education, research areas, courses, publications, "
+                "achievements, thesis/Ph.D. supervision, and database-backed "
+                "counts or exports. This query does not appear to be related "
+                "to CSED faculty data. Please ask a question within that scope."
+            )
             continue
 
         if status == "matched":
@@ -607,12 +1367,73 @@ def interactive_session():
 
         history.append((question, active_faculty_name))
 
+        if run_export_query(
+            effective_question,
+            faculty_id=active_faculty_id,
+            faculty_ids=active_faculty_ids,
+            faculty_name=active_faculty_name,
+            department_wide=department_wide,
+        ):
+            continue
+
         if run_combined_recent_query(
             effective_question,
             faculty_name=active_faculty_name,
             faculty_ids=active_faculty_ids,
             faculty_id=active_faculty_id,
         ):
+            continue
+
+        # Unclassified-programme questions are global by default; do not let
+        # a previous faculty context silently narrow this diagnostic.
+        if asks_thesis_classification(effective_question):
+            explicit_scope = status == "matched" or is_explicitly_department_wide_question(effective_question)
+            if not explicit_scope:
+                total, unclassified = thesis_classification_summary(
+                    faculty_id=None, faculty_ids=None, department_wide=True
+                )
+                print("\\nDatabase-wide thesis programme classification:")
+                print(f"- Total thesis-supervision records: {total}")
+                print(f"- Unclassified programme-level records: {unclassified}")
+            else:
+                total, unclassified = thesis_classification_summary(
+                    faculty_id=active_faculty_id, faculty_ids=active_faculty_ids,
+                    department_wide=department_wide,
+                )
+                print("\\nThesis programme classification:")
+                print(f"- Total records in scope: {total}")
+                print(f"- Unclassified programme-level records: {unclassified}")
+            continue
+
+        # Thesis analytics computes exact values in SQL/Python. Capture that
+        # output as evidence, then let Gemini format only what the original
+        # question asks for. The underlying calculations and filters are unchanged.
+        analytics_output = io.StringIO()
+        with redirect_stdout(analytics_output):
+            handled_thesis_analytics = run_thesis_analytics(
+                effective_question,
+                faculty_id=active_faculty_id,
+                faculty_ids=active_faculty_ids,
+                faculty_name=active_faculty_name,
+                department_wide=department_wide,
+            )
+        if handled_thesis_analytics:
+            database_result = analytics_output.getvalue().strip()
+            formatted_answer = generate_faculty_answer(
+                question,  # Preserve the exact text the user entered for Gemini.
+                [{
+                    "evidence_type": "authoritative_database_thesis_analytics",
+                    "faculty_context": active_faculty_name,
+                    "database_result": database_result,
+                }],
+                faculty_name=active_faculty_name,
+            )
+            # Preserve the exact database result if Gemini is unavailable.
+            if "Gemini could not generate the response because the API request failed:" in formatted_answer:
+                print("\\n" + database_result)
+                print("\\n" + formatted_answer)
+            else:
+                print("\\n" + formatted_answer)
             continue
 
         if run_analytics(

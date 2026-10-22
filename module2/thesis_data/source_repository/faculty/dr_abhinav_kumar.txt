@@ -1,0 +1,9 @@
+Dr. Abhinav Kumar
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	AI-Driven Social Network-based Decision Support Framework for Post-Disaster Emergency Response	Vijay Kumar	Ongoing
+2	Advancing Sarcasm Detection in Social Media through Deep Learning and Explainable AI	Ranjeet Kumar	Ongoing
+3	A Quantum Classical Approach to Solve NP-complete Problems with Error Mitigation	Prem Shanker Dwivedi	Ongoing

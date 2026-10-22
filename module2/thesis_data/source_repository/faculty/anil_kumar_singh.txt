@@ -1,0 +1,55 @@
+ANIL KUMAR SINGH
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Content Based Approaches for Detection of Review Spam and Spammer	Rupesh Kumar Dewang	2017
+2	Concept Drift Detection and Adaptation in Data Stream	Supriya Agrahari	2024
+3	Mitigating Stragglers in heterogeneous Hadoop environment	Kamlakant L. Bawankule	2022
+4	Big Data Analysis using Graph Database For Fraud Detection & Reduction	Sakshi Srivastava	2024
+5	Live Migration of Multiple Virtual Machine	Garima Singh	2023
+6	Event Detection from Twitter Streaming Data	Jagrati Singh	2022
+7	Map Reduce Computation Model for Iterative and Dynamic Programming Problems	Praveen Kumar	2013
+8	Energy Performance Trade-oï¬€s through Proactive and Reactive Hotspot Detection Technique, Optimized VM Placement and Restricted VM Consolidation in Cloud Data Center	Shubhadra Bose Shaw	2018
+9	Design and Deployment Issues for Recommender Systems	Rohit Gupta	2021
+Ph.D. Ongoing
+1	Abstractive Text Summarization	Smriti Singh	2023
+2	Causality Analysis of Event Sequence Data	Navneet Kishan	2024
+3	Handling Class Imbalanced Data in Machine Learning	Shivani Goswami	2021
+M.Tech Students
+1	Two Pass Encoder With SSIM Inspired Qp Adaption in h254	Shanu Sirothiya	2019
+2	Network Traffic Classification Techniques and Comparative Analysis Using Machine Learning Algorithms	Ashish Umrey	2019
+3	Analysis of Article Citation Graph Using Neo4j	Jatin Patware	2018
+4	Security Issues in Live Migration of Virtual Machine	Pushpendra Kumar	2018
+5	Large Scale Graph Clustering	Vishal Gupta	2017
+6	Community Detection in Large Scale Graphs	Mayank Singh Rana	2017
+7	Bit Torrent Host Identiï¬cation in Private Network	Priya Mayank	2017
+8	Pattern Analysis in Big Data	Deepa Rani	2016
+9	Twitter Stream Analysis	Avneeshwar Singh	2016
+10	Graph Data Processing using Pregel	Raj Kumar Sesma	2015
+11	Topic Modelling and Sentiment Analysis on Twitter Stream Data	Sourabh Digavadekar	2015
+12	Analysis of Emergency Evacuation of Building Using Pepa	Surinder Kaur	2014
+13	3D Image Interaction using Leap Motion Controller	Sushma Vishwakarma	2014
+14	A Semantic Approach for Ranking Web Search Results	Awantika Karwasara	2014
+15	Profit Maximization in Cloud Computing Through Energy Efficient Allocation of Virtual Machine	MD. Bicky	2014
+16	A Hybrid Approach for Advertisement Recommendation System	Amit singh	2013
+17	Density-Based Clustering Technique for Mining spatial Databases	Joyeeta Neogi	2013
+18	Computing Online Reputation for Web Learning Resources based on Implicit and Explicit User Feedback	Anil Kumar	2013
+19	A Recommender System using Collaborative Filtering Approach	Anurag Maurya	2013
+20	An Improved Ant Colony Algorithm for text Document Clustering	Muneeb Hasan Khan	2013
+21	An Ontology based Semantic Search	Dheeraj Chawla	2013
+22	Learning Resources Recommendation for E-Learning Environment Using the Information in Discussion Forums	Poonam Singh	2012
+23	Time Petri Net Based Modeling of Diamond Crossing	Gyan Prakash Shukla	2019
+24	Validation of GNSS Based Software and Enhancement of Test Result Analysis Framework	Brijesh Kumar Chaurasiya	2019
+25	Content Analysis of Different Types of Documents using MapReduce	Abhishek Kumar	2015
+26	Parallel Computing on Graph Structured Data Neo4j	Pranay Jaypal Chavhan	2022
+27	A Study of Augmented Reality Applications and Implementation	Kamal Singh	2023
+28	Application Deployment using Microservices and Containers in Cloud Computing	Shivam	2022
+29	E-Health data Privacy Concerns	Kamal Arora	2022
+30	A Study on SSD, Validation and Bad Block Management	Rahul Prakash Chintawar	2023
+31	Overlapping Community Detection	Niteesh Pandey	2023
+32	Handling Concept Drift with Limited Labeled Data Using Adaptive and Active Learning Techniques	Paritosh Shukla	2024
+33	Subgraph Matching for Graph Retrieval	Yash Kumar Tyagi	2024
+34	Dense Retrieval Augmented Query Focused Abstractive Summarization of Meeting Transcript	Navneet Kumar	2025
+35	Real Time Intrusion Detection System for Cyber Physical System using ESP32	Sawan Kumar Arun	2025

@@ -1,0 +1,88 @@
+Dr. Rajitha B
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Novel approaches for Image Classification and Retrieval System (Co-Supervisor: Prof. Suneeta Agarwal)	Divya Srivastava	2020
+2	Fire and Smoke Images Classification using Deep Learning Models	Pooja Verma	2019-2024
+3	Respiratory Disease Detection based on Quantum Machine Learning Models using Medical Digital Chest X-ray Images	G V Eswara Rao	2025
+Ph.D. Ongoing
+1	A non-Invasive AI-Approaches for skin disease classification and lesion detection	Mr. Vinod Kumar Yadav	2021
+2	Medical Data Classification and Segmentation (Co-Supervisor: Dr. Shashwati Banerjea)	Ms. Shivangi Trupathi	2023
+3	Medical Image analysis	Mr. Rishab Jain	2025
+M.Tech Students
+1	Automated Gender Estimation from Human Rib Cage Image	Supriya Dubey	2014
+2	Human Knee Radiograph Segmentation for Disease Identification	Mahima Shankar	2014
+3	Content Based Image Retrieval using Modified KNN Algorithm	Ravi Prakash	2014
+4	Edge Preserved De-Noising Method For Medical X-Ray Images Using Wavelet Packet Transformation	Monica Srivastava	2016
+5	A New Local Homogeneity Analysis Method based on Pixel Intensities for Image Defect Detection	Anjana Tiwari	2016
+6	Automatic Bone Segmentation from EROI Image using Clustering Method	Guguloth Narendhar	2016
+7	De-noising of MRI Images by Edge Preserving	Ved Prakash	2017
+8	Image Segmentation using Level Set Method	Shashikanth	2017
+9	A Modified Approach for Image Steganography	Pankaj Kumar	2018
+10	Content Based Video Retrieval	Lokendra Singh	2018
+11	An efficient Content Based Video Retrieval	Abhinav Agnihotri	2019
+12	An efficient Image steganography Technique	Ariba Tariq	2019
+13	An Efficient Visual Cryptographic Technique for Securing Medical Images	Richa Maurya	2020
+14	Secured Image Storage and Transmission Technique suitable for IoT using Tangle and a Novel Image Encryption Technique	Nishkarsh Makhija	2021
+15	A Deep Learning Framework for Automatic Traffic Accident Detection from CCTV Footages	Tangudu Srihitha	2021
+16	Palmistry from the Perceptive of Computer Vision	Vipul Kumar Varshney	2021
+17	Firearm Identification by Toolmark Analysis from discharged cartridges using Deep Learning	Dimple Motwani	2022
+18	Accident Detection through CCTV Servialliance	Raja Babu	2022
+19	Integrated CNN and Bi-directional LSTMDL for Detecting Text-Based Fake News	Pooja Rilkotia	2022
+20	DetectingCOVID-19fromChestX-raysImagesusing Modified Inception Deep Learning Model	Kinjal Jain	2022
+21	AFNet: Automated Firearm Classification from Discharged Cartridge Marking Images Using Deep Networks	Gagan Kumar Singh	2023
+22	SFD-Net:Smoke and Fire Detection Using Deep Convolutional Neural Network	Vaibhav Mahajan	2023
+23	An Ensembled model to detect Covid-19 and Pneumonia using chest X-ray images	Master Prince	2023
+24	Generative Adversarial Networks For Denoising the Digital Images	Darshanbhai Maheshbhai Rathod	2024
+25	Hybrid Deep Learning Approach for skin cancer image classification	Ananya Chaturvedi	2024
+26	A Novel Convolution and vision transformer based fusion approach for leaf classification	Pooja	2024
+27	Sports Video Classification using Vision Transformer and Convolutional Neural Networks (Co-Supervisor: Dr. Sarsij Thripati)	Prince Kumar	2024
+28	Wireless Capsule Endoscopy Images Classification Using MobileNet and Colour Histogram (Co-Supervisor: Dr. Shashwati Banerjea)	Ravi Giri	2024
+29	Detecting Intersections in Satellite Images Using Deep learning (from GIS Cell)	Chidambar Reddy B	2024
+30	Medical Image Classification via Multi-Model Fusion Approach	Supriya Kumari	2025
+31	Synthetic Image Generation using Generative Adversarial Network	Anshika Srivastava	2025
+32	Scene-Adaptive Point Cloud Filtering using Confidence Score Analysis for Multi-View 3D Reconstruction	Shivam Malviya	2026
+33	3D Reconstruction of Chest from MedNeRF with Uncertainty Estimation from Sparse X-ray Views	Aditi Gupta	2026
+B.Tech Students
+1	Content Based Image Retrieval	Shobit Gupta, D.K. Verma, Om Prakash, Nawaz Sharif, Kumar Gaurav	2014
+2	Face Recognition for Mobile Authentication	Smiriti Raina, Shobit Tiwari, Abhay Kant, Utkarsh Kumar, Mohd. Adil Hussain	2014
+3	Human Bone Image Segmentation for Medical Analysis	Ritesh Kumar, Vaishali Agarwal, Rahul Kumar Singh, Vaibhav Kumar Singh, Vaibhav Sharma	2014
+4	Reduction of Noise in X-Ray Images	Ritika Gupta, Alisha Banskota, Akash Chaudary, Ravi	2015
+5	Defect Detection by Image Segmentation using Wavelets	Karthik Jaiswal, Piyush Anand, Shiwa Bastola, Pranav Mishara	2015
+6	De-noising and Edge Enhancement in GIS Images	Apurva Mittal, Arjun Mishra, Sharad Yadav, Pankaj Nayak	2015
+7	Brain Tumor Detection in MRI	Gajabi Mayur Shriram Divakar, Tomar Gautham Kumar, Kakadiya Anukush Dhama, James Kumar, Meda Saideep	2016
+8	Gray Scale Image De-noising using Depth First Search	Aayush Saxena, Awanish Kumar Gupta, Pavan Kumar, Shubham Shekar, Vikas Gupta	2016
+9	Pedestrian Detection using using Background Subtraction and Histogram of Oriented Gradients	Harshita Mallireddy, Kiran Parwani Abhishek Bhardwaj, J.Nikhil Chandra, B.Yashwanth	2017
+10	Object Based Video Retrieval	Mayank Shanh, Swadesh Roul, Gaurav Dhanuka, Johnson Bhengra, Saurabh K. Karu	2017
+11	Real Time Mood Based Music Auto-Play System from Facial Expressions	Raunak Singh, Vipin Singh, Krishna Devwanshi, Ravi Kuamr, Anil Kumar Meena	2017
+12	Content based Image retrieval using BoVW model (with SURF and Fuzzy clustering)	Rashi gahani, Rachna Bharti, Sunidhi Mishra, Shubhangi Singh, Shubhrika Gupta	2018
+13	Intelligent Traffic Light Control based on Traffic and Pedestrian Density	Kriti Dangi, Manish Singh Kushwaha, Kanika Gupta, Atul Kumar Singh, Kamal Kumar Majhi	2018
+14	Seeded One Time Pad for Security of Medical Images in Health Information	Anushka Shrivastava, Shonit Awasthi, Saqib Javed, Shubham Gautam, Naman Kishore	2018
+15	Speech to sigh and sigh to text app for deaf people	Ritika Bharthi, Sarthak Yadav, Vishnu Kumar, Sourav Gupta, N. Sirisha	2019
+16	Content mining for various applications	Shivi Sharma, Shivani Agarwal, Vishu Kumar, Vaibhav Shree, Loria Priyanka Vyas	2019
+17	An efficient approach for Image Forgery Detection	Utkarsh Mani Tripathi, Vrinda Agarwal, Ankit Garg, Vivek Kumar Jha, Kushagra Shukla	2019
+18	Automated Short Video Caption generation using Video Features and Audio Content	SHUBHRA CHOUDHARY, YOGESH KUMAR AHUJA, SHUBHAM YADAV, NIRANJAN KUMAR YADAV	2020
+19	Automatic Traffic Accident Detection Using Machine Learning Methods	AMAN KUMAR AGRAWAL, KADAMB AGARWAL, JITENDRA CHOUDHARY, ARADHITA BHATTACHARYA	2020
+20	DeepUI: An Approach To Generate HTML-CSS Codes from Hand-Drawn Wireframes	ARYAN KHANNA BHADAGE, ANKIT MANOJ, YASHASWINI T, GULAM MOHIB PARIHAR	2020
+21	Road extraction from satellite images	MANAS UNIYAL, RAJAT KUMAR and UMANG GUPTA	2021
+22	Event Observation and Reaction Analysis Tool	AYUSH JAISWAL, HARSHIT AGARWALL and CHITRANSH NIGAM	2021
+23	Diabetic Retinopathy detection through integration of Deep Learning classification framework	SUDHANSHU KUMAR CHOUDHARY, VARUN SHARMA and OSAID ARIF	2021
+24	Automatic traffic accident detection system	AASHISH TANDON, ASHISH DUBEY, KRIPANATH SINGH and ASLESHA BHANDARI	2022
+25	Classifying toxic quotes present in memes	NISHCHAL SIDDHARTH PANDEY, OJASWI BHARDWAJ, RAJ DAFTARI and PARIKSHITH SINGH	2022
+26	Detection of COVID-19 Norm Violation	GAURAV BANSAL, ADITYA SATISH MANTRI, ABINASH MURMU and BERI PRASHANTH	2022
+27	Monkeypox Image Classification	Saurabh Kumar Kaushal, Ritik, SHIVANAND MAURYA and Ripsy Singh	2023
+28	CROP RECOMMENDATION AND PLANT DISEASE DETECTION SYSTEM	Pradyumn Bhatte,r NITIN GANGWAR, NEKKALAPU PARDHA SAI and MADHUMITA BRAHMA CHOWDHURY	2023
+29	Smoke and Fire Image Detection and Classification	shristi singh, Vineeta Singh, Shreyas Tonse and Kini Varun Kumar	2023
+30	Diffusion Model in Adversarial Learning (Co-Supervisor: Dr. Shashwati Banergea)	Durgesh Singh (20208044) G Mahitha (20208045) Ankur Gangwar (20208019) Dhiraj Kuamr (20208040)	2024
+31	Wireless Capsule Endoscopy Bleeding Image Classification	Jainendra Dwivedi (20208058) Harshit Mishra (20208055) Apurva Lohia (20208024) Anuj Soni (20208023)	2024
+32	Adversarial Reconstruction with Inception based Deep Convolutional Auto encoder (IDCA)	Kunal Katiyar (20208071) Nandini Karad (20208082) Lakshay (20208073) Prince Verma (20208094)	2024
+33	Accident Detection System	Ankur Chaudhary (20208018) Anirban Chatterjee (20208016) Ayush Shrinivas Sohani (20208034) Ajay Oraon (20208011)	2024
+34	Depression Detection System	Shreya Gupta (20208119) Prakhar Srivastav (20208089) Mohd. Saquib (20208081) Yash Singh (20208133)	2024
+35	3D CT Reconstruction from 2D Chest X-ray Images	Poluri Priyanka (20214029), Priyanshu Kumar (20214255), Poonam Yadav (20214120), Pritesh Amee Jogiya (20214505)	2025
+36	Integrative AI Application: Chat with PDFs, Web Data and CSVs, and OS Simulators	Umang (20214199), Yashasvi Singh (20214167), Srishti (20214291), Utkarsh Awadh (20214140)	2025
+37	Class Extension in Pre-trained Neural Networks using Few-Short Samples	Jitendra Kumar (20214019) Divyansh Patel (20124054) Avanish Gond (20214320) Debjyoti Das (20214264)	2025
+38	Medical Image Classification using Deep Learning	Shivdutt Tiwari (20223251) Shreyansh Tiwari (20223256) Shubham kumar (20223259) Sreyia Gupta (20223547)	Dec 2025
+39	Medical Genomic Data Compression using AI	Shivansh Mishra (20223249) Shivangi Verma (20223248) Vishal Patel (20223314) Shreya Jaiswal (20223253)	Dec 2025
+40	2D to 3D Image Generation using Generative AI	PRAKHAR GUPTA (20223178) RAHUL KHARWAR (20223196) RIMJHIM GOTHARWAL (20223210) ROHAN ROY (20223215)	Dec 2025

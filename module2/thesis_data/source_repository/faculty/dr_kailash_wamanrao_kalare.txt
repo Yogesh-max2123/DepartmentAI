@@ -1,0 +1,14 @@
+Dr. Kailash Wamanrao Kalare
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	Image Reconstruction from Few-view projections	GIRJESH KUMAR MISHRA (2023RCS53)	2023*
+M.Tech Students
+1	Medical Image Encryption Using Chaos	SHIVENDRA SINGH THAKUR (2023IS21)	2025
+2	Brain Disease Classification Using EEG and Deep Learning	SONIC PAYENG (2023DS22)	2025
+3	Hénon Map-Based Chaotic Encryption of CBCT Sinogram Data with Lossless FDK Reconstruction	KAKOLI SOREN (2024IS14)	2026
+4	Region Specific EEG Analysis for Depression Detection Using Machine Learning and Deep Learning Approach	TARUN GUJRAL (2024DS21)	2026
+5	Epilepsy diagnosis and seizure detection using optimization techniques.	SHUBHAM JAIN (2025CS17)	2025*
+6	Non-invasive approaches for Sugar (glucose) detection and classification	PRANAV KUMAR (2025CS14)	2025*

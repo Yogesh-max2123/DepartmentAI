@@ -1,0 +1,64 @@
+Dr. Vibhav Prakash Singh
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Design and Development of Novel AI-Driven Clinical Decision Systems for the Detection of Schizophrenia	Ashima Tyagi (2020RCS01) with Prof. M.M. Gore	2025
+2	Design and Development of Novel Computer-Aided Diagnosis System for Multi-Grade Diabetic Retinopathy Detection	Imtiyaz Ahmad (2021RCS08) with Prof. M.M. Gore	2026
+Ph.D. Ongoing
+1	Content-Based Medical Image Retrieval (In advanced stage)	Ankur Prakash (2021RCS51)	Ongoing
+2	Image Processing and Computer Vision	Satya Prakash Singh (2024RCS08)	Ongoing
+M.Tech Students
+1	Diagnosis of Diabetic Retinopathy Using Computer Vision	Imtiyaz Ahmad (2019CS22)	2021
+2	Enhanced Heart-Disease Prediction Using Genetic Search Based Feature Selection	Gautam Prateek(2019IS16)	2021
+3	Detection of Diabetic Retinopathy Using Ensemble of Deep Learning Approaches	Saivya Gulati (2020SW13)	2022
+4	Detection of Laryngeal Cancer Using Deep Learning Technique	Mayank Singhal (2020CS08)	2022
+5	Improving ABR streaming by using network features and machine learning	Vishal Yadav (2020CS25)	2022
+6	Traffic Classification Using AI	Abhishek Singh (2020TR01)	2022
+7	Detection of Brain Tumour using Hybrid Features with Machine Learning Approaches	Pranali Chanduka (2021SW30)	2023
+8	Copy-Move Forgery Detection Using HOG and LBP Features with Random Forest	Vaibhav Soni (2021CS026)	2023
+9	Brain Tumor Segmentation Using Deep learning	Mahima Jaiswal (2021IS28)	2023
+10	Traffic Flow parameters estimation Using Video Traffic Data	Ankit Kumar Srivastava (2020TR04)	2023
+11	Image-Based Virtual Try-On	Divyansh Omar(2021CS06)	2023
+12	Detection of Lung Diseases from Acoustic Recordings using Statistical Moments of MFCC and Machine Learning	Nikita Sinha (2022DS05)	2024
+13	DDoS Attack Detection Using Explainable AI in Machine Learning	Sudanshu Kumar Jena (2022IS10)	2024
+14	Fine-tuning and Efficacy Assessment of BERT-Based Models in Detecting Early Signs of Depression	Vaibhav Kumar (2022CS02)	2024
+15	Forest Fire and Smoke Detection using Deep Learning	Mohammad Faheem (2022GI13)	2024
+16	AI-based Applications in Geographic Information Systems	Srigopalakrishnan R (2022GI05)	2024
+17	Skin Lesion Segmentation in Dermoscopic Images using Deep Learning Method with Noisy Data	Abhinav Sharma (2022CS12)	2024
+18	Retinal Image Analysis Using Computer Vision Approaches	Arpita Santra (2022DS03)	2024
+19	Robust Retinal Image Segmentation of Noisy Fundus Images using U-Net Variants	Ekram Ul Haque (2023DS09)	2025
+20	Robust Source Camera Identification Using Computer Vision Approaches	Rukmini Maiti (2023CS18)	2025
+21	Hybrid MI–GA Feature Selection Approach for an Efficient Machine Learning based Intrusion Detection System	Ritika Singh (2024CS17)	2026
+22	Skin Lesion Detection Using Deep Learning Approaches and Clinical Metadata	Ayush Manikant Gupta (2024CS14)	2026
+23	Content-Based Medical Image Retrieval for the Detection of Lung Disease using X-ray Images	Jaspreet Kaur (2024CS10)	2026
+24	Applications of AI in Information Security	Krupa Gudemcheruvu (2025IS09)	Ongoing
+25	Deep Fake Detection Using Computer Vision-Based Deep Neural Network	Saurabh Singh Chonkar (2025CS15)	Ongoing
+26	Query-Aware Adaptive Chunking Strategy for Agentic RAG Systems	Yogya Verma (2025CS25)	Ongoing
+B.Tech Students
+1	Computer-aided detection of Covid-19 from X-ray images	Shivanshu Tripathi (20170050), Sourav Sarkar(20178017) and Basant Kumar Pandit(20178083)	2021
+2	Low Light Image Enhancement Using Convolutional Neural Network	Avinash Sharma(20174138), Mredul Jain(20174043), Mudit Jain(20174067)	2021
+3	Spliced/Forged Images Detection using Computer Vision	Rishabh Gaurav (20178006), Guru Deep Kuwar (20178100 ), Rohan Singh (20172050)	2021
+4	Traffic Signal Violation Detection System	Vibha Singh (20174170), Vijay Kumar(20174156), Rohit Niranjan (20174131)	2021
+5	Lyrics-Based Music Recommender	Raatvik, Partha Pratim Borah, Manisha Kumari and Rakesh Kumar Meena	2022
+6	Skin Cancer Detection: Applying Image Processing Techniques, Machine Learning driven Models and Ensemble Learning to Classify Dermal Cell Images	Prammet Kundu, Prachi Bajpai, Shreya Garg and Sumit Dungdung	2022
+7	Detection of Copy Move Forgery in Digital Images	Shaifali Singh, Sakshi Gupta, Shreyansh Singh, and Sudhanshu Shandilya	2022
+8	Satellite Image Inpainting using Masked Autoencoders	Saurabh Singh (20194116), Rishav Rauniyar (20194191), Ujjwal Kumar Jha(20194196), Sahil Kumar Dube(20194114)	2023
+9	Neural Networks for identifying disaster tweets	Kartikeya Srivastava (20194032), Kotecha Udit Hitendra (20194057), Lakshya Sharma (20194193), Nishant Kumar (20194024)	2023
+10	Fingerprint Spoof Detection	Stuti Jain(20198008), Prasun Raj(20198086), Prashant(20198047), Nishant Raj(20198116)	2023
+11	Content-Based Image Retrieval Using deep Learning	Nilotpal Das (20194120), Payal (20194005), Jyoti (20194078), Mohit Meena (20194106)	2023
+12	Enhanced Image Forgery detection Using Handcrafted and Deep Features with Ensemble Learning	Risheek Verma (20208104), Vimal Kant Yadav (20208130), Neha Mishra (20208086), Sumant Kumar Shah (20208123)	2024
+13	Dynamic Scene Analysis: Video Summarization using MOG Background Subtraction, Binary Thresholding, and Morphological Opening	Ashish Nishad (20204040), Abhi Bhaskar (20204003) , Abhijeet Basfore (20204004), Ayush Prince (20204053)	2024
+14	Detection of Diabetic Retinopathy Using Densely Connected Neural Networks	ANUBHAV SHRIVASTAVA (20209011), AMAR SINGH (20208014), GAUTOM AGARWAL (20208050), DHARMENDRA (20208039)	2024
+15	Content-Based X-ray Image Retrieval System for the detection of COVID-19 and Pneumonia	Neeraj Chatterjee (20204123), Himanshi Omare (20204082), Mansi Singh (20204108), Hrid Chakraborty (20204086)	2024
+16	Camera Model Identification Using Deep-Local Features and Ensemble Learning	Ritika Kumari (20214100), Sambhav Sharma (20214041), Ranjana Gond (20214325), Prince Raj (20214077)	2025
+17	Improved Content-Based Medical Image Retrieval For Lung Disease Using Hybrid Texture Features and Ensemble Learning	Ayush Varshney (20215069), Himanshu Nagwanshi (20214305), Devansh Sharma (20214520), Kajal Rathor (20214251)	2025
+18	Camera Model Classification Using Deep Learning and Feature Selection	Ankit Lakhlan (20214013), Adarsh Tiwari (20214227), Ankit Raj (20214059) , Aditya Singh (20214144)	2025
+19	Content-Based X-ray Image Retrieval for Lung Diseases Using Dense Deep Features and Facebook AI Similarity Search	Satyam Pandey (20223237), Prakhar Srivastava (20223179), Prince Kumar Maurya (20223185)	2026
+20	Automated Detection of Image Forgery and AI-Generated Images Through Convolutional Neural Networks	Deepansh Saini (20221038) Surabhi Birendra (20223278) Ujjawal Saran (20223551) Siddhi Prasad (20223539)	2026
+21	Heart Disease Prediction using Optimal Feature Selection and Machine Learning Techniques	Rishikesh Kumar (20223212), Prahlad Singh (20223176), Ravi Kumar Sharma (20223204) and Ojasya Verma (20223542)	2026
+22	Robust Computer Aided Diagnosis System For Lung Diseases	Mirga Farhaan Baig [20223552] Hiral Gabhane [20223560] Nabhanshu Dash [20223534] Nidhi Bhagat [20223161]	2026
+23	Design of an Agentic RAG Framework for Automated Legal Case Analysis and Decision Support	Patil Sakshi Sunil (20233209), Manpreet Kaur (20233180), Samudraneel Sarkar (20233249), Nikhil Kumar (20233202)	Ongoing
+24	Image-Based Virtual Try-On Systems Using Computer Vision Techniques	Varun Kaushal (20233307), Vaidehi Mayankkumar Patel (20233579), Smit Thakkar (20233570), Sayali Chaudhari (20233560)	Ongoing
+25	Content-Based Fingerprint Retrieval System for Criminal Identification Using Deep Feature Extraction	Tanishq Gupta (20233290), Tanishk Aggarwal (20233289), Yalamanchili Vatsal (20233585), Vaibhav Singh (20233300)	Ongoing

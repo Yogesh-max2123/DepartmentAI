@@ -183,39 +183,232 @@ class AchievementParser(HTMLParser):
 
 
 class ThesisParser(HTMLParser):
-    """Extract visible HTML table rows, retaining cell text as displayed."""
+    """
+    Parse thesis rows while retaining the source section heading.
 
+    The official profile groups records under headings such as:
+      - Ph.D. Completed
+      - Ph.D. Ongoing
+      - M.Tech Students
+
+    Headings may be HTML heading tags or full-width table rows, so both are
+    recognized. Rows without a recognized heading remain explicitly unclassified.
+    """
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.rows = []
         self.current_row = None
         self.current_cell = None
         self.in_cell = False
+        self.current_section = None
+        self.heading_tag = None
+        self.heading_buffer = []
+        self.row_heading = False
+
+    @staticmethod
+    def normalize_section(text):
+        value = clean(text).casefold()
+        value = re.sub(r"[\s:._-]+", " ", value).strip()
+        if re.search(r"\b(ph\s*\.?\s*d|phd|doctoral)\b", value):
+            if "ongoing" in value or "current" in value or "pursuing" in value:
+                return "phd_ongoing"
+            if "completed" in value or "awarded" in value or "conferred" in value:
+                return "phd_completed"
+        if "m tech" in value or "mtech" in value or "master of technology" in value:
+            return "mtech"
+        return None
 
     def handle_starttag(self, tag, attrs):
         tag = tag.lower()
-        if tag == "tr":
+        if tag in ("h1", "h2", "h3", "h4", "h5", "h6"):
+            self.heading_tag = tag
+            self.heading_buffer = []
+        elif tag == "tr":
             self.current_row = []
-        elif tag in ("td", "th") and self.current_row is not None:
-            self.current_cell = []
-            self.in_cell = True
+            self.row_heading = False
+        elif tag in ("td", "th"):
+            # Some MNNIT profile pages contain malformed legacy HTML where a
+            # section label is a <td> outside any <tr>, e.g.
+            # <td colspan="4"><b>Ph.D. Completed:</b></td>. HTMLParser does
+            # not repair this markup like a browser does, so capture standalone
+            # cells too and use them only when they normalize to a known section.
+            if self.current_row is not None:
+                self.current_cell = []
+                self.in_cell = True
+            else:
+                self.current_cell = []
+                self.in_cell = True
 
     def handle_data(self, data):
+        text = clean(data)
+        if not text:
+            return
+        if self.heading_tag:
+            self.heading_buffer.append(text)
         if self.in_cell and self.current_cell is not None:
-            text = clean(data)
-            if text:
-                self.current_cell.append(text)
+            self.current_cell.append(text)
 
     def handle_endtag(self, tag):
         tag = tag.lower()
-        if tag in ("td", "th") and self.in_cell and self.current_row is not None:
-            self.current_row.append(clean(" ".join(self.current_cell)))
+        if self.heading_tag == tag:
+            section = self.normalize_section(" ".join(self.heading_buffer))
+            if section:
+                self.current_section = section
+            self.heading_tag = None
+            self.heading_buffer = []
+
+        if tag in ("td", "th") and self.in_cell:
+            cell_text = clean(" ".join(self.current_cell or []))
+            if self.current_row is not None:
+                self.current_row.append(cell_text)
+            else:
+                # Legacy MNNIT pages sometimes omit the enclosing <tr> around
+                # section-label cells. Recognize only explicit known headings;
+                # ordinary orphan cells are ignored and never imply a programme.
+                section = self.normalize_section(cell_text)
+                if section:
+                    self.current_section = section
             self.current_cell = None
             self.in_cell = False
         elif tag == "tr" and self.current_row is not None:
-            if any(self.current_row):
-                self.rows.append(self.current_row)
+            cells = [clean(cell) for cell in self.current_row]
+            nonempty = [cell for cell in cells if cell]
+            # Section labels are sometimes rendered as a one-cell table row.
+            if len(nonempty) == 1:
+                section = self.normalize_section(nonempty[0])
+                if section:
+                    self.current_section = section
+                    self.row_heading = True
+            if any(cells):
+                self.rows.append({
+                    "cells": cells,
+                    "section": self.current_section,
+                    "is_section_heading": self.row_heading,
+                })
             self.current_row = None
+            self.current_cell = None
+            self.in_cell = False
+            self.row_heading = False
+
+
+def _parse_source_years(value):
+    """Parse only explicit year/date tokens; return (start_year, end_year)."""
+    text = clean(value)
+    if not text:
+        return None, None
+
+    range_match = re.search(
+        r"\b((?:19|20)\d{2})\s*[-–—/]\s*(\d{2}|(?:19|20)\d{2})\b",
+        text,
+    )
+    if range_match:
+        start = int(range_match.group(1))
+        end_token = range_match.group(2)
+        if len(end_token) == 2:
+            end = (start // 100) * 100 + int(end_token)
+            if end < start:
+                end += 100
+        else:
+            end = int(end_token)
+        if 1900 <= start <= 2100 and 1900 <= end <= 2100:
+            return start, end
+
+    years = [int(y) for y in re.findall(r"\b(?:19|20)\d{2}\b", text)]
+    years = [y for y in years if 1900 <= y <= 2100]
+    if not years:
+        return None, None
+    return years[0], years[-1]
+
+
+def _thesis_record_from_row(cells, section):
+    cells = [clean(cell) for cell in cells]
+    if len(cells) < 4:
+        return None
+
+    serial, topic, student, year_text = cells[0], cells[1], cells[2], cells[-1]
+    header = " ".join(cells).casefold()
+    if any(token in header for token in (
+        "research topic", "name of student", "completion/registration year",
+        "completion year", "registration year",
+    )):
+        return None
+    if serial.casefold() in {"s.no", "s.no.", "s no", "serial no", "s. no.", "sl.no", "sl. no."}:
+        return None
+    if not topic or not student:
+        return None
+
+    start_year, end_year = _parse_source_years(year_text)
+    program_level = "Not classified from source heading"
+    status = None
+    registration_year = None
+    completion_year = None
+
+    if section == "phd_completed":
+        program_level = "Ph.D."
+        status = "Completed"
+        # A completed section explicitly denotes completion; the last year in
+        # a displayed range is the completion year. A single year is exact.
+        completion_year = end_year
+    elif section == "phd_ongoing":
+        program_level = "Ph.D."
+        status = "Ongoing"
+        registration_year = start_year
+    elif section == "mtech":
+        program_level = "M.Tech"
+        # The year range is preserved as the cohort span. The heading does not
+        # explicitly declare a status, so status remains NULL rather than guessed.
+        registration_year = start_year
+        completion_year = end_year if end_year != start_year else None
+
+    section_label = {
+        "phd_completed": "Ph.D. Completed",
+        "phd_ongoing": "Ph.D. Ongoing",
+        "mtech": "M.Tech Students",
+    }.get(section, "Unclassified source section")
+
+    return {
+        "program_level": program_level,
+        "student_name": student,
+        "research_topic": topic,
+        "registration_year": registration_year,
+        "completion_year": completion_year,
+        "status": status,
+        "details": (
+            f"Source section: {section_label}; "
+            f"source year/date field: {year_text or 'not provided'}"
+        ),
+        "source_year": year_text,
+        "source_section": section_label,
+    }
+
+
+def extract_theses(html):
+    """Extract thesis records with explicit source section, programme and years."""
+    parser = ThesisParser()
+    parser.feed(html)
+    parser.close()
+
+    records, seen = [], set()
+    for parsed_row in parser.rows:
+        if parsed_row.get("is_section_heading"):
+            continue
+        record = _thesis_record_from_row(
+            parsed_row["cells"], parsed_row.get("section")
+        )
+        if not record:
+            continue
+        key = (
+            clean(record["student_name"]).casefold(),
+            clean(record["research_topic"]).casefold(),
+            clean(record["source_year"]).casefold(),
+            record["program_level"],
+            record["status"],
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        records.append(record)
+    return records
 
 
 def fetch_html(url):
@@ -273,39 +466,31 @@ def extract_achievements(html):
 
 
 def extract_theses(html):
+    """Extract thesis records with explicit source section, programme and years."""
     parser = ThesisParser()
     parser.feed(html)
     parser.close()
+
     records, seen = [], set()
-    for row in parser.rows:
-        cells = [clean(cell) for cell in row]
-        if len(cells) < 4:
+    for parsed_row in parser.rows:
+        if parsed_row.get("is_section_heading"):
             continue
-        serial, topic, student, year_text = cells[:4]
-        header = " ".join(cells[:4]).casefold()
-        if "research topic" in header or "name of student" in header or serial.casefold() in {
-            "s.no", "s.no.", "s no", "serial no", "s. no."
-        }:
+        record = _thesis_record_from_row(
+            parsed_row["cells"], parsed_row.get("section")
+        )
+        if not record:
             continue
-        if not topic or not student:
-            continue
-        key = (topic.casefold(), student.casefold(), year_text.casefold())
+        key = (
+            clean(record["student_name"]).casefold(),
+            clean(record["research_topic"]).casefold(),
+            clean(record["source_year"]).casefold(),
+            record["program_level"],
+            record["status"],
+        )
         if key in seen:
             continue
         seen.add(key)
-        records.append({
-            "program_level": "Not specified on source page",
-            "student_name": student,
-            "research_topic": topic,
-            "registration_year": None,
-            "completion_year": None,
-            "status": None,
-            "details": (
-                f"Source table year field (Completion/Registration Year): {year_text}"
-                if year_text else "Source table did not provide a year"
-            ),
-            "source_year": year_text,
-        })
+        records.append(record)
     return records
 
 

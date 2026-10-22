@@ -1,0 +1,19 @@
+Dr. Abhimanyu Sahu
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	Analysis of Multi-Modal Egocentric Videos (Tentative Title)	Pawanesh Kumar Vishwakarma (State-of-the-art done)	2023
+2	Vision-Language Guided Multimedia Analysis and Understanding (Tentative Title)	Deveshwar Dev Manral (Coursework Completed)	2025
+M.Tech Students
+1	Video Action Anticipation Using Transformer Models	Divyanshu (2023CS28)	2025
+2	Action Recognition in Egocentric Videos Using Multimodal Approach	Nishant Singh (2023CS13)	2025
+3	TriFusionSum: Multimodal Transformer for Video Summarization via Frame-Caption-Transcript Fusion	Gyanaranjan Nayak (2023DS10)	2025
+4	Intelligence Home Healthcare Monitoring System Using Vision Transformers	Vishal Kumar (2024CS25)	2026
+5	Multimodal Summarization and Thumbnail Generation of Videos	Nishu Kumar (2024DS12)	2026
+6	Content-Aware Video Summarization via Peak -Driven Adaptive Segmentation	Rohit Shrivas (2024CS19)	2026
+B.Tech Students
+1	Egocentric Action Anticipation Using Multimodal Attention with Transformer-XL	Akshat Kumar Singh (20214182), Abhinav Pandey (20214179), Abinash Ray Yadav (20214540), Anurag Panday (20214228)	2025
+2	Action Recognition From Egocentric Videos Using Few-Shot Learning	Archana Yadav (20214244), Aditya Singh Yadav (20214076), Anshika Mogha (20214299), Abhay (20214164)	2025
+3	Human Action Recognition Using Active Learning	Madhvendra Prasad (20214086), Sabit Malik (20214093), Prity Kumari (20214293), Mohit Kumar (20214133)	2025

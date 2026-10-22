@@ -1,0 +1,72 @@
+Rajesh Tripathi
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+M.Tech Students
+1	Improving the Performance of Dynamic Source Routing Protocol in Mobile Ad hoc Networks	Nawa Raj Awasthi	2008
+2	Evaluation of Load Balancing With Self- adaptive Technique	Naveen Trivedi	2012
+3	Highest Rank Based Single Request Matching Algorithm	Vivek Kumar Pandey	2013
+4	MTMS: An Intelligent Traffic Analysis Protocol Suite	Vinay Pratap Singh	2012
+5	A Secure and Enhanced Steganographi c Technique	Jeetendra Kumar Mishra	2013
+6	Modified Scheme for Cluster Based Private Data Aggregation in Wireless Sensor Network	Kushal Gupta	2013
+7	Improving Travelling Salesman Problem using Genetic Algorithm	Manu Dev Hembro m	2013
+8	Test Case Reduction for Regression Testing	Amit Srivastava	2015
+9	Secure Data Dissemination and Routing Scheme for VANETs	Gyanendra Mishra	2015
+10	An Integrated Approach to Design an EAF for the CCS of ICDS in INDIA	Sarvesh Kumar Swarnakar	2015
+11	Digital Image Watermarki ng Technique	Sushma Bharti	2014
+12	A Model Approach for Software Effort Estimation using Multi â€“ Objective PSO Technique	Lal Singh Kalundia	2014
+13	Cryptanalysis of RSA using Lattices	Anurag Kumar	2014
+14	Quantum Cryptography and Quantum Cryptanalysis	Jay Vikrant Singh	2015
+15	Method of Test Case Prioritization for Regression Testing	Santos h Prasad	2015
+16	Hadoop: Join Operation using Map Reduce	Akshat Rathaur	2015
+17	Cost Effective Model for Map Reduce on Cloud Based Architecture	Aman Sharma	2016
+18	Enhanced Hierarchial Particle Swarm Optimization using Time Varying Acceleration Coefficient	Deepak Kumar	2016
+19	Improved Method of Linear Discrimination Regression for Face Recognition	Vikas Kumar Rungta	2017
+20	Betweenness Centrality Evaluation in Large Scale Graphs.	Akhil Bajpayee	2017
+21	Interval Graph Coloring using Perfect Eliminatiion Order	Surbhi Jain	2017
+22	Contrast Enhancement of Secret Image Using Random Grid Approach in Visual Cryptography	Priyanka Mouriya	2018
+23	Image Steganography using Rough Set and LSB Substitution	Kanaklata Tiwari	2018
+24	Anomaly-based Intrusion Detection System using Genetic Algorithm and Multi-Layer Perceptron	Joydev Ghosh	2018
+25	Approach to Perform Complex Vision and Control Task Using Deep CNN and Modified Behavior Cloning	More Shardul Ramakant	2019
+26	Development of Open source Web GIS Application for comparing Primary School Education Facilities	Divyanshi Dixit	2019
+27	Approach for Speech Dereverberation using Deep Learning	Nadeem Ahmad	2019
+28	Improving Load Balancing and Fault Tolerance in Kubernetes	Rohan Gupta (2018SW09)	2020
+29	Human Facial Beauty Analysis	Vishnu Sharma (2018SW15)	2020
+30	A Music Application Based On Facial Expression Recognition	Aman Shrivastava (2018IS14)	2020
+31	Start-up Fund Raiser using Ethereum Blockchain	Amit Tewari 2019SW14	2021
+32	Face Aging using Generative Adversarial Networks	Sakshi Vyas 2019SW16	2021
+33	FIGHTING AND EASING COVID-19 OUTBREAK WITH DATA SCIENCE	KOPAL BHARTIYA 2020IS09	2020
+34	SATELLITE IMAGE PROCESSING	RAM SARAN PATEL 2020CS18	2020
+35	ANOMOLOUS ACTIVITY DETECTION USING DEEP LEARNING FOR INTELLIGENCE SERVILLIENCE	SARDHARA ABHAY MANSUKH BHAI 2020SW15	2020
+B.Tech Students
+1	Improved Environmental Adaptation Method with Better Exploration	04 B.Tech. Students	2019
+2	Transparent Elections using Blockchain	04 B.Tech. Students	2019
+3	Stock Market Trend Analysis	04 B.Tech. Students	2019
+4	Semantic Image Segmentation using Neural Network and Conditional Random Fields	04 B.Tech. Students	2018
+5	Factoid based Question Answering System using NLP Techniques	04 B.Tech. Students	2018
+6	Electronic Health Records on Blockchain	04 B.Tech. Students	2018
+7	Animal Classification and Detection	04 B.Tech. Students	2017
+8	Semantic Polarity Analysis of Tweets	04 B.Tech. Students	2017
+9	Phishing Email Detection	04 B.Tech. Students	2016
+10	Rails Blog	04 B.Tech. Students	2016
+11	Voice-Controlled Computer Automation System	04 B.Tech. Students	2016
+12	Automatic Number Plate Recognition	04 B.Tech. Students	2016
+13	Android Based Jogging Application	04 B.Tech. Students	2015
+14	LAN Connect	04 B.Tech. Students	2015
+15	Review Sentiment Analysis	04 B.Tech. Students	2015
+16	Implementation of Online Recruitment System	04 B.Tech. Students	2014
+17	Battery Optimization Scheme for Android Applications	04 B,Tech,Students	2014
+18	Phone Locator Android Application	-04 B.Tech. Students	2013
+19	Safe Driving Using Mobile Phones	04 B.Tech. Students	2013
+20	Travel Planner: Using Genetic Algorithm	04 B.Tech. Students	2013
+21	Multi-Objective Shortest Path Problem Using Evolutionary Algorithm	04 B.Tech. Students	2012
+22	Optimal Stopping Problem with Delay	04 B.Tech. Students	2012
+23	Peer to Peer Communication Across Different NAT.	04 B.Tech. Students	2012
+24	Scalable IP Lookup Using Scale Graph	04 B.Tech. Students	2011
+25	Firewall/NAT Enabled VPN Router	04 B.Tech. Students	2011
+26	Open Domain Question Answering System	04 B.Tech. Students	2010
+27	Image Encryption Using Feistel Networks and DNA Encoding	Siddharth Majumdar(20164044), Sunil Kumar(20164012), Saurabh(20164104) and Pradyumna Pandey(20164159)CSE	2020
+28	Evaluating Machine Learning Algorithms and Deep Neural Networks for Intrusion Detection	Tushar Srivastava(20164069), Nitish Kumar Khatri(20164112), Nayan Jain(20164046) and Ritu Raj(20164168	2020
+29	Squiz	Pawan Kumar Kesarwani Prashant Kain Shiv Pratap Bharti (CSE)	2021
+30	Fundus Ocular Disease Detector	Aman Sharma (20178051) Vikas Gautam (20178084) Abhishek Gangwar (20178033) (ALL IT)	2021

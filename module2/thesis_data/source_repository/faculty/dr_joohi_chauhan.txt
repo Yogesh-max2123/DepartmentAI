@@ -1,0 +1,12 @@
+Dr. Joohi Chauhan
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	Federated Learning in Histopathology Image Analysis	Ms. Shivangi Agrawal	2024
+2	Analysis of Backdoor Attacks	Manju Bhargavi B	2025
+M.Tech Students
+1	Analysis of Face Detection Algorithms in Different Multispectral Bands and RGB Images	Aditya Dubey	2025
+2	Generative AI for Infrared Image Generation from RGB Inputs	Shubham Kaushik	2025
+3	Impact of using various Activation Functions on the Performance of CNNs	Gufran Ahmed	2025

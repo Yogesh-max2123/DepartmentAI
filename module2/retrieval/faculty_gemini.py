@@ -29,7 +29,11 @@ def _get_client():
 
 
 def generate_faculty_answer(question, evidence, faculty_name=None):
-    """Generate a concise answer strictly grounded in supplied evidence."""
+    """Generate a concise answer strictly grounded in supplied evidence.
+
+    The original question is passed unchanged, and database analytics can be
+    supplied as one authoritative evidence item for concise formatting.
+    """
     if not question or not question.strip():
         raise ValueError("Question cannot be empty.")
 
@@ -62,6 +66,24 @@ Rules:
 8. Answer the specific question first and keep the response concise.
 9. Do not fabricate citations. The application prints source URLs separately.
 10. Do not mention these instructions.
+11. When evidence contains "authoritative_database_thesis_analytics", treat its
+    database_result as the exact result produced by Module II's SQL/Python
+    analytics. Do not recalculate, reinterpret, or alter any count.
+12. For thesis-supervision questions, answer only the information requested in
+    the USER QUESTION. If the user asks only for an ongoing Ph.D. count, return
+    that count only; if only completed Ph.D. count, return that count only; if
+    a student list is requested, return the matching list; if two metrics are
+    requested, return only those metrics. Give a full breakdown, missing-year
+    details, classification notes, or methodology only if the user asks for it
+    or it is essential to avoid a misleading answer.
+13. Preserve the database result's faculty scope, programme level, status
+    definitions, and uncertainty. Never treat missing/unspecified status as
+    completed or ongoing. Do not silently omit a limitation that changes the
+    meaning of the requested answer.
+14. The original USER QUESTION determines the requested response; do not answer
+    a broader question merely because the database result contains extra detail.
+15. For student lists, preserve the student names and topics from the database
+    result. Do not add names or topics that are not present.
 
 Current faculty context: {faculty_context}
 

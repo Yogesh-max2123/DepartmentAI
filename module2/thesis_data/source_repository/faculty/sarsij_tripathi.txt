@@ -1,0 +1,13 @@
+SARSIJ TRIPATHI
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Energy Efficient Clustering and Secure Routing Schemes for WSN Assisted IoT	Anurag Shukla	2020
+2	Building an Effective Intrusion Detection System Using Evolutionary Intelligence	Shubhra Dwivedi	2021
+3	Development of Community Detection and Link Prediction Techniques for Analyzing Social Networking Datasets	Riju Bhattacharya	2024
+4	Development of approaches for mitigating challenges in Named Entity Recognition	Ankit Agarwal	2022
+5	Multi-operator differential evolution algorithm for solving single-objective and multi-objective optimization problemsâ€	Ms. Sakshi Aggarwal	2024
+Ph.D. Ongoing
+1	Resource Provisioning in Cloud	Sanjay Gupta	2020
+2	Resource Mangement in Cloud Computing	Saurav Tripathi	Ju;y 2021
