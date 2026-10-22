@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DepartmentAI · Faculty Assistant</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #12243a;
+      --blue: #2457c5;
+      --blue-dark: #19439c;
+      --paper: #f4f7fb;
+      --surface: #ffffff;
+      --ink: #18263b;
+      --muted: #65758b;
+      --line: #e0e7f0;
+      --soft-blue: #eaf1ff;
+      --shadow: 0 16px 48px rgba(26, 48, 82, .09);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .topbar {
+      height: 70px;
+      padding: 0 clamp(18px, 5vw, 64px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      color: #fff;
+      background: var(--navy);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-mark {
+      width: 38px; height: 38px; border-radius: 12px;
+      display: grid; place-items: center; flex: 0 0 auto;
+      background: linear-gradient(145deg, #7eabff, #3566d6);
+      font-size: 17px; font-weight: 800; color: white;
+    }
+    .brand-name { font-weight: 750; letter-spacing: -.02em; font-size: 16px; }
+    .brand-sub { margin-top: 2px; color: #b8c7dc; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .status { display: flex; align-items: center; gap: 8px; color: #d7e3f5; font-size: 12px; white-space: nowrap; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #69d5a0; box-shadow: 0 0 0 4px rgba(105,213,160,.13); }
+    main { max-width: 1000px; margin: 0 auto; padding: 34px 18px 24px; }
+    .intro { margin-bottom: 22px; }
+    .eyebrow { color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 9px 0 8px; font-size: clamp(25px, 4vw, 36px); letter-spacing: -.045em; line-height: 1.15; }
+    .intro p { max-width: 680px; margin: 0; color: var(--muted); line-height: 1.65; font-size: 14px; }
+    .workspace {
+      overflow: hidden; background: var(--surface); border: 1px solid var(--line);
+      border-radius: 20px; box-shadow: var(--shadow);
+    }
+    .workspace-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+    .assistant-title { display: flex; align-items: center; gap: 10px; font-weight: 750; font-size: 14px; }
+    .assistant-icon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 11px; background: var(--soft-blue); color: var(--blue); }
+    .small-label { color: var(--muted); font-size: 11px; }
+    #messages { min-height: 360px; max-height: 52vh; overflow-y: auto; padding: 22px clamp(15px, 3vw, 28px); background: #fbfcfe; }
+    .message { display: flex; gap: 10px; margin-bottom: 20px; align-items: flex-start; }
+    .message.user { flex-direction: row-reverse; }
+    .avatar { width: 30px; height: 30px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 10px; background: var(--soft-blue); color: var(--blue); font-size: 11px; font-weight: 800; }
+    .user .avatar { color: white; background: var(--blue); }
+    .bubble { max-width: min(760px, 88%); border: 1px solid var(--line); border-radius: 4px 14px 14px 14px; background: white; padding: 12px 15px; line-height: 1.65; font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .user .bubble { border-color: #d6e3ff; border-radius: 14px 4px 14px 14px; background: var(--soft-blue); }
+    .sources { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 7px; }
+    .sources a { color: var(--blue); background: #f1f5ff; border: 1px solid #dce7ff; border-radius: 7px; padding: 5px 8px; font-size: 11px; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    .typing { color: var(--muted); font-size: 12px; padding: 4px 0; }
+    .suggestions { display: flex; flex-wrap: wrap; gap: 8px; padding: 14px 20px 2px; }
+    .suggestion { border: 1px solid #dbe5f5; color: #345276; background: #fff; padding: 8px 11px; border-radius: 999px; font-size: 11px; cursor: pointer; transition: .15s ease; }
+    .suggestion:hover { border-color: #9bb8ef; background: #f4f7ff; }
+    .composer { padding: 16px 20px 18px; }
+    .input-row { display: flex; align-items: flex-end; gap: 10px; padding: 8px; border: 1px solid #d7e0ec; border-radius: 14px; background: white; box-shadow: 0 3px 10px rgba(28,53,90,.04); }
+    textarea { flex: 1; min-width: 0; resize: vertical; min-height: 43px; max-height: 150px; border: 0; outline: 0; padding: 10px 8px; font: inherit; font-size: 13px; line-height: 1.5; color: var(--ink); background: transparent; }
+    textarea::placeholder { color: #91a0b4; }
+    .send { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; padding: 0 17px; border: 0; border-radius: 10px; background: var(--blue); color: white; font-weight: 700; font-size: 12px; cursor: pointer; }
+    .send:hover { background: var(--blue-dark); }
+    .send:disabled { opacity: .55; cursor: wait; }
+    .hint { display: flex; justify-content: space-between; gap: 12px; margin: 10px 3px 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+    .footer { padding: 14px 20px; border-top: 1px solid var(--line); color: var(--muted); background: white; font-size: 10px; line-height: 1.6; }
+    .footer strong { color: #40516a; }
+    @media (max-width: 560px) {
+      .topbar { height: 62px; padding: 0 15px; }
+      .status { font-size: 0; gap: 0; }
+      .status-dot { width: 8px; height: 8px; }
+      main { padding: 25px 11px 18px; }
+      .workspace { border-radius: 15px; }
+      .workspace-head { padding: 13px 14px; }
+      #messages { min-height: 330px; max-height: 48vh; padding: 17px 12px; }
+      .suggestions { padding: 12px 13px 0; }
+      .composer { padding: 13px; }
+      .send { padding: 0 12px; }
+      .hint { flex-direction: column; gap: 3px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">D</div>
+      <div><div class="brand-name">DepartmentAI</div><div class="brand-sub">Academic Intelligence</div></div>
+    </div>
+    <div class="status"><span class="status-dot"></span> Module II · Faculty Assistant</div>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow">Temporary chat interface</div>
+      <h1>Ask about CSED faculty.</h1>
+      <p>Ask questions about faculty profiles, education, research interests, publications, teaching, or thesis supervision. Answers are based on the existing Module II faculty dataset.</p>
+    </section>
+    <section class="workspace" aria-label="Chat interface">
+      <div class="workspace-head">
+        <div class="assistant-title"><div class="assistant-icon">✦</div><div>Faculty Information Assistant<div class="small-label">Evidence-grounded responses</div></div></div>
+        <button id="clearBtn" class="suggestion" type="button">Clear chat</button>
+      </div>
+      <div id="messages" aria-live="polite">
+        <div class="message assistant">
+          <div class="avatar">AI</div>
+          <div class="bubble">Hello! I can help you explore the MNNIT CSED faculty dataset. Ask a question to get started.
+            <div class="sources"><span class="small-label">Try one of the example questions below.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="suggestions">
+        <button class="suggestion" type="button" data-question="Tell me about the faculty research interests.">Faculty research interests</button>
+        <button class="suggestion" type="button" data-question="Show recent publications by CSED faculty.">Recent publications</button>
+        <button class="suggestion" type="button" data-question="What thesis supervision information is available?">Thesis supervision</button>
+      </div>
+      <form id="chatForm" class="composer">
+        <div class="input-row">
+          <textarea id="question" rows="1" placeholder="Ask a question about CSED faculty…" aria-label="Your question" required></textarea>
+          <button id="sendBtn" class="send" type="submit"><span>Send</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="hint"><span>Press Enter to send · Shift + Enter for a new line</span><span id="counter">0 / 2000</span></div>
+      </form>
+      <div class="footer"><strong>Important:</strong> This is a temporary interface for testing. Responses depend on retrieved records and the configured Gemini API. Verify important facts against official sources; the assistant does not make official academic decisions.</div>
+    </section>
+  </main>
+  <script>
+    const messages = document.getElementById('messages');
+    const form = document.getElementById('chatForm');
+    const input = document.getElementById('question');
+    const sendBtn = document.getElementById('sendBtn');
+    const counter = document.getElementById('counter');
+    const clearBtn = document.getElementById('clearBtn');
+    let facultyContext = null;
+    let busy = false;
+
+    function scrollBottom() { messages.scrollTop = messages.scrollHeight; }
+    function addMessage(role, text, sources = []) {
+      const row = document.createElement('div');
+      row.className = `message ${role}`;
+      const avatar = document.createElement('div');
+      avatar.className = 'avatar';
+      avatar.textContent = role === 'user' ? 'YOU' : 'AI';
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      bubble.textContent = text;
+      if (sources.length) {
+        const sourceBox = document.createElement('div');
+        sourceBox.className = 'sources';
+        sources.forEach(source => {
+          try {
+            const url = new URL(source.url);
+            if (!['http:', 'https:'].includes(url.protocol)) return;
+            const link = document.createElement('a');
+            link.href = url.href;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = source.title || source.faculty || 'Open source';
+            sourceBox.appendChild(link);
+          } catch (_) { /* Ignore malformed source links. */ }
+        });
+        if (sourceBox.childElementCount) bubble.appendChild(sourceBox);
+      }
+      row.append(avatar, bubble);
+      messages.appendChild(row);
+      scrollBottom();
+      return row;
+    }
+    function setBusy(value) {
+      busy = value;
+      sendBtn.disabled = value;
+      input.disabled = value;
+      sendBtn.querySelector('span').textContent = value ? 'Thinking…' : 'Send';
+    }
+    async function sendQuestion(value) {
+      const question = (value || '').trim();
+      if (!question || busy) return;
+      addMessage('user', question);
+      input.value = '';
+      updateCounter();
+      setBusy(true);
+      const pending = addMessage('assistant', 'Searching the Module II faculty dataset…');
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question, faculty_context: facultyContext })
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.detail || 'The request could not be completed.');
+        pending.querySelector('.bubble').textContent = data.answer || 'No answer was returned.';
+        if (data.sources && data.sources.length) {
+          const sourceBox = document.createElement('div');
+          sourceBox.className = 'sources';
+          data.sources.forEach(source => {
+            try {
+              const url = new URL(source.url);
+              if (!['http:', 'https:'].includes(url.protocol)) return;
+              const link = document.createElement('a');
+              link.href = url.href;
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+              link.textContent = source.title || source.faculty || 'Open source';
+              sourceBox.appendChild(link);
+            } catch (_) { /* Ignore malformed source links. */ }
+          });
+          if (sourceBox.childElementCount) pending.querySelector('.bubble').appendChild(sourceBox);
+        }
+        if (data.faculty_context) facultyContext = data.faculty_context;
+      } catch (error) {
+        pending.querySelector('.bubble').textContent = `Sorry, I couldn't get a response. ${error.message}`;
+      } finally {
+        setBusy(false);
+        input.focus();
+        scrollBottom();
+      }
+    }
+    function updateCounter() { counter.textContent = `${input.value.length} / 2000`; }
+    form.addEventListener('submit', event => { event.preventDefault(); sendQuestion(input.value); });
+    input.addEventListener('input', updateCounter);
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Enter' && !event.shiftKey) {
+        event.preventDefault();
+        form.requestSubmit();
+      }
+    });
+    document.querySelectorAll('[data-question]').forEach(button => {
+      button.addEventListener('click', () => sendQuestion(button.dataset.question));
+    });
+    clearBtn.addEventListener('click', () => {
+      if (busy) return;
+      facultyContext = null;
+      messages.innerHTML = '';
+      addMessage('assistant', 'Chat cleared. Ask a new question about MNNIT CSED faculty.');
+    });
+  </script>
+</body>
+</html>
