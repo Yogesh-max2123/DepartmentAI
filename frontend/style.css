@@ -49,6 +49,7 @@ body {
 
 .message {
     max-width: 75%;
+    white-space: pre-wrap;
     padding: 12px 16px;
     margin-bottom: 12px;
     border-radius: 10px;
@@ -57,11 +58,13 @@ body {
 
 .bot-message {
     background: #e5e7eb;
+    white-space: pre-wrap;
     color: #111827;
 }
 
 .user-message {
     background: #2563eb;
+    white-space: pre-wrap;
     color: white;
     margin-left: auto;
 }
@@ -94,3 +97,29 @@ body {
 #send-button:hover {
     opacity: 0.9;
 }
+
+.meeting-btn {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+}
+.meeting-btn:hover { background-color: #e67e22; }
+
+.approve-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+}
+.approve-btn:hover { background-color: #2ecc71; }

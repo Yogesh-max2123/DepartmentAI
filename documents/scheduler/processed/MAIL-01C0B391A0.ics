@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DepartmentAI//Scheduling Agent//EN
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:f564b070-86e4-4028-93a2-da426d378dc0@departmentai.local
+DTSTAMP:20261023T134152Z
+DTSTART;TZID=Asia/Kolkata:20260907T140000
+DTEND;TZID=Asia/Kolkata:20260907T150000
+SUMMARY:DMPC Meeting
+DESCRIPTION:Review of DMPC Case: **Relevant ordinance clauses** - Clause 5.1: Stipendiary Masters' students are entitled to an annual...
+ORGANIZER;CN=Prof. Anil Kumar Srivastava:MAILTO:hod.cse@dept.mnnit.ac.in
+ATTENDEE;CN=Prof. Anil Kumar Srivastava:MAILTO:hod.cse@dept.mnnit.ac.in
+ATTENDEE;CN=Dr. Meera Joshi:MAILTO:meera.joshi@dept.mnnit.ac.in
+ATTENDEE;CN=Dr. Priya Malhotra:MAILTO:priya.malhotra@dept.mnnit.ac.in
+ATTENDEE;CN=Dr. Vikram Singh:MAILTO:vikram.singh@dept.mnnit.ac.in
+ATTENDEE;CN=Dr. Amitabh Rao:MAILTO:amitabh.rao@dept.mnnit.ac.in
+ATTENDEE;CN=Dr. Shalini Iyer:MAILTO:shalini.iyer@dept.mnnit.ac.in
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

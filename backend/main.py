@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.routes import router
+from backend.api.scheduler_routes import router as scheduler_router
 
 
 app = FastAPI(
@@ -22,3 +23,4 @@ app.add_middleware(
 )
 
 app.include_router(router)
+app.include_router(scheduler_router)

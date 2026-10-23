@@ -618,7 +618,8 @@ DepartmentAI-MTech/
 │   │   ├── pdf_parser.py
 │   │   ├── structure_parser.py
 │   │   ├── intelligent_chunker.py
-│   │   └── synthetic_data_generator.py
+│   │   ├── synthetic_data_generator.py
+│   │   └── synthetic_scheduler_data.py
 │   │
 │   └── embeddings/
 │       ├── embedding_generator.py
@@ -643,7 +644,12 @@ DepartmentAI-MTech/
 │   ├── main.py
 │   │
 │   ├── api/
-│   │   └── routes.py
+│   │   ├── routes.py
+│   │   └── scheduler_routes.py
+│   │
+│   ├── agents/
+│   │   ├── scheduling_agent.py
+│   │   └── scheduling_tools.py
 │   │
 │   ├── llm/
 │   │   └── gemini_client.py
@@ -669,12 +675,15 @@ DepartmentAI-MTech/
 │   ├── test_qa_pipeline.py
 │   ├── test_synthetic_data_generator.py
 │   ├── test_recommendation_formatting.py
+│   ├── test_scheduling_agent.py
 │   └── diagnose_mtech_chunks.py
 │
 ├── .env.example
 ├── requirements.txt
 ├── .gitignore
 ├── BUILD_HISTORY.md
+├── SCHEDULING_README.md
+├── SCHEDULING_BUILD_HISTORY.md
 └── README.md
 ```
 
@@ -1156,3 +1165,5 @@ Evaluation
 ```
 
 followed by traceability, API integration, and academic workflow automation.
+
+The Meeting Scheduling Agent is documented separately in `SCHEDULING_README.md` and `SCHEDULING_BUILD_HISTORY.md`. Generate its data with `python ai/ingestion/synthetic_scheduler_data.py`, then use `POST /schedule/propose` and `POST /schedule/approve`.

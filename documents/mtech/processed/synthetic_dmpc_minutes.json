@@ -9,7 +9,7 @@
   "institute": "Motilal Nehru National Institute of Technology Allahabad",
   "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
   "ordinance_clauses_used": 24,
-  "generated_at": "2026-10-20T16:42:05.391350+00:00",
+  "generated_at": "2026-10-22T12:01:18.288204+00:00",
   "total_records": 10,
   "records": [
     {
@@ -17,113 +17,112 @@
       "meeting_number": "1st DMPC meeting, AY 2022-23",
       "meeting_date": "2022-07-14",
       "department": "Department of Computer Science and Engineering",
-      "agenda_item_number": "Item 1",
+      "agenda_item_number": "1",
       "agenda_item": "Confirmation of minutes of the previous DMPC meeting",
       "attendance": [
-        "Head of Department (Chair)",
+        "Head of the Department (Chair)",
         "DMPC Convener",
-        "Dr. A. K. Sharma (Faculty Member)",
-        "Dr. P. Verma (Faculty Member)"
+        "Faculty Member 1",
+        "Faculty Member 2"
       ],
       "applicable_clauses": [
         "1.4"
       ],
-      "discussion": "The committee perused the minutes of the previous DMPC meeting held on 2022-05-10. No comments or discrepancies were received from any member. The members noted the administrative follow-ups conducted by the Office of the Dean (Academic).",
-      "resolution": "Resolved that the minutes of the previous DMPC meeting are confirmed as circulated.",
+      "discussion": "The committee perused the minutes of the previous DMPC meeting circulated by the office of the Dean (Academic) and noted that no comments or discrepancies were received from any member.",
+      "resolution": "Resolved that the minutes of the previous DMPC meeting are hereby confirmed as circulated.",
       "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2022/07-01, Date: 2022-07-14, Agenda Item: Confirmation of minutes of the previous DMPC meeting. The committee perused the minutes of the previous DMPC meeting held on 2022-05-10. No comments or discrepancies were received from any member. The members noted the administrative follow-ups conducted by the Office of the Dean (Academic) pursuant to Clause 1.4. Resolved that the minutes of the previous DMPC meeting are confirmed as circulated.",
+      "text": "Minute ID: DMPC/MIN/2022/07-01, Date: 2022-07-14, Agenda Item 1: Confirmation of minutes of the previous DMPC meeting. Discussion: The committee perused the minutes of the previous DMPC meeting circulated by the office of the Dean (Academic) and noted that no comments or discrepancies were received from any member. Applicable Clauses: 1.4. Resolution: Resolved that the minutes of the previous DMPC meeting are hereby confirmed as circulated.",
       "synthetic": true,
       "record_index": 1
     },
     {
       "minute_id": "DMPC/MIN/2022/08-03",
       "meeting_number": "2nd DMPC meeting, AY 2022-23",
-      "meeting_date": "2022-08-22",
+      "meeting_date": "2022-08-10",
       "department": "Department of Civil Engineering",
-      "agenda_item_number": "Item 3",
-      "agenda_item": "Consideration of Late Registration application for odd semester",
+      "agenda_item_number": "3",
+      "agenda_item": "Application for late registration by an M.Tech. student",
       "attendance": [
-        "Head of Department (Chair)",
+        "Head of the Department (Chair)",
         "DMPC Convener",
-        "Dr. S. R. Rao (Faculty Member)",
-        "Dr. M. K. Gupta (Faculty Member)"
+        "Faculty Member 1"
       ],
       "applicable_clauses": [
         "4.1"
       ],
-      "discussion": "The committee reviewed an application submitted by a full-time M.Tech. student seeking permission for late registration due to medical exigencies and delayed transit. The DMPC verified that as per Clause 4.1, no registration shall be allowed after the notified last date of registration except in special cases with the permission of the Dean (Academic) / Chairperson, Senate.",
-      "resolution": "Resolved to recommend the late registration request of the student to the Dean (Academic) for special approval, subject to submission of Form MP-02.",
-      "action_by": "Student / DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2022/08-03, Date: 2022-08-22, Agenda Item: Consideration of Late Registration application for odd semester. The committee reviewed an application submitted by a full-time M.Tech. student seeking permission for late registration due to medical exigencies and delayed transit. The DMPC verified Clause 4.1 regarding late registration restrictions. Resolved to recommend the late registration request of the student to the Dean (Academic) for special approval, subject to submission of Form MP-02.",
+      "discussion": "The committee considered an application submitted via form MP-02 by a full-time M.Tech. student requesting permission for late registration due to unforeseen family medical emergencies past the notified deadline.",
+      "resolution": "Resolved to recommend the late registration request to the Dean (Academic) / Chairperson, Senate for special consideration as no registration is normally allowed after the notified last date.",
+      "action_by": "Head of the Department",
+      "text": "Minute ID: DMPC/MIN/2022/08-03, Date: 2022-08-10, Agenda Item 3: Application for late registration by an M.Tech. student. Discussion: The committee considered an application submitted via form MP-02 by a full-time M.Tech. student requesting permission for late registration due to unforeseen family medical emergencies past the notified deadline. Applicable Clauses: 4.1. Resolution: Resolved to recommend the late registration request to the Dean (Academic) / Chairperson, Senate for special consideration as no registration is normally allowed after the notified last date.",
       "synthetic": true,
       "record_index": 2
     },
     {
-      "minute_id": "DMPC/MIN/2022/10-02",
+      "minute_id": "DMPC/MIN/2022/09-02",
       "meeting_number": "3rd DMPC meeting, AY 2022-23",
-      "meeting_date": "2022-10-18",
+      "meeting_date": "2022-09-05",
       "department": "Department of Electrical Engineering",
-      "agenda_item_number": "Item 2",
-      "agenda_item": "Allocation of Thesis Supervisor and Academic Advising",
+      "agenda_item_number": "2",
+      "agenda_item": "Sanction of Semester Leave for an M.Tech. student",
       "attendance": [
-        "Head of Department (Chair)",
+        "Head of the Department (Chair)",
         "DMPC Convener",
-        "Dr. N. Kumar (Faculty Member)",
-        "Dr. R. Mishra (Faculty Member)"
+        "Faculty Member 1",
+        "Faculty Member 2"
       ],
       "applicable_clauses": [
-        "4.2"
+        "5.2"
       ],
-      "discussion": "The committee discussed the assignment of thesis supervisors and course selection for newly admitted M.Tech. students. The DMPC noted that under Clause 4.2, a student registering for thesis credits must have a thesis supervisor assigned to him/her, and students shall be advised in the selection of courses by the DMPC.",
-      "resolution": "Resolved that the list of faculty supervisors assigned to first-year M.Tech. students for their thesis credits and course selection is approved as proposed.",
+      "discussion": "The committee reviewed an application for semester leave for one semester by an M.Tech. student citing prolonged medical treatment supported by hospital documents. The provisions for semester leave up to a maximum of two semesters were verified.",
+      "resolution": "Resolved that the request for semester leave is recommended for approval to the Dean (Academic), subject to valid reasons within the permissible limit of two semesters.",
       "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2022/10-02, Date: 2022-10-18, Agenda Item: Allocation of Thesis Supervisor and Academic Advising. The committee discussed the assignment of thesis supervisors and course selection for newly admitted M.Tech. students pursuant to Clause 4.2. Resolved that the list of faculty supervisors assigned to first-year M.Tech. students for their thesis credits and course selection is approved as proposed.",
+      "text": "Minute ID: DMPC/MIN/2022/09-02, Date: 2022-09-05, Agenda Item 2: Sanction of Semester Leave for an M.Tech. student. Discussion: The committee reviewed an application for semester leave for one semester by an M.Tech. student citing prolonged medical treatment supported by hospital documents. The provisions for semester leave up to a maximum of two semesters were verified. Applicable Clauses: 5.2. Resolution: Resolved that the request for semester leave is recommended for approval to the Dean (Academic), subject to valid reasons within the permissible limit of two semesters.",
       "synthetic": true,
       "record_index": 3
     },
     {
       "minute_id": "DMPC/MIN/2023/01-04",
       "meeting_number": "4th DMPC meeting, AY 2022-23",
-      "meeting_date": "2023-01-12",
+      "meeting_date": "2023-01-18",
       "department": "Department of Mechanical Engineering",
-      "agenda_item_number": "Item 4",
-      "agenda_item": "Application for Semester Leave",
+      "agenda_item_number": "4",
+      "agenda_item": "Allocation of Thesis Supervisor and Academic Advising",
       "attendance": [
-        "Head of Department (Chair)",
+        "Head of the Department (Chair)",
         "DMPC Convener",
-        "Dr. V. Tiwari (Faculty Member)",
-        "Dr. S. K. Singh (Faculty Member)"
+        "Faculty Member 1"
       ],
       "applicable_clauses": [
-        "5.2"
+        "4.2"
       ],
-      "discussion": "The DMPC evaluated an application from an M.Tech. student requesting a semester leave for the current semester due to severe unforeseen family circumstances. The committee verified that as per Clause 5.2, semester leave up to a maximum of two semesters may be sanctioned for valid reasons in the entire duration of the programme on the recommendation of DMPC and SMPC and approval of Dean (Academic).",
-      "resolution": "Resolved to recommend the semester leave application for one semester to the SMPC and the Dean (Academic) for final approval.",
+      "discussion": "The committee discussed the assignment of thesis supervisors for newly admitted M.Tech. students registering for thesis credits. It was noted that every student registering for thesis credits must have a thesis supervisor assigned.",
+      "resolution": "Resolved that the proposed list of thesis supervisors for second-year M.Tech. students is approved and finalized for academic advising.",
       "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2023/01-04, Date: 2023-01-12, Agenda Item: Application for Semester Leave. The DMPC evaluated an application from an M.Tech. student requesting a semester leave pursuant to Clause 5.2. Resolved to recommend the semester leave application for one semester to the SMPC and the Dean (Academic) for final approval.",
+      "text": "Minute ID: DMPC/MIN/2023/01-04, Date: 2023-01-18, Agenda Item 4: Allocation of Thesis Supervisor and Academic Advising. Discussion: The committee discussed the assignment of thesis supervisors for newly admitted M.Tech. students registering for thesis credits. It was noted that every student registering for thesis credits must have a thesis supervisor assigned. Applicable Clauses: 4.2. Resolution: Resolved that the proposed list of thesis supervisors for second-year M.Tech. students is approved and finalized for academic advising.",
       "synthetic": true,
       "record_index": 4
     },
     {
-      "minute_id": "DMPC/MIN/2023/03-05",
+      "minute_id": "DMPC/MIN/2023/04-05",
       "meeting_number": "5th DMPC meeting, AY 2022-23",
-      "meeting_date": "2023-03-15",
+      "meeting_date": "2023-04-12",
       "department": "Department of Electronics and Communication Engineering",
-      "agenda_item_number": "Item 5",
-      "agenda_item": "Review of Attendance Shortage and Examination Eligibility",
+      "agenda_item_number": "5",
+      "agenda_item": "Extension of Programme Duration for M.Tech. students",
       "attendance": [
-        "Head of Department (Chair)",
+        "Head of the Department (Chair)",
         "DMPC Convener",
-        "Dr. B. Das (Faculty Member)",
-        "Dr. K. L. Sen (Faculty Member)"
+        "Faculty Member 1",
+        "Faculty Member 2"
       ],
       "applicable_clauses": [
+        "7.2",
         "7.1"
       ],
-      "discussion": "The committee examined the attendance records of students for the ongoing semester. It was noted that students with less than 75% attendance in a subject shall not be allowed to appear in the End Semester Examination of that subject as mandated by Clause 7.1, which includes absence due to sports, medical leaves, and other types of leaves.",
-      "resolution": "Resolved that warning notices be issued to students whose attendance is falling close to the threshold, and ineligible candidates be barred from the End Semester Examinations in accordance with Clause 7.1.",
-      "action_by": "Course Coordinators / DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2023/03-05, Date: 2023-03-15, Agenda Item: Review of Attendance Shortage and Examination Eligibility. The committee examined attendance records pursuant to Clause 7.1. Resolved that warning notices be issued and ineligible candidates be barred from the End Semester Examinations in accordance with Clause 7.1.",
+      "discussion": "The committee evaluated requests from senior M.Tech. students seeking an extension of their programme duration beyond the normal minimum residence period, ensuring compliance with maximum duration limits.",
+      "resolution": "Resolved to forward the extension requests using forms MP-09a and MP-09b with positive recommendations to the competent authority for completion of graduation requirements.",
+      "action_by": "Head of the Department",
+      "text": "Minute ID: DMPC/MIN/2023/04-05, Date: 2023-04-12, Agenda Item 5: Extension of Programme Duration for M.Tech. students. Discussion: The committee evaluated requests from senior M.Tech. students seeking an extension of their programme duration beyond the normal minimum residence period, ensuring compliance with maximum duration limits. Applicable Clauses: 7.1, 7.2. Resolution: Resolved to forward the extension requests using forms MP-09a and MP-09b with positive recommendations to the competent authority for completion of graduation requirements.",
       "synthetic": true,
       "record_index": 5
     },
@@ -132,114 +131,114 @@
       "meeting_number": "6th DMPC meeting, AY 2023-24",
       "meeting_date": "2023-07-20",
       "department": "Department of Chemical Engineering",
-      "agenda_item_number": "Item 2",
-      "agenda_item": "Verification of Full-Time Non-Stipendiary and Sponsored Admissions",
+      "agenda_item_number": "2",
+      "agenda_item": "Review of Academic Deficiency and Grade Reports",
       "attendance": [
-        "Head of Department (Chair)",
+        "Head of the Department (Chair)",
         "DMPC Convener",
-        "Dr. P. K. Nayak (Faculty Member)",
-        "Dr. J. Goswami (Faculty Member)"
+        "Faculty Member 1"
+      ],
+      "applicable_clauses": [
+        "8.3.5",
+        "8.3.7"
+      ],
+      "discussion": "The committee reviewed grade reports issued at the end of the previous semester and discussed cases where grade reports were required to be withheld due to pending fee dues or indiscipline cases.",
+      "resolution": "Resolved that grade reports for students with uncleared Institute dues be withheld in accordance with ordinance guidelines.",
+      "action_by": "DMPC Convener",
+      "text": "Minute ID: DMPC/MIN/2023/07-02, Date: 2023-07-20, Agenda Item 2: Review of Academic Deficiency and Grade Reports. Discussion: The committee reviewed grade reports issued at the end of the previous semester and discussed cases where grade reports were required to be withheld due to pending fee dues or indiscipline cases. Applicable Clauses: 8.3.5, 8.3.7. Resolution: Resolved that grade reports for students with uncleared Institute dues be withheld in accordance with ordinance guidelines.",
+      "synthetic": true,
+      "record_index": 6
+    },
+    {
+      "minute_id": "DMPC/MIN/2023/10-06",
+      "meeting_number": "7th DMPC meeting, AY 2023-24",
+      "meeting_date": "2023-10-15",
+      "department": "Department of Biotechnology",
+      "agenda_item_number": "6",
+      "agenda_item": "Verification of Stipendiary and Non-Stipendiary Category Status",
+      "attendance": [
+        "Head of the Department (Chair)",
+        "DMPC Convener",
+        "Faculty Member 1",
+        "Faculty Member 2"
       ],
       "applicable_clauses": [
         "3.4.1.2",
         "3.4.1.3"
       ],
-      "discussion": "The DMPC verified the admission categories of newly admitted M.Tech. students for the academic session. The committee checked records for full-time non-stipendiary students under Clause 3.4.1.2 and full-time sponsored candidates under Clause 3.4.1.3 to ensure all employer sponsorship certificates and conditions are met.",
-      "resolution": "Resolved that the verified list of full-time non-stipendiary and sponsored students is accepted and forwarded to the academic section.",
+      "discussion": "The committee scrutinized the admission records of newly admitted full-time students to classify them correctly into Full-Time Non-Stipendiary and Full-Time Sponsored categories based on their funding and employment backing.",
+      "resolution": "Resolved that the student status classifications are verified and confirmed as per the documentary proof submitted during admission.",
       "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2023/07-02, Date: 2023-07-20, Agenda Item: Verification of Full-Time Non-Stipendiary and Sponsored Admissions. The DMPC verified admission categories under Clause 3.4.1.2 and Clause 3.4.1.3. Resolved that the verified list of full-time non-stipendiary and sponsored students is accepted and forwarded to the academic section.",
-      "synthetic": true,
-      "record_index": 6
-    },
-    {
-      "minute_id": "DMPC/MIN/2023/09-01",
-      "meeting_number": "7th DMPC meeting, AY 2023-24",
-      "meeting_date": "2023-09-11",
-      "department": "Department of Biotechnology",
-      "agenda_item_number": "Item 1",
-      "agenda_item": "Review of Part-Time Student Admissions",
-      "attendance": [
-        "Head of Department (Chair)",
-        "DMPC Convener",
-        "Dr. S. Roy (Faculty Member)",
-        "Dr. M. Sen (Faculty Member)"
-      ],
-      "applicable_clauses": [
-        "3.5.2"
-      ],
-      "discussion": "The committee reviewed applications for part-time M.Tech. admission. The DMPC noted that as per Clause 3.5.2, admission shall be done by DMSC/DMPC on the basis of screening considering candidate's experience, employment record, and employee recommendation followed by interview.",
-      "resolution": "Resolved that the screened candidates meeting the requirements of Clause 3.5.2 are recommended for provisional part-time admission.",
-      "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2023/09-01, Date: 2023-09-11, Agenda Item: Review of Part-Time Student Admissions. The committee reviewed part-time admissions pursuant to Clause 3.5.2. Resolved that the screened candidates meeting the requirements of Clause 3.5.2 are recommended for provisional part-time admission.",
+      "text": "Minute ID: DMPC/MIN/2023/10-06, Date: 2023-10-15, Agenda Item 6: Verification of Stipendiary and Non-Stipendiary Category Status. Discussion: The committee scrutinized the admission records of newly admitted full-time students to classify them correctly into Full-Time Non-Stipendiary and Full-Time Sponsored categories based on their funding and employment backing. Applicable Clauses: 3.4.1.2, 3.4.1.3. Resolution: Resolved that the student status classifications are verified and confirmed as per the documentary proof submitted during admission.",
       "synthetic": true,
       "record_index": 7
     },
     {
-      "minute_id": "DMPC/MIN/2023/11-06",
+      "minute_id": "DMPC/MIN/2024/01-03",
       "meeting_number": "8th DMPC meeting, AY 2023-24",
-      "meeting_date": "2023-11-28",
+      "meeting_date": "2024-01-22",
       "department": "Department of Computer Science and Engineering",
-      "agenda_item_number": "Item 6",
-      "agenda_item": "Withholding of Grade Reports due to Dues / Indiscipline",
+      "agenda_item_number": "3",
+      "agenda_item": "Constitution of Examination Board for M.Tech. Thesis Defense",
       "attendance": [
-        "Head of Department (Chair)",
+        "Head of the Department (Chair)",
         "DMPC Convener",
-        "Dr. A. K. Sharma (Faculty Member)",
-        "Dr. P. Verma (Faculty Member)"
-      ],
-      "applicable_clauses": [
-        "8.3.7"
-      ],
-      "discussion": "The committee discussed cases of pending institute dues and disciplinary actions against certain students. It was reiterated that in accordance with Clause 8.3.7, the grade report of a student shall be withheld if he/she has not paid his/her dues, or if there is a case of indiscipline pending against him/her.",
-      "resolution": "Resolved to notify the academic office to withhold the grade reports of the defaulting students until clearance of dues and resolution of pending disciplinary matters as per Clause 8.3.7.",
-      "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2023/11-06, Date: 2023-11-28, Agenda Item: Withholding of Grade Reports due to Dues / Indiscipline. The committee discussed grade withholding under Clause 8.3.7. Resolved to notify the academic office to withhold the grade reports of the defaulting students until clearance of dues and resolution of pending disciplinary matters.",
-      "synthetic": true,
-      "record_index": 8
-    },
-    {
-      "minute_id": "DMPC/MIN/2024/02-04",
-      "meeting_number": "9th DMPC meeting, AY 2023-24",
-      "meeting_date": "2024-02-14",
-      "department": "Department of Electrical Engineering",
-      "agenda_item_number": "Item 4",
-      "agenda_item": "Consideration of Programme Extension for M.Tech. Students",
-      "attendance": [
-        "Head of Department (Chair)",
-        "DMPC Convener",
-        "Dr. N. Kumar (Faculty Member)",
-        "Dr. R. Mishra (Faculty Member)"
-      ],
-      "applicable_clauses": [
-        "7.2"
-      ],
-      "discussion": "The DMPC evaluated requests from senior M.Tech. students exceeding their normal duration and seeking extension of their programme. The committee verified the maximum duration limits and extension rules stipulated under Clause 7.2.",
-      "resolution": "Resolved to recommend the programme extension requests for eligible students to the competent authority, contingent upon satisfactory research progress.",
-      "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2024/02-04, Date: 2024-02-14, Agenda Item: Consideration of Programme Extension for M.Tech. Students. The DMPC evaluated extension requests pursuant to Clause 7.2. Resolved to recommend the programme extension requests for eligible students to the competent authority, contingent upon satisfactory research progress.",
-      "synthetic": true,
-      "record_index": 9
-    },
-    {
-      "minute_id": "DMPC/MIN/2024/05-02",
-      "meeting_number": "10th DMPC meeting, AY 2023-24",
-      "meeting_date": "2024-05-10",
-      "department": "Department of Mechanical Engineering",
-      "agenda_item_number": "Item 2",
-      "agenda_item": "Post-Defense Thesis Resubmission and Examination Board Procedures",
-      "attendance": [
-        "Head of Department (Chair)",
-        "DMPC Convener",
-        "Dr. V. Tiwari (Faculty Member)",
-        "Dr. S. K. Singh (Faculty Member)"
+        "Faculty Member 1"
       ],
       "applicable_clauses": [
         "13.1"
       ],
-      "discussion": "The committee reviewed the case of a thesis resubmission recommended for modifications by the Examination Board. The DMPC noted that as per Clause 13.1, for resubmitted thesis incorporating suggestions, the oral examination shall be conducted by the same Examination Board unless members are unavailable, and rejected resubmissions must be reported to the Dean (Academic) through DMPC.",
-      "resolution": "Resolved that the same Examination Board be re-convened for the oral examination of the resubmitted thesis pursuant to Clause 13.1.",
+      "discussion": "The committee discussed the panel of examiners for the upcoming final thesis defense of graduating M.Tech. students. It was reiterated that oral examinations and re-submissions must strictly follow the prescribed examination board protocols.",
+      "resolution": "Resolved to approve the proposed Examination Board panels for the final thesis defenses and forward them for final approval.",
+      "action_by": "Head of the Department",
+      "text": "Minute ID: DMPC/MIN/2024/01-03, Date: 2024-01-22, Agenda Item 3: Constitution of Examination Board for M.Tech. Thesis Defense. Discussion: The committee discussed the panel of examiners for the upcoming final thesis defense of graduating M.Tech. students. It was reiterated that oral examinations and re-submissions must strictly follow the prescribed examination board protocols. Applicable Clauses: 13.1. Resolution: Resolved to approve the proposed Examination Board panels for the final thesis defenses and forward them for final approval.",
+      "synthetic": true,
+      "record_index": 8
+    },
+    {
+      "minute_id": "DMPC/MIN/2024/03-04",
+      "meeting_number": "9th DMPC meeting, AY 2023-24",
+      "meeting_date": "2024-03-11",
+      "department": "Department of Civil Engineering",
+      "agenda_item_number": "4",
+      "agenda_item": "Implementation of Circular regarding Part-Time Student Admission Rules",
+      "attendance": [
+        "Head of the Department (Chair)",
+        "DMPC Convener",
+        "Faculty Member 1",
+        "Faculty Member 2"
+      ],
+      "applicable_clauses": [
+        "3.4.2",
+        "3.5.2"
+      ],
+      "discussion": "The committee reviewed the circular received from the Dean (Academic) regarding the admission procedure for part-time students via form MP-01, based on screening of experience and employment records.",
+      "resolution": "Resolved to adopt the guidelines for part-time admissions and constitute a departmental screening subcommittee.",
       "action_by": "DMPC Convener",
-      "text": "Minute ID: DMPC/MIN/2024/05-02, Date: 2024-05-10, Agenda Item: Post-Defense Thesis Resubmission and Examination Board Procedures. The committee reviewed thesis resubmission guidelines under Clause 13.1. Resolved that the same Examination Board be re-convened for the oral examination of the resubmitted thesis pursuant to Clause 13.1.",
+      "text": "Minute ID: DMPC/MIN/2024/03-04, Date: 2024-03-11, Agenda Item 4: Implementation of Circular regarding Part-Time Student Admission Rules. Discussion: The committee reviewed the circular received from the Dean (Academic) regarding the admission procedure for part-time students via form MP-01, based on screening of experience and employment records. Applicable Clauses: 3.4.2, 3.5.2. Resolution: Resolved to adopt the guidelines for part-time admissions and constitute a departmental screening subcommittee.",
+      "synthetic": true,
+      "record_index": 9
+    },
+    {
+      "minute_id": "DMPC/MIN/2024/08-01",
+      "meeting_number": "10th DMPC meeting, AY 2024-25",
+      "meeting_date": "2024-08-19",
+      "department": "Department of Electrical Engineering",
+      "agenda_item_number": "1",
+      "agenda_item": "Review of attendance shortages and examination eligibility",
+      "attendance": [
+        "Head of the Department (Chair)",
+        "DMPC Convener",
+        "Faculty Member 1"
+      ],
+      "applicable_clauses": [
+        "7.1",
+        "8.3.2"
+      ],
+      "discussion": "The committee examined course-wise attendance data and noted that students with less than 75% attendance in a subject are barred from appearing in the End Semester Examination, keeping relative grading criteria in perspective.",
+      "resolution": "Resolved that warning notices be issued to students whose attendance is falling close to the threshold, and ineligible cases be barred from the end-semester examinations as per clause 7.1.",
+      "action_by": "Head of the Department",
+      "text": "Minute ID: DMPC/MIN/2024/08-01, Date: 2024-08-19, Agenda Item 1: Review of attendance shortages and examination eligibility. Discussion: The committee examined course-wise attendance data and noted that students with less than 75% attendance in a subject are barred from appearing in the End Semester Examination, keeping relative grading criteria in perspective. Applicable Clauses: 7.1, 8.3.2. Resolution: Resolved that warning notices be issued to students whose attendance is falling close to the threshold, and ineligible cases be barred from the end-semester examinations as per clause 7.1.",
       "synthetic": true,
       "record_index": 10
     }

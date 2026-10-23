@@ -122,6 +122,11 @@ Rules:
     as plain text lines with no numbering, bullets on the headings
     themselves, or extra titles:
 
+Format your response clearly using Markdown. 
+Use **bold** for the 5 required headings. 
+Use bullet points (-) for listing previous cases, deficiencies, and options. 
+Leave a blank line between each section.
+
 Relevant ordinance clauses
 Similar previous cases (citing the synthetic data)
 Identified deficiencies
