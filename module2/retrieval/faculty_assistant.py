@@ -60,7 +60,8 @@ def is_csed_faculty_related_question(question, has_faculty_context=False):
     """Reject clearly unrelated requests instead of sending them to faculty RAG."""
     q = (question or "").lower()
     domain_terms = (
-        "faculty", "professor", "prof.", "dr.", "doctor", "research area",
+        # Include the irregular plural: "faculties" does not contain "faculty".
+        "faculty", "faculties", "professor", "prof.", "dr.", "doctor", "research area",
         "research interest", "qualification", "education", "degree",
         "course", "taught", "publication", "publications", "paper", "papers",
         "journal", "conference", "doi", "citation", "thesis", "theses",
@@ -106,6 +107,51 @@ def requested_limit(question, default=DEFAULT_LIST_LIMIT):
     if not match:
         return default
     return max(1, min(int(match.group(1)), MAX_LIST_LIMIT))
+
+
+def asks_faculty_count(question):
+    """Recognize a request to count faculty records, not publications or other entities."""
+    q = (question or "").lower()
+    count_intent = any(
+        phrase in q
+        for phrase in (
+            "how many", "number of", "count of", "count the",
+            "total number", "total count", "total faculty", "total faculties",
+            "how much",
+        )
+    )
+    faculty_term = bool(re.search(
+        r"\b(?:faculty|faculties|faculty members|academic staff|professors?)\b", q
+    ))
+    other_entity = any(
+        term in q
+        for term in (
+            "publication", "publications", "paper", "papers",
+            "journal", "conference", "thesis", "theses", "student", "students",
+            "project", "projects", "achievement", "achievements",
+        )
+    )
+    return count_intent and faculty_term and not other_entity
+
+
+def faculty_count():
+    """Return exact active and total faculty-record counts from Module II PostgreSQL."""
+    sql = """
+        SELECT
+            COUNT(*) FILTER (WHERE is_active IS DISTINCT FROM FALSE) AS active_faculty,
+            COUNT(*) AS total_records,
+            COUNT(*) FILTER (WHERE is_active IS FALSE) AS inactive_records
+        FROM m2_faculties
+    """
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql)
+            row = cur.fetchone()
+    return {
+        "active_faculty": row[0],
+        "total_records": row[1],
+        "inactive_records": row[2],
+    }
 
 
 def asks_publication_count(question):
@@ -1070,9 +1116,27 @@ def run_analytics(question, faculty_id=None, faculty_ids=None,
     """Handle exact publication counts and ordered publication lists."""
     year_range = extract_year_range(question)
     q = question.lower()
+    is_faculty_total = asks_faculty_count(question)
     is_count = asks_publication_count(question)
     is_latest = asks_latest_publications(question)
     is_list = asks_publication_list(question)
+
+    if is_faculty_total:
+        counts = faculty_count()
+        print(
+            "\nActive faculty profiles in the Module II CSED database: "
+            f"{counts['active_faculty']}."
+        )
+        if counts["inactive_records"]:
+            print(
+                f"Database records: {counts['total_records']} total, "
+                f"including {counts['inactive_records']} inactive record(s)."
+            )
+        print(
+            "This is a count of records stored in the local Module II database; "
+            "it is not a fresh live count from the MNNIT website."
+        )
+        return True
 
     if not (is_count or is_latest or is_list):
         return False
