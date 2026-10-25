@@ -9,6 +9,11 @@ DepartmentAI is designed around two major modules:
 - **Module I:** Automation of Undergraduate (UG), Postgraduate (PG), and Ph.D. academic processes.
 - **Module II:** Faculty Profile, Research Information, and Institutional Reporting Automation.
 
+## Run the frontend
+
+For frontend API configuration, local startup, backend/CORS prerequisites, and
+troubleshooting, see the [Frontend README](./frontend/README.md).
+
 > **Human-in-the-loop principle:** DepartmentAI assists with information retrieval, application classification, document analysis, recommendations, scheduling, minutes preparation, and report generation. All official decisions, recommendations, minutes, and institutional reports remain subject to verification and approval by authorized officials.
 
 ---
