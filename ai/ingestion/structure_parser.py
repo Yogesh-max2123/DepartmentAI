@@ -16,25 +16,20 @@ OUTPUT_JSON = BASE_DIR / "documents" / "phd" / "processed" / "phd_ordinance_stru
 # The Doctoral Ordinance PDF has 75 physical pages:
 #   pages 1-8   : front matter (cover, vision/mission, TOC, preamble, nomenclature)
 #   pages 9-41  : ordinance body (Sections 1 to 18)
-#   pages 42-69 : annexure forms (DP-01 to DP-24, DP-12a/DP-12b, and GL-1)
+#   pages 42-69 : annexure forms (DP-01 to DP-24 and GL-1)
 #   pages 70-75 : blank "Notes" pages
 BODY_START, BODY_END = 9, 41
 FORM_START, FORM_END = 42, 69
 NOTES_START = 70
-EXPECTED_PAGE_COUNT = 75
 
 # A section heading is a line such as "1. INTRODUCTION" or
-# "8. ACADEMIC PERFORMANCE REQUIREMENTS". The known section titles
-# are used to distinguish headings from ordinary numbered list items
-# such as "1. Initiate the process of Ph.D. admission." that also
-# occur inside a section. Some headings are split across two lines
-# (for example "2." followed by "ACADEMIC SESSION (AS)").
+# "8. Teaching and Evaluation". The known section titles are used to
+# distinguish headings from ordinary numbered list items such as
+# "1. Doctoral Programme" that also occur inside a section.
 SECTION_RE = re.compile(r"^\s*(\d{1,2})\.?\s+(.+?)\s*$")
-BARE_SECTION_RE = re.compile(r"^\s*(\d{1,2})\.\s*$")
 CLAUSE_RE = re.compile(r"^\s*(\d{1,2}(?:\.\d+){1,3})\.?\s+(\S.*?)\s*$")
-BARE_CLAUSE_RE = re.compile(r"^\s*(\d{1,2}(?:\.\d+){1,3})\.?\s*$")
 FORM_RE = re.compile(
-    r"\b(DP|GL)\s*[-–]?\s*(\d{1,2})(?:\s*\(([abAB])\)|([abAB]))?",
+    r"\b(DP|GL)\s*[-–]?\s*(\d{1,2})(?:\(([abAB])\)|([abAB]))?",
     re.I,
 )
 CLAUSE_REF_RE = re.compile(
@@ -53,13 +48,13 @@ SECTION_TITLES = {
     "3": "ADMISSION",
     "4": "REGISTRATION",
     "5": "LEAVE RULES",
-    "6": "PERMISSION TO ATTEND OTHER ACADEMIC INSTITUTIONS / INDUSTRY AS NON DEGREE STUDENTS",
+    "6": "PERMISSION TO ATTEND OTHER ACADEMIC INSTITUTIONS /INDUSTRY AS NON DEGREE STUDENTS",
     "7": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
     "8": "ACADEMIC PERFORMANCE REQUIREMENT",
     "9": "COMPREHENSIVE EXAMINATION",
     "10": "STATE-OF-THE-ART SEMINAR",
     "11": "OPEN SEMINAR",
-    "12": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+    "12": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
     "13": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
     "14": "DEGREE REQUIREMENTS",
     "15": "STIPENDS/FELLOWSHIPS, SCHOLARSHIPS, PRIZES AND MEDALS",
@@ -77,7 +72,7 @@ SECTION_HEADING_PREFIXES = {
     "3": "ADMISSION",
     "4": "REGISTRATION",
     "5": "LEAVE RULES",
-    "6": "PERMISSION TO ATTEND",
+    "6": "PERMISSION TO ATTEND OTHER ACADEMIC INSTITUTIONS",
     "7": "PROGRAMME REQUIREMENTS",
     "8": "ACADEMIC PERFORMANCE REQUIREMENT",
     "9": "COMPREHENSIVE EXAMINATION",
@@ -93,9 +88,8 @@ SECTION_HEADING_PREFIXES = {
 }
 
 # Physical annexure form records. The Doctoral Ordinance contains
-# twenty-six physical form records: DP-01 to DP-24 (DP-12 appears as
-# two separate forms, DP-12a and DP-12b) and the GL-1 thesis
-# submission guideline sheet. DP-17 and DP-19 each span two pages.
+# DP-01 to DP-24 (DP-12 appears as DP-12(a) and DP-12(b); DP-17 spans
+# two pages) and the GL-1 thesis submission guideline sheet.
 FORM_PAGE_IDS = {
     42: "DP-01",
     43: "DP-02",
@@ -125,13 +119,8 @@ FORM_PAGE_IDS = {
     69: "GL-1",
 }
 
-FORM_PAGE_ENDS = {
-    "DP-17": 60,
-    "DP-19": 63,
-}
-
 FORM_TITLES = {
-    "DP-01": "ACADEMIC REGISTRATION DETAILS",
+    "DP-01": "Academic Registration Details",
     "DP-02": "Student Research Committee (SRC)",
     "DP-03": "Semester Progress Report of the Candidate",
     "DP-04": "Adding/Dropping of Course",
@@ -145,14 +134,14 @@ FORM_TITLES = {
     "DP-12a": "Supervisor Selection (To be filled by the candidate)",
     "DP-12b": "Supervisor Selection (To be filled by the Faculty)",
     "DP-13": "Change / Addition of Supervisor(s)",
-    "DP-14": "CERTIFICATE (Plagiarism check)",
+    "DP-14": "CERTIFICATE (Plagiarism / similarity check)",
     "DP-15": "List of Suggested Examiners for Ph.D Thesis Evaluation Board",
     "DP-16": "List of Suggested Examiners for Ph.D. Oral Board",
     "DP-17": "Thesis Evaluation Report",
     "DP-18": "Report of Ph.D Thesis Oral Board",
     "DP-19": "FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS",
     "DP-20": "UNDERTAKING",
-    "DP-21": "Report of Ph.D. Thesis Oral Board (final thesis certificate)",
+    "DP-21": "Report of Ph.D. Thesis Oral Board (final thesis certification)",
     "DP-22": "Marks & Grade for Mini-Project",
     "DP-23": "Request for Director's Nominee in Review Committee",
     "DP-24": "Report of Ph.D. Progress Review Committee",
@@ -166,38 +155,39 @@ def clean_lines(text: str) -> list[str]:
     return [line.strip() for line in text.splitlines()]
 
 
-def merge_split_lines(lines: list[str]) -> list[str]:
+SECTION_NUMBER_ONLY_RE = re.compile(r"^\s*(\d{1,2})\.\s*$")
+CLAUSE_NUMBER_ONLY_RE = re.compile(r"^\s*(\d{1,2}(?:\.\d+){1,3})\.?\s*$")
+
+
+def logical_lines(text: str) -> list[str]:
     """
-    Join a bare numbered heading/clause line with the following title
-    line. The Doctoral Ordinance frequently prints identifiers such as
-    "2." or "1.1" on one line and the title on the next.
+    Join ordinance headings/clauses that PyMuPDF split across two lines.
+
+    Examples:
+        "2." + "ACADEMIC SESSION (AS)" -> "2. ACADEMIC SESSION (AS)"
+        "1.1" + "Doctoral Programme" -> "1.1 Doctoral Programme"
     """
-    merged = []
+    raw = [line.strip() for line in text.splitlines() if line.strip()]
+    joined: list[str] = []
     index = 0
 
-    while index < len(lines):
-        line = lines[index]
-        next_line = lines[index + 1] if index + 1 < len(lines) else ""
+    while index < len(raw):
+        current = raw[index]
+        nxt = raw[index + 1] if index + 1 < len(raw) else ""
 
-        if BARE_SECTION_RE.match(line) and next_line:
-            merged.append(f"{line} {next_line}")
-            index += 2
-            continue
+        is_section_number = bool(SECTION_NUMBER_ONLY_RE.match(current))
+        is_clause_number = bool(CLAUSE_NUMBER_ONLY_RE.match(current))
 
-        if (
-            BARE_CLAUSE_RE.match(line)
-            and next_line
-            and not BARE_SECTION_RE.match(next_line)
-            and not BARE_CLAUSE_RE.match(next_line)
-        ):
-            merged.append(f"{line} {next_line}")
-            index += 2
-            continue
+        if (is_section_number or is_clause_number) and nxt:
+            if not SECTION_NUMBER_ONLY_RE.match(nxt) and not CLAUSE_NUMBER_ONLY_RE.match(nxt):
+                joined.append(f"{current} {nxt}")
+                index += 2
+                continue
 
-        merged.append(line)
+        joined.append(current)
         index += 1
 
-    return merged
+    return joined
 
 
 def load_pages() -> list[dict]:
@@ -222,7 +212,7 @@ def match_section_heading(line: str) -> dict | None:
 
     A real heading is a line such as "3. ADMISSION" whose text after the
     number starts with the known section title. Numbered list items such
-    as "1. Initiate the process of Ph.D. admission." are rejected.
+    as "1. Doctoral Programme" that also occur inside a section are rejected.
     """
     match = SECTION_RE.match(line)
 
@@ -256,7 +246,7 @@ def detect_sections(pages: list[dict]) -> list[dict]:
         if not (BODY_START <= page_no <= BODY_END):
             continue
 
-        for line in merge_split_lines(clean_lines(page["text"])):
+        for line in logical_lines(page["text"]):
             heading = match_section_heading(line)
 
             if heading:
@@ -300,7 +290,7 @@ def detect_clauses(pages: list[dict], sections: list[dict]) -> list[dict]:
     Important:
     Section context is tracked by heading position rather than by page number.
     This handles pages containing the end of one section and the beginning of
-    another (for example PDF pages 11, 18, 22 and 27).
+    another (for example PDF pages 12, 16, 18 and 19).
     """
     clauses = []
     current_section = None
@@ -311,7 +301,7 @@ def detect_clauses(pages: list[dict], sections: list[dict]) -> list[dict]:
         if not (BODY_START <= page_no <= BODY_END):
             continue
 
-        for line in merge_split_lines(clean_lines(page["text"])):
+        for line in logical_lines(page["text"]):
             heading = match_section_heading(line)
 
             if heading:
@@ -397,18 +387,14 @@ def normalize_form_id(prefix: str, number: str, suffix: str | None) -> str:
 
 def detect_forms(pages: list[dict]) -> list[dict]:
     """
-    Detect the annexure forms DP-01 to DP-24 (including DP-12a and
-    DP-12b) and the GL-1 thesis guideline record.
+    Detect the annexure forms DP-01 to DP-24 (including DP-12a and DP-12b)
+    and the GL-1 thesis guideline record.
 
     Each physical form starts on its own physical page, so the page is used
     as the authoritative anchor while the text is still scanned for the
-    form title and clause references. DP-17 and DP-19 each continue onto
-    the following page.
+    form title and clause references.
     """
     forms = []
-    pages_by_number = {
-        page["page_number"]: page for page in pages
-    }
 
     for page_no in range(FORM_START, FORM_END + 1):
         form_id = FORM_PAGE_IDS.get(page_no)
@@ -416,27 +402,22 @@ def detect_forms(pages: list[dict]) -> list[dict]:
         if not form_id:
             continue
 
-        end_page = FORM_PAGE_ENDS.get(form_id, page_no)
-        page_texts = []
+        page = next(
+            (p for p in pages if p["page_number"] == page_no),
+            None,
+        )
 
-        for form_page_no in range(page_no, end_page + 1):
-            page = pages_by_number.get(form_page_no)
-            if page is not None:
-                page_texts.append(page["text"])
-
-        if not page_texts:
+        if page is None:
             continue
-
-        combined_text = "\n".join(page_texts)
 
         forms.append(
             {
                 "form_id": form_id,
                 "start_page": page_no,
-                "end_page": end_page,
-                "page_count": end_page - page_no + 1,
+                "end_page": page_no,
+                "page_count": 1,
                 "title": FORM_TITLES.get(form_id, ""),
-                "clauses": extract_form_clause_refs(combined_text),
+                "clauses": extract_form_clause_refs(page["text"]),
             }
         )
 
@@ -449,7 +430,7 @@ def detect_form_references(pages: list[dict], clauses: list[dict]) -> dict:
     ordinance body.
 
     The page lines are first joined so that references split across line
-    breaks (for example "(Form: DP-" followed by "08)") are detected. The
+    breaks (for example "(Form: DP-" followed by "03)") are detected. The
     clause context is then resolved from the nearest detected clause that
     appears before the reference on the same page.
 
@@ -465,7 +446,7 @@ def detect_form_references(pages: list[dict], clauses: list[dict]) -> dict:
         if not (BODY_START <= page_no <= BODY_END):
             continue
 
-        lines = merge_split_lines(clean_lines(page["text"]))
+        lines = clean_lines(page["text"])
         joined = " ".join(lines)
 
         # Positions of real clauses on this page.
@@ -606,10 +587,9 @@ def validate(
                 f"Invalid form range: {form['form_id']}"
             )
 
-    if len(pages) != EXPECTED_PAGE_COUNT:
+    if len(pages) != 75:
         warnings.append(
-            f"Expected {EXPECTED_PAGE_COUNT} pages for this source, "
-            f"got {len(pages)}"
+            f"Expected 75 pages for this source, got {len(pages)}"
         )
 
     if not form_references:
@@ -649,7 +629,7 @@ def build_structure(pages: list[dict]) -> dict:
     return {
         "document": {
             "name": "MNNIT Doctoral Ordinance",
-            "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+            "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
             "total_pages": len(pages),
             "body_pages": [BODY_START, BODY_END],
             "form_pages": [FORM_START, FORM_END],

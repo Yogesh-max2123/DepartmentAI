@@ -5,7 +5,7 @@ Purpose:
     Extract text from the Doctoral Programmes Ordinance PDF page-by-page.
 
 Input:
-    documents/phd/Ordinances for Doctoral Programme 2023.pdf
+    documents/phd/Ordinances_for_Doctoral_Programm2023.pdf
 
 Output:
     documents/phd/processed/
@@ -39,7 +39,7 @@ PDF_PATH = (
     PROJECT_ROOT
     / "documents"
     / "phd"
-    / "Ordinances for Doctoral Programme 2023.pdf"
+    / "Ordinances_for_Doctoral_Programm2023.pdf"
 )
 
 OUTPUT_DIR = PROJECT_ROOT / "documents" / "phd" / "processed"
@@ -92,8 +92,8 @@ def detect_sections(text: str) -> list[str]:
     Examples:
         1. INTRODUCTION
         1.3 Department Doctoral Programme Committee (DDPC)
-        8.2 Appeal against Termination
-        13.3 Ph. D. Oral Examination
+        8.1 Termination from the Programme
+        12.3 Constitution of Comprehensive Examination Board
     """
 
     patterns = [
@@ -257,7 +257,7 @@ def save_results(pages: list[dict]) -> None:
             "filename": PDF_PATH.name,
             "document_type": "Doctoral Programmes Ordinance",
             "institution": "Motilal Nehru National Institute of Technology Allahabad",
-            "source": "Ordinances for Doctoral Programme 2023.pdf",
+            "source": "Ordinances_for_Doctoral_Programm2023.pdf",
             "total_pages": len(pages),
         },
         "pages": pages,

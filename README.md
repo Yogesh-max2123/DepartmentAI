@@ -4,7 +4,7 @@
 
 DepartmentAI is an **AI-powered academic governance and department automation system** designed to assist academic committees, faculty, and authorized officials in managing academic processes, institutional knowledge, documentation, and administrative workflows.
 
-This repository is the **Doctoral Programmes (DDPC / SDPC) module** of DepartmentAI. It follows exactly the same architecture, file layout, pipeline, and techniques as the undergraduate (UG) and Masters' (M.Tech.) modules, but its authoritative knowledge source is the **MNNIT Allahabad Ordinances for Doctoral Programmes (2023)**.
+This repository is the **Doctoral Programmes (DDPC / SDPC) module** of DepartmentAI. It follows the same architecture, file layout, pipeline, and techniques as the undergraduate (UG) and Masters (M.Tech.) modules, but its authoritative knowledge source is the **MNNIT Allahabad Ordinances for Doctoral Programmes (2023)**.
 
 The system combines **Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), document intelligence, semantic search, vector databases, and workflow automation** to provide reliable, context-aware assistance while keeping final academic decisions under authorized human control.
 
@@ -32,7 +32,7 @@ DepartmentAI aims to provide a centralized intelligent system where authorized u
 
 For example:
 
-> **User:** What is the minimum SPI/CPI requirement for continuing in the programme?
+> **User:** What is the minimum SPI/CPI requirement for continuing in the Ph.D. programme?
 
 > **DepartmentAI:** The minimum SPI/CPI requirement for continuing in the programme is equal to 6.5.
 
@@ -50,7 +50,7 @@ The major objectives of DepartmentAI are:
 4. Use semantic search to retrieve relevant institutional information.
 5. Generate concise, grounded answers using an LLM.
 6. Automate repetitive academic and administrative workflows.
-7. Assist academic committees such as DUGC, DMPC, and DDPC.
+7. Assist academic committees such as DUGC, DMPC, and DDPC (default doctoral committee: DDPC).
 8. Provide document and knowledge management capabilities.
 9. Support multilingual interaction in future versions.
 10. Maintain human authorization for official academic decisions.
@@ -60,13 +60,17 @@ The major objectives of DepartmentAI are:
 
 ## High-Level Architecture
 
-The current system follows a RAG-based architecture:
+The current system follows a Recommendation-Agent RAG architecture:
 
 ```text
                     ┌─────────────────────┐
                     │       User          │
-                    │  Natural Language   │
-                    │      Question       │
+                    │  Question / Case    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │     Guardrails      │
                     └──────────┬──────────┘
                                │
                                ▼
@@ -79,10 +83,10 @@ The current system follows a RAG-based architecture:
                     ┌─────────────────────┐
                     │ PostgreSQL +        │
                     │      pgvector       │
-                    │ Semantic Retrieval  │
+                    │ Mixed Retrieval     │
+                    │ ordinance / cases / │
+                    │ minutes / circulars │
                     └──────────┬──────────┘
-                               │
-                         Top Candidates
                                │
                                ▼
                     ┌─────────────────────┐
@@ -90,20 +94,20 @@ The current system follows a RAG-based architecture:
                     │     Reranking       │
                     └──────────┬──────────┘
                                │
-                          Top 5–8 Chunks
-                               │
                                ▼
                     ┌─────────────────────┐
-                    │      LLM API        │
-                    │  Grounded Answer    │
+                    │ Recommendation Agent│
+                    │      Gemini API     │
                     └──────────┬──────────┘
                                │
                                ▼
                     ┌─────────────────────┐
-                    │ Clean Natural       │
-                    │ Language Response   │
+                    │ Draft Resolution    │
+                    │  (five headings)    │
                     └─────────────────────┘
 ```
+
+The Meeting Scheduling Agent is independent of RAG. After a draft resolution is shown, the frontend can call `POST /schedule/propose` and `POST /schedule/approve` for a DDPC meeting.
 
 ---
 
@@ -114,14 +118,14 @@ The current system follows a RAG-based architecture:
 | Programming Language      | Python                                                        |
 | Backend Framework         | FastAPI                                                       |
 | Database                  | PostgreSQL 18                                                 |
-| Vector Database Extension | pgvector 0.8.6                                                |
+| Vector Database Extension | pgvector                                                      |
 | Embedding Model           | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` |
 | Embedding Dimension       | 384                                                           |
-| LLM                       | Gemini API                                                    |
-| ORM / Database Access     | SQLAlchemy / psycopg2                                         |
+| LLM                       | Gemini API (`gemini-3.5-flash-lite`) via `google-genai`       |
+| ORM / Database Access     | psycopg2                                                      |
 | Data Processing           | NumPy / Pandas                                                |
 | PDF Processing            | PyMuPDF                                                       |
-| Environment               | Windows 11 + VS Code                                          |
+| Frontend                  | Vanilla HTML / CSS / JavaScript                               |
 | API Server                | Uvicorn                                                       |
 
 ---
@@ -130,29 +134,35 @@ The current system follows a RAG-based architecture:
 
 This implementation focuses on the **Doctoral Programmes Ordinance and DDPC/SDPC-related academic processes**.
 
-The current authoritative knowledge source is the:
+The current authoritative knowledge sources are:
 
 **MNNIT Allahabad Ordinances for Doctoral Programmes (2023)**
+
+plus ordinance-grounded **synthetic** DDPC records that stand in for archives that are not available:
+
+* similar previously decided cases (`past_case`)
+* previous minutes of DDPC meetings (`meeting_minute`)
+* departmental office orders / circulars (`circular`)
 
 The ordinance was approved by the Board of Governors in its Seventy-third (73rd) meeting held on August 10, 2023 vide Resolution No. 73.13 (A).
 
 The ordinance contains academic rules covering areas such as:
 
-* Introduction
+* Introduction (DDPC / SDPC / SRC)
 * Academic Session
-* Admission
+* Admission (IDSC / DDSC)
 * Registration
 * Leave Rules
-* Permission to Attend Other Academic Institutions / Industry as Non Degree Students
+* Permission to Attend Other Academic Institutions / Industry as Non-Degree Students
 * Programme Requirements and Grading System
 * Academic Performance Requirement
 * Comprehensive Examination
 * State-of-the-Art Seminar
 * Open Seminar
-* Appointment of Thesis Supervisor(s) and Constitution of Various Committees/Boards
+* Appointment of Thesis Supervisor(s) and Constitution of Committees / Boards
 * Thesis Submission, Evaluation and Examination
-* Degree Requirements
-* Stipends/Fellowships, Scholarships, Prizes and Medals
+* Degree Requirements and Withdrawal
+* Stipends / Fellowships, Scholarships, Prizes and Medals
 * Conduct and Discipline
 * Waiver of Requirements in Special Cases
 * Amendments
@@ -168,7 +178,7 @@ DepartmentAI uses RAG to reduce hallucination and ensure that answers are based 
 The retrieval pipeline is:
 
 ```text
-Official Document
+Official Ordinance PDF
        │
        ▼
 PDF Extraction
@@ -179,40 +189,35 @@ Structure Detection
        ▼
 Intelligent Chunking
        │
-       ▼
-Embedding Generation
-       │
-       ▼
-PostgreSQL + pgvector
-       │
-       ▼
-Semantic Search
-       │
-       ▼
-Keyword / Semantic Reranking
-       │
-       ▼
-Relevant Context
-       │
-       ▼
-LLM
-       │
-       ▼
-Grounded Answer
+       ├──────────────────────────────┐
+       ▼                              ▼
+Embedding Generation         Gemini synthetic generator
+(ordinance chunks)           (cases / minutes / circulars)
+       │                              │
+       └──────────────┬───────────────┘
+                      ▼
+            PostgreSQL + pgvector
+                      │
+                      ▼
+         Mixed semantic + keyword retrieval
+                      │
+                      ▼
+            Recommendation Agent (Gemini)
+                      │
+                      ▼
+            Five-heading draft resolution
 ```
 
 ---
 
 ## Document Processing Pipeline
 
-The document ingestion pipeline consists of several stages.
-
 ### 1. PDF Parsing
 
 The original ordinance PDF is processed using **PyMuPDF**.
 
 ```text
-Ordinances for Doctoral Programme 2023.pdf
+Ordinances_for_Doctoral_Programm2023.pdf
        ↓
 Text Extraction
        ↓
@@ -229,13 +234,15 @@ The extracted text is analyzed to identify:
 * Form references
 * Page ranges
 
+PyMuPDF often splits a heading number onto its own line (`2.` then `ACADEMIC SESSION`). The structure parser joins those logical lines before matching.
+
 The current ordinance processing identified:
 
 ```text
 18 unique ordinance sections (Sections 1 to 18)
 73 unique ordinance clauses
 26 physical form records
-26 unique form IDs (DP-01 to DP-24, DP-12a/DP-12b, and GL-1)
+26 unique form IDs (DP-01 to DP-24, DP-12a / DP-12b, and GL-1)
 ```
 
 ### 3. Intelligent Chunking
@@ -247,7 +254,7 @@ Current dataset:
 ```text
 117 ordinance chunks
 +
-  26 form chunks
+ 26 form chunks
 =
 143 total chunks
 ```
@@ -255,9 +262,9 @@ Current dataset:
 Chunking parameters include:
 
 ```text
-Target size: 1800 characters
-Maximum size: 2400 characters
-Overlap: 250 characters
+Target size: 2500 characters
+Maximum size: 3200 characters
+Overlap: 600 characters
 ```
 
 ### 4. Embedding Generation
@@ -277,43 +284,19 @@ Batch size: 16
 Normalized embeddings: Yes
 ```
 
-Current embedding dataset:
-
-```text
-143 × 384
-```
-
 ---
 
 ## Database
 
 DepartmentAI currently uses PostgreSQL with pgvector.
 
-### Database
-
 ```text
-departmentai
+Database: departmentai
 ```
 
-### PostgreSQL Version
+### Database Schema
 
-```text
-PostgreSQL 18
-```
-
-### pgvector Version
-
-```text
-0.8.6
-```
-
----
-
-## Database Schema
-
-### `documents`
-
-Stores source document information.
+#### `documents`
 
 ```text
 id
@@ -325,9 +308,7 @@ total_pages
 created_at
 ```
 
-### `sections`
-
-Stores document sections.
+#### `sections`
 
 ```text
 id
@@ -339,9 +320,7 @@ end_page
 created_at
 ```
 
-### `knowledge_chunks`
-
-Stores searchable knowledge chunks and embeddings.
+#### `knowledge_chunks`
 
 ```text
 id
@@ -399,13 +378,9 @@ combined_score = (
 
 This combines semantic similarity with keyword relevance.
 
-The purpose is to prevent situations where a semantically similar but contextually unrelated chunk is ranked first.
-
 ---
 
 ## LLM Answer Generation
-
-The next stage of the system uses an **LLM API** to convert retrieved ordinance content into a clean natural-language answer.
 
 The LLM does not receive the entire ordinance.
 
@@ -423,23 +398,30 @@ Send question + context to LLM
 Generate grounded answer
 ```
 
-The LLM is instructed to:
+The Recommendation Agent is instructed to:
 
-* Answer only using retrieved ordinance content.
-* Ignore unrelated portions of retrieved chunks.
-* Preserve important numbers and conditions.
-* Avoid hallucination.
-* Avoid adding external/general knowledge.
-* Clearly indicate when the retrieved content is insufficient.
-* Produce concise and understandable answers.
+* Use only retrieved ordinance clauses, similar previous cases, DDPC minutes, and circulars.
+* Cite synthetic previous cases by case id, date, clauses, and recorded decision.
+* Preserve important numbers, forms, and conditions.
+* Avoid hallucination and outside knowledge.
+* Identify deficiencies from the question and retrieved context.
+* Propose possible courses of action without making a final decision.
+* Draft an initial resolution for human review.
+* Format every answer with these exact headings:
+
+```text
+Relevant ordinance clauses
+Similar previous cases (citing the synthetic data)
+Identified deficiencies
+Possible course of action
+Initial draft resolution
+```
+
+If `GEMINI_API_KEY` is missing, the API process still starts. Live `/ask` answers and live minutes drafting require a key. Scheduler tools and minutes fallback drafting work without it.
 
 ---
 
 ## Grounding and Reliability
-
-A major design goal is preventing the AI from inventing academic rules.
-
-The intended behavior is:
 
 ```text
 Official Ordinance
@@ -453,20 +435,9 @@ Answer based ONLY on Context
 
 If the retrieved content does not contain enough information, the system should not guess.
 
-For example:
-
-```text
-The available ordinance content does not provide
-enough information to answer this question.
-```
-
-This is particularly important because academic and administrative decisions can have real consequences.
-
 ---
 
 ## Human-in-the-Loop Governance
-
-DepartmentAI is designed as an **assistive system**, not an autonomous decision-maker.
 
 The AI can:
 
@@ -491,13 +462,9 @@ Rejection
 Final Academic Decision
 ```
 
-This architecture ensures that AI assistance does not replace institutional authority.
-
 ---
 
 ## Planned Academic Modules
-
-The long-term system is intended to support:
 
 ### Undergraduate
 
@@ -507,137 +474,111 @@ The long-term system is intended to support:
 * Degree requirements
 * Minor programmes
 * Honours
-* Research programmes
 * Academic deficiencies
 
 ### Postgraduate
 
-* DMPC-related processes (Masters' module)
+* DMPC-related processes
 * Academic requirements
 * Registration
 * Thesis-related workflows
 
-### Ph.D.
+### Ph.D. (this repository)
 
 * DDPC processes
+* Comprehensive Examination
+* Supervisor allocation
+* Thesis extension
 * Research-related workflows
 * Academic requirements
 * Progress-related workflows
 
 ---
 
-## Planned Multilingual Chatbot
+## Core File Purpose
 
-A future chatbot will allow students and faculty to ask questions such as:
-
-```text
-What documents are required for this application?
-
-Am I eligible for this programme?
-
-What does the ordinance say about late registration?
-
-What happens if my academic performance becomes deficient?
-
-What is the status of my application?
-
-What deficiency exists in my submission?
-```
-
-The chatbot will use approved:
-
-* Ordinances
-* Rules
-* Regulations
-* Circulars
-* Notifications
-* Previous authorized decisions
-
-The chatbot will provide information and assistance but will **not independently approve or reject applications**.
-
----
-
-## Planned Agentic Workflow
-
-Future versions will introduce specialized AI agents.
-
-A conceptual architecture is:
-
-```text
-                    DepartmentAI
-                         │
-              ┌──────────┼──────────┐
-              │          │          │
-              ▼          ▼          ▼
-        Knowledge     Document    Workflow
-          Agent        Agent        Agent
-              │          │          │
-              └──────────┼──────────┘
-                         │
-                         ▼
-                 Human Verification
-                         │
-                         ▼
-                 Authorized Decision
-```
-
-Potential agents include:
-
-* Knowledge Retrieval Agent
-* Document Processing Agent
-* Eligibility Analysis Agent
-* Application Validation Agent
-* Deficiency Detection Agent
-* Workflow Agent
-* Report Generation Agent
-* Minutes Generation Agent
+| Path | Purpose |
+| ---- | ------- |
+| `ai/ingestion/pdf_parser.py` | Extract page text from the Doctoral ordinance PDF. |
+| `ai/ingestion/structure_parser.py` | Detect 18 sections, clauses, DP/GL forms; join split heading lines. |
+| `ai/ingestion/intelligent_chunker.py` | Build retrieval chunks from structure + page text. |
+| `ai/ingestion/synthetic_data_generator.py` | Gemini-backed synthetic DDPC cases / minutes / circulars. |
+| `ai/ingestion/synthetic_scheduler_data.py` | Mock CSE committees (DUGC / DMPC / DDPC) and calendar block-list. |
+| `ai/embeddings/embedding_config.py` | Embedding model name, paths, batch size. |
+| `ai/embeddings/embedding_generator.py` | Write `phd_ordinance_embeddings.json`. |
+| `backend/ingest_knowledge_base.py` | Load ordinance + synthetic JSON into PostgreSQL/pgvector. |
+| `backend/main.py` | FastAPI app, CORS, `/ask` + `/schedule/*` routers. |
+| `backend/api/routes.py` | `POST /ask` Recommendation Agent endpoint. |
+| `backend/api/scheduler_routes.py` | Propose / approve meetings; minutes generate with Gemini fallback. |
+| `backend/llm/gemini_client.py` | Gemini client; starts without a key, fails only on live generate. |
+| `backend/rag/qa_pipeline.py` | Retrieve mixed evidence and generate the five-heading draft. |
+| `backend/rag/guardrails.py` | Scope checks (doctoral / DDPC vocabulary). |
+| `backend/rag/conversation_manager.py` | Follow-up rewrite (Ph.D. CPI example). |
+| `backend/rag/source_formatter.py` | Source citation labels. |
+| `backend/retrieval/semantic_search.py` | Hybrid pgvector + keyword retrieval. |
+| `backend/agents/scheduling_tools.py` | Five Python tools; default slots 09:30–16:30. |
+| `backend/agents/scheduling_agent.py` | Gemini function-calling wrapper + deterministic fallback. |
+| `frontend/index.html` | Chat UI titled Doctoral Programmes Ordinance Assistant. |
+| `frontend/app.js` | Posts to `/ask`; default committee `DDPC`, range `2026-09-14 to 2026-09-25`. |
+| `frontend/style.css` | Chat and meeting-button styles. |
+| `documents/phd/Ordinances_for_Doctoral_Programm2023.pdf` | Authoritative RAG source. |
+| `documents/phd/processed/*.json` | Pages, structure, chunks, embeddings, synthetic KB. |
+| `documents/scheduler/processed/` | Committee DB, calendar restrictions, mock `.ics` / minutes. |
 
 ---
 
 ## Project Structure
 
 ```text
-DepartmentAI-PhD/
-│
-├── venv/
+DepartmentAI-Replace-2026/
 │
 ├── ai/
 │   ├── ingestion/
 │   │   ├── pdf_parser.py
 │   │   ├── structure_parser.py
-│   │   └── intelligent_chunker.py
-│   │
+│   │   ├── intelligent_chunker.py
+│   │   ├── synthetic_data_generator.py
+│   │   └── synthetic_scheduler_data.py
 │   └── embeddings/
 │       ├── embedding_generator.py
 │       └── embedding_config.py
 │
 ├── documents/
-│   └── phd/
-│       ├── Ordinances for Doctoral Programme 2023.pdf
-│       │
-│       └── processed/
-│           ├── phd_ordinance_pages.json
-│           ├── phd_ordinance_text.txt
-│           ├── phd_ordinance_structure.json
-│           ├── phd_ordinance_chunks.json
-│           └── phd_ordinance_embeddings.json
+│   ├── phd/
+│   │   ├── Ordinances_for_Doctoral_Programm2023.pdf
+│   │   └── processed/
+│   │       ├── phd_ordinance_pages.json
+│   │       ├── phd_ordinance_text.txt
+│   │       ├── phd_ordinance_structure.json
+│   │       ├── phd_ordinance_chunks.json
+│   │       ├── phd_ordinance_embeddings.json
+│   │       ├── synthetic_past_cases.json
+│   │       ├── synthetic_ddpc_minutes.json
+│   │       └── synthetic_circulars.json
+│   ├── calendar/
+│   │   └── academic_calendar_rotated_compressed.pdf
+│   └── scheduler/processed/
+│       ├── academic_calendar.txt
+│       ├── academic_calendar_restrictions.json
+│       ├── synthetic_committee_db.json
+│       └── PROP-*_minutes.md
 │
 ├── backend/
 │   ├── ingest_knowledge_base.py
 │   ├── main.py
-│   │
 │   ├── api/
-│   │   └── routes.py
-│   │
+│   │   ├── routes.py
+│   │   └── scheduler_routes.py
+│   ├── agents/
+│   │   ├── scheduling_agent.py
+│   │   └── scheduling_tools.py
 │   ├── llm/
 │   │   └── gemini_client.py
-│   │
 │   ├── rag/
 │   │   ├── qa_pipeline.py
 │   │   ├── guardrails.py
 │   │   ├── conversation_manager.py
 │   │   └── source_formatter.py
-│   │
 │   └── retrieval/
 │       └── semantic_search.py
 │
@@ -646,46 +587,22 @@ DepartmentAI-PhD/
 │   ├── app.js
 │   └── style.css
 │
-├── tests/
-│   ├── test_gemini_api.py
-│   ├── test_gemini_client.py
-│   ├── test_guardrails.py
-│   ├── test_qa_pipeline.py
-│   └── diagnose_phd_chunks.py
-│
 ├── .env.example
 ├── requirements.txt
 ├── .gitignore
 ├── BUILD_HISTORY.md
+├── SCHEDULING_README.md
+├── SCHEDULING_BUILD_HISTORY.md
 └── README.md
 ```
 
----
-
-## Development Environment
-
-The project is currently developed on:
-
-```text
-Windows 11
-Python 3.14.6
-VS Code
-PostgreSQL 18
-```
-
-The Python environment uses a project-local virtual environment:
-
-```text
-venv/
-```
-
-The virtual environment is intentionally excluded from version control.
+Do not put scheduler JSON under `documents/phd/processed/`. That directory is the RAG knowledge base.
 
 ---
 
 ## Security
 
-Sensitive credentials must never be committed to GitHub.
+Sensitive credentials must never be committed.
 
 The repository excludes:
 
@@ -693,28 +610,25 @@ The repository excludes:
 .env
 API keys
 Database passwords
-Proxy credentials
-Model caches
 Virtual environments
 Local databases
 Log files
 ```
 
-API keys should be stored through environment variables.
-
-Example:
+Example placeholders (copy from `.env.example`):
 
 ```env
+DEPARTMENTAI_DB_PASSWORD=your_database_password_here
 GEMINI_API_KEY=your_api_key_here
 ```
 
-> Never commit the actual API key to GitHub.
+Never commit the actual API key.
 
 ---
 
 ## Testing Strategy
 
-DepartmentAI will be evaluated using representative academic questions.
+DepartmentAI will be evaluated using representative doctoral questions.
 
 Initial test questions include:
 
@@ -725,33 +639,19 @@ Initial test questions include:
 
 3. What are the eligibility requirements for admission to the Ph.D. programme?
 
-4. What happens if a student's academic performance becomes deficient?
+4. What happens if a scholar fails the Comprehensive Examination twice?
 
 5. What is the maximum duration allowed for the Ph.D. programme?
 
-6. What is the process for late registration?
+6. What is the process for change or addition of Thesis Supervisor?
 
 7. What are the rules regarding semester leave?
 
-8. What is the procedure for thesis submission?
+8. What is the procedure for thesis submission after Open Seminar?
 
 9. What are the requirements for the award of the degree?
 
-10. What is the constitution of the Thesis Evaluation Board?
-```
-
-Each test evaluates:
-
-```text
-Question
-   ↓
-Retrieved Context
-   ↓
-LLM Answer
-   ↓
-Correctness
-   ↓
-Grounding
+10. What is the constitution of DDPC / SDPC / SRC?
 ```
 
 The primary evaluation criterion is:
@@ -764,296 +664,269 @@ The primary evaluation criterion is:
 
 | Component                        | Status         |
 | -------------------------------- | -------------- |
-| Project structure                | ✅ Complete     |
-| Python environment               | ✅ Complete     |
-| PDF parsing                      | ✅ Complete     |
-| Structure parsing                | ✅ Complete     |
-| Clause detection                 | ✅ Complete     |
-| Intelligent chunking             | ✅ Complete     |
-| 143 knowledge chunks             | ✅ Complete     |
-| Embedding generation             | ⏳ Pending      |
-| 143 × 384 embeddings             | ⏳ Pending      |
-| Local embedding model            | ✅ Complete     |
-| PostgreSQL 18                    | ✅ Complete     |
-| pgvector 0.8.6                   | ✅ Complete     |
-| Database schema                  | ✅ Complete     |
-| Document ingestion               | ✅ Complete     |
-| 143 chunks in PostgreSQL         | ⏳ Pending      |
-| Semantic retrieval               | ✅ Complete     |
-| Keyword reranking                | ✅ Complete     |
-| LLM answer generation            | 🚧 In Progress |
-| Retrieval evaluation             | 🚧 In Progress |
-| Metadata correction              | ⏳ Planned      |
-| Traceability validation          | ⏳ Planned      |
-| FastAPI integration              | ⏳ Planned      |
-| Multilingual chatbot             | ⏳ Planned      |
-| Agentic workflows                | ⏳ Planned      |
-| DDPC automation                  | ⏳ Planned      |
-| SDPC automation                  | ⏳ Planned      |
-
----
-
-## Development Roadmap
-
-```text
-Phase 1
-Project Foundation
-        ↓
-Phase 2
-Document Intelligence
-        ↓
-Phase 3
-Knowledge Extraction
-        ↓
-Phase 4
-Chunking + Embeddings
-        ↓
-Phase 5
-PostgreSQL + pgvector
-        ↓
-Phase 6
-Semantic Retrieval
-        ↓
-Phase 7
-LLM Answer Generation
-        ↓
-Phase 8
-Retrieval Evaluation
-        ↓
-Phase 9
-Metadata + Traceability
-        ↓
-Phase 10
-FastAPI Backend
-        ↓
-Phase 11
-Chatbot Interface
-        ↓
-Phase 12
-Application Workflows
-        ↓
-Phase 13
-AI Agents
-        ↓
-Phase 14
-DUGC / DMPC / DDPC Automation
-        ↓
-Phase 15
-Institutional Reporting
-```
+| Project structure                | Complete       |
+| PDF parsing                      | Complete       |
+| Structure parsing                | Complete       |
+| Clause detection                 | Complete       |
+| Intelligent chunking             | Complete       |
+| 143 knowledge chunks             | Complete       |
+| Embedding generation             | Local model required |
+| PostgreSQL + pgvector ingestion  | Local DB required |
+| Semantic retrieval               | Code complete  |
+| LLM recommendation generation    | Code complete (needs `GEMINI_API_KEY`) |
+| Draft-resolution formatting      | Complete       |
+| Synthetic past cases / minutes / circulars | Complete |
+| Mixed retrieval (4 chunk types)  | Complete       |
+| FastAPI integration              | Complete       |
+| DDPC scheduling defaults         | Complete       |
+| Minutes generate fallback        | Complete       |
+| Multilingual chatbot             | Planned        |
 
 ---
 
 ## Design Principles
 
-DepartmentAI follows these principles:
-
-### 1. Accuracy First
-
-Correct academic information is more important than unnecessary system complexity.
-
-### 2. Grounded AI
-
-LLMs should answer using authoritative institutional sources.
-
-### 3. Human Oversight
-
-AI assists officials but does not replace institutional decision-making.
-
-### 4. Incremental Development
-
-Complex infrastructure is introduced only when required.
-
-### 5. Privacy and Security
-
-Sensitive institutional information and credentials must be protected.
-
-### 6. Traceability
-
-The system should eventually allow answers to be traced back to:
-
-```text
-Document
-   ↓
-Section
-   ↓
-Clause
-   ↓
-Page
-   ↓
-Retrieved Chunk
-   ↓
-Generated Answer
-```
-
-### 7. Maintainability
-
-The architecture should remain understandable and maintainable rather than introducing unnecessary distributed infrastructure prematurely.
+1. **Accuracy First** — Correct academic information over unnecessary complexity.
+2. **Grounded AI** — LLMs answer using authoritative institutional sources.
+3. **Human Oversight** — AI assists officials but does not replace institutional decision-making.
+4. **Incremental Development** — Complex infrastructure only when required.
+5. **Privacy and Security** — Credentials stay in `.env`.
+6. **Traceability** — Answers should trace to document / section / clause / page / chunk.
+7. **Maintainability** — Same layout as the UG and M.Tech. modules.
 
 ---
 
-## Getting Started
+## Getting Started (from scratch)
 
-## 1. Clone the Repository
+Run every command from the repository root.
 
-```bash
-git clone <your-private-repository-url>
-cd DepartmentAI-PhD
-```
-
-## 2. Create a Virtual Environment
+### 1. Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate it on Windows:
+Linux / macOS:
+
+```bash
+source venv/bin/activate
+```
+
+Windows:
 
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-## 3. Install Dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 4. Configure Environment Variables
+`requirements.txt` lists `google-genai` (not `google-generativeai`).
 
-Create a local `.env` file (a template is provided in `.env.example`):
+### 3. Configure environment variables
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and fill:
 
 ```env
 DEPARTMENTAI_DB_PASSWORD=your_database_password_here
 GEMINI_API_KEY=your_api_key_here
 ```
 
-Never commit `.env`.
+`GEMINI_API_KEY` is required for live `/ask` answers and for `synthetic_data_generator.py`. The scheduler and minutes fallback work without it. The API process starts even if the key is missing.
 
-## 5. Build the Knowledge Base (Offline Pipeline)
-
-Run the ingestion, structure, chunking, and embedding stages:
+### 4. Build the ordinance knowledge files (offline)
 
 ```bash
 python ai/ingestion/pdf_parser.py
 python ai/ingestion/structure_parser.py
 python ai/ingestion/intelligent_chunker.py
+```
+
+Expected console (structure parser):
+
+```text
+PDF pages          : 75
+Sections detected  : 18
+Clauses detected   : 73
+Form records       : 26
+Unique form IDs    : 26
+Validation         : PASS
+```
+
+Expected console (chunker):
+
+```text
+Total chunks       : 143
+Ordinance chunks   : 117
+Form chunks        : 26
+Unique clauses     : 73
+Unique forms       : 26
+Validation         : PASS
+```
+
+Generate embeddings (downloads the sentence-transformer model on first run):
+
+```bash
 python ai/embeddings/embedding_generator.py
 ```
 
-## 6. Start PostgreSQL
+Optional — regenerate synthetic DDPC cases / minutes / circulars (needs `GEMINI_API_KEY`). Pre-written JSON already exists under `documents/phd/processed/`:
 
-Ensure PostgreSQL is running and the `departmentai` database is available.
+```bash
+python ai/ingestion/synthetic_data_generator.py
+```
 
-## 7. Verify pgvector
+Generate scheduler data:
 
-Inside PostgreSQL:
+```bash
+python ai/ingestion/synthetic_scheduler_data.py
+```
+
+Expected:
+
+```text
+Committees           : {'DUGC': 7, 'DMPC': 6, 'DDPC': 7}
+```
+
+### 5. Start PostgreSQL and enable pgvector
+
+Ensure PostgreSQL is running and the `departmentai` database exists.
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
-Verify:
+Schema expected by `backend/ingest_knowledge_base.py`:
 
 ```sql
-SELECT extversion
-FROM pg_extension
-WHERE extname = 'vector';
+CREATE TABLE documents (
+    id              SERIAL PRIMARY KEY,
+    title           TEXT,
+    file_name       TEXT,
+    document_type   TEXT,
+    version         TEXT,
+    total_pages     INTEGER,
+    created_at      TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE sections (
+    id              SERIAL PRIMARY KEY,
+    document_id     INTEGER REFERENCES documents(id),
+    section_number  TEXT,
+    title           TEXT,
+    start_page      INTEGER,
+    end_page        INTEGER,
+    created_at      TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE knowledge_chunks (
+    id              SERIAL PRIMARY KEY,
+    document_id     INTEGER REFERENCES documents(id),
+    section_id      INTEGER REFERENCES sections(id),
+    chunk_index     INTEGER,
+    chunk_type      TEXT,
+    clause_number   TEXT,
+    chunk_text      TEXT,
+    page_start      INTEGER,
+    page_end        INTEGER,
+    form_id         TEXT,
+    metadata        JSONB,
+    embedding       vector(384),
+    created_at      TIMESTAMP DEFAULT NOW()
+);
 ```
 
-## 8. Load the Knowledge Base into PostgreSQL
+Insert a `documents` row for:
+
+```text
+file_name     = Ordinances_for_Doctoral_Programm2023.pdf
+document_type = Doctoral Ordinance
+total_pages   = 75
+```
+
+Insert the 18 section rows for that document.
+
+### 6. Load the knowledge base
 
 ```bash
-python backend/ingest_knowledge_base.py
+python backend/ingest_knowledge_base.py --replace
 ```
 
-## 9. Run the API
+Other options:
+
+```bash
+python backend/ingest_knowledge_base.py --synthetic-only --replace
+python backend/ingest_knowledge_base.py --skip-synthetic --replace
+```
+
+### 7. Run the API
+
+From the repository root (so `backend` is importable):
 
 ```bash
 uvicorn backend.main:app --reload
 ```
 
-## 10. Open the Frontend
+Default URL: `http://127.0.0.1:8000`.
 
-Open `frontend/index.html` in a browser (or serve it locally on port 5500).
+### 8. Serve the frontend
 
----
+CORS allows `http://127.0.0.1:5500` and `http://localhost:5500`.
 
-## Current Implementation Notes
-
-The project intentionally avoids unnecessary infrastructure at the current development stage.
-
-The current architecture does **not** require:
-
-* Kubernetes
-* Redis
-* Microservices
-* Distributed databases
-* Complex message queues
-* Large local LLMs
-* Model training
-* Fine-tuning
-
-The focus is currently:
-
-```text
-Correctness
-     ↓
-Reliable Retrieval
-     ↓
-Grounded Answers
-     ↓
-Testing
-     ↓
-Traceability
-     ↓
-Workflow Automation
-     ↓
-Scalability
+```bash
+cd frontend
+python -m http.server 5500
 ```
 
----
+Open `http://127.0.0.1:5500`.
 
-## Future Enhancements
+Try a DDPC-style prompt such as:
 
-Potential future improvements include:
+```text
+A full-time Ph.D. scholar failed the first Comprehensive Examination. Form DP-09 is on record. Prepare a DDPC recommendation.
+```
 
-* Multilingual academic chatbot
-* OCR for scanned documents
-* Advanced document classification
-* Application document validation
-* Eligibility analysis
-* Deficiency detection
-* Automated report generation
-* AI-assisted meeting minutes
-* Committee workflow automation
-* Faculty information management
-* Institutional analytics
-* Advanced citation and traceability
-* Role-based access control
-* Audit logs
-* Notification systems
-* Human approval workflows
-* Additional academic ordinances
-* DUGC / DMPC / DDPC automation
+The agent should return the five draft-resolution headings. After a draft resolution, the UI offers **Propose DDPC Meeting** (`committee_name: DDPC`, `date_range: 2026-09-14 to 2026-09-25`).
 
 ---
 
-## Contribution
+## Recommendation Agent Knowledge Types
 
-This project is currently being developed as an academic and research-oriented system.
+| `chunk_type`         | Source                                              | Real / synthetic |
+| -------------------- | --------------------------------------------------- | ---------------- |
+| `ordinance_clause`   | Doctoral ordinance body                             | Real             |
+| `form`               | DP / GL annexure forms                              | Real             |
+| `past_case`          | `synthetic_past_cases.json`                         | Synthetic        |
+| `meeting_minute`     | `synthetic_ddpc_minutes.json`                       | Synthetic        |
+| `circular`           | `synthetic_circulars.json`                          | Synthetic        |
 
-Future contributions may include:
+Synthetic records are demonstration stand-ins for previous minutes, office orders, and decided cases. The Recommendation Agent is instructed to cite them as synthetic demonstration records.
 
-* New document processors
-* Retrieval improvements
-* Evaluation datasets
-* Workflow modules
-* Agent implementations
-* UI improvements
-* Testing
-* Security enhancements
-* Institutional integrations
+Typical synthetic case themes: Comprehensive Examination failures, thesis extensions, supervisor allocation / change.
+
+---
+
+## Meeting Scheduling Agent
+
+Documented in `SCHEDULING_README.md` and `SCHEDULING_BUILD_HISTORY.md`.
+
+Default doctoral committee is **DDPC** (Departmental Doctoral Programme Committee), matching Clause 1.3 of the ordinance. DUGC and DMPC remain valid scheduler committees so the shared architecture is unchanged.
+
+Default candidate slot starts: `09:30`, `10:30`, `11:30`, `14:30`, `15:30`, `16:30`.
+
+Mock CSE DDPC roster (fictitious):
+
+* HoD: Prof. Leela Krishnan
+* Convener: Dr. Sameer Qureshi
+* Member Secretary: Dr. Tanvi Kapoor
+* Members include Nandini Rao, Harish Talwar, Aisha Rahman, Gautam Deshpande, Pooja Bhatia, Rajan Khurana, Yusuf Pathan, Arvind Menon, Ritu Banerjee (roles vary by committee)
 
 ---
 
@@ -1067,14 +940,6 @@ The system does not replace authorized institutional officials or official unive
 
 ---
 
-## License
-
-This project is currently intended for academic/research purposes.
-
-License information will be added as the project reaches its appropriate release stage.
-
----
-
 ## Project Status
 
 **DepartmentAI (Ph.D.) is actively under development.**
@@ -1082,15 +947,3 @@ License information will be added as the project reaches its appropriate release
 Current focus:
 
 > **Building a reliable RAG-based academic knowledge assistant for the Doctoral Programmes ordinance and DDPC/SDPC processes.**
-
-The immediate milestone is:
-
-```text
-Reliable Retrieval
-        +
-Grounded LLM Answer Generation
-        +
-Evaluation
-```
-
-followed by traceability, API integration, and academic workflow automation.

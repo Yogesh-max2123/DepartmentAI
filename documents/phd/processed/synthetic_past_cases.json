@@ -1,0 +1,299 @@
+{
+  "synthetic": true,
+  "disclaimer": "Synthetic demonstration data generated from the official Doctoral Programme ordinance. Not real institutional records.",
+  "grounded_in": "MNNIT Doctoral Ordinance",
+  "source_ordinance": "Ordinances_for_Doctoral_Programm2023.pdf",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "generated_at": "2026-10-24T04:48:09.695410+00:00",
+  "document": "Synthetic Previously Decided DDPC Cases",
+  "source_file": "synthetic_past_cases.json",
+  "chunk_type": "past_case",
+  "ordinance_clauses_used": 18,
+  "total_records": 12,
+  "records": [
+    {
+      "case_id": "DDPC/2024/CSE/014",
+      "meeting_date": "2024-04-18",
+      "meeting_reference": "DDPC/CSE/2023-24/07",
+      "department": "Computer Science and Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Second Comprehensive Examination after first-attempt failure",
+      "student_ref": "Ph.D./CSE/2022/014",
+      "applicable_clauses": [
+        "9",
+        "12.3",
+        "8.1"
+      ],
+      "applicable_forms": [
+        "DP-08",
+        "DP-09"
+      ],
+      "facts": "Full-time stipendiary scholar (Course Code-11) failed the first Comprehensive Examination. Supervisor proposed a second board via Form DP-08. Coursework CPI is 7.1 with no N/F grades.",
+      "deficiencies": "First-attempt report (DP-09) recorded unsatisfactory answers in two core areas. No second-attempt date had been notified.",
+      "discussion_summary": "Members noted Clause 9 permits only one additional Comprehensive Examination. A second failure requires termination by the Head, reported to the Senate.",
+      "decision": "Recommended subject to compliance",
+      "resolution": "Resolved that a second Comprehensive Examination be conducted for Ph.D./CSE/2022/014 as permitted by Clause 9, with the board constituted under Clause 12.3. The scholar shall be informed that a second failure shall lead to termination.",
+      "text": "DDPC/2024/CSE/014 dated 2024-04-18. Subject: Second Comprehensive Examination after first-attempt failure. Scholar Ph.D./CSE/2022/014 failed the first Comprehensive Examination. Clauses 9, 12.3 and 8.1 apply. Forms DP-08 and DP-09. Decision: recommended subject to compliance. A second attempt may be held; a second failure requires termination.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2024/ECE/021",
+      "meeting_date": "2024-05-09",
+      "meeting_reference": "DDPC/ECE/2023-24/09",
+      "department": "Electronics and Communication Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Doctoral supervisor allocation using departmental roster",
+      "student_ref": "Ph.D./ECE/2024/003",
+      "applicable_clauses": [
+        "12.1"
+      ],
+      "applicable_forms": [
+        "DP-12a",
+        "DP-12b"
+      ],
+      "facts": "Newly admitted full-time scholar submitted Form DP-12(a) with three faculty preferences. First preference already supervises six Code-11 scholars.",
+      "deficiencies": "First-preference faculty at the Clause 12.1(11) cap of six Code-11 scholars.",
+      "discussion_summary": "DDPC applied the roster for equitable allocation. Second-preference faculty confirmed willingness on DP-12(b) and is below the cap.",
+      "decision": "Recommended",
+      "resolution": "Resolved that Dr. (second preference) be appointed Thesis Supervisor of Ph.D./ECE/2024/003. SRC shall be constituted within one month on Form DP-02 as required by Clause 12.2.",
+      "text": "DDPC/2024/ECE/021 dated 2024-05-09. Subject: Doctoral supervisor allocation. Scholar Ph.D./ECE/2024/003. Clause 12.1 and Forms DP-12a/DP-12b. First preference at six Code-11 scholars. Decision: recommended. Second-preference faculty appointed; SRC to follow on DP-02.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2023/ME/033",
+      "meeting_date": "2023-11-16",
+      "meeting_reference": "DDPC/ME/2023-24/04",
+      "department": "Mechanical Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Ph.D. thesis submission extension beyond Open Seminar",
+      "student_ref": "Ph.D./ME/2019/011",
+      "applicable_clauses": [
+        "7.3",
+        "11",
+        "13.1"
+      ],
+      "applicable_forms": [
+        "DP-11",
+        "DP-14"
+      ],
+      "facts": "Scholar delivered a satisfactory Open Seminar. Thesis was not submitted within the permitted window. Similarity index on a draft was 18%.",
+      "deficiencies": "Similarity index 18% exceeds the Clause 13.1 limit of below 15%. DP-14 certificate not issuable. Extension request lacked a revised submission timeline.",
+      "discussion_summary": "Members noted that if the extended period lapses, Open Seminar must be repeated with Chairperson SDPC approval. Plagiarism above 15% bars submission.",
+      "decision": "Deferred",
+      "resolution": "Resolved that the extension is deferred until the scholar reduces similarity below 15% (Form DP-14) and files a dated submission plan through the Supervisor and Convener DDPC.",
+      "text": "DDPC/2023/ME/033 dated 2023-11-16. Subject: Ph.D. thesis submission extension. Scholar Ph.D./ME/2019/011. Clauses 7.3, 11, 13.1. Similarity 18% exceeds 15%. Decision: deferred pending DP-14 compliance and a revised timeline.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2024/CE/008",
+      "meeting_date": "2024-02-12",
+      "meeting_reference": "DDPC/CE/2023-24/05",
+      "department": "Civil Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Change / addition of Thesis Supervisor",
+      "student_ref": "Ph.D./CE/2021/006",
+      "applicable_clauses": [
+        "12.1",
+        "12.2"
+      ],
+      "applicable_forms": [
+        "DP-13",
+        "DP-02"
+      ],
+      "facts": "Solo supervisor proceeded on leave exceeding one year. Scholar requested an additional supervisor on Form DP-13 with no-objection of the existing supervisor.",
+      "deficiencies": "Revised SRC (DP-02) not enclosed with DP-13.",
+      "discussion_summary": "Clause 12.1(9) requires an additional supervisor when a solo supervisor is on leave over one year. Open Seminar, if already delivered, remains valid only subject to Clause 12.1(8) if supervisor change is approved.",
+      "decision": "Recommended subject to compliance",
+      "resolution": "Resolved that the additional supervisor be approved under Clause 12.1, subject to submission of a revised SRC on Form DP-02 within two weeks.",
+      "text": "DDPC/2024/CE/008 dated 2024-02-12. Subject: Change/addition of supervisor. Scholar Ph.D./CE/2021/006. Clauses 12.1 and 12.2. Forms DP-13 and DP-02. Decision: recommended subject to revised SRC.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2024/EE/019",
+      "meeting_date": "2024-03-07",
+      "meeting_reference": "DDPC/EE/2023-24/06",
+      "department": "Electrical Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Academic deficiency: SPI below 6.5 in coursework semester",
+      "student_ref": "Ph.D./EE/2023/017",
+      "applicable_clauses": [
+        "8",
+        "8.1",
+        "8.2"
+      ],
+      "applicable_forms": [
+        "DP-03"
+      ],
+      "facts": "First-semester SPI 6.1, CPI 6.1. Semester progress report DP-03 recorded two C grades and one B. Scholar is Code-11 stipendiary.",
+      "deficiencies": "SPI/CPI below the Clause 8 minimum of 6.5. No mercy/waiver petition on record.",
+      "discussion_summary": "Clause 8 sets minimum SPI/CPI 6.5 for continuation. Termination pathways in 8.1 and appeal via DDPC and SDPC to Chairperson Senate within 90 days (8.2) were explained.",
+      "decision": "Recommended subject to compliance",
+      "resolution": "Resolved that the scholar be placed under academic watch, required to raise SPI/CPI to at least 6.5 in the next semester, and warned that Clause 8.1 consequences including fellowship withdrawal under 15.1(2) may follow continued deficiency.",
+      "text": "DDPC/2024/EE/019 dated 2024-03-07. Subject: Academic deficiency SPI 6.1. Scholar Ph.D./EE/2023/017. Clauses 8, 8.1, 8.2. Form DP-03. Decision: recommended subject to raising SPI/CPI to 6.5. Fellowship at risk under 15.1(2).",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2023/CSE/041",
+      "meeting_date": "2023-09-21",
+      "meeting_reference": "DDPC/CSE/2023-24/02",
+      "department": "Computer Science and Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Conversion from full-time to part-time registration",
+      "student_ref": "Ph.D./CSE/2020/022",
+      "applicable_clauses": [
+        "4.5",
+        "3.4.3"
+      ],
+      "applicable_forms": [
+        "DP-05"
+      ],
+      "facts": "Scholar completed coursework, Comprehensive Examination and State-of-the-Art Seminar, then joined a public-sector employer. Form DP-05 requested Code-13 part-time status.",
+      "deficiencies": "Employer NOC not attached to DP-05.",
+      "discussion_summary": "Clause 4.5 conversion requires DDPC recommendation and SDPC approval. Part-time scholars must still be present for physical registration, examinations and semester presentations (7.2 related presence rules).",
+      "decision": "Deferred",
+      "resolution": "Resolved that conversion is deferred until a valid employer NOC is filed with Form DP-05 and the Supervisor certifies remaining experimental work can be completed in part-time mode.",
+      "text": "DDPC/2023/CSE/041 dated 2023-09-21. Subject: Full-time to part-time conversion. Scholar Ph.D./CSE/2020/022. Clauses 4.5, 3.4.3. Form DP-05. Decision: deferred for employer NOC.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2024/GIS/004",
+      "meeting_date": "2024-01-18",
+      "meeting_reference": "DDPC/GIS/2023-24/03",
+      "department": "GIS Cell",
+      "programme": "Ph.D. in Geographic Information System",
+      "subject": "State-of-the-Art Seminar scheduling",
+      "student_ref": "Ph.D./GIS/2022/004",
+      "applicable_clauses": [
+        "10",
+        "9"
+      ],
+      "applicable_forms": [
+        "DP-10",
+        "DP-09"
+      ],
+      "facts": "Scholar passed Comprehensive Examination. Two copies of the detailed research proposal were submitted. SOA seminar was requested.",
+      "deficiencies": "None recorded.",
+      "discussion_summary": "Clause 10 requires a departmental SOA seminar covering the proposed research area after the Comprehensive Examination.",
+      "decision": "Recommended",
+      "resolution": "Resolved that the State-of-the-Art Seminar of Ph.D./GIS/2022/004 be conducted and reported on Form DP-10, with DP-09 enclosed.",
+      "text": "DDPC/2024/GIS/004 dated 2024-01-18. Subject: State-of-the-Art Seminar. Scholar Ph.D./GIS/2022/004. Clauses 10 and 9. Forms DP-10 and DP-09. Decision: recommended. No deficiencies.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2024/CHE/012",
+      "meeting_date": "2024-06-13",
+      "meeting_reference": "DDPC/CHE/2023-24/10",
+      "department": "Chemical Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Open Seminar eligibility and credit check",
+      "student_ref": "Ph.D./CHE/2020/009",
+      "applicable_clauses": [
+        "11",
+        "7.1"
+      ],
+      "applicable_forms": [
+        "DP-11",
+        "DP-01"
+      ],
+      "facts": "Scholar requested Open Seminar. Coursework complete, CPI 7.8, Comprehensive and SOA passed. Registration sheet DP-01 showed research credits still short of the Section 7.1 minimum.",
+      "deficiencies": "Minimum research credits specified in Section 7.1 not yet earned.",
+      "discussion_summary": "Open Seminar eligibility requires passed courses with no N/F, passed Comprehensive and SOA, and minimum credits as per 7.1.",
+      "decision": "Not recommended",
+      "resolution": "Resolved that Open Seminar is not permitted until the scholar earns the minimum credits specified in Section 7.1. Supervisor to file an updated DP-01 before the next DDPC.",
+      "text": "DDPC/2024/CHE/012 dated 2024-06-13. Subject: Open Seminar eligibility. Scholar Ph.D./CHE/2020/009. Clauses 11 and 7.1. Forms DP-11 and DP-01. Decision: not recommended. Research credits short of Section 7.1.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2023/HUM/007",
+      "meeting_date": "2023-12-08",
+      "meeting_reference": "DDPC/HUM/2023-24/04",
+      "department": "Humanities and Social Sciences",
+      "programme": "Ph.D. in Humanities and Social Science",
+      "subject": "Semester leave and unauthorized absence",
+      "student_ref": "Ph.D./HUM/2021/007",
+      "applicable_clauses": [
+        "5.2",
+        "5.5",
+        "15.1"
+      ],
+      "applicable_forms": [
+        "DP-06"
+      ],
+      "facts": "Scholar remained off campus for five weeks without sanctioned leave. A belated DP-06 cited family medical reasons without certificates.",
+      "deficiencies": "No medical certificates. Leave not sanctioned in advance. Absence without sanctioned leave under Clause 5.5.",
+      "discussion_summary": "Unauthorized absence violates leave rules. Stipend may be withdrawn for the period. Long absence may be placed before SDPC.",
+      "decision": "Recommended subject to compliance",
+      "resolution": "Resolved that stipend for the unsanctioned period be withheld under Clause 15.1, medical evidence be filed within ten days, and further unauthorized absence be reported for disciplinary action under Section 16.",
+      "text": "DDPC/2023/HUM/007 dated 2023-12-08. Subject: Semester leave and unauthorized absence. Scholar Ph.D./HUM/2021/007. Clauses 5.2, 5.5, 15.1. Form DP-06. Decision: recommended subject to medical evidence; stipend withheld for the period.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2024/PHY/002",
+      "meeting_date": "2024-07-11",
+      "meeting_reference": "DDPC/PHY/2024-25/01",
+      "department": "Physics",
+      "programme": "Ph.D. in Sciences",
+      "subject": "Constitution of Ph.D. Oral Board",
+      "student_ref": "Ph.D./PHY/2018/002",
+      "applicable_clauses": [
+        "12.5",
+        "13.3"
+      ],
+      "applicable_forms": [
+        "DP-16",
+        "DP-02"
+      ],
+      "facts": "Thesis evaluation reports received in Category I/II. Supervisor proposed Oral Board on DP-16 including SRC members and one Indian external examiner.",
+      "deficiencies": "None recorded.",
+      "discussion_summary": "Oral Board composition matches Clause 12.5. Convener DDPC and HoD to forward to Chairperson SDPC and Dean (Academic).",
+      "decision": "Recommended",
+      "resolution": "Resolved that the Oral Board proposed on Form DP-16 be forwarded to Chairperson SDPC for recommendation to Dean (Academic).",
+      "text": "DDPC/2024/PHY/002 dated 2024-07-11. Subject: Constitution of Ph.D. Oral Board. Scholar Ph.D./PHY/2018/002. Clauses 12.5 and 13.3. Forms DP-16 and DP-02. Decision: recommended.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2024/CSE/028",
+      "meeting_date": "2024-08-22",
+      "meeting_reference": "DDPC/CSE/2024-25/02",
+      "department": "Computer Science and Engineering",
+      "programme": "Ph.D. (Engineering)",
+      "subject": "Comprehensive Examination second failure and termination",
+      "student_ref": "Ph.D./CSE/2021/028",
+      "applicable_clauses": [
+        "9",
+        "8.1"
+      ],
+      "applicable_forms": [
+        "DP-09"
+      ],
+      "facts": "Scholar failed Comprehensive Examination twice. Second DP-09 recorded XX. Head prepared a termination letter.",
+      "deficiencies": "Two unsuccessful Comprehensive Examination attempts. Clause 9 bars a third attempt.",
+      "discussion_summary": "Clause 9: a student shall not appear more than twice; second failure leads to termination by the Head, reported to the Senate.",
+      "decision": "Not recommended",
+      "resolution": "Resolved that continuation is not recommended. The Head shall issue the termination letter under Clause 9 read with 8.1 and report the case to the Senate. Appeal, if any, lies under Clause 8.2 within 90 days.",
+      "text": "DDPC/2024/CSE/028 dated 2024-08-22. Subject: Comprehensive Examination second failure. Scholar Ph.D./CSE/2021/028. Clauses 9 and 8.1. Form DP-09. Decision: not recommended. Termination by Head; Senate to be informed.",
+      "synthetic": true
+    },
+    {
+      "case_id": "DDPC/2023/MBA/015",
+      "meeting_date": "2023-10-05",
+      "meeting_reference": "DDPC/SMS/2023-24/03",
+      "department": "School of Management Studies",
+      "programme": "Ph.D. in Management",
+      "subject": "Waiver of a procedural requirement in a special case",
+      "student_ref": "Ph.D./SMS/2019/015",
+      "applicable_clauses": [
+        "17"
+      ],
+      "applicable_forms": [],
+      "facts": "Scholar requested waiver of a documentation timeline due to prolonged hospitalization after Open Seminar. Eligibility (3.3) and academic performance (8) were not in issue.",
+      "deficiencies": "Hospital records submitted; timeline still exceeded GL-1 submission packing norms.",
+      "discussion_summary": "Clause 17 allows Chairperson Senate, on DDPC and SDPC recommendation, to waive procedures other than 3.3 and 8. All exceptions must be reported to the Senate.",
+      "decision": "Recommended",
+      "resolution": "Resolved that DDPC recommends a limited waiver of the post-Open-Seminar documentation timeline under Clause 17, for consideration of SDPC and Chairperson Senate, without touching eligibility or Clause 8.",
+      "text": "DDPC/2023/MBA/015 dated 2023-10-05. Subject: Waiver in special case. Scholar Ph.D./SMS/2019/015. Clause 17. Decision: recommended limited procedural waiver to SDPC/Chairperson Senate. Sections 3.3 and 8 not waived.",
+      "synthetic": true
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-from backend.llm.gemini_client import generate_answer
+from backend.llm.gemini_client import generate_text
 
 
 def resolve_follow_up(question, conversation_history):
@@ -69,7 +69,7 @@ Example:
 
 Recent conversation:
 USER: What are the requirements for the Ph.D. degree?
-ASSISTANT: A student must satisfy the minimum academic and residence requirements, complete the thesis defence, and attain the minimum required SPI/CPI.
+ASSISTANT: A student must complete coursework, pass the Comprehensive Examination, deliver the State-of-the-Art and Open Seminars, and attain the minimum required SPI/CPI.
 
 Current question:
 What about the CPI requirement?
@@ -78,10 +78,7 @@ Correct output:
 What is the CPI requirement for the Ph.D. degree?
 """
 
-    resolved_question = generate_answer(
-        question,
-        prompt
-    ).strip()
+    resolved_question = generate_text(prompt).strip()
 
     # Safety fallback if the resolver returns nothing.
     if not resolved_question:

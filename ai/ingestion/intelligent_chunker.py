@@ -70,7 +70,7 @@ FORM_START = 42
 FORM_END = 69
 
 DOCUMENT_NAME = "MNNIT Doctoral Ordinance"
-SOURCE_FILE = "Ordinances for Doctoral Programme 2023.pdf"
+SOURCE_FILE = "Ordinances_for_Doctoral_Programm2023.pdf"
 
 
 # ============================================================
@@ -249,7 +249,7 @@ def remove_clause_heading(
 # ============================================================
 
 FORM_REF_RE = re.compile(
-    r"\b(DP|GL)\s*[-–]?\s*(\d{1,2})(?:\s*\(([abAB])\)|([abAB]))?",
+    r"\b(DP|GL)\s*[-–]?\s*(\d{1,2})(?:\(([abAB])\)|([abAB]))?",
     re.IGNORECASE,
 )
 

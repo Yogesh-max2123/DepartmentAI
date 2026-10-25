@@ -1,7 +1,7 @@
 {
   "document": {
     "name": "MNNIT Doctoral Ordinance",
-    "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+    "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
     "chunking_method": "structure-aware clause-based chunking",
     "target_characters": 2500,
     "maximum_characters": 3200,
@@ -11,7 +11,7 @@
     {
       "chunk_id": "phd_1_1_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "1",
       "section_title": "INTRODUCTION",
@@ -30,7 +30,7 @@
     {
       "chunk_id": "phd_1_1_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "1",
       "section_title": "INTRODUCTION",
@@ -49,7 +49,7 @@
     {
       "chunk_id": "phd_1_1_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "1",
       "section_title": "INTRODUCTION",
@@ -68,7 +68,7 @@
     {
       "chunk_id": "phd_1_1_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "1",
       "section_title": "INTRODUCTION",
@@ -87,7 +87,7 @@
     {
       "chunk_id": "phd_1_1_3_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "1",
       "section_title": "INTRODUCTION",
@@ -106,7 +106,7 @@
     {
       "chunk_id": "phd_1_1_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "1",
       "section_title": "INTRODUCTION",
@@ -125,7 +125,7 @@
     {
       "chunk_id": "phd_1_1_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "1",
       "section_title": "INTRODUCTION",
@@ -144,7 +144,7 @@
     {
       "chunk_id": "phd_2_2_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "2",
       "section_title": "ACADEMIC SESSION",
@@ -163,7 +163,7 @@
     {
       "chunk_id": "phd_2_2_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "2",
       "section_title": "ACADEMIC SESSION",
@@ -182,7 +182,7 @@
     {
       "chunk_id": "phd_2_2_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "2",
       "section_title": "ACADEMIC SESSION",
@@ -201,7 +201,7 @@
     {
       "chunk_id": "phd_2_2_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "2",
       "section_title": "ACADEMIC SESSION",
@@ -220,7 +220,7 @@
     {
       "chunk_id": "phd_3_3_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -239,7 +239,7 @@
     {
       "chunk_id": "phd_3_3_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -258,7 +258,7 @@
     {
       "chunk_id": "phd_3_3_2_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -277,7 +277,7 @@
     {
       "chunk_id": "phd_3_3_2_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -296,7 +296,7 @@
     {
       "chunk_id": "phd_3_3_2_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -315,7 +315,7 @@
     {
       "chunk_id": "phd_3_3_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -334,7 +334,7 @@
     {
       "chunk_id": "phd_3_3_3_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -353,7 +353,7 @@
     {
       "chunk_id": "phd_3_3_3_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -372,7 +372,7 @@
     {
       "chunk_id": "phd_3_3_3_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -391,7 +391,7 @@
     {
       "chunk_id": "phd_3_3_3_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -410,7 +410,7 @@
     {
       "chunk_id": "phd_3_3_3_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -429,7 +429,7 @@
     {
       "chunk_id": "phd_3_3_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -452,7 +452,7 @@
     {
       "chunk_id": "phd_3_3_4_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -475,7 +475,7 @@
     {
       "chunk_id": "phd_3_3_4_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -498,7 +498,7 @@
     {
       "chunk_id": "phd_3_3_4_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -521,7 +521,7 @@
     {
       "chunk_id": "phd_3_3_4_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -544,7 +544,7 @@
     {
       "chunk_id": "phd_3_3_4_3_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -567,7 +567,7 @@
     {
       "chunk_id": "phd_3_3_4_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -586,7 +586,7 @@
     {
       "chunk_id": "phd_3_3_4_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -605,7 +605,7 @@
     {
       "chunk_id": "phd_3_3_4_6_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -624,7 +624,7 @@
     {
       "chunk_id": "phd_3_3_4_6_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -643,7 +643,7 @@
     {
       "chunk_id": "phd_3_3_4_6_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -662,7 +662,7 @@
     {
       "chunk_id": "phd_3_3_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -681,7 +681,7 @@
     {
       "chunk_id": "phd_3_3_5_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -700,7 +700,7 @@
     {
       "chunk_id": "phd_3_3_5_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -719,7 +719,7 @@
     {
       "chunk_id": "phd_3_3_5_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -743,7 +743,7 @@
     {
       "chunk_id": "phd_3_3_5_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -767,7 +767,7 @@
     {
       "chunk_id": "phd_3_3_5_2_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -791,7 +791,7 @@
     {
       "chunk_id": "phd_3_3_5_2_004",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -815,7 +815,7 @@
     {
       "chunk_id": "phd_3_3_5_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -839,7 +839,7 @@
     {
       "chunk_id": "phd_3_3_6_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -864,7 +864,7 @@
     {
       "chunk_id": "phd_3_3_6_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -889,7 +889,7 @@
     {
       "chunk_id": "phd_3_3_6_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -914,7 +914,7 @@
     {
       "chunk_id": "phd_3_3_6_004",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "3",
       "section_title": "ADMISSION",
@@ -939,7 +939,7 @@
     {
       "chunk_id": "phd_4_4_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "4",
       "section_title": "REGISTRATION",
@@ -962,7 +962,7 @@
     {
       "chunk_id": "phd_4_4_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "4",
       "section_title": "REGISTRATION",
@@ -985,7 +985,7 @@
     {
       "chunk_id": "phd_4_4_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "4",
       "section_title": "REGISTRATION",
@@ -1011,7 +1011,7 @@
     {
       "chunk_id": "phd_4_4_3_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "4",
       "section_title": "REGISTRATION",
@@ -1037,7 +1037,7 @@
     {
       "chunk_id": "phd_4_4_3_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "4",
       "section_title": "REGISTRATION",
@@ -1063,7 +1063,7 @@
     {
       "chunk_id": "phd_4_4_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "4",
       "section_title": "REGISTRATION",
@@ -1086,7 +1086,7 @@
     {
       "chunk_id": "phd_4_4_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "4",
       "section_title": "REGISTRATION",
@@ -1109,7 +1109,7 @@
     {
       "chunk_id": "phd_5_5_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1132,7 +1132,7 @@
     {
       "chunk_id": "phd_5_5_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1155,7 +1155,7 @@
     {
       "chunk_id": "phd_5_5_1_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1178,7 +1178,7 @@
     {
       "chunk_id": "phd_5_5_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1197,7 +1197,7 @@
     {
       "chunk_id": "phd_5_5_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1216,7 +1216,7 @@
     {
       "chunk_id": "phd_5_5_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1235,7 +1235,7 @@
     {
       "chunk_id": "phd_5_5_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1256,7 +1256,7 @@
     {
       "chunk_id": "phd_5_5_5_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1277,7 +1277,7 @@
     {
       "chunk_id": "phd_5_5_5_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "5",
       "section_title": "LEAVE RULES",
@@ -1298,7 +1298,7 @@
     {
       "chunk_id": "phd_7_7_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1321,7 +1321,7 @@
     {
       "chunk_id": "phd_7_7_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1344,7 +1344,7 @@
     {
       "chunk_id": "phd_7_7_1_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1367,7 +1367,7 @@
     {
       "chunk_id": "phd_7_7_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1388,7 +1388,7 @@
     {
       "chunk_id": "phd_7_7_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1409,7 +1409,7 @@
     {
       "chunk_id": "phd_7_7_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1430,7 +1430,7 @@
     {
       "chunk_id": "phd_7_7_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1451,7 +1451,7 @@
     {
       "chunk_id": "phd_7_7_5_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1472,7 +1472,7 @@
     {
       "chunk_id": "phd_7_7_5_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1493,7 +1493,7 @@
     {
       "chunk_id": "phd_7_7_5_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1512,7 +1512,7 @@
     {
       "chunk_id": "phd_7_7_5_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1531,7 +1531,7 @@
     {
       "chunk_id": "phd_7_7_5_2_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1550,7 +1550,7 @@
     {
       "chunk_id": "phd_7_7_5_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1569,7 +1569,7 @@
     {
       "chunk_id": "phd_7_7_5_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1588,7 +1588,7 @@
     {
       "chunk_id": "phd_7_7_5_4_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1607,7 +1607,7 @@
     {
       "chunk_id": "phd_7_7_5_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1626,7 +1626,7 @@
     {
       "chunk_id": "phd_7_7_5_6_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1645,7 +1645,7 @@
     {
       "chunk_id": "phd_7_7_5_7_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "7",
       "section_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
@@ -1664,7 +1664,7 @@
     {
       "chunk_id": "phd_8_8_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "8",
       "section_title": "ACADEMIC PERFORMANCE REQUIREMENT",
@@ -1686,7 +1686,7 @@
     {
       "chunk_id": "phd_8_8_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "8",
       "section_title": "ACADEMIC PERFORMANCE REQUIREMENT",
@@ -1708,7 +1708,7 @@
     {
       "chunk_id": "phd_8_8_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "8",
       "section_title": "ACADEMIC PERFORMANCE REQUIREMENT",
@@ -1734,7 +1734,7 @@
     {
       "chunk_id": "phd_8_8_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "8",
       "section_title": "ACADEMIC PERFORMANCE REQUIREMENT",
@@ -1760,7 +1760,7 @@
     {
       "chunk_id": "phd_8_8_2_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "8",
       "section_title": "ACADEMIC PERFORMANCE REQUIREMENT",
@@ -1786,10 +1786,10 @@
     {
       "chunk_id": "phd_12_12_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.1",
       "clause_title": "Appointment of Thesis Supervisor(s)",
       "page_start": 30,
@@ -1809,10 +1809,10 @@
     {
       "chunk_id": "phd_12_12_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.1",
       "clause_title": "Appointment of Thesis Supervisor(s)",
       "page_start": 30,
@@ -1832,10 +1832,10 @@
     {
       "chunk_id": "phd_12_12_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.2",
       "clause_title": "Constitution and Appointment of Student Research Committee (SRC)",
       "page_start": 31,
@@ -1856,10 +1856,10 @@
     {
       "chunk_id": "phd_12_12_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.2",
       "clause_title": "Constitution and Appointment of Student Research Committee (SRC)",
       "page_start": 31,
@@ -1880,10 +1880,10 @@
     {
       "chunk_id": "phd_12_12_2_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.2",
       "clause_title": "Constitution and Appointment of Student Research Committee (SRC)",
       "page_start": 31,
@@ -1904,10 +1904,10 @@
     {
       "chunk_id": "phd_12_12_2_004",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.2",
       "clause_title": "Constitution and Appointment of Student Research Committee (SRC)",
       "page_start": 31,
@@ -1928,10 +1928,10 @@
     {
       "chunk_id": "phd_12_12_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.3",
       "clause_title": "Constitution of Comprehensive Examination Board",
       "page_start": 32,
@@ -1952,10 +1952,10 @@
     {
       "chunk_id": "phd_12_12_4_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.4",
       "clause_title": "Constitution of Thesis Evaluation Board",
       "page_start": 32,
@@ -1975,10 +1975,10 @@
     {
       "chunk_id": "phd_12_12_5_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.5",
       "clause_title": "Constitution of Ph.D. Oral Board",
       "page_start": 32,
@@ -1999,10 +1999,10 @@
     {
       "chunk_id": "phd_12_12_5_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.5",
       "clause_title": "Constitution of Ph.D. Oral Board",
       "page_start": 32,
@@ -2023,10 +2023,10 @@
     {
       "chunk_id": "phd_12_12_5_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.5",
       "clause_title": "Constitution of Ph.D. Oral Board",
       "page_start": 32,
@@ -2047,10 +2047,10 @@
     {
       "chunk_id": "phd_12_12_6_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.6",
       "clause_title": "Guidelines for Institute Faculty for Supervising / Co-supervising students of other",
       "page_start": 33,
@@ -2070,10 +2070,10 @@
     {
       "chunk_id": "phd_12_12_6_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "12",
-      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "section_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "clause": "12.6",
       "clause_title": "Guidelines for Institute Faculty for Supervising / Co-supervising students of other",
       "page_start": 33,
@@ -2093,7 +2093,7 @@
     {
       "chunk_id": "phd_13_13_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "13",
       "section_title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
@@ -2116,7 +2116,7 @@
     {
       "chunk_id": "phd_13_13_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "13",
       "section_title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
@@ -2139,7 +2139,7 @@
     {
       "chunk_id": "phd_13_13_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "13",
       "section_title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
@@ -2162,7 +2162,7 @@
     {
       "chunk_id": "phd_13_13_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "13",
       "section_title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
@@ -2185,7 +2185,7 @@
     {
       "chunk_id": "phd_13_13_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "13",
       "section_title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
@@ -2207,7 +2207,7 @@
     {
       "chunk_id": "phd_13_13_3_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "13",
       "section_title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
@@ -2229,7 +2229,7 @@
     {
       "chunk_id": "phd_14_14_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "14",
       "section_title": "DEGREE REQUIREMENTS",
@@ -2250,7 +2250,7 @@
     {
       "chunk_id": "phd_14_14_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "14",
       "section_title": "DEGREE REQUIREMENTS",
@@ -2271,7 +2271,7 @@
     {
       "chunk_id": "phd_14_14_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "14",
       "section_title": "DEGREE REQUIREMENTS",
@@ -2292,7 +2292,7 @@
     {
       "chunk_id": "phd_15_15_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "15",
       "section_title": "STIPENDS/FELLOWSHIPS, SCHOLARSHIPS, PRIZES AND MEDALS",
@@ -2311,7 +2311,7 @@
     {
       "chunk_id": "phd_15_15_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "15",
       "section_title": "STIPENDS/FELLOWSHIPS, SCHOLARSHIPS, PRIZES AND MEDALS",
@@ -2330,7 +2330,7 @@
     {
       "chunk_id": "phd_16_16_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2349,7 +2349,7 @@
     {
       "chunk_id": "phd_16_16_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2368,7 +2368,7 @@
     {
       "chunk_id": "phd_16_16_1_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2387,7 +2387,7 @@
     {
       "chunk_id": "phd_16_16_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2406,7 +2406,7 @@
     {
       "chunk_id": "phd_16_16_3_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2425,7 +2425,7 @@
     {
       "chunk_id": "phd_16_16_3_1_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2446,7 +2446,7 @@
     {
       "chunk_id": "phd_16_16_3_1_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2467,7 +2467,7 @@
     {
       "chunk_id": "phd_16_16_3_2_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2488,7 +2488,7 @@
     {
       "chunk_id": "phd_16_16_3_2_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "ordinance_clause",
       "section": "16",
       "section_title": "CONDUCT AND DISCIPLINE",
@@ -2509,10 +2509,10 @@
     {
       "chunk_id": "form_dp_01_001",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-01",
-      "form_title": "ACADEMIC REGISTRATION DETAILS",
+      "form_title": "Academic Registration Details",
       "clause_references": [
         "4.2"
       ],
@@ -2529,7 +2529,7 @@
     {
       "chunk_id": "form_dp_02_002",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-02",
       "form_title": "Student Research Committee (SRC)",
@@ -2549,7 +2549,7 @@
     {
       "chunk_id": "form_dp_03_003",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-03",
       "form_title": "Semester Progress Report of the Candidate",
@@ -2569,7 +2569,7 @@
     {
       "chunk_id": "form_dp_04_004",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-04",
       "form_title": "Adding/Dropping of Course",
@@ -2589,7 +2589,7 @@
     {
       "chunk_id": "form_dp_05_005",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-05",
       "form_title": "Change of Registration Status",
@@ -2609,7 +2609,7 @@
     {
       "chunk_id": "form_dp_06_006",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-06",
       "form_title": "Leave Application",
@@ -2629,7 +2629,7 @@
     {
       "chunk_id": "form_dp_07_007",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-07",
       "form_title": "Permission to Proceed to other Institution as Non Degree student",
@@ -2649,7 +2649,7 @@
     {
       "chunk_id": "form_dp_08_008",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-08",
       "form_title": "List of Suggested Examiners for Ph.D Comprehensive Examination",
@@ -2669,7 +2669,7 @@
     {
       "chunk_id": "form_dp_09_009",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-09",
       "form_title": "Report of Examiners of the Comprehensive Examination",
@@ -2689,7 +2689,7 @@
     {
       "chunk_id": "form_dp_10_010",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-10",
       "form_title": "Report of State-of-the-Art Seminar",
@@ -2709,7 +2709,7 @@
     {
       "chunk_id": "form_dp_11_011",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-11",
       "form_title": "Report of Open Seminar",
@@ -2730,7 +2730,7 @@
     {
       "chunk_id": "form_dp_12a_012",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-12a",
       "form_title": "Supervisor Selection (To be filled by the candidate)",
@@ -2750,7 +2750,7 @@
     {
       "chunk_id": "form_dp_12b_013",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-12b",
       "form_title": "Supervisor Selection (To be filled by the Faculty)",
@@ -2770,7 +2770,7 @@
     {
       "chunk_id": "form_dp_13_014",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-13",
       "form_title": "Change / Addition of Supervisor(s)",
@@ -2790,10 +2790,10 @@
     {
       "chunk_id": "form_dp_14_015",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-14",
-      "form_title": "CERTIFICATE (Plagiarism check)",
+      "form_title": "CERTIFICATE (Plagiarism / similarity check)",
       "clause_references": [
         "13.1"
       ],
@@ -2810,7 +2810,7 @@
     {
       "chunk_id": "form_dp_15_016",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-15",
       "form_title": "List of Suggested Examiners for Ph.D Thesis Evaluation Board",
@@ -2830,7 +2830,7 @@
     {
       "chunk_id": "form_dp_16_017",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-16",
       "form_title": "List of Suggested Examiners for Ph.D. Oral Board",
@@ -2850,7 +2850,7 @@
     {
       "chunk_id": "form_dp_17_018",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-17",
       "form_title": "Thesis Evaluation Report",
@@ -2858,19 +2858,19 @@
         "13.2"
       ],
       "page_start": 59,
-      "page_end": 60,
+      "page_end": 59,
       "chunk_index": 1,
       "chunk_count": 1,
       "forms_referenced": [],
-      "text": "51\n\nForm: DP-17\n(Clause 13.2)\nMotilal Nehru National Institute of Technology Allahabad\n(Thesis Evaluation Report)\n\n1.\nName of Student:______________________________________________________________\n\n2.\nReg. No.______________________________________________________________________\n\n3.\nDepartment:__________________________________________________________________\n4.       General Features of Thesis:\n(i)\nOrganisation and Get up:\n\n__________________________________________________________________________\n\n__________________________________________________________________________\n\n__________________________________________________________________________\n\n__________________________________________________________________________\n(ii)\nWhether quality of work is comparablewith other universities of repute?\n(iii) Whether the Thesis has embodied any new ideas with original thoughts?\n5.\nComments (the Examiner   may give details on additional sheet(s), if required)\n(i)\nCorrections in punctuation, grammar,\n\nSpelling or language.\n\nNone\nMinor\nRequire Changes\n\n(ii)\nTechnical content of the Thesis\n______________________________________________________________________________________\n______________________________________________________________________________________\n______________________________________________________________________________________\n______________________________________________________________________________________\n_____________________________________________________________________________________.\nContd.2\nYes\nNo\nYes\nNo\n\n52\n\n: 2 :\n(iii) Strong/Weak points of the Thesis\n_____________________________________________________________________________\n_____________________________________________________________________________\n_____________________________________________________________________________\n(iv) Write at least 5 questions from the area of research to be asked in the oral examination.\n\n6.\nSpecific Recommendations\n\n(Please place a tick mark at any one of following category)\n\nCategory I:\nThe Thesis is acceptable in the present form for the award of the Ph.D degree.\n\nCategory II:\nThe Thesis is acceptable and the correction, modifications and improvement\nsuggested by me would be incorporated in the Thesis and presented at the time of\nOral Examination.\n\nCategory III:\nThe Thesis needs technical improvement/modifications, which must be carried out to\nmy satisfaction before I recommend the Thesis for acceptance.\n\nCategory IV:  The Thesis is rejected. (Please provide reasons for the same)\n\n(Signature of the Examiner  )\nName\n:\n__________________________________________\n\nDesignation\n:\n__________________________________________\n\nAddress\n:\n__________________________________________\n\n___________________________________________\n\nPlace:\nDate:",
-      "character_count": 2791,
-      "word_count": 243,
+      "text": "51\n\nForm: DP-17\n(Clause 13.2)\nMotilal Nehru National Institute of Technology Allahabad\n(Thesis Evaluation Report)\n\n1.\nName of Student:______________________________________________________________\n\n2.\nReg. No.______________________________________________________________________\n\n3.\nDepartment:__________________________________________________________________\n4.       General Features of Thesis:\n(i)\nOrganisation and Get up:\n\n__________________________________________________________________________\n\n__________________________________________________________________________\n\n__________________________________________________________________________\n\n__________________________________________________________________________\n(ii)\nWhether quality of work is comparablewith other universities of repute?\n(iii) Whether the Thesis has embodied any new ideas with original thoughts?\n5.\nComments (the Examiner   may give details on additional sheet(s), if required)\n(i)\nCorrections in punctuation, grammar,\n\nSpelling or language.\n\nNone\nMinor\nRequire Changes\n\n(ii)\nTechnical content of the Thesis\n______________________________________________________________________________________\n______________________________________________________________________________________\n______________________________________________________________________________________\n______________________________________________________________________________________\n_____________________________________________________________________________________.\nContd.2\nYes\nNo\nYes\nNo",
+      "character_count": 1553,
+      "word_count": 101,
       "global_index": 135
     },
     {
       "chunk_id": "form_dp_18_019",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-18",
       "form_title": "Report of Ph.D Thesis Oral Board",
@@ -2890,7 +2890,7 @@
     {
       "chunk_id": "form_dp_19_020",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-19",
       "form_title": "FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS",
@@ -2898,19 +2898,19 @@
         "16.3.2"
       ],
       "page_start": 62,
-      "page_end": 63,
+      "page_end": 62,
       "chunk_index": 1,
       "chunk_count": 1,
       "forms_referenced": [],
-      "text": "54\n\nForm: DP-19\n(Clause 16.3.2)\n\nMotilal Nehru National Institute of Technology Allahabad\n\nFORM FOR REPORTING CASES REGARDING UNFAIR-MEANS\nNote:\n1. One form should be used for one case only.\n2. Please send one question paper alongwith the case(s)\n\n(A) To be filled in by the instructor/invigilators/members of observer committee:\nName of Examination\n:\n………………………………………………………...………….………..\nName of student\n:\n………………………………………………………...………….………...\nRegistration No.\n:\n………………………………………………………...………….………...\nProgramme/Branch\n:\n………………………………………………………...………….………..\nRoom No.\n:\n………………………………………………………...………….………..\nSubject/ paper in which the\nstudent is suspected or\nrepo-rted to have used or\nattempt-ted to use unfair-\nmeans or shown disorderly\nconduct.\n\nSubject\nSubject Code\n\nDate & time of incident\n:\n………………………………………………………...………….……\nType of Unfair Means Material.\n: Copying from the papers / materials which is in the\npossession of the student.\n\nCopying from the answer book of neighboring student.\n\nMisbehaved with invigilator.\n\nDate......................\nSignature and Full Name of the instructor/invigilators/members of observer committee\n\n(IN BLOCK LETTERS)\n\n55\n\n(B)\nStudent’s Statement:\nI have read the report of the instructor/invigilators/members of observer committee made against me as given\nin column No. A and submit the following statements.\nI undertake that this statement has been given by me under no pressure or fear.\n\n1.\nDo\nyou\nagree\nwith\nthe\nreport\nof\nthe\ninstructor/invigilators/members of observer committee made\nagainst you?\n\nYes/ No\n2.\nIf you agree with the report, then:\n\n(a) Why   did   you   bring   the material referred to in the above\nreport?\n\n(b) Did you make any use of it?\n(c) What explanation have you to   offer   for   your misconduct\n/ Disorderly conduct as mentioned in the report?\n\n(d) Have any other thing to say, by    way    of    self-defense or\nclarification?  (If necessary, an extra sheet may be used).\n\n3.\nIf you do not agree with the report then give your explanation,\nif   any, in your defense against the report of the\ninstructor/invigilators/members of observer committee.\n\n(Signature of Student)\n\nN.B.:\n(i)\nThe student shall be given extra time, before leaving the Examination Hall in order to compensate\nhim/her for the loss of time spent during enquiry and filling this form.\n(C)\nStatement of Witness if any:\nStatement of the witness, if any, in case the student denies the allegations of the\ninstructor/invigilators/members of observer committee or refuses to give his/her statement on the spot\nor runs away from the examination hall without giving his statement.",
-      "character_count": 2600,
-      "word_count": 384,
+      "text": "54\n\nForm: DP-19\n(Clause 16.3.2)\n\nMotilal Nehru National Institute of Technology Allahabad\n\nFORM FOR REPORTING CASES REGARDING UNFAIR-MEANS\nNote:\n1. One form should be used for one case only.\n2. Please send one question paper alongwith the case(s)\n\n(A) To be filled in by the instructor/invigilators/members of observer committee:\nName of Examination\n:\n………………………………………………………...………….………..\nName of student\n:\n………………………………………………………...………….………...\nRegistration No.\n:\n………………………………………………………...………….………...\nProgramme/Branch\n:\n………………………………………………………...………….………..\nRoom No.\n:\n………………………………………………………...………….………..\nSubject/ paper in which the\nstudent is suspected or\nrepo-rted to have used or\nattempt-ted to use unfair-\nmeans or shown disorderly\nconduct.\n\nSubject\nSubject Code\n\nDate & time of incident\n:\n………………………………………………………...………….……\nType of Unfair Means Material.\n: Copying from the papers / materials which is in the\npossession of the student.\n\nCopying from the answer book of neighboring student.\n\nMisbehaved with invigilator.\n\nDate......................\nSignature and Full Name of the instructor/invigilators/members of observer committee\n\n(IN BLOCK LETTERS)",
+      "character_count": 1145,
+      "word_count": 148,
       "global_index": 137
     },
     {
       "chunk_id": "form_dp_20_021",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-20",
       "form_title": "UNDERTAKING",
@@ -2928,10 +2928,10 @@
     {
       "chunk_id": "form_dp_21_022",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-21",
-      "form_title": "Report of Ph.D. Thesis Oral Board (final thesis certificate)",
+      "form_title": "Report of Ph.D. Thesis Oral Board (final thesis certification)",
       "clause_references": [],
       "page_start": 65,
       "page_end": 65,
@@ -2946,7 +2946,7 @@
     {
       "chunk_id": "form_dp_22_023",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-22",
       "form_title": "Marks & Grade for Mini-Project",
@@ -2966,7 +2966,7 @@
     {
       "chunk_id": "form_dp_23_024",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-23",
       "form_title": "Request for Director's Nominee in Review Committee",
@@ -2986,7 +2986,7 @@
     {
       "chunk_id": "form_dp_24_025",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "DP-24",
       "form_title": "Report of Ph.D. Progress Review Committee",
@@ -3006,7 +3006,7 @@
     {
       "chunk_id": "form_gl_1_026",
       "document": "MNNIT Doctoral Ordinance",
-      "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
       "content_type": "form",
       "form_id": "GL-1",
       "form_title": "Guidelines for Thesis submission",
@@ -3034,7 +3034,7 @@
       "form_chunks": 26,
       "unique_clauses": 73,
       "unique_forms": 26,
-      "average_characters": 2058.3,
+      "average_characters": 2039.47,
       "max_characters": 3533
     }
   }

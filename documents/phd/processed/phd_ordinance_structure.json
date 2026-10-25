@@ -1,7 +1,7 @@
 {
   "document": {
     "name": "MNNIT Doctoral Ordinance",
-    "source_file": "Ordinances for Doctoral Programme 2023.pdf",
+    "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
     "total_pages": 75,
     "body_pages": [
       9,
@@ -110,7 +110,7 @@
     },
     {
       "number": "6",
-      "title": "PERMISSION TO ATTEND OTHER ACADEMIC INSTITUTIONS / INDUSTRY AS NON DEGREE STUDENTS",
+      "title": "PERMISSION TO ATTEND OTHER ACADEMIC INSTITUTIONS /INDUSTRY AS NON DEGREE STUDENTS",
       "start_page": 21,
       "source_title": "Permission to Attend Other Academic Institutions / Industry As Nondegree Students",
       "end_page": 22,
@@ -180,7 +180,7 @@
     },
     {
       "number": "12",
-      "title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/BOARDS",
+      "title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
       "start_page": 30,
       "source_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS",
       "end_page": 34,
@@ -857,7 +857,7 @@
       "start_page": 42,
       "end_page": 42,
       "page_count": 1,
-      "title": "ACADEMIC REGISTRATION DETAILS",
+      "title": "Academic Registration Details",
       "clauses": [
         "4.2"
       ]
@@ -998,7 +998,7 @@
       "start_page": 56,
       "end_page": 56,
       "page_count": 1,
-      "title": "CERTIFICATE (Plagiarism check)",
+      "title": "CERTIFICATE (Plagiarism / similarity check)",
       "clauses": [
         "13.1"
       ]
@@ -1026,8 +1026,8 @@
     {
       "form_id": "DP-17",
       "start_page": 59,
-      "end_page": 60,
-      "page_count": 2,
+      "end_page": 59,
+      "page_count": 1,
       "title": "Thesis Evaluation Report",
       "clauses": [
         "13.2"
@@ -1046,8 +1046,8 @@
     {
       "form_id": "DP-19",
       "start_page": 62,
-      "end_page": 63,
-      "page_count": 2,
+      "end_page": 62,
+      "page_count": 1,
       "title": "FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS",
       "clauses": [
         "16.3.2"
@@ -1066,7 +1066,7 @@
       "start_page": 65,
       "end_page": 65,
       "page_count": 1,
-      "title": "Report of Ph.D. Thesis Oral Board (final thesis certificate)",
+      "title": "Report of Ph.D. Thesis Oral Board (final thesis certification)",
       "clauses": []
     },
     {
@@ -1607,7 +1607,7 @@
     },
     {
       "page": 60,
-      "page_type": "form"
+      "page_type": "annexure"
     },
     {
       "page": 61,
@@ -1619,7 +1619,7 @@
     },
     {
       "page": 63,
-      "page_type": "form"
+      "page_type": "annexure"
     },
     {
       "page": 64,
