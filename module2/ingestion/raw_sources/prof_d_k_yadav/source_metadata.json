@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Prof. D.K.Yadav",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Prof. D.K.Yadav",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1526",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1526",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "39e08ea18b53881c7e7e27362d00111d858a0df07a5fb0c7ae5687448f12c06f",
+      "bytes": 3936,
+      "cached_at_utc": "2026-10-19T04:36:32.607611+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Prof. D.K.Yadav",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/38721-Paper%20details27-04-23.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/38721-Paper%20details27-04-23.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "d557986e0def556e2884cbf7db0cda1c5ee870f71e43e17bba4bbadb46ca45a2",
+      "bytes": 220082,
+      "cached_at_utc": "2026-10-19T04:36:33.297381+00:00"
+    }
+  }
+}

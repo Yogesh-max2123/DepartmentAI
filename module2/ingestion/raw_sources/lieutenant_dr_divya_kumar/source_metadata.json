@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Lieutenant (Dr.) Divya Kumar",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Lieutenant (Dr.) Divya Kumar",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1523",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1523",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "b7d7bf39292f9b1a30b9472f52569f914a1e3979c5101f16150131725b24702b",
+      "bytes": 3956,
+      "cached_at_utc": "2026-10-19T04:36:48.242394+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Lieutenant (Dr.) Divya Kumar",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/17870-publications_aug_2025.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/17870-publications_aug_2025.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "d5eb40b84a7b38e3b60ce5551f3ef9767db92dc640f8e2b92a37b65f2b32c8ee",
+      "bytes": 105447,
+      "cached_at_utc": "2026-10-19T04:36:48.858043+00:00"
+    }
+  }
+}

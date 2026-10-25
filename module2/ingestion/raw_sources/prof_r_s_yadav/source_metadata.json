@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Prof. R.S.Yadav",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Prof. R.S.Yadav",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1687",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1687",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "c305a02adcf31f3319b0cf3a74bde73b054329f5ca5ff14969b969bcdbf78053",
+      "bytes": 44087,
+      "cached_at_utc": "2026-10-19T04:36:26.206836+00:00"
+    }
+  }
+}

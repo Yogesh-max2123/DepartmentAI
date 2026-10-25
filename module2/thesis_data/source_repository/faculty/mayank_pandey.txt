@@ -1,0 +1,59 @@
+Mayank Pandey
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Design & Implementation of Computation-as-a-Service Infrastructure over P2P Cloud of Underutilized Resources	Shashwati Banerjea	2017
+2	Formal Modelling & Verification of Peer-to-Peer Video-on-Demand Streaming	Debjani Ghosh	2018
+3	Agent Based Modelling to simulate crowd management & control strategies in religious crowd gathering	Abha Trivedi	2020
+4	Design and Implementation of SDN Framework for Mobility in WiFi Networks	Krishna Vijay Kumar Singh	2020
+5	Design and Implementation of Opportunistic Overlay and Underlay for P2P File Sharing among Mobile Nodes in IEEE 802.11 Networks	Anurag Sewak	2020
+6	Design and Implementation of Software Defined Communication and Computation Infrastructure for Semi-permanent Smart Environments.	Shabir Ali	2021
+7	Design and Implementation of Software Defined Low Overhead Structured Peer-to-peer Networks.	Nitin Shukla	2021
+8	Design and Implementation of a Software- Defined Churn Tolerant Peer-to-Peer Content Delivery Network at the Edge for Adaptive Video Streaming	Akhilesh Kumar	2024
+9	Design of Efficient Data Sharing System for a Peer-to-Peer Network	Dharmendra Kumar	2023
+Ph.D. Ongoing
+1	Inband Network Telemetry Using Data Plane Programmability	Amit Kumar Singh (State-of-the-art done)	2021
+2	Design and Implementation of an Intelligent, Latency-Aware UPF Orchestration Framework for MEC-Integrated 5G Core Networks	Akhildev Mishra	2025
+M.Tech Students
+1	Quality of Service Parameters for Publish/Subscribe Based Mobile Ad-hoc Networks	Ajit C. Awekar	2008
+2	Performance Comparison of Ad-hoc Routing Protocols (AODV, DSR and DSDV) in MANET using Network Simulator	Dharmendra Kumar	2008
+3	Notification Ferrying in Vehicular Ad-hoc Network using Publish/Subscribe Communication Architecture	Rupesh Kumar	2008
+4	Analysis of QOS for AODV Protocol	Vivek Srivastava	2008
+5	Enabling Security in Content based Publish/Subscribe P2P Network using Proxy Re-Encryption	Sonam Pahariya	2009
+6	Super-Peer Selection Strategy Based on Trust and Reputation in Multi-tier Structured Overlay	Jagriti Jadoun	2009
+7	Modeling Priority in Publish/Subscribe	Debjani Ghosh	2009
+8	Techniques for Forming P2P connection across HTTP Proxies	Akhilesh Kumar	2010
+9	Developing Automation Testing Framework for Citrix Xen App Application Streaming Project	Saroj Kumar Behera	2010
+10	Design and Implementation of Content Dissemination with Semantic Support over Structured P2P Overlay	Varun Kumar Pathak	2011
+11	Simulation Based Analysis of Semantically Evolving Structured P2P Overlay	Shiraj Pokharel	2011
+12	Proactive Tunig of Ring Sizes in Hierarchical Multi-ring Structured P2P Overlay	Jayati Kesarwani	2011
+13	WebChord - A Web-based Implementation of Chord P2P Lookup Service	Anurag Sewak	2012
+14	Developing of Simulation Platform for P2P over VANET	Sagar Pareek	2012
+15	Design and Implementation of metadata Editor for Digital Educational Content	Shraddha Dixit	2012
+16	Semantic Chunking Based P2P Video-Streaming of NPTEL Video courses in LAN Environment	Satyendra Sharma	2012
+17	Design and Implementation of P2P Video-Streaming Across Different Private Networks	Rohit Kumar Gupta	2012
+18	Implementing Evolution of Internet Based P2P Communities	Vipin Kumar Pandey	2012
+19	Property Based Testing of Hierarchical DHT Design Using Erlang	Alok Kumar Kashyap	2012
+20	Ontology based Matching Engine for Publish/Subscribe	Shashank Gupta	2012
+21	Analysis of Applying Trust and Reputation Management Algorithms for Content Sharing in Hierarchical DHT Overlays.	Punit Kumar Chaubey	2013
+22	Implementation of Mobile Agent to Assist Trusted Role Changing in hierarchical DHT Overlays.	Ajay Kumar Das	2013
+23	Modelling Stochastic Aspects of Publish/Subscribe Communication Paradigm using Performance Evaluation Process Algebra.	Anju Pandey	2013
+24	Implementation of Data Structure Visualization Tool.	Sandeep Pandey	2013
+25	Simulative Analysis of Popular Structured and Unstructured P2P Overlays.	Akhilesh Kumar Singh	2013
+26	Implementation of Mobile IP Test-Bed.	Shailender Kumar Singh	2013
+27	Simulation of Publish-Subscribe over DHT.	Naveen Kumar	2014
+28	Stochastic Analysis of Event Based System Using Performance Evaluation Process Algebra.	Nitin Shukla	2014
+29	Implementation of Focus UI Feature in Toolbar Control on Tizen Platform.	Moni Chandel	2014
+30	Performance Evaluation of TCP Variants Over Proactive and Reactive Routing Protocols in Mobile Adhoc Networks	Rahul Kumar Soni	2015
+31	An Implementation of Topic- Based Publish-Subscribe Paradigm Using SDN.	Misha Hungyo	2015
+32	Ontology Based Publish/Subscribe Using Software Defined Networking.	Chanchal Talreja	2016
+33	Application Based Network Slicing Using Flow Visor in Software Defined Networking	Gopal Chandra Tudu	2016
+34	SDN-Enabled Location Aware Optimized Structured P2P Overlay.	Anurag Bamal	2017
+35	SDN-Based Dynamic Video Streaming Using DASH.	Rishabh Jain	2018
+36	SDN-Enabled Location Aware Optimized Low Maintenance Overhead P2P Overlay.	Deepmalya Dutta	2018
+37	Design and Implementation of Hardware Diagnostic Utility for Tegra Display.	Vishesh Bajpai	2019
+38	Improving Performance and Lifetime of SSDs using Hardware Compression.	Omesh Sudhakar	2019
+39	Secure Key Configuration for Storage Devices and Boot KPI Automation.	Nitin Kumar Yadav	2019
+40	Offloading of Storage Efficiency Operation in ONTAP	Komal Agarwal	2019

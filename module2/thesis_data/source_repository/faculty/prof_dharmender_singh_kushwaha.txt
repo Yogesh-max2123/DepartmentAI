@@ -1,0 +1,117 @@
+Prof. Dharmender Singh Kushwaha
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Hybrid Load Balancing in Self-Organizing Trusted Clusters	Dr. Shakti Mishra	2012
+2	Early Estimation of Software Complexity, Development and Testing Effort from IEEE â€“ SRS Document	Dr. Ashish Sharma	2013
+3	A Dynamic Consistency Aware Secure File Replication mechanism	Dr. Manu Vardhan	2013
+4	A Hybrid Framework for Efficient Web Service Discovery and Composition	Dr. Shrabani Mallick	2014
+5	Managing Design Phase Package Level Coupling & Cohesion and Reducing the Design Document Comprehension Effort	Dr. Aprna Tripathi	2015
+6	Test Case Reduction Techniques for Design and Maintenance Phase of Software Development	Dr. Avinash Gupta	2016
+7	A Reliable Framework for Efficient Data Management for Adhoc Cloud	Dr. Sanjeev Pippal	2017
+8	Automatic Intruder Detection System for Border Surveillance	Dr. Dushyant singh	2017
+9	An Integrated Traffic Surveillance System for Smart City	Dr. Tarun Kumar	2019
+10	Anti-Predatory Nature- Inspired Algorithms and Their Applications	Dr. Rohit Kumar Sachan	2021
+11	An Intelligent Traffic Control Management System for Emergency Vehicles using IoT	Dr. Biru Rajak	2021
+12	Multi-criteria Task Scheduling in Heterogeneous Cloud Environment	Dr. Dhirendra Kumar Shukla	2021
+13	Novel Techniques for Suspicious Activity Detection through Video Surveillance at Public Place	Ms. Neelam Diwedi	2021
+14	Distributed Ledger Technology based Secure Property Transaction Mechanism	Mr. Amrendra Singh Yadav	2022
+15	Host Load Prediction Techniques for Efficient Capacity Planning of Cloud Data Center Servers	Ms. Eva Patel	2024
+16	Design of Blockchain-Enabled Healthcare System Using Convergence of ML and loT Framework	Charu Krishna	2025
+Ph.D. Ongoing
+1	Melanoma detection using deep learning and image processing	Ms.Anuska Gupta	SOA done
+M.Tech Students
+1	An improved Framework for Mobile Web Services	Ranjit Singh	2009
+2	Implementation of Web Services for Distributed e-Education System Based on SOA	Chandra Prakash Singar	2009
+3	7141 Software Development Kit (SDK) Software Test & Debug	Anuj Kumar	2010
+4	System Testing for Set Top Box Devices	Prem Prakash Agrawal	2010
+5	Enhancing NetScaler Appliance for Simulating L4 Based DoS Attacks and Adding Policy Support for modifying the L4 traffic flows	Krishna Khanal	2010
+6	A Collaborative Trust Enhanced Security Model for Distributed System Services	Aruna Kumari	2010
+7	Test Bed Implementation of AODV-UU Routing Protocol in MANET	Alok Kumar Singh	2010
+8	Effort Estimation of Converting C Applications into Web Services	Namo Narayana Meena	2011
+9	Preemption based Job Scheduling Algorithm with back filling Technique in Distributed Environment	Anurag Mishra	2011
+10	Simulation based performance analysis of enhanced feedback scheduling algorithm in High-Throughput Computing Environment	Ayan Bhunia	2011
+11	An Efficient Schema Shared Approach for Multitenant Database with Authentication & Authorization Framework	Vishu Sharma	2011
+12	Composition of Heterogeneous Web Services	Sanjeev Neupane	2011
+13	Web Service Discovery and Composition	Rajendra Pandey	2011
+14	Authentication and Authorization Interface using Security SLAâ€™s for Accessing Cloud Services	Durgesh Bajpai	2012
+15	Reduction of Synchronization Overhead using Modification Propogation in a Distributed File Replication System	Shailendra Verma	2012
+16	Study of Process Migration based on CPU Overhead	Nidhi jain	2012
+17	Suitability Analysis of Bloom Filters and Hash Functions based on Application Scenario	Ramesh Chand	2012
+18	Dereplication: A Dynamic Memory Aware Mechanism in Distributed Environment	Paras Gupta	2012
+19	Decentralized Load Balancing Using BLCR with Checkpoint and Restart	Hemant Hariyale	2012
+20	Extensibility In Shared Database And Shared Tables Architecture Of Multi-Tenant Database	Indu Bhushan Dubey	2012
+21	Cloud Computing Services Implementtion on Web	Ahmad Mohd. Khan	2012
+22	Rule Based software Testing Using Decision Table from Requirements Specification	Namita Mishra	2013
+23	Use-Case Based Approach to Analyze Software Change Impact	Pravin Kumar	2013
+24	An Approach to Measure Maintainability, Usability and Understandability of Software Using Class Diagram	Sunil Kumar Malaiya	2013
+25	Test Case Prioritization Using Historical Data and Code Coverage	Nayaneesh Mishra	2013
+26	Data Transfer from MySQL to Hadoop: Implementerâ€™s Perspective	Shiv Pratap Singh Tomar	2014
+27	Implementation of Distributed Searching and Sorting using Hadoop MapReduce	Ankur Shukla	2014
+28	Design Based Approach to Measure the Understandability of Software	Seema Singh	2014
+29	Use Case Based Approach to Analyze Software Change Impact	Anurag Kumar	2015
+30	Prioritization of Test Cases Based on Fault Coverage Using Historical Test Case Data	Gaurav Bansal	2015
+31	Secure and Smart Military Cantonment Using Internet of Things (IoT)	Pawan Kukreja	2016
+32	Securing Metadata in Cloud using Light weight Encryption	Shalini Rai	2016
+33	Analysis of Neural Network based Classification of Virtual Machines	Aalekh Mohan	2017
+34	Role of Evolutionary Algorithm in Test Case Reduction Technique	Ritopa Dey	2017
+35	Software Defined Data Centers	Tanmay Jain	2018
+36	Security in Cloud Computing	Priya Kushwaha	2018
+37	Distributed Database Management System	Prashant Kumar	2018
+38	Traffic Managament using IoT	Akash Chandoke	2019
+39	Traffic Congestion Managament using IoT	Shantanu Dekate	2019
+40	An Efficient Consensus Mechanism in Blockchain Technology for Land Registration System	Shivani Agrawal	2020
+41	Land Registry Storage and Searching Optimization Using Sidechain	Rajul Rao	2020
+42	Miliatry Strategic & Training Application	Jayesh Choudhary	2021
+43	Cloud Data Security using Authentication & Encryption Techniques	Bikas Kumar Chaurasiya	2021
+44	Prime Factorization in Polynomial Time	Tarkeshwar Singh	2021
+45	Medical Health Care Recoed Management Using Blockchain	Harsh Vijaykumar Thakkar	2022
+46	Drug Supply Chain Management and Tracing using Blockchain	Shambhavi Mishra	2022
+47	Fake Currency Detection Using Image Processing	Sachin Kumar Mourya	2023
+48	Framework Fr Privacy Preserving Credential Issuance And Verification System Using Soulbound Token	Siddhant Reddy	2023
+49	Expanding the Sample Space of Skin Cancer Images using Generative Adversarial Networks (GANs)	Sandeep Rana	2024
+50	FlightInsureChain: A Secure Blockchain Platform For Handling Flight Delay Insurance Claims	Ravi Prakash Gupta	2024
+51	Efficient Land Use and Land Cover Classification using Lightweight Ensemble of Transfer Learning Models	Shashank Tiwari	2026
+52	Metaheuristic and SAT-Based Approaches for Solving Rikudo Puzzles	Anirudh M	2026
+53	Enhancing Accuracy in Heart Disease Prediction using GAN	Abhinav Verma	2025
+B.Tech Students
+1	Semi-automated System for S/W Development (IT)	Prateek Singhal, Brijmohan Singh, Tripuvesh Pandey, Vikash Chaturvedi, Namo Narayan Meena	2008
+2	Efficient File Search Algorithm for Unix file Systems (CS)	Praveen Kr. Purwar, Rahul Gupta, Dolly Meena, Rahul singh, Sagar Pisharodi	2008
+3	Genarating collisions of cryptographic hash functions using Volunteer computing (IT)	Rahul Agarwal, Ramprasad G, Yatharth Pandey, Mohit sharma, Eddie Eardan S. Arun Pandian	2009
+4	Service Discovery in a load balanced P2P grid and its Implementation using MOSIX (IT)	Rohit Vashistha, Ankit Gupta, Vivek Narayan, Piyush Gupta, Bishnu Sharma	2009
+5	A Service Broker for Scheduling Distributed Service Oriented Application (CS)	Jitendra Rajput, Chitranshu Saxena, Sachin Gupta, Vatsalya Thakur, V. Mezhu	2009
+6	Dynamic Discovery of Web Services using Mobile Agents (CS)	Gaurav Tiwari, Rahul Agrawal, Deepak Kr, Pandey, Pawan Kumar, Karan Chadha	2009
+7	Implementation Multitenant Database (IT)	Harit Agarwal, Sachin Gupta, Naveen Saini, Abashesh Kundu, Ajit Kumar	2010
+8	Project Management Using Web Services & Service Composition (CS)	Sourabh Jain, Jitendra S. Kushwaha, Shashikant, Abhishek Mehta, Suraj Kumar	2010
+9	An Adaptive Approach to Dynamic load balancing algorithm (CS)	Deep Narayan Dubey, Shireesh Kr. Singh, Hemant Agrawal, Ratnesh Pandey, Ravi Meena	2010
+10	A Fault Tolerant on-Demand consistent file Replication Mechanism for a Distributed System (CS)	Akhil Goel, Abhinav Verma, Priyank Bhatnagar, Saurabh Sharma, Zuheb Khwaja	2011
+11	Trust based Security in Distributed System (CS)	Sachin Gupta, Ravinder Kumar, Harsh Singhal, Aman kataria, Ankur Pandey	2011
+12	Cluster Head Check pointing and recovery of process under Mosix Submitted In partial Fulfilment of the Requirements (IT)	Ankit Pandey, Ankit Mishra, Vikrant Singh Yadav, Charit Pant, Triloki Bharati	2011
+13	Package Level Cohesion & Coupling Computation (CS)	Prateek Khurana, Mohd. Areeb Ali khan, Deepshikha Bharadoaj, Amit Kumar, Gaurang Bhartiya	2012
+14	Secure File Replication and Consistency Mechanism in Distributed System (IT)	Harshit Pahuja, Luv Saxena, Danpan Baveja, Abhishek Abhinav, Harishankar Shar	2012
+15	Performance analysis of Resource Provisiioning for Cloud computing frameworks (CS)	Rahul Kr.Dubey, Arjun Malik, Prateek Jain, Nishant Singh, Ranjan Kr. Bharti	2013
+16	Validating the Design of Software by Measurement of cohesion and Coupling (CS)	Anshu, Maheshwari, Manaswi D. Maharkure, Ashish Pathak, Ritesh Kr. Pandey, Brijesh Verma	2013
+17	To Implement Large Computational Algorithms using Map Reduce Paradigm (IT)	Manashi Sarkar, Suneel Bandhu Patel, Harsh Kapoor, Varun Bansal	2014
+18	Classification of Handwritten Text (CS)	Vibha Verma, Prabhat Yadav, Saksham Katiyar, Namit Shah	2014
+19	Hand Tracking and Gesture Recognition for Human Computer Interface (CS)	Pranshul Agarwal, Aditya Mohan, Sagar V. Padhyaya, Sandeep Kr.	2014
+20	Online Judge (CS)	Nishant Gupta, Dhruv Chandhok, Ayush Parashar, Ashutosh Singh, Chandan Khadva.	2015
+21	Arpit based application for Sorting Notes (IT)	Arpit Uppal Pradhyumn, Anmol Lakhmani, Dharma Ram Khilery	2015
+22	Optical Character Recognition (CS)	Ayush Nigam, Avinash Singh, Sharad Singh, Manjeet Kr. Chaudhary, Avinash Tiwari	2016
+23	Toll Booth Automation (IT)	Sachin Goel, Namen Agarwal, Uppulin Mahesh, Sameer Kaihwas	2016
+24	Electronic Medical Records using Smart Contract (CS)	Avanish Kr. Lahoti, Rahul Agale, Shubham Darshan Tanwar Manash Krishna Das	2017
+25	Distributed Ledger Technology based digital Assest Maintainence with Proof of Existence (CS)	BVSS Manas, Ch tohit Reddy, Km. Anshika Patel, K. Anthony, Akhil Kumar, B. Prashanath	2017
+26	Semantic Similarity Identification in Sciencific papers using Convolutional Neural Network (IT)	Aishwarya singh, Samarth Shukla, Yash Devkota, Kajol Agrawal, Tanuj Pratap Singh	2017
+27	Traffic Congestion control and Dynamic Green Channel using SUMO (CS)	Adarsh goswami, Kr. Sitesh, Kohinoor Meshram, Kr. Subham, Akhil Halder	2018
+28	Digitalizatin of Land Registration using Hyper ledger (CS)	Chapani Uash Natwarlal, Ashish sharma, Ayushman Singh, Manasi Ranjan, Aditya Verma	2018
+29	Deduplication on Encrypted Data in Cloud	Rajat Mohan Yadav, Shubhanshu Ranjan, Raman Kumar Rai, Sanjay Kumar Yadav, Prabhat Kisku	2019
+30	Traffic Congestion Control and Dynamic Green Channel using SUMO	Adarsh Goswami, Kumar Sitesh, Khinoor Meshram, Kumar Shubham, Akhi Halder	2019
+31	Disease Prediction using Machine Learning	Yash Sahay, Yanala Naveen Reddy, Rushat Gabhane, Vivek Kumar	2022
+32	Mental Health Tracker	Jatin Arawal, Alok Ranjan, Deepak Shakya, Atul Kumar Gond	2022
+33	Blockchain Based Voting System	Ridam Agarwal, Utsav Raj, Somil Gupta, Sumit Raj	2023
+34	DLT-Based Financial Transactions Using PBFT Consensus Mechanism	Himanshu, Kalantri Dhanraj Satyanarayanji, Maneeshi Diya Tacouri, Laxmi Narayan Jatiya	2023
+35	Verification of car seller using IPFS and blockchain by creating a distributed ledger	Amit Kumar, Aditya Srivastava, Apoorva Pranjal, Ashutosh Kumar	2024
+36	E-Voting Platform using Blockchain	Rahul Jaiswal, Rahul Toshniwal, Rahul Gupta, Md. Amzad Ali	2024
+37	Refining Vigilance: Strategies for Robust Preprocessing and Dimensionality Reduction in Deep Learning	Purushottam Singh, Praveen Yadav, Parimal Priyanshu, Reshav Suman Labh & Kumar Kartikey	2025
+38	Detecting Anomalies in Blockchain Transactions Using Machine Learning Classifiers	Aviral Sharma, Deepak Chauhan, Bhupender & Divyanshu Kumar	2025

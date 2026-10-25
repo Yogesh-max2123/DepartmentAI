@@ -1,0 +1,12 @@
+Dr Deepak Gupta
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Improvements on Support Vector Machine and Single Hidden Layer Feedforward Network-based Algorithms for Binary Classification	Mr. Parasjyoti Borah Ph.D.(CSE)/2016/06	2016-2020
+2	Enhancement of Parallel and Non-parallel Twin Hyperplane based Learning methods using robust loss functions	Mr. Umesh Gupta Ph.D.(CSE)/2017/01	2017-2022
+3	Performance Enhancement of Classification and Regression Algorithms with Emphasis on Suspended Sediment Load Prediction	Mr. Barenya Bikash Hazarika Ph.D.(CSE)/2018/01	2018-2022
+4	A Machine Learning Approach for Foretelling the Deflection of Concrete Beams Along with Mechanical Properties of Concrete and Bamboo	Mr. Saurabh Dubey Ph.D.(CE)/2020/06	2020-2024
+5	Performance Enhancement of Classification Algorithms with Emphasis on Plant Leaf Identification	Mr. Upendra Mishra Ph.D.(CSE)/2020/10	2020-2025
+Ph.D. Ongoing
+1	Machine Learning	Ms. Jyoti Maurya	July, 2023

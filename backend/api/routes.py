@@ -760,3 +760,7 @@ def process_application_endpoint(
             status_code=500,
             detail=str(e),
         )
+
+# DEPARTMENTAI_MODULE2_DATA_EXPORT_ROUTER
+from module2.data_export.router import router as module2_data_export_router
+router.include_router(module2_data_export_router, prefix="/module2/export", tags=["Module II Data Export"])

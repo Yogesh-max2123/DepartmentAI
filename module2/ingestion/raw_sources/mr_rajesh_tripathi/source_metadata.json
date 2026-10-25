@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Mr. Rajesh Tripathi",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Mr. Rajesh Tripathi",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1645",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1645",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "f0a1e094fd393fbb67c00c05628f58feb67a8aa2d12ba5f020eab0202081365b",
+      "bytes": 3981,
+      "cached_at_utc": "2026-10-19T04:36:35.867364+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Mr. Rajesh Tripathi",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/36052-Rajesh%20Tripathi-Papers.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/36052-Rajesh%20Tripathi-Papers.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "2d2ba1bd50348aaf507cb3384ddf576db9e1581cec9381a04e76469baa98937e",
+      "bytes": 24888,
+      "cached_at_utc": "2026-10-19T04:36:36.316955+00:00"
+    }
+  }
+}

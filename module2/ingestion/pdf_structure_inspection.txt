@@ -1,0 +1,458 @@
+
+================================================================================
+FILE: module2\ingestion\raw_sources\dr_k_sowjanya\publications.pdf
+================================================================================
+Pages: 2
+
+--- PAGE 1 ---
+
+Research Publications
+Journal Articles
+1
+K Sowjanya and M. Dasgupta, “A ciphertext-policy attribute-based encryption scheme for wireless
+body area networks based on ECC,” Journal of Information Security and Applications, vol. 54, 2020, Q1,
+IF: 3.7.  doi: 10.1016/j.jisa.2020.102559.
+2
+K Sowjanya, M. Dasgupta, and S. Ray, “A lightweight key management scheme for key-escrow-free
+ecc-based cp-abe for iot healthcare systems,” Journal of Systems Architecture, vol. 117, 2021, Q1, IF: 4.1.
+ doi: 10.1016/j.sysarc.2021.102108.
+3
+K Sowjanya, M. Dasgupta, and S. Ray, “An elliptic curve cryptography based enhanced anonymous
+authentication protocol for wearable health monitoring systems,” International Journal of Information
+Security, vol. 19, 2020, Q1, IF: 3.2.  doi: 10.1007/s10207-019-00464-9.
+4
+K Sowjanya, M. Dasgupta, and S. Ray, “Elliptic curve cryptography based authentication scheme for
+internet of medical things,” Journal of Information Security and Applications, vol. 58, 2021, Q1, IF: 3.7.
+ doi: 10.1016/j.jisa.2021.102761.
+5
+K Sowjanya, M. Dasgupta, S. Ray, and M. S. Obaidat, “An eﬃcient elliptic curve cryptography-based
+without pairing kpabe for internet of things,” IEEE Systems Journal, vol. 14, 2020, Q1, IF: 4.4.  doi:
+10.1109/JSYST.2019.2944240.
+Conference Proceedings
+1
+K Sowjanya, S. Jana, V. Kumar, D. Saha, and B. Lall, “Standardization aspects of authentication relay
+attack using false base station,” in IEEE 17th International Conference on COMmunication Systems &
+NETworkS (COMSNETS 2025), Bangalore, India, 2025, pp. 1240–1245.
+2
+K Sowjanya, D. Saha, and B. Lall, “Zero-trust security in 5g and beyond networks: An overview,” in
+IEEE 17th International Conference on COMmunication Systems & NETworkS (COMSNETS 2025),
+Bangalore, India, 2025, pp. 1230–1234.
+3
+K Sowjanya, R. Saini, D. Saha, K. Joshi, and M. Das, “Standardization aspects of authentication relay
+attack using false base station,” in Workshop on Security and Privacy of Next-Generation Networks
+(FutureG, NDSS 2025), Network and Distributed System Security (NDSS) Symposium, San Diego, USA,
+2025.
+4
+K Sowjanya et al., “Supi-rear: Privacy-preserving subscription permanent identiﬁcation strategy in
+5g-aka,” in Stabilization, Safety, and Security of Distributed Systems (SSS 2024), Springer: Lecture Notes in
+Computer Science, vol. 14931, Nagoya, Japan, 2024.
+5
+V. Shwetha, D. Unnati, S. Siddhesh, K Sowjanya, and F. A. Antony, “Preventing cross network slice
+disruptions in a zero-trust and multi-tenant future 5g networks,” in IEEE 9th International Conference
+on Network Softwarization (NetSoft 2022), Madrid, Spain, 2023, pp. 227–231.
+6
+K Sowjanya, A. Porwal, S. Pandey, and P. K. Mishra, “Tlbo-based resource allocation scheme in 5g
+h-cran,” in IEEE 14th International Conference on COMmunication Systems & NETworkS (COMSNETS
+2022), Bangalore, India, 2022.  doi: 10.1109/COMSNETS53615.2022.9668491.
+7
+K Sowjanya and M. Dasgupta, “Survey of symmetric and asymmetric key management schemes in the
+context of iot based healthcare system,” in IEEE International Conference on Power, Control and
+Computing Technologies (ICPC2T 2015), NIT Raipur, India, 2020, pp. 283–288.
+8
+K Sowjanya and M. Dasgupta, “Big data based enhanced ambient assisted living system framework,” in
+IEEE 10th International Conference on Computing, Communication and Networking Technologies
+(ICCCNT 2019), IIT Kanpur, India, 2019.  doi: 10.1109/ICCCNT45670.2019.8944522.
+
+
+--- PAGE 2 ---
+
+9
+K Sowjanya and M. Dasgupta, “Provably secure lightweight key policy attribute-based encryption for
+internet of things,” in Proceedings of First International Conference on Machine Learning, Network
+Security, Image Processing and Data Science (MIND 2019), Best Paper Award, NIT Kurukshetra, India,
+2019, pp. 146–160.
+10
+K Sowjanya and M. Dasgupta, “Secure ambient assisted living system using elliptic curve
+cryptography based cpabe,” in Proceedings of IEEE International Advance Computing Conference
+(ICCCNT 2019), IIT Kanpur, India, 2019.  doi: 10.1109/ICCCNT45670.2019.8944521.
+11
+K Sowjanya and M. Dasgupta, “Secure framework for ambient assisted living system,” in Proceedings of
+Computational Intelligence, Communications, and Business Analytics (CICBA 2019), Springer,
+Communications in Computer and Information Science, vol. 1031, Kalyani University, Kalyani, India, 2019.
+12
+K Sowjanya, A. Singhal, and C. Choudhary, “Mobdbtest: A machine learning based system for
+predicting diabetes risk using mobile devices,” in Proceedings of IEEE International Advance Computing
+Conference (IACC 2015), Banglore, India, 2015, pp. 397–402.
+Books
+1
+K Sowjanya and M. Dasgupta, Eds., Risk of Readmission for Diabetes Patients: A Machine Learning
+Approach: Readmission rate Predictor. Glasstree Publication, 2019, isbn: 978-1-5342-9961-0.
+Patents
+1
+K Sowjanya, R. Saini, D. Saha, K. Joshi, and M. Das, “Methods and systems for securing oran
+frameworks against compromised rapps,” Indian Patent 587457, Apr. 2026.
+2
+K Sowjanya, D. Saha, A. M. Baswade, and B. Lall, “Methods and systems for managing supi privacy in
+a PLMN hosting NPN scenario,” Indian Patent 559550, Feb. 2025.
+3
+K Sowjanya, D. Saha, and B. Lall, “Methods and systems for protecting user-sensitive information in
+localized mobile metaverse services,” Indian Patent 565916, May 2025.
+4
+V. Kumar, K Sowjanya, D. Saha, and B. Lall, “A system and method for detecting false base station in
+network attack,” Indian Patent 202 421 097 948, 2024.
+
+
+================================================================================
+FILE: module2\ingestion\raw_sources\dr_kapil\publications.pdf
+================================================================================
+Pages: 7
+
+--- PAGE 1 ---
+
+All
+Since 2021
+Citations
+712
+533
+h-index
+15
+14
+i10-index
+28
+24
+Kapil Gupta
+NIT Kurukshetra
+Statistical Machine Learning
+Data Analytics
+Quantum Computing
+TITLE
+CITED BY
+YEAR
+Slack-Guided and Geometry-Aware (SGGA) Knowledge-Based
+Oversampling for Intelligent Imbalanced Learning
+R Lalit
+Knowledge-Based Systems, 115671
+2026
+Imbalance class problem: an analytical mapping using spreadsheet,
+VOSviewer, and large language models: R. Lalit et al.
+R Lalit, K Gupta
+Knowledge and Information Systems 67 (11), 9821-9865
+2
+2025
+Efficient three-way SVM for three-class classification problems
+VP Srivastava, K Gupta
+International Journal of Data Science and Analytics 20 (2), 1033-1041
+5
+2025
+Quantum Computational Intelligence Techniques: A Scientometric
+Mapping: M. Arora, K. Gupta
+M Arora, K Gupta
+Archives of Computational Methods in Engineering 32 (3), 1399-1425
+17
+2025
+Semi supervised K–SVCR for multi-class classification
+VP Srivastava, Kapil
+Multimedia Tools and Applications 84 (9), 6737-6753
+1
+2025
+Performance Evaluation of K-SVCR in Multi-class Scenario
+VP Srivastava, Kapil, N Goyal
+International Conference on Advances in IoT and Security with AI, 269-279
+1
+2023
+Impact of Spatial Distribution of Repeated Samples on the Geometry of
+Hyperplanes
+R Lalit, Kapil
+International Conference on Advances in IoT and Security with AI, 15-25
+1
+2023
+Notebook
+Kapil Gupta - Google Scholar
+https://scholar.google.co.in/citations?hl=en&user=EpX0bBMAAAAJ&...
+1 of 7
+6/13/2026, 10:25 AM
+
+
+--- PAGE 2 ---
+
+TITLE
+CITED BY
+YEAR
+Linear optimization and fuzzy-based clustering for WSNs assisted internet
+of things
+P Maratha, K Gupta
+Multimedia Tools and Applications 82 (4), 5161-5185
+14
+2023
+Leaf Bagging: A novel meta heuristic optimization based framework for leaf
+identification
+N Goyal, N Kumar, Kapil
+Multimedia Tools and Applications 81 (22), 32243-32264
+11
+2022
+HFLBSC: Heuristic and fuzzy based load balanced, scalable clustering
+algorithm for wireless sensor network
+P Maratha, K Gupta
+Wireless Personal Communications 125 (1), 281-304
+15
+2022
+A hierarchical laplacian TWSVM using similarity clustering for leaf
+classification
+N Goyal, K Gupta
+Cluster Computing 25 (2), 1541-1560
+14
+2022
+Clustering-based hierarchical framework for multiclass classification of leaf
+images
+N Goyal, K Gupta, N Kumar
+IEEE Transactions on Industry Applications 58 (3), 4076-4085
+10
+2022
+Image processing based Wheat spike detection using YOLO
+S Singh, AK Thakur, N Goyal, K Gupta
+2022 Second International Conference on Artificial Intelligence and Smart …
+2
+2022
+Lower-dimensional intrinsic structural representation of leaf images and
+plant recognition
+N Goyal, N Kumar, K Gupta
+Signal, Image and Video Processing 16 (1), 203-210
+5
+2022
+Recognizing Plant species using Digitized leaves-A comparative study
+S Patil, B Patra, N Goyal, K Gupta
+2021 5th International Conference on Trends in Electronics and Informatics …
+11
+2021
+Kapil Gupta - Google Scholar
+https://scholar.google.co.in/citations?hl=en&user=EpX0bBMAAAAJ&...
+2 of 7
+6/13/2026, 10:25 AM
+
+
+--- PAGE 3 ---
+
+TITLE
+CITED BY
+YEAR
+Malware Classification Based On System Call Sequence
+S Kumar, A Agrahri, SK Jha, K Gupta
+2021 2nd International Conference for Emerging Technology (INCET), 1-6
+2021
+A comparative analysis on the existing techniques of wheat spike detection
+AK Thakur, S Singh, N Goyal, K Gupta
+2021 2nd International Conference for Emerging Technology (INCET), 1-6
+11
+2021
+Various approaches of human activity recognition: A review
+AK Sharma, S Tomar, K Gupta
+2021 5th international conference on computing methodologies and …
+13
+2021
+A survey on: Facial emotion recognition and classification
+M Moolchandani, S Dwivedi, S Nigam, K Gupta
+2021 5th international conference on computing methodologies and …
+24
+2021
+Greedy Load Balancing Energy Efficient Routing Scheme for Wireless
+Sensor Networks
+P Maratha, K Gupta
+Recent Advances in Computer Science and Communications (Formerly: Recent …
+2
+2021
+Energy balanced, delay aware multi-path routing using particle swarm
+optimisation in wireless sensor networks
+P Maratha, K Gupta, P Kuila
+International Journal of Sensor Networks 35 (1), 10-22
+26
+2021
+On solving leaf classification using linear regression
+N Goyal, N Kumar, Kapil
+Multimedia Tools and Applications 80 (3), 4533-4551
+14
+2021
+A hierarchical approach for multi-class classification of leaf images
+N Goyal, N Kumar
+2020 IEEE International Conference on Computing, Power and Communication …
+1
+2020
+Kapil Gupta - Google Scholar
+https://scholar.google.co.in/citations?hl=en&user=EpX0bBMAAAAJ&...
+3 of 7
+6/13/2026, 10:25 AM
+
+
+--- PAGE 4 ---
+
+TITLE
+CITED BY
+YEAR
+A survey on human activity recognition and classification
+A Gupta, K Gupta, K Gupta, K Gupta
+2020 international conference on communication and signal processing (ICCSP …
+95
+2020
+Improved fault-tolerant optimal route reconstruction approach for energy
+consumed areas in wireless sensor networks
+P Maratha, K Gupta, AK Luhach
+IET Wireless Sensor Systems 10 (3), 112-116
+12
+2020
+A review: Sentiment analysis and opinion mining
+A Arya, V Shukla, A Negi, K Gupta
+Proceedings of the International Conference on Innovative Computing …
+12
+2020
+Comparative analysis of image segmentation techniques
+S Saxena, S Jain, S Tripathi, K Gupta
+International Conference on Advanced Communication and Computational …
+12
+2019
+Performance of Feature Extracted on Leaf Images by Discriminant Analysis
+on Various Classifiers
+A Pathak, B Vohra, K Gupta
+International Conference on Advanced Communication and Computational …
+2
+2019
+Load Balancing and Fault Tolerance-Based Routing in Wireless Sensor
+Networks
+P Maratha, Kapil
+International Conference on Innovative Computing and Communications …
+2019
+A comprehensive and systematized review of energy-efficient routing
+protocols in wireless sensor networks
+P Maratha, K Gupta
+International Journal of Computers and Applications 44 (1), 83-100
+20
+2019
+Multiclass twin support vector machine for plant species identification
+N Goyal, K Gupta, N Kumar
+Multimedia Tools and Applications 78 (19), 27785-27808
+19
+2019
+Supervised learning approach towards class separability-linear discriminant
+analysis
+2
+2019
+Kapil Gupta - Google Scholar
+https://scholar.google.co.in/citations?hl=en&user=EpX0bBMAAAAJ&...
+4 of 7
+6/13/2026, 10:25 AM
+
+
+--- PAGE 5 ---
+
+TITLE
+CITED BY
+YEAR
+A Pathak, B Vohra, K Gupta
+2019 International Conference on Intelligent Computing and Control Systems …
+A comparative analysis of unequal clustering-based routing protocol in
+WSNs
+T Biswas, S Kumar, T Singh, K Gupta, D Saxena
+Soft Computing and Signal Processing: Proceedings of ICSCSP 2018, Volume 1 …
+15
+2019
+Plant species identification using leaf image retrieval: A study
+N Goyal, N Kumar
+2018 International Conference on Computing, Power and Communication …
+13
+2018
+A comparative study on prominent strategies of cluster head selection in
+wireless sensor networks
+P Maratha, Kapil
+Integrated Intelligent Computing, Communication and Security, 373-384
+5
+2018
+A review of different text categorization techniques
+A Aggarwal, J Singh, DK Gupta
+International Journal of Engineering & Technology 7 (3.8), 11-15
+18
+2018
+Modified centralized approach for preventing collision at traffic intersection
+R Chawla, P Thakral, AK Kaura, K Gupta
+2017 4th International Conference on Signal Processing, Computing and …
+4
+2017
+Smart transport recommender system
+K Chopra, P Moun
+2017 2nd International Conference on Telecommunication and Networks (TEL-NET …
+1
+2017
+Preserving privacy of patients based on re-identification risk
+H Taneja, AK Singh
+Procedia Computer Science 70, 448-454
+50
+2015
+1-Norm extreme learning machine for regression and multiclass
+classification using Newton method
+S Balasundaram, D Gupta
+Neurocomputing 128, 4-14
+82
+2014
+Kapil Gupta - Google Scholar
+https://scholar.google.co.in/citations?hl=en&user=EpX0bBMAAAAJ&...
+5 of 7
+6/13/2026, 10:25 AM
+
+
+--- PAGE 6 ---
+
+TITLE
+CITED BY
+YEAR
+Lagrangian support vector regression via unconstrained convex
+minimization
+S Balasundaram, D Gupta
+Neural networks 51, 67-79
+48
+2014
+On extreme learning machine for ε-insensitive regression in the primal by
+Newton method
+S balasundaram, Kapil
+Neural Computing and Applications 22 (3)
+15
+2013
+Finite Newton method for implicit Lagrangian support vector regression
+S Balasundaram, Kapil
+International Journal of Knowledge-based and Intelligent Engineering Systems …
+6
+2011
+Application of error minimized extreme learning machine for simultaneous
+learning of a function and its derivatives
+S Balasundaram
+Neurocomputing 74 (16), 2511-2519
+18
+2011
+Weighted fuzzy ridge regression analysis with crisp inputs and triangular
+fuzzy outputs
+S Balasundaram, Kapil
+International Journal of Advanced Intelligence Paradigms 3 (1), 67-81
+4
+2011
+On Lagrangian support vector regression
+S Balasundaram
+Expert Systems with Applications 37 (12), 8784-8792
+44
+2010
+Application of Lagrangian twin support vector machines for classification
+S Balasundaram, N Kapil
+2010 Second International Conference on Machine Learning and Computing, 193-197
+15
+2010
+Analysis of Route Reconstruction Approach for Energy Consumed Areas in
+Wireless Sensor Networks
+P Maratha
+Kapil Gupta - Google Scholar
+https://scholar.google.co.in/citations?hl=en&user=EpX0bBMAAAAJ&...
+6 of 7
+6/13/2026, 10:25 AM
+
+
+--- PAGE 7 ---
+
+Kapil Gupta - Google Scholar
+https://scholar.google.co.in/citations?hl=en&user=EpX0bBMAAAAJ&...
+7 of 7
+6/13/2026, 10:25 AM
+

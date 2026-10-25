@@ -1,0 +1,105 @@
+Dharmendra Kumar Yadav
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Optimal Utilization of Spot VMs in Cloud Computing	Dr. Ashish Kumar Mishra	2020
+2	Placement of Virtual Network Functions and Flow Scheduling	Dr. Brajesh Kumar Umrao	2024
+3	Optimal Resource Provisioning for Containerized Applications	Dr. Mahendra Pratap Yadav	2021
+4	Formal Verification of a Separation Kernel	Dr. Ram Chandra Bhushan	2021
+5	A Methodology for Software Construction and Evolution in an Untrusted Environment	Dr. Nisha Pal	2024
+6	QoS Driven Transactional Web Services Composition	Dr. Sunita Jalal	2023
+7	Modeling Variability and Integration of Web Services Components for Achieving Application Portability in Cloud Computing	Dr. Brijesh Pandey with Dr. Sudhir Singh Soam, Institute of Engineering and Technology, Lucknow submitted to Dr. A.P.J. Abdul Kalam Technical University, Uttar Pradesh, Lucknow	2022
+Ph.D. Ongoing
+1	Cloud Computing	Mr. Harish Chandra Akarte	2017
+2	Data Mining with Machine Learning	Mr. Manoj Kumar	2018
+3	Data Science	Mr. Abhishek Gaur	2020
+4	Skin Cancer Detection	Neetu Verma	2022
+5	Predicting Depression through Machine Learning	Vikas Yadav	2022
+M.Tech Students
+1	PERFORMANCE EVALUATION OF ROUTE OPTIMIZATION SCHEME FOR MOBILE IP IN HIERARCHICAL NETWORK	Shraddha	2003
+2	AN IMPROVED PEER TO PEER NETWORK ARCHITECTURE	Ramakant Mohanty	2003
+3	ROUTE OPTIMIZATION IN MOBILE IP WITH TEMPORARY HOME AGENTS	Rajinder Singh	2003
+4	DESIGNING RELIABLE COMMUNICATION PROTOCOL FOR MOBILE AGENTS USIING MEFS & MAILBOX BASED TECHNIQUE	Akhilesh Kumar	2004
+5	EFFICIENT METHOD FOR COMMUNICATING RELIABLY WITH MOBILE AGENTS USING MESSAGE FORWADING SCHEME WITH UPDATES	Namita Jain	2004
+6	EFFICIENT SIGNAL-STABILITY BASED ADAPTIVE ROUTING (SSA) PRTOCOLS FOR MOBILE AD HOC NETWORKS	Raghava Yadav	2004
+7	DEASIGN AND DEVELOPMENT OF WEB BASED SYSTEM AUTOMATION	Sudhakar Pandeya	2004
+8	ROUTE OPTIMIZATION USING OSPF-OMP ALGORITHM	Parvendra Kr Chauhan	2004
+9	MODELLING ASYNCHRONOUS MESSAGE EXCHANGE PATTERNS IN CCS	Lucknesh Kumar	2009
+10	EXTENDING BUSINESS PROCESS MODELING LANGUAGE AND MAPPING TO WSCDL WITH PROCESS GOALS, PERFORMANCE, EVALUATION AND SCALABILITY	Reena Sonakia	2009
+11	AN ARCHITECTURE DESCRIPTION LANGUAGE FOR WEB SERVICES	Saroj Kumar	2009
+12	MODELING AND VERIFYING WEB SERVICES COMPOSITION USING CCS	Krishna Giri	2010
+13	FORMAL DESCRIPTION OF DESIGN PATTERNS	Reshu Kapoor	2011
+14	MODELING AND VERIFYING WEB SERVICES COMPOSITION USING PICALCULUS	Gopal Sing Kushwah	2011
+15	FORMALIZATION OF BIG ARCHITECTURE THROUGH PI CALCULUS	Srikant G Ambare	2011
+16	AN INTERFACE FORMALISM OF WEB SERVICES BASED PROTOCOL SPECIFICATION AND COMPONENT ADAPTER USING PI-CALCULUS	Mahendra Pratap Yadav	2012
+17	A REWARD BASED GENETIC ALGORITM FOR OPTIMAL WEB SERVICE SELECTION	Arpit Solanki	2012
+18	FRAMEWORK FOR CONTINUOUSALY MOVING OBJECT TO MONITOR RESULT CHANGES OF SPATIO TEMPORAL QUERIES USING DATA STREAM MANAGEMENT SYSTEM	Brijesh Pandey	2012
+19	FORMALIZATION OF EFFICIENT WEB CACHING PATTERN	Ujjal Kumar Das	2012
+20	A PRIORITY BASED BATCH SCHEDULING METHOD IN CLOUD COMPUTING ENVIRONMENT	. Swagat Ranjn Sahoo	2012
+21	RELIABLE TASK ALLOCATION IN DISTRIBUED SYSTEMS	Vinod Kumar Yadav	2012
+22	A KNOWLEDGE BASED APPROACH FOR COMPONENT COMPOSITION	Manish Kumar Singh	2012
+23	GIS DATA BASE CREATION USING REMOTE SENSING TECHNOLOGY IN AND AROUND MOTICHUR AREA, UTTARKHAND AND ITâ€ŸS CHANGE DETECTION IN LAST 40 YEARS	Ashutosh tiwari	2012
+24	CLOUD MODEL FOR INTERACTIVE COMMUNICATION	Manish K. Mehrotra	2012
+25	MULTI OBJECTIVE TASK SCGEDULING ALGORITHM FOR CLOUD COMPUTING THROUGHPUT OPTIMIZATION	Atul Vikash Lakra	2013
+26	IMPROVED MINIMUM EXECTION TIME ALGORITHM IN CLOUD COMPUTING ENVIRONMENT	Rahul Singh	2013
+27	MODELING AND FORMAL ANALYSIS OF BPMN THROUGH CCS	Arun Pratap Singh	2013
+28	APPLICATIONS OF MAXIMUM CLIQUE IN SOCIAL NETWORK ANALYSIS	Nand Kishore	2013
+29	GRAPH EDIT DISTANCE USING SPANNING TREE	Apoorva Singhraul	2013
+30	FREQUENT TERM BASED TEXT DOCUMENT CLUSTERING: A NEW APPROACH	Manoj Kumar	2013
+31	MODELING AND VERIFICATION IN NuSMV OF INTERFACING INCOMPATIBLE PROCESSES THROUGH ADAPTATION	Sandeep Sing	2013
+32	ZONING OF WASTE WATER DRAINAGE OF ALLAHABAD CITY USING GIS	Yadvendra Pratap Singh	2013
+33	DESIGN AND PERFORMANCE BENCHMARKING OF GEO-PORTAL FOR URBAN MANAGEMENT	Vartika Bajpai	2013
+34	ADAPTIVE DEPLOYMENT OF SOFTWARE APPLICATIONS IN DISTRIBUTED ENIRONMENT	Nitin Kumar	2014
+35	EFFICIENT GRAPH SIMILARITY ALGORITHMS	Sugandha Srivastava	2014
+36	AN EFFICIENT MESSAGE AUTHENTICATION IN VANETS	Mainegar Yadav	2014
+37	ENHANCEMENT IN SECURITY TECHNIQUES USING IMAGE STEGNOGRAPHY	Ravi Kan	2015
+38	VALIDATION OF UML DESIGN MODELS	Ashish Kumar Mishra	2015
+39	LOAD BALANCING ACROSS CONTROLLERS IN SOFTWARE DEFINED NETWORK	Kalva Nithish Reddy	2015
+40	FREQUENT TERM BASED TEXT DOCUMENT CLUSTERING A NEW APPROACH	Manish Kumar	2015
+41	ENHANCED CLOUDSKY GENERATION OF RANDOM TTL FOR THE ENCRYPTION KEY	Kambhattla Shashikan	2016
+42	PERFORMANCE EVALUATION OF SPOT INSTANCES IN FEDERATED CLOUD COMPUTING ENVIRONMENTS	Sumit Tomar	2016
+43	. A PIPELINED APPROACH TO MAPREDUCE JOB SCHEDULING	Mini Goyal	2016
+44	. ALGORITHM FOR A SELF-DRIVEN INDOOR ROBOT USING ARTIFICIAL INTELLIGENCE	Ravi Kaler	2017
+45	APPROPRIATE NUMBER OF ANOLOGUES IN ANALOGY BASED SOFTWARE EFFORT ESTIMATION	Veerangana Shivani	2017
+46	CHECK-POINTING WITH MIGRATION FOR SPOT INSTANCES	Sonam Agarwal	2017
+47	WEB SERVER WORKLOAD PREDICTION USING TIME SERIES MODEL	Akansha Kunwar	2018
+48	EFFICIENT USE OF PREEMPTIBLE COMPUTING RESOURCES IN CLOUD COMPUTING	Abhishek Kesarwani	2018
+49	DATA SECURITY IN PUBLIC CLOUD	Preeti Vishwakarma	2018
+50	. OPTIMAL UTILIZATION OF NETWORK RESPONSE BY REPLACING EPC FUNCTIONS THROUGH VNF REPLICAS IN MOBILE NETWORK	Vikrant Chaudhary	2019
+51	IMPROVISED SCHEDULING ALGORITHM FOR LOAD BALANCING IN CLOUD COMPUTING	Uttam Das	2019
+52	COMPOSITION OF SOFTWARE THROUGH COMPONENTS USING BLOCKCHAIN TECHNOLOGY	Shivangi Baranwal	2020
+53	RESOURCES PROVISIONING IN CLOUD SERVICES THROUGH MACHINE LEARNING	Rohit	2020
+54	MACHINE LEARNING BASED RESOURCE PROVISIONING IN CLOUD COMPUTING	Mr. Ankit Kumar	2021
+55	BLOCKCHAIN TECHNOLOGY IN HELTHCARE SYSTEM	Ms. Medhawi Singh	2021
+B.Tech Students
+1	Horizontal Scaling of Docker Containers Based on Workload using Hybrid Approach	Gaurav Raj, Abhishek Kumar, Diwakar Verma, Satyajeet Rajbhar	2020
+2	Verification of Cloud Systems using BigMC	Amit Jain, Ankit Chaudhary, Lokesh Kumar Singh, Arun Verma	2020
+3	Vertical Elasticity Using Machine Learning Approach for Containerized Applications	Abhishek Kumar, Hrithik Singh, Adnan Ansari, Akhilesh Pratap Singh	2020
+4	Auto-Scaling of Containerized Applications using Machine Learning	Jugta Ram, Aniket Kumar, Komal Chaurasia, Jyotirmay Barman	2020
+5	Performance Analysis of SDN Controllers using Mininet Emulator	Pulkit Gulati, Prince Kumar Jaiswal, Rishav Kumar, Shekhar Yadav	2019
+6	Improve Ant Colony Optimization based Load Balancing Algorithm For Optimal Cloud Resource Utilization	Vaibhav Bhardwaj, Romil Shah, Ambuj Kumar Shukla, Pradeep Kumar, Amit Kumar	2019
+7	Hybrid Approach for Horizontal Scaling in Container Based Virtualization	Samyak Jain, Narendra Kumar, Vikas Kumar Yadav, Sandeep Gaur, WMD Kulathunga	2019
+8	Improving Reliability and Reducing cost of Task Execution on Amazon EC2 Spot Instances using Machine Learning Approach	Naman Jain, Yogesh Kumar, Sachin Kumar, Vishal Sharma, Shivam Katiyar	2018
+9	Hybrid Approach to Provide Elasticity in Container-based Virtualization for better Resource Utilization	Golla Manohar, Dhawal Patel, Devendra Kumar Sharma, Apoor Jayanth Kumar , Chinthapally Praneeth Kumar	2018
+10	An Approach to Load Balancing using Genetic Algorithm	Shivam Tanay, Aditya Tiwari, Mayank, Pradeep Kumar Yadav, Kumar Shubham, Akhilesh Kumar	2018
+11	Price Prediction for Spot Instances in Cloud	Dipti Roy, Tejas Sahu, Mohit Singh Rajput, Chhaya Bharti, Abhishek Kumar	2017
+12	Virtual Machine Management among Nodes in Cloud	Neeraj Garg, Vivek Awasthi, Priyanshu Saini, Udbhav Tiwari, Sushant Gadiwan	2017
+13	Smart ED	Harshit Kumar, Prashant Pandey, Rahul Bansal, Ketan Goel, Abhitendra Kumar Rawat	2016
+14	Online Collaborative Spreadsheet	Amit Kumar Maurya, Vivek Vikram Singh, Shubh Panday, Amit Kumar Maurya	2016
+15	Medical Emergency System for Road Accidents	Gourav Sahni, Amit Kumar Verma, Niraj Agrawal, Niraj Kumar Das, Ribesh Shrestha	2016
+16	Modelling Compensation in Long Running Transaction	Aasheesh Verma, Prakash Kumar Keshari, Vikas, Saquib Fowad	2015
+17	Modelling Conversion of Trace Semantics of LRT from CSP to CCS	Sakshi Pandey, Akanksha Nichrelay, Paratosh Kumar, Abhishek Mandal	2015
+18	Controlling Computer using Voice Commands: A Windows Application	Abhishant Prakash, Monalisa Dokania, Nitin Kamal	2015
+19	Software Composition Through Formally Verified Reusable Components	Vikram Bhardwaj, Prashant Mishra, Rahul Jaiswal, Siddharth Gaur, Deepak Kumar Meena, Amar Kumar Pajiyar	2014
+20	Translation of Abstract C++ Code To CCS Expression and Intermediate Tree Generation- 3 may 2013	Sonali Sharma, Manish Patel, Shashank Singh Jadaun, Vikas Chandra, Ravi Roushan Kumar	2013
+21	M-Connect	Abhay Kumar Agrwal, Usama Masood Khan, Amit Kumar, Tarun kumar, Sharad Nigam	2013
+22	Implementation of Extended Tree Edit Distance Using Subtree for Optimization in C	Katya Nigam, Gaurav Agrawal, Rahul Agarwal, Shashank Raut	2013
+23	Modeling of Software Adaption through CCS	Rahul Verma, Bharat Chowdhery, Akhil Pratap Singh, Nitin Gupta, Vijay Thakur	2012
+24	Modeling of Component Adaptation	Pawan Kumar Yadav, Shivank Goyal, Dipak Purbey, Kumari Padmini Pal, Akangkhi Borah	2012
+25	CTL Model Checking with Java Path Finder	Prateek Kumar Sinha, Sharad jain, Ankur Srivastava, Hitesh Das, Vivek Kumar Singh	2010
+26	Modeling and Composition of Architectural Patterns	Kapil Bhardwaj, Amit Pratap Singh, Abhishek Baranwal, Antariksha Singh Tomar, Devesh Verma	2009
+27	CHURN PREDICTION USING MACHINE LEARNING	Divyanshu, Sanyam Singhal, Nandkishor Sharma	2020
+28	PACKAGE REUSE AND MANAGEMENT SERVICE	Ranjeet, Pawan Gupta, Shubh Srivastava	2021
+29	REUSABLE COMPONENT REPOSITORY USING ELASTICSEARCH	Ravinder Sokhal, Tanish Yadav, Robin Singh Barala	2021

@@ -1,0 +1,22 @@
+Shailendra Shukla
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	An Efficient Data Offloading Solution for Opportunistic Networks	Prince Sharma	2021
+2	Early Detection of Autism Spectrum Disorder in Toddlers Using Machine Learning	Uday Singh	2021
+Ph.D. Ongoing
+1	Virtual Network Resource Optimization for Scientific Workflows in Cloud Networks	Uma KM	2022
+2	Trajectory Prediction for Unmanned Aerial Vehicles (UAVs)	Pushpak Shukla	2022
+3	AI-Driven Coordination and Control Strategies for Swarm of Unmanned Aerial Vehicles	Utkarsh Shukla	2024
+M.Tech Students
+1	Malware Analysis in LLN based Mobile IoT Devices	Satyendra Yadav	2020-2021
+2	Gesture and Posture Recognition in Patient Monitoring System	Rasheka Srivastava	2020-2021
+3	Anchor Free Positioning For Target Tracking in Wireless Sensor Networks	Gajendra Tayagi	2014-2015
+4	Impact of Social Network Algorithms in Delay Tolerant Networks	Deepak Poach	2014-2015
+5	Application of Human Opinion Dynamics for message dissemination in Delay Tolerant Networks.	Abhilasha Rangra	2015-2016
+6	Security Analysis of RPL protocol	Priyanshi Sharma	2016-2017
+7	Mobile data offloading in opportunistic networks	Kritika	2016-2017
+8	A study of infrastructure 802.11 networks & MediaTek MT76 driver project	Neelam 2021CS14	2021-2023
+9	Self Injurious Behavior in Autistic Chilld	Pawan Kamal (2022DS23)	2022-2024
+10	Virtual Network Function Placement	Rahul Kumar (2022CS22)	2022-2024

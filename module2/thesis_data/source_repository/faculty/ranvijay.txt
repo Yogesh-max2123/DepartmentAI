@@ -1,0 +1,59 @@
+Ranvijay
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	â€œEfficient Visual Secret Sharing by Random Grid Approachâ€	Mr. Mainejar Yadav (2014RCS05)	2020
+2	Novel Computational Techniques for Compressing and Processing of Genomic Dataâ€	Mr. Sanjeev Kumar (2015RCS03)	2020
+3	Efficient Cluster Based Misbehavior Detection and Revocation of Malicious Vehicle in VANET.	Mr. Dinesh Singh (2012RCS57)	2017
+4	REAL PARAMETER VARIANTS OF ENVIRONMENTAL ADAPTATION METHOD AND THEIR APPLICATIONS	Mr. Tribhuvan Singh (2015RCS09)	2020
+5	Enhancing Extractive Text Summarization: Advancement in Graph-Based, Nature Inspired and Fuzzy Rule-based Approaches	Mr. Avaneesh Kumar Yadav	2024
+6	Secure and Load Balancing Cluster Based Novel Data Aggregation Techniques in WSNs with Energy Constraint	Mr. Shailendra Pushkin	2025
+7	Efficient Data Aggregation Techniques and Load Balancing for Wireless Sensor Networks	Mr. Rajit Ram Yadava	2024
+8	Enhanced Real Time Energy Aware Scheduling in Multicore Cloud Environment.	Mr. K. Vinod	2024
+9	Towards Better Scheduling Approaches in Cloud Computing	Ravi Prakash (2014RCS53)	2025
+Ph.D. Ongoing
+1	Skin Cancer Detection Using Machine Learning and Deep Learning	Neetu Verma (2022RCS01)	2022
+2	Video Summarization using Deep Learning and Optimization Approaches	Ramniwas Lodhi (2022RCS02)	2022
+M.Tech Students
+1	Improved Real Time Packet Scheduling Algorithm	Mr. Surendra Singh	2014
+2	Improved Power Aware Scheduling of Real Time Tasks on Multicore System	Mr. Sanjeev Kumar Gangwar	2014
+3	Improved Certification Revocation and Distribution in VANETs	Mr. Ajeet Kumar Mishra	2014
+4	An Efficient Message Authentication in VANETs	Mr. Mainejar Yadav	2014
+5	Patchwork-Based Embedding and Decoding	Ms. Arti Ranjan	2014
+6	Improved Energy Efficient Real Time Scheduling for Non-preemptive Uniprocessor System	Mr. Tej Pratap Singh	2015
+7	Improved Energy Efficient Real Time Scheduling for Non-preemptive Uniprocessor System	Ms. Simple	2015
+8	Energy Aware Real Time Scheduling for Multicore Platforms	Shalini Jaiswal	2015
+9	Real Time Energy Aware Parallel Task Scheduling in a Cluster	Ms Apoorva Dobhal	2015
+10	Enhanced Digital Watermarking in Coloured Images Based on Chrominance	Mr. Prateek Reddy	2016
+11	Mr. Nikesh Kumar Tanwer	Mr. Nikesh Kumar Tanwer	2016
+12	Cryptanalysis on Digital Image Water Marking based on Feature Extraction and VIsual Cryptography	Ms. Neha Shashmi	2016
+13	Modified Random Grid based Visual Secret Sharing with Meaningfull Shares	Ms. Anshita Agarwal	2017
+14	Progressive Threshold Visual Secret Sharing using Random Grid	Mr. Harshit Kumar	2017
+15	Cheating Prevention in Visual Cryptography by Authenticating the Shares	Mr. Rohit Kumar Singh,	2017
+16	VM Migration and Security in an Elastic Cloud	Mr. Prabhat Tiwari	2018
+17	Improved Boolean-based Multi-Secret Image Sharing Scheme	Mr. Aakash Nishad	2018
+18	Enhanced XOR based Visual Secret Sharing using Random Grid	Mr. Vishal Singh Sachan	2018
+19	Hate Speech Detection on Twitter corpora using Sentimental Analysis in Python B	Mr. Abhishek Ranjan	2019
+20	Proximity based Restaurant Recommendation System in Python	Mr. Keshav Gupta	2019
+21	Efficient Cloud Elasticity for Dynamic Virtual Machines	Mr. Aniraj Soni	2020
+22	Secure Voting Application using Blockchain	Mr. Rajdeep Sarkar	2020
+23	Efficient Cross-Site Scripting (XSS) Detection in Multiple Stages	Mr. Sundar Lal Baror	2020
+24	Colored Image Processing of Medical Images To Detect Anomaly	Mr. Sana Ullah	2021
+25	Hand Gesture Recognition	Mr. Nikul	2021
+26	Modified DES Algorithm for Image Encryption using Visual Cryptography	Mr. Shyam Narayan Pandey	2022
+27	A (3, 3) - VSS schemes with meaningful shares for RGB cover image	Mr. Arpit Suman	2022
+28	Automatic detection of plant leaf diseases using deep learning	Ms. Palak Bansal	2022
+29	Enhanced energy-aware fault tolerance real-time task on heterogeneous multi-core system	Ms. Priyanka Gupta	2022
+30	Minimization Of Large Text Document Based on Neural Network Approach	Mr. Neelesh Kumar	2023
+31	Image Restoration using deep learning	Ms. Aayushi Aggarwal	2023
+32	Negative Emotion Detection of Mental Health Patients using ML	Mr. Inderjeet Singh	2023
+33	Design of Quantum Algorithm for NP-intermediate problem and verification of the algorithm	Mr. Arpit Singh	2021
+B.Tech Students
+1	Student Attention Analysis and Monitoring	Vivek Rathi , Vaishnav Agrawal and Shiva Shukla	2021
+2	Assistive Vision for Visually Impaired People	Abhijeet Biswas, Kishlay Kumar and Aman Kumar Gaurav	2021
+3	Emotion recognition on quarantined people based on Facial Expressions during COVID-19	PranPranjal Tripathi , Navneet Khandelwal and Mohammed Abdul Khadar	2021
+4	Indian Sign Language Recognition using Neural Networks	Muskan Srivastava, Vishal Shukla, Shubham Agarwal and Vandana Singh	2020
+5	Unusual Activity and Weapon Detection in Public Places	Priyanshu Singh, Shivam Agrawal, Suyog Shrestha and Rahul Singh Adhikari	2020
+6	Autoscaling of Docker containers: Reactive and Proactive	Ria Jain, Sachit Sharma, Shashank Shekhar and Sandeep Singh	2020

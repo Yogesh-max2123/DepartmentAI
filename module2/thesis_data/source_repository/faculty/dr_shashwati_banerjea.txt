@@ -1,0 +1,25 @@
+Dr. Shashwati Banerjea
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Design and Implementation of a Software Defined Churn-tolerant Peer to peer content delivery Network at the edge for adaptive video streaming	Mr. Akhilesh Kosta	2024
+2	Design and Implementation of edge based framework for smart monitoring of public restrooms in developing countries	Ms. Rajasi Gore	2024
+Ph.D. Ongoing
+1	Design of defense techniques for deep learning models against adversarial attacks	Siddheshwar Kumar	2021
+2	Multimodal learning techniques for detection of uterine cancer	Shivangi Tripathi	2023
+M.Tech Students
+1	On Demand Access of Flex Group Snapshots from Cloud using File System in User Space (FUSE)	Mr. Mukul Maurya	2019
+2	Real-time Speech Denoising and Sound Source Separation	Mr. Angshuman Ghosh	2019
+3	Towards Development of Intelligent Toilet Monitoring System	Mr. Chandan Kannaujia	2019
+4	Comparative Analysis of Cloud Computing and Fog Computing	Mr. Amit Kumar	2018
+5	Towards Load Balancing in Fog Computing environment	Mr. Vishal Kumar Chaurasia	2018
+6	Resource discovery in heterogeneous volunteer computing environment	Mr. Avishek Paroi	2017
+7	Towards a volunteer computing environment	Mr. Vindhya Kumar	2016
+8	Utilization of volunteer resources to provide computational services	Mr. Raj Kumar Saroj	2015
+9	Utilizing volunteer resources for providing Infrastructure-as-a-Service	Mr. Sarvesh Shukla	2015
+10	Bloom filter implementation for data optimization with Hadoop	Mr. Mayank Bhushan	2014
+11	A MapReduce based implementation of skyline for Big Data	Mr. Ravi Madheshiya	2014
+12	Design of a volunteer cloud system	Mr. Ram Manohar Nath Tripathi	2014
+13	Towards aggregation of parallel workloads in cloud	Mr. Sandeep Kumar	2014

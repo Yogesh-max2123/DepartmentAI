@@ -1,0 +1,25 @@
+Dr. Ashish Kumar Maurya
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Some Observations on Fault-Tolerance Approaches for Task Allocation of Deadline-Constrained Tasks in Cloud Environments	Medha Kirti (2020RCS10)	2025
+Ph.D. Ongoing
+1	Energy-Efficient Workflow Scheduling in Cloud Computing	Prateek Verma (2021RCS17)	2021
+2	Multi-objective Task Scheduling in Cloud Computing	Anjani Kumar (2023RCS05)	2023
+M.Tech Students
+1	Performance Estimation of Proactive & Reactive Routing Protocols in Mobile Ad-Hoc Network	Priyanshu	2014
+2	URL Ordering based Performance Evaluation of Web Crawler	Mohd Shoaib	2014
+3	Modified Randomized Weighted Throttled Load Balancing Algorithm For Cloud Computing	Varun Ratan (2019SW06)	2021
+4	Refinement of Network Intent using NLP in SDN	Abhishek Rai (2019SW15)	2021
+5	Study of a Deep Learning Based Slicing Approach for 5G Network	Mukeshwar Gupta (2020IS13)	2022
+6	Handling Imbalance Problem in Customer Churn Prediction (CCP)	Priyanka (2020CS15)	2022
+7	Utilities Development: Compiler Automation and Bug Verification	Ashish Kumar (2021SW24)	2023
+8	An Energy Optimum Metaheuristic-Based Task Scheduling Algorithm in Virtualized Cloud Systems	Ravikant (2021CS24)	2023
+9	Energy Efficient Proof of Work Consensus Algorithm	Sunny Kumar Jaiswal (2021IS38)	2023
+10	Comprehensive Analysis of Stock Market Prediction Techniques	Pavankumar Vivekkumar Maurya (2022DS08)	2024
+11	Knowledge Graph-Enhanced Two-Tower Model for Cross-Domain Recommendation	Vineeta Anand (2022CS21)	2024
+12	Energy-Efficient Workflow Scheduling in Cloud Infrastructure with Resources Awareness	Abhishek Kumar Gautam (2022IS19)	2024
+13	A Hybrid Task Scheduling Approach using PSO, ACO, and GA for Cloud Computing	Sandeep Kumar Yadav (2023CS20)	2025
+14	AI-Based Energy Efficient Task Scheduling for Cloud-Fog Environments	Prince (2023DS16)	2025

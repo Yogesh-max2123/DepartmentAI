@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Abhinesh Kaushik",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Abhinesh Kaushik",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1917",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1917",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "73dd35b61ca1b251f8446fc8e70126112f436a62603638a4c56fa062c2b2b6ff",
+      "bytes": 3979,
+      "cached_at_utc": "2026-10-19T04:37:09.725841+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Abhinesh Kaushik",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/76490-List%20of%20Publications.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/76490-List%20of%20Publications.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "8af944b6b17414ef62ce5afebbeb09b170592fe9fa826248f13590fba65d3160",
+      "bytes": 80764,
+      "cached_at_utc": "2026-10-19T04:37:10.265630+00:00"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+Prof MANOJ MADHAVA GORE
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Design and Deployment Strategies for Recommender Systems	Rohit (2010RCS53) with Prof A K Singh	2021
+2	A Few Ensemble Models for Efficient Stock Price Prediction	Vijay Kumar Dwivedi (2013RCS06)	2020-21
+3	A Few Soft Mechanisms for Cyber-Physical Energy System	Brijendra Pratap Singh (2014RCS01)	2020-21
+4	Employing Association Rule Mining for Effective Evaluation of Choice-Based Examinations	Abdul Aleem (2016RCS06)	2020-21
+5	Design and Implementation of Opportunistic Overlay and Underlay for P2P File Sharing among Mobile Nodes in IEEE 802.11 Networks	Anurag Sewak (2013RCS51) with Dr Mayank Pandey	2020
+6	Design and Implementation of Publish Subscribe based Peer-to-Peer Cloud of Underutilized Resources for providing Computation as-a-Service	Shashwati Banerjea (2012RCS53) With Dr Mayank Pandey	2017-18
+7	An Energy Efficient Low Latency MAC Protocol for Clustered Wireless Sensor Networks	Sansar Singh Chauhan (2009RCS53)	2017-18
+8	Self Localizing, Full-Covered, m-Connected 3D Wireless Sensor Network with Energy Aware Routing	Manas Kumar Mishra (2007RCS01)	2012-13
+9	Trustworthy MANET for Secure Communication	Girish Kumar Patnaik (2004RCS03)	2012-13
+10	An Efficient and Scalable Classification Method for Multi-Relational Databases	Reena Srivastava (2005RCS05)	2010-11
+11	Secure, Energy Efficient, Cluster Based Sensor Network Data Routing Protocol	Maheshwari Prasad Singh (02RCS02)	2007-08
+12	Entity Relationship Schema Compression and Semantic Modeling of Databases Utilizing Structural Strength of Tables	Sanjay Kumar Jain (04RCS04 with Prof Gulab Singh	2005-06
+13	"Developing Intelligent Event Based Middleware for Information Dissemination in Vehicular Ad hoc Networks" Submitted at Thapar University, Patiyala, India	Tulika Pandey nee Mishra with Dr Deepak Garg	2014
+14	"Clustering Gene Expression Data" Submitted at Deptt. of IT, Birla Institute of Technology, Mesra, Ranchi, India	Suvendu Kanungo with Prof Gadadhar Sahoo	2013
+15	On the Detection of Autism Spectrum Disorder and Self- Injurious Behavior in Children	Uday Singh (2020RCS07) with Dr Shailendra Shukla	2025
+16	Design and Development of Novel AI-Driven Clinical Decision Systems for the Detection of Schizophrenia	Ashima Tyagi (2020RCS01) with Dr V P Singh	2025
+17	DESIGN AND DEVELOPMENT OF NOVEL COMPUTER-AIDED DIAGNOSIS SYSTEM FOR MUTI-GRADE DIABETIC RETINOPATHY DETECTION	Imtiyaz Ahmad (2021RCS08) with Dr V P Singh	2026
+18	Intelligent Detection and Mitigation of DDOS Attack in SDN	Naziya Aslam (2019RCS52) with Dr Shashank Shrivastava	2024
+Ph.D. Ongoing
+1	Holography and its applications	Java Sonker (2021RCS10)	2021
+2	Medical (Cancer) Image Analysis	Digvijay Singh Yadav (2024RCS02)	2024
+3	Course Work being carried out	Soni (2025RCS24)	2025
+M.Tech Students
+1	Employing Deep Neural Network for Predicting the Future Performance of the Students	Sachin Garg (2018CS07)	2019-20
+2	Employing Data Augmentation for Recognition of Hand Gesture using Deep Learning	Deepak Kumar (2018CS03)	2019-20
+3	LRCN Based Application Classification in SDN	Adarsh Rai (2018CS08)	2019-20
+4	Design and development of blockchain based paradigm for ease of Business	Babu Pallam (2017CS18)	2018-19
+5	Measurement and Analysis of Improvement across manuscript draft	Akhilesh Kumar (2017SW07)	2018-19
+6	Effort Estimation for Web Portal Maintenance	Ransing Abhilasha Bhausaheb (2016SW11)	2017-18
+7	Enterprise Web Portal Security and Deployment	Shailendra Pratap Singh, (2016IS19)	2017-18
+8	Dimension Reduction Based Sentiment Mining for Stock Price Prediction	Harsh Kumar (2015CS07)	2016-17
+9	Information Security using Visual Cryptographic Technique for Resource Constrained Devices	Rahul Kumar Singh (2015IS22)	2016-17
+10	Demand Side Management of a University Load in Smart Grid Environment	Jwngsar Basumatary (2015SW03)	2016-17
+11	Byzantine Fault Tolerance for Effective Demand Side Management in Hierarchical Smart Grid Communication Infrastructure	Deepika Durgvanshi (2014CS20)	2015-16
+12	Electricity Bill Settlement Using Retroactive Data Structure in Smart Grid	Kratika Shukla (2014IS06)	2015-16
+13	Sentiment Mining for Stock Prediction	Vishwajeet Rana (2014SW12)	2015-16
+14	Improving Bandwidth Utilization in Software Defined Networks	Sachin Tiwari (2013IS13)	2014-15
+15	Diagnosis of Lung Diseases using Data Mining Classification Techniques on Disease Data	Rajeev Dixit (2012PTSW22)	2014-15
+16	An Evaluation of Alternatives for Improved Core Utilization in Multi-Core Machine	Pratyush Pachauri (2012IS25)	2013-14
+17	Providing Secure Data Storage on Cloud	Garima Singh (2012IS03)	2013-14
+18	Consolidating Two Subnets using Virtual NIC	Brijesh Kumar Patel (2012SW08)	2013-14
+19	Monitoring Light Condition of Classroom by Smart Objects	Akansha Chitransh (2012CS11)	2013-14
+20	User Friendly Front End Design for E-Filing of Income Tax	Tamal Kanti Chakraborty (2011IS19)	2012-13
+21	Employee Personal Finance System: Getting Ready for Income Tax Evaluation	Anil Kumar Dhami (2011IS04)	2012-13
+22	Generation and Prioritization of Test Case for State Chart	Jasmine Minj (2011SW07)	2012-13
+23	Building Cloud: An Implementers Perspective	Brijendra Pratap Singh (2011SW21)	2012-13
+24	Software for homemaker Budget Management	Abhishek Bhatt (2010SW08)	2012-13
+25	Automatic Train Control System for Railways using Wireless Sensor Network	Prakhar Bansal (2011CS29)	2012-13
+26	Cluster Based Hierarchical Routing Protocol with High Throughput for Wireless Sensor Network	Tripti Singh (2011CS26)	2012-13
+27	A genetic algorithm based clustering approach for structural k-anonymity in social networks	Vikas Kumar Sihag (2010IS16)	2011-12
+28	Row-based encryption model for securing access to outsourced database	Sanjeev Kumar Chauhan (2010IS17)	2011-12
+29	Timer and distance based routing protocol for continuous monitoring application in WSN	Glitto Mathew (2010CS12)	2011-12
+30	Text document clustering by detecting initial centroids for k-means	Subhash Kumar (2010SW16)	2011-12
+31	Distance based multi-hop routing protocol with energy and load balancing in WSN	Vipendra Kumar Mehra (2010CS36)	2011-12
+32	Energy efficient multihop routing technique for clustered wireless sensor networks	Mudit Pant (2010CS24)	2011-12
+33	Item recommender system based on cubic analysis approac	Abhinav Kumar Gupta (2010SW17)	2011-12
+34	Partitioning - based Clustering Approach for evaluating the performance of Players on Sports Data	Sanjay Goswami (2008PTSW21)	2011-12
+35	Disk-resident High Utility Pattern Mining by using Interactive approach in Incremental Database	Vijay Kumar Dwivedi (2008PTSW02)	2011-12
+36	An Interactive Knowledge-based Toolkit for Plugging Knowledge Gap	Anshu Singh (2008PTSW09)	2011-12
+37	Consolidation of Data and Query Processing on Probabilistic Database	Rajesh Yadav (2009CS17)	2010-11
+38	DC-MAC: Energy Efficient MAC Protocol for Wireless Sensor Network	Sandeep Singh (2009SW15)	2010-11
+39	An Unsupervised Approach for Mining the Opinion in the Domain of Movie Reviews	Gaurav Tripathi (2009SW13)	2010-11
+40	A Dynamic Approach for Generation of Semantic Documents for Web Resources	Ashish Saxena (2009IS02)	2010-11
+41	Semantic Similarity Measure Aggregating Feature and Information Content with Depth of a Concept	Nishchya Kaushik (2009IS04)	2010-11
+42	Recommending People with Similar Interests on Social Network Site	Abhishek Verma (2008SW10)	2009-10
+43	A Case Study on the Implementation of Hybrid Methodology Involving Scrum and Waterfall Model towards Software Project Development in Academic Knowledge Centers	Tarun Jain (2008SW11)	2009-10
+44	Study of Influence of Node Mobility on Trust in MANET	Amit Kumar Raikwar (2008IS14)	2009-10
+45	A Range-free Localization Scheme for Underwater Sensor Networks with Error Correction	Neha Ojha (2008CS11)	2009-10
+46	Energy Aware Geographical Routing in Three Dimensional Wireless Sensor Networks	Megha Jain (2007CS08)	2008-09
+47	Minimization of Intra-Cluster Dissimilarity Through Local Outliers Detection in Relational Data Clusterin	Abdul Aleem (2007SW08)	2008-09
+48	Localization Scheme for Three Dimensional Wireless Sensor Networks Using GPS enabled Mobile Sensor Nodes	Vibha Yadav (2007CS06)	2008-09
+49	Bridging Infrastructure Design and Implementation Across Open Ajax Hub-IBM Browser Plugin Framework-Lotus Expenditor Microbroker	Shivani Mishra (2007IS03)	2008-09
+50	WEKA Installation and its Evaluation for Data Mining Functionalities	Vivek Jaiswal (2007GI03)	2008-09
+51	Hybrid Architecture for Massive Multiplayer Online Games	Nitin Saxena (2007IS09)	2008-09
+52	Energy Managed TORA with Enhanced Network Stability	Praveen Kumar Parajapati (2006GI05)	2007-08
+53	A Design of Auto Pollution Monitoring System using Wireless Sensor Network	Arvind Singh(2006GI01)	2007-08
+54	Design and Development of Intranet Academic Web Portal	Pawan Kumar Gupta (2006CS02)	2007-08
+55	Design and Experimental Verification of Digitally Signed SMS for Business Transaction	Ajeet Kumar (2003/PT/SE/02)	2006-07
+56	An Approach for Node Energy Conservation for AODV Routing Protocol of MANET	Prateek Singh (2003/PT/SE/09)	2006-07
+57	PARSE: Power Aware Routing in Sensor Networks	Rajendra Kumar Singh (2003/PT/SE/20)	2006-07
+58	FacultySpace: A Distributed Content Management System for Academic Information Exchange	Amul Jain (2005CS09)	2006-07
+59	Hassle free: An Approach for Access Control Management of XML Documents	Ashish Tripathi (2005CS01)	2006-07
+60	Clustering in the Known Area of Deployment for Wireless Sensor Network	Servesh Singh (2005CS10)	2006-07
+61	Evaluation of Network Mobility for Mobile Ad-hoc Network in IPv4	Pankaj Kumar (2005SW09)	2006-07
+62	Bustrap Enhancement and its tale of two cities	Farhan Razi Siddiqui (2001/PT/SE/18)	2005-06
+63	Design and Development of Network Simulator for Mobile Ad Hoc Network with case study-SSA & MSSA	Sanjay Kumar Yadav (2002PTSE06)	2005-06
+64	Periodic Active Scan for Faster Handoff in WLAN	Ukani Vijaykumar S. (2004CS17)	2005-06
+65	Cluster Based Routing Protocol for Energy Efficient Query Delivery in Wireless Sensor Networks	N. Jayalakshmi (2004SW08)	2005-06
+66	Secure Data Management in Reactive Sensor Networks	L. Chaithany. (2004CS03)	2005-06
+67	Design and Development of On-line Report Repository for CSED MNNIT	Ratnesh Mishra (2001/ME/PT/SE/15)	2005-06
+68	Design and Implementation of Plagiarism Detector	Soumya Darshan Behra (2003/PT/SE/01)	2005-06
+69	Conference Management Using Wireless Sensor Networks	Shilpy Agrawal (2003/PT/SE/10)	2005-06
+70	Automated Building Plan Development	Alok Saxena	2004-05
+71	Automated Building Plan Development for Building Feature	Anoop Kumar	2004-05
+72	Design & Implementation of Software Metric Tool to Compare Open Source Linux Office Suites	Sasanka Sekhar Mishra	2004-05
+73	Enhancing and Optimizing XML-YFilter and its use in Sensor based Application	Aditi Airon (2003CS10)	2004-05
+74	Secure Adaptive Clustering in Wireless Sensor Network	G. V. Krishna Rao (2003CS08)	2004-05
+75	Partition Detection and Data Management in Wireless Sensor Network	Ranveer Pratap Singh (2003SW18)	2004-05
+76	Battery Power Aware Balanced and Fair Routing in Mobile Ad Hoc Networks	Mamta Chawla (2003FTSW05)	2004-05
+77	Something is Better Than Nothing- Curbing & Curing Distributed Denial of Service Attack	Lokesh Krishan Gupta	2003-04
+78	Application of Web-Based Workflow on Academic Environment	Km. Anuja	2003-04
+79	Web Based Information System: Case Study for an Academic Institution	P. Mahendra Raju	2003-04
+80	Web Based Workflow System: Case Study for an Academic Institution	K. V. Ramanjaneyulu	2003-04
+81	Organization Specific Team Transaction Model Over Composite Networks for Collaborative Work (at IIIT Allahabad)	Rohan Srivastava	2003-04
+82	Formalizing Database Recovery in Mobile System (at IIIT Allahabad)	Rahul Mishra	2003-04
+83	Intrusion Detection in Dynamic Network (at IIIT Allahabad)	Santosh Kumar Dwivedi	2003-04
+84	Effective Handover Management in Wireless ATM to Assure QoS (at IIIT Allahabad)	Vijay Kumar Chaurasiya	2003-04
+85	BUSTRAP: a Metropolitan BUS TRAvel Planner (at IIIT Allahabad)	Sandeep Gupta	2003-04
+86	Path Stability Based Adaptation of Mobile Ad-Hoc Network Routing Protocol (at IIIT Allahabad)	Sandeep Chaudhary	2003-04
+87	Design & Implementation of a Routing Protocol in Blue ware Using on-Demand Approach (at IIIT Allahabad)	M. Nageshwara Rao	2003-04
+88	Design and Implementation of Secure Transaction Model in Tender Online	Kiran Kumar Patnaik 2001CS16	2002-03
+89	Design and Implementation of Web Enabled Tender Service	Suvendu Kanungo 2000/PT/SE/15	2002-03
+90	Workflow Management- Online Registration System	Manindra Srivastava (2001/ME/FT/SE/03)	2002-03
+91	An Extensible Framework for Indian Language Message Server	Maheshwari Prasad Singh	2002-03
+92	Critical Performance Evaluation of Association Rule Mining Algorithms & Development of a New Approach for Association Rule Mining on Multiple Tables	Praveen Ranjan Srivastava	2002-03
+93	Cube Algebra Operators & Algebraic Transaction Rules for a Powerful Multidimensional Data Model for OLAP	Manas Kumar Mishra	2002-03
+94	RAD Stationary Wizard ? A Plug-in for CodeWarrior IDE	Sandeep Agrawal	2002-03
+95	Performance Evaluation of Collaborative Transaction Processing System	Sansar Singh Chauhan	2002-03
+96	Ubiquitous Database Application Processing (UDAP)	R. Ramesh	2001-02
+97	Simulation of Collaboration Transaction Model for Ad-Hoc Mobile Networks	Sandeep Dasgupta	2001-02
+98	Bringing the WEB Services to WAP Devices	Swaminathan B.	2001-02
+99	Design & Implementation of Web Usage Mining System	Alpana Dubey	2000-01
+100	Design & Implementation of Compiler for Mobile Environment & its Formalization using Evolving Algebra	Girish Kumar Patnaik	2000-01
+101	Collaborative Transaction Framework: Implementation & Overhead Issues	Mayank Maheshwari	2000-01
+102	Automated Web Personalization Based on Web Usage Mining	Anil Kumar Singh	2000-01
+103	Implementation of Recovery Algorithm for Distributed Extended Transaction & Mobile Transaction	Arun Kumar	2000-01
+104	Design & Implementation of Tender Online with Security Issues	Samar Rastogi	2000-01
+105	DBMS for Moving Vehicles (in Context of Indian Environment)	Sanjay Kumar Jain	1999-2000
+106	Study of Client Data Hoarding in Mobile Computing Environment	K. Sridhara Babu	1999-2000
+107	Electronic Examination System	Kishore Kumar Oyyavuru	1999-2000
+108	Study of Class Fragmentation in Object Database	Sanjeev Kumar Sinha	1999-2000
+109	Metadata Model for Email Classification	Ashok Sharma	1999-2000
+110	Output Port Oriented Address Management Scheme for Central Queuing ATM Switch Architecture	Anuj Khanna	1999-2000
+111	An Implementation of Security Environment under Unify for Payment Voucher	N. Sambasiva Rao	1994-95
+112	Multilevel Logic Synthesis using M(1) Multiplexer	Biswanath Mandal	1993-94
+113	A Min Cut Algorithm for VLSI Circuit Partitioning by Intersection Method	Md. Sultan Ahmad Ansari	1993-94
+114	A Parallel Three Dimensional Shear Sort	Deepu Shyam	1992-93
+115	Two New Efficient Self Checking Checkers using Berger Codes	Vijaya Kumar Thatte	1992-93
+116	Image Processing System: Improved Boundary Detection Methods	R. K. Prusti	1992-93
+117	New Cost-Effective BIST PLA Design	S. S. Basak	1991-92
+118	Malware Detection Using Cyber Intelligence	Shubhi Singh (Reg No.: 2019IS05)	2021
+119	Enhanced Heart-Disease Prediction Using Genetic Search Based Feature Selection, With Dr Vibhav Prakash Singh	Gautam Prateek (2019IS16)	2021
+120	Masking in Mammograms: An Improved Risk Stratification Model using ResNet	Vysakh Ramesh 2020SW22	2022
+121	Classification of Facial Emotions Based on Deep CNN Model	Soma Vikas Reddy 2020IS22	2022
+122	Application of Blockchain Technology to Enhance Interoperability in Healthcare	Syed Makhdoom Shah Farhat 2020IS23 with Dr. J. Sathish Kumar	2022
+123	DFCNNET: A Convolutional Neural Network to Detect Deepfakes	Piyush Pal Singh 2019CS18	2022
+124	Industry Based- Effective Execution and Debugging of Quantized Deep Learning Models	Ms. Shubhangi Agarwal (2021SW35) Co-Supervisor with Dr. J Satish Kumar	2023
+125	Industry Intern at Marvell India Pvt Ltd, Pune	Mr Manoj Singh Registration No.: 2021IS29	2023
+126	Internship Training at SAP Labs India Pvt. Ltd. Bangaluru	Ashutosh Kumar Upadhyay 2021CS23	2023
+127	Autism Detection using Multi-Atlas Feature Extraction and Deep Learning to Analyze Brain Connectivity Patterns	Ritesh Kumar Gupta, 2022IS15	2024
+128	DEVISING DIGITAL FORENSIC TECHNIQUES FOR DEEP FAKE DETECTION	Umesh Kumar Bhatiya (2023IS25) with Dr Anuja Dixit	2025
+129	Private Security and Privacy in Public Cloud Computing Environment	Adarsh Pandey (2024IS08)	2026

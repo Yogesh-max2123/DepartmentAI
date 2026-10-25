@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Kailash W. Kalare",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Kailash W. Kalare",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1832",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1832",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "b0f7bb378694d773d1d8c01c54dcf6ec9fb6ef3420300f6f58a2e35d0077ccd4",
+      "bytes": 6355,
+      "cached_at_utc": "2026-10-19T04:37:16.424278+00:00"
+    }
+  }
+}

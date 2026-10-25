@@ -1,0 +1,58 @@
+Dr.ANOJ KUMAR
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Homeostasis Mutation Based Differential Evolution Algorithm for Software Cost Estimation	Mr. Shailendra Pratap Singh	2017
+2	Distributed In-Network Cache Content Strategy For Information-Centric Networking (ICN)	Kumari Nidhi Lal	2018
+3	Environment based mutation for Nature Inspired Metheuristic Algorithms	Mr. Avjeet Singh	2021
+4	Variants of Grey Wolf Optimizer and their application for Real-time Problems	Alok kumar	2022
+5	Optimization Solutions for Optimal Resource Management in Wireless Sensor Network	Lekhraj	2023
+6	Improved CNN Architectures and Their Applications for Road Object Detection in Autonomous Driving	Bharat krishan Mahaur	2023
+Ph.D. Ongoing
+1	Swarm Intelligence Based Optimization Techniques for Feature selection	Ashish kumar singh	2018
+2	State-of-the-art done	Durgesh Nandani	2021
+3	State-of-the-art done	Sandeep Rai	2021
+4	Course work completed	Kopal Bhartiya	2024
+M.Tech Students
+1	An approach to mitigate DOS attacks on SDN controller	Kummari Mahesh	2017
+2	SOA based trust model in cloud computing	Kunal Kumar	2017
+3	An automated testing approach to detect infeasible path using branch co-relation	Makadiya Sanket Kishorbhai	2017
+4	An approach to optimize software defined networking using network coding	Bhaviripudi Rakesh Naidu	2017
+5	Solving two dimensional packing problem using genetic algorithm and practical swarm optimization	Vidyanand Mishra	2016
+6	Software development effort estimation using swarm intelligence	Virendra Kumar Chauhan	2016
+7	Prioritizing Test Cases for Regression Testing	Apoorv Khandelwal	2019
+8	Sentiment Analysis of Reviews Based on Movies	Devendra Sharma	2019
+9	Automatic Traffic Sign Detection and Recognition	Dhananjay Kumar Ray	2019
+10	Product Cost Evaluation and Quality Review using Block Chain	Pankaj joshi	2020
+11	Evolving a neural network for Sentiment Analysis of Medicine Reviews	Rituvendra singh	2020
+12	Improving Fault Tolerance for load balancing in Cloud computing	shalini Verma	2020
+13	An approach for object Localization and detection using YOLO Aigorithm	Anuradha Raj	2021
+14	Feature Recognition using a hybrid of deep transfer learning and SVM machine learning Algorithm	Priya Sharma	2021
+15	A Novel Grey Wolf Optimizer for Solving Realâ€“Time Problem	Gautam	2022
+16	Hybrid Model of Earthquake Prediction	PoonamAgrawal	2022
+17	An Efficient Data Sharing Using Ethereum Smart Contract	Utkarsh Rai	2022
+18	Semantic Feature Learning Based Software Defect Prediction using Deep Learning	Saumya Rai	2022
+19	A Machine Learning Model Based DDoS Attack Detection and Classification	Avinash Gupta	2023
+20	A NOVEL VARIANT OF WHALE OPTIMIZATION ALGORITHM FOR SOLVING REAL WORLD PROBLEM	Challa Tejaswini	2023
+21	A Hybrid Machine Learning Model Based Malware Detection	Ravi Kaushal Rai	2023
+22	Stock Price Prediction Using Deep Learning	Akhand Pratap Yadav	2023
+23	Representation of Multimedia Information on Quantum Computer for Quantum Machine Learning	Brijesh Kumar Sahu	2023
+24	A Hybrid Approach For Human Motion Recognization Using Machine Learning	Shivanshu Gupta	2024
+25	A Hybrid Deep-Learning Model for Real Time Application	Shanidev Yadav	2024
+26	A novel Quantum Computing based approach for real time applications	Manan Gupta	2024
+27	An Approach to Improve the Security of Progressive Web Apps	Bipin Kumar Chaudhary	2025
+28	Self Learning AI For Natural Language To SQL Query Generation: :Enhancing Complexity And Accuracy	Rajan Yadav	2025
+B.Tech Students
+1	Quantum Safe Computing	Yash Garg,Shivam Kumar Dubey and Amit Kumar	2021
+2	Fire Detection System Using Deep Learning	Anshu Kumari, Bhupendra Kumar Prajapati, Dhananjay Kumar, Deepak Bhartiya	2021
+3	QUANTUM SAFE CRYPTOGRAPHY	. Golu Kumar (Reg No. - 20174024) . Adarsh Awasthi (Reg No. 20174015) Ashish Patel (Reg No.- 20174006)	2021
+4	Implementation of Mutation based Hybrid PSO	Prasoon Batham (20154100) Neel Neogi (20154172) Prashant Kumawat (20154042 )Piyush Luniya (20154034) Purushotam Sharma( 20154125)	2019
+5	Toxic Comment Classification using Weighted Voting Ensemble	Aman Shroff (20156026) Bhavyaa Rastogi (20158012) Akshay Mittal (20158040) Arun Kumar (20158050) Sarovar Ram (20158093)	2019
+6	Constriction Factor and Score based PSO for Software Effort Estimation	Aditya Kumar Pandey ( 20154029) Ekansh Gupta (20154028) Kushagra (20154168) Manish (20154095) Amit Kumar Shah (20154081)	2019
+7	Application Of Globally Guided Differential Evolution To Solve Real-World Problems	Deore Venkatesh Shirish (20164127) Jatin Bansal (20164132) Kanna Manideep (20164024) Kancharana Sameer (20164019)	2020
+8	Decentralized File Storage using Blockchain over peer-to-peer (P2P) network	Vaibhav Raizada (20168012) Mayank Singh (20168028) Utkarsh Pandey (20168036) Priyank Lohani (20165080)	2020
+9	A SECURE COMMUNICATION IN FLYING AD HOCNETWORKS USING ELEPTIC CURVECRYPTOGRAPHY (ECC)	Aamir Siddiqui(20214197),Aadya Shukla(20214203),Ananta P Thakur(20214191),Aditya Shashi(20214002)	2025
+10	AN AUTHENTICATION SCHEME FOR FANET PACKETPAYLOAD USING DATA HIDING	Kinjarapu Shyam Chandra(20214062),Jatin Garg(20214130),Golla Ramesh Navya Deepika(20214292),Bhallamudi Shrawan Kumar(20214542),	2025
+11	AN APPROACH TO SECURE MULTIHOPCOMMUNICATION IN FANETS USING HyBRID CRYPTOGRAPHY algorithm	Sahithi Tammana(20214541),Munish(20214290),Kocharla Nayanee Deepak(20214044),Mohammad Saqulain(20214034)	2025

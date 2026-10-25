@@ -1,0 +1,34 @@
+﻿faculty_id,faculty_name,is_active,thesis_records,missing_program_level,missing_student_name,missing_research_topic,missing_status,missing_registration_year,missing_completion_year,missing_both_years,missing_source_url,possible_duplicate_rows
+3,Prof MANOJ MADHAVA GORE,True,150,0,0,0,150,150,150,150,0,0
+4,Prof. Rama Shankar Yadav,True,112,0,0,0,112,112,112,112,0,0
+7,Prof. Dharmender Singh Kushwaha,True,108,0,0,0,108,108,108,108,0,0
+8,Dharmendra Kumar Yadav,True,96,0,0,0,96,96,96,96,0,0
+12,Dr.Manoj Wairiya,True,92,0,0,0,92,92,92,92,0,0
+20,Dr. Rajitha B,True,79,0,0,0,79,79,79,79,0,0
+16,Dinesh singh,True,68,0,0,0,68,68,68,68,0,0
+19,Pragya Dwivedi,True,65,0,0,0,65,65,65,65,0,0
+11,Rajesh Tripathi,True,65,0,0,0,65,65,65,65,0,0
+15,Dr. Dushyant Kumar Singh,True,59,0,0,0,59,59,59,59,0,0
+26,Dr. Vibhav Prakash Singh,True,55,0,0,0,55,55,55,55,0,0
+9,Mayank Pandey,True,51,0,0,0,51,51,51,51,0,0
+13,Ranvijay,True,50,0,0,0,50,50,50,50,0,0
+10,Dr.ANOJ KUMAR,True,49,0,0,0,49,49,49,49,0,0
+6,ANIL KUMAR SINGH,True,47,0,0,0,47,47,47,47,0,0
+14,Dr. Shashank Srivastava,True,45,0,0,0,45,45,45,45,0,0
+18,LT. (Dr.) Divya Kumar,True,45,0,0,0,45,45,45,45,0,0
+27,Dr J Sathish Kumar,True,33,0,0,0,33,33,33,33,0,0
+36,Dr. Anuja Dixit,True,17,0,0,0,17,17,17,17,0,0
+25,Dr. Ashish Kumar Maurya,True,17,0,0,0,17,17,17,17,0,0
+21,Dr. Shashwati Banerjea,True,17,0,0,0,17,17,17,17,0,0
+22,Shailendra Shukla,True,15,0,0,0,15,15,15,15,0,0
+5,Neeraj Tyagi,True,12,0,0,0,12,12,12,12,0,0
+32,Dr. Abhimanyu Sahu,True,11,0,0,0,11,11,11,11,0,0
+35,Dr. Vishal Srivastava,True,10,0,0,0,10,10,10,10,0,0
+28,Dr. Abhinesh Kaushik,True,8,0,0,0,8,8,8,8,0,0
+33,Dr. Kailash Wamanrao Kalare,True,7,0,0,0,7,7,7,7,0,0
+17,SARSIJ TRIPATHI,True,7,0,0,0,7,7,7,7,0,0
+24,Dr Deepak Gupta,True,6,0,0,0,6,6,6,6,0,0
+31,Dr. Indu Dohare,True,5,0,0,0,5,5,5,5,0,0
+30,Dr. Joohi Chauhan,True,5,0,0,0,5,5,5,5,0,0
+23,Dr Kapil,True,4,0,0,0,4,4,4,4,0,0
+34,Dr. Abhinav Kumar,True,3,0,0,0,3,3,3,3,0,0

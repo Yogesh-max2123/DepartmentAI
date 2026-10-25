@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Shashwati Banerjea",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Shashwati Banerjea",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1722",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1722",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "c0ac17b93eb0b683c3327bfc079a1a9c346221ed3c86544747a1b998ef2218d6",
+      "bytes": 3953,
+      "cached_at_utc": "2026-10-19T04:36:53.640752+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Shashwati Banerjea",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/74329-publication%20list.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/74329-publication%20list.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "ca1a63bda63f7ba6c46666eafb4c592630f670c0b43f2bc214e8d1d64c6c41dd",
+      "bytes": 208425,
+      "cached_at_utc": "2026-10-19T04:36:54.394415+00:00"
+    }
+  }
+}

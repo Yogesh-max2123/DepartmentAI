@@ -1,0 +1,74 @@
+Pragya Dwivedi
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Soft Computing Approaches for Solving Electricity Load Forecasting problem	Priyanka Singh	2020
+2	Solving Data Sparsity Problem of Collaborative Filtering Through Knowledge Transfer Cross-Domain Recommender Systems	Ashish Kumar Sahu	2020
+3	Lifetime Enhancement through Optimization Approaches in Wireless Sensor Network	Prince Rajpoot	2022
+Ph.D. Ongoing
+1	Reciprocal Recommender Systems	Prateek Pandey	2020
+2	Health Aware Food Recommender System	Reetu Singh	2021
+3	Explainable Artificial Intelligence for Magnetic Resonance Imaging (MRI)	Kashif Mazhar	2021
+4	Insider Threat Detection	Ayshwarya Jaiswal	2021
+5	Depression Detection on Social Media	Avinash Kumar (2024RCS01)	2024
+M.Tech Students
+1	Deep Matrix Factorization Method for Cross- Domain Recommender System	Neelam Singh	2018
+2	A Deep Learning Approach for Enhancing the Accuracy of Multi- Criteria Recommender System	Deven Patidar	2018
+3	Hybrid Multi-Criteria Recommender System using Matrix Factorization and Regression	Gouri Sankar Majumder	2017
+4	Cross Domain System using ClustHOSVD with Semantic Similarity	Suraj Upadhyay	2017
+5	A Context Aware Recommender System Based on Non-Negative Matrix Factorization	Rahul	2016
+6	A Personalized Context-Aware Recommender System based on User-Item Preferences	Mandheer Singh	2015
+7	Trust Enhanced Multi-Criteria Recommender System	Arpit Goswami	2016
+8	Enhanced Multi-Criteria Recommender System based on AHP Approach	Manish Jaiswal	2015
+9	A Collaborative Filtering Framework for Group Recommender System Using Trust and Reputation	Lokendra Pal	2015
+10	A Recommender System based on Social Factors	Ashish Paul Tigga	2014
+11	A Multidimensional Framework for Group Recommender System	Ashwani Rathore	2014
+12	Enhanced Multi-Criteria Recommender System through Interestingness measures: A similarity based Approach	Abhinav Tomar	2014
+13	Trust-based Recommender System using Friendship Strength through Social Network	Avinash Gupta	2017
+14	Classification of Covid-19 patients using Machine Learning Algorithms	Vinay Bhojak (2019IS22)	2021
+15	A Deep Learning Alogrithm for Fashion Classification and Object Detection	Krishna Swaroop (2019CS03)	2021
+16	Deep Learning Approach For Multicriteria Recommender System	Anil Suresh Hanumante (2020IS03)	2022
+17	Matrix Factorization Techniques for Cross Domain Recommendation System	Richa Gupta (2020CS19)	2022
+18	Reciprocal Recommender System based on Preference Based Learning	Abhishek Fulzele (2020SW01)	2022
+19	Explaining the decision of CNN for Classifying Twitter Trolls using Local Interpretable Model Agnostic(LIME) Approach	Prashant Dinesh Singh (2021SW11)	2023
+20	Multi-Criteria Recommendation Based on Deep Matrix Factorization and Regression	Pankaj Patidar (2021CS34)	2023
+21	Prediction and Classification Analysis of Heart Disease with Explainable AI	Sumanth Kanchanam (2022DS17)	2024
+22	Food Recommender System for Group Users	Sajal Srivastava (2022IS18)	2024
+23	Sentiment Analysis of Drug Review Using Explainable AI	Aman Saini (2022CS19)	2024
+24	Detection of Depression by Social Media Text Analysis using Hybrid model of Genetic Algorithm & FCL Technique	Mr. Ashirvad Kar Pathak (2023CS05)	2025
+25	Embedding Models for Depression Detection	Shiva Teja Pappula (2023IS22)	2025
+B.Tech Students
+1	Fake News Detection Using Stance Detection	Abhishek Sharma(20141016) Jay Deep Khandelwal(20145106) Abhishek Chaudhary(20144047) Adwait Pradhan(20144008) Gaurav Sagar(20144145)	2018
+2	Tag Based Social Recommender System	Aditi Gupta (20104045) Anirudh Kanjani (20105099) Abhinav Vasu Rawat (20104027) Kapil Kumar (20108051) Ashutosh Singh (20104076)	2014
+3	Group Recommender System	Sofiya Jilani (20108077) Alok Maurya (20104009) Raj Kumar Saroj (20109026) Rishabh Kumar (20104063) Sanjay Kumar (20094097)	2014
+4	Context Aware Recommender System for E-Learning	Abhisar Singhal (20104133) Aditya Agarwal (20104112) Alankrit Johari (20104124) Abhinav Chaurasia (20104043) Rahul Kumar (20101034)	2014
+5	Development of a system for team formation in an enterprise based on collective intelligence	Avinash (20114061) Deepak Kumar (20114122) Brijendra Yadav (20114004)	2015
+6	Personalized Adaptive e-Learning System Path Recommendation	Vishrant Goyal (20114071) Neeraj Lakhotia (20112022) Avinash Kumar (20113050) Binay Kushwaha (20115117)	2015
+7	A Context Aware Recommender System	Deeksha Goel (20119030) Ankit Yadav (20118022) Anurag Singh (20116005) Saraswati Meena (20118087)	2015
+8	Tagging-Based Improved Recommender System	Rohit Singhal (20120015) Shivam Tripathi (20126021) Shivendra Pratap Singh (20128009 Sauhard Awasthi (20128012) Shubhank Chandra (20128017)	2016
+9	Enhanced Multi Criteria Recommender System Based on Evolutionary Technique	Umang Gupta (20124078) Anuj Vishwakarma (20124059) Ankit Maurya (20124120) Shivam Kushwaha (20125007) Abhinesh Kumar (20124103)	2016
+10	Multi-Criteria Recommender System Base on Matrix Factorization	Amogh Mishra (20134052) Amit Raj (20134146) Vaibhav Varish Singh Rathore (20134093) Vivek Chaudhari (20134077) Dileep Kumar Maurya (20134103	2017
+11	Time Series Forecasting using Hybrid Models for Univariate Datasets	Jitendra Kumar (20138050) Avneesh Tiwari (20138066) Chandra Kumar (20138019) Gunda Sri Harsha (20138085) Lavesh Kumar Meena (20138022)	2017
+12	Email Spam Filter using Perceptron and Winnow Algorithm	Pandey Amit Kumar Pyarelal (20134025) Ashu Pant (20134050) Ranbir Ratan (20134032) Ayush Sahu (20134068) Jvikrant Dhruwa (20134144) KM Aneeta Chaudhary (20104052	2017
+13	Word Embedding using Modified GloVe Model	Shubham Pandey (20144141) Shubhransh Srivastav (20144053) Saket (20142014) Tulika Vats (20144103) Tarun Agarwal (20144004)	2018
+14	Conversion of Image of Mathematical Equations to Latex Code	Aditya Agarwal (20146001) Ekansh Singh (20148094) Aman Chaplot (20149048) Ashish Siska (20148002) Ajay Meena (20148070)	2018
+15	Fake News Detection Using Stance Detection	Abhishek Sharma(20141016) Jay Deep Khandelwal(20145106) Abhishek Chaudhary(20144047) Adwait Pradhan(20144008) Gaura Sagar(20144145)	2018
+16	Development of Machine Learning Model For COVID-19 Drug Discovery	Satvik Pandey (20174011) Vivek Kumar Meena (20174075) Varughese C.V.( 20174146)	2021
+17	Improved Image Outpainting And Implementation of Video Outpainting	Suraj Goel (20174005), Prakhar Kulshrestha (20174020) Vikrant Goyal (20174001)	2021
+18	VR Based Training for Military Troops	Arsh Singh (20178013) Yashik Singla (20178026) Prachi Pandey (20178059)	2021
+19	Content Recommendation System using Deep Matrix Factorization	Shubham Gupta (20184175) Shivangi Singh (20184099) Souvik Pan (20184041) Sakshi Mani Tripathi (20184106)	2022
+20	Extracting Road topology from satellite images	Anshuman Jain (20185072) Ashwin Chandorkar (20188001) Devraj Singh (20188029) Heramba Jaiswal (20188025)	2022
+21	Coronary Artery Calcium Scoring	Ayush Mishra (20184051) Ayush Gupta (20184046) Arvind Sahu (20184172) Amit Kumar (20184087)	2022
+22	Road Condition Prediction Based on the In-Vehicle Instruments Data	Vitthal Goyal (20194070) Satya Prakash(20194088) Vishal Ahirwar(20194162) Takshkumar Manubhai Chaudhary (20194103)	2023
+23	Obesity Risk Analysis with Causal Inference Decision-Making	Aparna Mittal(20194136) Abhishek Kanaujiya (20194096) Anshika Deshlan(20184008) Abhishek Anand(20194149)	2023
+24	Text-to-Image Generation using Stack-GAN	S P Ramya Pratyusha (20194004) Ruthvik Manyam(20194201) Vaibhav Kumar(20194125) Saurabh Saxena(20194206)	2023
+25	Skin Disease Detection Model Based on Convolutional Neural Network with Transfer Learning	Cheshta Sagar (20194029) Bevara Dinesh Venkata Sai (20194087) Anamay Srivastava (20194087) Anchala Nakka(20194049)	2023
+26	Machine Learning Models For Text Summarization	Lucky Kumari (20208076) Prince Yadav (20208095) Puja Kumari (20208098) Manish Kumar Bharti (20208079)	2024
+27	E-Invigilation	Ishan Sharma (20204088) Pragyan Mishra (20204140) Krati Barkhania (20204100) Muskan Bhalla (20204117)	2024
+28	NFTInvest	Dev Vrat Pandey (20204062) Ayush Agrawal (20204049) Ariyan Habib Seikh (20204037) Deepak Sachan (20204060)	2024
+29	Speech Emotion Recognition	Achintya Saxena (20208007) Abhinav Gupta (20208005) Jiya Chauhan (20208061) Audhip Chowdhury (20208134)	2024
+30	Depression Detection using NLP	RISHIRAJ POSWAL (20223213), RAVINDRA PATEL(20223206), SAHIL YADAV (20223226), RITESH SINGH (20223500)	2025
+31	MULTI-MODAL FASHION RECOMMENDATION SYSTEM	Gottapu Kusuma Kumari (20223101) Mathi Hema Santoshi(20223147), Ippili Mahanth V L (20223536), Dharavath Sai Niheth(20223082)	2025
+32	NLP BASED APPROACH FOR INSIDER THREAT DETECTION	Sahil Raju Moon (20223225), Pihu Jain (20223173), Rushil Maradugula (20223529), Purnima Yadav (20223193)	2025

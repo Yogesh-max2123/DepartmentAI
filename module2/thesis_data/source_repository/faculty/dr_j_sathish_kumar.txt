@@ -1,0 +1,41 @@
+Dr J Sathish Kumar
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	Adhoc Networks	Mr. Sandeep Rai (2021RCS18)- Co-Supervisor with Dr. Anoj Kumar	Since 2021
+2	Healthcare in Blockchain	Ms. Manisha (2023RCS03)	Since 2023
+3	Secure Aggregation Protocols For Federated Learning using Blockchain	Mr. Praveen Kumar ((2025RCS18))	Since 2025
+M.Tech Students
+1	YOLO Based Model for Garbage Detection	Mr. Jayesh Kumar (2019CS17) - - Co-Supervisor with Dr. Sunita Agarwal	2021
+2	Application of Blockchain Technology to Enhance Interoperability in Healthcare	Mr. Syed Makhdoom Shah Farhat (2020IS23) - - Co-Supervisor with Dr. M M Gore	2022
+3	Crop Disease Detection System Using Deep Learning	Mr. Bishal Mondal (2020SW04) - - Co-Supervisor with Dr. Dinesh Singh	2022
+4	Effective Execution and Debugging of Quantized Deep Learning Models	Ms. Shubhangi Agarwal (2021SW35) - Co-Supervisor with Dr. M M Gore	2023
+5	A Comprehensive Study of 802.11 Networks	Mr. Varun Sharma (2021IS21)	2023
+6	Blockchain Technology based Health-care Data Management using Hyper-ledger Fabric	Mr. Vivek Kashyap (2021CS37)	2023
+7	Scale Aware Dynamic Crowd Monitoring in Disaster Management	Mr. Prakarsh Srivastava (2022CS10)	2024
+8	Enhancing Privacy in Healthcare Using Blockchain and Zero-Knowledge Proofs	Mr. Sanand M V (2022IS04)	2024
+9	Flood Image Classification Using Deep Learning Approaches	Mr. Ayush Verma (2022DS13)	2024
+10	Deep Multimodal Networks for Detecting Disaster-Related Information Content on Social Media	Saheb Sarkar (2023DS20)	2025/2022
+11	Trust and Privacy-Adaptive Access Control in Helathcare Blockchain	Deekshant Semwal (2023IS05)	2025/2023
+12	A Privacy-Preserving Healthcare Identity Framework Combining Zero-Knowledge Proofs, Trust-Weighted Federated Learning, and Hyperledger Fabric	Shuvadip Roy (2024IS23)	2026/2024
+13	Hierarchical Load-Adaptive Sharded Blockchain Architecture for Scalable Distributed Ledgers	Aniket Kumar (2024IS11)	2026/2024
+B.Tech Students
+1	Vehicle Number Plate Detection and OCR	Mr. Sanat Kumar (20174066), Mr. Sudhanshu Singh (20174076) and Mr. Swatantra GC (20174101)	2021
+2	Bus Booking System using Android: Case Study of Allahabad	Mr. Kundan Nayak(20174018), Mr. Keval Kushwaha(20174027) and Mr. Kapil Kumar(20174161)	2021
+3	Investigating Face Mask Detection In the Context of Covid-19	Mr. Nitin Kumar (20178036), Mr. Nikhil Pakhariya (20178085) and Mr. Rahul Saroj (20168005)	2021
+4	Transparency in Charity Funding using Blockchain	Mr. Ajendra Saxena ( 20184194), Mr. Dileep Kumar (20184059), Mr. Bhanu Pratap Singh (20184083), Mr. Bhairu Lal Jat (20184159)	2022
+5	Plant Disease Detection Using Machine Learning	Mr. Anup Singh (20184138), Mr. Anupam Kumar Gupta (20184089), Mr. Anuj Singh Rajpot (20184026), Mr. Ankit Kumar Suwalka(20184020), Mr. Manish Praveen Barla (20154110)	2022
+6	Waste Classification using CNN on Land and Water Bodies	Mr. Rishu Sahu (20188032), Mr. Mohd Sameer (20188008), Mr. Suraj Jaiswal (20188107), Mr. Shivam Kumar (20188111)	2022
+7	Fake Medicine Detection Using Blockchain	Anurag Upadhyay (20198017), Aman Singh (20198056), Anshuman Bhargava (20198110), Dikshita Bhatia (20198019)	2023
+8	Multi-Agent Systems Surveillance for Disaster Management	Aayush Kumar Shandilya (20198043), Akshay Maurya (20198113), Bhukya Rohith Naik (20198045), Modracha Vedavathi Sai Priya (20198065)	2023
+9	Path Planning of Multi Drone System for Disaster Analysis and Management	Abhijeet Pandey (20194040), Dhruvi Agarwal (20194073), Bhavi Khator (20194181), Danish Halim (20184145)	2023
+10	Use of Blockchain Technology to Secure Medical Records	Shubhrant (20198084), Shailajakant Gond (20198061), Sankalp Kumar (20198012), Sudhiram Meena (20198091)	2023
+11	Earthquake Damage Prediction System	NupurGoyal(20204133), Neeraj Chaudhary(20204124), Mandangi Eartha Singh(20204106) and Nitish Kumar Sahani(20204131)	2024
+12	Enhancing Disaster Management through Real-Time Reporting, Volunteer Coordination, and Geographic Mapping: A Study of an Android Application	Gojja Sree Mourya (20204005), Abhinav Ajith (20204008), Abhinav Jami (20204048), Ayan habib Seikh (20204076)	2024
+13	Empowering Communities with Offline Disaster Response	Ashish Verma, 20204041 Awadhesh Chaudhary, 20204047 Bhujbal Ritesh Arun, 20204055 Dharamjeet Singh, 20204066	2024
+14	Harnessing Smartphone Technology For Self Rescue in Disasters	Yatharth Dhingra (20204239) Siddhant Gangwar (20204201) Yagyesh Ranjan Shukla (20204236), Ravi Sharma (20204166)	2024
+15	Outlier Detection in Patient Vital Sings Using Machine Learning and IoT Devices	Peketi Sai Dheeraj (20214004), S S R Sriharsha Kedarisetty (20214527), Pranav Sanand Puligandla (20214548) and Praveen Raj Kanickairaj (20214546)	2025/2021
+16	Classification of ECG using CNN-LSTM	Pranil Tripathi (20214023) Prakhar Mishra (20214201) Prajwal Pramod Moon (20214257) Mohan Singh (20214055)	2025/2021
+17	Detection of Network Attacks Using Supervised Learning	Aman Alam (20214175) Abhishek Yadav (20214087) Anubhav Kumar (20214266) Aman Chaudhari (20214267)	2025/2021

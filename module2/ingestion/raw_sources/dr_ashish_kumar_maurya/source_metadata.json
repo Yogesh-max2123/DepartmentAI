@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Ashish Kumar Maurya",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Ashish Kumar Maurya",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1492",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1492",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "0091c1fef9771ed54fc941e0f87b7af8527f843634c78fba48c0603d359757d4",
+      "bytes": 3970,
+      "cached_at_utc": "2026-10-19T04:37:02.196693+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Ashish Kumar Maurya",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/26538-Pub_AKM_Jan2026.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/26538-Pub_AKM_Jan2026.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "7e5cdf818da634cdb0365748e5294f482c20afe98675b1bbf472600820184afb",
+      "bytes": 423557,
+      "cached_at_utc": "2026-10-19T04:37:03.193494+00:00"
+    }
+  }
+}

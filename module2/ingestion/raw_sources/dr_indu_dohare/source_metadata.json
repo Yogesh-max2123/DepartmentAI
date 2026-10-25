@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Indu Dohare",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Indu Dohare",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1814",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1814",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "c61db5851059cd744513a52d493ebe8e0b06a60961cb4cb259f374a708305855",
+      "bytes": 6243,
+      "cached_at_utc": "2026-10-19T04:37:13.878362+00:00"
+    }
+  }
+}

@@ -1,1037 +1,731 @@
-# DepartmentAI
+# DepartmentAI: Agentic Academic Governance and Administrative Intelligence System
 
-### Agentic AI-Based Academic Department Automation System
+DepartmentAI is an **Agentic AI-based Department Automation System** designed to automate and assist academic committee processes, faculty information management, and institutional reporting.
 
-DepartmentAI is an **AI-powered academic governance and department automation system** designed to assist academic committees, faculty, and authorized officials in managing academic processes, institutional knowledge, documentation, and administrative workflows.
+The system integrates Large Language Models (LLMs), autonomous AI agents, document intelligence, knowledge retrieval, and workflow automation to improve administrative efficiency, preserve institutional knowledge, and support consistent, evidence-based academic decision-making.
 
-The system combines **Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), document intelligence, semantic search, vector databases, and workflow automation** to provide reliable, context-aware assistance while keeping final academic decisions under authorized human control.
+DepartmentAI is designed around two major modules:
 
-> **Human-in-the-loop principle:** DepartmentAI assists with information retrieval, analysis, recommendations, drafting, and workflow preparation. It does not autonomously approve or reject official academic applications where human authorization is required.
+- **Module I:** Automation of Undergraduate (UG), Postgraduate (PG), and Ph.D. academic processes.
+- **Module II:** Faculty Profile, Research Information, and Institutional Reporting Automation.
 
----
-
-## 🚀 Project Vision
-
-Academic departments handle a large amount of information including:
-
-* Academic ordinances
-* Rules and regulations
-* Circulars and notifications
-* Committee decisions
-* Student applications
-* Faculty information
-* Academic records
-* Institutional reports
-* Administrative documents
-
-Finding the correct information from these documents can be time-consuming and error-prone.
-
-DepartmentAI aims to provide a centralized intelligent system where authorized users can interact with institutional knowledge using natural language.
-
-For example:
-
-> **User:** What are the requirements for a B.Tech Honours degree?
-
-> **DepartmentAI:** To earn a B.Tech. Honours degree, a student must complete the minimum credits required for the Basic B.Tech. degree and earn an additional 16–20 credits through specialized courses in their discipline.
-
-The answer is generated from the **retrieved official ordinance content**, rather than from unrestricted general knowledge.
+> **Human-in-the-loop principle:** DepartmentAI assists with information retrieval, application classification, document analysis, recommendations, scheduling, minutes preparation, and report generation. All official decisions, recommendations, minutes, and institutional reports remain subject to verification and approval by authorized officials.
 
 ---
 
-# 🎯 Objectives
+## 🎯 Project Objectives
 
-The major objectives of DepartmentAI are:
+The primary objectives of DepartmentAI are to:
 
-1. Build an intelligent knowledge base for academic ordinances and institutional documents.
-2. Enable natural-language querying over official academic rules.
-3. Implement reliable Retrieval-Augmented Generation (RAG).
-4. Use semantic search to retrieve relevant institutional information.
-5. Generate concise, grounded answers using an LLM.
-6. Automate repetitive academic and administrative workflows.
-7. Assist academic committees such as DUGC, DMPC, and DDPC.
-8. Provide document and knowledge management capabilities.
-9. Support multilingual interaction in future versions.
-10. Maintain human authorization for official academic decisions.
-11. Provide traceability from generated answers back to source documents.
-
----
-
-# 🏗️ High-Level Architecture
-
-The initial system follows a RAG-based architecture:
-
-```text
-                    ┌─────────────────────┐
-                    │       User          │
-                    │  Natural Language   │
-                    │      Question       │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Query Embedding   │
-                    │ Sentence Transformer│
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ PostgreSQL +        │
-                    │      pgvector       │
-                    │ Semantic Retrieval  │
-                    └──────────┬──────────┘
-                               │
-                         Top Candidates
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Semantic + Keyword  │
-                    │     Reranking       │
-                    └──────────┬──────────┘
-                               │
-                          Top 5–8 Chunks
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │      LLM API        │
-                    │  Grounded Answer    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Clean Natural       │
-                    │ Language Response   │
-                    └─────────────────────┘
-```
+1. Automate repetitive academic and administrative workflows.
+2. Develop an intelligent chatbot for students, staff, faculty, and authorized officials.
+3. Process student applications using document intelligence and AI-assisted classification.
+4. Retrieve relevant ordinances, regulations, circulars, and previous committee decisions.
+5. Generate evidence-based recommendations and draft resolutions.
+6. Assist in committee meeting scheduling, agenda preparation, and minutes generation.
+7. Maintain structured faculty profiles and institutional research information.
+8. Generate faculty-wise and department-wise statistics for institutional reporting.
+9. Prepare reports in prescribed Word, Excel, PDF, and tabular formats.
+10. Maintain human oversight, data integrity, traceability, and secure handling of institutional information.
 
 ---
 
-# 🧠 Core Technologies
+# 🏗️ System Architecture
 
-| Component                 | Technology                                                    |
-| ------------------------- | ------------------------------------------------------------- |
-| Programming Language      | Python                                                        |
-| Backend Framework         | FastAPI                                                       |
-| Database                  | PostgreSQL 18                                                 |
-| Vector Database Extension | pgvector 0.8.6                                                |
-| Embedding Model           | `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` |
-| Embedding Dimension       | 384                                                           |
-| LLM                       | Gemini API                                                    |
-| ORM / Database Access     | SQLAlchemy / psycopg2                                         |
-| Data Processing           | NumPy / Pandas                                                |
-| PDF Processing            | PyMuPDF                                                       |
-| Environment               | Windows 11 + VS Code                                          |
-| API Server                | Uvicorn                                                       |
+DepartmentAI is organized into two major modules supported by shared AI, database, document-processing, and workflow capabilities.
+
+```text
+                         DepartmentAI
+                              |
+                 +------------+------------+
+                 |                         |
+                 v                         v
+       MODULE I: ACADEMIC          MODULE II: FACULTY
+       PROCESS AUTOMATION          & INSTITUTIONAL REPORTING
+                 |                         |
+       +---------+---------+      +--------+---------+
+       |         |         |      |        |         |
+       v         v         v      v        v         v
+     DUGC      DMPC      DDPC   Faculty  Research  Reporting
+     UG        M.Tech.   Ph.D.  Profiles Records   & Exports
+       |         |         |      |        |         |
+       +---------+---------+      +--------+---------+
+                 |                         |
+                 v                         v
+        Document Intelligence       Data Extraction
+        Knowledge Retrieval         Validation
+        AI Recommendations          Deduplication
+        Workflow Assistance         Statistics
+                 |                         |
+                 +------------+------------+
+                              |
+                              v
+                   Human Verification
+                              |
+                              v
+                   Authorized Approval
+```
+
+The architecture is modular so that existing functionality can be maintained while additional capabilities are introduced incrementally.
 
 ---
 
-# 📚 Current Module: UG Ordinance → DUGC
+# 📘 Module I: Automation of UG, PG and Ph.D. Academic Processes
 
-The first implementation focuses on the **Undergraduate Ordinance and DUGC-related academic processes**.
+Module I focuses on automating and assisting student application processing and academic committee workflows.
 
-The current authoritative knowledge source is the:
+It covers the following departmental committees:
 
-**MNNIT Allahabad Undergraduate Ordinance**
+- **DUGC** — Departmental Undergraduate Committee
+- **DMPC** — Departmental M.Tech. Programme Committee
+- **DDPC** — Departmental Doctoral Programme Committee
 
-The ordinance contains academic rules covering areas such as:
+The objective is to streamline the processing of academic applications while ensuring that official decisions remain with authorized committee members and institutional officials.
 
-* Introduction
-* Academic Session
-* Admission
-* Curriculum
-* Registration
-* Teaching and Evaluation
-* Academic Performance Requirements
-* Holidays and Semester Leave
-* Programme Requirements
-* Degrees
-* Scholarships, Prizes and Medals
-* Conduct and Discipline
-* Amendments
+## 1. LLM-Based Student and Staff Chatbot
 
-The system is being developed so users can ask questions about these rules using natural language.
+The proposed multilingual chatbot will guide students and office staff regarding:
 
----
+- Appropriate application categories.
+- Applicable UG, PG, and Ph.D. ordinances.
+- Eligibility requirements.
+- Required supporting documents.
+- Application status.
+- Deficiencies and pending actions.
 
-# 🔎 Retrieval-Augmented Generation (RAG)
+The chatbot will retrieve information from approved ordinances, institutional rules, circulars, and previous committee decisions.
 
-DepartmentAI uses RAG to reduce hallucination and ensure that answers are based on institutional documents.
+It will provide informational assistance but will not independently approve or reject applications.
 
-The retrieval pipeline is:
+## 2. Application Classification Agent
 
-```text
-Official Document
-       │
-       ▼
-PDF Extraction
-       │
-       ▼
-Structure Detection
-       │
-       ▼
-Intelligent Chunking
-       │
-       ▼
-Embedding Generation
-       │
-       ▼
-PostgreSQL + pgvector
-       │
-       ▼
-Semantic Search
-       │
-       ▼
-Keyword / Semantic Reranking
-       │
-       ▼
-Relevant Context
-       │
-       ▼
-LLM
-       │
-       ▼
-Grounded Answer
-```
+After an application is submitted, the proposed classification agent will:
 
----
+- Identify the nature of the request.
+- Classify it as a DUGC, DMPC, or DDPC matter.
+- Extract relevant student information and supporting documents.
+- Identify missing information and potential deficiencies.
+- Map the request to relevant ordinance provisions.
 
-# 📄 Document Processing Pipeline
+OCR and intelligent document-processing techniques may be incorporated to process scanned applications and supporting documents.
 
-The document ingestion pipeline consists of several stages.
+## 3. Knowledge Retrieval and Recommendation Agent
 
-### 1. PDF Parsing
+The knowledge-retrieval system will retrieve relevant information from:
 
-The original ordinance PDF is processed using **PyMuPDF**.
+- UG, PG, and Ph.D. ordinances.
+- Previous DUGC, DMPC, and DDPC meeting minutes.
+- Office orders, circulars, and regulations.
+- Similar previously decided cases.
 
-```text
-UG Ordinance.pdf
-       ↓
-Text Extraction
-       ↓
-Page-level structured data
-```
+The system will use RAG and suitable semantic, keyword, hybrid, or other retrieval approaches.
 
-### 2. Structure Parsing
+The proposed recommendation agent will prepare:
 
-The extracted text is analyzed to identify:
+- Relevant ordinance clauses.
+- Similar historical cases.
+- Identified deficiencies.
+- Possible courses of action.
+- Initial draft resolutions.
 
-* Sections
-* Clauses
-* Forms
-* Form references
-* Page ranges
+Recommendations and draft resolutions will be reviewed and edited by authorized officials before use.
 
-The current ordinance processing identified:
+## 4. Meeting Scheduling Agent
 
-```text
-68 unique ordinance clauses
-14 physical form records
-13 unique form IDs
-```
+The proposed scheduling agent will consider:
 
-### 3. Intelligent Chunking
+- Faculty timetables.
+- Committee membership.
+- Existing meetings.
+- Member availability.
+- Academic calendar restrictions.
 
-The ordinance is divided into retrieval-friendly chunks.
+It will suggest suitable meeting slots and assist in preparing meeting notices and agendas.
 
-Current dataset:
+Following the required consent and availability confirmation, the system may integrate with authorized email, calendar, and messaging services to distribute approved meeting information.
 
-```text
-232 ordinance chunks
-+
-14 form chunks
-=
-246 total chunks
-```
+Integration with WhatsApp or other institutional communication platforms is a planned capability and will depend on authorized access and supported integrations.
 
-Chunking parameters include:
+## 5. AI-Assisted Minutes Generation
 
-```text
-Target size: 1800 characters
-Maximum size: 2400 characters
-Overlap: 250 characters
-```
+The proposed minutes-generation dashboard will assist in preparing draft minutes using:
 
-### 4. Embedding Generation
+- Approved meeting agendas.
+- Notes recorded during meetings.
+- Member observations.
+- Final committee decisions.
+- Relevant ordinance provisions.
 
-Each chunk is converted into a numerical vector using:
+The system will support review of draft minutes, identification of inconsistencies, and management of unresolved comments.
 
-```text
-sentence-transformers/
-paraphrase-multilingual-MiniLM-L12-v2
-```
-
-Configuration:
-
-```text
-Dimensions: 384
-Batch size: 16
-Normalized embeddings: Yes
-```
-
-Current embedding dataset:
-
-```text
-246 × 384
-```
+Final minutes will be stored and indexed after review and approval by the authorized authority. Secure storage, document version control, and digital-signature integration are intended capabilities.
 
 ---
 
-# 🗄️ Database
+# 📗 Module II: Faculty Profile and Institutional Reporting Automation
 
-DepartmentAI currently uses PostgreSQL with pgvector.
+Module II focuses on automating faculty information management, research-data processing, institutional statistics, and report preparation.
 
-### Database
+The module is intended to support reporting requirements from the Ministry, institute administration, accreditation bodies, and other authorized agencies.
 
-```text
-departmentai
+## 1. Faculty Information Management
+
+The system collects and organizes faculty information from official faculty profiles and approved institutional databases.
+
+Its scope includes:
+
+- Faculty profile information.
+- Research publications.
+- Patents filed or granted.
+- Sponsored research projects.
+- Consultancy activities.
+- Conferences.
+- Workshops.
+- Awards and recognitions.
+- Student supervision and thesis-related records.
+
+Official-source verification is important to maintain data accuracy and reduce unsupported assumptions.
+
+The current faculty-data collection process uses the official MNNIT Allahabad Computer Science and Engineering department directory as its starting point:
+
+https://mnnit.ac.in/index.php/department/engineering/csed#publications
+
+Individual faculty information should be discovered through the directory and verified against the corresponding official faculty profiles.
+
+## 2. Research Data Processing
+
+The proposed processing pipeline will:
+
+1. Collect information from approved sources.
+2. Extract relevant research and institutional records.
+3. Normalize structured data.
+4. Remove duplicate records.
+5. Identify missing or inconsistent information.
+6. Filter records for specified reporting periods.
+7. Generate faculty-wise and department-wise statistics.
+
+These capabilities will help reduce manual data compilation and improve the consistency of institutional reporting.
+
+## 3. Faculty Information Assistant
+
+Module II includes a command-line faculty assistant for querying available faculty information.
+
+Run it from the project root:
+
+```powershell
+python -m module2.retrieval.faculty_assistant
 ```
 
-### PostgreSQL Version
+The interactive session supports:
 
 ```text
-PostgreSQL 18
+/context
+/reset
+exit
+quit
 ```
 
-### pgvector Version
+- `/context` displays the current faculty context.
+- `/reset` clears the current conversational context.
+- `exit` or `quit` terminates the session.
 
-```text
-0.8.6
+The assistant uses the available faculty records and configured retrieval and LLM components to answer relevant questions.
+
+## 4. Thesis-Supervision Records
+
+The thesis-supervision pipeline processes and reconciles records against official faculty profile pages.
+
+The latest recorded reconciliation reported:
+
+| Metric | Result |
+|---|---:|
+| Official faculty profile pages processed | 33 |
+| Parsing errors | 0 |
+| Records parsed | 1,413 |
+| Records updated | 1,413 |
+| Records inserted | 0 |
+| M.Tech. records | 1,192 |
+| Ph.D. records | 221 |
+
+Ph.D. records distinguish completed and ongoing supervision where supported by the source information. M.Tech. records without an explicitly stated completion status are not automatically assigned a status.
+
+These figures describe the recorded reconciliation run and may change as official faculty profiles are updated.
+
+## 5. Institutional Data Export
+
+Module II includes a database-backed export interface for supported datasets.
+
+Currently supported formats include:
+
+| Format | Purpose |
+|---|---|
+| CSV | Structured, portable data |
+| Excel (`.xlsx`) | Spreadsheet analysis and filtering |
+| PDF | Shareable document output |
+| Word (`.docx`) | Editable document output |
+
+Start the backend using:
+
+```powershell
+uvicorn backend.main:app --reload
 ```
+
+Open the export interface at:
+
+http://127.0.0.1:8000/module2/export/ui
+
+The export API provides dataset discovery and dataset-download endpoints.
+
+The current PDF and Word exports use tabular layouts. Dataset-aware narrative reports with meaningful headings, paragraphs, and section-specific templates are planned enhancements.
+
+## 6. Ministry and Institutional Report Generation
+
+The intended reporting system will allow authorized users to request information such as:
+
+- How many journal papers were published during a specified period?
+- How many patents were filed or granted?
+- Which conferences were organized by the department?
+- How many sponsored projects are currently active?
+- Prepare a response using a supplied institutional reporting template.
+
+The system will retrieve relevant records, calculate appropriate statistics, and prepare reports using approved templates.
+
+The concerned employee will verify the data before formal submission.
 
 ---
 
-## Database Schema
+# 🔎 Knowledge Retrieval and RAG
 
-### `documents`
+Retrieval-Augmented Generation is an important component of DepartmentAI's knowledge-assistance architecture.
 
-Stores source document information.
-
-```text
-id
-title
-file_name
-document_type
-version
-total_pages
-created_at
-```
-
-### `sections`
-
-Stores document sections.
+The original undergraduate ordinance pipeline uses the following general process:
 
 ```text
-id
-document_id
-section_number
-title
-start_page
-end_page
-created_at
+Official Academic Documents
+           |
+           v
+      PDF Extraction
+           |
+           v
+     Structure Parsing
+           |
+           v
+      Intelligent Chunking
+           |
+           v
+     Embedding Generation
+           |
+           v
+      PostgreSQL + pgvector
+           |
+           v
+      Semantic Retrieval
+           |
+           v
+   Keyword / Semantic Ranking
+           |
+           v
+       Relevant Context
+           |
+           v
+      LLM Answer Generation
+           |
+           v
+        Grounded Answer
 ```
 
-### `knowledge_chunks`
+The original ordinance dataset comprised:
 
-Stores searchable knowledge chunks and embeddings.
+- 68 unique ordinance clauses.
+- 14 physical form records.
+- 13 unique form identifiers.
+- 232 ordinance chunks.
+- 14 form chunks.
+- 246 total knowledge chunks.
+- 384-dimensional embeddings.
 
-```text
-id
-document_id
-section_id
-chunk_index
-chunk_type
-clause_number
-chunk_text
-page_start
-page_end
-form_id
-metadata
-embedding
-created_at
-```
+These figures refer to the original ordinance dataset, not the total data stored across both modules.
 
-Embeddings are stored using:
-
-```sql
-vector(384)
-```
+Future retrieval improvements may include hybrid search, improved source traceability, knowledge graphs, and retrieval over approved previous committee decisions.
 
 ---
 
-# 🔍 Semantic Retrieval
+# 🤖 Proposed Agentic Workflow
 
-The current retrieval system performs:
+DepartmentAI is designed to evolve toward specialized agents that cooperate within controlled academic and administrative workflows.
 
 ```text
-Question
-   ↓
-Generate query embedding
-   ↓
-pgvector similarity search
-   ↓
-15 candidate chunks
-   ↓
-Keyword / lexical scoring
-   ↓
-Combined ranking
-   ↓
-Best relevant chunks
+                  DepartmentAI
+                       |
+             +---------+---------+
+             |                   |
+             v                   v
+      Knowledge Agent      Document Agent
+             |                   |
+             v                   v
+      Retrieval & Rules    Extraction & Validation
+             |                   |
+             +---------+---------+
+                       |
+                       v
+                Workflow Agent
+                       |
+                       v
+               Draft / Recommendation
+                       |
+                       v
+               Human Verification
+                       |
+                       v
+              Authorized Decision
 ```
 
-Current scoring:
+Potential specialized agents include:
 
-```python
-combined_score = (
-    0.80 * semantic_score
-    +
-    0.20 * keyword_score
-)
-```
+- Knowledge Retrieval Agent.
+- Application Classification Agent.
+- Eligibility Analysis Agent.
+- Document Validation Agent.
+- Deficiency Detection Agent.
+- Meeting Scheduling Agent.
+- Agenda Generation Agent.
+- Minutes Generation Agent.
+- Faculty Information Agent.
+- Research Statistics Agent.
+- Institutional Report Generation Agent.
 
-This combines semantic similarity with keyword relevance.
-
-The purpose is to prevent situations where a semantically similar but contextually unrelated chunk is ranked first.
+The diagram represents the proposed architecture. Individual agents and integrations should be considered implemented only when their corresponding functionality is available and verified.
 
 ---
 
-# 🤖 LLM Answer Generation
+# 🧰 Proposed Technologies
 
-The next stage of the system uses an **LLM API** to convert retrieved ordinance content into a clean natural-language answer.
+| Component | Technologies or approaches |
+|---|---|
+| Programming language | Python |
+| Backend API | FastAPI |
+| Database | PostgreSQL |
+| Vector search | pgvector |
+| Embeddings | Sentence Transformers |
+| LLM integration | Gemini API and compatible LLM services |
+| Document processing | PyMuPDF and other suitable document-processing libraries |
+| Data analysis | Pandas and NumPy |
+| Retrieval | Semantic, keyword, hybrid, or vectorless retrieval |
+| OCR | OCR and document-understanding models, as required |
+| Agent workflows | Suitable agentic workflow frameworks |
+| Frontend | Web-based administrative interface |
+| Reporting | CSV, Excel, PDF, and Word |
+| Security | Planned role-based access control and audit logging |
+| Integrations | Planned API, email, calendar, and approved messaging integrations |
 
-The LLM does not receive the entire ordinance.
-
-Instead:
-
-```text
-User Question
-      ↓
-Retrieve relevant chunks
-      ↓
-Select top 5–8 chunks
-      ↓
-Send question + context to LLM
-      ↓
-Generate grounded answer
-```
-
-The LLM is instructed to:
-
-* Answer only using retrieved ordinance content.
-* Ignore unrelated portions of retrieved chunks.
-* Preserve important numbers and conditions.
-* Avoid hallucination.
-* Avoid adding external/general knowledge.
-* Clearly indicate when the retrieved content is insufficient.
-* Produce concise and understandable answers.
+The table includes both currently used technologies and proposed approaches. It does not imply that every listed technology or integration has been deployed.
 
 ---
 
-# 🛡️ Grounding and Reliability
+# 🗄️ Database and Data Management
 
-A major design goal is preventing the AI from inventing academic rules.
+PostgreSQL is used for persistent application and institutional data.
 
-The intended behavior is:
+The original knowledge-retrieval module uses PostgreSQL with pgvector for vector-based semantic search.
 
-```text
-Official Ordinance
-       ↓
-Retrieved Context
-       ↓
-LLM
-       ↓
-Answer based ONLY on Context
-```
+Module II maintains its own database, ingestion, retrieval, and export components for faculty-related information and supported institutional datasets.
 
-If the retrieved content does not contain enough information, the system should not guess.
+The database schema and table names are defined in the implementation. This README intentionally avoids treating a partial schema as the complete database design.
 
-For example:
-
-```text
-The available ordinance content does not provide
-enough information to answer this question.
-```
-
-This is particularly important because academic and administrative decisions can have real consequences.
+Database credentials and API keys must be provided through environment variables or the project's supported configuration mechanisms.
 
 ---
 
-# 👥 Human-in-the-Loop Governance
+# 🔐 Security and Governance
 
-DepartmentAI is designed as an **assistive system**, not an autonomous decision-maker.
+DepartmentAI is designed to preserve institutional authority and protect sensitive information.
 
-The AI can:
+Planned and applicable security measures include:
 
-```text
-Retrieve
-Analyze
-Summarize
-Classify
-Recommend
-Draft
-Detect relevant rules
-Prepare workflow artifacts
-```
+- Role-based access control.
+- Restricted access to authorized institutional data.
+- Audit logs for important administrative operations.
+- Document version control.
+- Secure document storage.
+- Controlled access to external services.
+- Human review and approval workflows.
+- Protection of credentials and personal information.
 
-Authorized officials remain responsible for:
+Security features should be described as operational only after they have been implemented and verified.
 
-```text
-Review
-Verification
-Approval
-Rejection
-Final Academic Decision
-```
+Never commit actual API keys, database passwords, or other secrets to the repository.
 
-This architecture ensures that AI assistance does not replace institutional authority.
-
----
-
-# 🏛️ Planned Academic Modules
-
-The long-term system is intended to support:
-
-### Undergraduate
-
-* DUGC processes
-* Registration
-* Academic performance
-* Degree requirements
-* Minor programmes
-* Honours
-* Research programmes
-* Academic deficiencies
-
-### Postgraduate
-
-* DMPC-related processes
-* Academic requirements
-* Registration
-* Thesis-related workflows
-
-### Ph.D.
-
-* DDPC processes
-* Research-related workflows
-* Academic requirements
-* Progress-related workflows
-
----
-
-# 💬 Planned Multilingual Chatbot
-
-A future chatbot will allow students and faculty to ask questions such as:
-
-```text
-What documents are required for this application?
-
-Am I eligible for this programme?
-
-What does the ordinance say about late registration?
-
-What happens if my academic performance becomes deficient?
-
-What is the status of my application?
-
-What deficiency exists in my submission?
-```
-
-The chatbot will use approved:
-
-* Ordinances
-* Rules
-* Regulations
-* Circulars
-* Notifications
-* Previous authorized decisions
-
-The chatbot will provide information and assistance but will **not independently approve or reject applications**.
-
----
-
-# ⚙️ Planned Agentic Workflow
-
-Future versions will introduce specialized AI agents.
-
-A conceptual architecture is:
-
-```text
-                    DepartmentAI
-                         │
-              ┌──────────┼──────────┐
-              │          │          │
-              ▼          ▼          ▼
-        Knowledge     Document    Workflow
-          Agent        Agent        Agent
-              │          │          │
-              └──────────┼──────────┘
-                         │
-                         ▼
-                 Human Verification
-                         │
-                         ▼
-                 Authorized Decision
-```
-
-Potential agents include:
-
-* Knowledge Retrieval Agent
-* Document Processing Agent
-* Eligibility Analysis Agent
-* Application Validation Agent
-* Deficiency Detection Agent
-* Workflow Agent
-* Report Generation Agent
-* Minutes Generation Agent
-
----
-
-# 📁 Project Structure
-
-```text
-DepartmentAI/
-│
-├── venv/
-│
-├── ai/
-│   ├── ingestion/
-│   │   ├── pdf_parser.py
-│   │   ├── structure_parser.py
-│   │   └── intelligent_chunker.py
-│   │
-│   └── embeddings/
-│       ├── embedding_generator.py
-│       └── embedding_config.py
-│
-├── documents/
-│   └── ug/
-│       ├── UG Ordinance.pdf
-│       │
-│       └── processed/
-│           ├── ug_ordinance_pages.json
-│           ├── ug_ordinance_text.txt
-│           ├── ug_ordinance_structure.json
-│           ├── ug_ordinance_chunks.json
-│           └── ug_ordinance_embeddings.json
-│
-├── backend/
-│   ├── ingest_knowledge_base.py
-│   │
-│   └── retrieval/
-│       └── semantic_search.py
-│
-├── frontend/
-│
-├── tests/
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
-
----
-
-# 💻 Development Environment
-
-The project is currently developed on:
-
-```text
-Windows 11
-Python 3.14.6
-VS Code
-PostgreSQL 18
-```
-
-The Python environment uses a project-local virtual environment:
-
-```text
-venv/
-```
-
-The virtual environment is intentionally excluded from version control.
-
----
-
-# 🔐 Security
-
-Sensitive credentials must never be committed to GitHub.
-
-The repository excludes:
-
-```text
-.env
-API keys
-Database passwords
-Proxy credentials
-Model caches
-Virtual environments
-Local databases
-Log files
-```
-
-API keys should be stored through environment variables.
-
-Example:
+Example environment variables:
 
 ```env
 GEMINI_API_KEY=your_api_key_here
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=departmentai
+DB_USER=postgres
+DB_PASSWORD=your_local_database_password
 ```
 
-> Never commit the actual API key to GitHub.
+The exact configuration required by each component should be checked against its implementation.
 
 ---
 
-# 🧪 Testing Strategy
+# 💻 Development Setup
 
-DepartmentAI will be evaluated using representative academic questions.
+DepartmentAI is developed primarily using Windows, PowerShell, Python, VS Code, and PostgreSQL.
 
-Initial test questions include:
+## 1. Clone the repository
 
-```text
-1. What are the requirements for earning a B.Tech degree?
-
-2. What degrees can be awarded under the undergraduate programme?
-
-3. What are the requirements for a B.Tech Honours degree?
-
-4. What is B.Tech with Research?
-
-5. What are the rules regarding registration in a semester?
-
-6. What happens if a student's academic performance becomes deficient?
-
-7. What are the requirements for academic performance?
-
-8. What is the process for late registration?
-
-9. What are the requirements for registering for a Minor Programme?
-
-10. What happens when a student's programme is terminated?
+```powershell
+git clone <your-repository-url>
+cd DepartmentAI
 ```
 
-Each test evaluates:
+## 2. Create and activate the virtual environment
 
-```text
-Question
-   ↓
-Retrieved Context
-   ↓
-LLM Answer
-   ↓
-Correctness
-   ↓
-Grounding
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
 ```
 
-The primary evaluation criterion is:
+## 3. Install dependencies
 
-> **Does the final answer correctly answer the question using only the official UG Ordinance content?**
+```powershell
+python -m pip install -r requirements.txt
+```
+
+## 4. Configure environment variables
+
+Create a local `.env` file with the variables required by the modules you intend to run.
+
+Do not commit `.env` to GitHub.
+
+## 5. Start the backend
+
+```powershell
+uvicorn backend.main:app --reload
+```
+
+When enabled, interactive API documentation is available at:
+
+http://127.0.0.1:8000/docs
+
+The faculty assistant can be launched separately:
+
+```powershell
+python -m module2.retrieval.faculty_assistant
+```
+
+---
+
+# 🧪 Testing and Verification
+
+DepartmentAI uses focused tests to verify important retrieval, data-processing, and export behaviour.
+
+### Faculty assistant tests
+
+```powershell
+python -m pytest tests/test_faculty_assistant_thesis_filters.py -q
+```
+
+### Thesis-reconciliation tests
+
+```powershell
+python -m pytest tests/test_thesis_source_reconciliation.py -q
+```
+
+### Module II export tests
+
+```powershell
+python -m pytest tests/module2_data_export -v
+```
+
+### Run the available test suite
+
+```powershell
+python -m pytest -q
+```
+
+The faculty assistant and thesis-reconciliation suites previously reported 15 passing tests combined.
+
+Testing should also cover database integration, supported export formats, malformed or incomplete source records, and regression risks when changing existing functionality.
+
+A passing test suite does not by itself establish that all proposed integrations or agentic workflows are implemented.
 
 ---
 
 # 📊 Current Project Status
 
-| Component                | Status         |
-| ------------------------ | -------------- |
-| Project structure        | ✅ Complete     |
-| Python environment       | ✅ Complete     |
-| PDF parsing              | ✅ Complete     |
-| Structure parsing        | ✅ Complete     |
-| Clause detection         | ✅ Complete     |
-| Intelligent chunking     | ✅ Complete     |
-| 246 knowledge chunks     | ✅ Complete     |
-| Embedding generation     | ✅ Complete     |
-| 246 × 384 embeddings     | ✅ Complete     |
-| Local embedding model    | ✅ Complete     |
-| PostgreSQL 18            | ✅ Complete     |
-| pgvector 0.8.6           | ✅ Complete     |
-| Database schema          | ✅ Complete     |
-| Document ingestion       | ✅ Complete     |
-| 246 chunks in PostgreSQL | ✅ Complete     |
-| Semantic retrieval       | ✅ Complete     |
-| Keyword reranking        | ✅ Complete     |
-| LLM answer generation    | 🚧 In Progress |
-| Retrieval evaluation     | 🚧 In Progress |
-| Metadata correction      | ⏳ Planned      |
-| Traceability validation  | ⏳ Planned      |
-| FastAPI integration      | ⏳ Planned      |
-| Multilingual chatbot     | ⏳ Planned      |
-| Agentic workflows        | ⏳ Planned      |
-| DUGC automation          | ⏳ Planned      |
-| DMPC automation          | ⏳ Planned      |
-| DDPC automation          | ⏳ Planned      |
+| Component | Current status |
+|---|---|
+| Original UG ordinance ingestion and chunking | Implemented |
+| Original ordinance embeddings and semantic retrieval | Implemented |
+| PostgreSQL and pgvector knowledge storage | Implemented |
+| Module I application-processing backend | Existing implementation |
+| Module II faculty information ingestion | Implemented |
+| Faculty assistant | Implemented |
+| Thesis-supervision reconciliation | Implemented and reconciled |
+| Focused faculty/thesis tests | Previously passed |
+| Module II dataset discovery and export interface | Implemented |
+| CSV and Excel exports | Working |
+| PDF and Word exports | Working with tabular layouts |
+| Narrative PDF and Word reporting templates | Planned |
+| Expanded research statistics and reporting workflows | Further development |
+| Multilingual student/staff chatbot | Planned |
+| Automated application classification agent | Planned |
+| Recommendation and draft-resolution agent | Planned |
+| Meeting scheduling and communication integrations | Planned |
+| AI-assisted minutes dashboard | Planned |
+| Role-based access control and audit logging | Planned or subject to verification |
+| Digital signatures and secure document repository | Planned |
+| Full agentic workflow orchestration | Future development |
+
+Status reflects the currently recorded project state and should be revised when additional features are implemented and verified.
 
 ---
 
 # 🛣️ Development Roadmap
 
-```text
-Phase 1
-Project Foundation
-        ↓
-Phase 2
-Document Intelligence
-        ↓
-Phase 3
-Knowledge Extraction
-        ↓
-Phase 4
-Chunking + Embeddings
-        ↓
-Phase 5
-PostgreSQL + pgvector
-        ↓
-Phase 6
-Semantic Retrieval
-        ↓
-Phase 7
-LLM Answer Generation
-        ↓
-Phase 8
-Retrieval Evaluation
-        ↓
-Phase 9
-Metadata + Traceability
-        ↓
-Phase 10
-FastAPI Backend
-        ↓
-Phase 11
-Chatbot Interface
-        ↓
-Phase 12
-Application Workflows
-        ↓
-Phase 13
-AI Agents
-        ↓
-Phase 14
-DUGC / DMPC / DDPC Automation
-        ↓
-Phase 15
-Institutional Reporting
-```
+## Phase 1 — Academic Knowledge Foundation
+
+- Document parsing and structure extraction.
+- Intelligent chunking and embedding generation.
+- PostgreSQL and pgvector integration.
+- Semantic retrieval and answer generation.
+
+## Phase 2 — Application Processing
+
+- Maintain and extend the existing application-processing backend.
+- Improve document validation and workflow support.
+- Strengthen API integration and regression testing.
+
+## Phase 3 — Faculty Information Management
+
+- Maintain official-source faculty information collection.
+- Improve faculty retrieval and contextual question-answering.
+- Reconcile thesis-supervision and research records.
+
+## Phase 4 — Institutional Data Export
+
+- Maintain reliable CSV and Excel exports.
+- Preserve working PDF and Word generation.
+- Introduce dataset-aware narrative reporting.
+- Support approved institutional templates.
+- Validate generated reports against source records.
+
+## Phase 5 — Intelligent Academic Assistance
+
+- Develop the multilingual student and staff chatbot.
+- Improve application classification.
+- Retrieve relevant ordinances and historical decisions.
+- Generate evidence-based recommendations and draft resolutions.
+
+## Phase 6 — Committee Workflow Automation
+
+- Assist with meeting scheduling.
+- Generate notices and agendas.
+- Support draft minutes preparation.
+- Introduce controlled review and approval workflows.
+
+## Phase 7 — Institutional Reporting and Agentic Workflows
+
+- Expand research statistics and institutional analytics.
+- Develop specialized agents for approved tasks.
+- Integrate authorized institutional services.
+- Improve auditability, security, and traceability.
+
+The roadmap is an intended development sequence, not a declaration that all phases are complete.
+
+---
+
+# 📈 Expected Deliverables
+
+The overall project aims to deliver:
+
+1. A secure web-based department automation portal.
+2. An LLM-based chatbot for students, staff, and authorized faculty.
+3. Student application-processing workflows.
+4. An ordinance and previous-minutes knowledge base.
+5. AI-assisted application classification and deficiency detection.
+6. Evidence-based recommendations and draft resolutions.
+7. Meeting scheduling, notice, and agenda preparation.
+8. An AI-assisted minutes preparation dashboard.
+9. Faculty information and research-statistics capabilities.
+10. Institutional report generation using approved templates.
+11. Role-based access, audit trails, and controlled document storage.
+12. Human verification and approval across official workflows.
+
+These are the project's expected deliverables; individual items remain subject to implementation and verification.
 
 ---
 
 # 🎯 Design Principles
 
-DepartmentAI follows these principles:
-
 ### 1. Accuracy First
-
-Correct academic information is more important than unnecessary system complexity.
+Institutional information and generated reports must faithfully represent their sources.
 
 ### 2. Grounded AI
+AI-generated responses should rely on relevant institutional evidence and acknowledge insufficient information.
 
-LLMs should answer using authoritative institutional sources.
+### 3. Human-in-the-Loop Governance
+Official decisions remain with authorized institutional officials.
 
-### 3. Human Oversight
+### 4. Official-Source Verification
+Faculty records, ordinances, and institutional data should be verified against authoritative sources.
 
-AI assists officials but does not replace institutional decision-making.
+### 5. Incremental Development
+Changes should be introduced in controlled steps with appropriate testing.
 
-### 4. Incremental Development
+### 6. Privacy and Security
+Sensitive information, credentials, and institutional records must be protected.
 
-Complex infrastructure is introduced only when required.
+### 7. Traceability
+Where applicable, records, recommendations, and reports should be traceable to their underlying evidence.
 
-### 5. Privacy and Security
-
-Sensitive institutional information and credentials must be protected.
-
-### 6. Traceability
-
-The system should eventually allow answers to be traced back to:
-
-```text
-Document
-   ↓
-Section
-   ↓
-Clause
-   ↓
-Page
-   ↓
-Retrieved Chunk
-   ↓
-Generated Answer
-```
-
-### 7. Maintainability
-
-The architecture should remain understandable and maintainable rather than introducing unnecessary distributed infrastructure prematurely.
-
----
-
-# 🚀 Getting Started
-
-## 1. Clone the Repository
-
-```bash
-git clone <your-private-repository-url>
-cd DepartmentAI
-```
-
-## 2. Create a Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-Activate it on Windows:
-
-```powershell
-.\venv\Scripts\Activate.ps1
-```
-
-## 3. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-## 4. Configure Environment Variables
-
-Create a local `.env` file:
-
-```env
-DATABASE_URL=your_database_connection_string
-GEMINI_API_KEY=your_api_key
-```
-
-Never commit `.env`.
-
-## 5. Start PostgreSQL
-
-Ensure PostgreSQL is running and the `departmentai` database is available.
-
-## 6. Verify pgvector
-
-Inside PostgreSQL:
-
-```sql
-CREATE EXTENSION IF NOT EXISTS vector;
-```
-
-Verify:
-
-```sql
-SELECT extversion
-FROM pg_extension
-WHERE extname = 'vector';
-```
-
----
-
-# 📌 Current Implementation Notes
-
-The project intentionally avoids unnecessary infrastructure at the current development stage.
-
-The current architecture does **not** require:
-
-* Kubernetes
-* Redis
-* Microservices
-* Distributed databases
-* Complex message queues
-* Large local LLMs
-* Model training
-* Fine-tuning
-
-The focus is currently:
-
-```text
-Correctness
-     ↓
-Reliable Retrieval
-     ↓
-Grounded Answers
-     ↓
-Testing
-     ↓
-Traceability
-     ↓
-Workflow Automation
-     ↓
-Scalability
-```
+### 8. Maintainability
+The architecture should remain modular, testable, and understandable.
 
 ---
 
 # 🔮 Future Enhancements
 
-Potential future improvements include:
+Potential future enhancements include:
 
-* Multilingual academic chatbot
-* OCR for scanned documents
-* Advanced document classification
-* Application document validation
-* Eligibility analysis
-* Deficiency detection
-* Automated report generation
-* AI-assisted meeting minutes
-* Committee workflow automation
-* Faculty information management
-* Institutional analytics
-* Advanced citation and traceability
-* Role-based access control
-* Audit logs
-* Notification systems
-* Human approval workflows
-* Additional academic ordinances
-* DUGC / DMPC / DDPC automation
-
----
-
-# 🤝 Contribution
-
-This project is currently being developed as an academic and research-oriented system.
-
-Future contributions may include:
-
-* New document processors
-* Retrieval improvements
-* Evaluation datasets
-* Workflow modules
-* Agent implementations
-* UI improvements
-* Testing
-* Security enhancements
-* Institutional integrations
+- Dataset-aware narrative PDF and Word documents.
+- Advanced faculty and research analytics.
+- Multilingual conversational assistance.
+- OCR for scanned applications.
+- Knowledge graphs for mapping ordinances and committee decisions.
+- Improved historical-case retrieval.
+- Automated agenda and minutes preparation.
+- Approved calendar, email, and messaging integrations.
+- Role-based access control and audit logs.
+- Document version control and digital-signature integration.
+- Secure institutional document repositories.
+- Further integration with existing departmental systems.
 
 ---
 
 # ⚠️ Disclaimer
 
-DepartmentAI is an **assistive academic information and automation system**.
+DepartmentAI is an assistive academic governance and administrative intelligence system.
 
-Information retrieved or generated by the system should be verified against the latest official institutional documents before being used for formal academic or administrative decisions.
+AI-generated recommendations, extracted records, application analyses, minutes, and institutional reports must be reviewed against official sources and approved by authorized personnel before being used for formal decisions or submissions.
 
-The system does not replace authorized institutional officials or official university procedures.
+The system does not replace institutional authority, prescribed academic procedures, or authorized human approval.
 
 ---
 
 # 📜 License
 
-This project is currently intended for academic/research purposes.
-
-License information will be added as the project reaches its appropriate release stage.
+The project is currently intended for academic and research purposes. Licensing and distribution terms will be specified when finalized.
 
 ---
 
-# 👨‍💻 Project Status
+# 🚀 Project Status
 
 **DepartmentAI is actively under development.**
 
-Current focus:
+The project has progressed from an academic ordinance knowledge-retrieval foundation to a modular system that includes an existing application-processing backend, faculty information retrieval, thesis-supervision reconciliation, and Module II data exports.
 
-> **Building a reliable RAG-based academic knowledge assistant for undergraduate ordinances and DUGC processes.**
-
-The immediate milestone is:
-
-```text
-Reliable Retrieval
-        +
-Grounded LLM Answer Generation
-        +
-Evaluation
-```
-
-followed by traceability, API integration, and academic workflow automation.
+The next development priorities are to strengthen existing functionality, improve institutional reporting, and incrementally introduce additional AI-assisted workflows while preserving data accuracy, security, traceability, and human oversight.

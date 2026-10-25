@@ -1,0 +1,78 @@
+Dinesh singh
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Efficient Routing and Misbehaviour Detection Scheme in Multi-hop Cluster based VANET	Abhay Katiyar	2023
+2	Developing Novel Resampling Methods to Address Class Imbalance and Class Overlap Issues for Minority Class Prediction	Anil Kumar	2025
+3	Efficient Resource Allocation and Stable Path Selection for Task Offloading with Privacy Preservation in VFC	Ms. Niharika Keshari	2025
+4	Enhanced Models for Deceptive Review Detection: Incorporating Review and Reviewer Behavior Patterns	Sushil Kumar Maurya	2025
+Ph.D. Ongoing
+1	Multi target detection and tracking in IR Vedio	Rahul Yadav	2024
+2	Multi target detection and tracking	Mohd Noman Siddiqui	2025
+M.Tech Students
+1	An Improved Mechanism to Detect Position Forging Nodes in VANETs	Shashi Raj	2014
+2	An Authentication Scheme with Secure and privacy Preservation for VANETs	Ashish Gautam	2014
+3	A secure Authentication Scheme for VANETs	Dinesh Tiwari	2014
+4	A Novel Approach for misbehavior Detection in VANET	Alok Kumar	2015
+5	Certificate Revocation Protocol in VANET	Jay Ram Singh	2015
+6	Improving security in VANET through the position verification of alert message	Ajay Kumar Yadav	2015
+7	Counter Based reputation module to improve security in VANET	Shrutie Kaushik	2016
+8	Sybil Attack prevention for Safety Messages in VANET	Om Prakash Singh	2016
+9	Efficient Routing protocol in VANET	Dhirendra Kumar	2017
+10	Trust Based Congestion Control Algorithm in VANET	Ravi Pratap Singh	2018
+11	A modified Greedy Perimeter Stateless Routing Protocol in VANET	Gaurav Kumar	2018
+12	Fake news Detection using Decomposable Attention Model	Dumbre Rushikesh Rajendra	2019
+13	Detection of Phishing Email using Machine Learning	Rohit Kumar	2019
+14	Video Stabilization Based on Point Feature Matching	Saurav Chandra	2020
+15	Efficient CRL Distribution in VANET	Harshit Kumar	2020
+16	Misbehaviour Detection using K-means Clustering in VANET	Abhishek Singh Chauhan	2021
+17	Resource Allocation for Task Offloading in Vehicular Edge Computing	Tejas Subhashchandra Gupta	2021
+18	Resource Allocation for Task Offloading in Vehicular Edge Computing	Tejas Subhashchandra Gupta	2021
+19	Opinion Spam Detection	Moumita Palit	2022
+20	Crop Discase Detection system using Deep Learning	Bishal Mandal	2022
+21	Latecy Optimised task allocation in vehicular ad hoc networks	Mohit Kumar	2022
+22	Spam Detection in Online Social Network	Samar Gupta	2023
+23	Misbehavior Detection in VANETs Using Machine Learning	Sanjay Babu Jaiswal	2023
+24	Modified Multi-objective Optimization Algorithm for Resource Allocation in Vehicular Cloud Computing	Nitin Das	2024
+25	Precision in Knee Osteoarthritis Detection and Classification Using CNN based Deep Learning Model	Mamta Saroj	2024
+26	Aspect Based Sentiment Analysis	Banti Rajeshbhai Parsaniya	2024
+27	Rarity-Entropy Driven Attention ADASYN (REDA-ADASYN) Oversampling with TabTransformer for Imbalanced Learning	Ciprian Barla	2025
+28	Analysis of Coesistence Strategies for Bluetooth low Energy and WLAN	Kavya Kambham	2025
+29	Conflict-Aware Multimodal Aspect-Based Sentiment Analysis	Pankaj Kumar Meena	2026
+30	TrustDR: A Trustworthy Uncertainity Aware Triage Framework for Diabetic Retinopathy Screening	Sahil Kachhap	2026
+B.Tech Students
+1	Trust management in VANET	Vijay Kumar Sharma	2017
+2	A secure Authentication model for VANET environment	Ayushi Sriavstava, Mohit Kumar, Anshul Dixit, Vinod Kumar Chaudhary, Ravi Kumar	2014
+3	Implementation of Cryptographic and Network Security Issues in VANET	Akash Bansal, Ankit Chaudhary, Shubham Sandeep, Sanu Gupta, Amrish Kumar	2014
+4	Secure Message Dissemination in VANET Environment	Shivangi Rai, Saumya Rastogi,Surya Narayan Singh, Ashish Sharma, Amit Diwakar	2014
+5	Trust Management In Vehicular Ad-Hoc Network	Gunjan Nayak, Aman Khare, Ajay Singh, Nikhil Kumar Singh	2015
+6	Detection Of Malicious Vehicles In VANET Using DMV Algorithm	Kanchika Mathur, Rishabh Dwivedi, Pramod Kumar Yadav, Brihaspati Chauhan	2015
+7	Trust Management In Location Privacy Enhanced VANETs	Paridhi Singhal, Karan Gupta, Himanshu, Aman Kumar	2015
+8	Easy Exchange Software	Akshay Singh, Ashish Tiwari,Kshitij Parashar, Ashutosh Singh, Chandan Khadka	2016
+9	Android and Web-based application for secure instant messaging	Avaneesh Rastogi , Aman Kumar, Mayank Sharma, Raunak Kumar	2016
+10	Android app for TPO portal	Swapnil Darmor, Subhanshu Yadav, Mhod. Wasee,Sandeep Singh, Shashi Kant Kumar	2016
+11	A distributed browser-level web caching system based on chord	Pratik Goutam, Vishnu kumar Kumawat, Sanjeev Sharma, Nakul Deep Matta, Tharaanil Kumar, Karan Shiv	2017
+12	Simulation of MAC Spoofing and Its Prevention	Himani Gupta, Akash Agrawal, Antara Sen, Velegu Srikant, Anil Kumar, Praveen Kumar	2017
+13	Analysis of Modified Routing Protocols under Different Scenarios in VANET applied to Real Time Traffic	Pulak Gupta, Mini Agrawal, Prashant Kumar, Harshadip Das, Rajkumar Kori	2017
+14	DriveSafe: Accident Detection and Rerouting App	Kriti Dwivedi, Ajay Singh, Madhav Bharadwaj, Jitendra Kumar nagar, Komal Pratap Singh	2018
+15	Path planning on a simulated Highway	Aashita Saxena, Kriti Gupta, Abhishek Chaudharya, Kanksha Gupta, Chandan Dwivedi	2018
+16	Tweet Simulation and Retrieval for Accident Management	Anya Chaturvedi, Shriyatalwar, Prateek Sahuboru Gadda, Amrutha	2018
+17	Emotion Recognition in speech	Deepak Bulani, Gaurav Agarwal, Bonthu Harsha Vardhan Reddy, Avichal Verma, Amit Ranjan	2019
+18	Fake news Detection using Machine Learning	Anurag Gupta, Anshika Srivastava, Anupama Singh, Deepak Kumar, Manish Meena	2019
+19	Prediction of Emotion from the Audio Speech Signals	Utkarsh Garg , Sachin Agarwal , Shubham Gupta, Ravi Dutt	2020
+20	Analysis and Implementation of Multi-Hop Clustering Algorithm in VANET	Shashwat Rai, Nitesh Sharma, Shrikant Kr. Gupta, Ravi Ranjan	2020
+21	Cluster based routing protocol for VANETs	Nikeet Keshari, Anil Kumar, Abhishek Verma	2021
+22	Spam Review Detection	Amrita Kumari, Abhinav Kumar Giri, Isukapati Meghana Sandhya	2021
+23	Identity based Encryption and Mail Security	Gaurav Shukla, Abhishek Kumar, Jay Prakash	2021
+24	Mobility-Aware Optimization of Vehicular Task Offloading in MEC-based vehicular networks with QoS promotion and load-balance	Purva Gautam, Kshitij Agarwal, Parth Pareek, Naincy Yadav	2022
+25	Spammer Group Detection	Tushar Garg,Vikas, Sujeet Kumar, Tinku	2022
+26	Misbehavior Detection of position falsification attacks for vehicular ad hoc network	Vijay Krishna Vishwakarma, Scahin Singh, sourav Mahour, Sunny, Shivam Gupta	2022
+27	Text Summarising Using Fire Fly Algorithm	Arun Kumar, Anshuman Chowdhary, Arun Jena, Aditya Anal	2023
+28	Efficient K-hop limited Path Selection Algorithm for Vehicular Task Offloading	Anchal Yadav, Ayush Singh, Jagrati Verma, Megha Gupta	2023
+29	An Improved Fraud Detection Method based on Oversampling Techniques in Blockchain	Aditya Raju Darji, Deepesh Manoj Rathi, Aryan Khandelwal, Anand Tripathi, Adithya Balaji	2023
+30	Comparing Evolutionary Algorithms for Efficient Task Offloading in Edge Computing Assisted Networks	Jatin Vishal Mishra, Preeti Kumari, Priyabrata Majhi, Jaya Sri Charan Moka	2024
+31	Automatic License Plate Detection and Recognition for Unconstrained Scenarios	Anjani Kumar, Anyansha Das, Aditya Vikram Singh, Anshika Nagpal	2024
+32	Unveiling Insights: Exploring YouTube Comment Data through Topic Modelling with Latent Dirichlet Allocation Algorithm	Shivani Saraswat, Saloni Srivastava, Vaishali Dhooper, Rishu Mishra	2024
+33	A blockchain- based Fog-oriented Framework for Smart Public Transportation Systems	Siddharth Yadav, Vivek Kumar Yadav, Ramavath Ramesh, Siddhartha Parida	2024

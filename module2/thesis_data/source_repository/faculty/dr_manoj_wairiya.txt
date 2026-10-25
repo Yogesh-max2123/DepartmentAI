@@ -1,0 +1,99 @@
+Dr.Manoj Wairiya
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Ongoing
+1	Issues and Challenges In Generative AI	Abhishek Kant 2023RCS01	2023
+2	Image Processing	Kshama Mishra	2025
+M.Tech Students
+1	Permissioned Blockchain Model to strengthen Food supply chain for Pandemic( Covid-19) situation	Rohit Kumar Rajput	2021
+2	Diabetes Diagnosis Using Machine Learning	ASHOK B	2021
+3	"Image Encryption using Dynamic Encoding Scrambling"	POOJA	2020
+4	"Speeding UP HDPC using Elliptical curve cryptography"	Shubham Kumar	2019
+5	" A Novel Approach for Coin Identification"	Sachin Kumar Mishra	2019
+6	Detection and Prevention of black hole attack in mobile ad- hoc network	Rohit Kumar	2018
+7	A lightweight authentication scheme for wireless sensor in IoT based smart healthcare systems	Yashendra Shiv	2018
+8	Image set based face recognition using deep learning software	Desh Deepak	2017
+9	Multi-Document Summarization based on sentence fusion	Vinod Kumar PrajaPati	2017
+10	PCA based churn prediction and analysis	Mani Nath Gaur	2016
+11	Enhance customer purchase prediction model in content of ecommerce	Atul Kumar Pandey	2016
+12	SLA based energy aware vm allocation policy in cloud computing system	Mohammad Tarique Farooquee	2015
+13	An abandon object detection system and motion analysis as owner detection	Abhishek gaur	2015
+14	"Improved method for vehicle detection tracking and number plate recognition"	Amit Kumar	2015
+15	"Suspicious object detection: background model approach"	Prabhat Shukla	2014
+16	An efficient and secure data transfer in cloud computing environment	Amar Deo Kumar	2014
+17	Offline signature verification system and structural based feature extraction	Gaurav Kumar Pandey	2014
+18	Comparative Performance Analysis for Different Routing Protocols with Integrated IPSec Suit for MANET	Avjeet singh	2013
+19	Analyzing Various Performance testing Parameter of Web Application	Ajeet shukla	2013
+20	Analysis and Comparison of Web Scanning tool for N/W Vulnerabilities	Shreyas Singh	2013
+21	Sample Space Reduction and Anomaly Detection in Endoscopic Video Analysis	Rahul Sharma	2013
+22	Offline Signature Verification Using Grid and Graph Based Feature Extraction	Amit Kishor shukla	2013
+23	Improving Image Segmentation Using Genetic Algorithm	Anup K Kori	2013
+24	Image mosaicing : create high quality panoramic images	Ghanshyam Verma	2012
+25	A comparison of hybrid image compression technique based on LBG and kohonen network in DCT domain	Seema Kashyap	2012
+26	Trust based ad-hoc on demand distance vector routing	Dhirendra Kumar shukla	2012
+27	Ontology based framework for webpage information extraction	Ajeet Kumar Nigam	2012
+28	A novel methodology to identify and prevent vulnerabilities in software maintenance phase	Prashant s Modi	2012
+29	Study of Events to build simplified Framework for Security awareness in networks	Bakshi Rahul Prasad	2012
+30	Detection of phishing attack using dynamic watermarking	Akhilendra Pratap	2011
+31	Layered frame work for network forensics analysis	Vimal Kumar	2011
+32	PPM : Prioritized and punish method of counteracting free riding in p2p networks	Bikash upadhyay	2012
+33	Offline fingerprint recognition system using new approach	Pankaj	2006
+34	Performance analysis of thinning algorithm based on the result of restoration of old manuscripts	C.R.chowdhary	2005
+35	Design and implementation of an algorithm for refreshing data used in continuous query execution	Shitanshu Sharma	2005
+36	Offline English character recognition using feature points	S.C.Pandey	2004
+37	"Adoption of Mobile Learning in Higher Education for Indian Institute"	Anjali shah	2020
+38	Computer Aided Diagnosis of Laryngeal Cancer Via Deep Learning	Mayank Singhal	2022
+39	Automated Detection of COVID-19 from Chest X-ray Images Using Deep Learning	Shubam Gupta	2022
+40	Library Catalog Management using Blockchain	Sidharth Goutam Karji 2021CS36	2023
+41	A blockchain based distributed application to track and split shared expenses	Vivek Kumar 2021SW20	2023
+42	Penetration Testing on TightVNC and RealVNC	Meba Meria Jacob 2021 IS30	2023
+43	Improved Routing Mechanism for Delay Tolerent Network	Deepak Kumar 2022DS15	2024
+44	Enhancing Remote Sensing Image Classification using Deep Learning	Abhinay Ramesh Koreti	2024
+45	Face Vein Based biometric Identification	Adarsh Kumar 2022DS19	2024
+46	Improving Retinopathy of Prematurity Detection Through the Fundus Image Analysis	Divyansh Kumar	2025
+47	TextFlare: a Novel Optimization Framework for Enhancing Transformer Based Text Models	Dhanraj Rajyaguru 2023CS09	2025
+48	A Framework for Evaluating Persistent Memory consistency in LLM Based Conversational AI systems	Yatharth Magraiya 2024 DS24	2026
+49	Efficient Optimizer for Resource Constrained Large Language Models (LLMs)	Mridul Gupta 2024IS18	2026
+B.Tech Students
+1	Property Registry using block chain	S.V.G.Krishna	2021
+2	Voice Based Emotion Recognition	Shivam Kapoor	2020
+3	"Exploratory Data Analysis and Machine learning on Titanic Disaster Dataset"	Abhinav, Aakarsh Verma	2020
+4	"VAT Summarizer"	Harsh Nayak, Akarsh Dubey	2020
+5	Grayscale to color flower image an application of conditional Gan ,deep learning.	Kunal Agarwal	2021
+6	A comparative study of authentication techniques for Wireless body sensors in IOT based Healthcare	Mayank Dixit	2019
+7	Interactive Maps for Indoor Navigation system using Augmented Reality	AvisheK Santhilya, Aman Gangwar	2019
+8	Quality Prediction of Answers on Community Question Answering(CQA)	Vaibhav Gupta, Sahil Kumar	2019
+9	Krishi Vyapar: Online platform to sell farm produce	Pragyan Varshney, Saket Kumar	2021
+10	"Automated Attendance System using Face Recognition"	Kumar Priyajit	2018
+11	NLP Based Query Answering system	Ayushi Kansal	2018
+12	Automated Tagging of stackOverflow Questions	Shah Harshit Surendra	2018
+13	A conventional Neural network based approach to face recognition	AyonDas	2017
+14	Problem Recommender system for Codeforces users	Hena Firdaus	2017
+15	Customer Purchase prediction Model	Saurabh Uttam	2016
+16	E commerce android Application	Karishma singh	2016
+17	QOS Aware Allocation of Virtual Machines in Cloud computing System	Rajat Singh	2015
+18	Face Detection and Face Recognition Using Neural Network	Akshay Agarwal	2014
+19	Offline signature verification	Abhinav Sahu	2014
+20	Automatic Time table generator	Tanvi Rastogi	2013
+21	Iris Biometric for Person Identification	Sania, Vijay Vigneshan	2013
+22	Image Mosaicing Using SIFT and RANSAC	Shobhit Agarwal	2012
+23	CSRF Testing Tool	Mudit Rastogi	2012
+24	Video ON demand Web server	Akhilesh singh	2011
+25	Quality of service of Audio transmission over Adhoc NETWORKs	Pulkit agarwal	2010
+26	Exploring Multimedia Transmission ISSUEs over wireless channels and their application in telemedicine videos	Gajendra Saini	2010
+27	Skin Disease Classification Using Deep Convolutional Network	Vasu shivam, Tushar Katiyar,Vaibhav singh	2022
+28	Sentimental Analysis Assisted by Machine Learning Techniques	Anshul Bang	2022
+29	Hindi Character Recognition USING Feature Point Extraction	RAVI (2001449) Meetu Banerjii(2001495)	2005
+30	Design and Implementation of Thinning Algorithm for Character Recognition	Mayank Agarwal ,Sushil Kumar, Neha Maheshwari	2005
+31	Indian Sign Language Communicator	Abhinav Anand (20198049) Hardik Mittal (20198080) Darpan Mittal (20198022) Ashutosh Shakya (20198076)	2023
+32	Attendance Management System Using Face Detection	Mishul Kumar 20188021, Kunal Bansal 20198009, Gyanaranjan Panda 20198070, Aditya Chauhan 20198098	2023
+33	A deep learning based electricity consumption pattern prediction model for an Indian household	(Om Kant Mishra (20198108) Nishant Rai (20198004) Rishab Bothra (20198077) Tanmay Dhawan (20178055)	2023
+34	Predicting the intensity of a tropical cyclone using CNN	(Abhishek Sharma 20194108 Bibhuti Kumar 20194030 Ankur Singh 20194102 Banothu Jayanth 20194213 Aman Kumar 20194141)	2023
+35	Rice Quality Analysis & Disease Classification Using Convolutional Neural Network	Arush Kumar (20208027), Abhinav Singh (20208006), Aayush Kumar Shaw (20208003), Anubhav Kumar Singh (20208021)	2024
+36	Multi-Class Diagnosis of Retinal Diseases Using Deep Neural Network	Divyanshu Kushwaha (20208043), Disha Gupta (20208041), Kartikey Gupta (20208064), Arpit Mishra (20208026)	2024
+37	HUMAN: Human Motion Analysis Network	Priyanshu Gupta (20204153), Purvesh Dhaker (20204157), Prachi Sharma (20204138). Priyanshu Agarwal (20204152)	2024
+38	Supply Chain using Blockchain: Tracking made Secure	Vaishnavi Tripathi (20204221), Ujjwal Tyagi (20204218), Rishabh Pandey (20204167), Rishita Maurya (20204168)	2024
+39	Demand Forecasting and Anomaly Detection for Fair Price Shops Using Machine Learning	Sanchita Sharma 20214210 Sanskar Jain 20214128 Tanya Gupta 20214108 Sangam Chandra 20214301	2025
+40	AI-Powered Document Explanation System	Gaurav singh 20214177 Harshit Verma 20214269 Bishal Sah 20214519 Dhruva Bantwal Rao 20214515	2025
+41	Sentiment Analysis and Feedback Routing via RAG in LLMs	Sumit Pal 20214078 Vinay Singh 20214071 Sriyansh Singh 20214274 Shivansh Bhardwaj 20214180	2025

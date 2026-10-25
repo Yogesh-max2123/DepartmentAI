@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Sarsij Tripathi",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Sarsij Tripathi",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1702",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1702",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "cd4cc7b9d20b809d05ef9cb85e122aa9fe01d92604f29e26ceaf26162b5baf50",
+      "bytes": 3923,
+      "cached_at_utc": "2026-10-19T04:36:46.101768+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Sarsij Tripathi",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/28174-Publication%20List.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/28174-Publication%20List.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "3dbe42e3bf71dc9be8a2c56949ac4dd271f9b208761b5092a994695819eb0a37",
+      "bytes": 167584,
+      "cached_at_utc": "2026-10-19T04:36:46.882267+00:00"
+    }
+  }
+}

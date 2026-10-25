@@ -1,0 +1,48 @@
+﻿faculty_id,faculty_name,faculty_is_active,profile_url,source_thesis_count,database_thesis_count,matched_student_topic_entries,source_only_entries,database_only_entries,source_fetch_status
+6,ANIL KUMAR SINGH,True,https://mnnit.ac.in/profile/ak,47,47,47,0,0,FETCHED
+8,Dharmendra Kumar Yadav,True,https://mnnit.ac.in/profile/dky,96,96,95,1,1,FETCHED
+16,Dinesh singh,True,https://mnnit.ac.in/profile/dinesh_singh,69,68,68,1,0,FETCHED
+38,Divyansh Thakur,True,https://mnnit.ac.in/profile/dthakur,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+39,Dr Archana Ojha,True,https://mnnit.ac.in/profile/ojha.archana,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+24,Dr Deepak Gupta,True,https://mnnit.ac.in/profile/deepakg,6,6,6,0,0,FETCHED
+27,Dr J Sathish Kumar,True,https://mnnit.ac.in/profile/sathish613,33,33,33,0,0,FETCHED
+23,Dr Kapil,True,https://mnnit.ac.in/profile/kapil,4,4,4,0,0,FETCHED
+32,Dr. Abhimanyu Sahu,True,https://mnnit.ac.in/profile/abhimanyus,11,11,11,0,0,FETCHED
+34,Dr. Abhinav Kumar,True,https://mnnit.ac.in/profile/abhik,3,3,3,0,0,FETCHED
+28,Dr. Abhinesh Kaushik,True,https://mnnit.ac.in/profile/abhinesh,8,8,8,0,0,FETCHED
+41,Dr. Aditya Anshul,True,https://mnnit.ac.in/profile/adityaanshul,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+45,Dr. Anisha Kumari,True,https://mnnit.ac.in/profile/anisha.mishra,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+36,Dr. Anuja Dixit,True,https://mnnit.ac.in/profile/anujadixit,17,17,17,0,0,FETCHED
+25,Dr. Ashish Kumar Maurya,True,https://mnnit.ac.in/profile/ashishmaurya,17,17,17,0,0,FETCHED
+15,Dr. Dushyant Kumar Singh,True,https://mnnit.ac.in/profile/dushyant,59,59,59,0,0,FETCHED
+37,Dr. Himanshu Nandanwar,True,https://mnnit.ac.in/profile/drhimanshu,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+31,Dr. Indu Dohare,True,https://mnnit.ac.in/profile/indudohare,5,5,5,0,0,FETCHED
+30,Dr. Joohi Chauhan,True,https://mnnit.ac.in/profile/joohi,5,5,5,0,0,FETCHED
+46,Dr. K Sowjanya,True,https://mnnit.ac.in/profile/sowjanya.k,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+33,Dr. Kailash Wamanrao Kalare,True,https://mnnit.ac.in/profile/kailashwk,7,7,7,0,0,FETCHED
+44,Dr. Komal Gupta,True,https://mnnit.ac.in/profile/komal.gupta,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+29,Dr. Neelam Dayal,True,https://mnnit.ac.in/profile/neelam.dayal,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+20,Dr. Rajitha B,True,https://mnnit.ac.in/profile/rajitha,79,79,79,0,0,FETCHED
+42,Dr. Rashmi Maheshwari,True,https://mnnit.ac.in/profile/m.rashmi,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+48,Dr. Satarupa Chakrabarti,True,https://mnnit.ac.in/profile/satarupa_c,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+14,Dr. Shashank Srivastava,True,https://mnnit.ac.in/profile/shashank12,45,45,45,0,0,FETCHED
+21,Dr. Shashwati Banerjea,True,https://mnnit.ac.in/profile/shashwati,17,17,17,0,0,FETCHED
+40,Dr. Shubhangi Chaturvedi,True,https://mnnit.ac.in/profile/shubhangichaturvedi,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+26,Dr. Vibhav Prakash Singh,True,https://mnnit.ac.in/profile/vibhav,55,55,55,0,0,FETCHED
+35,Dr. Vishal Srivastava,True,https://mnnit.ac.in/profile/vishalsri,10,10,10,0,0,FETCHED
+10,Dr.ANOJ KUMAR,True,https://mnnit.ac.in/profile/anojk,49,49,48,1,1,FETCHED
+12,Dr.Manoj Wairiya,True,https://mnnit.ac.in/profile/wairya,92,92,92,0,0,FETCHED
+18,LT. (Dr.) Divya Kumar,True,https://mnnit.ac.in/profile/divyak,45,45,44,1,1,FETCHED
+9,Mayank Pandey,True,https://mnnit.ac.in/profile/mayankpandey,51,51,50,1,1,FETCHED
+5,Neeraj Tyagi,True,https://mnnit.ac.in/profile/neeraj,12,12,11,1,1,FETCHED
+19,Pragya Dwivedi,True,https://mnnit.ac.in/profile/pragyadwi86,65,65,65,0,0,FETCHED
+47,Prasun Tripathi,True,https://mnnit.ac.in/profile/p.c.tripathi,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE
+1,Prof MANOJ MADHAVA GORE,True,https://mnnit.ac.in/profile/preview.php?login=gore,150,0,0,150,0,FETCHED
+3,Prof MANOJ MADHAVA GORE,True,https://mnnit.ac.in/profile/gore,150,150,150,0,0,FETCHED
+7,Prof. Dharmender Singh Kushwaha,True,https://mnnit.ac.in/profile/dsk,108,108,106,2,2,FETCHED
+4,Prof. Rama Shankar Yadav,True,https://mnnit.ac.in/profile/rsy,112,112,112,0,0,FETCHED
+11,Rajesh Tripathi,True,https://mnnit.ac.in/profile/rajeshtcsed,65,65,65,0,0,FETCHED
+13,Ranvijay,True,https://mnnit.ac.in/profile/ranvijay,50,50,48,2,2,FETCHED
+17,SARSIJ TRIPATHI,True,https://mnnit.ac.in/profile/sarsij,7,7,6,1,1,FETCHED
+22,Shailendra Shukla,True,https://mnnit.ac.in/profile/ss,15,15,15,0,0,FETCHED
+43,Shreeya Swagatika Sahoo,True,https://mnnit.ac.in/profile/shreeya,0,0,0,0,0,FETCHED_ZERO_ROWS_CHECK_SOURCE

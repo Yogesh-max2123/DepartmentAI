@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. J Sathish Kumar",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. J Sathish Kumar",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1704",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1704",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "45a427aa4cced866e61fa19bee1b84bf88c6130b114664662ffd8c5c3f9f0d72",
+      "bytes": 3930,
+      "cached_at_utc": "2026-10-19T04:37:07.354962+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. J Sathish Kumar",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/77204-Pulications.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/77204-Pulications.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "294ca8571618c75fdac2d3649ee56f1650db161e2a9c417bc2ceb0870b437a7d",
+      "bytes": 104842,
+      "cached_at_utc": "2026-10-19T04:37:07.992630+00:00"
+    }
+  }
+}

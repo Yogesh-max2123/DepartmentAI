@@ -1,0 +1,25 @@
+{
+  "faculty_name": "Dr. Satarupa Chakrabarti",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Satarupa Chakrabarti",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1939",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1939",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "416db46978ce9ccb22f46e29e43eb53c34fdc7e14ecaa7845c08b1ef590f8078",
+      "bytes": 3989,
+      "cached_at_utc": "2026-10-19T04:37:34.320474+00:00"
+    },
+    "publications.pdf": {
+      "faculty_name": "Dr. Satarupa Chakrabarti",
+      "requested_url": "https://mnnit.ac.in/userprofile/pdf/uploads/79311-Publication_Listing_Satarupa_Chakrabarti_2.pdf",
+      "final_url": "https://mnnit.ac.in/userprofile/pdf/uploads/79311-Publication_Listing_Satarupa_Chakrabarti_2.pdf",
+      "content_type": "application/pdf",
+      "saved_file": "publications.pdf",
+      "sha256": "4ac27c6d4969090965167683f74ca9cf885beb0c7f615b53cb58451c02805deb",
+      "bytes": 249094,
+      "cached_at_utc": "2026-10-19T04:37:35.455912+00:00"
+    }
+  }
+}

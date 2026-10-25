@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Rajitha B",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Rajitha B",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1646",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1646",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "9dd0cd29886ac931d9eacba4b9a8c8e4e39d90e9179f83adf94eaeea30ad5fe8",
+      "bytes": 19925,
+      "cached_at_utc": "2026-10-19T04:36:52.678463+00:00"
+    }
+  }
+}

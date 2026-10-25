@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Dr. Komal Gupta",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Dr. Komal Gupta",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1910",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1910",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "a9d3a5d16d048f8d86f01c9a9f532ddfbde73922051f5cc77774277382135e0b",
+      "bytes": 6076,
+      "cached_at_utc": "2026-10-19T04:37:29.448714+00:00"
+    }
+  }
+}

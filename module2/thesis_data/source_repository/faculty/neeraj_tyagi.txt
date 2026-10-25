@@ -1,0 +1,18 @@
+Neeraj Tyagi
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Design and Performance Evaluation of a Novel MAC Protocol Using Smart Antenna System for Hybrid Wireless Networks	Rajesh Verma	2011
+2	Protocols for Certificate Revocation and Dissemination of Revocation Information in Vehicular Ad-hoc Networks	Sandeep Harit	2012
+3	Performance Enhancement of MANET Routing Protocol over Hybrid Wireless Mesh Network	Mohd. Meftah Alrayes	2013
+4	Modified Routing Algorithm and Handover Scheme for VANET	Ravi Shanker Shukla	2015
+5	Energy Efficient Data Gathering and forwarding Schemes for Wireless Sensor Networks	Awadhesh Kumar	2017
+6	VANET Routing Algorithms for Urban and Rural Highway Environments	Shilpy Agarwal	2018
+7	Formal Modelling & Verification of Peer-to-Peer Video-on-Demand Streaming	Debjani Ghosh	2018
+8	Performance Analysis of QoS with Modified Scheduling of WiMax Network and its Applications in Remote Areas	Jokhu Lal	2020
+9	Multipath-aware Utilization of SMDâ€™s Interfaces for QoE Enhancement	Vimal Kumar	2021
+10	Design and Implementation of Software Defined Communication and Computation Infrastructure for Semi-permanent Smart Environments.	Shabir Ali	2021
+11	Modeling IoT Data for Vendor Agnostic Smart Applications	Ms. Rajasi Gore	2024
+12	Identifying Critical Success Factors and Developing a Model for Effective Adoption of Mobile Learning Systems in Indian Higher Educational Institutions	Manoj Wairya	2022

@@ -1,0 +1,10 @@
+Dr Kapil
+
+Thesis Supervised
+
+S.No	Research Topic	Name of Student	Completion/Registration Year
+Ph.D. Completed:
+1	Elongating the Lifetime of Wireless Sensor Network using Heuristics and Mathematical Modelling	Priti Maratha	2021
+2	Machine Learning Approaches for Plant Identification using Leaf Images	Neha Goyal	2022
+3	Data Aggregation and Machine Learning Driven load Forecasting and Management Models for Smart Grid	Jatinder Kumar	2025
+4	Efficient Tri-Class K-SVCR Single Model Learning, Semi-Supervised Training and Edge Deployment	Vivek Prakash Srivastava	2026

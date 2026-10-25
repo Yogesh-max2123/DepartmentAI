@@ -1,0 +1,15 @@
+{
+  "faculty_name": "Prof. Mayank Pandey",
+  "sources": {
+    "publication_page.html": {
+      "faculty_name": "Prof. Mayank Pandey",
+      "requested_url": "https://mnnit.ac.in/profile/previewp.php?id=1575",
+      "final_url": "https://mnnit.ac.in/profile/previewp.php?id=1575",
+      "content_type": "text/html; charset=UTF-8",
+      "saved_file": "publication_page.html",
+      "sha256": "b62126f4f41af146f14fdf7b4e4432406d05b81b2c0aefca3661a1d6d015b0e3",
+      "bytes": 14987,
+      "cached_at_utc": "2026-10-19T04:36:34.234375+00:00"
+    }
+  }
+}
