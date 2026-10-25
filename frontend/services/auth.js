@@ -1,98 +1,84 @@
-const AUTH_STORAGE_KEY = "departmentai_dev_session";
+import {
+  clearAccessToken,
+  getAuthenticatedUser,
+  hasAccessToken,
+  login as loginRequest,
+  logout as logoutRequest,
+  setAccessToken,
+} from "./api.js?v=session-persistence";
 
+let currentUser = null;
 
-export function loginUser(role, formData) {
+export async function loginUser(expectedRole, formData) {
+  const username = formData.get("username")?.trim();
+  const password = formData.get("password");
+  if (!username || typeof password !== "string" || !password) {
+    return null;
+  }
 
-    let user = null;
-
-
-    if (role === "STUDENT") {
-
-        user = {
-            role: "STUDENT",
-            name: formData.get("studentName")?.trim(),
-            identifier: formData.get("registrationNumber")?.trim()
-        };
-
+  const response = await loginRequest(username, password);
+  setAccessToken(response.access_token);
+  if (response.user.role !== expectedRole) {
+    try {
+      await logoutRequest();
+    } finally {
+      clearAccessToken();
     }
+    throw new Error("This account is not assigned to the selected workspace.");
+  }
 
-
-    if (role === "OFFICIAL") {
-
-        user = {
-            role: "OFFICIAL",
-            name: formData.get("officialName")?.trim(),
-            identifier: formData.get("officialId")?.trim()
-        };
-
-    }
-
-
-    if (role === "DUGC") {
-
-        user = {
-            role: "DUGC",
-            name: "DUGC",
-            identifier: formData.get("dugcId")?.trim()
-        };
-
-    }
-
-
-    if (!user || !user.identifier) {
-        return null;
-    }
-
-
-    /*
-     * Development-only authentication.
-     *
-     * The session is intentionally kept in memory
-     * only for the current page session.
-     *
-     * Real authentication will later be connected
-     * to the DepartmentAI backend.
-     *
-     * Passwords are intentionally not stored.
-     */
-
-    return user;
+  currentUser = {
+    role: response.user.role,
+    name: response.user.username,
+    username: response.user.username,
+    identifier: response.user.subject_identifier,
+  };
+  return currentUser;
 }
-
 
 export function getCurrentUser() {
-
-    /*
-     * Development mode:
-     * Do not restore authentication after refresh.
-     *
-     * This ensures that the role-selection login
-     * screen is shown whenever the page is refreshed.
-     */
-
-    return null;
+  return currentUser;
 }
 
+export async function restoreSession() {
+  if (currentUser) {
+    return currentUser;
+  }
+  if (!hasAccessToken()) {
+    return null;
+  }
+
+  try {
+    const user = await getAuthenticatedUser();
+    currentUser = {
+      role: user.role,
+      name: user.username,
+      username: user.username,
+      identifier: user.subject_identifier,
+    };
+    return currentUser;
+  } catch (error) {
+    if (error?.status === 401) {
+      clearAccessToken();
+      return null;
+    }
+    throw error;
+  }
+}
 
 export function isAuthenticated() {
-
-    return getCurrentUser() !== null;
-
+  return currentUser !== null;
 }
 
-
-export function logoutUser() {
-
-    localStorage.removeItem(AUTH_STORAGE_KEY);
-
+export async function logoutUser() {
+  try {
+    await logoutRequest();
+  } finally {
+    clearAccessToken();
+    currentUser = null;
+  }
 }
-
 
 export function getUserRole() {
-
-    const user =
-        getCurrentUser();
-
-    return user?.role || null;
-
+  return currentUser?.role || null;
 }

@@ -12,6 +12,8 @@ export function renderTopbar(currentUser = null) {
                     id="mobile-menu-button"
                     class="mobile-menu-button"
                     aria-label="Open navigation"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
                 >
                     ☰
                 </button>
@@ -47,12 +49,12 @@ export function renderTopbar(currentUser = null) {
                 <div class="user-profile">
 
                     <div class="user-avatar">
-                        ${initials}
+                        ${escapeHTML(initials)}
                     </div>
 
                     <div class="user-info">
-                        <span class="user-name">${userName}</span>
-                        <span class="user-role">${formatRoleLabel(userRole)}</span>
+                        <span class="user-name">${escapeHTML(userName)}</span>
+                        <span class="user-role">${escapeHTML(formatRoleLabel(userRole))}</span>
                     </div>
 
                     <span class="user-chevron">⌄</span>
@@ -63,6 +65,20 @@ export function renderTopbar(currentUser = null) {
 
         </div>
     `;
+}
+
+function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, (character) => {
+        const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;",
+        };
+
+        return entities[character];
+    });
 }
 
 function getInitials(name) {

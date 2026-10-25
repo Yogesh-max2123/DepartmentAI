@@ -1,17 +1,14 @@
-import os
 import re
 from collections import Counter
 
 import psycopg2
-from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 
+from backend.database.connection import get_database_settings
 
 # ---------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------
-
-load_dotenv()
 
 MODEL_NAME = (
     "sentence-transformers/"
@@ -25,14 +22,11 @@ CANDIDATE_K = 50
 # Number of final results returned.
 TOP_K = 5
 
-DB_HOST = "localhost"
-DB_PORT = 5432
-DB_NAME = "departmentai"
-DB_USER = "postgres"
+def get_db_connection():
+    """Return a fresh PostgreSQL connection for each retrieval request."""
+    settings = get_database_settings()
+    return psycopg2.connect(**settings.connection_kwargs())
 
-DB_PASSWORD = os.getenv(
-    "DEPARTMENTAI_DB_PASSWORD"
-)
 
 
 # ---------------------------------------------------------
@@ -52,28 +46,6 @@ print(
     f"{model.get_embedding_dimension()}"
 )
 
-
-# ---------------------------------------------------------
-# Create PostgreSQL connection ONCE
-# ---------------------------------------------------------
-
-if not DB_PASSWORD:
-    raise RuntimeError(
-        "DEPARTMENTAI_DB_PASSWORD "
-        "environment variable is not set."
-    )
-
-print("Connecting to PostgreSQL...")
-
-conn = psycopg2.connect(
-    host=DB_HOST,
-    port=DB_PORT,
-    database=DB_NAME,
-    user=DB_USER,
-    password=DB_PASSWORD
-)
-
-print("Database connection established.")
 
 
 # ---------------------------------------------------------
@@ -110,7 +82,8 @@ def tokenize(text: str):
 def calculate_keyword_score(
     question: str,
     chunk_text: str,
-    section_title: str = ""
+    section_title: str = "",
+    clause_title: str = "",
 ):
     """
     Calculate lexical relevance between the question
@@ -127,7 +100,7 @@ def calculate_keyword_score(
 
     question_tokens = tokenize(question)
     chunk_tokens = tokenize(chunk_text)
-    section_tokens = tokenize(section_title)
+    section_tokens = tokenize(f"{section_title} {clause_title}")
 
     if not question_tokens or not chunk_tokens:
         return 0.0
@@ -339,6 +312,7 @@ def semantic_search(question: str):
     # Retrieve semantic candidates
     # -----------------------------------------------------
 
+    conn = get_db_connection()
     cursor = conn.cursor()
 
     try:
@@ -354,6 +328,8 @@ def semantic_search(question: str):
             kc.page_end,
             s.section_number,
             s.title AS section_title,
+            kc.metadata->>'source_file' AS source_file,
+            kc.metadata->>'clause_title' AS clause_title,
             1 - (kc.embedding <=> %s::vector)
                 AS similarity
 
@@ -382,9 +358,8 @@ def semantic_search(question: str):
 
     finally:
 
-        # Cursor is temporary.
-        # Database connection remains open.
         cursor.close()
+        conn.close()
 
     if not candidates:
         return []
@@ -407,6 +382,8 @@ def semantic_search(question: str):
             page_end,
             section_number,
             section_title,
+            source_file,
+            clause_title,
             semantic_score
         ) = result
 
@@ -414,8 +391,13 @@ def semantic_search(question: str):
             calculate_keyword_score(
                 question,
                 chunk_text,
-                section_title
+                section_title,
+                clause_title or "",
             )
+        )
+        title_score = calculate_keyword_score(
+            question,
+            clause_title or "",
         )
 
         # -------------------------------------------------
@@ -424,14 +406,15 @@ def semantic_search(question: str):
         #
         # Semantic similarity remains dominant.
         #
-        # 80% semantic
-        # 20% lexical
+        # Semantic relevance, body-term overlap, and exact clause-title match.
         # -------------------------------------------------
 
         combined_score = (
-            0.80 * float(semantic_score)
+            0.65 * float(semantic_score)
             +
             0.20 * float(keyword_score)
+            +
+            0.15 * float(title_score)
         )
 
         reranked_results.append(
@@ -445,6 +428,8 @@ def semantic_search(question: str):
                 "page_end": page_end,
                 "section_number": section_number,
                 "section_title": section_title,
+                "source_file": source_file,
+                "clause_title": clause_title,
                 "semantic_score": float(
                     semantic_score
                 ),
@@ -624,18 +609,6 @@ def main():
                 )
 
     finally:
-
-        # -------------------------------------------------
-        # Close PostgreSQL ONLY when application exits.
-        # -------------------------------------------------
-
-        if conn and not conn.closed:
-
-            conn.close()
-
-            print(
-                "\nDatabase connection closed."
-            )
 
         print(
             "DepartmentAI semantic retrieval stopped."

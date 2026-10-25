@@ -130,10 +130,8 @@ def generate_application_analysis(application_id):
                     id,
                     requirement_description,
                     requirement_type,
-                    source_document_id,
                     source_section_id,
-                    source_chunk_id,
-                    status
+                    source_chunk_id
                 FROM application_requirements
                 WHERE application_id = %s
                 ORDER BY id
@@ -151,10 +149,8 @@ def generate_application_analysis(application_id):
                     "requirement_id": row[0],
                     "requirement_description": row[1],
                     "requirement_type": row[2],
-                    "source_document_id": row[3],
-                    "source_section_id": row[4],
-                    "source_chunk_id": row[5],
-                    "status": row[6],
+                    "source_section_id": row[3],
+                    "source_chunk_id": row[4],
                 }
             )
 

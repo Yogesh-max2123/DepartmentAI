@@ -3,19 +3,19 @@ export function renderLoginRoleSelector(selectedRole = null) {
         {
             id: "STUDENT",
             title: "Student",
-            description: "Access applications and academic services",
+            description: "Sign in to a provisioned Student account",
             icon: "S"
         },
         {
             id: "OFFICIAL",
             title: "Official",
-            description: "Manage and process academic applications",
+            description: "Sign in to a provisioned Official account",
             icon: "O"
         },
         {
             id: "DUGC",
             title: "DUGC",
-            description: "Review applications and committee decisions",
+            description: "Sign in to a provisioned DUGC account",
             icon: "D"
         }
     ];
@@ -25,9 +25,9 @@ export function renderLoginRoleSelector(selectedRole = null) {
 
             <div class="login-role-heading">
                 <span class="eyebrow">DepartmentAI</span>
-                <h2>Select your role</h2>
+                <h2>Choose your account type</h2>
                 <p>
-                    Choose the workspace you want to access.
+                    The server verifies the account role. This selection cannot grant permissions.
                 </p>
             </div>
 

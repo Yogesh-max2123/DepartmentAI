@@ -1,0 +1,160 @@
+.role-workspace {
+  max-width: 1120px;
+}
+
+.role-workspace-identity {
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.role-workspace-notice,
+.role-workspace-unavailable,
+.role-workspace-unsupported {
+  padding: 14px 16px;
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius-md);
+  background: #fffbeb;
+  color: #78350f;
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.role-workspace-unavailable h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.role-workspace-unavailable p,
+.role-workspace-unsupported {
+  margin: 0;
+}
+
+.role-workspace-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.role-workspace-link {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.role-workspace-link:hover {
+  border-color: var(--primary);
+  background: var(--surface-soft);
+}
+
+.role-application-lookup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role-application-lookup-form label {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.role-application-lookup-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.role-application-lookup-controls input {
+  min-width: 0;
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.role-application-lookup-form small {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.role-application-result {
+  margin-top: 18px;
+}
+
+.role-application-result h3 {
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.role-review-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.role-review-panel {
+  min-width: 0;
+}
+
+.role-review-panel h2 {
+  margin-top: 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.role-review-data {
+  max-height: 360px;
+  overflow: auto;
+  margin: 0;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+  color: var(--text-secondary);
+  font: 0.75rem/1.55 ui-monospace, SFMono-Regular, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.role-workspace-empty,
+.role-workspace-error,
+.role-application-lookup-error {
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.role-workspace-error,
+.role-application-lookup-error {
+  color: #b91c1c;
+}
+
+.role-application-lookup-form :focus-visible,
+.role-workspace-link:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .role-workspace-links,
+  .role-review-sections {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .role-application-lookup-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

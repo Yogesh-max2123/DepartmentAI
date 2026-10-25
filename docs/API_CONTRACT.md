@@ -1,6 +1,6 @@
 ﻿# DepartmentAI — API Contract Inventory
 
-This file records the API contract from the current backend implementation. It is intentionally limited to actual route declarations, request models, service responses, and runtime behavior. No backend files were edited.
+This file records the API contract from the current backend implementation. It is intentionally limited to actual route declarations, request models, service responses, and runtime behavior.
 
 ## 1. Backend runtime
 
@@ -12,24 +12,83 @@ This file records the API contract from the current backend implementation. It i
 - Default port: not configured in code
 - Backend startup command: `python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000`
 - Backend API base URL: `http://127.0.0.1:8000`
+- Frontend API origin: configurable using `globalThis.DEPARTMENTAI_API_BASE_URL` in `frontend/config.js`; an empty value uses the local development URL. HTTPS frontend pages require an HTTPS API origin.
 - OpenAPI endpoint: `GET /openapi.json`
 - Docs endpoint: `GET /docs`
 - Redirect docs endpoint: `GET /redoc`
-- CORS origins: `http://127.0.0.1:5500`, `http://localhost:5500`
-- CORS methods: all methods (`*`)
-- CORS headers: all headers (`*`)
-- CORS credentials: enabled
-- Authentication: no authentication, token, or API-key mechanism is implemented in the current routes or middleware
+- CORS origins: local defaults are `http://127.0.0.1:5500`, `http://localhost:5500`, and `http://127.0.0.1:5501`; optional `CORS_ALLOWED_ORIGINS` replaces the defaults with a comma-separated list of exact HTTP(S) origins.
+- CORS methods: `GET`, `POST`, `PATCH`, `OPTIONS`
+- CORS headers: `Authorization`, `Content-Type`
+- CORS credentials: disabled
+- Authentication: protected API routes require a bearer session from `POST /auth/login`; local password authentication is restricted to explicitly selected development/test database profiles. Institutional sign-in returns HTTP 503 until an approved identity provider is configured.
 - Required headers: content-type is required for JSON request bodies; multipart form-data for document upload
 - Error structure: FastAPI returns `{"detail": "..."}` for route-level exceptions
-- General application-list endpoint: none exists in the current backend routes
+- Application list: `GET /applications?limit=20&offset=0`, filtered by the authenticated account's Student subject, Official assignment, or DUGC committee membership.
+- Document-content download: `GET /applications/{application_id}/documents/{document_id}/download`; application access is checked server-side and stored filesystem paths are not returned.
 
-### Runtime verification status
+### Current authentication and role-scoped routes
+
+- `POST /auth/login` accepts `{ "username": "...", "password": "..." }` and returns `access_token`, `token_type`, `expires_in`, and the server-provisioned `user` role/subject. Password login is deliberately unavailable in the institutional profile.
+- `GET /auth/me` returns the current server-verified username, role, and subject. `POST /auth/logout` revokes the presented bearer token. The browser stores the access token in tab-scoped `sessionStorage` so reloads in the same tab can restore the session after validating the token with `/auth/me`; the password is never persisted. Closing the tab clears this storage, and the server-side session still expires or can be revoked.
+- Sessions expire after 30 minutes. Only a SHA-256 token digest is stored in PostgreSQL. Password hashes use bcrypt.
+- All application/business routes require the `Authorization: Bearer <token>` header. A missing/invalid/expired token returns 401; unavailable auth/database dependencies return a generic 503.
+- `GET /applications` returns a bounded page of records visible to that account. Students are filtered by the account subject; Officials by explicit application assignment; DUGC accounts by committee membership and review assignment.
+- Student application creation binds the applicant identifier to the authenticated account. Status actors and committee-decision actors are derived from the authenticated username; client-supplied actors are not trusted.
+- Official status changes, committee assignment, DUGC decision writes, and document download are server-authorized and scoped. Out-of-scope records return 404; role violations return 403.
+- `GET /health/live` checks process liveness. `GET /health/ready` performs a database/schema readiness check; it does not verify AI provider availability.
+- Audit reads remain denied with 403 until a visibility policy is approved. Eligibility/deficiency GET routes can write records; eligibility may invoke AI. Do not use them as safe read-only checks.
+- This development authentication is not an institutional IdP, and its synthetic seed accounts are not institutional identities. Production remains blocked on IdP, provisioning, policy review, and institutional database access.
+
+### Local integration evidence — 2026-10-25
+
+The browser loaded this checkout from `http://127.0.0.1:5502/` and called a separately started development-profile API on port 8001, explicitly configured for that exact CORS origin. Actual CORS preflights and API requests were observed, not just a preflight-only check. The dev database was `departmentai_dev`; all data was synthetic.
+
+| Method and path | Observed HTTP | Response / effect |
+|---|---:|---|
+| `GET /health/live` | 200 | `{"status":"ok"}` |
+| `GET /health/ready` | 200 | `{"status":"ready"}` with local schema present |
+| `GET /openapi.json` | 200 | OpenAPI JSON available |
+| `POST /auth/login` | 200 | Browser sign-in succeeded for synthetic Student, Official, and DUGC accounts |
+| `GET /applications?limit=5&offset=0` | 200 | Student dashboard displayed the seeded synthetic application |
+| `GET /applications?limit=20&offset=0` | 200 | Official and DUGC queues displayed only their assigned synthetic application |
+| `GET /applications/2` | 200 | Synthetic application JSON object |
+| `GET /applications/2/documents` | 200 | `{"application_id":2,"documents":[]}`; metadata does not expose storage paths |
+| `GET /applications/2/status-history` | 200 | `{"application_id":2,"history":[...]}`; Student history omits actor identifier |
+| `GET /applications/2/committee-reviews` | 200 | Review JSON; Student response omits decision actor; DUGC view is membership-filtered |
+| `GET /applications/2/ordinance-retrieval` | 200 | JSON with empty `results` in the synthetic database |
+| `PATCH /applications/2/status` | 200 each | Five legal synthetic transitions through `COMMITTEE_REVIEW`; no AI/process endpoint called |
+| `POST /applications/2/committee` | 200 | Synthetic DUGC review assignment |
+| `PATCH /committee-reviews/1/decision` | 200 | Synthetic DUGC approval; Student subsequently saw the human decision, not the actor identity |
+
+Automated backend integration tests also cover synthetic upload, metadata, download, upload rejection above 10 MiB, cross-role denial, logout revocation, audit denial, database-unavailable handling, and institutional local-login refusal. These observations do not verify institutional data or production authorization policy.
+
+### Earlier runtime verification status (before CORS remediation)
 
 - Source-level route and middleware inspection: verified
-- Application import: failed because `DEPARTMENTAI_DB_PASSWORD` is not set
-- Uvicorn startup: not verified because the application cannot import
-- API calls: not performed because the runtime backend cannot start
+- Current API process listening on `127.0.0.1:8000`; `GET /docs` and `GET /openapi.json` returned HTTP 200.
+- The configured `.env` database target, `10.219.45.43:5432` (credentials omitted), failed a TCP reachability probe. A local PostgreSQL listener on loopback is a separate endpoint.
+- Direct safe `GET /applications/0` timed out after approximately 4.16 seconds with no response body. No database-backed route result was verified.
+- No live `/ask`, AI-analysis, document-processing, status-update, or committee-write operation was verified.
+- CORS preflight from `http://127.0.0.1:5500` and `http://localhost:5500` returned HTTP 200 with the matching `Access-Control-Allow-Origin` header. Preflight from `http://127.0.0.1:5501` returned HTTP 400.
+- Frontend `http://127.0.0.1:5501/` returned HTTP 200; a browser fetch to `/openapi.json` from that origin was blocked by CORS. Port 5500 was already held by a Python listener, but its root returned an empty-response failure. It was left untouched.
+- A temporary frontend bound to `[::1]:5500` returned HTTP 200 to direct IPv6 requests, but browser navigation via `localhost:5500` failed loading the role-selector module with `net::ERR_EMPTY_RESPONSE`; the temporary listener was stopped and the existing IPv4 listener remains untouched.
+- A loopback-only query found no `STUDENT-TEST` / `Test request` rows on that separate database; this does not establish the configured database state.
+- Browser role navigation and responsive-width checks are UI-only and do not verify database-backed integration.
+
+### CORS configuration update — 2026-10-23
+
+- Development origin `http://127.0.0.1:5501` is now explicitly allowed so the current checkout can use its available frontend server when port 5500 is occupied by another checkout.
+- `CORS_ALLOWED_ORIGINS`, when set, replaces local defaults. Values are validated as exact HTTP(S) origins; wildcards, credentials, paths, query strings, and fragments are rejected. An empty/invalid configured list fails startup instead of silently broadening access.
+- CORS credentials are disabled because the current preview/API has no cookie-based session. Authorization and content-type headers are allowed explicitly.
+- Backend CORS tests validate real HTTP responses using FastAPI's test client. This does not add authentication or record-level authorization.
+- After restarting the confirmed local Uvicorn process from this checkout, the browser page at `http://127.0.0.1:5501/` successfully completed a preflighted cross-origin `GET /openapi.json` to `http://127.0.0.1:8000`; actual response HTTP 200, JSON, OpenAPI 3.1.0, 18 paths. No application/database endpoint was called.
+
+### Explicit database profiles — 2026-10-24
+
+- `DEPARTMENTAI_DATABASE_ENV` defaults to `institutional`, which reads the existing project `.env`. The application never falls back to local PostgreSQL when that target is unavailable.
+- Explicit `development` and `test` values read only `.env.development` and `.env.test`, respectively. Both profiles reject non-loopback hosts and require fixed database names `departmentai_dev` and `departmentai_test`.
+- Existing local PostgreSQL databases `departmentai` and `departmentai_m11_test_20261022` were inspected read-only and left untouched. New isolated databases were created and initialized with the core workflow tables plus empty pgvector-backed knowledge tables. No knowledge chunks or application data were copied.
+- Core application create/read, status-history, document metadata, empty ordinance retrieval, and committee-review routes are exercised by the isolated backend integration test. This is local test evidence, not institutional database evidence or authenticated role testing. AI analysis and external-provider calls are excluded.
 
 ## 2. Shared conventions
 
@@ -37,7 +96,7 @@ All path parameters are integers.
 
 Application IDs are numeric database IDs. Application numbers are generated by the backend as `APP-YYYY-00001`-style values and are not supplied by the client.
 
-Successful responses are JSON objects. Route errors are surfaced as HTTP 400, 404, or 500 responses with a string `detail` message. No JSON error envelope is defined.
+Successful JSON responses are objects except for file-download responses and HTTP 204 logout. Errors use FastAPI's `{"detail": "..."}` shape and may return HTTP 400, 401, 403, 404, 413, 422, 500, or 503.
 
 The backend uses PostgreSQL and reads credentials from environment variables. `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` are required by `backend.database.connection.get_connection()`.
 
@@ -62,7 +121,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 
 - `conversation_history`: optional; defaults to an empty list.
 - Required headers: `Content-Type: application/json`.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -94,15 +153,15 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 
 ```json
 {
-  "applicant_identifier": "string",
   "application_type": "string",
   "title": "string or null",
   "description": "string or null"
 }
 ```
 
+- The authenticated Student subject identifier is used as `applicant_identifier`; clients cannot choose the applicant identity.
 - Required headers: `Content-Type: application/json`.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -114,9 +173,61 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 }
 ```
 
-- Error response: `500` with `{"detail": "..."}`.
+- Error responses: `400` for invalid input, `403` for a non-Student role, `503` when authentication/database dependencies are unavailable, or `500` for an unexpected failure.
 - Frontend purpose: Create Application.
-- Verification status: route, request model, and response fields verified from source; no live request performed.
+- Verification status: synthetic local database integration test passed; no institutional write was made.
+
+### GET /applications
+
+- Purpose: Return the authenticated user's visible application page.
+- Query parameters: `limit` (default 20, range 1–100), `offset` (default 0, nonnegative).
+- Visibility: Students by exact subject identifier; Officials by explicit application assignment; DUGC by matching committee membership and review.
+- Success response:
+
+```json
+{
+  "items": [
+    {
+      "id": 1,
+      "application_number": "APP-2026-00001",
+      "application_type": "string",
+      "title": "string or null",
+      "description": "string or null",
+      "status": "string",
+      "submitted_at": "timestamp or null",
+      "created_at": "timestamp",
+      "updated_at": "timestamp"
+    }
+  ],
+  "limit": 20,
+  "offset": 0
+}
+```
+
+- Verification status: browser-verified HTTP 200 for synthetic Student, Official, and DUGC accounts in the explicitly selected local development profile. No institutional records were queried.
+
+### POST /applications/{application_id}/submit
+
+- Purpose: Submit a Student-owned draft to the shared Official queue.
+- Authentication/authorization: required; Student role and application ownership are verified by the backend.
+- Side effects: atomically changes `DRAFT` to `SUBMITTED`, sets `submitted_at`, creates a status-history record, and writes an audit event.
+- Success response includes `application_id`, `old_status`, `new_status`, `submitted_at`, and `history_id`.
+- Errors: `404` if the application is not owned by the signed-in Student; `409` if the current state cannot be submitted.
+
+### GET /official/applications/unassigned
+
+- Purpose: List submitted applications not yet assigned to an Official.
+- Authentication/authorization: Official role required. This shared queue is visible to all authenticated Official accounts under the approved shared-queue policy.
+- Query parameters: `limit` (default 20, range 1–100), `offset` (default 0, nonnegative).
+- Response shape: `{ "items": [application summary...], "limit": 20, "offset": 0 }`.
+
+### POST /applications/{application_id}/claim
+
+- Purpose: Claim one item from the shared Official queue and assign it to the authenticated Official.
+- Authentication/authorization: Official role required.
+- Side effects: creates the assignment and audit event in one transaction. The application row is locked so only one concurrent claim can succeed.
+- Success response includes `application_id`, `official_user_id`, and `assigned_at`.
+- Errors: `403` for other roles; `404` if the application does not exist; `409` if it is not `SUBMITTED` or has already been claimed.
 
 ### GET /applications/{application_id}
 
@@ -124,8 +235,8 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Query parameters: none.
-- Required headers: none.
-- Authentication: none.
+- Required headers: `Authorization: Bearer <token>`.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -143,15 +254,17 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 }
 ```
 
-- Error responses: `404` when the application does not exist; `500` for unexpected failures.
+- Official responses also include `allowed_transitions`; other roles do not receive this field.
+- Error responses: `401` for absent/invalid session, `404` for unknown or out-of-scope records, `503` for unavailable authentication/database, or `500` for unexpected failures.
 - Frontend purpose: Application Details.
-- Verification status: route and response fields verified from source; no live request performed.
+- Verification status: browser-verified HTTP 200 for a synthetic assigned record; role-scope and cross-user denials are covered by integration tests.
 
 ### GET /applications/{application_id}/status-history
 
 - Purpose: Retrieve the complete application status history.
 - Path parameters:
   - `application_id`: integer application ID
+- Student responses omit `changed_by`; authorized staff responses include it.
 - Success response:
 
 ```json
@@ -170,7 +283,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 }
 ```
 
-- Error responses: `404` if the application does not exist; `500` for unexpected failures.
+- Error responses: `401` for absent/invalid session, `404` for unknown/out-of-scope records, or `503` for unavailable auth/database.
 - Frontend purpose: status lifecycle/history presentation.
 - Verification status: source verified; no live request performed.
 
@@ -184,14 +297,13 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 ```json
 {
   "new_status": "string",
-  "changed_by": "string",
   "reason": "string or null"
 }
 ```
 
-- `changed_by`: defaults to `SYSTEM` when omitted by the client model, although the field is defined as part of the request model.
+- Only an assigned Official may update status. The server derives `changed_by` from the authenticated username.
 - Required headers: `Content-Type: application/json`.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -207,7 +319,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 
 - Error responses: `400` for invalid status transitions or invalid input; `500` for unexpected failures.
 - Frontend purpose: backend-controlled lifecycle actions.
-- Verification status: route, transition rules, and response fields verified from source; no live request performed.
+- Verification status: five allowed transitions returned HTTP 200 through the local Official browser workflow; no institutional write was made.
 
 ### Supported status transitions
 
@@ -236,7 +348,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
   - `file`: required multipart file
   - `document_type`: optional string
 - Required headers: `Content-Type: multipart/form-data`.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -245,7 +357,6 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
   "application_id": 1,
   "file_name": "document.pdf",
   "document_type": "string or null",
-  "file_path": "string",
   "file_size": 12345,
   "mime_type": "string or null",
   "upload_status": "UPLOADED",
@@ -254,9 +365,9 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 ```
 
 - Supported upload extensions: `.pdf`, `.jpg`, `.jpeg`, `.png`.
-- Error responses: `400` for empty file, invalid extension, or invalid file name; `404` if the application does not exist; `500` for unexpected failures.
+- Uploads are Student-only and limited to 10 MiB. Error responses include `400` for empty/invalid file, `403` for a role violation, `404` for unknown/out-of-scope application, `413` above the size limit, and `422` for missing multipart fields.
 - Frontend purpose: document upload and document listing.
-- Verification status: source verified; no live upload performed.
+- Verification status: synthetic upload/metadata/download and size/role validation are covered by the isolated integration test.
 
 ### GET /applications/{application_id}/documents
 
@@ -274,7 +385,6 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
       "application_id": 1,
       "file_name": "document.pdf",
       "document_type": "string or null",
-      "file_path": "string",
       "file_size": 12345,
       "mime_type": "string or null",
       "upload_status": "string",
@@ -286,7 +396,17 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 
 - Error responses: `404` if the application does not exist; `500` for unexpected failures.
 - Frontend purpose: document management list.
-- Verification status: source verified; no live request performed.
+- Stored filesystem paths are deliberately omitted from API metadata.
+- Verification status: browser-verified HTTP 200 (empty list) and synthetic upload/list metadata verified by automated local integration tests.
+
+### GET /applications/{application_id}/documents/{document_id}/download
+
+- Purpose: Return the uploaded document bytes for an authorized application participant.
+- Path parameters: numeric application and document IDs.
+- Authentication and scope: bearer session required; the caller must have application access, and the document must belong to that application.
+- Success: file response with the stored file MIME type and attachment filename.
+- Error responses: `401` for invalid session, `404` for missing/out-of-scope application or document, `503` for unavailable authentication/database, or `500` for unexpected storage failures.
+- Verification status: synthetic PDF bytes round-tripped successfully in the isolated automated integration test; browser download was not exercised in this run.
 
 ### GET /applications/{application_id}/documents/{document_id}/validate
 
@@ -295,7 +415,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
   - `application_id`: integer application ID
   - `document_id`: integer document ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -331,7 +451,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
   - `application_id`: integer application ID
   - `document_id`: integer document ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -357,7 +477,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
   - `application_id`: integer application ID
   - `document_id`: integer document ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -382,7 +502,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -410,7 +530,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -436,7 +556,8 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 
 - Error responses: `400` when the application is invalid; `404` if the application does not exist; `500` for unexpected failures.
 - Frontend purpose: requirements and eligibility analysis.
-- Verification status: source verified; no live request performed.
+- Side effects: this GET deletes existing eligibility results, may invoke Gemini, inserts replacement results, and commits. It is not a safe read-only endpoint.
+- Verification status: source verified; no live request performed. The staff lookup UI intentionally does not invoke it automatically.
 
 ### GET /applications/{application_id}/deficiencies
 
@@ -444,7 +565,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -472,7 +593,8 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 
 - Error responses: `400` when the application is invalid; `404` if the application does not exist; `500` for unexpected failures.
 - Frontend purpose: AI-identified deficiencies.
-- Verification status: source verified; no live request performed.
+- Side effects: this GET deletes and recreates deficiency records, then commits. It is not a safe read-only endpoint.
+- Verification status: source verified; no live request performed. The staff lookup UI intentionally does not invoke it automatically.
 
 ## 7. AI-assisted application analysis and processing
 
@@ -482,7 +604,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -511,7 +633,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -568,7 +690,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 
 - Allowed values: `DUGC`, `DMPC`, `DDPC`.
 - Required headers: `Content-Type: application/json`.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -591,7 +713,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Required headers: none.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -606,7 +728,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
       "review_status": "PENDING",
       "decision": "string or null",
       "decision_reason": "string or null",
-      "decided_by": "string or null",
+      "decided_by": "string or null (omitted from Student response)",
       "decided_at": "timestamp or null"
     }
   ]
@@ -627,14 +749,14 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 ```json
 {
   "decision": "APPROVED",
-  "decision_reason": "string",
-  "decided_by": "string"
+  "decision_reason": "string"
 }
 ```
 
 - Allowed values: `APPROVED` and `REJECTED`.
+- Only a DUGC account with matching committee membership may decide an assigned review. The server derives `decided_by`; the client does not submit it. Student responses omit this actor field.
 - Required headers: `Content-Type: application/json`.
-- Authentication: none.
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
 - Success response:
 
 ```json
@@ -655,7 +777,7 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 }
 ```
 
-- Error responses: `400` for invalid decision, missing reason, missing decision maker, or invalid review state; `500` for unexpected failures.
+- Error responses: `400` for invalid decision, missing reason, or invalid review state; `403` for a role violation; `404` for an unassigned review; `503` for unavailable dependencies; `500` for unexpected failures.
 - Frontend purpose: human/committee decision display and final decision authority.
 - Verification status: source verified; no live request performed.
 
@@ -667,101 +789,91 @@ The backend uses PostgreSQL and reads credentials from environment variables. `D
 - Path parameters:
   - `application_id`: integer application ID
 - Required headers: none.
-- Authentication: none.
-- Success response:
+- Authentication: required; send the bearer token from `/auth/login` in `Authorization: Bearer <token>`. Local password sign-in is limited to explicit development/test profiles.
+- Response: HTTP 403 with `{"detail":"Audit visibility policy is not configured."}`. No audit-record success schema is currently exposed.
+- Frontend purpose: audit history only after student/staff visibility is authorized. Current Student, Official, and DUGC views withhold this route.
+- Security note: the route is authenticated but deliberately returns 403 until a reviewed audit visibility/redaction policy is approved.
+- Verification status: isolated integration test confirmed 403 for an assigned Official; no raw audit payload is returned.
 
-```json
-{
-  "application_id": 1,
-  "audit_logs": [
-    {
-      "id": 1,
-      "application_id": 1,
-      "actor_type": "SYSTEM",
-      "actor_id": "SYSTEM",
-      "action": "APPLICATION_CREATED",
-      "details": {},
-      "created_at": "timestamp"
-    }
-  ]
-}
-```
+## 10. Frontend architecture and workflow presentation
 
-- `details` is JSON-encoded when provided; the route returns the stored value as-is.
-- Error responses: `404` if the application does not exist; `500` for unexpected failures.
-- Frontend purpose: chronology and action history where student visibility is appropriate.
-- Verification status: source verified; no live request performed.
+- The current checkout contains the plain HTML/CSS/JavaScript app at `frontend/index.html` and `frontend/app.js`.
+- API calls are centralized in `frontend/services/api.js`; browser navigation is handled in `frontend/app.js`.
+- The backend CORS configuration explicitly allows the three documented local development origins. Other origins require an exact `CORS_ALLOWED_ORIGINS` configuration; this does not provide authentication or authorization.
+- `GET /applications` returns a bounded, authenticated list filtered by Student subject, Official application assignment, or DUGC committee membership/review.
+- The Student view reads scoped status history and human decisions; actor identities are omitted from Student responses. The activity panel remains unavailable because the audit route returns 403 pending a visibility policy.
+- Official status changes and committee assignments, and DUGC decisions, are exposed only when the backend supplies the assigned record and allowed workflow state. Backend tests and the synthetic development browser workflow verified these operations.
+- Committee decision fields are presented as human/committee decisions; AI output remains separately labeled advisory content. Reviewer identifiers are not rendered.
+- M14 Settings displays only the current page-session profile and an existing sign-out action. It does not claim backend profile, password, or security management.
 
-## 10. Frontend architecture inventory
-
-### Current frontend files from the Git baseline
-
-The frontend is a plain HTML, CSS, and JavaScript application. The current working tree contains deletions for the following tracked frontend files, so these files are not currently runnable from the checkout:
-
-- `frontend/index.html`
-- `frontend/app.js`
-- `frontend/services/api.js`
-- `frontend/services/auth.js`
-- `frontend/components/login.js`
-- `frontend/components/dashboard.js`
-- `frontend/components/auth/login-role-selector.js`
-- `frontend/components/auth/student-login.js`
-- `frontend/components/auth/official-login.js`
-- `frontend/components/auth/dugc-login.js`
-- `frontend/components/layout/sidebar.js`
-- `frontend/components/layout/topbar.js`
-- `frontend/pages/login/login-page.js`
-- `frontend/pages/student/student-dashboard.js`
-- `frontend/styles/global.css`
-- `frontend/styles/layout.css`
-- `frontend/styles/dashboard.css`
-- `frontend/styles/applications.css`
-- `frontend/styles/application-details.css`
-- `frontend/styles/assistant.css`
-- `frontend/styles/audit.css`
-- `frontend/styles/committee.css`
-- `frontend/utils/helpers.js`
-
-### Frontend startup
-
-- HTML entry point: `frontend/index.html`
-- JavaScript entry point: `frontend/app.js`
-- Plain-browser startup method: open `frontend/index.html` in a browser using a local static-file server, for example `python -m http.server 5500`
-- Required backend origin: `http://localhost:5500` or `http://127.0.0.1:5500`
-- UI routing: currently implemented by application-selected page state rather than a router package
-- Authentication: client-side role/session state in `frontend/services/auth.js`
-- API access: centralized fetch wrapper in `frontend/services/api.js`
-
-### Frontend status
-
-- Baseline architecture: present in Git history but absent from the current working tree
-- Current implementation status: blocked by missing frontend files
-- Verified working frontend: not available in the current checkout
-- Frontend runtime verification: not performed
-
-## 11. M00 findings
-
-- The backend is implemented as a FastAPI service with a root-mounted router.
-- The API has no authentication or authorization enforcement.
-- The frontend is designed for static browser execution and uses the local `5500` origin.
-- There is no general `GET /applications` endpoint.
-- The backend application can only be imported when database environment variables are configured.
-- The current checkout cannot be started because `DEPARTMENTAI_DB_PASSWORD` is not set.
-- The frontend cannot be run because its tracked files are currently deleted from the working tree.
-- This M00 audit records the actual implementation and current blocker status without modifying backend files or restoring deleted frontend files.
-
-## 12. Verification summary
+## 11. M11–M17 current verification summary
 
 | Area | Status |
 |---|---|
-| Backend route declarations | Verified from source |
-| Request models | Verified from source |
-| Response models | Verified from source |
-| CORS configuration | Verified from source |
-| API prefix | Verified from source |
-| Authentication behavior | Verified from source |
-| Frontend architecture | Verified from Git baseline |
-| Frontend runtime | Blocked by current file deletions |
-| Backend runtime | Blocked by missing `DEPARTMENTAI_DB_PASSWORD` |
-| Real API requests | Not performed |
-| Backend changes | None |
+| Route declarations and request/response contracts | Verified from source and OpenAPI availability |
+| Frontend M11–M13 API helper contracts | Automated mock-server tests passed |
+| Live local application/status/committee reads | Browser-verified HTTP 200 against synthetic `departmentai_dev` records |
+| M14 Settings browser display and sign-out | Settings renders session identity; automated backend tests verify logout revocation |
+| M15 responsive/keyboard spot checks | Widths 376/768/1281 had no horizontal overflow; Tab focus outline was visible |
+| Full responsive/accessibility matrix | Screen-reader and full assistive-technology verification remain |
+| M16 local synthetic role workflows | Browser-verified for Student, Official, and DUGC; institutional database/IdP remain blocked |
+| M09/M10 current-session regressions | Frontend API contract and semantic-search tests passed; live Gemini/API paths not rerun |
+| Backend files edited for local authenticated workflows | Yes; see `END_TO_END_VERIFICATION_REPORT.md` and `git status` |
+| Institutional database | TCP reachability check failed; no institutional query/write was made |
+
+## 12. Authentication and health endpoints
+
+Local password authentication is enabled only when `DEPARTMENTAI_DATABASE_ENV` is explicitly `development` or `test`. In the institutional profile, login fails closed with HTTP 503 until an approved identity provider is configured. All application/business routes require the bearer token; health and OpenAPI/docs routes are public.
+
+### POST /auth/login
+
+- Request:
+
+```json
+{
+  "username": "string",
+  "password": "string"
+}
+```
+
+- Username length: 1–128 characters; password length: 1–256 characters at the transport layer. Stored local passwords must be 12–72 UTF-8 bytes.
+- Success (HTTP 200):
+
+```json
+{
+  "access_token": "opaque bearer token",
+  "token_type": "bearer",
+  "expires_in": 1800,
+  "user": {
+    "username": "synthetic.student",
+    "role": "STUDENT",
+    "subject_identifier": "synthetic subject"
+  }
+}
+```
+
+- Role values are `STUDENT`, `OFFICIAL`, or `DUGC`. The API stores a SHA-256 digest of the token and a bcrypt password hash. The raw token is returned only to the client and expires after 30 minutes.
+- Errors: 401 for an invalid username/password; 503 when local authentication is disabled or the auth database is unavailable.
+- Verification: browser HTTP 200 for synthetic local accounts in all three roles; no institutional login was attempted.
+
+### GET /auth/me
+
+- Requires the bearer token.
+- Returns the current server-verified username, role, and subject identifier; 401 for invalid/expired/revoked token; 503 if local auth/database is unavailable.
+
+### POST /auth/logout
+
+- Requires the bearer token; revokes the current session.
+- Success: HTTP 204 with no response body. Subsequent use of the same token returns 401.
+- Verification: token revocation is covered by the local integration test.
+
+### GET /health/live and GET /health/ready
+
+- `/health/live` returns HTTP 200 `{"status":"ok"}` when the API process is responding.
+- `/health/ready` checks PostgreSQL connectivity and required application/auth tables; returns HTTP 200 `{"status":"ready"}` or generic HTTP 503 `{"detail":"Database readiness check failed."}`. It does not check AI-provider readiness.
+- Verification: local development browser/API check returned HTTP 200 for both; simulated DB-unavailable tests returned HTTP 503 without exposing driver errors.
+
+## 13. Historical M00 findings
+
+- Historical pre-authentication state only: the router previously had no auth or application-list route. This no longer describes the current local development/test implementation.
+- Earlier notes about missing frontend files and failed backend startup describe a prior checkout and are superseded by the current runtime evidence above.

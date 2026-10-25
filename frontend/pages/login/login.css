@@ -128,6 +128,17 @@
         0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
+.login-prototype-notice {
+    margin: 0 0 22px;
+    padding: 12px 14px;
+    border: 1px solid #fcd34d;
+    border-radius: 10px;
+    background: #fffbeb;
+    color: #78350f;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
 
 /* =========================================================
    Role Selection

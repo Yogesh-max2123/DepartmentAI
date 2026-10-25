@@ -257,7 +257,7 @@ export function renderSidebar(activePage = "dashboard", currentUser = null) {
                     <span class="status-dot"></span>
 
                     <span>
-                        System Online
+                        Local development
                     </span>
 
                 </div>

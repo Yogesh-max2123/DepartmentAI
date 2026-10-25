@@ -1,4 +1,77 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const DEFAULT_API_BASE_URL = "http://127.0.0.1:8000";
+const ACCESS_TOKEN_STORAGE_KEY = "departmentai.access-token";
+let accessToken = globalThis.sessionStorage?.getItem(ACCESS_TOKEN_STORAGE_KEY) ?? null;
+
+export function setAccessToken(token) {
+  accessToken = typeof token === "string" && token ? token : null;
+  if (accessToken) {
+    globalThis.sessionStorage?.setItem(ACCESS_TOKEN_STORAGE_KEY, accessToken);
+  } else {
+    globalThis.sessionStorage?.removeItem(ACCESS_TOKEN_STORAGE_KEY);
+  }
+}
+
+export function clearAccessToken() {
+  accessToken = null;
+  globalThis.sessionStorage?.removeItem(ACCESS_TOKEN_STORAGE_KEY);
+}
+
+export function hasAccessToken() {
+  return accessToken !== null;
+}
+
+function resolveApiBaseUrl() {
+  const configuredUrl = globalThis.DEPARTMENTAI_API_BASE_URL;
+
+  if (configuredUrl == null) {
+    return DEFAULT_API_BASE_URL;
+  }
+
+  if (typeof configuredUrl !== "string") {
+    throw new Error(
+      "DEPARTMENTAI_API_BASE_URL must be an absolute HTTP(S) URL.",
+    );
+  }
+
+  const trimmedUrl = configuredUrl.trim();
+  if (!trimmedUrl) {
+    return DEFAULT_API_BASE_URL;
+  }
+
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(trimmedUrl);
+  } catch {
+    throw new Error(
+      "DEPARTMENTAI_API_BASE_URL must be an absolute HTTP(S) URL.",
+    );
+  }
+
+  if (
+    !["http:", "https:"].includes(parsedUrl.protocol) ||
+    parsedUrl.username ||
+    parsedUrl.password ||
+    parsedUrl.search ||
+    parsedUrl.hash
+  ) {
+    throw new Error(
+      "DEPARTMENTAI_API_BASE_URL must be an absolute HTTP(S) URL without credentials, query, or fragment.",
+    );
+  }
+
+  if (
+    globalThis.location?.protocol === "https:" &&
+    parsedUrl.protocol !== "https:"
+  ) {
+    throw new Error(
+      "DEPARTMENTAI_API_BASE_URL must use HTTPS when the frontend uses HTTPS.",
+    );
+  }
+
+  return parsedUrl.href.replace(/\/+$/, "");
+}
+
+const API_BASE_URL = resolveApiBaseUrl();
 
 export class APIError extends Error {
   constructor(message, status, details = null) {
@@ -15,6 +88,10 @@ export async function request(endpoint, options = {}, baseUrl = API_BASE_URL) {
     ...(requestOptions.headers || {}),
   };
 
+  if (accessToken) {
+    headers.Authorization = ["Bearer", accessToken].join(" ");
+  }
+
   if (
     requestOptions.body !== undefined &&
     !(requestOptions.body instanceof FormData)
@@ -27,9 +104,14 @@ export async function request(endpoint, options = {}, baseUrl = API_BASE_URL) {
   let response;
 
   try {
+    requestOptions.signal ??= AbortSignal.timeout(15000);
     response = await fetch(`${baseUrl}${endpoint}`, requestOptions);
-  } catch {
-    throw new APIError("Unable to connect to the backend.", 0, null);
+  } catch (error) {
+    const message =
+      error?.name === "TimeoutError" || error?.name === "AbortError"
+        ? "The backend request timed out."
+        : "Unable to connect to the backend.";
+    throw new APIError(message, 0, null);
   }
 
   const contentType = response.headers.get("content-type") || "";
@@ -48,6 +130,14 @@ export async function request(endpoint, options = {}, baseUrl = API_BASE_URL) {
     const message =
       data?.detail ||
       (typeof data === "string" ? data : "The backend request failed.");
+    if (response.status === 401 && accessToken) {
+      clearAccessToken();
+      if (typeof globalThis.dispatchEvent === "function" && globalThis.CustomEvent) {
+        globalThis.dispatchEvent(
+          new CustomEvent("departmentai:session-expired"),
+        );
+      }
+    }
     throw new APIError(message, response.status, data);
   }
 
@@ -56,6 +146,90 @@ export async function request(endpoint, options = {}, baseUrl = API_BASE_URL) {
   }
 
   return data;
+}
+
+export async function login(username, password, baseUrl = API_BASE_URL) {
+  return request(
+    "/auth/login",
+    {
+      method: "POST",
+      body: JSON.stringify({ username, password }),
+    },
+    baseUrl,
+  );
+}
+
+export async function logout(baseUrl = API_BASE_URL) {
+  return request("/auth/logout", { method: "POST" }, baseUrl);
+}
+
+export async function getAuthenticatedUser(baseUrl = API_BASE_URL) {
+  return request("/auth/me", {}, baseUrl);
+}
+
+export async function listApplications(
+  { limit = 20, offset = 0 } = {},
+  baseUrl = API_BASE_URL,
+) {
+  const query = new URLSearchParams({
+    limit: String(limit),
+    offset: String(offset),
+  });
+  return request(`/applications?${query}`, {}, baseUrl);
+}
+
+export async function downloadApplicationDocument(
+  applicationId,
+  documentId,
+  baseUrl = API_BASE_URL,
+) {
+  const headers = accessToken
+    ? { Authorization: ["Bearer", accessToken].join(" ") }
+    : {};
+  let response;
+  try {
+    response = await fetch(
+      `${baseUrl}/applications/${applicationId}/documents/${documentId}/download`,
+      {
+        headers,
+        signal: AbortSignal.timeout(15000),
+      },
+    );
+  } catch (error) {
+    const message =
+      error?.name === "TimeoutError" || error?.name === "AbortError"
+        ? "The backend request timed out."
+        : "Unable to connect to the backend.";
+    throw new APIError(message, 0, null);
+  }
+  if (!response.ok) {
+    let details = null;
+    try {
+      details = await response.json();
+    } catch {
+      details = null;
+    }
+    if (response.status === 401 && accessToken) {
+      clearAccessToken();
+      if (typeof globalThis.dispatchEvent === "function" && globalThis.CustomEvent) {
+        globalThis.dispatchEvent(
+          new CustomEvent("departmentai:session-expired"),
+        );
+      }
+    }
+    throw new APIError(
+      details?.detail || "Unable to download this document.",
+      response.status,
+      details,
+    );
+  }
+  return {
+    blob: await response.blob(),
+    fileName:
+      response.headers
+        .get("content-disposition")
+        ?.match(/filename="?([^";]+)"?/i)?.[1] || "document",
+  };
 }
 
 export async function askQuestion(
@@ -83,6 +257,39 @@ export async function createApplication(data, baseUrl = API_BASE_URL) {
       method: "POST",
       body: JSON.stringify(data),
     },
+    baseUrl,
+  );
+}
+
+export async function submitApplication(
+  applicationId,
+  baseUrl = API_BASE_URL,
+) {
+  return request(
+    `/applications/${applicationId}/submit`,
+    { method: "POST" },
+    baseUrl,
+  );
+}
+
+export async function getUnassignedOfficialApplications(
+  { limit = 20, offset = 0 } = {},
+  baseUrl = API_BASE_URL,
+) {
+  const query = new URLSearchParams({
+    limit: String(limit),
+    offset: String(offset),
+  });
+  return request(`/official/applications/unassigned?${query}`, {}, baseUrl);
+}
+
+export async function claimOfficialApplication(
+  applicationId,
+  baseUrl = API_BASE_URL,
+) {
+  return request(
+    `/applications/${applicationId}/claim`,
+    { method: "POST" },
     baseUrl,
   );
 }

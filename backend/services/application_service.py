@@ -357,6 +357,91 @@ def update_application_status(
         conn.close()
 
 
+def submit_application(application_id: int, submitted_by: str) -> dict:
+    """Submit an owned draft for the Official shared queue."""
+    conn = get_connection()
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT status
+                FROM applications
+                WHERE id = %s
+                FOR UPDATE;
+                """,
+                (application_id,),
+            )
+            application = cursor.fetchone()
+            if application is None:
+                raise LookupError(
+                    f"Application with id {application_id} does not exist."
+                )
+
+            current_status = application[0]
+            if "SUBMITTED" not in ALLOWED_TRANSITIONS.get(
+                current_status, set()
+            ):
+                raise ValueError(
+                    f"Application cannot be submitted from status "
+                    f"'{current_status}'."
+                )
+
+            cursor.execute(
+                """
+                UPDATE applications
+                SET status = 'SUBMITTED',
+                    submitted_at = CURRENT_TIMESTAMP,
+                    updated_at = CURRENT_TIMESTAMP
+                WHERE id = %s
+                RETURNING submitted_at;
+                """,
+                (application_id,),
+            )
+            submitted_at = cursor.fetchone()[0]
+            cursor.execute(
+                """
+                INSERT INTO application_status_history (
+                    application_id, old_status, new_status, changed_by, reason
+                )
+                VALUES (%s, %s, 'SUBMITTED', %s, %s)
+                RETURNING id;
+                """,
+                (
+                    application_id,
+                    current_status,
+                    submitted_by,
+                    "Submitted by student for Official review.",
+                ),
+            )
+            history_id = cursor.fetchone()[0]
+            cursor.execute(
+                """
+                INSERT INTO audit_logs (
+                    application_id, actor_type, actor_id, action, details
+                )
+                VALUES (%s, 'STUDENT', %s, 'APPLICATION_SUBMITTED', %s);
+                """,
+                (
+                    application_id,
+                    submitted_by,
+                    '{"new_status":"SUBMITTED"}',
+                ),
+            )
+        conn.commit()
+        return {
+            "application_id": application_id,
+            "old_status": current_status,
+            "new_status": "SUBMITTED",
+            "submitted_at": submitted_at,
+            "history_id": history_id,
+        }
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
+
+
 def get_application_status_history(application_id):
     """
     Retrieve the complete status history for an application.

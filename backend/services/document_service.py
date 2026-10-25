@@ -59,7 +59,8 @@ def upload_document(
         # --------------------------------------------------------
         # 2. Validate file extension
         # --------------------------------------------------------
-        extension = Path(file_name).suffix.lower()
+        normalized_file_name = file_name.replace("\\", "/")
+        extension = Path(normalized_file_name).suffix.lower()
 
         if extension not in ALLOWED_EXTENSIONS:
             raise ValueError(
@@ -82,7 +83,7 @@ def upload_document(
         # --------------------------------------------------------
         # 4. Prevent path traversal
         # --------------------------------------------------------
-        safe_file_name = Path(file_name).name
+        safe_file_name = Path(normalized_file_name).name
 
         if not safe_file_name:
             raise ValueError("Invalid file name.")
@@ -201,7 +202,6 @@ def get_application_documents(application_id):
                     "application_id": document[1],
                     "file_name": document[2],
                     "document_type": document[3],
-                    "file_path": document[4],
                     "file_size": document[5],
                     "mime_type": document[6],
                     "upload_status": document[7],
@@ -210,5 +210,40 @@ def get_application_documents(application_id):
                 for document in documents
             ]
 
+    finally:
+        conn.close()
+
+
+def get_document_download(application_id: int, document_id: int):
+    conn = get_connection()
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT d.file_path, d.file_name, d.mime_type, a.application_number
+                FROM application_documents d
+                JOIN applications a ON a.id = d.application_id
+                WHERE d.id = %s AND d.application_id = %s;
+                """,
+                (document_id, application_id),
+            )
+            row = cursor.fetchone()
+        if row is None:
+            return None
+
+        application_directory = (
+            BASE_DOCUMENTS_DIR / row[3]
+        ).resolve()
+        file_path = Path(row[0]).resolve(strict=True)
+        if (
+            file_path.parent != application_directory
+            or not file_path.is_file()
+        ):
+            raise ValueError("Stored document path is invalid.")
+        return {
+            "file_path": file_path,
+            "file_name": row[1],
+            "mime_type": row[2],
+        }
     finally:
         conn.close()

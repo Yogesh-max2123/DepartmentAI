@@ -535,7 +535,7 @@ Only display confirmed backend states.
 
 Create clean sections for:
 
-- Retrieved Ordinance Context
+- Ordinance retrieval remains available through the API, but its context panel is intentionally omitted from Student, Official, and DUGC application-detail views.
 - Requirements
 - Eligibility Analysis
 - AI-Identified Deficiencies
@@ -612,9 +612,29 @@ Determine actual request and response schema.
 - no fake conversation
 - assistant does not imply autonomous authority
 
+### Verified implementation status
+
+- Frontend page and interaction flow have been implemented in `frontend/app.js` using the existing backend `/ask` contract.
+- Request format: `{ question, conversation_history }` as defined by `backend/api/routes.py` and `frontend/services/api.js`.
+- Response format: `{ answer, sources }` with safe rendering for question/answer text and source metadata.
+- Empty input, in-flight loading, request error states, clear-conversation behavior, and safe text rendering are handled in the UI.
+- A JavaScript runtime bug (`escapeHTML is not defined`) was corrected during verification.
+- Browser automation validation was performed against the local frontend using a controlled `/ask` response, confirming navigation, login flow, empty-input validation, error rendering, successful answer rendering, and source display.
+- Automated frontend checks passed, and the backend is reachable on the expected local URL.
+- The initial live `/ask` smoke test returned HTTP 500 with `{"detail":"connection already closed"}` because semantic retrieval reused a module-level PostgreSQL connection. The retrieval code was then fixed to acquire and close a connection per request; `backend/tests/test_semantic_search.py` passed with 2 tests.
+- A subsequent live `/ask` smoke test was reported as HTTP 200 with a real answer and retrieved sources. This is recorded prior-session evidence and was not rerun during this documentation reconciliation.
+- Frontend syntax (`node --check frontend/app.js`) and API contract tests (`node frontend/services/api.test.mjs`) passed.
+- Final status: `PASS`. The earlier live failure is resolved by the connection-lifecycle fix; the successful live result is recorded evidence, not a test rerun in this update.
+
 ---
 
 # M11 — Status & Application Lifecycle
+
+### Current implementation status — PARTIAL / LIVE VERIFICATION BLOCKED
+
+- The student application-details view now displays the current backend-sourced status and chronological status history.
+- Student-facing status changes and processing controls are intentionally absent; status mutation and processing are not student actions.
+- API helper contracts are covered by the frontend mock-server test. Live database verification timed out.
 
 ### APIs where supported
 
@@ -657,6 +677,13 @@ Frontend must never bypass backend status rules.
 
 # M12 — Committee / Human Decision Display
 
+### Current implementation status — PARTIAL / LIVE VERIFICATION BLOCKED
+
+- The student application-details view displays read-only committee review state, human decision, decision reason, and dates.
+- Reviewer identifiers are omitted. AI analysis remains separately labeled advisory output.
+- No committee assignment or decision-write controls are exposed in the student workspace.
+- API helper contracts are covered by the frontend mock-server test. Live database verification timed out.
+
 ### APIs where relevant
 
 - `POST /applications/{application_id}/committee`
@@ -679,6 +706,12 @@ Never make AI output look official.
 
 # M13 — Audit / History Presentation
 
+### Current implementation status — PARTIAL / LIVE VERIFICATION BLOCKED
+
+- A chronological activity summary renders only recognized student-facing action labels and timestamps; it omits actor IDs and raw `details`.
+- The backend route still returns the unfiltered audit response and has no authentication/authorization. UI filtering is not a security boundary; backend authorization remains a prerequisite for production student access.
+- API helper contract is covered by the frontend mock-server test. Live database verification timed out.
+
 ### API
 
 `GET /applications/{application_id}/audit-logs`
@@ -699,6 +732,12 @@ Do not expose internal/security-sensitive details that the backend does not inte
 ---
 
 # M14 — Settings
+
+### Current implementation status — IMPLEMENTED / BROWSER CHECKED
+
+- Settings shows the available page-session profile and the existing sign-out action.
+- The page explicitly states that backend account, password, and security management are not available.
+- Browser navigation to Settings and sign-out were exercised. Mobile navigation was also checked after fixing the menu to close when a page is selected.
 
 ### Goal
 
@@ -724,6 +763,12 @@ Do not invent password/security management.
 ---
 
 # M15 — Full UX / Responsive / Accessibility Polish
+
+### Current implementation status — PARTIAL
+
+- Added responsive styles for workflow and settings panels, a reduced-motion preference, explicit mobile-menu ARIA state, and mobile-menu close behavior after navigation.
+- Escaped the topbar profile name/role before inserting them into markup and replaced the unsupported “System Online” sidebar claim with “Local preview”.
+- A mobile viewport check measured equal document and viewport widths and verified that selecting Settings closes the menu. The full page-by-page desktop/tablet/mobile and assistive-technology matrix remains outstanding.
 
 ### Review
 
@@ -756,6 +801,13 @@ All pages look like one coherent institutional product.
 ---
 
 # M16 — End-to-End API Verification
+
+### Current implementation status — BLOCKED
+
+- Uvicorn starts and `/docs` plus `/openapi.json` return HTTP 200.
+- Live read-only application/status-history/committee/audit requests and a read-only database query timed out because PostgreSQL was unreachable.
+- Mock-server API helper tests pass. A complete browser-to-live-database flow, persistence verification, live Gemini path, and write-path verification are not claimed.
+- Confirm database state before running further writes; see `docs/M11_M17_MANUAL_TESTING_GUIDE.md`.
 
 ### Goal
 
@@ -801,6 +853,13 @@ Real requests are visible and work.
 ---
 
 # M17 — Final QA & Zero-Backend-Change Audit
+
+### Current implementation status — PARTIAL
+
+- No backend file was edited in this implementation.
+- The worktree already contained modified backend files and an untracked `backend/tests/` directory before this implementation; the repository therefore does not meet the literal “zero modified backend files” worktree check.
+- Frontend syntax, API contract tests, backend retrieval tests, and guardrail tests passed. The full test suite and database audit remain blocked by PostgreSQL connectivity.
+- A create request during browser-mock setup remained pending without a confirmed response. A subsequent read-only query for the test identifier timed out, so potential persistence is unresolved; do not perform blind cleanup.
 
 ### Run
 
@@ -1057,4 +1116,3 @@ git log --oneline
 And confirm:
 
 `backend/ = untouched`
-

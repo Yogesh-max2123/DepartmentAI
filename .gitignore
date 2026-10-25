@@ -1,5 +1,6 @@
 # Virtual environment
 venv/
+.venv/
 
 # Python cache
 __pycache__/
@@ -10,6 +11,8 @@ __pycache__/
 .env
 .env.*
 !.env.example
+!.env.development.example
+!.env.test.example
 
 # IDE
 .vscode/
@@ -38,6 +41,11 @@ htmlcov/
 # Module II generated/debug files
 module2/ingestion/debug_*.html
 
-# Python cache
-__pycache__/
-*.py[cod]
+# Private application documents
+documents/applications/
+
+# Local model archive
+departmentai-model.zip
+
+# Local patch backup
+UNCOMMITTED_FRONTEND_CHANGES.patch

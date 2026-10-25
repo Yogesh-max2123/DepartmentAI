@@ -2,6 +2,7 @@ from backend.retrieval.semantic_search import semantic_search
 from backend.llm.gemini_client import generate_answer
 from backend.rag.conversation_manager import resolve_follow_up
 from backend.rag.guardrails import validate_question
+from backend.rag.query_expansion import expand_ordinance_query
 
 
 def build_context(results):
@@ -76,7 +77,8 @@ def answer_question(question, conversation_history=None):
     # ---------------------------------------------------------
     # 5. EXISTING RAG RETRIEVAL — unchanged
     # ---------------------------------------------------------
-    results = semantic_search(search_query)
+    retrieval_query = expand_ordinance_query(search_query)
+    results = semantic_search(retrieval_query)
 
     # ---------------------------------------------------------
     # 6. EXISTING ordinance context construction — unchanged

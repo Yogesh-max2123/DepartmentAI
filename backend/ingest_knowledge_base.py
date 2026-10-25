@@ -5,6 +5,7 @@ from pathlib import Path
 import psycopg2
 from psycopg2.extras import Json
 
+from backend.database.connection import get_database_settings
 
 # ============================================================
 # Configuration
@@ -18,6 +19,14 @@ CHUNKS_FILE = (
     / "ug"
     / "processed"
     / "ug_ordinance_chunks.json"
+)
+
+STRUCTURE_FILE = (
+    PROJECT_ROOT
+    / "documents"
+    / "ug"
+    / "processed"
+    / "ug_ordinance_structure.json"
 )
 
 EMBEDDINGS_FILE = (
@@ -54,6 +63,97 @@ def validate_files():
             f"Embeddings file not found:\n{EMBEDDINGS_FILE}"
         )
 
+    if not STRUCTURE_FILE.exists():
+        raise FileNotFoundError(
+            f"Document structure file not found:\n{STRUCTURE_FILE}"
+        )
+
+
+def ensure_document_sections(cursor, source_file):
+    """Create missing source metadata without overwriting existing records."""
+    structure_data = json.loads(STRUCTURE_FILE.read_text(encoding="utf-8"))
+    document = structure_data.get("document", {})
+    if document.get("source_file") != source_file:
+        raise ValueError(
+            "The source filename in the chunk data does not match "
+            "the document structure."
+        )
+
+    sections = structure_data.get("sections")
+    if not isinstance(sections, list) or not sections:
+        raise ValueError("The document structure contains no sections.")
+
+    section_titles = {}
+    for section in sections:
+        number = str(section.get("number", "")).strip()
+        title = str(section.get("title", "")).strip()
+        if not number or not title or number in section_titles:
+            raise ValueError("The document structure has invalid sections.")
+        section_titles[number] = title
+
+    cursor.execute(
+        "SELECT id FROM documents WHERE file_name = %s;",
+        (source_file,),
+    )
+    document_rows = cursor.fetchall()
+    if len(document_rows) > 1:
+        raise RuntimeError(
+            f"Multiple document records exist for {source_file!r}."
+        )
+    if document_rows:
+        document_id = document_rows[0][0]
+    else:
+        cursor.execute(
+            """
+            INSERT INTO documents (file_name)
+            VALUES (%s)
+            RETURNING id;
+            """,
+            (source_file,),
+        )
+        document_id = cursor.fetchone()[0]
+
+    cursor.execute(
+        """
+        SELECT section_number, title
+        FROM sections
+        WHERE document_id = %s;
+        """,
+        (document_id,),
+    )
+    existing_sections = cursor.fetchall()
+    existing_titles = {}
+    for number, title in existing_sections:
+        normalized_number = str(number)
+        if normalized_number in existing_titles:
+            raise RuntimeError(
+                f"Duplicate section {normalized_number!r} exists "
+                f"for {source_file!r}."
+            )
+        existing_titles[normalized_number] = title
+
+    mismatched_sections = {
+        number: title
+        for number, title in existing_titles.items()
+        if section_titles.get(number) != title
+    }
+    if mismatched_sections:
+        raise RuntimeError(
+            "Existing document sections differ from the source structure; "
+            "no records were changed."
+        )
+
+    for number, title in section_titles.items():
+        if number not in existing_titles:
+            cursor.execute(
+                """
+                INSERT INTO sections (document_id, section_number, title)
+                VALUES (%s, %s, %s);
+                """,
+                (document_id, number, title),
+            )
+
+    return document_id
 
 # ============================================================
 # Load JSON data
@@ -160,6 +260,18 @@ def load_json_files():
 
 def connect_database():
     """Connect to the DepartmentAI PostgreSQL database."""
+
+    settings = get_database_settings()
+    if settings.environment != "development":
+        raise RuntimeError(
+            "Knowledge-base ingestion is restricted to the explicit "
+            "development database profile."
+        )
+    DB_NAME = settings.database
+    DB_USER = settings.user
+    DB_HOST = settings.host
+    DB_PORT = settings.port
+    DB_PASSWORD = settings.password
 
     if not DB_PASSWORD:
         raise RuntimeError(
@@ -281,34 +393,17 @@ def ingest_knowledge_base():
         cursor = connection.cursor()
 
         # ----------------------------------------------------
-        # 5. Find the UG Ordinance document
+        # 5. Ensure the source document and sections are indexed
         # ----------------------------------------------------
 
-        cursor.execute(
-            """
-            SELECT id
-            FROM documents
-            WHERE file_name = %s
-            ORDER BY id
-            LIMIT 1;
-            """,
-            ("UG Ordinance.pdf",),
-        )
-
-        document_row = cursor.fetchone()
-
-        if document_row is None:
-            raise RuntimeError(
-                "UG Ordinance document was not found "
-                "in the documents table."
-            )
-
-        document_id = document_row[0]
+        chunks_data = json.loads(CHUNKS_FILE.read_text(encoding="utf-8"))
+        source_file = chunks_data["document"]["source_file"]
+        document_id = ensure_document_sections(cursor, source_file)
 
         print(f"Document ID: {document_id}")
 
         # ----------------------------------------------------
-        # 6. Load sections
+        # 6. Load section references
         # ----------------------------------------------------
 
         cursor.execute(

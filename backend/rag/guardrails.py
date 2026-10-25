@@ -45,6 +45,9 @@ ACADEMIC_KEYWORDS = {
     "program",
     "curriculum",
     "graduation",
+    "pace of study",
+    "paces of study",
+    "semester load",
 }
 
 

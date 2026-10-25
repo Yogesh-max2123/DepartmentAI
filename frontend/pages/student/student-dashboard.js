@@ -37,9 +37,7 @@ export function renderStudentDashboard(currentUser = null) {
           <span class="section-kicker">Overview</span>
           <h2 id="application-overview-title">Application overview</h2>
         </div>
-        <p>
-          Application records and status counts are not available here because the current service does not provide a student application list.
-        </p>
+        <p>Your application totals and recent records are loaded from your authenticated account.</p>
       </section>
 
       <div class="dashboard-content-grid">
@@ -54,15 +52,8 @@ export function renderStudentDashboard(currentUser = null) {
             </button>
           </div>
 
-          <div class="dashboard-empty-state">
-            <div class="empty-state-icon" aria-hidden="true">▣</div>
-            <h3>Application records are unavailable</h3>
-            <p>
-              No records are shown because a student application-list service is not currently available. This does not indicate whether you have existing applications.
-            </p>
-            <button type="button" class="primary-button" data-page="create-application">
-              Create Application
-            </button>
+          <div id="student-recent-applications" aria-live="polite" aria-busy="true">
+            <p role="status">Loading your applications…</p>
           </div>
         </section>
 

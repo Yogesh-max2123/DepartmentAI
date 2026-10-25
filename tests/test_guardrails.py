@@ -46,6 +46,15 @@ def test_valid_deficiency_question():
     assert result["reason"] == ""
 
 
+def test_valid_pace_of_study_question():
+    result = validate_question(
+        "What are the normal and slow paces of study?"
+    )
+
+    assert result["allowed"] is True
+    assert result["reason"] == ""
+
+
 def test_official_decision_request():
     result = validate_question(
         "Should my application be approved?"
@@ -95,6 +104,7 @@ if __name__ == "__main__":
     test_valid_broad_academic_question()
     test_valid_admission_question()
     test_valid_deficiency_question()
+    test_valid_pace_of_study_question()
     test_official_decision_request()
     test_out_of_scope_question()
     test_weather_question()

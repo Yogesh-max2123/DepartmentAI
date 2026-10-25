@@ -540,46 +540,18 @@
   margin-top: 12px;
 }
 
-.ordinance-context-query {
-  margin: 0 0 12px;
-  color: var(--text-muted);
-  font-size: 0.72rem;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.ordinance-context-results,
 .academic-analysis-results {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.ordinance-context-item,
 .academic-analysis-item {
   min-width: 0;
   padding: 15px 17px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-}
-
-.ordinance-context-reference {
-  margin: 0;
-  color: var(--primary-dark);
-  font-size: 0.73rem;
-  font-weight: 600;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.ordinance-context-text {
-  margin: 9px 0 0;
-  color: var(--text-primary);
-  font-size: 0.8rem;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-  white-space: pre-wrap;
 }
 
 .academic-review-summary {
@@ -627,8 +599,171 @@
     justify-content: center;
   }
 
-  .ordinance-context-item,
   .academic-analysis-item {
     padding: 13px;
+  }
+}
+
+/* ============================================================
+   M09 — AI-Assisted Analysis Panel
+   ============================================================ */
+
+.ai-analysis-advisory {
+  margin: 14px 0 10px;
+  padding: 11px 14px;
+  background: var(--warning-light);
+  border-left: 3px solid var(--warning);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.ai-analysis-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+}
+
+.ai-analysis-meta-item {
+  min-width: 0;
+}
+
+.ai-analysis-meta-item dt {
+  color: var(--text-muted);
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.ai-analysis-meta-item dd {
+  margin: 2px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  overflow-wrap: anywhere;
+}
+
+.ai-analysis-text {
+  margin: 0;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.79rem;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+@media (max-width: 700px) {
+  .ai-analysis-meta {
+    gap: 8px 16px;
+  }
+
+  .ai-analysis-text {
+    padding: 12px;
+    max-height: 380px;
+  }
+}
+
+.application-workflow {
+  min-width: 0;
+  margin-top: 30px;
+  padding-top: 23px;
+  border-top: 1px solid var(--border);
+}
+
+.application-workflow-heading {
+  margin-bottom: 14px;
+}
+
+.application-workflow-heading h2 {
+  margin: 5px 0 0;
+  color: var(--text-primary);
+  font-size: 1.12rem;
+}
+
+.application-workflow-heading p {
+  margin: 7px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.79rem;
+  line-height: 1.55;
+}
+
+.application-workflow-panel {
+  min-width: 0;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.application-workflow-loading,
+.application-workflow-message p,
+.application-workflow-item p {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.application-workflow-loading {
+  margin: 0;
+}
+
+.application-workflow-message h3,
+.application-workflow-item h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+}
+
+.application-workflow-message p,
+.application-workflow-item p {
+  margin: 6px 0 0;
+}
+
+.application-workflow-message .secondary-button {
+  margin-top: 12px;
+}
+
+.application-workflow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.application-workflow-item {
+  min-width: 0;
+  padding: 14px 15px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+}
+
+.application-workflow-item .application-workflow-reason {
+  padding-top: 8px;
+  border-top: 1px solid var(--border-light);
+  white-space: pre-wrap;
+}
+
+.application-committee-decision {
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .application-workflow-panel {
+    padding: 14px;
   }
 }

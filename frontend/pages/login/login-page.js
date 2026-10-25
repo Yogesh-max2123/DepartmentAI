@@ -35,6 +35,11 @@ export function renderLoginPage() {
 
                 </div>
 
+                <p class="login-prototype-notice" role="note">
+                    Development/test accounts only. Local password sign-in is disabled for the institutional profile.
+                    Do not enter institutional credentials. Workspace access is determined by the server, not by this selector.
+                </p>
+                <p id="login-global-message" class="login-error" role="status" hidden></p>
 
                 <div
                     id="login-form-container"

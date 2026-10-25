@@ -7,20 +7,267 @@ const {
   APIError,
   askQuestion,
   createApplication,
+  submitApplication,
+  getUnassignedOfficialApplications,
+  claimOfficialApplication,
+  getAuditLogs,
+  getCommitteeReviews,
+  getDeficiencies,
+  getEligibility,
+  getOrdinanceRetrieval,
+  getStatusHistory,
   extractApplicationDocument,
+  generateApplicationAnalysis,
   getApplicationDocuments,
+  processApplication,
   classifyApplicationDocument,
   uploadApplicationDocument,
+  updateApplicationStatus,
+  assignApplicationToCommittee,
+  updateCommitteeDecision,
   validateApplicationDocument,
+  API_BASE_URL,
+  getApplication,
 } = await import(`file://${process.cwd()}/frontend/services/api.js`);
+
+assert.equal(API_BASE_URL, "http://127.0.0.1:8000");
+
+await assert.rejects(
+  () => getApplication(1, "http://127.0.0.1:1"),
+  (error) =>
+    error instanceof APIError &&
+    error.status === 0 &&
+    error.message === "Unable to connect to the backend.",
+);
+
+globalThis.DEPARTMENTAI_API_BASE_URL = "https://api.example.test/";
+const configuredApi = await import(
+  `file://${process.cwd()}/frontend/services/api.js?configured`
+);
+assert.equal(configuredApi.API_BASE_URL, "https://api.example.test");
+
+globalThis.DEPARTMENTAI_API_BASE_URL = "javascript:alert(1)";
+await assert.rejects(
+  () => import(`file://${process.cwd()}/frontend/services/api.js?invalid`),
+  /absolute HTTP\(S\) URL/,
+);
+
+const originalLocation = globalThis.location;
+globalThis.location = { protocol: "https:" };
+globalThis.DEPARTMENTAI_API_BASE_URL = "http://api.example.test";
+await assert.rejects(
+  () => import(`file://${process.cwd()}/frontend/services/api.js?mixed-content`),
+  /must use HTTPS when the frontend uses HTTPS/,
+);
+if (originalLocation === undefined) {
+  delete globalThis.location;
+} else {
+  globalThis.location = originalLocation;
+}
+delete globalThis.DEPARTMENTAI_API_BASE_URL;
 
 let applicationRequest;
 let documentUploadRequest;
+let aiAnalysisRequest;
 const documentApiRequests = [];
+const workflowApiRequests = [];
 
 const startServer = () =>
   new Promise((resolve) => {
     const server = createServer((req, res) => {
+      const replyWithRequest = (responseBody) => {
+        let requestBody = "";
+        req.on("data", (chunk) => {
+          requestBody += chunk;
+        });
+        req.on("end", () => {
+          workflowApiRequests.push({
+            method: req.method,
+            url: req.url,
+            body: requestBody ? JSON.parse(requestBody) : null,
+          });
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(JSON.stringify(responseBody));
+        });
+      };
+
+      if (req.url === "/applications/2" && req.method === "GET") {
+        replyWithRequest({
+          id: 2,
+          application_number: "APP-2026-00002",
+          applicant_identifier: "STUDENT-MOCK",
+          application_type: "Academic Review",
+          title: null,
+          description: null,
+          status: "DRAFT",
+          submitted_at: null,
+          created_at: "2026-01-01T00:00:00Z",
+          updated_at: "2026-01-01T00:00:00Z",
+        });
+        return;
+      }
+
+      if (
+        req.url === "/official/applications/unassigned?limit=20&offset=0" &&
+        req.method === "GET"
+      ) {
+        replyWithRequest({
+          items: [
+            {
+              id: 2,
+              application_number: "APP-2026-00002",
+              status: "SUBMITTED",
+            },
+          ],
+          limit: 20,
+          offset: 0,
+        });
+        return;
+      }
+
+      if (
+        req.url === "/applications/2/submit" &&
+        req.method === "POST"
+      ) {
+        replyWithRequest({
+          application_id: 2,
+          old_status: "DRAFT",
+          new_status: "SUBMITTED",
+          history_id: 2,
+        });
+        return;
+      }
+
+      if (
+        req.url === "/applications/2/claim" &&
+        req.method === "POST"
+      ) {
+        replyWithRequest({
+          application_id: 2,
+          official_user_id: 4,
+          assigned_at: "2026-01-02T00:00:00Z",
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/ordinance-retrieval") {
+        replyWithRequest({ application_id: 2, query: "Academic Review", results: [] });
+        return;
+      }
+
+      if (req.url === "/applications/2/eligibility") {
+        replyWithRequest({
+          application_id: 2,
+          requirements_analyzed: 0,
+          results: [],
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/deficiencies") {
+        replyWithRequest({
+          application_id: 2,
+          deficiencies_detected: 0,
+          deficiencies: [],
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/status-history") {
+        replyWithRequest({
+          application_id: 2,
+          history: [
+            {
+              id: 1,
+              old_status: null,
+              new_status: "DRAFT",
+              changed_by: "SYSTEM",
+              reason: "Application created.",
+              created_at: "2026-01-01T00:00:00Z",
+            },
+          ],
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/status" && req.method === "PATCH") {
+        replyWithRequest({
+          application_id: 2,
+          old_status: "DRAFT",
+          new_status: "SUBMITTED",
+          changed_by: "STAFF-01",
+          reason: "Submitted for review.",
+          history_id: 2,
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/process" && req.method === "POST") {
+        replyWithRequest({ application_id: 2, status: "PROCESSING" });
+        return;
+      }
+
+      if (req.url === "/applications/2/committee" && req.method === "POST") {
+        replyWithRequest({
+          id: 3,
+          application_id: 2,
+          committee_type: "DUGC",
+          review_status: "PENDING",
+          assigned_at: "2026-01-02T00:00:00Z",
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/committee-reviews") {
+        replyWithRequest({
+          application_id: 2,
+          reviews: [
+            {
+              id: 3,
+              application_id: 2,
+              committee_type: "DUGC",
+              assigned_at: "2026-01-02T00:00:00Z",
+              review_status: "COMPLETED",
+              decision: "APPROVED",
+              decision_reason: "Requirements met.",
+              decided_by: "COMMITTEE-01",
+              decided_at: "2026-01-03T00:00:00Z",
+            },
+          ],
+        });
+        return;
+      }
+
+      if (
+        req.url === "/committee-reviews/3/decision" &&
+        req.method === "PATCH"
+      ) {
+        replyWithRequest({
+          review: { id: 3, decision: "APPROVED" },
+          application_status: "APPROVED",
+          status_history_id: 4,
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/audit-logs") {
+        replyWithRequest({
+          application_id: 2,
+          audit_logs: [
+            {
+              id: 1,
+              application_id: 2,
+              actor_type: "SYSTEM",
+              actor_id: "SYSTEM",
+              action: "APPLICATION_CREATED",
+              details: { application_number: "APP-2026-00002" },
+              created_at: "2026-01-01T00:00:00Z",
+            },
+          ],
+        });
+        return;
+      }
+
       if (req.url === "/json") {
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify({ ok: true }));
@@ -155,6 +402,35 @@ const startServer = () =>
         return;
       }
 
+      if (req.url === "/applications/2/ai-analysis" && req.method === "POST") {
+        let bodyLength = 0;
+        req.on("data", (chunk) => { bodyLength += chunk.length; });
+        req.on("end", () => {
+          aiAnalysisRequest = {
+            method: req.method,
+            url: req.url,
+            bodyLength,
+          };
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(
+            JSON.stringify({
+              analysis_id: 1,
+              application_id: 2,
+              analysis_type: "APPLICATION_ANALYSIS",
+              documents_analyzed: 1,
+              requirements_analyzed: 0,
+              eligibility_results: 0,
+              deficiencies: 0,
+              ordinance_results: 5,
+              analysis: "APPLICATION SUMMARY:\nTest summary.",
+              model: "gemini-3.5-flash-lite",
+              created_at: "2026-10-17T00:00:00",
+            }),
+          );
+        });
+        return;
+      }
+
       if (req.url === "/network-error") {
         req.socket.destroy();
         return;
@@ -236,6 +512,29 @@ try {
       description: null,
     },
   });
+  const applicationRecord = await getApplication(2, baseUrl);
+  assert.equal(applicationRecord.application_number, "APP-2026-00002");
+  assert.equal(applicationRecord.status, "DRAFT");
+  const submittedApplication = await submitApplication(2, baseUrl);
+  assert.equal(submittedApplication.new_status, "SUBMITTED");
+  const unassignedApplications = await getUnassignedOfficialApplications(
+    {},
+    baseUrl,
+  );
+  assert.equal(unassignedApplications.items[0].status, "SUBMITTED");
+  const claimedApplication = await claimOfficialApplication(2, baseUrl);
+  assert.equal(claimedApplication.application_id, 2);
+  assert.deepEqual(
+    workflowApiRequests.slice(-3).map(({ method, url }) => ({ method, url })),
+    [
+      { method: "POST", url: "/applications/2/submit" },
+      {
+        method: "GET",
+        url: "/official/applications/unassigned?limit=20&offset=0",
+      },
+      { method: "POST", url: "/applications/2/claim" },
+    ],
+  );
 
   const uploadForm = new FormData();
   uploadForm.append(
@@ -280,8 +579,154 @@ try {
     { method: "POST", url: "/applications/2/documents/7/classify" },
   ]);
 
+  const ordinance = await getOrdinanceRetrieval(2, baseUrl);
+  assert.equal(ordinance.application_id, 2);
+  assert.deepEqual(ordinance.results, []);
+  const eligibility = await getEligibility(2, baseUrl);
+  assert.equal(eligibility.application_id, 2);
+  assert.deepEqual(eligibility.results, []);
+  const deficiencies = await getDeficiencies(2, baseUrl);
+  assert.equal(deficiencies.application_id, 2);
+  assert.deepEqual(deficiencies.deficiencies, []);
+
+  // M09 — generateApplicationAnalysis
+  const analysisResponse = await generateApplicationAnalysis(2, baseUrl);
+  assert.equal(aiAnalysisRequest.method, "POST");
+  assert.equal(aiAnalysisRequest.url, "/applications/2/ai-analysis");
+  assert.equal(aiAnalysisRequest.bodyLength, 0, "POST body must be empty");
+  assert.equal(analysisResponse.analysis_id, 1);
+  assert.equal(analysisResponse.application_id, 2);
+  assert.equal(analysisResponse.analysis_type, "APPLICATION_ANALYSIS");
+  assert.equal(analysisResponse.model, "gemini-3.5-flash-lite");
+  assert.equal(typeof analysisResponse.analysis, "string");
+  assert.equal(analysisResponse.documents_analyzed, 1);
+  assert.equal(analysisResponse.ordinance_results, 5);
+
+  const statusHistory = await getStatusHistory(2, baseUrl);
+  assert.equal(statusHistory.application_id, 2);
+  assert.equal(statusHistory.history[0].new_status, "DRAFT");
+
+  const statusUpdate = await updateApplicationStatus(
+    2,
+    {
+      new_status: "SUBMITTED",
+      changed_by: "STAFF-01",
+      reason: "Submitted for review.",
+    },
+    baseUrl,
+  );
+  assert.equal(statusUpdate.new_status, "SUBMITTED");
+
+  const processResponse = await processApplication(2, baseUrl);
+  assert.equal(processResponse.status, "PROCESSING");
+
+  const assignment = await assignApplicationToCommittee(
+    2,
+    { committee_type: "DUGC" },
+    baseUrl,
+  );
+  assert.equal(assignment.committee_type, "DUGC");
+
+  const reviews = await getCommitteeReviews(2, baseUrl);
+  assert.equal(reviews.reviews[0].decision, "APPROVED");
+
+  const decision = await updateCommitteeDecision(
+    3,
+    {
+      decision: "APPROVED",
+      decision_reason: "Requirements met.",
+      decided_by: "COMMITTEE-01",
+    },
+    baseUrl,
+  );
+  assert.equal(decision.application_status, "APPROVED");
+
+  const auditLogs = await getAuditLogs(2, baseUrl);
+  assert.equal(auditLogs.audit_logs[0].action, "APPLICATION_CREATED");
+
+  assert.deepEqual(workflowApiRequests, [
+    {
+      method: "GET",
+      url: "/applications/2",
+      body: null,
+    },
+    {
+      method: "POST",
+      url: "/applications/2/submit",
+      body: null,
+    },
+    {
+      method: "GET",
+      url: "/official/applications/unassigned?limit=20&offset=0",
+      body: null,
+    },
+    {
+      method: "POST",
+      url: "/applications/2/claim",
+      body: null,
+    },
+    {
+      method: "GET",
+      url: "/applications/2/ordinance-retrieval",
+      body: null,
+    },
+    {
+      method: "GET",
+      url: "/applications/2/eligibility",
+      body: null,
+    },
+    {
+      method: "GET",
+      url: "/applications/2/deficiencies",
+      body: null,
+    },
+    {
+      method: "GET",
+      url: "/applications/2/status-history",
+      body: null,
+    },
+    {
+      method: "PATCH",
+      url: "/applications/2/status",
+      body: {
+        new_status: "SUBMITTED",
+        changed_by: "STAFF-01",
+        reason: "Submitted for review.",
+      },
+    },
+    {
+      method: "POST",
+      url: "/applications/2/process",
+      body: null,
+    },
+    {
+      method: "POST",
+      url: "/applications/2/committee",
+      body: { committee_type: "DUGC" },
+    },
+    {
+      method: "GET",
+      url: "/applications/2/committee-reviews",
+      body: null,
+    },
+    {
+      method: "PATCH",
+      url: "/committee-reviews/3/decision",
+      body: {
+        decision: "APPROVED",
+        decision_reason: "Requirements met.",
+        decided_by: "COMMITTEE-01",
+      },
+    },
+    {
+      method: "GET",
+      url: "/applications/2/audit-logs",
+      body: null,
+    },
+  ]);
+
   console.log(
-    "api contract tests passed: JSON, multipart, and document helpers",
+    "api contract tests passed: JSON, multipart, application reads, documents, academic review, M09, and M11-M13 helpers",
   );
 } finally {
   server.close();
