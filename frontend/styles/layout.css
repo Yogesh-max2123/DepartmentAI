@@ -672,7 +672,23 @@
   background: var(--surface);
 }
 
+.assistant-form select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font: inherit;
+  color: var(--text-primary);
+  background: var(--surface);
+}
+
 .assistant-form textarea:focus {
+  border-color: rgba(37, 99, 235, 0.6);
+  outline: 2px solid rgba(37, 99, 235, 0.12);
+}
+
+.assistant-form select:focus {
   border-color: rgba(37, 99, 235, 0.6);
   outline: 2px solid rgba(37, 99, 235, 0.12);
 }

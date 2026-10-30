@@ -1,77 +1,74 @@
+import hashlib
 import json
-import os
+import argparse
 from pathlib import Path
 
 import psycopg2
 from psycopg2.extras import Json
 
-from backend.database.connection import get_database_settings
+from backend.academic_programmes import (
+    EMBEDDING_DIMENSION,
+    EMBEDDING_MODEL,
+    PROGRAMME_CORPORA,
+    get_programme_corpus,
+    normalize_programme,
+)
+from backend.database.connection import LOCAL_DATABASES, get_database_settings
+from backend.services.application_policy_registry import (
+    load_application_policy_registry,
+)
 
 # ============================================================
 # Configuration
 # ============================================================
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-CHUNKS_FILE = (
-    PROJECT_ROOT
-    / "documents"
-    / "ug"
-    / "processed"
-    / "ug_ordinance_chunks.json"
-)
-
-STRUCTURE_FILE = (
-    PROJECT_ROOT
-    / "documents"
-    / "ug"
-    / "processed"
-    / "ug_ordinance_structure.json"
-)
-
-EMBEDDINGS_FILE = (
-    PROJECT_ROOT
-    / "documents"
-    / "ug"
-    / "processed"
-    / "ug_ordinance_embeddings.json"
-)
-
-DB_NAME = "departmentai"
-DB_USER = "postgres"
-DB_HOST = "localhost"
-DB_PORT = 5432
-
-# PostgreSQL password is read from the environment.
-DB_PASSWORD = os.getenv("DEPARTMENTAI_DB_PASSWORD")
+MAX_SOURCE_PDF_BYTES = 100 * 1024 * 1024
 
 
-# ============================================================
-# File validation
-# ============================================================
+def validate_files(programme="UG"):
+    """Resolve a supported source and verify all required assets exist."""
+    corpus = get_programme_corpus(programme)
+    if corpus["pdf"].stat().st_size > MAX_SOURCE_PDF_BYTES:
+        raise ValueError("The registered ordinance PDF exceeds the 100 MiB limit.")
+    for key in ("pdf", "chunks", "structure", "embeddings"):
+        path = Path(corpus[key])
+        if not path.is_file():
+            raise FileNotFoundError(
+                f"Required {normalize_programme(programme)} source asset "
+                f"not found: {path}"
+            )
+    return corpus
 
-def validate_files():
-    """Check that the required JSON files exist."""
 
-    if not CHUNKS_FILE.exists():
-        raise FileNotFoundError(
-            f"Chunks file not found:\n{CHUNKS_FILE}"
+def verify_registered_source(programme, source_file, pdf_path):
+    registry = load_application_policy_registry()
+    if registry["status"] in {"CONFLICT", "UNAVAILABLE"}:
+        raise ValueError("The approved knowledge-source registry is unavailable.")
+    sources = [
+        source
+        for source in registry["sources"]
+        if source.get("programme") == programme
+        and source.get("source_file") == source_file
+        and source.get("approval_status") == "APPROVED"
+    ]
+    if len(sources) != 1:
+        raise ValueError(
+            "The selected source is not uniquely registered as approved."
         )
-
-    if not EMBEDDINGS_FILE.exists():
-        raise FileNotFoundError(
-            f"Embeddings file not found:\n{EMBEDDINGS_FILE}"
+    digest = hashlib.sha256()
+    with Path(pdf_path).open("rb") as source_stream:
+        for block in iter(lambda: source_stream.read(1024 * 1024), b""):
+            digest.update(block)
+    source_sha256 = digest.hexdigest()
+    if source_sha256 != sources[0]["source_sha256"].lower():
+        raise ValueError(
+            "The selected source PDF does not match the approved registry hash."
         )
-
-    if not STRUCTURE_FILE.exists():
-        raise FileNotFoundError(
-            f"Document structure file not found:\n{STRUCTURE_FILE}"
-        )
+    return sources[0]
 
 
-def ensure_document_sections(cursor, source_file):
+def ensure_document_sections(cursor, source_file, structure_file):
     """Create missing source metadata without overwriting existing records."""
-    structure_data = json.loads(STRUCTURE_FILE.read_text(encoding="utf-8"))
+    structure_data = json.loads(structure_file.read_text(encoding="utf-8"))
     document = structure_data.get("document", {})
     if document.get("source_file") != source_file:
         raise ValueError(
@@ -159,15 +156,16 @@ def ensure_document_sections(cursor, source_file):
 # Load JSON data
 # ============================================================
 
-def load_json_files():
-    """Load and validate the chunks and embeddings JSON files."""
+def load_json_files(programme="UG"):
+    """Load and validate one programme's ordinance chunks and vectors."""
 
     print("Loading knowledge-base files...")
+    corpus = validate_files(programme)
 
-    with open(CHUNKS_FILE, "r", encoding="utf-8") as file:
+    with open(corpus["chunks"], "r", encoding="utf-8") as file:
         chunks_data = json.load(file)
 
-    with open(EMBEDDINGS_FILE, "r", encoding="utf-8") as file:
+    with open(corpus["embeddings"], "r", encoding="utf-8") as file:
         embeddings_data = json.load(file)
 
     # --------------------------------------------------------
@@ -207,20 +205,6 @@ def load_json_files():
     print(f"Chunks loaded: {len(chunks)}")
     print(f"Embeddings loaded: {len(embedding_chunks)}")
 
-    # --------------------------------------------------------
-    # Validate counts
-    # --------------------------------------------------------
-
-    if len(chunks) != 246:
-        raise ValueError(
-            f"Expected 246 chunks, but found {len(chunks)}."
-        )
-
-    if len(embedding_chunks) != 246:
-        raise ValueError(
-            f"Expected 246 embeddings, but found {len(embedding_chunks)}."
-        )
-
     if len(chunks) != len(embedding_chunks):
         raise ValueError(
             f"Chunk/embedding count mismatch: "
@@ -234,13 +218,49 @@ def load_json_files():
 
     embedding_dimension = embeddings_data["embedding_dimension"]
 
-    if embedding_dimension != 384:
+    if embedding_dimension != EMBEDDING_DIMENSION:
         raise ValueError(
-            f"Expected embedding dimension 384, "
+            f"Expected embedding dimension {EMBEDDING_DIMENSION}, "
             f"but found {embedding_dimension}."
         )
 
     embedding_model = embeddings_data["embedding_model"]
+    if embedding_model != EMBEDDING_MODEL:
+        raise ValueError(
+            f"Embedding model {embedding_model!r} does not match "
+            f"the configured model {EMBEDDING_MODEL!r}."
+        )
+
+    source_file = chunks_data["document"].get("source_file")
+    if (
+        source_file != corpus["source_file"]
+        or embeddings_data["document"].get("source_file") != source_file
+        or any(
+            item.get("source_file") != source_file
+            for item in chunks
+        )
+    ):
+        raise ValueError(
+            "Ordinance chunk and embedding source metadata do not match "
+            "the selected programme source."
+        )
+    if len(chunks) != embeddings_data["total_chunks"]:
+        raise ValueError(
+            "Embedding total_chunks metadata does not match the "
+            "available vectors."
+        )
+
+    chunk_ids = [item.get("chunk_id") for item in chunks]
+    embedding_ids = [item.get("chunk_id") for item in embedding_chunks]
+    if (
+        any(not item for item in chunk_ids)
+        or len(set(chunk_ids)) != len(chunk_ids)
+        or set(chunk_ids) != set(embedding_ids)
+        or len(set(embedding_ids)) != len(embedding_ids)
+    ):
+        raise ValueError(
+            "Ordinance chunks and embeddings must have matching, unique IDs."
+        )
 
     print(f"Embedding model: {embedding_model}")
     print(f"Embedding dimension: {embedding_dimension}")
@@ -262,10 +282,10 @@ def connect_database():
     """Connect to the DepartmentAI PostgreSQL database."""
 
     settings = get_database_settings()
-    if settings.environment != "development":
+    if settings.environment not in LOCAL_DATABASES:
         raise RuntimeError(
-            "Knowledge-base ingestion is restricted to the explicit "
-            "development database profile."
+            "Knowledge-base ingestion is restricted to an explicit "
+            "loopback development or test database profile."
         )
     DB_NAME = settings.database
     DB_USER = settings.user
@@ -325,7 +345,7 @@ def build_embedding_lookup(embedding_chunks):
         chunk_id = item["chunk_id"]
         embedding = item["embedding"]
 
-        if len(embedding) != 384:
+        if len(embedding) != EMBEDDING_DIMENSION:
             raise ValueError(
                 f"Invalid embedding dimension for {chunk_id}: "
                 f"{len(embedding)}"
@@ -345,7 +365,11 @@ def build_embedding_lookup(embedding_chunks):
 # Main ingestion
 # ============================================================
 
-def ingest_knowledge_base():
+def ingest_knowledge_base(programme="UG"):
+
+    normalized_programme = normalize_programme(programme)
+    corpus = validate_files(normalized_programme)
+    print("Ingestion status: PROCESSING")
 
     print("========================================")
     print("DepartmentAI Knowledge Base Ingestion")
@@ -354,8 +378,6 @@ def ingest_knowledge_base():
     # --------------------------------------------------------
     # 1. Validate files
     # --------------------------------------------------------
-
-    validate_files()
 
     # --------------------------------------------------------
     # 2. Load JSON files
@@ -366,7 +388,7 @@ def ingest_knowledge_base():
         embedding_chunks,
         embedding_model,
         embedding_dimension,
-    ) = load_json_files()
+    ) = load_json_files(normalized_programme)
 
     # --------------------------------------------------------
     # 3. Build embedding lookup
@@ -396,9 +418,98 @@ def ingest_knowledge_base():
         # 5. Ensure the source document and sections are indexed
         # ----------------------------------------------------
 
-        chunks_data = json.loads(CHUNKS_FILE.read_text(encoding="utf-8"))
+        chunks_data = json.loads(
+            Path(corpus["chunks"]).read_text(encoding="utf-8")
+        )
         source_file = chunks_data["document"]["source_file"]
-        document_id = ensure_document_sections(cursor, source_file)
+        registered_source = verify_registered_source(
+            normalized_programme,
+            source_file,
+            corpus["pdf"],
+        )
+        source_sha256 = registered_source["source_sha256"].lower()
+        source_version = registered_source["source_version"]
+        source_id = registered_source["source_id"]
+        cursor.execute(
+            "SELECT id FROM documents WHERE file_name = %s;",
+            (source_file,),
+        )
+        existing_document = cursor.fetchone()
+        if existing_document is not None:
+            existing_document_id = existing_document[0]
+            cursor.execute(
+                """
+                SELECT
+                    COUNT(*),
+                    COUNT(DISTINCT metadata->>'chunk_id'),
+                    COUNT(*) FILTER (
+                        WHERE metadata->>'source_id' = %s
+                          AND metadata->>'source_version' = %s
+                          AND metadata->>'source_sha256' = %s
+                          AND metadata->>'embedding_model' = %s
+                          AND metadata->>'approval_status' = %s
+                          AND metadata->>'programme' = %s
+                          AND metadata->>'source_file' = %s
+                          AND metadata->>'embedding_dimension' = %s
+                    )
+                FROM knowledge_chunks
+                WHERE document_id = %s;
+                """,
+                (
+                    source_id,
+                    source_version,
+                    source_sha256,
+                    embedding_model,
+                    registered_source["approval_status"],
+                    normalized_programme,
+                    source_file,
+                    str(embedding_dimension),
+                    existing_document_id,
+                ),
+            )
+            indexed_count, unique_chunk_count, current_count = cursor.fetchone()
+            cursor.execute(
+                """
+                SELECT metadata->>'chunk_id'
+                FROM knowledge_chunks
+                WHERE document_id = %s;
+                """,
+                (existing_document_id,),
+            )
+            existing_ids = {
+                chunk_id for (chunk_id,) in cursor.fetchall() if chunk_id
+            }
+            expected_ids = {item["chunk_id"] for item in chunks}
+            if (
+                indexed_count == len(chunks)
+                and unique_chunk_count == indexed_count
+                and current_count == indexed_count
+                and existing_ids == expected_ids
+            ):
+                connection.commit()
+                print(
+                    f"Knowledge-base ingestion unchanged: "
+                    f"{normalized_programme} ({indexed_count} verified chunks)."
+                )
+                print("Ingestion status: INDEXED")
+                return {
+                    "status": "INDEXED",
+                    "programme": normalized_programme,
+                    "source_id": source_id,
+                    "source_version": source_version,
+                    "chunk_count": indexed_count,
+                    "unchanged": True,
+                }
+            cursor.execute(
+                "DELETE FROM documents WHERE id = %s;",
+                (existing_document_id,),
+            )
+
+        document_id = ensure_document_sections(
+            cursor,
+            source_file,
+            Path(corpus["structure"]),
+        )
 
         print(f"Document ID: {document_id}")
 
@@ -425,37 +536,21 @@ def ingest_knowledge_base():
 
         print(f"Sections found: {len(section_lookup)}")
 
-        if len(section_lookup) != 13:
-            raise RuntimeError(
-                f"Expected 13 sections, "
-                f"but found {len(section_lookup)}."
-            )
-
-        # ----------------------------------------------------
-        # 7. Prevent duplicate ingestion
-        # ----------------------------------------------------
-
-        cursor.execute(
-            """
-            SELECT COUNT(*)
-            FROM knowledge_chunks
-            WHERE document_id = %s;
-            """,
-            (document_id,),
+        structure_data = json.loads(
+            Path(corpus["structure"]).read_text(encoding="utf-8")
         )
-
-        existing_count = cursor.fetchone()[0]
-
-        if existing_count > 0:
+        expected_sections = {
+            str(section["number"])
+            for section in structure_data["sections"]
+        }
+        if set(section_lookup) != expected_sections:
             raise RuntimeError(
-                f"knowledge_chunks already contains "
-                f"{existing_count} records for document "
-                f"ID {document_id}.\n"
-                "Ingestion stopped to prevent duplicates."
+                "Indexed section numbers do not match the selected "
+                "ordinance structure."
             )
 
         # ----------------------------------------------------
-        # 8. Insert chunks
+        # 7. Insert chunks
         # ----------------------------------------------------
 
         print("\nStarting ingestion...\n")
@@ -515,6 +610,11 @@ def ingest_knowledge_base():
 
             metadata = {
                 "chunk_id": chunk_id,
+                "programme": normalized_programme,
+                "source_id": source_id,
+                "source_version": source_version,
+                "source_sha256": source_sha256,
+                "approval_status": registered_source["approval_status"],
                 "document": chunk.get("document"),
                 "source_file": chunk.get("source_file"),
                 "section_title": chunk.get("section_title"),
@@ -607,6 +707,15 @@ def ingest_knowledge_base():
         print(f"Embedding dimension:{embedding_dimension}")
         print(f"Embedding model:    {embedding_model}")
         print("========================================")
+        print("Ingestion status: INDEXED")
+        return {
+            "status": "INDEXED",
+            "programme": normalized_programme,
+            "source_id": source_id,
+            "source_version": source_version,
+            "chunk_count": inserted,
+            "unchanged": False,
+        }
 
     except Exception:
         connection.rollback()
@@ -615,6 +724,7 @@ def ingest_knowledge_base():
         print("ERROR: Ingestion failed.")
         print("========================================")
         print("All database changes have been rolled back.")
+        print("Ingestion status: FAILED")
 
         raise
 
@@ -633,4 +743,17 @@ def ingest_knowledge_base():
 # ============================================================
 
 if __name__ == "__main__":
-    ingest_knowledge_base()
+    parser = argparse.ArgumentParser(
+        description=(
+            "Ingest one approved ordinance corpus into an explicit local "
+            "development or test DB."
+        )
+    )
+    parser.add_argument(
+        "--programme",
+        choices=tuple(PROGRAMME_CORPORA),
+        default="UG",
+        help="Programme corpus to ingest (default: UG).",
+    )
+    arguments = parser.parse_args()
+    ingest_knowledge_base(arguments.programme)

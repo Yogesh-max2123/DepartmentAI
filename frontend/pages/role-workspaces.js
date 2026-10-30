@@ -8,6 +8,7 @@ const workspaceConfig = {
     pages: [
       ["applications", "Assigned applications"],
       ["application-processing", "Processing review"],
+      ["governance-meetings", "Schedule meetings"],
       ["committee", "Committee records"],
       ["audit", "Audit access"],
     ],
@@ -164,6 +165,19 @@ export function renderRoleWorkspacePage(role, page) {
       `
           : ""
       }
+      ${
+        page === "committee" && role === "DUGC"
+          ? `
+        <section class="content-panel" aria-labelledby="committee-application-list-title">
+          <h2 id="committee-application-list-title">Applications assigned to your committee memberships</h2>
+          <p>Only records assigned to a committee you belong to are returned by the server.</p>
+          <div id="role-application-list" aria-live="polite" aria-busy="true">
+            <p role="status">Loading assigned committee applications…</p>
+          </div>
+        </section>
+      `
+          : ""
+      }
       <section class="content-panel" aria-labelledby="role-application-lookup-title">
         <h2 id="role-application-lookup-title">Open an assigned record</h2>
         ${renderApplicationLookupForm(title)}
@@ -181,9 +195,16 @@ export function renderRoleWorkspacePage(role, page) {
           ? `
         <section class="role-review-sections" aria-label="Application review information">
           ${renderReadOnlySection("role-review-documents", "Submitted documents")}
-          ${renderUnavailableSection("Eligibility information", "This endpoint regenerates database records and may call the AI provider. It is not invoked automatically from staff review pages.")}
-          ${renderUnavailableSection("Identified deficiencies", "This endpoint regenerates database records. It is not invoked automatically from staff review pages.")}
+          ${renderReadOnlySection("role-review-analysis", "AI-Assisted Analysis")}
           ${renderReadOnlySection("role-review-status", "Status history")}
+          ${
+            role === "DUGC"
+              ? renderReadOnlySection(
+                  "role-review-meetings",
+                  "Meeting confirmation and availability",
+                )
+              : ""
+          }
           ${renderReadOnlySection("role-review-committees", "Committee review records")}
         </section>
         <p class="role-workspace-unsupported">Each workflow mutation is validated against the assigned account and server-defined transition rules. Audit data remains withheld pending a visibility policy.</p>

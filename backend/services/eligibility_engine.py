@@ -4,6 +4,83 @@ from backend.database.connection import get_connection
 from backend.llm.gemini_client import generate_answer
 
 
+def get_stored_eligibility_results(application_id):
+    """Return saved advisory results without triggering analysis or writes."""
+    conn = get_connection()
+
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                "SELECT id FROM applications WHERE id = %s;",
+                (application_id,),
+            )
+            application = cursor.fetchone()
+            if application is None:
+                raise ValueError(
+                    f"Application with id {application_id} does not exist."
+                )
+
+            cursor.execute(
+                """
+                SELECT
+                    requirement.id,
+                    requirement.requirement_description,
+                    result.result,
+                    result.evidence,
+                    result.confidence,
+                    result.created_at
+                FROM application_requirements AS requirement
+                LEFT JOIN LATERAL (
+                    SELECT
+                        eligibility.result,
+                        eligibility.evidence,
+                        eligibility.confidence,
+                        eligibility.created_at
+                    FROM eligibility_results AS eligibility
+                    WHERE eligibility.application_id = requirement.application_id
+                      AND eligibility.requirement_id = requirement.id
+                    ORDER BY eligibility.created_at DESC, eligibility.id DESC
+                    LIMIT 1
+                ) AS result ON TRUE
+                WHERE requirement.application_id = %s
+                ORDER BY requirement.id;
+                """,
+                (application_id,),
+            )
+            rows = cursor.fetchall()
+
+        results = [
+            {
+                "requirement_id": row[0],
+                "requirement_description": row[1],
+                "result": row[2],
+                "evidence": row[3],
+                "confidence": float(row[4]) if row[4] is not None else None,
+                "created_at": row[5],
+            }
+            for row in rows
+            if row[2] is not None
+        ]
+        requirements_analyzed = len(rows)
+        if not results:
+            analysis_status = "NOT_GENERATED"
+        elif len(results) < requirements_analyzed:
+            analysis_status = "PARTIAL"
+        else:
+            analysis_status = "AVAILABLE"
+
+        return {
+            "application_id": application_id,
+            "analysis_status": analysis_status,
+            "requirements_analyzed": requirements_analyzed,
+            "results_count": len(results),
+            "results": results,
+            "advisory": True,
+        }
+    finally:
+        conn.close()
+
+
 def analyze_application_eligibility(application_id):
     """
     Analyze application eligibility against extracted ordinance requirements.

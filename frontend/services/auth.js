@@ -5,7 +5,7 @@ import {
   login as loginRequest,
   logout as logoutRequest,
   setAccessToken,
-} from "./api.js?v=session-persistence";
+} from "./api.js";
 
 let currentUser = null;
 
@@ -32,6 +32,8 @@ export async function loginUser(expectedRole, formData) {
     name: response.user.username,
     username: response.user.username,
     identifier: response.user.subject_identifier,
+    programmeIdentityStatus: response.user.programme_identity_status,
+    verifiedProgramme: response.user.verified_programme,
   };
   return currentUser;
 }
@@ -55,6 +57,8 @@ export async function restoreSession() {
       name: user.username,
       username: user.username,
       identifier: user.subject_identifier,
+      programmeIdentityStatus: user.programme_identity_status,
+      verifiedProgramme: user.verified_programme,
     };
     return currentUser;
   } catch (error) {

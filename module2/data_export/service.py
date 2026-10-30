@@ -1,21 +1,99 @@
-"""Data discovery and file generation for Module II exports.
-
-Only ordinary tables in PostgreSQL's public schema whose names begin with
-m2_ are eligible. Table identifiers are validated against the live catalog
-and quoted with psycopg.sql.Identifier.
-"""
+"""Allowlisted, department-scoped Module II export queries and renderers."""
 from __future__ import annotations
 
 import csv
 import io
 import json
+from dataclasses import dataclass
 from datetime import date, datetime, time
 from decimal import Decimal
 from typing import Any, Iterable, Sequence
 
 
-SUPPORTED_FORMATS = {"csv", "xlsx", "pdf", "docx"}
-MAX_EXPORT_ROWS = 100_000
+SUPPORTED_FORMATS = frozenset({"csv", "xlsx", "pdf", "docx"})
+MAX_EXPORT_ROWS = 10_000
+DEFAULT_EXPORT_ROWS = 1_000
+
+
+@dataclass(frozen=True)
+class ExportDataset:
+    permission: str
+    columns: tuple[str, ...]
+    query: str
+
+
+EXPORT_DATASETS = {
+    "faculty_profiles": ExportDataset(
+        permission="module2.export.faculty_profiles",
+        columns=(
+            "id",
+            "full_name",
+            "designation",
+            "department",
+            "qualification",
+            "area_of_interest",
+            "profile_url",
+            "source_url",
+            "source_name",
+            "verification_status",
+        ),
+        query="SELECT {columns} FROM public.m2_faculties AS f "
+        "WHERE f.is_active IS TRUE AND f.department = ANY(%s) "
+        "ORDER BY lower(f.full_name), f.id LIMIT %s",
+    ),
+    "publications": ExportDataset(
+        permission="module2.export.publications",
+        columns=(
+            "title",
+            "publication_type",
+            "journal_or_conference",
+            "publisher",
+            "publication_date",
+            "publication_year",
+            "doi",
+            "authors",
+            "source_url",
+            "department",
+            "faculty_name",
+        ),
+        query=(
+            "SELECT {columns} FROM public.m2_publications AS p "
+            "JOIN public.m2_faculty_publications AS fp "
+            "ON fp.publication_id = p.id "
+            "JOIN public.m2_faculties AS f ON f.id = fp.faculty_id "
+            "WHERE f.is_active IS TRUE AND f.department = ANY(%s) "
+            "ORDER BY p.publication_year DESC NULLS LAST, p.id, f.id LIMIT %s"
+        ),
+    ),
+}
+
+_EXPORT_COLUMN_SQL = {
+    "faculty_profiles": {
+        "id": "f.id",
+        "full_name": "f.full_name",
+        "designation": "f.designation",
+        "department": "f.department",
+        "qualification": "f.qualification",
+        "area_of_interest": "f.area_of_interest",
+        "profile_url": "f.profile_url",
+        "source_url": "f.source_url",
+        "source_name": "f.source_name",
+        "verification_status": "f.verification_status",
+    },
+    "publications": {
+        "title": "p.title",
+        "publication_type": "p.publication_type",
+        "journal_or_conference": "p.journal_or_conference",
+        "publisher": "p.publisher",
+        "publication_date": "p.publication_date",
+        "publication_year": "p.publication_year",
+        "doi": "p.doi",
+        "authors": "p.authors",
+        "source_url": "p.source_url",
+        "department": "f.department",
+        "faculty_name": "f.full_name",
+    },
+}
 
 
 def _text(value: Any) -> str:
@@ -30,95 +108,68 @@ def _text(value: Any) -> str:
     return str(value)
 
 
-def _validate_dataset_name(dataset: str) -> str:
-    # Do not accept arbitrary SQL identifiers or non-Module-II tables.
-    if not dataset.startswith("m2_") or not dataset.replace("_", "").isalnum():
-        raise ValueError("Invalid dataset. Only m2_* tables can be exported.")
-    return dataset
+def _spreadsheet_text(value: str) -> str:
+    if value.lstrip().startswith(("=", "+", "-", "@")):
+        return f"'{value}"
+    return value
 
 
-def list_export_datasets() -> list[dict[str, Any]]:
-    """Return exportable Module II tables and their column names."""
-    from module2.database.connection import get_connection
-
-    conn = get_connection()
-    try:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT t.table_name, c.column_name, c.ordinal_position
-                FROM information_schema.tables AS t
-                JOIN information_schema.columns AS c
-                  ON c.table_schema = t.table_schema
-                 AND c.table_name = t.table_name
-                WHERE t.table_schema = 'public'
-                  AND t.table_type = 'BASE TABLE'
-                  AND left(t.table_name, 3) = 'm2_'
-                ORDER BY t.table_name, c.ordinal_position;
-                """
-            )
-            records = cur.fetchall()
-        datasets: dict[str, list[str]] = {}
-        for table_name, column_name, _ordinal in records:
-            datasets.setdefault(table_name, []).append(column_name)
-        return [
-            {"name": name, "columns": columns}
-            for name, columns in datasets.items()
-        ]
-    finally:
-        conn.close()
+def list_export_datasets(permissions: Iterable[str]) -> list[dict[str, Any]]:
+    """Return only static datasets granted to this server-authorized principal."""
+    permission_set = frozenset(permissions)
+    return [
+        {"name": name, "columns": list(dataset.columns)}
+        for name, dataset in EXPORT_DATASETS.items()
+        if dataset.permission in permission_set
+    ]
 
 
-def fetch_dataset(dataset: str, limit: int | None = None) -> tuple[list[str], list[tuple[Any, ...]], bool]:
-    """Fetch a dataset. If no limit is supplied, reject oversized exports.
-
-    Returns (column_names, rows, truncated). An explicit limit intentionally
-    permits exporting only the first N rows; without one, no rows are silently
-    omitted.
-    """
-    dataset = _validate_dataset_name(dataset)
-    if limit is not None and (limit < 1 or limit > MAX_EXPORT_ROWS):
+def fetch_dataset(
+    dataset: str,
+    departments: Sequence[str],
+    limit: int = DEFAULT_EXPORT_ROWS,
+    columns: Sequence[str] | None = None,
+) -> tuple[list[str], list[tuple[Any, ...]], bool]:
+    """Fetch allowlisted fields inside the caller's configured department scope."""
+    definition = EXPORT_DATASETS.get(dataset)
+    if definition is None:
+        raise LookupError("The requested export dataset is not available.")
+    if not departments:
+        raise PermissionError("No Module II department scope is configured.")
+    if isinstance(limit, bool) or not isinstance(limit, int) or not (
+        1 <= limit <= MAX_EXPORT_ROWS
+    ):
         raise ValueError(f"limit must be between 1 and {MAX_EXPORT_ROWS}.")
+
+    selected_columns = tuple(columns) if columns is not None else definition.columns
+    if (
+        not selected_columns
+        or len(set(selected_columns)) != len(selected_columns)
+        or any(column not in definition.columns for column in selected_columns)
+    ):
+        raise ValueError("One or more requested columns are not allowed.")
 
     from psycopg import sql
     from module2.database.connection import get_connection
 
-    conn = get_connection()
+    selected_sql = sql.SQL(", ").join(
+        sql.SQL(_EXPORT_COLUMN_SQL[dataset][column])
+        for column in selected_columns
+    )
+    query = sql.SQL(definition.query).format(columns=selected_sql)
+    connection = get_connection()
     try:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT 1
-                FROM information_schema.tables
-                WHERE table_schema = 'public'
-                  AND table_type = 'BASE TABLE'
-                  AND table_name = %s
-                  AND left(table_name, 3) = 'm2_';
-                """,
-                (dataset,),
-            )
-            if cur.fetchone() is None:
-                raise LookupError(f"Exportable dataset '{dataset}' was not found.")
-
-            query_limit = limit if limit is not None else MAX_EXPORT_ROWS + 1
-            cur.execute(
-                sql.SQL("SELECT * FROM {}.{} LIMIT %s").format(
-                    sql.Identifier("public"), sql.Identifier(dataset)
-                ),
-                (query_limit,),
-            )
-            columns = [description.name for description in cur.description]
-            rows = cur.fetchall()
-        if limit is None and len(rows) > MAX_EXPORT_ROWS:
-            raise OverflowError(
-                f"Dataset '{dataset}' contains more than {MAX_EXPORT_ROWS:,} rows. "
-                "Use an explicit limit to export a subset, or increase "
-                "MAX_EXPORT_ROWS after reviewing resource requirements."
-            )
-        truncated = limit is not None and len(rows) == limit
-        return columns, rows, truncated
+        with connection.cursor() as cursor:
+            cursor.execute(query, (list(departments), limit + 1))
+            fetched_rows = cursor.fetchall()
+        truncated = len(fetched_rows) > limit
+        return (
+            list(selected_columns),
+            fetched_rows[:limit],
+            truncated,
+        )
     finally:
-        conn.close()
+        connection.close()
 
 
 def render_export(
@@ -127,20 +178,26 @@ def render_export(
     rows: Iterable[Sequence[Any]],
     file_format: str,
 ) -> tuple[bytes, str, str]:
-    """Return (file_bytes, MIME type, extension) for the requested format."""
+    """Return (file_bytes, MIME type, extension) for a supported format."""
+    if dataset not in EXPORT_DATASETS:
+        raise ValueError("The requested export dataset is not available.")
     fmt = file_format.lower().strip().lstrip(".")
     if fmt not in SUPPORTED_FORMATS:
-        raise ValueError(f"Unsupported format '{file_format}'. Choose csv, xlsx, pdf, or docx.")
+        raise ValueError("Unsupported export format.")
+    if any(column not in EXPORT_DATASETS[dataset].columns for column in columns):
+        raise ValueError("One or more requested columns are not allowed.")
 
-    safe_dataset = _validate_dataset_name(dataset)
-    headers = [str(c) for c in columns]
-    data = [[_text(v) for v in row] for row in rows]
+    headers = [str(column) for column in columns]
+    data = [[_text(value) for value in row] for row in rows]
 
     if fmt == "csv":
         stream = io.StringIO(newline="")
         writer = csv.writer(stream, lineterminator="\r\n")
         writer.writerow(headers)
-        writer.writerows(data)
+        writer.writerows(
+            [_spreadsheet_text(value) for value in row]
+            for row in data
+        )
         return stream.getvalue().encode("utf-8-sig"), "text/csv; charset=utf-8", "csv"
 
     if fmt == "xlsx":
@@ -156,15 +213,25 @@ def render_export(
             cell.font = Font(bold=True, color="FFFFFF")
             cell.fill = PatternFill("solid", fgColor="244062")
         for row in data:
-            sheet.append(row)
+            sheet.append([_spreadsheet_text(value) for value in row])
         sheet.freeze_panes = "A2"
         sheet.auto_filter.ref = sheet.dimensions
         for index, header in enumerate(headers, start=1):
-            values = [len(header)] + [len(row[index - 1]) for row in data if index - 1 < len(row)]
-            sheet.column_dimensions[get_column_letter(index)].width = min(max(max(values, default=12) + 2, 12), 48)
+            values = [len(header)] + [
+                len(row[index - 1])
+                for row in data
+                if index - 1 < len(row)
+            ]
+            sheet.column_dimensions[get_column_letter(index)].width = min(
+                max(max(values, default=12) + 2, 12), 48
+            )
         buffer = io.BytesIO()
         workbook.save(buffer)
-        return buffer.getvalue(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "xlsx"
+        return (
+            buffer.getvalue(),
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "xlsx",
+        )
 
     if fmt == "docx":
         from docx import Document
@@ -177,7 +244,7 @@ def render_export(
         section.bottom_margin = Inches(0.55)
         section.left_margin = Inches(0.55)
         section.right_margin = Inches(0.55)
-        title = document.add_heading(f"DepartmentAI — {safe_dataset}", level=1)
+        title = document.add_heading(f"DepartmentAI — {dataset}", level=1)
         title.alignment = WD_ALIGN_PARAGRAPH.CENTER
         document.add_paragraph(f"Records exported: {len(data)}")
         if headers:
@@ -188,15 +255,6 @@ def render_export(
                 for run in cell.paragraphs[0].runs:
                     run.bold = True
                     run.font.color.rgb = RGBColor(255, 255, 255)
-                # Word table cell shading is optional; text remains readable if unsupported.
-                try:
-                    from docx.oxml import OxmlElement
-                    from docx.oxml.ns import qn
-                    shading = OxmlElement("w:shd")
-                    shading.set(qn("w:fill"), "244062")
-                    cell._tc.get_or_add_tcPr().append(shading)
-                except Exception:
-                    pass
             for row in data:
                 cells = table.add_row().cells
                 for cell, value in zip(cells, row):
@@ -206,67 +264,96 @@ def render_export(
                             run.font.size = Pt(8)
         buffer = io.BytesIO()
         document.save(buffer)
-        return buffer.getvalue(), "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "docx"
+        return (
+            buffer.getvalue(),
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "docx",
+        )
 
-    # PDF: ReportLab Platypus keeps content as selectable text and allows
-    # tables to flow across pages.
     from reportlab.lib import colors
     from reportlab.lib.enums import TA_CENTER
     from reportlab.lib.pagesizes import A4, landscape
-    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+    from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
     from reportlab.lib.units import mm
-    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, LongTable, TableStyle
+    from reportlab.platypus import (
+        LongTable,
+        Paragraph,
+        SimpleDocTemplate,
+        Spacer,
+        TableStyle,
+    )
 
     buffer = io.BytesIO()
-    doc = SimpleDocTemplate(
-        buffer, pagesize=landscape(A4),
-        leftMargin=10 * mm, rightMargin=10 * mm,
-        topMargin=10 * mm, bottomMargin=10 * mm,
-        title=f"DepartmentAI — {safe_dataset}",
+    document = SimpleDocTemplate(
+        buffer,
+        pagesize=landscape(A4),
+        leftMargin=10 * mm,
+        rightMargin=10 * mm,
+        topMargin=10 * mm,
+        bottomMargin=10 * mm,
+        title=f"DepartmentAI — {dataset}",
     )
     styles = getSampleStyleSheet()
     title_style = ParagraphStyle(
-        "ExportTitle", parent=styles["Title"], fontSize=15,
-        leading=18, alignment=TA_CENTER, spaceAfter=8,
+        "ExportTitle",
+        parent=styles["Title"],
+        fontSize=15,
+        leading=18,
+        alignment=TA_CENTER,
+        spaceAfter=8,
     )
     cell_style = ParagraphStyle(
-        "ExportCell", parent=styles["BodyText"], fontSize=6,
-        leading=7, wordWrap="CJK",
+        "ExportCell",
+        parent=styles["BodyText"],
+        fontSize=6,
+        leading=7,
+        wordWrap="CJK",
     )
     story = [
-        Paragraph(f"DepartmentAI — {safe_dataset}", title_style),
+        Paragraph(f"DepartmentAI — {dataset}", title_style),
         Paragraph(f"Records exported: {len(data)}", styles["Normal"]),
         Spacer(1, 5 * mm),
     ]
     if headers:
-        table_data = [[Paragraph(_escape_xml(h), cell_style) for h in headers]]
-        table_data.extend([
-            [Paragraph(_escape_xml(v), cell_style) for v in row]
-            for row in data
-        ])
+        table_data = [
+            [Paragraph(_escape_xml(header), cell_style) for header in headers]
+        ]
+        table_data.extend(
+            [
+                [Paragraph(_escape_xml(value), cell_style) for value in row]
+                for row in data
+            ]
+        )
         available_width = landscape(A4)[0] - 20 * mm
         col_width = available_width / max(len(headers), 1)
         table = LongTable(
-            table_data, colWidths=[col_width] * len(headers),
-            repeatRows=1, hAlign="LEFT",
+            table_data,
+            colWidths=[col_width] * len(headers),
+            repeatRows=1,
+            hAlign="LEFT",
         )
-        table.setStyle(TableStyle([
-            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#244062")),
-            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
-            ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-            ("GRID", (0, 0), (-1, -1), 0.25, colors.grey),
-            ("VALIGN", (0, 0), (-1, -1), "TOP"),
-            ("LEFTPADDING", (0, 0), (-1, -1), 3),
-            ("RIGHTPADDING", (0, 0), (-1, -1), 3),
-            ("TOPPADDING", (0, 0), (-1, -1), 3),
-            ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
-        ]))
+        table.setStyle(
+            TableStyle(
+                [
+                    ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#244062")),
+                    ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+                    ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+                    ("GRID", (0, 0), (-1, -1), 0.25, colors.grey),
+                    ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                    ("LEFTPADDING", (0, 0), (-1, -1), 3),
+                    ("RIGHTPADDING", (0, 0), (-1, -1), 3),
+                    ("TOPPADDING", (0, 0), (-1, -1), 3),
+                    ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
+                ]
+            )
+        )
         story.append(table)
-    doc.build(story)
+    document.build(story)
     return buffer.getvalue(), "application/pdf", "pdf"
 
 
 def _escape_xml(value: str) -> str:
     """Escape text before placing it inside a ReportLab Paragraph."""
     import xml.sax.saxutils
+
     return xml.sax.saxutils.escape(value)

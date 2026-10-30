@@ -23,8 +23,16 @@ for (const role of ["OFFICIAL", "DUGC"]) {
   ]) {
     const markup = renderRoleWorkspacePage(role, page);
     assert.match(markup, /data-role-application-lookup/);
+    assert.match(markup, /id="role-review-analysis"/);
+    assert.match(markup, /AI-Assisted Analysis/);
+    assert.doesNotMatch(markup, /id="role-review-eligibility"/);
+    assert.doesNotMatch(markup, /Identified deficiencies/);
     assert.doesNotMatch(markup, /Retrieved ordinance context/i);
     if (page === "applications") {
+      assert.match(markup, /id="role-application-list"/);
+    }
+    if (role === "DUGC" && page === "committee") {
+      assert.match(markup, /Applications assigned to your committee memberships/);
       assert.match(markup, /id="role-application-list"/);
     }
     assert.doesNotMatch(markup, /role selection is not authentication/i);
@@ -47,10 +55,21 @@ for (const role of ["OFFICIAL", "DUGC"]) {
   const sidebar = renderSidebar("dashboard", { role });
   const expectedPages =
     role === "OFFICIAL"
-      ? ["dashboard", "assistant", "applications", "application-processing", "committee", "audit", "settings"]
+      ? ["dashboard", "assistant", "applications", "application-processing", "governance-meetings", "committee", "audit", "settings"]
       : ["dashboard", "assistant", "applications", "committee", "decision-history", "audit", "settings"];
   for (const page of expectedPages) {
     assert.match(sidebar, new RegExp(`data-page="${page}"`));
+  }
+  if (role === "DUGC") {
+    assert.doesNotMatch(sidebar, /Meeting Governance/);
+    assert.match(
+      renderRoleWorkspacePage(role, "committee"),
+      /role-review-meetings/,
+    );
+    assert.match(
+      renderRoleWorkspacePage(role, "applications"),
+      /Meeting confirmation and availability/,
+    );
   }
 }
 

@@ -10,10 +10,13 @@ from fastapi import (
     UploadFile,
 )
 from fastapi.responses import FileResponse
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 from backend.api.access import require_application_access, require_role
-from backend.api.auth_routes import get_current_user
+from backend.api.auth_routes import (
+    get_current_user,
+    get_programme_identity_provider,
+)
 from backend.services.auth_service import (
     AuthenticatedUser,
     get_review_access,
@@ -25,27 +28,38 @@ from backend.rag.source_formatter import format_sources
 
 from backend.services.application_service import (
     ALLOWED_TRANSITIONS,
+    ApplicationValidationError,
+    InvalidApplicationState,
     create_application,
     submit_application,
+    update_application,
     update_application_status,
     get_application,
     get_application_status_history,
 )
 
 from backend.services.document_service import (
+    DocumentUploadStateError,
     get_document_download,
     upload_document,
     get_application_documents,
 )
 
 from backend.services.document_validator import validate_document
-from backend.services.document_extractor import extract_document_text
-from backend.services.document_classifier import classify_document
+from backend.services.document_extractor import (
+    DocumentExtractionNotFoundError,
+    extract_document_text,
+)
+from backend.services.document_classifier import (
+    DocumentNotFoundError,
+    classify_document,
+)
 from backend.services.application_retrieval import (
     retrieve_ordinance_for_application,
 )
 from backend.services.eligibility_engine import (
     analyze_application_eligibility,
+    get_stored_eligibility_results,
 )
 from backend.services.deficiency_detector import (
     detect_application_deficiencies,
@@ -61,8 +75,30 @@ from backend.services.ai_analysis_service import (
     generate_application_analysis,
 )
 from backend.services.application_processing_service import (
+    ApplicationProcessingUnavailable,
     process_application,
 )
+from backend.services.application_readiness_service import (
+    ReadinessAnalysisStateError,
+    ReadinessSubmissionError,
+    analyze_application_readiness,
+    get_application_readiness,
+)
+from backend.services.yogesh_integration_service import (
+    YogeshIntegrationError,
+    generate_application_advisory,
+    get_latest_application_advisory,
+)
+from backend.services.knowledge_retrieval_service import (
+    KnowledgeRetrievalUnavailable,
+    list_knowledge_sources,
+    retrieve_knowledge,
+)
+from backend.services.application_policy_registry import (
+    load_application_policy_registry,
+    resolve_application_policy,
+)
+from backend.services.programme_identity import resolve_programme_identity
 from backend.services.official_assignment_service import (
     claim_application,
     list_unassigned_submissions,
@@ -79,7 +115,23 @@ MAX_DOCUMENT_SIZE_BYTES = 10 * 1024 * 1024
 
 class AskRequest(BaseModel):
     question: str
-    conversation_history: list[dict] = []
+    conversation_history: list[dict] = Field(default_factory=list)
+    programme: Literal["UG", "MTECH", "PHD"] = "UG"
+
+
+class KnowledgeSearchRequest(BaseModel):
+    domain: Literal["ORDINANCE"] = "ORDINANCE"
+    query: str = Field(min_length=1, max_length=2000)
+    programme: Literal["UG", "MTECH", "PHD"] | None = None
+    application_id: int | None = Field(default=None, gt=0)
+    source_ids: list[str] | None = Field(default=None, max_length=10)
+    source_types: list[Literal["ORDINANCE"]] = Field(
+        default_factory=lambda: ["ORDINANCE"],
+        max_length=3,
+    )
+    source_version: str | None = Field(default=None, max_length=128)
+    section_numbers: list[str] | None = Field(default=None, max_length=20)
+    limit: int = Field(default=5, ge=1, le=5)
 
 
 class AskResponse(BaseModel):
@@ -92,6 +144,8 @@ class AskResponse(BaseModel):
 # ============================================================
 
 class CommitteeAssignmentRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     committee_type: Literal["DUGC", "DMPC", "DDPC"]
 
 
@@ -104,30 +158,143 @@ class CommitteeDecisionRequest(BaseModel):
 # Ask / RAG
 # ============================================================
 
+@router.get("/knowledge/sources")
+def read_knowledge_sources(user: CurrentUser):
+    try:
+        return list_knowledge_sources()
+    except KnowledgeRetrievalUnavailable as error:
+        raise HTTPException(
+            status_code=503,
+            detail={"code": error.code, "message": error.message},
+        ) from error
+
+
+@router.post("/knowledge/search")
+def search_knowledge(
+    request: KnowledgeSearchRequest,
+    user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
+):
+    source_ids = request.source_ids
+    programme = request.programme
+    application_scoped = request.application_id is not None
+    if application_scoped:
+        try:
+            require_application_access(user, request.application_id)
+        except HTTPException:
+            raise
+        application = get_application(request.application_id)
+        if application is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Application not found.",
+            )
+        identity = resolve_programme_identity(
+            application["applicant_identifier"],
+            identity_provider,
+        )
+        if identity.status != "VERIFIED":
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": f"PROGRAMME_IDENTITY_{identity.status}",
+                    "message": (
+                        "A verified programme identity is required for "
+                        "application-scoped knowledge retrieval."
+                    ),
+                },
+            )
+        policy = resolve_application_policy(
+            application["application_type"],
+            identity.programme,
+            load_application_policy_registry(),
+        )
+        if policy["status"] != "RESOLVED":
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": f"APPLICATION_POLICY_{policy['status']}",
+                    "message": (
+                        "No approved application policy is available for "
+                        "this application's knowledge scope."
+                    ),
+                },
+            )
+        policy_type = policy["application_type"]
+        if programme is not None and programme != policy_type["programme"]:
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": "PROGRAMME_SCOPE_MISMATCH",
+                    "message": (
+                        "The requested programme does not match the "
+                        "verified application policy."
+                    ),
+                },
+            )
+        programme = policy_type["programme"]
+        policy_source_ids = set(policy_type["source_ids"])
+        if source_ids is not None and not set(source_ids) <= policy_source_ids:
+            raise HTTPException(
+                status_code=422,
+                detail="A requested source is outside the approved policy.",
+            )
+        source_ids = source_ids or policy_type["source_ids"]
+    elif programme is None:
+        raise HTTPException(
+            status_code=422,
+            detail="An explicit programme scope is required.",
+        )
+
+    try:
+        return retrieve_knowledge(
+            request.query,
+            programme,
+            source_ids=source_ids,
+            source_types=request.source_types,
+            source_version=request.source_version,
+            section_numbers=request.section_numbers,
+            limit=request.limit,
+            application_scoped=application_scoped,
+        )
+    except ValueError as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
+    except KnowledgeRetrievalUnavailable as error:
+        raise HTTPException(
+            status_code=503,
+            detail={"code": error.code, "message": error.message},
+        ) from error
+
+
 @router.post("/ask", response_model=AskResponse)
-def ask_question(request: AskRequest):
+def ask_question(request: AskRequest, user: CurrentUser):
     try:
         answer, results = answer_question(
             request.question,
             request.conversation_history,
+            programme=request.programme,
         )
-
         return {
             "answer": answer,
             "sources": format_sources(results),
         }
-
-    except ValueError as e:
+    except ValueError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    except KnowledgeRetrievalUnavailable as error:
         raise HTTPException(
-            status_code=400,
-            detail=str(e),
-        )
-
-    except Exception as e:
+            status_code=503,
+            detail={"code": error.code, "message": error.message},
+        ) from error
+    except Exception as error:
         raise HTTPException(
-            status_code=500,
-            detail=str(e),
-        )
+            status_code=503,
+            detail={
+                "code": "ACADEMIC_ASSISTANT_UNAVAILABLE",
+                "message": (
+                    "The Academic Assistant is temporarily unavailable."
+                ),
+            },
+        ) from error
 
 
 # ============================================================
@@ -135,6 +302,8 @@ def ask_question(request: AskRequest):
 # ============================================================
 
 class ApplicationCreateRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     application_type: str = Field(min_length=1, max_length=100)
     title: str | None = Field(default=None, max_length=200)
     description: str | None = Field(default=None, max_length=10000)
@@ -145,6 +314,14 @@ class ApplicationCreateResponse(BaseModel):
     application_number: str
     status: str
     created_at: object
+
+
+class ApplicationDraftUpdateRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    application_type: str = Field(min_length=1, max_length=100)
+    title: str | None = Field(..., max_length=200)
+    description: str | None = Field(..., max_length=10000)
 
 
 @router.get("/applications")
@@ -175,13 +352,144 @@ def list_unassigned_official_applications(
 
 
 @router.post("/applications/{application_id}/submit")
-def submit_student_application(application_id: int, user: CurrentUser):
+def submit_student_application(
+    application_id: int,
+    user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
+):
     require_application_access(user, application_id, "STUDENT")
     try:
-        return submit_application(application_id, submitted_by=user.username)
+        return submit_application(
+            application_id,
+            submitted_by=user.username,
+            identity_provider=identity_provider,
+        )
     except LookupError as error:
         raise HTTPException(status_code=404, detail=str(error)) from error
-    except ValueError as error:
+    except InvalidApplicationState as error:
+        raise HTTPException(status_code=409, detail=str(error)) from error
+    except ApplicationValidationError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
+    except ReadinessSubmissionError as error:
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "code": error.state,
+                "message": error.message,
+            },
+        ) from error
+
+
+@router.get("/applications/{application_id}/readiness")
+def read_application_readiness(
+    application_id: int,
+    user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
+):
+    require_application_access(user, application_id)
+    try:
+        return get_application_readiness(application_id, identity_provider)
+    except LookupError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+
+@router.get("/applications/{application_id}/analysis")
+def read_application_analysis(
+    application_id: int,
+    user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
+):
+    require_application_access(user, application_id)
+    try:
+        readiness = get_application_readiness(
+            application_id,
+            identity_provider,
+        )
+        eligibility = get_stored_eligibility_results(application_id)
+    except (LookupError, ValueError) as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+    return {
+        "schema_version": 1,
+        "application_id": application_id,
+        "analysis_status": readiness["readiness_status"],
+        "freshness_status": (
+            "STALE" if readiness.get("is_stale") else "CURRENT"
+        ),
+        "readiness": readiness,
+        "eligibility": eligibility,
+        "eligibility_freshness": "NOT_TRACKED",
+        "advisory": True,
+        "formal_decision": False,
+        "yogesh_advisory": get_latest_application_advisory(application_id),
+    }
+
+
+@router.post("/applications/{application_id}/yogesh-advisory")
+def run_yogesh_application_advisory(
+    application_id: int,
+    user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
+):
+    require_application_access(user, application_id, "STUDENT")
+    application = get_application(application_id)
+    if application is None:
+        raise HTTPException(status_code=404, detail="Application not found.")
+    if application["status"] != "DRAFT":
+        raise HTTPException(
+            status_code=409,
+            detail="Ordinance advisory is available only for a draft application.",
+        )
+
+    identity = resolve_programme_identity(
+        application["applicant_identifier"],
+        identity_provider,
+    )
+    if identity.status != "VERIFIED" or identity.programme not in {"MTECH", "PHD"}:
+        raise HTTPException(
+            status_code=409,
+            detail="A verified M.Tech or PhD programme identity is required.",
+        )
+    policy = resolve_application_policy(
+        application["application_type"],
+        identity.programme,
+        load_application_policy_registry(),
+    )
+    if (
+        policy["status"] != "RESOLVED"
+        or policy["application_type"].get("activation_scope") != "TEST_ONLY"
+    ):
+        raise HTTPException(
+            status_code=409,
+            detail="The draft does not have a resolved test-only application policy.",
+        )
+    try:
+        return generate_application_advisory(
+            application_id,
+            application,
+            identity.programme,
+        )
+    except YogeshIntegrationError as error:
+        raise HTTPException(
+            status_code=error.status_code,
+            detail=str(error),
+        ) from error
+
+
+@router.post("/applications/{application_id}/readiness/analyze")
+def run_application_readiness_analysis(
+    application_id: int,
+    user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
+):
+    require_application_access(user, application_id, "STUDENT")
+    try:
+        return analyze_application_readiness(
+            application_id,
+            identity_provider,
+        )
+    except LookupError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+    except ReadinessAnalysisStateError as error:
         raise HTTPException(status_code=409, detail=str(error)) from error
 
 
@@ -215,11 +523,42 @@ def create_new_application(request: ApplicationCreateRequest, user: CurrentUser)
     except HTTPException:
         raise
 
+    except ApplicationValidationError as e:
+        raise HTTPException(
+            status_code=400,
+            detail=str(e),
+        ) from e
+
     except Exception as e:
         raise HTTPException(
             status_code=500,
             detail=str(e),
         )
+
+
+@router.patch("/applications/{application_id}")
+def update_student_draft(
+    application_id: int,
+    request: ApplicationDraftUpdateRequest,
+    user: CurrentUser,
+):
+    try:
+        require_application_access(user, application_id, "STUDENT")
+        return update_application(
+            application_id,
+            application_type=request.application_type,
+            title=request.title,
+            description=request.description,
+            updated_by=user.username,
+        )
+    except HTTPException:
+        raise
+    except LookupError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+    except InvalidApplicationState as error:
+        raise HTTPException(status_code=409, detail=str(error)) from error
+    except ApplicationValidationError as error:
+        raise HTTPException(status_code=400, detail=str(error)) from error
 
 
 # ============================================================
@@ -311,6 +650,12 @@ async def upload_application_document(
         )
 
         return document
+
+    except DocumentUploadStateError as e:
+        raise HTTPException(
+            status_code=409,
+            detail=str(e),
+        ) from e
 
     except ValueError as e:
         raise HTTPException(
@@ -453,7 +798,7 @@ def extract_application_document(
 ):
     try:
         require_application_access(user, application_id, "STUDENT")
-        result = extract_document_text(document_id)
+        result = extract_document_text(document_id, application_id)
 
         # Make sure the returned document ID matches
         if result.get("document_id") != document_id:
@@ -462,40 +807,10 @@ def extract_application_document(
                 detail="Document not found.",
             )
 
-        # Verify application ownership
-        from backend.database.connection import get_connection
-
-        conn = get_connection()
-
-        try:
-            with conn.cursor() as cursor:
-                cursor.execute(
-                    """
-                    SELECT application_id
-                    FROM application_documents
-                    WHERE id = %s;
-                    """,
-                    (document_id,),
-                )
-
-                document = cursor.fetchone()
-
-        finally:
-            conn.close()
-
-        if document is None:
-            raise HTTPException(
-                status_code=404,
-                detail="Document not found.",
-            )
-
-        if document[0] != application_id:
-            raise HTTPException(
-                status_code=404,
-                detail="Document does not belong to this application.",
-            )
-
         return result
+
+    except DocumentExtractionNotFoundError as e:
+        raise HTTPException(status_code=404, detail=str(e)) from e
 
     except ValueError as e:
         raise HTTPException(
@@ -527,7 +842,7 @@ def classify_application_document(
 ):
     try:
         require_application_access(user, application_id, "STUDENT")
-        result = classify_document(document_id)
+        result = classify_document(document_id, application_id)
 
         if result.get("application_id") != application_id:
             raise HTTPException(
@@ -536,6 +851,12 @@ def classify_application_document(
             )
 
         return result
+
+    except DocumentNotFoundError as e:
+        raise HTTPException(
+            status_code=404,
+            detail=str(e),
+        ) from e
 
     except ValueError as e:
         raise HTTPException(
@@ -563,13 +884,60 @@ def classify_application_document(
 def retrieve_application_ordinance(
     application_id: int,
     user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
 ):
     try:
         require_application_access(user, application_id)
-        return retrieve_ordinance_for_application(
-            application_id
+        application = get_application(application_id)
+        if application is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Application not found.",
+            )
+        identity = resolve_programme_identity(
+            application["applicant_identifier"],
+            identity_provider,
         )
+        if identity.status != "VERIFIED":
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": f"PROGRAMME_IDENTITY_{identity.status}",
+                    "message": (
+                        "A verified programme identity is required before "
+                        "retrieving application-specific ordinance rules."
+                    ),
+                },
+            )
+        policy = resolve_application_policy(
+            application["application_type"],
+            identity.programme,
+            load_application_policy_registry(),
+        )
+        if policy["status"] != "RESOLVED":
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": f"APPLICATION_POLICY_{policy['status']}",
+                    "message": (
+                        "No approved application-type-to-policy mapping is "
+                        "configured for this application."
+                    ),
+                },
+            )
+        result = retrieve_ordinance_for_application(
+            application_id,
+            programme=policy["application_type"]["programme"],
+            source_ids=policy["application_type"]["source_ids"],
+        )
+        result["policy_source_ids"] = policy["application_type"]["source_ids"]
+        return result
 
+    except KnowledgeRetrievalUnavailable as error:
+        raise HTTPException(
+            status_code=503,
+            detail={"code": error.code, "message": error.message},
+        ) from error
     except ValueError as e:
         raise HTTPException(
             status_code=400,
@@ -614,6 +982,27 @@ def analyze_application(application_id: int, user: CurrentUser):
             status_code=500,
             detail=str(e),
         )
+
+
+@router.get(
+    "/applications/{application_id}/eligibility/results"
+)
+def get_application_eligibility_results(
+    application_id: int,
+    user: CurrentUser,
+):
+    try:
+        require_application_access(user, application_id)
+        return get_stored_eligibility_results(application_id)
+    except ValueError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+    except HTTPException:
+        raise
+    except Exception as error:
+        raise HTTPException(
+            status_code=500,
+            detail=str(error),
+        ) from error
 
 
 # ============================================================
@@ -748,6 +1137,7 @@ def assign_application_to_committee(
         return assign_to_committee(
             application_id=application_id,
             committee_type=request.committee_type,
+            assigned_by=user.username,
         )
 
     except ValueError as e:
@@ -926,11 +1316,17 @@ def generate_application_analysis_endpoint(
 def process_application_endpoint(
     application_id: int,
     user: CurrentUser,
+    identity_provider=Depends(get_programme_identity_provider),
 ):
     try:
         require_application_access(user, application_id, "OFFICIAL")
-        return process_application(application_id)
+        return process_application(application_id, identity_provider)
 
+    except ApplicationProcessingUnavailable as error:
+        raise HTTPException(
+            status_code=409,
+            detail={"code": error.code, "message": error.message},
+        ) from error
     except ValueError as e:
         raise HTTPException(
             status_code=404,

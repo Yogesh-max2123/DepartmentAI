@@ -4,8 +4,16 @@ import fitz
 
 from backend.database.connection import get_connection
 
+MAX_DOCUMENT_SIZE_BYTES = 10 * 1024 * 1024
+MAX_PDF_PAGES = 100
+MAX_EXTRACTED_TEXT_CHARS = 1_000_000
 
-def extract_document_text(document_id):
+
+class DocumentExtractionNotFoundError(ValueError):
+    """Raised when a document is not part of the requested application."""
+
+
+def extract_document_text(document_id, application_id):
     """
     Extract text from an uploaded PDF document and store the result
     in the document_extractions table.
@@ -25,16 +33,16 @@ def extract_document_text(document_id):
                     file_path,
                     mime_type
                 FROM application_documents
-                WHERE id = %s;
+                WHERE id = %s AND application_id = %s;
                 """,
-                (document_id,),
+                (document_id, application_id),
             )
 
             document = cursor.fetchone()
 
         if document is None:
-            raise ValueError(
-                f"Document with id {document_id} does not exist."
+            raise DocumentExtractionNotFoundError(
+                "Document does not belong to this application."
             )
 
         file_path = Path(document[1])
@@ -45,8 +53,19 @@ def extract_document_text(document_id):
         # --------------------------------------------------------
         if not file_path.exists():
             raise ValueError("Document file does not exist.")
+        if not file_path.is_file():
+            raise ValueError("Document file is invalid.")
+        if file_path.stat().st_size > MAX_DOCUMENT_SIZE_BYTES:
+            raise ValueError(
+                "PDF file exceeds the 10 MiB text-extraction limit."
+            )
 
-        if mime_type != "application/pdf":
+        if file_path.suffix.lower() != ".pdf" or mime_type not in (
+            None,
+            "",
+            "application/octet-stream",
+            "application/pdf",
+        ):
             raise ValueError(
                 "Text extraction currently supports PDF documents only."
             )
@@ -54,14 +73,29 @@ def extract_document_text(document_id):
         # --------------------------------------------------------
         # 3. Extract text from PDF
         # --------------------------------------------------------
-        pdf = fitz.open(file_path)
-
-        pages = []
-
-        for page in pdf:
-            pages.append(page.get_text())
-
-        pdf.close()
+        try:
+            with fitz.open(file_path) as pdf:
+                if len(pdf) > MAX_PDF_PAGES:
+                    raise ValueError(
+                        f"PDF exceeds the {MAX_PDF_PAGES}-page "
+                        "text-extraction limit."
+                    )
+                pages = []
+                extracted_characters = 0
+                for page in pdf:
+                    page_text = page.get_text()
+                    extracted_characters += len(page_text) + (
+                        1 if pages else 0
+                    )
+                    if extracted_characters > MAX_EXTRACTED_TEXT_CHARS:
+                        raise ValueError(
+                            "PDF text exceeds the "
+                            f"{MAX_EXTRACTED_TEXT_CHARS:,}-character "
+                            "extraction limit."
+                        )
+                    pages.append(page_text)
+        except (fitz.FileDataError, fitz.EmptyFileError, RuntimeError) as error:
+            raise ValueError("PDF file is corrupt or cannot be read.") from error
 
         extracted_text = "\n".join(pages).strip()
 

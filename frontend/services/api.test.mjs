@@ -5,6 +5,7 @@ import { once } from "node:events";
 const {
   request,
   APIError,
+  analyzeApplicationReadiness,
   askQuestion,
   createApplication,
   submitApplication,
@@ -14,6 +15,7 @@ const {
   getCommitteeReviews,
   getDeficiencies,
   getEligibility,
+  getEligibilityResults,
   getOrdinanceRetrieval,
   getStatusHistory,
   extractApplicationDocument,
@@ -23,11 +25,14 @@ const {
   classifyApplicationDocument,
   uploadApplicationDocument,
   updateApplicationStatus,
+  updateApplication,
   assignApplicationToCommittee,
   updateCommitteeDecision,
   validateApplicationDocument,
   API_BASE_URL,
   getApplication,
+  getApplicationAnalysis,
+  getApplicationReadiness,
 } = await import(`file://${process.cwd()}/frontend/services/api.js`);
 
 assert.equal(API_BASE_URL, "http://127.0.0.1:8000");
@@ -67,6 +72,7 @@ if (originalLocation === undefined) {
 delete globalThis.DEPARTMENTAI_API_BASE_URL;
 
 let applicationRequest;
+let assistantRequest;
 let documentUploadRequest;
 let aiAnalysisRequest;
 const documentApiRequests = [];
@@ -103,6 +109,59 @@ const startServer = () =>
           submitted_at: null,
           created_at: "2026-01-01T00:00:00Z",
           updated_at: "2026-01-01T00:00:00Z",
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2" && req.method === "PATCH") {
+        replyWithRequest({
+          id: 2,
+          application_number: "APP-2026-00002",
+          application_type: "Updated academic request",
+          title: "Updated title",
+          description: "Updated description",
+          status: "DRAFT",
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/readiness" && req.method === "GET") {
+        replyWithRequest({
+          application_id: 2,
+          readiness_status: "RULES_UNRESOLVED",
+          is_stale: false,
+          required_documents: null,
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/analysis" && req.method === "GET") {
+        replyWithRequest({
+          schema_version: 1,
+          application_id: 2,
+          analysis_status: "RULES_UNRESOLVED",
+          freshness_status: "CURRENT",
+          readiness: {
+            readiness_status: "RULES_UNRESOLVED",
+            is_stale: false,
+          },
+          eligibility: { analysis_status: "NOT_GENERATED", results: [] },
+          eligibility_freshness: "NOT_TRACKED",
+          advisory: true,
+          formal_decision: false,
+        });
+        return;
+      }
+
+      if (
+        req.url === "/applications/2/readiness/analyze" &&
+        req.method === "POST"
+      ) {
+        replyWithRequest({
+          application_id: 2,
+          readiness_status: "RULES_UNRESOLVED",
+          required_documents: null,
+          deficiency_count: null,
         });
         return;
       }
@@ -160,6 +219,18 @@ const startServer = () =>
           application_id: 2,
           requirements_analyzed: 0,
           results: [],
+        });
+        return;
+      }
+
+      if (req.url === "/applications/2/eligibility/results") {
+        replyWithRequest({
+          application_id: 2,
+          analysis_status: "NOT_GENERATED",
+          requirements_analyzed: 0,
+          results_count: 0,
+          results: [],
+          advisory: true,
         });
         return;
       }
@@ -286,14 +357,34 @@ const startServer = () =>
         return;
       }
 
-      if (req.url === "/ask" && req.method === "POST") {
-        res.writeHead(200, { "Content-Type": "application/json" });
+      if (req.url === "/readiness-conflict") {
+        res.writeHead(409, { "Content-Type": "application/json" });
         res.end(
           JSON.stringify({
-            answer: "Test answer.",
-            sources: [],
+            detail: {
+              code: "ANALYSIS_PENDING",
+              message: "The latest readiness analysis is stale.",
+            },
           }),
         );
+        return;
+      }
+
+      if (req.url === "/ask" && req.method === "POST") {
+        let requestBody = "";
+        req.on("data", (chunk) => {
+          requestBody += chunk;
+        });
+        req.on("end", () => {
+          assistantRequest = JSON.parse(requestBody);
+          res.writeHead(200, { "Content-Type": "application/json" });
+          res.end(
+            JSON.stringify({
+              answer: "Test answer.",
+              sources: [],
+            }),
+          );
+        });
         return;
       }
 
@@ -463,6 +554,15 @@ try {
   );
 
   await assert.rejects(
+    request("/readiness-conflict", {}, baseUrl),
+    (error) =>
+      error instanceof APIError &&
+      error.status === 409 &&
+      error.message === "The latest readiness analysis is stale." &&
+      error.details.detail.code === "ANALYSIS_PENDING",
+  );
+
+  await assert.rejects(
     request("/missing", {}, baseUrl),
     (error) =>
       error instanceof APIError &&
@@ -481,10 +581,18 @@ try {
     "What is eligibility?",
     [{ role: "user", message: "Previous question" }],
     baseUrl,
+    "MTECH",
   );
   assert.deepEqual(askResponse, {
     answer: "Test answer.",
     sources: [],
+  });
+  assert.deepEqual(assistantRequest, {
+    question: "What is eligibility?",
+    conversation_history: [
+      { role: "user", message: "Previous question" },
+    ],
+    programme: "MTECH",
   });
 
   const applicationResponse = await createApplication(
@@ -515,6 +623,32 @@ try {
   const applicationRecord = await getApplication(2, baseUrl);
   assert.equal(applicationRecord.application_number, "APP-2026-00002");
   assert.equal(applicationRecord.status, "DRAFT");
+  const updatedApplication = await updateApplication(
+    2,
+    {
+      application_type: "Updated academic request",
+      title: "Updated title",
+      description: "Updated description",
+    },
+    baseUrl,
+  );
+  assert.equal(updatedApplication.status, "DRAFT");
+  assert.deepEqual(workflowApiRequests.at(-1), {
+    method: "PATCH",
+    url: "/applications/2",
+    body: {
+      application_type: "Updated academic request",
+      title: "Updated title",
+      description: "Updated description",
+    },
+  });
+  const savedReadiness = await getApplicationReadiness(2, baseUrl);
+  assert.equal(savedReadiness.readiness_status, "RULES_UNRESOLVED");
+  const savedAnalysis = await getApplicationAnalysis(2, baseUrl);
+  assert.equal(savedAnalysis.schema_version, 1);
+  assert.equal(savedAnalysis.eligibility_freshness, "NOT_TRACKED");
+  const analyzedReadiness = await analyzeApplicationReadiness(2, baseUrl);
+  assert.equal(analyzedReadiness.deficiency_count, null);
   const submittedApplication = await submitApplication(2, baseUrl);
   assert.equal(submittedApplication.new_status, "SUBMITTED");
   const unassignedApplications = await getUnassignedOfficialApplications(
@@ -525,8 +659,11 @@ try {
   const claimedApplication = await claimOfficialApplication(2, baseUrl);
   assert.equal(claimedApplication.application_id, 2);
   assert.deepEqual(
-    workflowApiRequests.slice(-3).map(({ method, url }) => ({ method, url })),
+    workflowApiRequests.slice(-6).map(({ method, url }) => ({ method, url })),
     [
+      { method: "GET", url: "/applications/2/readiness" },
+      { method: "GET", url: "/applications/2/analysis" },
+      { method: "POST", url: "/applications/2/readiness/analyze" },
       { method: "POST", url: "/applications/2/submit" },
       {
         method: "GET",
@@ -585,6 +722,9 @@ try {
   const eligibility = await getEligibility(2, baseUrl);
   assert.equal(eligibility.application_id, 2);
   assert.deepEqual(eligibility.results, []);
+  const savedEligibility = await getEligibilityResults(2, baseUrl);
+  assert.equal(savedEligibility.analysis_status, "NOT_GENERATED");
+  assert.equal(savedEligibility.advisory, true);
   const deficiencies = await getDeficiencies(2, baseUrl);
   assert.equal(deficiencies.application_id, 2);
   assert.deepEqual(deficiencies.deficiencies, []);
@@ -651,6 +791,30 @@ try {
       body: null,
     },
     {
+      method: "PATCH",
+      url: "/applications/2",
+      body: {
+        application_type: "Updated academic request",
+        title: "Updated title",
+        description: "Updated description",
+      },
+    },
+    {
+      method: "GET",
+      url: "/applications/2/readiness",
+      body: null,
+    },
+    {
+      method: "GET",
+      url: "/applications/2/analysis",
+      body: null,
+    },
+    {
+      method: "POST",
+      url: "/applications/2/readiness/analyze",
+      body: null,
+    },
+    {
       method: "POST",
       url: "/applications/2/submit",
       body: null,
@@ -673,6 +837,11 @@ try {
     {
       method: "GET",
       url: "/applications/2/eligibility",
+      body: null,
+    },
+    {
+      method: "GET",
+      url: "/applications/2/eligibility/results",
       body: null,
     },
     {
@@ -726,7 +895,7 @@ try {
   ]);
 
   console.log(
-    "api contract tests passed: JSON, multipart, application reads, documents, academic review, M09, and M11-M13 helpers",
+    "api contract tests passed: JSON, multipart, application readiness, documents, academic review, M09, and M11-M13 helpers",
   );
 } finally {
   server.close();

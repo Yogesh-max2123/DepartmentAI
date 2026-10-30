@@ -55,6 +55,24 @@ def test_valid_pace_of_study_question():
     assert result["reason"] == ""
 
 
+def test_valid_masters_ordinance_question():
+    result = validate_question(
+        "What does the M.Tech. ordinance say about thesis submission?"
+    )
+
+    assert result["allowed"] is True
+    assert result["reason"] == ""
+
+
+def test_valid_doctoral_ordinance_question():
+    result = validate_question(
+        "What does the doctoral ordinance say about comprehensive examination?"
+    )
+
+    assert result["allowed"] is True
+    assert result["reason"] == ""
+
+
 def test_official_decision_request():
     result = validate_question(
         "Should my application be approved?"
@@ -105,6 +123,8 @@ if __name__ == "__main__":
     test_valid_admission_question()
     test_valid_deficiency_question()
     test_valid_pace_of_study_question()
+    test_valid_masters_ordinance_question()
+    test_valid_doctoral_ordinance_question()
     test_official_decision_request()
     test_out_of_scope_question()
     test_weather_question()

@@ -1,15 +1,20 @@
 from datetime import datetime
+import json
 
 from backend.database.connection import get_connection
 from backend.services.application_service import get_application
-from backend.services.audit_service import log_action
 
 
 VALID_COMMITTEES = {"DUGC", "DMPC", "DDPC"}
 VALID_DECISIONS = {"APPROVED", "REJECTED"}
 
 
-def assign_to_committee(application_id: int, committee_type: str):
+def assign_to_committee(
+    application_id: int,
+    committee_type: str,
+    *,
+    assigned_by: str,
+):
     """
     Assign an application to an academic committee.
 
@@ -44,6 +49,20 @@ def assign_to_committee(application_id: int, committee_type: str):
 
     try:
         with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT 1
+                FROM committee_memberships
+                WHERE committee_type = %s
+                LIMIT 1;
+                """,
+                (committee_type,),
+            )
+            if cursor.fetchone() is None:
+                raise ValueError(
+                    f"No members are configured for {committee_type}; "
+                    "the application cannot be assigned to that committee."
+                )
 
             # Prevent duplicate active committee assignments.
             cursor.execute(
@@ -81,20 +100,30 @@ def assign_to_committee(application_id: int, committee_type: str):
             )
 
             row = cursor.fetchone()
+            cursor.execute(
+                """
+                INSERT INTO audit_logs (
+                    application_id,
+                    actor_type,
+                    actor_id,
+                    action,
+                    details
+                )
+                VALUES (%s, 'OFFICIAL', %s, 'COMMITTEE_ASSIGNED', %s);
+                """,
+                (
+                    application_id,
+                    assigned_by,
+                    json.dumps(
+                        {
+                            "committee_type": committee_type,
+                            "review_status": "PENDING",
+                        }
+                    ),
+                ),
+            )
 
         conn.commit()
-
-        # Record committee assignment in the audit trail.
-        log_action(
-            application_id=application_id,
-            actor_type="SYSTEM",
-            actor_id="SYSTEM",
-            action="COMMITTEE_ASSIGNED",
-            details={
-                "committee_type": committee_type,
-                "review_status": "PENDING",
-            },
-        )
 
         return {
             "id": row[0],
@@ -305,6 +334,32 @@ def record_committee_decision(
 
             history_id = cursor.fetchone()[0]
 
+            cursor.execute(
+                """
+                INSERT INTO audit_logs (
+                    application_id,
+                    actor_type,
+                    actor_id,
+                    action,
+                    details
+                )
+                VALUES (%s, 'COMMITTEE', %s, 'COMMITTEE_DECISION_RECORDED', %s);
+                """,
+                (
+                    application_id,
+                    decided_by.strip(),
+                    json.dumps(
+                        {
+                            "review_id": review_id,
+                            "committee_type": committee_type,
+                            "decision": decision,
+                            "decision_reason": decision_reason.strip(),
+                            "status_history_id": history_id,
+                        }
+                    ),
+                ),
+            )
+
             # Fetch the completed review.
             cursor.execute(
                 """
@@ -327,21 +382,6 @@ def record_committee_decision(
             completed_review = cursor.fetchone()
 
         conn.commit()
-
-        # Record the human committee decision in the audit trail.
-        log_action(
-            application_id=application_id,
-            actor_type="COMMITTEE",
-            actor_id=decided_by.strip(),
-            action="COMMITTEE_DECISION_RECORDED",
-            details={
-                "review_id": review_id,
-                "committee_type": committee_type,
-                "decision": decision,
-                "decision_reason": decision_reason.strip(),
-                "status_history_id": history_id,
-            },
-        )
 
         return {
             "review": {

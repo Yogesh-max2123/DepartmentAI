@@ -1,7 +1,7 @@
 # Frontend / Backend Gaps and Verification Limits
 
-**Checked:** 2026-10-25
-**Overall:** Supported local synthetic workflows are authenticated and verified in isolated databases. Institutional identity/database access and deployment with real data remain blocked.
+**Checked:** 2026-10-26
+**Overall:** Supported local synthetic workflows are authenticated and verified in isolated databases. The Assistant has source-isolated UG, M.Tech/Masters, and Ph.D. ordinance retrieval; programme-specific application workflows, institutional identity/database access, and deployment with real data remain blocked.
 
 **Identity policy:** The role selector only selects a sign-in form; it cannot grant permissions. Local development/test accounts authenticate against bcrypt hashes and server-side bearer sessions, with application scope enforced by the backend. This is not an institutional identity provider. Trusted student, Official, and committee provisioning remains an external capability.
 
@@ -9,7 +9,26 @@
 
 The previously reported missing Student-to-Official handoff is resolved for the local synthetic workflow. A Student explicitly submits an owned draft; submitted records appear in a shared Official queue, and the first Official to claim one becomes its assigned processor. The backend integration test verifies submission/history/audit, queue visibility, wrong-role and ownership denial, assignment visibility, and conflict on a repeated claim. This local workflow does not resolve institutional identity, trusted provisioning, or production routing policy. Older queue and route inventories below describe historical snapshots unless explicitly updated.
 
-## Current implementation and verification — 2026-10-25
+## Programme ordinance scope — 2026-10-26
+
+- The existing Academic Assistant supports a user-selected, source-filtered
+  scope for UG, M.Tech/Masters, or Ph.D. Source isolation was exercised against
+  the local `departmentai_dev` database. The API request validation and
+  forwarding behavior are covered by focused tests with answer generation
+  stubbed.
+- This scope is not a trusted student-programme field. The application
+  workflow still uses generic free-text application types and explicit
+  Official committee assignment; it does not enforce programme-specific
+  categories, eligibility, required documents, or DUGC/DMPC/DDPC routing.
+- The supplied references do not establish the missing workflow policy.
+  Synthetic committee datasets were excluded. PGD has no configured corpus
+  and is rejected by `/ask`.
+- No external AI answer-generation request or live authenticated browser
+  Assistant request was made during this integration. See the
+  [Module 1 coverage audit](./MODULE1_PROGRAMME_COVERAGE_AUDIT.md) for evidence
+  and the full capability matrix.
+
+## Previous implementation and verification snapshot — 2026-10-25
 
 - **Analysis schema repair — 2026-10-25:** Added the five local-only tables required by the existing eligibility, deficiency, document-extraction, and AI-analysis services (`document_extractions`, `application_requirements`, `eligibility_results`, `deficiencies`, and `ai_analyses`) to the additive initializer. The development and test profiles each initialized exactly five missing tables; a repeat development initialization created zero. No institutional database was selected or changed.
 - Browser verification against synthetic development application ID 3: `GET /applications/3/eligibility` returned HTTP 200 with zero requirements/results; `GET /applications/3/deficiencies` returned HTTP 200 with zero findings; `POST /applications/3/ai-analysis` returned HTTP 200, persisted analysis ID 1, and displayed an advisory result. The last action made a real configured Gemini request using only the synthetic fixture context. The local knowledge base and application evidence were empty, so the result explicitly stated insufficient ordinance context.

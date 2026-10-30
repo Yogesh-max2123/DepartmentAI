@@ -20,6 +20,9 @@ globalThis.fetch = async (url, options = {}) => {
           username: "synthetic.student",
           role,
           subject_identifier: "SYNTHETIC-STUDENT",
+          programme_identity_status:
+            role === "STUDENT" ? "NOT_CONFIGURED" : null,
+          verified_programme: null,
         },
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
@@ -31,6 +34,9 @@ globalThis.fetch = async (url, options = {}) => {
         username: "synthetic.student",
         role,
         subject_identifier: "SYNTHETIC-STUDENT",
+        programme_identity_status:
+          role === "STUDENT" ? "NOT_CONFIGURED" : null,
+        verified_programme: null,
       }),
       { status: 200, headers: { "Content-Type": "application/json" } },
     );
@@ -48,6 +54,8 @@ formData.set("password", "synthetic-password");
 const user = await loginUser("STUDENT", formData);
 assert.equal(user.role, "STUDENT");
 assert.equal(getCurrentUser().identifier, "SYNTHETIC-STUDENT");
+assert.equal(getCurrentUser().programmeIdentityStatus, "NOT_CONFIGURED");
+assert.equal(getCurrentUser().verifiedProgramme, null);
 assert.equal(stored.get("departmentai.access-token"), "synthetic-test-token");
 
 const { request, clearAccessToken } = await import(
@@ -64,6 +72,7 @@ const { restoreSession } = await import(
 );
 const restored = await restoreSession();
 assert.equal(restored.username, "synthetic.student");
+assert.equal(restored.programmeIdentityStatus, "NOT_CONFIGURED");
 assert.equal(calls.at(-1).url, "http://127.0.0.1:8000/auth/me");
 
 await logoutUser();

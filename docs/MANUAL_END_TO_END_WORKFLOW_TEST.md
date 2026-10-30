@@ -214,3 +214,91 @@ Remove-Item Env:DEPARTMENTAI_SEED_STUDENT_PASSWORD -ErrorAction SilentlyContinue
 Remove-Item Env:DEPARTMENTAI_SEED_OFFICIAL_PASSWORD -ErrorAction SilentlyContinue
 Remove-Item Env:DEPARTMENTAI_SEED_DUGC_PASSWORD -ErrorAction SilentlyContinue
 ```
+
+## 9. Prompt 4 isolated test-profile browser acceptance
+
+This checklist records the authenticated browser-to-backend acceptance run
+completed on 2026-10-28. It is separate from the `departmentai_dev` demo above:
+use only `DEPARTMENTAI_DATABASE_ENV=test`, the loopback `departmentai_test`
+database, and services bound to `127.0.0.1`. Confirm the frontend uses
+`http://127.0.0.1:8002` and the API permits only the frontend's exact loopback
+origin. Do not use the institutional profile, real student data, or production
+policy to make a check pass.
+
+The positive-readiness path requires the existing integration-test synthetic
+identity and application-policy fixture, installed only in the local test API
+process, plus its approved UG fixture chunk. These runtime overrides are not
+default configuration and must never be copied into a development or
+institutional profile. If the test fixture is unavailable, skip the positive
+path rather than weakening a policy or identity gate.
+
+### Student default blocked path
+
+1. Sign in with a temporary synthetic Student account in the isolated test DB.
+2. With no identity provider or application-type policy override, create a
+   synthetic unmapped draft and upload only synthetic evidence.
+3. Check readiness and confirm unresolved policy/identity evidence is surfaced
+   as blockers; Submit remains disabled.
+4. Send the authenticated submit action once and confirm HTTP 409. Reload the
+   persisted application and confirm its status remains `DRAFT`.
+
+### Student test-only positive path
+
+1. Start a fresh synthetic UG application while the test-only identity,
+   policy, and knowledge fixture are active.
+2. Confirm readiness reports `READY`, `RESOLVED` policy, verified UG identity,
+   and no blockers. The browser enables Submit only after this backend result.
+3. Submit through the frontend. Confirm HTTP 200, then verify the reloaded
+   persisted record says `SUBMITTED`; do not infer success from the button
+   click or an optimistic UI update.
+4. Use a second synthetic Student account to request the first Student's
+   application and document list. Both requests should return HTTP 404, and
+   the second Student's own list should not contain that application.
+5. As the owning Student, attempt another upload after submission. Expect HTTP
+   409 and confirm the persisted document list is unchanged.
+
+### Official and DUGC review path
+
+1. Sign in as an Official and confirm the submitted application appears in the
+   unassigned queue. Claim it and verify it moves to the assigned view.
+2. Open the saved application analysis and confirm it is labeled advisory,
+   current, and not a formal decision. Advance through only the statuses
+   offered by the backend, verifying the refreshed status and history after
+   each action. Assign the application to a configured test committee.
+3. Sign in as a member of that committee and confirm the assigned review is
+   visible. An invalid decision must return HTTP 400 and leave the review
+   `PENDING` and the application unchanged.
+4. Record a valid `APPROVED` or `REJECTED` human decision with a rationale.
+   Confirm HTTP 200, the review becomes `COMPLETED`, and refreshed application
+   details and history show the persisted human decision.
+5. Attempt a committee assignment for a committee with no configured members.
+   Confirm the API rejects it and does not replace the existing pending
+   review.
+
+### Governance fail-closed checks
+
+1. As a synthetic DUGC member, create a meeting proposal, submit availability,
+   and search/select a candidate slot. Confirm the proposal remains
+   `PROPOSED`; selection is not confirmation.
+2. Confirm notice output is a draft preview and `NOT_SENT` when the
+   notification provider is unconfigured.
+3. Attempt approval with an unconfigured workflow policy and minutes creation
+   before confirmation. Both should be rejected without a state change.
+4. Confirm hidden approval, confirmation, minutes, and sign-off controls are
+   not visible when their policy or state prerequisites are unmet.
+
+### Clean up the isolated acceptance run
+
+Stop only the frontend and API processes started for this test. Remove only
+the exact temporary test accounts, applications, meeting/availability rows,
+fixture knowledge rows, uploaded synthetic file, and runtime fixture files
+created by the run. Do not remove the whole application-document directory;
+it may contain unrelated files. Verify the pre-existing committee membership
+baseline is preserved and ports 5500 and 8002 are no longer listening. Record
+the actual regression results and blockers in [PROJECT_STATE.md](../PROJECT_STATE.md).
+
+Acceptance result: both Student paths, Official claim/status processing,
+DUGC decision and policy-gated governance checks were exercised against the
+real frontend and API using only `departmentai_test`. The test-only positive
+path does not represent institutional identity, approved production policy,
+committee provisioning, or deployment readiness.

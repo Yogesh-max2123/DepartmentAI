@@ -5,7 +5,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.auth_routes import router as auth_router
+from backend.api.governance_routes import router as governance_router
 from backend.api.routes import router
+from module2.api import router as module2_router
 
 
 LOCAL_CORS_ORIGINS = (
@@ -72,8 +74,10 @@ app.add_middleware(
     allow_origins=get_cors_origins(),
     allow_credentials=False,
     allow_methods=["GET", "POST", "PATCH", "OPTIONS"],
-    allow_headers=["Authorization", "Content-Type"],
+    allow_headers=["Authorization", "Content-Type", "Idempotency-Key"],
 )
 
 app.include_router(auth_router)
 app.include_router(router)
+app.include_router(governance_router)
+app.include_router(module2_router)

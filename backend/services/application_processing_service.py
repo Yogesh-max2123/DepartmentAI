@@ -1,79 +1,142 @@
+from backend.database.connection import get_connection
 from backend.services.application_service import get_application
-from backend.services.requirement_extractor import (
-    extract_application_requirements,
+from backend.services.application_policy_registry import (
+    load_application_policy_registry,
+    resolve_application_policy,
 )
-from backend.services.eligibility_engine import (
-    analyze_application_eligibility,
+from backend.services.document_classifier import DocumentNotFoundError, classify_document
+from backend.services.document_extractor import extract_document_text
+from backend.services.document_validator import validate_document
+from backend.services.application_readiness_service import (
+    _load_current_snapshot,
 )
-from backend.services.deficiency_detector import (
-    detect_application_deficiencies,
-)
-from backend.services.ai_analysis_service import (
-    generate_application_analysis,
-)
+from backend.services.programme_identity import resolve_programme_identity
 
 
-def process_application(application_id):
-    """
-    Run the complete AI-assisted application processing pipeline.
+class ApplicationProcessingUnavailable(ValueError):
+    def __init__(self, code, message):
+        super().__init__(message)
+        self.code = code
+        self.message = message
 
-    Processing order:
-    1. Extract applicable ordinance requirements
-    2. Analyze eligibility against those requirements
-    3. Detect potential deficiencies
-    4. Generate an AI-assisted application analysis
 
-    This service only orchestrates existing services.
-    It does not make or record a final academic decision.
-    Final approval or rejection must be made by authorized
-    officials or the appropriate committee.
-    """
+def process_application_documents(application_id):
+    """Validate, classify, and extract supported uploaded documents."""
+    conn = get_connection()
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT id
+                FROM application_documents
+                WHERE application_id = %s
+                ORDER BY id;
+                """,
+                (application_id,),
+            )
+            documents = cursor.fetchall()
+    finally:
+        conn.close()
 
-    # ---------------------------------------------------------
-    # 0. Verify application exists
-    # ---------------------------------------------------------
+    results = []
+    for (document_id,) in documents:
+        validation = validate_document(document_id)
+        if not validation["valid"]:
+            results.append(
+                {
+                    "document_id": document_id,
+                    "valid": False,
+                    "classification_status": "NOT_RUN",
+                    "extraction_status": "NOT_RUN",
+                    "reason": validation["reason"],
+                }
+            )
+            continue
+
+        try:
+            classification = classify_document(document_id, application_id)
+        except DocumentNotFoundError:
+            raise
+        except ValueError as error:
+            results.append(
+                {
+                    "document_id": document_id,
+                    "valid": False,
+                    "classification_status": "NOT_RUN",
+                    "extraction_status": "NOT_RUN",
+                    "reason": str(error),
+                }
+            )
+            continue
+
+        extraction = (
+            extract_document_text(document_id, application_id)
+            if classification["classification_method"] == "pdf_text"
+            else {
+                "document_id": document_id,
+                "extraction_status": "NOT_SUPPORTED",
+                "text_length": 0,
+            }
+        )
+        results.append(
+            {
+                "document_id": document_id,
+                "valid": True,
+                "classification_status": classification[
+                    "classification_status"
+                ],
+                "document_type": classification["document_type"],
+                "extraction_status": extraction["extraction_status"],
+                "text_length": extraction["text_length"],
+                "reason": classification["reason"],
+            }
+        )
+
+    return {
+        "application_id": application_id,
+        "documents_processed": len(results),
+        "documents": results,
+    }
+
+
+def process_application(application_id, identity_provider=None):
     application = get_application(application_id)
-
     if application is None:
         raise ValueError(
             f"Application with id {application_id} does not exist."
         )
-
-    # ---------------------------------------------------------
-    # 1. Extract application requirements
-    # ---------------------------------------------------------
-    requirements_result = extract_application_requirements(
-        application_id
+    snapshot = _load_current_snapshot(
+        application_id,
+        identity_provider=identity_provider,
     )
+    identity = snapshot["programme_identity"]
+    if identity["status"] != "VERIFIED":
+        raise ApplicationProcessingUnavailable(
+            "PROGRAMME_IDENTITY_" + identity["status"],
+            "Integrated processing is blocked because trusted programme "
+            "identity is not verified. No legacy default-programme retrieval "
+            "or analysis was run.",
+        )
 
-    # ---------------------------------------------------------
-    # 2. Analyze eligibility
-    # ---------------------------------------------------------
-    eligibility_result = analyze_application_eligibility(
-        application_id
+    registry = load_application_policy_registry()
+    policy = resolve_application_policy(
+        snapshot["application_type"],
+        identity["programme"],
+        registry,
     )
+    if policy["status"] != "RESOLVED":
+        raise ApplicationProcessingUnavailable(
+            "APPLICATION_POLICY_" + policy["status"],
+            "Integrated processing is blocked because no approved "
+            "application-type policy is available for this verified "
+            "programme. No legacy default-programme retrieval or analysis "
+            "was run.",
+        )
 
-    # ---------------------------------------------------------
-    # 3. Detect deficiencies
-    # ---------------------------------------------------------
-    deficiency_result = detect_application_deficiencies(
-        application_id
+    raise ApplicationProcessingUnavailable(
+        "UNIFIED_PROCESSING_NOT_AVAILABLE",
+        "Official-side reprocessing is disabled until the policy-aware "
+        "analysis workflow is approved for this application type. The "
+        "Official workspace can read the saved Student readiness analysis "
+        "and advisory results without regenerating them.",
     )
-
-    # ---------------------------------------------------------
-    # 4. Generate AI-assisted application analysis
-    # ---------------------------------------------------------
-    analysis_result = generate_application_analysis(
-        application_id
-    )
-
-    # ---------------------------------------------------------
-    # 5. Return complete processing result
-    # ---------------------------------------------------------
-    return {
-        "application_id": application_id,
-        "requirements": requirements_result,
-        "eligibility": eligibility_result,
-        "deficiencies": deficiency_result,
-        "ai_analysis": analysis_result,
-    }

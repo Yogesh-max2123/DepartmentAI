@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import uuid
 
 from backend.database.connection import get_connection
 
@@ -15,6 +16,10 @@ ALLOWED_EXTENSIONS = {
     ".jpeg",
     ".png",
 }
+
+
+class DocumentUploadStateError(ValueError):
+    """Raised when an upload is attempted after draft editing has ended."""
 
 
 def upload_document(
@@ -40,9 +45,10 @@ def upload_document(
         with conn.cursor() as cursor:
             cursor.execute(
                 """
-                SELECT application_number
+                SELECT application_number, status
                 FROM applications
-                WHERE id = %s;
+                WHERE id = %s
+                FOR UPDATE;
                 """,
                 (application_id,),
             )
@@ -55,6 +61,13 @@ def upload_document(
                 )
 
             application_number = application[0]
+            application_status = application[1]
+
+            if application_status != "DRAFT":
+                raise DocumentUploadStateError(
+                    "Documents can only be uploaded while the application "
+                    "is in DRAFT status."
+                )
 
         # --------------------------------------------------------
         # 2. Validate file extension
@@ -88,7 +101,8 @@ def upload_document(
         if not safe_file_name:
             raise ValueError("Invalid file name.")
 
-        file_path = application_directory / safe_file_name
+        storage_file_name = f"{uuid.uuid4().hex}{extension}"
+        file_path = application_directory / storage_file_name
 
         # --------------------------------------------------------
         # 5. Store the physical file

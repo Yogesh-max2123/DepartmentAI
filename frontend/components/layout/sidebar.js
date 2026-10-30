@@ -67,6 +67,11 @@ const navigationByRole = {
       section: "Governance",
       items: [
         {
+          page: "governance-meetings",
+          label: "Schedule Meetings",
+          icon: "◷",
+        },
+        {
           page: "committee",
           label: "Committee Workspace",
           icon: "◇",
@@ -129,10 +134,42 @@ const navigationByRole = {
   ],
 };
 
-export function renderSidebar(activePage = "dashboard", currentUser = null) {
+const module2NavigationPermissions = new Set([
+  "module2.faculty.read",
+  "module2.research.read",
+  "module2.research.statistics.read",
+  "module2.export.faculty_profiles",
+  "module2.export.publications",
+]);
+
+export function renderSidebar(
+  activePage = "dashboard",
+  currentUser = null,
+  module2Permissions = [],
+) {
   const role = currentUser?.role || "STUDENT";
 
-  const navigation = navigationByRole[role] || navigationByRole.STUDENT;
+  const navigation = [
+    ...(navigationByRole[role] || navigationByRole.STUDENT),
+  ];
+  const canAccessModule2 =
+    currentUser &&
+    Array.isArray(module2Permissions) &&
+    module2Permissions.some((permission) =>
+      module2NavigationPermissions.has(permission),
+    );
+  if (canAccessModule2) {
+    navigation.push({
+      section: "Module II",
+      items: [
+        {
+          page: "module2",
+          label: "Faculty & Research",
+          icon: "▤",
+        },
+      ],
+    });
+  }
 
   return `
         <div class="sidebar">

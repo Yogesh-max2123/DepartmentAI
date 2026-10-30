@@ -1,6 +1,7 @@
 export function renderStudentDashboard(currentUser = null) {
   const studentName = currentUser?.name?.trim() || "";
   const registrationNumber = currentUser?.identifier?.trim() || "";
+  const programmeNotice = renderProgrammeIdentityNotice(currentUser);
   const identity = [studentName, registrationNumber]
     .filter(Boolean)
     .map(escapeHTML);
@@ -31,6 +32,8 @@ export function renderStudentDashboard(currentUser = null) {
             : ""
         }
       </header>
+
+      ${programmeNotice}
 
       <section class="dashboard-overview" aria-labelledby="application-overview-title">
         <div>
@@ -108,6 +111,31 @@ export function renderStudentDashboard(currentUser = null) {
         </button>
       </aside>
     </section>
+  `;
+}
+
+function renderProgrammeIdentityNotice(currentUser) {
+  const status = currentUser?.programmeIdentityStatus;
+  const programme = currentUser?.verifiedProgramme;
+
+  if (status === "VERIFIED" && typeof programme === "string" && programme) {
+    return `
+      <aside class="programme-identity-notice programme-identity-verified" role="status">
+        <strong>Verified programme: ${escapeHTML(programme)}</strong>
+        <span>This programme was supplied by the authenticated profile.</span>
+      </aside>
+    `;
+  }
+
+  return `
+    <aside class="programme-identity-notice" role="status">
+      <strong>Programme identity is not verified</strong>
+      <span>
+        This deployment has no approved student-profile provisioning source.
+        Programme-specific eligibility and committee routing are unavailable;
+        there is no self-service profile correction action.
+      </span>
+    </aside>
   `;
 }
 

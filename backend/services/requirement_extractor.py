@@ -2,7 +2,7 @@ from backend.database.connection import get_connection
 from backend.services.application_retrieval import retrieve_ordinance_for_application
 
 
-def extract_application_requirements(application_id):
+def extract_application_requirements(application_id, programme):
     """
     Identify and store applicable ordinance requirements
     for an application.
@@ -11,7 +11,7 @@ def extract_application_requirements(application_id):
     AI does not make a final academic decision.
     """
 
-    retrieved = retrieve_ordinance_for_application(application_id)
+    retrieved = retrieve_ordinance_for_application(application_id, programme)
     results = retrieved["results"]
 
     if not results:

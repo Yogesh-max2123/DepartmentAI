@@ -1,0 +1,66 @@
+.governance-workspace {
+  display: grid;
+  gap: 16px;
+}
+
+.governance-workspace [hidden] {
+  display: none !important;
+}
+
+.governance-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.governance-form label,
+.governance-workspace > .content-panel > label {
+  display: grid;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.governance-form input,
+.governance-form select,
+.governance-form textarea,
+.governance-workspace select {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.governance-form textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.governance-form button {
+  justify-self: start;
+  align-self: end;
+}
+
+.governance-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.governance-meeting-link {
+  width: 100%;
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .governance-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

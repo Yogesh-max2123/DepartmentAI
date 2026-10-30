@@ -1,4 +1,4 @@
-from typing import Annotated
+from typing import Annotated, Literal
 
 import psycopg
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -14,6 +14,11 @@ from backend.services.auth_service import (
     resolve_session,
     revoke_session,
 )
+from backend.services.local_demo import (
+    LocalDemoProgrammeIdentityProvider,
+    local_demo_enabled,
+)
+from backend.services.programme_identity import resolve_programme_identity
 
 
 router = APIRouter()
@@ -29,6 +34,14 @@ class AuthenticatedUserResponse(BaseModel):
     username: str
     role: str
     subject_identifier: str
+    programme_identity_status: Literal[
+        "VERIFIED",
+        "UNVERIFIED",
+        "NOT_CONFIGURED",
+        "UNAVAILABLE",
+        "CONFLICT",
+    ] | None = None
+    verified_programme: str | None = None
 
 
 class LoginResponse(BaseModel):
@@ -38,11 +51,34 @@ class LoginResponse(BaseModel):
     user: AuthenticatedUserResponse
 
 
-def _user_response(user: AuthenticatedUser) -> AuthenticatedUserResponse:
+def get_programme_identity_provider():
+    if local_demo_enabled():
+        return LocalDemoProgrammeIdentityProvider()
+    return None
+
+
+def _user_response(
+    user: AuthenticatedUser,
+    identity_provider=None,
+) -> AuthenticatedUserResponse:
+    identity = (
+        resolve_programme_identity(
+            user.subject_identifier,
+            identity_provider,
+        )
+        if user.role == "STUDENT"
+        else None
+    )
     return AuthenticatedUserResponse(
         username=user.username,
         role=user.role,
         subject_identifier=user.subject_identifier,
+        programme_identity_status=identity.status if identity else None,
+        verified_programme=(
+            identity.programme
+            if identity and identity.status == "VERIFIED"
+            else None
+        ),
     )
 
 
@@ -82,7 +118,10 @@ def get_current_user(
 
 
 @router.post("/auth/login", response_model=LoginResponse)
-def login(request: LoginRequest):
+def login(
+    request: LoginRequest,
+    identity_provider=Depends(get_programme_identity_provider),
+):
     try:
         result = authenticate_user(request.username, request.password)
     except (RuntimeError, ValueError) as error:
@@ -107,13 +146,16 @@ def login(request: LoginRequest):
     return LoginResponse(
         access_token=token,
         expires_in=int(SESSION_LIFETIME.total_seconds()),
-        user=_user_response(user),
+        user=_user_response(user, identity_provider),
     )
 
 
 @router.get("/auth/me", response_model=AuthenticatedUserResponse)
-def current_user(user: Annotated[AuthenticatedUser, Depends(get_current_user)]):
-    return _user_response(user)
+def current_user(
+    user: Annotated[AuthenticatedUser, Depends(get_current_user)],
+    identity_provider=Depends(get_programme_identity_provider),
+):
+    return _user_response(user, identity_provider)
 
 
 @router.post("/auth/logout", status_code=status.HTTP_204_NO_CONTENT)

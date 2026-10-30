@@ -180,6 +180,117 @@ CREATE TABLE IF NOT EXISTS deficiencies (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS governance_meetings (
+    id SERIAL PRIMARY KEY,
+    committee_type TEXT NOT NULL CHECK (
+        committee_type IN ('DUGC', 'DMPC', 'DDPC')
+    ),
+    organizer_user_id INTEGER NOT NULL REFERENCES auth_users(id),
+    title TEXT NOT NULL,
+    purpose TEXT NOT NULL,
+    proposed_start TIMESTAMPTZ NOT NULL,
+    proposed_end TIMESTAMPTZ NOT NULL,
+    duration_minutes INTEGER NOT NULL CHECK (
+        duration_minutes BETWEEN 30 AND 240
+    ),
+    proposed_slot_start TIMESTAMPTZ,
+    status TEXT NOT NULL DEFAULT 'PROPOSED' CHECK (
+        status IN (
+            'PROPOSED',
+            'APPROVED_PENDING_CONFIRMATIONS',
+            'CONFIRMED',
+            'CANCELLED'
+        )
+    ),
+    agenda JSONB NOT NULL DEFAULT '[]'::jsonb,
+    idempotency_key TEXT,
+    request_fingerprint TEXT,
+    approved_by INTEGER REFERENCES auth_users(id),
+    approved_at TIMESTAMPTZ,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CHECK (proposed_end > proposed_start),
+    UNIQUE (organizer_user_id, idempotency_key)
+);
+
+CREATE TABLE IF NOT EXISTS meeting_member_availability (
+    id SERIAL PRIMARY KEY,
+    committee_type TEXT NOT NULL CHECK (
+        committee_type IN ('DUGC', 'DMPC', 'DDPC')
+    ),
+    user_id INTEGER NOT NULL REFERENCES auth_users(id) ON DELETE CASCADE,
+    available_from TIMESTAMPTZ NOT NULL,
+    available_until TIMESTAMPTZ NOT NULL,
+    availability TEXT NOT NULL CHECK (
+        availability IN ('AVAILABLE', 'UNAVAILABLE')
+    ),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CHECK (available_until > available_from),
+    UNIQUE (committee_type, user_id, available_from, available_until)
+);
+
+CREATE TABLE IF NOT EXISTS meeting_confirmations (
+    meeting_id INTEGER NOT NULL
+        REFERENCES governance_meetings(id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL REFERENCES auth_users(id) ON DELETE CASCADE,
+    response TEXT NOT NULL CHECK (response IN ('CONFIRMED', 'DECLINED')),
+    responded_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (meeting_id, user_id)
+);
+
+CREATE TABLE IF NOT EXISTS meeting_application_links (
+    meeting_id INTEGER NOT NULL
+        REFERENCES governance_meetings(id) ON DELETE CASCADE,
+    application_id INTEGER NOT NULL
+        REFERENCES applications(id) ON DELETE CASCADE,
+    agenda_item_index INTEGER NOT NULL CHECK (agenda_item_index >= 0),
+    PRIMARY KEY (meeting_id, application_id, agenda_item_index)
+);
+
+CREATE TABLE IF NOT EXISTS meeting_records (
+    id SERIAL PRIMARY KEY,
+    meeting_id INTEGER NOT NULL
+        REFERENCES governance_meetings(id) ON DELETE CASCADE,
+    agenda_item_index INTEGER CHECK (
+        agenda_item_index IS NULL OR agenda_item_index >= 0
+    ),
+    record_type TEXT NOT NULL CHECK (
+        record_type IN ('NOTE', 'OBSERVATION', 'DECISION', 'ATTENDANCE')
+    ),
+    content TEXT NOT NULL,
+    created_by INTEGER NOT NULL REFERENCES auth_users(id),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS meeting_minutes_versions (
+    id SERIAL PRIMARY KEY,
+    meeting_id INTEGER NOT NULL
+        REFERENCES governance_meetings(id) ON DELETE CASCADE,
+    version_number INTEGER NOT NULL CHECK (version_number > 0),
+    status TEXT NOT NULL CHECK (
+        status IN ('DRAFT', 'SUBMITTED', 'FINALIZED')
+    ),
+    generation_method TEXT NOT NULL CHECK (
+        generation_method IN ('AI', 'HUMAN')
+    ),
+    content JSONB NOT NULL,
+    source_references JSONB NOT NULL DEFAULT '[]'::jsonb,
+    created_by INTEGER NOT NULL REFERENCES auth_users(id),
+    finalized_by INTEGER REFERENCES auth_users(id),
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    finalized_at TIMESTAMPTZ,
+    UNIQUE (meeting_id, version_number)
+);
+
+CREATE TABLE IF NOT EXISTS meeting_minutes_comments (
+    id SERIAL PRIMARY KEY,
+    minutes_version_id INTEGER NOT NULL
+        REFERENCES meeting_minutes_versions(id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL REFERENCES auth_users(id),
+    comment TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE INDEX IF NOT EXISTS idx_document_extractions_document
     ON document_extractions(application_document_id, created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_application_requirements_application
@@ -206,3 +317,11 @@ CREATE INDEX IF NOT EXISTS idx_committee_memberships_committee
     ON committee_memberships(committee_type, user_id);
 CREATE INDEX IF NOT EXISTS idx_knowledge_chunks_section
     ON knowledge_chunks(section_id);
+CREATE INDEX IF NOT EXISTS idx_governance_meetings_committee
+    ON governance_meetings(committee_type, proposed_start, status);
+CREATE INDEX IF NOT EXISTS idx_meeting_availability_window
+    ON meeting_member_availability(committee_type, available_from, available_until);
+CREATE INDEX IF NOT EXISTS idx_meeting_records_meeting
+    ON meeting_records(meeting_id, agenda_item_index, created_at);
+CREATE INDEX IF NOT EXISTS idx_meeting_minutes_meeting
+    ON meeting_minutes_versions(meeting_id, version_number DESC);

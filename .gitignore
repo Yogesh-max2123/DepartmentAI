@@ -13,6 +13,7 @@ __pycache__/
 !.env.example
 !.env.development.example
 !.env.test.example
+!.env.module2.test.example
 
 # IDE
 .vscode/
@@ -43,6 +44,7 @@ module2/ingestion/debug_*.html
 
 # Private application documents
 documents/applications/
+.local-demo/
 
 # Local model archive
 departmentai-model.zip

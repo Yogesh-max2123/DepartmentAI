@@ -101,6 +101,27 @@
   font-size: 0.72rem;
 }
 
+.programme-identity-notice {
+  display: grid;
+  gap: 5px;
+  padding: 14px 16px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--warning, #b7791f);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.programme-identity-notice strong {
+  color: var(--text-primary);
+}
+
+.programme-identity-verified {
+  border-left-color: var(--success, #23835b);
+}
+
 .dashboard-overview {
   display: grid;
   grid-template-columns: minmax(190px, 0.7fr) minmax(0, 1.3fr);

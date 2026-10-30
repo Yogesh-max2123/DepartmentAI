@@ -128,6 +128,62 @@
   overflow-wrap: anywhere;
 }
 
+.role-review-compact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.role-review-compact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 6px 12px;
+  min-width: 0;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.role-review-compact-row strong,
+.role-review-compact-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.role-review-compact-row strong {
+  color: var(--text-primary);
+  font-size: 0.8rem;
+}
+
+.role-review-compact-row span {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+.role-review-compact-row button {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.role-eligibility-advisory {
+  margin: 0 0 10px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.role-processing-outcomes {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
 .role-workspace-empty,
 .role-workspace-error,
 .role-application-lookup-error {
@@ -156,5 +212,15 @@
   .role-application-lookup-controls {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .role-review-compact-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .role-review-compact-row button {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
   }
 }

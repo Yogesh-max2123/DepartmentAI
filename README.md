@@ -9,10 +9,88 @@ DepartmentAI is designed around two major modules:
 - **Module I:** Automation of Undergraduate (UG), Postgraduate (PG), and Ph.D. academic processes.
 - **Module II:** Faculty Profile, Research Information, and Institutional Reporting Automation.
 
-## Run the frontend
+Module I currently has a shared local application workflow and source-scoped
+UG, M.Tech/Masters, and Ph.D. ordinance retrieval in the Academic Assistant.
+Programme identity, programme-specific application categories/forms,
+eligibility/document rules, and automatic committee routing are not yet
+implemented or institutionally verified. PG Diploma (PGD) is not specified.
+See the [Module 1 coverage audit](./docs/MODULE1_PROGRAMME_COVERAGE_AUDIT.md).
 
-For frontend API configuration, local startup, backend/CORS prerequisites, and
-troubleshooting, see the [Frontend README](./frontend/README.md).
+## Quick start for local development
+
+The project runs as a Python FastAPI backend plus a static HTML/JavaScript frontend.
+Use the commands below from the repository root.
+
+### 1) Prepare the Python environment
+
+```powershell
+py -3.12 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+### 2) Configure the local development database
+
+The backend expects a local PostgreSQL database named `departmentai_dev` when
+`DEPARTMENTAI_DATABASE_ENV=development` is active. Use the example env file as a
+starting point and confirm the username, host, and password match your local
+PostgreSQL instance.
+
+```powershell
+Copy-Item .env.development.example .env.development
+$env:DEPARTMENTAI_DATABASE_ENV = "development"
+```
+
+### 3) Start the backend
+
+```powershell
+$env:DEPARTMENTAI_DATABASE_ENV = "development"
+$env:CORS_ALLOWED_ORIGINS = "http://127.0.0.1:5500"
+.\.venv\Scripts\python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8002
+```
+
+Verify the API is healthy:
+
+```powershell
+curl http://127.0.0.1:8002/health/ready
+```
+
+### 4) Start the frontend
+
+In a second terminal:
+
+```powershell
+python -m http.server 5500 --bind 127.0.0.1 --directory .\frontend
+```
+
+Then open this URL in the browser:
+
+```text
+http://127.0.0.1:5500/
+```
+
+### 5) Optional: load ordinance knowledge
+
+If you want the Academic Assistant to answer UG, M.Tech/Masters, and Ph.D.
+questions with the local corpora:
+
+```powershell
+$env:DEPARTMENTAI_DATABASE_ENV = "development"
+.\.venv\Scripts\python.exe -m backend.ingest_knowledge_base --programme MTECH
+.\.venv\Scripts\python.exe -m backend.ingest_knowledge_base --programme PHD
+```
+
+### Frontend configuration
+
+The browser-side API URL is configured in `frontend/config.js` and defaults to:
+
+```js
+globalThis.DEPARTMENTAI_API_BASE_URL ??= "http://127.0.0.1:8002";
+```
+
+If the backend runs elsewhere, update the origin there. Do not use wildcard CORS
+values or secret credentials in the frontend file.
+
+For a more detailed frontend-only guide, see [frontend/README.md](./frontend/README.md).
 
 > **Human-in-the-loop principle:** DepartmentAI assists with information retrieval, application classification, document analysis, recommendations, scheduling, minutes preparation, and report generation. All official decisions, recommendations, minutes, and institutional reports remain subject to verification and approval by authorized officials.
 
@@ -165,6 +243,19 @@ The system will support review of draft minutes, identification of inconsistenci
 
 Final minutes will be stored and indexed after review and approval by the authorized authority. Secure storage, document version control, and digital-signature integration are intended capabilities.
 
+### Optional local M.Tech/PhD ordinance adapter
+
+The backend contains a manual, source-scoped ordinance-advisory adapter for a
+Student-owned draft with a verified M.Tech/PhD identity and a resolved
+`TEST_ONLY` application policy. It sends only the draft's application type,
+title, and description to a loopback reference service; uploaded document
+contents and applicant identifiers are not sent. The adapter is disabled by
+default and additionally requires the explicit `test` database profile, the
+local synthetic demo, loopback reference-service URLs, and a runtime-only
+shared token. The reference services were not available during the latest
+local check, so live RAG and authenticated-browser behavior remain unverified.
+Do not enable this path with institutional data or credentials.
+
 ---
 
 # 📗 Module II: Faculty Profile and Institutional Reporting Automation
@@ -258,7 +349,13 @@ These figures describe the recorded reconciliation run and may change as officia
 
 ## 5. Institutional Data Export
 
-Module II includes a database-backed export interface for supported datasets.
+Module II has a secured export API foundation, but it is disabled for all
+accounts until an operator configures approved per-user permissions and exact
+department scopes. The SoStudy website includes a permission-gated
+**Module II — Faculty & Research** page in the authenticated sidebar. It
+connects to the capability, faculty, research, statistics, and secured export
+APIs using the shared bearer-session client. The former unauthenticated export
+UI remains removed.
 
 Currently supported formats include:
 
@@ -269,19 +366,57 @@ Currently supported formats include:
 | PDF | Shareable document output |
 | Word (`.docx`) | Editable document output |
 
-Start the backend using:
+Before using any Module II data route or CLI, select its database profile
+independently of Module I. The test profile is restricted to loopback
+`departmentai_module2_test`; it never inherits the Module I database selector
+or root `.env`. Provision that database and create a private
+`.env.module2.test` from [.env.module2.test.example](./.env.module2.test.example).
+No database/schema is created or migrated automatically. Development uses
+`.env.module2.development` with `departmentai_module2_dev`. Production requires
+an explicit `.env.module2.production` file.
 
 ```powershell
-uvicorn backend.main:app --reload
+$env:DEPARTMENTAI_MODULE2_DATABASE_ENV = "test"
 ```
 
-Open the export interface at:
+Profile selection does not provision a database or schema. After an authorized
+operator provisions the dedicated database and private profile, verify the
+resolved application connection with a read-only `SELECT current_database()`
+through `module2.database.connection.get_connection()` and confirm the result
+is exactly `departmentai_module2_test` before running acceptance tests. Do not
+copy Module I credentials or treat the profile filename alone as proof of the
+connected database.
 
-http://127.0.0.1:8000/module2/export/ui
+#### Current local acceptance boundary
 
-The export API provides dataset discovery and dataset-download endpoints.
+The dedicated `departmentai_module2_test` database and private
+`.env.module2.test` profile are not provisioned in this checkout. The available
+Module I test role lacks `CREATEDB` and superuser privileges, and no authorized
+Module II database-admin credential is available. Do not point Module II at
+`departmentai_test`; wait for an authorized operator to provision the isolated
+database and profile, then verify the application's resolved connection before
+acceptance. The security/export/report tests currently use mocked database
+cursors and do not establish live Module II data or report behavior.
 
-The current PDF and Word exports use tabular layouts. Dataset-aware narrative reports with meaningful headings, paragraphs, and section-specific templates are planned enhancements.
+Provide a protected JSON file through `DEPARTMENTAI_MODULE2_PERMISSION_POLICY`
+only after approving specific authenticated account IDs, permission names,
+and department scopes. No `STUDENT`, `OFFICIAL`, or `DUGC` role receives
+Module II access by default.
+
+The mounted read-only routes are documented in
+[docs/API_CONTRACT.md](./docs/API_CONTRACT.md). They cover scoped faculty
+profiles, linked publication/project/achievement reads, scoped statistics,
+and fixed allowlisted exports. Student-sensitive supervision, CRUD,
+data-quality review, source-ingestion APIs, and the faculty chatbot remain
+unavailable. The existing ingestion/reconciliation tools remain controlled
+CLI operations. Statistics do not support reporting-period filters; exports
+are scoped data extracts, not approved Ministry, institute, or accreditation
+reports. The frontend shows unavailable/configuration states rather than
+inventing data when a permission or database profile is missing.
+
+CSV, XLSX, PDF, and DOCX renderers are declared in `requirements.txt`; focused
+tests validate each format. These files are raw scoped data extracts, not
+approved Ministry, institute, or accreditation reports.
 
 ## 6. Ministry and Institutional Report Generation
 
@@ -515,11 +650,10 @@ When enabled, interactive API documentation is available at:
 
 http://127.0.0.1:8000/docs
 
-The faculty assistant can be launched separately:
-
-```powershell
-python -m module2.retrieval.faculty_assistant
-```
+The Module II faculty chatbot is not offered through the shared website. Its
+separate prototype endpoint is protected but returns HTTP 403 until
+department-scoped retrieval authorization and provider policy are implemented.
+Do not mount the standalone chatbot as a production service.
 
 ---
 
@@ -543,6 +677,7 @@ python -m pytest tests/test_thesis_source_reconciliation.py -q
 
 ```powershell
 python -m pytest tests/module2_data_export -v
+python -m pytest tests/module2_security -v
 ```
 
 ### Run the available test suite
@@ -568,12 +703,13 @@ A passing test suite does not by itself establish that all proposed integrations
 | PostgreSQL and pgvector knowledge storage | Implemented |
 | Module I application-processing backend | Existing implementation |
 | Module II faculty information ingestion | Implemented |
-| Faculty assistant | Implemented |
+| Module II Faculty & Research SoStudy page | Implemented; navigation/features require current server permissions |
+| Faculty assistant | Standalone prototype; unavailable in SoStudy pending authorized retrieval |
 | Thesis-supervision reconciliation | Implemented and reconciled |
 | Focused faculty/thesis tests | Previously passed |
-| Module II dataset discovery and export interface | Implemented |
-| CSV and Excel exports | Working |
-| PDF and Word exports | Working with tabular layouts |
+| Module II authenticated faculty/research API | Read-only; access requires a configured per-user permission policy |
+| Module II dataset discovery and export API | Static allowlist and fixed field/department scope; access requires an export permission |
+| CSV, XLSX, PDF, and DOCX renderers | Implemented; format tests run; no live database export verified |
 | Narrative PDF and Word reporting templates | Planned |
 | Expanded research statistics and reporting workflows | Further development |
 | Multilingual student/staff chatbot | Planned |
@@ -581,7 +717,7 @@ A passing test suite does not by itself establish that all proposed integrations
 | Recommendation and draft-resolution agent | Planned |
 | Meeting scheduling and communication integrations | Planned |
 | AI-assisted minutes dashboard | Planned |
-| Role-based access control and audit logging | Planned or subject to verification |
+| Module II user/department permission provisioning | Not configured; operations fail closed |
 | Digital signatures and secure document repository | Planned |
 | Full agentic workflow orchestration | Future development |
 

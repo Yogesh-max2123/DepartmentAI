@@ -1,7 +1,58 @@
 from datetime import datetime
+import json
 
 from backend.database.connection import get_connection
 from backend.services.audit_service import log_action
+from backend.services.application_readiness_service import (
+    assert_readiness_allows_submission,
+)
+
+
+class ApplicationValidationError(ValueError):
+    """Raised when an application does not satisfy the supported field rules."""
+
+
+class InvalidApplicationState(ValueError):
+    """Raised when an application cannot perform the requested lifecycle action."""
+
+
+def _normalize_application_fields(application_type, title, description):
+    if not isinstance(application_type, str):
+        raise ApplicationValidationError("Application type is required.")
+
+    normalized_type = application_type.strip()
+    if not normalized_type:
+        raise ApplicationValidationError("Application type is required.")
+    if len(normalized_type) > 100:
+        raise ApplicationValidationError(
+            "Application type must be 100 characters or fewer."
+        )
+
+    normalized_title = title.strip() if isinstance(title, str) else title
+    if normalized_title is not None and not isinstance(normalized_title, str):
+        raise ApplicationValidationError("Application title must be text.")
+    if normalized_title is not None and len(normalized_title) > 200:
+        raise ApplicationValidationError(
+            "Application title must be 200 characters or fewer."
+        )
+
+    normalized_description = (
+        description.strip() if isinstance(description, str) else description
+    )
+    if normalized_description is not None and not isinstance(
+        normalized_description, str
+    ):
+        raise ApplicationValidationError("Application description must be text.")
+    if normalized_description is not None and len(normalized_description) > 10000:
+        raise ApplicationValidationError(
+            "Application description must be 10,000 characters or fewer."
+        )
+
+    return (
+        normalized_type,
+        normalized_title or None,
+        normalized_description or None,
+    )
 
 
 # Allowed application status transitions.
@@ -61,6 +112,11 @@ def create_application(
     Create a new application in DRAFT status.
     """
 
+    application_type, title, description = _normalize_application_fields(
+        application_type,
+        title,
+        description,
+    )
     conn = get_connection()
 
     try:
@@ -211,6 +267,123 @@ def get_application(application_id):
         conn.close()
 
 
+def update_application(
+    application_id,
+    *,
+    application_type=None,
+    title=None,
+    description=None,
+    updated_by="SYSTEM",
+):
+    """Replace supported fields on an owned DRAFT, without changing its status."""
+    application_type, title, description = _normalize_application_fields(
+        application_type,
+        title,
+        description,
+    )
+    conn = get_connection()
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT status, application_type, title, description
+                FROM applications
+                WHERE id = %s
+                FOR UPDATE;
+                """,
+                (application_id,),
+            )
+            application = cursor.fetchone()
+            if application is None:
+                raise LookupError(
+                    f"Application with id {application_id} does not exist."
+                )
+            current_status = application[0]
+            if current_status != "DRAFT":
+                raise InvalidApplicationState(
+                    "Only draft applications can be edited."
+                )
+
+            cursor.execute(
+                """
+                UPDATE applications
+                SET
+                    application_type = %s,
+                    title = %s,
+                    description = %s,
+                    updated_at = CURRENT_TIMESTAMP
+                WHERE id = %s
+                RETURNING id, application_number, applicant_identifier,
+                          application_type, title, description, status,
+                          submitted_at, created_at, updated_at;
+                """,
+                (application_type, title, description, application_id),
+            )
+            updated = cursor.fetchone()
+            cursor.execute(
+                """
+                INSERT INTO application_status_history (
+                    application_id,
+                    old_status,
+                    new_status,
+                    changed_by,
+                    reason
+                )
+                VALUES (%s, %s, %s, %s, %s)
+                RETURNING id;
+                """,
+                (
+                    application_id,
+                    current_status,
+                    current_status,
+                    updated_by,
+                    "Draft application details updated.",
+                ),
+            )
+            history_id = cursor.fetchone()[0]
+            cursor.execute(
+                """
+                INSERT INTO audit_logs (
+                    application_id, actor_type, actor_id, action, details
+                )
+                VALUES (%s, %s, %s, 'APPLICATION_UPDATED', %s);
+                """,
+                (
+                    application_id,
+                    "SYSTEM" if updated_by == "SYSTEM" else "STUDENT",
+                    updated_by,
+                    json.dumps(
+                        {
+                            "history_id": history_id,
+                            "application_type": application_type,
+                        }
+                    ),
+                ),
+            )
+
+        conn.commit()
+        return {
+            "id": updated[0],
+            "application_number": updated[1],
+            "applicant_identifier": updated[2],
+            "application_type": updated[3],
+            "title": updated[4],
+            "description": updated[5],
+            "status": updated[6],
+            "submitted_at": updated[7],
+            "created_at": updated[8],
+            "updated_at": updated[9],
+        }
+    except LookupError:
+        conn.rollback()
+        raise
+    except Exception:
+        conn.rollback()
+        raise
+    finally:
+        conn.close()
+
+
 def update_application_status(
     application_id,
     new_status,
@@ -357,14 +530,18 @@ def update_application_status(
         conn.close()
 
 
-def submit_application(application_id: int, submitted_by: str) -> dict:
+def submit_application(
+    application_id: int,
+    submitted_by: str,
+    identity_provider=None,
+) -> dict:
     """Submit an owned draft for the Official shared queue."""
     conn = get_connection()
     try:
         with conn.cursor() as cursor:
             cursor.execute(
                 """
-                SELECT status
+                SELECT status, application_type, title, description
                 FROM applications
                 WHERE id = %s
                 FOR UPDATE;
@@ -381,21 +558,35 @@ def submit_application(application_id: int, submitted_by: str) -> dict:
             if "SUBMITTED" not in ALLOWED_TRANSITIONS.get(
                 current_status, set()
             ):
-                raise ValueError(
+                raise InvalidApplicationState(
                     f"Application cannot be submitted from status "
                     f"'{current_status}'."
                 )
+
+            application_type, title, description = _normalize_application_fields(
+                application[1],
+                application[2],
+                application[3],
+            )
+            assert_readiness_allows_submission(
+                cursor,
+                application_id,
+                identity_provider,
+            )
 
             cursor.execute(
                 """
                 UPDATE applications
                 SET status = 'SUBMITTED',
+                    application_type = %s,
+                    title = %s,
+                    description = %s,
                     submitted_at = CURRENT_TIMESTAMP,
                     updated_at = CURRENT_TIMESTAMP
                 WHERE id = %s
                 RETURNING submitted_at;
                 """,
-                (application_id,),
+                (application_type, title, description, application_id),
             )
             submitted_at = cursor.fetchone()[0]
             cursor.execute(

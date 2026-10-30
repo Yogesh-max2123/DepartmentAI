@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "registry_version": "unconfigured-2026-10-28",
+  "sources": [
+    {
+      "source_id": "UG_ORDINANCE_2023",
+      "programme": "UG",
+      "source_file": "UG Ordinance.pdf",
+      "source_version": "BOG-73.13(A)-2023-08-10",
+      "source_sha256": "742f71b5ce832a7b4adf0372b7caf678eef52766fa239c1075ae334079adc90c",
+      "approval_status": "APPROVED",
+      "approval_evidence": "Board of Governors 73rd meeting, 2023-08-10, Resolution 73.13(A)"
+    },
+    {
+      "source_id": "MTECH_ORDINANCE_2023",
+      "programme": "MTECH",
+      "source_file": "Ordinances for Masters Programme 2023.pdf",
+      "source_version": "BOG-73.13(A)-2023-08-10",
+      "source_sha256": "0c2923a9fd59a44e22f40adb2c0be7b7dbad6c2d94ceb06fcbbac7267ce5d561",
+      "approval_status": "APPROVED",
+      "approval_evidence": "Board of Governors 73rd meeting, 2023-08-10, Resolution 73.13(A)"
+    },
+    {
+      "source_id": "PHD_ORDINANCE_2023",
+      "programme": "PHD",
+      "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
+      "source_version": "BOG-73.13(A)-2023-08-10",
+      "source_sha256": "0409f185df07e740cb4ae334bee0086d199947093103c08761f71573d7e2a754",
+      "approval_status": "APPROVED",
+      "approval_evidence": "Board of Governors 73rd meeting, 2023-08-10, Resolution 73.13(A)"
+    }
+  ],
+  "application_types": []
+}

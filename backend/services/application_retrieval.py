@@ -1,8 +1,12 @@
 from backend.database.connection import get_connection
-from backend.retrieval.semantic_search import semantic_search
+from backend.services.knowledge_retrieval_service import retrieve_knowledge
 
 
-def retrieve_ordinance_for_application(application_id):
+def retrieve_ordinance_for_application(
+    application_id,
+    programme,
+    source_ids=None,
+):
     """
     Retrieve relevant official ordinance clauses for an application.
     """
@@ -62,12 +66,26 @@ def retrieve_ordinance_for_application(application_id):
         # --------------------------------------------------------
         # 3. Use existing semantic retrieval system
         # --------------------------------------------------------
-        results = semantic_search(query)
+        if not programme:
+            raise ValueError(
+                "An approved policy and verified programme are required for "
+                "ordinance retrieval."
+            )
+
+        retrieval = retrieve_knowledge(
+            query,
+            programme,
+            source_ids=source_ids,
+            source_types=["ORDINANCE"],
+            application_scoped=True,
+        )
 
         return {
             "application_id": application_id,
+            "programme": programme,
             "query": query,
-            "results": results,
+            "status": retrieval["status"],
+            "results": retrieval["results"],
         }
 
     finally:

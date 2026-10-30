@@ -6,6 +6,11 @@ def test_source_formatter_matches_assistant_response_contract():
         [
             {
                 "source_file": "UG Ordinance.pdf",
+                "source_id": "UG_ORDINANCE_2023",
+                "source_type": "ORDINANCE",
+                "programme": "UG",
+                "source_version": "BOG-73.13(A)-2023-08-10",
+                "chunk_id": "ug-ordinance-5-1",
                 "clause_title": "Late Registration",
                 "section_number": "5",
                 "clause_number": "5.1",
@@ -19,6 +24,11 @@ def test_source_formatter_matches_assistant_response_contract():
     assert sources == [
         {
             "source": "UG Ordinance.pdf",
+            "source_id": "UG_ORDINANCE_2023",
+            "source_type": "ORDINANCE",
+            "programme": "UG",
+            "source_version": "BOG-73.13(A)-2023-08-10",
+            "chunk_id": "ug-ordinance-5-1",
             "title": "Late Registration",
             "page": 6,
             "section": "5",

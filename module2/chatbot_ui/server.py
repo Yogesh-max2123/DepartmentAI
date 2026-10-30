@@ -8,9 +8,11 @@ This server listens on port 8001 and does not modify the main FastAPI app.
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
+
+from module2.authorization import require_module2_permission
 
 app = FastAPI(
     title="DepartmentAI Module II Temporary Chatbot",
@@ -42,7 +44,11 @@ def health():
     return {"status": "ok", "service": "DepartmentAI Module II temporary chatbot"}
 
 
-@app.post("/api/chat", response_model=ChatResponse)
+@app.post(
+    "/api/chat",
+    response_model=ChatResponse,
+    dependencies=[Depends(require_module2_permission("module2.faculty.chat"))],
+)
 def chat(request: ChatRequest):
     question = request.question.strip()
     if not question:

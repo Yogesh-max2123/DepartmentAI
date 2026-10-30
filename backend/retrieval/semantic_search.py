@@ -4,6 +4,7 @@ from collections import Counter
 import psycopg2
 from sentence_transformers import SentenceTransformer
 
+from backend.academic_programmes import get_programme_corpus
 from backend.database.connection import get_database_settings
 
 # ---------------------------------------------------------
@@ -278,7 +279,12 @@ def calculate_keyword_score(
 # Semantic Search
 # ---------------------------------------------------------
 
-def semantic_search(question: str):
+def semantic_search(
+    question: str,
+    programme: str = "UG",
+    *,
+    source_ids: list[str] | None = None,
+):
     """
     Hybrid retrieval:
 
@@ -293,6 +299,36 @@ def semantic_search(question: str):
         raise ValueError(
             "Question cannot be empty."
         )
+
+    if source_ids is None:
+        source_files = [get_programme_corpus(programme)["source_file"]]
+        source_filter = "kc.metadata->>'source_file' = %s"
+        source_parameter = source_files[0]
+    else:
+        if (
+            not source_ids
+            or any(not isinstance(value, str) or not value for value in source_ids)
+            or len(set(source_ids)) != len(source_ids)
+        ):
+            raise ValueError("Source IDs must be a non-empty unique list.")
+        from backend.services.application_policy_registry import (
+            load_application_policy_registry,
+        )
+
+        registry = load_application_policy_registry()
+        if registry["status"] in {"CONFLICT", "UNAVAILABLE"}:
+            raise RuntimeError("The verified source registry is unavailable.")
+        allowed_sources = {
+            source["source_id"]: source["source_file"]
+            for source in registry["sources"]
+            if source.get("programme") == programme
+            and source.get("approval_status") == "APPROVED"
+        }
+        if set(source_ids) - set(allowed_sources):
+            raise ValueError("A requested source is not approved.")
+        source_files = [allowed_sources[source_id] for source_id in source_ids]
+        source_filter = "kc.metadata->>'source_file' = ANY(%s)"
+        source_parameter = source_files
 
     # -----------------------------------------------------
     # Generate question embedding
@@ -317,7 +353,7 @@ def semantic_search(question: str):
 
     try:
 
-        query = """
+        query = f"""
         SELECT
             kc.metadata->>'chunk_id' AS chunk_id,
             kc.chunk_index,
@@ -329,6 +365,9 @@ def semantic_search(question: str):
             s.section_number,
             s.title AS section_title,
             kc.metadata->>'source_file' AS source_file,
+            kc.metadata->>'source_id' AS source_id,
+            kc.metadata->>'source_version' AS source_version,
+            kc.metadata->>'source_sha256' AS source_sha256,
             kc.metadata->>'clause_title' AS clause_title,
             1 - (kc.embedding <=> %s::vector)
                 AS similarity
@@ -339,6 +378,7 @@ def semantic_search(question: str):
             ON kc.section_id = s.id
 
         WHERE kc.embedding IS NOT NULL
+          AND {source_filter}
 
         ORDER BY kc.embedding <=> %s::vector
 
@@ -349,6 +389,7 @@ def semantic_search(question: str):
             query,
             (
                 embedding_string,
+                source_parameter,
                 embedding_string,
                 CANDIDATE_K
             )
@@ -383,6 +424,9 @@ def semantic_search(question: str):
             section_number,
             section_title,
             source_file,
+            source_id,
+            source_version,
+            source_sha256,
             clause_title,
             semantic_score
         ) = result
@@ -429,6 +473,9 @@ def semantic_search(question: str):
                 "section_number": section_number,
                 "section_title": section_title,
                 "source_file": source_file,
+                "source_id": source_id,
+                "source_version": source_version,
+                "source_sha256": source_sha256,
                 "clause_title": clause_title,
                 "semantic_score": float(
                     semantic_score

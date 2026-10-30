@@ -22,6 +22,13 @@ EXPECTED_TABLES = {
     "eligibility_results",
     "deficiencies",
     "ai_analyses",
+    "governance_meetings",
+    "meeting_member_availability",
+    "meeting_confirmations",
+    "meeting_application_links",
+    "meeting_records",
+    "meeting_minutes_versions",
+    "meeting_minutes_comments",
 }
 
 

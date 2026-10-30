@@ -1,0 +1,1678 @@
+{
+  "document": {
+    "name": "MNNIT Doctoral Ordinance",
+    "source_file": "Ordinances_for_Doctoral_Programm2023.pdf",
+    "total_pages": 75,
+    "body_pages": [
+      9,
+      41
+    ],
+    "form_pages": [
+      42,
+      69
+    ],
+    "notes_pages": [
+      70,
+      75
+    ]
+  },
+  "sections": [
+    {
+      "number": "1",
+      "title": "INTRODUCTION",
+      "start_page": 9,
+      "source_title": "INTRODUCTION",
+      "end_page": 11,
+      "page_count": 3,
+      "clauses": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5"
+      ]
+    },
+    {
+      "number": "2",
+      "title": "ACADEMIC SESSION",
+      "start_page": 11,
+      "source_title": "ACADEMIC SESSION (AS)",
+      "end_page": 12,
+      "page_count": 2,
+      "clauses": [
+        "2.1",
+        "2.2",
+        "2.3"
+      ]
+    },
+    {
+      "number": "3",
+      "title": "ADMISSION",
+      "start_page": 12,
+      "source_title": "ADMISSION",
+      "end_page": 18,
+      "page_count": 7,
+      "clauses": [
+        "3.1",
+        "3.2",
+        "3.2.1",
+        "3.2.2",
+        "3.3",
+        "3.3.1",
+        "3.3.2",
+        "3.3.3",
+        "3.3.4",
+        "3.4",
+        "3.4.1",
+        "3.4.2",
+        "3.4.3",
+        "3.4.4",
+        "3.4.5",
+        "3.4.6",
+        "3.4.6.1",
+        "3.4.6.2",
+        "3.5",
+        "3.5.1",
+        "3.5.2",
+        "3.5.3",
+        "3.6"
+      ]
+    },
+    {
+      "number": "4",
+      "title": "REGISTRATION",
+      "start_page": 18,
+      "source_title": "REGISTRATION",
+      "end_page": 20,
+      "page_count": 3,
+      "clauses": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5"
+      ]
+    },
+    {
+      "number": "5",
+      "title": "LEAVE RULES",
+      "start_page": 20,
+      "source_title": "LEAVE RULES",
+      "end_page": 21,
+      "page_count": 2,
+      "clauses": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5"
+      ]
+    },
+    {
+      "number": "6",
+      "title": "PERMISSION TO ATTEND OTHER ACADEMIC INSTITUTIONS /INDUSTRY AS NON DEGREE STUDENTS",
+      "start_page": 21,
+      "source_title": "Permission to Attend Other Academic Institutions / Industry As Nondegree Students",
+      "end_page": 22,
+      "page_count": 2,
+      "clauses": []
+    },
+    {
+      "number": "7",
+      "title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
+      "start_page": 22,
+      "source_title": "PROGRAMME REQUIREMENTS AND GRADING SYSTEM",
+      "end_page": 27,
+      "page_count": 6,
+      "clauses": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5",
+        "7.5.1",
+        "7.5.2",
+        "7.5.3",
+        "7.5.4",
+        "7.5.5",
+        "7.5.6",
+        "7.5.7"
+      ]
+    },
+    {
+      "number": "8",
+      "title": "ACADEMIC PERFORMANCE REQUIREMENT",
+      "start_page": 27,
+      "source_title": "ACADEMIC PERFORMANCE REQUIREMENTS",
+      "end_page": 28,
+      "page_count": 2,
+      "clauses": [
+        "8.1",
+        "8.2"
+      ]
+    },
+    {
+      "number": "9",
+      "title": "COMPREHENSIVE EXAMINATION",
+      "start_page": 28,
+      "source_title": "COMPREHENSIVE EXAMINATION",
+      "end_page": 29,
+      "page_count": 2,
+      "clauses": []
+    },
+    {
+      "number": "10",
+      "title": "STATE-OF-THE-ART SEMINAR",
+      "start_page": 29,
+      "source_title": "STATE-OF-THE-ART SEMINAR",
+      "end_page": 29,
+      "page_count": 1,
+      "clauses": []
+    },
+    {
+      "number": "11",
+      "title": "OPEN SEMINAR",
+      "start_page": 29,
+      "source_title": "OPEN SEMINAR",
+      "end_page": 30,
+      "page_count": 2,
+      "clauses": []
+    },
+    {
+      "number": "12",
+      "title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS COMMITTEES/ BOARDS",
+      "start_page": 30,
+      "source_title": "APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS",
+      "end_page": 34,
+      "page_count": 5,
+      "clauses": [
+        "12.1",
+        "12.2",
+        "12.3",
+        "12.4",
+        "12.5",
+        "12.6"
+      ]
+    },
+    {
+      "number": "13",
+      "title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
+      "start_page": 34,
+      "source_title": "THESIS SUBMISSION, EVALUATION AND EXAMINATION",
+      "end_page": 37,
+      "page_count": 4,
+      "clauses": [
+        "13.1",
+        "13.2",
+        "13.3"
+      ]
+    },
+    {
+      "number": "14",
+      "title": "DEGREE REQUIREMENTS",
+      "start_page": 37,
+      "source_title": "DEGREE REQUIREMENTS & WITHDRAWL",
+      "end_page": 37,
+      "page_count": 1,
+      "clauses": [
+        "14.1",
+        "14.2"
+      ]
+    },
+    {
+      "number": "15",
+      "title": "STIPENDS/FELLOWSHIPS, SCHOLARSHIPS, PRIZES AND MEDALS",
+      "start_page": 37,
+      "source_title": "STIPENDS/FELLOWSHIPS, SCHOLARSHIPS, PRIZES AND MEDALS",
+      "end_page": 38,
+      "page_count": 2,
+      "clauses": [
+        "15.1",
+        "15.2"
+      ]
+    },
+    {
+      "number": "16",
+      "title": "CONDUCT AND DISCIPLINE",
+      "start_page": 38,
+      "source_title": "CONDUCT AND DISCIPLINE",
+      "end_page": 41,
+      "page_count": 4,
+      "clauses": [
+        "16.1",
+        "16.2",
+        "16.3",
+        "16.3.1",
+        "16.3.2"
+      ]
+    },
+    {
+      "number": "17",
+      "title": "WAIVER OF REQUIREMENTS IN SPECIAL CASES",
+      "start_page": 41,
+      "source_title": "WAIVER OF REQUIREMENTS IN SPECIAL CASES",
+      "end_page": 41,
+      "page_count": 1,
+      "clauses": []
+    },
+    {
+      "number": "18",
+      "title": "AMENDMENTS",
+      "start_page": 41,
+      "source_title": "AMENDMENTS",
+      "end_page": 41,
+      "page_count": 1,
+      "clauses": []
+    }
+  ],
+  "clauses": [
+    {
+      "number": "1.1",
+      "title": "Doctoral Programme",
+      "section": "1",
+      "start_page": 9,
+      "end_page": 9,
+      "page_count": 1
+    },
+    {
+      "number": "1.2",
+      "title": "Senate Doctoral Programme Committee (SDPC)",
+      "section": "1",
+      "start_page": 9,
+      "end_page": 10,
+      "page_count": 2
+    },
+    {
+      "number": "1.3",
+      "title": "Department Doctoral Programme Committee (DDPC)",
+      "section": "1",
+      "start_page": 10,
+      "end_page": 11,
+      "page_count": 2
+    },
+    {
+      "number": "1.4",
+      "title": "Office of the Dean (Academic)",
+      "section": "1",
+      "start_page": 11,
+      "end_page": 11,
+      "page_count": 1
+    },
+    {
+      "number": "1.5",
+      "title": "Board of Academics (BoAc)",
+      "section": "1",
+      "start_page": 11,
+      "end_page": 11,
+      "page_count": 1
+    },
+    {
+      "number": "2.1",
+      "title": "Regular Semesters",
+      "section": "2",
+      "start_page": 11,
+      "end_page": 12,
+      "page_count": 2
+    },
+    {
+      "number": "2.2",
+      "title": "Summer Semester",
+      "section": "2",
+      "start_page": 12,
+      "end_page": 12,
+      "page_count": 1
+    },
+    {
+      "number": "2.3",
+      "title": "Academic Calendar",
+      "section": "2",
+      "start_page": 12,
+      "end_page": 12,
+      "page_count": 1
+    },
+    {
+      "number": "3.1",
+      "title": "Admission Calendar",
+      "section": "3",
+      "start_page": 12,
+      "end_page": 12,
+      "page_count": 1
+    },
+    {
+      "number": "3.2",
+      "title": "Selection Committee",
+      "section": "3",
+      "start_page": 12,
+      "end_page": 12,
+      "page_count": 1
+    },
+    {
+      "number": "3.2.1",
+      "title": "Institute Doctoral Selection Committee (IDSC)",
+      "section": "3",
+      "start_page": 12,
+      "end_page": 13,
+      "page_count": 2
+    },
+    {
+      "number": "3.2.2",
+      "title": "Department Doctoral Selection Committee (DDSC)",
+      "section": "3",
+      "start_page": 13,
+      "end_page": 13,
+      "page_count": 1
+    },
+    {
+      "number": "3.3",
+      "title": "Eligibility for Admission",
+      "section": "3",
+      "start_page": 13,
+      "end_page": 13,
+      "page_count": 1
+    },
+    {
+      "number": "3.3.1",
+      "title": "Ph. D. in Engineering",
+      "section": "3",
+      "start_page": 13,
+      "end_page": 14,
+      "page_count": 2
+    },
+    {
+      "number": "3.3.2",
+      "title": "Ph. D. in Management, Humanities and Social Science",
+      "section": "3",
+      "start_page": 14,
+      "end_page": 14,
+      "page_count": 1
+    },
+    {
+      "number": "3.3.3",
+      "title": "PhD in Sciences",
+      "section": "3",
+      "start_page": 14,
+      "end_page": 14,
+      "page_count": 1
+    },
+    {
+      "number": "3.3.4",
+      "title": "Ph. D. In Geographic Information System (GIS) Cell",
+      "section": "3",
+      "start_page": 14,
+      "end_page": 14,
+      "page_count": 1
+    },
+    {
+      "number": "3.4",
+      "title": "Admission Categories of Ph.D. Research Scholars",
+      "section": "3",
+      "start_page": 14,
+      "end_page": 15,
+      "page_count": 2
+    },
+    {
+      "number": "3.4.1",
+      "title": "Institute Stipendiary Full Time Research Scholars (Course Code-11):",
+      "section": "3",
+      "start_page": 15,
+      "end_page": 15,
+      "page_count": 1
+    },
+    {
+      "number": "3.4.2",
+      "title": "Sponsored Full-time Research Scholars (Course code-12)",
+      "section": "3",
+      "start_page": 15,
+      "end_page": 15,
+      "page_count": 1
+    },
+    {
+      "number": "3.4.3",
+      "title": "Sponsored Part Time Research Scholar (Course Code-13):",
+      "section": "3",
+      "start_page": 15,
+      "end_page": 16,
+      "page_count": 2
+    },
+    {
+      "number": "3.4.4",
+      "title": "Faculty/Staff/Sponsored Project Fellow of MNNIT Allahabad (Course Code - 14):",
+      "section": "3",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "3.4.5",
+      "title": "Self-financed Full-Time Research Scholars (Course Code-15):",
+      "section": "3",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "3.4.6",
+      "title": "Students from Abroad",
+      "section": "3",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "3.4.6.1",
+      "title": "Sponsored foreign students",
+      "section": "3",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "3.4.6.2",
+      "title": "Self-Financed foreign students",
+      "section": "3",
+      "start_page": 16,
+      "end_page": 16,
+      "page_count": 1
+    },
+    {
+      "number": "3.5",
+      "title": "Admission Procedure",
+      "section": "3",
+      "start_page": 16,
+      "end_page": 17,
+      "page_count": 2
+    },
+    {
+      "number": "3.5.1",
+      "title": "Admission under different Programmes Codes",
+      "section": "3",
+      "start_page": 17,
+      "end_page": 17,
+      "page_count": 1
+    },
+    {
+      "number": "3.5.2",
+      "title": "Admission of Indian Nationals Residing Abroad (INRA) and Foreign Nationals",
+      "section": "3",
+      "start_page": 17,
+      "end_page": 18,
+      "page_count": 2
+    },
+    {
+      "number": "3.5.3",
+      "title": "Admission of Non-Degree Students",
+      "section": "3",
+      "start_page": 18,
+      "end_page": 18,
+      "page_count": 1
+    },
+    {
+      "number": "3.6",
+      "title": "Cancellation of Admission",
+      "section": "3",
+      "start_page": 18,
+      "end_page": 19,
+      "page_count": 2
+    },
+    {
+      "number": "4.1",
+      "title": "Late Registration",
+      "section": "4",
+      "start_page": 19,
+      "end_page": 19,
+      "page_count": 1
+    },
+    {
+      "number": "4.2",
+      "title": "Academic Advising",
+      "section": "4",
+      "start_page": 19,
+      "end_page": 19,
+      "page_count": 1
+    },
+    {
+      "number": "4.3",
+      "title": "Semester Load Requirement",
+      "section": "4",
+      "start_page": 19,
+      "end_page": 20,
+      "page_count": 2
+    },
+    {
+      "number": "4.4",
+      "title": "Adding/Dropping of Courses",
+      "section": "4",
+      "start_page": 20,
+      "end_page": 20,
+      "page_count": 1
+    },
+    {
+      "number": "4.5",
+      "title": "Change of Registration from Full-Time to Part-Time",
+      "section": "4",
+      "start_page": 20,
+      "end_page": 20,
+      "page_count": 1
+    },
+    {
+      "number": "5.1",
+      "title": "Annual Leave",
+      "section": "5",
+      "start_page": 20,
+      "end_page": 21,
+      "page_count": 2
+    },
+    {
+      "number": "5.2",
+      "title": "Semester Leave",
+      "section": "5",
+      "start_page": 21,
+      "end_page": 21,
+      "page_count": 1
+    },
+    {
+      "number": "5.3",
+      "title": "Medical Leave",
+      "section": "5",
+      "start_page": 21,
+      "end_page": 21,
+      "page_count": 1
+    },
+    {
+      "number": "5.4",
+      "title": "Maternity / Paternity Leave",
+      "section": "5",
+      "start_page": 21,
+      "end_page": 21,
+      "page_count": 1
+    },
+    {
+      "number": "5.5",
+      "title": "Absence without Sanctioned Leave",
+      "section": "5",
+      "start_page": 21,
+      "end_page": 22,
+      "page_count": 2
+    },
+    {
+      "number": "7.1",
+      "title": "Minimum Residence, Maximum Duration and Academic Requirements",
+      "section": "7",
+      "start_page": 22,
+      "end_page": 24,
+      "page_count": 3
+    },
+    {
+      "number": "7.2",
+      "title": "Ph. D. Credit Award Distributions",
+      "section": "7",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "7.3",
+      "title": "Extension of Programme",
+      "section": "7",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "7.4",
+      "title": "Audit Courses",
+      "section": "7",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "7.5",
+      "title": "Grading System",
+      "section": "7",
+      "start_page": 24,
+      "end_page": 24,
+      "page_count": 1
+    },
+    {
+      "number": "7.5.1",
+      "title": "Grade and Grade Point",
+      "section": "7",
+      "start_page": 24,
+      "end_page": 25,
+      "page_count": 2
+    },
+    {
+      "number": "7.5.2",
+      "title": "Semester Performance Index (SPI)",
+      "section": "7",
+      "start_page": 25,
+      "end_page": 26,
+      "page_count": 2
+    },
+    {
+      "number": "7.5.3",
+      "title": "Cumulative Performance Index (CPI)",
+      "section": "7",
+      "start_page": 26,
+      "end_page": 26,
+      "page_count": 1
+    },
+    {
+      "number": "7.5.4",
+      "title": "Grading Online Courses",
+      "section": "7",
+      "start_page": 26,
+      "end_page": 27,
+      "page_count": 2
+    },
+    {
+      "number": "7.5.5",
+      "title": "Grade Report",
+      "section": "7",
+      "start_page": 27,
+      "end_page": 27,
+      "page_count": 1
+    },
+    {
+      "number": "7.5.6",
+      "title": "Transcript",
+      "section": "7",
+      "start_page": 27,
+      "end_page": 27,
+      "page_count": 1
+    },
+    {
+      "number": "7.5.7",
+      "title": "Withholding of Grade Report",
+      "section": "7",
+      "start_page": 27,
+      "end_page": 27,
+      "page_count": 1
+    },
+    {
+      "number": "8.1",
+      "title": "Termination from the Programme",
+      "section": "8",
+      "start_page": 27,
+      "end_page": 28,
+      "page_count": 2
+    },
+    {
+      "number": "8.2",
+      "title": "Appeal against Termination",
+      "section": "8",
+      "start_page": 28,
+      "end_page": 30,
+      "page_count": 3
+    },
+    {
+      "number": "12.1",
+      "title": "Appointment of Thesis Supervisor(s)",
+      "section": "12",
+      "start_page": 30,
+      "end_page": 31,
+      "page_count": 2
+    },
+    {
+      "number": "12.2",
+      "title": "Constitution and Appointment of Student Research Committee (SRC)",
+      "section": "12",
+      "start_page": 31,
+      "end_page": 32,
+      "page_count": 2
+    },
+    {
+      "number": "12.3",
+      "title": "Constitution of Comprehensive Examination Board",
+      "section": "12",
+      "start_page": 32,
+      "end_page": 32,
+      "page_count": 1
+    },
+    {
+      "number": "12.4",
+      "title": "Constitution of Thesis Evaluation Board",
+      "section": "12",
+      "start_page": 32,
+      "end_page": 32,
+      "page_count": 1
+    },
+    {
+      "number": "12.5",
+      "title": "Constitution of Ph.D. Oral Board",
+      "section": "12",
+      "start_page": 32,
+      "end_page": 33,
+      "page_count": 2
+    },
+    {
+      "number": "12.6",
+      "title": "Guidelines for Institute Faculty for Supervising / Co-supervising students of other",
+      "section": "12",
+      "start_page": 33,
+      "end_page": 34,
+      "page_count": 2
+    },
+    {
+      "number": "13.1",
+      "title": "Ph.D Thesis Submission",
+      "section": "13",
+      "start_page": 34,
+      "end_page": 35,
+      "page_count": 2
+    },
+    {
+      "number": "13.2",
+      "title": "Ph.D. Thesis Evaluation",
+      "section": "13",
+      "start_page": 35,
+      "end_page": 36,
+      "page_count": 2
+    },
+    {
+      "number": "13.3",
+      "title": "Ph. D. Oral Examination",
+      "section": "13",
+      "start_page": 36,
+      "end_page": 37,
+      "page_count": 2
+    },
+    {
+      "number": "14.1",
+      "title": "Award of the Degree",
+      "section": "14",
+      "start_page": 37,
+      "end_page": 37,
+      "page_count": 1
+    },
+    {
+      "number": "14.2",
+      "title": "Withdrawal of the Degree",
+      "section": "14",
+      "start_page": 37,
+      "end_page": 38,
+      "page_count": 2
+    },
+    {
+      "number": "15.1",
+      "title": "STIPEND/FELLOWSHIPS",
+      "section": "15",
+      "start_page": 38,
+      "end_page": 38,
+      "page_count": 1
+    },
+    {
+      "number": "15.2",
+      "title": "Prizes, Medals, and Scholarships",
+      "section": "15",
+      "start_page": 38,
+      "end_page": 38,
+      "page_count": 1
+    },
+    {
+      "number": "16.1",
+      "title": "Code of Conduct",
+      "section": "16",
+      "start_page": 38,
+      "end_page": 39,
+      "page_count": 2
+    },
+    {
+      "number": "16.2",
+      "title": "Disciplinary Actions and Related Matter",
+      "section": "16",
+      "start_page": 39,
+      "end_page": 39,
+      "page_count": 1
+    },
+    {
+      "number": "16.3",
+      "title": "Unfair Means (UFM)",
+      "section": "16",
+      "start_page": 39,
+      "end_page": 39,
+      "page_count": 1
+    },
+    {
+      "number": "16.3.1",
+      "title": "Constitution of Unfair Means Committee",
+      "section": "16",
+      "start_page": 39,
+      "end_page": 40,
+      "page_count": 2
+    },
+    {
+      "number": "16.3.2",
+      "title": "The procedure to deal with the cases of Unfair Means (UFM):",
+      "section": "16",
+      "start_page": 40,
+      "end_page": 41,
+      "page_count": 2
+    }
+  ],
+  "forms": [
+    {
+      "form_id": "DP-01",
+      "start_page": 42,
+      "end_page": 42,
+      "page_count": 1,
+      "title": "Academic Registration Details",
+      "clauses": [
+        "4.2"
+      ]
+    },
+    {
+      "form_id": "DP-02",
+      "start_page": 43,
+      "end_page": 43,
+      "page_count": 1,
+      "title": "Student Research Committee (SRC)",
+      "clauses": [
+        "4.3"
+      ]
+    },
+    {
+      "form_id": "DP-03",
+      "start_page": 44,
+      "end_page": 44,
+      "page_count": 1,
+      "title": "Semester Progress Report of the Candidate",
+      "clauses": [
+        "4.3"
+      ]
+    },
+    {
+      "form_id": "DP-04",
+      "start_page": 45,
+      "end_page": 45,
+      "page_count": 1,
+      "title": "Adding/Dropping of Course",
+      "clauses": [
+        "4.4"
+      ]
+    },
+    {
+      "form_id": "DP-05",
+      "start_page": 46,
+      "end_page": 46,
+      "page_count": 1,
+      "title": "Change of Registration Status",
+      "clauses": [
+        "4.5"
+      ]
+    },
+    {
+      "form_id": "DP-06",
+      "start_page": 47,
+      "end_page": 47,
+      "page_count": 1,
+      "title": "Leave Application",
+      "clauses": [
+        "5.0"
+      ]
+    },
+    {
+      "form_id": "DP-07",
+      "start_page": 48,
+      "end_page": 48,
+      "page_count": 1,
+      "title": "Permission to Proceed to other Institution as Non Degree student",
+      "clauses": [
+        "6.0"
+      ]
+    },
+    {
+      "form_id": "DP-08",
+      "start_page": 49,
+      "end_page": 49,
+      "page_count": 1,
+      "title": "List of Suggested Examiners for Ph.D Comprehensive Examination",
+      "clauses": [
+        "9"
+      ]
+    },
+    {
+      "form_id": "DP-09",
+      "start_page": 50,
+      "end_page": 50,
+      "page_count": 1,
+      "title": "Report of Examiners of the Comprehensive Examination",
+      "clauses": [
+        "9"
+      ]
+    },
+    {
+      "form_id": "DP-10",
+      "start_page": 51,
+      "end_page": 51,
+      "page_count": 1,
+      "title": "Report of State-of-the-Art Seminar",
+      "clauses": [
+        "10"
+      ]
+    },
+    {
+      "form_id": "DP-11",
+      "start_page": 52,
+      "end_page": 52,
+      "page_count": 1,
+      "title": "Report of Open Seminar",
+      "clauses": [
+        "7.1",
+        "11"
+      ]
+    },
+    {
+      "form_id": "DP-12a",
+      "start_page": 53,
+      "end_page": 53,
+      "page_count": 1,
+      "title": "Supervisor Selection (To be filled by the candidate)",
+      "clauses": [
+        "12.1"
+      ]
+    },
+    {
+      "form_id": "DP-12b",
+      "start_page": 54,
+      "end_page": 54,
+      "page_count": 1,
+      "title": "Supervisor Selection (To be filled by the Faculty)",
+      "clauses": [
+        "12.1"
+      ]
+    },
+    {
+      "form_id": "DP-13",
+      "start_page": 55,
+      "end_page": 55,
+      "page_count": 1,
+      "title": "Change / Addition of Supervisor(s)",
+      "clauses": [
+        "12.1(7)"
+      ]
+    },
+    {
+      "form_id": "DP-14",
+      "start_page": 56,
+      "end_page": 56,
+      "page_count": 1,
+      "title": "CERTIFICATE (Plagiarism / similarity check)",
+      "clauses": [
+        "13.1"
+      ]
+    },
+    {
+      "form_id": "DP-15",
+      "start_page": 57,
+      "end_page": 57,
+      "page_count": 1,
+      "title": "List of Suggested Examiners for Ph.D Thesis Evaluation Board",
+      "clauses": [
+        "12.4"
+      ]
+    },
+    {
+      "form_id": "DP-16",
+      "start_page": 58,
+      "end_page": 58,
+      "page_count": 1,
+      "title": "List of Suggested Examiners for Ph.D. Oral Board",
+      "clauses": [
+        "12.5"
+      ]
+    },
+    {
+      "form_id": "DP-17",
+      "start_page": 59,
+      "end_page": 59,
+      "page_count": 1,
+      "title": "Thesis Evaluation Report",
+      "clauses": [
+        "13.2"
+      ]
+    },
+    {
+      "form_id": "DP-18",
+      "start_page": 61,
+      "end_page": 61,
+      "page_count": 1,
+      "title": "Report of Ph.D Thesis Oral Board",
+      "clauses": [
+        "13.3"
+      ]
+    },
+    {
+      "form_id": "DP-19",
+      "start_page": 62,
+      "end_page": 62,
+      "page_count": 1,
+      "title": "FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS",
+      "clauses": [
+        "16.3.2"
+      ]
+    },
+    {
+      "form_id": "DP-20",
+      "start_page": 64,
+      "end_page": 64,
+      "page_count": 1,
+      "title": "UNDERTAKING",
+      "clauses": []
+    },
+    {
+      "form_id": "DP-21",
+      "start_page": 65,
+      "end_page": 65,
+      "page_count": 1,
+      "title": "Report of Ph.D. Thesis Oral Board (final thesis certification)",
+      "clauses": []
+    },
+    {
+      "form_id": "DP-22",
+      "start_page": 66,
+      "end_page": 66,
+      "page_count": 1,
+      "title": "Marks & Grade for Mini-Project",
+      "clauses": [
+        "7.1"
+      ]
+    },
+    {
+      "form_id": "DP-23",
+      "start_page": 67,
+      "end_page": 67,
+      "page_count": 1,
+      "title": "Request for Director's Nominee in Review Committee",
+      "clauses": [
+        "3.4.1"
+      ]
+    },
+    {
+      "form_id": "DP-24",
+      "start_page": 68,
+      "end_page": 68,
+      "page_count": 1,
+      "title": "Report of Ph.D. Progress Review Committee",
+      "clauses": [
+        "3.4.1"
+      ]
+    },
+    {
+      "form_id": "GL-1",
+      "start_page": 69,
+      "end_page": 69,
+      "page_count": 1,
+      "title": "Guidelines for Thesis submission",
+      "clauses": []
+    }
+  ],
+  "form_references": {
+    "DP-03": [
+      {
+        "page": 15,
+        "clause_context": "3.4.1",
+        "text": "DP-03"
+      },
+      {
+        "page": 19,
+        "clause_context": "4.3",
+        "text": "DP-03"
+      },
+      {
+        "page": 24,
+        "clause_context": "7.2",
+        "text": "DP-03"
+      }
+    ],
+    "DP-23": [
+      {
+        "page": 15,
+        "clause_context": "3.4.1",
+        "text": "DP-23"
+      }
+    ],
+    "DP-24": [
+      {
+        "page": 15,
+        "clause_context": "3.4.1",
+        "text": "DP-24"
+      }
+    ],
+    "DP-01": [
+      {
+        "page": 18,
+        "clause_context": "3.6",
+        "text": "DP-01"
+      },
+      {
+        "page": 18,
+        "clause_context": "3.6",
+        "text": "DP-01"
+      },
+      {
+        "page": 19,
+        "clause_context": "4.2",
+        "text": "DP-01"
+      }
+    ],
+    "DP-02": [
+      {
+        "page": 18,
+        "clause_context": "3.6",
+        "text": "DP-02"
+      },
+      {
+        "page": 19,
+        "clause_context": "4.3",
+        "text": "DP-02"
+      },
+      {
+        "page": 31,
+        "clause_context": "12.2",
+        "text": "DP-02"
+      }
+    ],
+    "DP-12": [
+      {
+        "page": 18,
+        "clause_context": "3.6",
+        "text": "DP-12"
+      }
+    ],
+    "DP-13": [
+      {
+        "page": 18,
+        "clause_context": "3.6",
+        "text": "DP-13"
+      },
+      {
+        "page": 30,
+        "clause_context": "12.1",
+        "text": "DP-13"
+      }
+    ],
+    "DP-04": [
+      {
+        "page": 20,
+        "clause_context": "4.4",
+        "text": "DP-04"
+      }
+    ],
+    "DP-05": [
+      {
+        "page": 20,
+        "clause_context": "4.5",
+        "text": "DP-05"
+      }
+    ],
+    "DP-06": [
+      {
+        "page": 20,
+        "clause_context": "4.5",
+        "text": "DP-06"
+      }
+    ],
+    "DP-07": [
+      {
+        "page": 22,
+        "clause_context": null,
+        "text": "DP-07"
+      }
+    ],
+    "DP-22": [
+      {
+        "page": 23,
+        "clause_context": null,
+        "text": "DP-22"
+      }
+    ],
+    "DP-08": [
+      {
+        "page": 28,
+        "clause_context": "12.3",
+        "text": "DP-08"
+      },
+      {
+        "page": 32,
+        "clause_context": "12.3",
+        "text": "DP- 08"
+      }
+    ],
+    "DP-09": [
+      {
+        "page": 28,
+        "clause_context": "12.3",
+        "text": "DP-09"
+      }
+    ],
+    "DP-10": [
+      {
+        "page": 29,
+        "clause_context": null,
+        "text": "DP-10"
+      }
+    ],
+    "DP-11": [
+      {
+        "page": 29,
+        "clause_context": null,
+        "text": "DP-11"
+      }
+    ],
+    "DP-12a": [
+      {
+        "page": 30,
+        "clause_context": "12.1",
+        "text": "DP-12(a)"
+      },
+      {
+        "page": 30,
+        "clause_context": "12.1",
+        "text": "DP-12(a)"
+      }
+    ],
+    "DP-15": [
+      {
+        "page": 32,
+        "clause_context": "12.4",
+        "text": "DP-15"
+      },
+      {
+        "page": 32,
+        "clause_context": "12.4",
+        "text": "DP-15"
+      }
+    ],
+    "GL-1": [
+      {
+        "page": 32,
+        "clause_context": "12.4",
+        "text": "GL-1"
+      },
+      {
+        "page": 34,
+        "clause_context": "13.1",
+        "text": "GL-1"
+      },
+      {
+        "page": 35,
+        "clause_context": null,
+        "text": "GL-1"
+      },
+      {
+        "page": 36,
+        "clause_context": "13.3",
+        "text": "GL-1"
+      }
+    ],
+    "DP-16": [
+      {
+        "page": 33,
+        "clause_context": null,
+        "text": "DP-16"
+      },
+      {
+        "page": 33,
+        "clause_context": null,
+        "text": "DP-16"
+      }
+    ],
+    "DP-14": [
+      {
+        "page": 34,
+        "clause_context": "13.1",
+        "text": "DP-14"
+      },
+      {
+        "page": 35,
+        "clause_context": null,
+        "text": "DP-14"
+      },
+      {
+        "page": 35,
+        "clause_context": null,
+        "text": "DP-14"
+      }
+    ],
+    "DP-17": [
+      {
+        "page": 35,
+        "clause_context": "13.2",
+        "text": "DP-17"
+      }
+    ],
+    "DP-18": [
+      {
+        "page": 37,
+        "clause_context": null,
+        "text": "DP-18"
+      },
+      {
+        "page": 37,
+        "clause_context": null,
+        "text": "DP-18"
+      }
+    ],
+    "DP-19": [
+      {
+        "page": 40,
+        "clause_context": "16.3.2",
+        "text": "DP-19"
+      },
+      {
+        "page": 40,
+        "clause_context": "16.3.2",
+        "text": "DP- 19"
+      }
+    ]
+  },
+  "pages": [
+    {
+      "page": 1,
+      "page_type": "front_matter"
+    },
+    {
+      "page": 2,
+      "page_type": "front_matter"
+    },
+    {
+      "page": 3,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 4,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 5,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 6,
+      "page_type": "table_of_contents"
+    },
+    {
+      "page": 7,
+      "page_type": "preamble_or_nomenclature"
+    },
+    {
+      "page": 8,
+      "page_type": "preamble_or_nomenclature"
+    },
+    {
+      "page": 9,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 10,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 11,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 12,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 13,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 14,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 15,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 16,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 17,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 18,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 19,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 20,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 21,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 22,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 23,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 24,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 25,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 26,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 27,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 28,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 29,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 30,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 31,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 32,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 33,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 34,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 35,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 36,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 37,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 38,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 39,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 40,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 41,
+      "page_type": "ordinance_body"
+    },
+    {
+      "page": 42,
+      "page_type": "form"
+    },
+    {
+      "page": 43,
+      "page_type": "form"
+    },
+    {
+      "page": 44,
+      "page_type": "form"
+    },
+    {
+      "page": 45,
+      "page_type": "form"
+    },
+    {
+      "page": 46,
+      "page_type": "form"
+    },
+    {
+      "page": 47,
+      "page_type": "form"
+    },
+    {
+      "page": 48,
+      "page_type": "form"
+    },
+    {
+      "page": 49,
+      "page_type": "form"
+    },
+    {
+      "page": 50,
+      "page_type": "form"
+    },
+    {
+      "page": 51,
+      "page_type": "form"
+    },
+    {
+      "page": 52,
+      "page_type": "form"
+    },
+    {
+      "page": 53,
+      "page_type": "form"
+    },
+    {
+      "page": 54,
+      "page_type": "form"
+    },
+    {
+      "page": 55,
+      "page_type": "form"
+    },
+    {
+      "page": 56,
+      "page_type": "form"
+    },
+    {
+      "page": 57,
+      "page_type": "form"
+    },
+    {
+      "page": 58,
+      "page_type": "form"
+    },
+    {
+      "page": 59,
+      "page_type": "form"
+    },
+    {
+      "page": 60,
+      "page_type": "annexure"
+    },
+    {
+      "page": 61,
+      "page_type": "form"
+    },
+    {
+      "page": 62,
+      "page_type": "form"
+    },
+    {
+      "page": 63,
+      "page_type": "annexure"
+    },
+    {
+      "page": 64,
+      "page_type": "form"
+    },
+    {
+      "page": 65,
+      "page_type": "form"
+    },
+    {
+      "page": 66,
+      "page_type": "form"
+    },
+    {
+      "page": 67,
+      "page_type": "form"
+    },
+    {
+      "page": 68,
+      "page_type": "form"
+    },
+    {
+      "page": 69,
+      "page_type": "form"
+    },
+    {
+      "page": 70,
+      "page_type": "notes"
+    },
+    {
+      "page": 71,
+      "page_type": "notes"
+    },
+    {
+      "page": 72,
+      "page_type": "notes"
+    },
+    {
+      "page": 73,
+      "page_type": "notes"
+    },
+    {
+      "page": 74,
+      "page_type": "notes"
+    },
+    {
+      "page": 75,
+      "page_type": "notes"
+    }
+  ],
+  "validation": {
+    "valid": true,
+    "errors": [],
+    "warnings": []
+  }
+}

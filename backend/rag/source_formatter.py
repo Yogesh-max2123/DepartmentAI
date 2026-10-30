@@ -21,10 +21,16 @@ def format_sources(results):
 
         sources.append({
             "source": result.get("source_file") or "UG Ordinance",
+            "source_id": result.get("source_id"),
+            "source_type": result.get("source_type", "ORDINANCE"),
+            "programme": result.get("programme"),
+            "source_version": result.get("source_version"),
+            "chunk_id": result.get("chunk_id"),
             "title": (
                 result.get("clause_title")
                 or result.get("section_title")
-                or "UG Ordinance"
+                or result.get("source_title")
+                or "Ordinance"
             ),
             "page": page_start,
             "section": section,

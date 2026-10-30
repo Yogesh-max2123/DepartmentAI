@@ -1,5 +1,448 @@
 # DepartmentAI End-to-End Verification Report
 
+## Prompt 4 corrected scope: governance workflow integration
+
+Implemented in the active repository:
+
+- Persistent PostgreSQL schema and authenticated `/governance` meeting,
+  explicit availability, candidate-slot, agenda/notice preview, meeting
+  record, versioned-minutes, comment, and policy-gated sign-off routes.
+- DUGC-only frontend entry with committee selection and operations for
+  proposals, member availability, candidate slots, agenda revisions, record
+  entry, versioned minutes, review comments, and status display.
+- Fail-closed empty-by-default workflow registry; audit records; committee and
+  assigned-application authorization; candidate-slot conflict rejection;
+  deterministic possible-conflict indicators; AI draft generation gated by
+  explicit external data-sharing approval.
+
+Not implemented or not verified:
+
+- No calendar/timetable/email/WhatsApp provider is configured; notices are
+  previews and not sent. Existing reference-project mock dispatch was not
+  reused.
+- Finalized-minutes shared-index writing/search is not implemented. A policy
+  requesting it produces `INDEXER_NOT_IMPLEMENTED`, never an indexing success.
+- The default registry contains no meeting approvers or minutes signatories,
+  so meeting approval and finalization remain blocked. No production policy is
+  enabled.
+- AI provider credentials and runtime health are not verified; generation is
+  user-triggered only after `DEPARTMENTAI_MINUTES_LLM_APPROVED=true`. No real
+  notes were sent to an external provider.
+- The database-backed governance integration test passed: meeting and
+  availability persistence, candidate-slot validation, policy-gated
+  confirmation, membership isolation, records, manual minutes revision,
+  comments, sign-off, and immutability were exercised with synthetic
+  identities.
+- A real browser at `http://127.0.0.1:5506/` called the actual API at port
+  8002 using `departmentai_test`; it created a meeting proposal, recorded
+  availability, retrieved candidate slots, proposed a candidate slot, and
+  loaded the draft notice. The browser check did not run finalization or AI
+  generation. No institutional data or service was used.
+
+Focused validation completed so far: the governance unit tests and isolated
+database integration test — **11 passed**; `python -m compileall -q backend`
+passed; `node --check` passed for the modified governance frontend modules.
+See
+`docs/INTEGRATION_INVENTORY.md` for the M.Tech/Ph.D. source-to-target mapping.
+
+## Prompt 3 identity and policy-aware analysis — 2026-10-28
+
+- Added an empty-by-default application policy registry. It catalogs the
+  actual UG, Masters, and Doctoral 2023 ordinances, with Board of Governors
+  approval evidence, source versions, and SHA-256 integrity checks. The
+  registry intentionally activates no portal application types.
+- Added a trusted programme-identity provider contract. The default provider
+  returns `NOT_CONFIGURED`; verified identity requires a matching subject,
+  normalized programme, source ID, and source version. No institutional
+  identity provider or provisioning process is configured.
+- Readiness now fingerprints application/document content, policy-registry
+  version, and identity provenance. It invokes existing programme-scoped
+  semantic retrieval only after exact policy resolution and verified identity;
+  retrieved source metadata and each mapped rule's declared source-section
+  number are checked against the configured file. Retrieval validates source
+  scope and citation-section presence, while the actual checklist must be
+  explicitly present in the approved policy mapping rather than inferred from
+  chunks.
+- Added authorized read-only `GET /applications/{id}/analysis`, which combines
+  readiness with saved eligibility results. The response marks eligibility
+  freshness `NOT_TRACKED`, `advisory: true`, and `formal_decision: false`.
+  Student and reviewer workspaces display a unified analysis panel with
+  collapsed source evidence. The Official legacy `/process` route now returns
+  structured HTTP 409 and does not run default-programme analysis.
+- The default has no active application-type mapping and no verified
+  institutional identity, so production readiness remains unresolved and
+  submission continues to fail closed. Isolated tests activate a synthetic
+  mapping/provider only under the test database profile and exercise the real
+  semantic-search path with an actual UG ordinance chunk/embedding; this is
+  not production policy or institutional verification.
+- Focused isolated integration validation: `test_local_database_integration.py`
+  — **2 passed**, including combined-analysis owner access, cross-owner denial,
+  and disabled Official processing. Final validation: combined backend and
+  guardrail suites — **64 passed**, one existing Starlette/AnyIO deprecation
+  warning; all six frontend Node suites passed; `node --check` passed for all
+  **23** frontend `.js`/`.mjs` files; `python -m compileall -q backend` and
+  `git diff --check` passed. No real browser-to-backend Prompt 3 or
+  institutional workflow was performed.
+
+## Prompt 2 readiness gate — implementation verification
+
+- Added authorized read-only `GET /applications/{id}/readiness` and
+  Student-only `POST /applications/{id}/readiness/analyze` endpoints. The
+  analysis records a versioned application/document snapshot, processing
+  outcomes, rule-scope diagnostics, and blockers in `ai_analyses`. The current
+  fingerprint also includes registry and identity provenance.
+- Submission now checks the current input fingerprint and a structurally
+  complete `READY` result inside the existing application-row-locked
+  transaction. Pending, stale, unavailable, unresolved, deficient, or
+  incomplete results return HTTP 409 with a readiness state code. The GET
+  endpoint does not invoke analysis or mutate data.
+- Student details now show documents before a single consolidated
+  AI-Assisted Analysis panel. Draft edits and uploads trigger recalculation;
+  the only Submit control is after the analysis and remains disabled unless
+  readiness is current, rule provenance is verified, all required documents
+  are matched, processing is complete, the deficiency count is zero, and no
+  blockers remain.
+- The current source configuration has no verified programme identity or
+  approved free-text application-category-to-policy mapping. The service
+  therefore does not invoke UG-default RAG retrieval or infer a zero-document
+  checklist: current analyses report `RULES_UNRESOLVED` (or
+  `ANALYSIS_UNAVAILABLE` for document-processing failures), and no production
+  `READY` result can be produced. This is a safe policy blocker, not a fully
+  verified successful readiness workflow.
+- Isolated database tests verify no-analysis/pending, unresolved rules,
+  unknown rather than zero deficiencies, idempotent same-input analysis,
+  staleness after edits/uploads, unavailable document processing, and direct
+  submission rejection. The later Prompt 3 test-only policy/provider fixture
+  exercises actual readiness and semantic retrieval, but it does not establish
+  production policy or institutional readiness.
+- Final validation: `DEPARTMENTAI_DATABASE_ENV=test` and
+  `pytest backend\\tests -q` — **44 passed**, one existing Starlette/AnyIO
+  deprecation warning; `pytest tests\\test_guardrails.py -q` — **13 passed**;
+  all six focused frontend Node suites passed; `node --check` passed for all
+  **23** frontend `.js`/`.mjs` files; changed Python modules passed
+  `py_compile`; and `git diff --check` passed. No live browser-to-backend
+  Prompt 2 flow or AI provider was used in this pass. The earlier Prompt 4
+  browser submission predates the new readiness gate.
+
+## Prompt 1 workflow hardening — 2026-10-28
+
+- Student document upload now requires `DRAFT` state. The upload service locks
+  the application row so submission and upload cannot race; an upload attempted
+  after submission returns HTTP 409. Integration coverage confirms rejected
+  uploads do not add a document.
+- The legacy Official processing route has since been disabled pending
+  policy-aware reprocessing. It returns structured HTTP 409 and performs no
+  legacy default-programme analysis or mutation.
+- Added an authorized, read-only saved-eligibility endpoint for reviewer
+  displays. It reports `NOT_GENERATED`, `PARTIAL`, or `AVAILABLE` without
+  invoking analysis, contacting an AI provider, or writing to the database.
+  The existing eligibility-analysis GET remains side-effecting.
+- Student document rows no longer show per-document Download, Validate,
+  Extract, or Classify controls. Upload is shown only when the server-returned
+  application status is `DRAFT`. Application IDs are shown in lists, details,
+  and submission confirmation; Student and reviewer views share the saved
+  policy-aware analysis response. Policy-specific document completeness and
+  automatic committee routing remain unconfigured.
+- Updated the API contract, role permission matrix, and project state. Added
+  [INTEGRATION_INVENTORY.md](./INTEGRATION_INVENTORY.md) covering the active
+  Module 1 workflow, ordinance sources, Module II, and separate M.Tech/Ph.D.
+  review checkouts. The Module II export router is mounted under
+  `/module2/export` but uses its own DB connection configuration and is not
+  covered by the Module 1 role scopes or isolated test profile.
+- Validation from the project directory:
+  - `DEPARTMENTAI_DATABASE_ENV=test; pytest backend\\tests -q` — **44 passed**,
+    one existing Starlette/AnyIO deprecation warning.
+  - `pytest tests\\test_guardrails.py -q` — **13 passed**.
+  - `api.test.mjs`, `auth.test.mjs`, `login.test.mjs`,
+    `role-workspaces.test.mjs`, and `student-dashboard.test.mjs` — all passed.
+  - `node --check` across **21** frontend `.js`/`.mjs` files and Node's
+    browser-module syntax check for `frontend/app.js` — passed.
+- Browser smoke confirmed the served frontend booted without JavaScript errors
+  and rendered the Student dashboard plus a synthetic application queue row
+  showing its numeric ID under mocked responses. A full Prompt 1 browser-to-API
+  record workflow was not run; no live API, AI provider, or institutional data
+  was used in this verification pass.
+
+## Module 1 final acceptance — 2026-10-27
+
+- Branch: `f-santosh`. The shared worktree remains dirty with prior
+  implementation/user changes; no reset, cleanup, stash operation, commit, or
+  push was performed.
+- Final automated rerun:
+  - `$env:DEPARTMENTAI_DATABASE_ENV='test'; .\.venv\Scripts\python.exe -m pytest backend\tests -q`
+    — **31 passed**, one existing Starlette/AnyIO deprecation warning.
+  - `.\.venv\Scripts\python.exe -m pytest tests\test_guardrails.py -q`
+    — **13 passed**.
+  - `node .\frontend\services\api.test.mjs`,
+    `node .\frontend\services\auth.test.mjs`,
+    `node .\frontend\components\auth\login.test.mjs`,
+    `node .\frontend\pages\role-workspaces.test.mjs`, and
+    `node .\frontend\pages\student\student-dashboard.test.mjs` — all passed.
+  - `node --check` across all frontend `.js` and `.mjs` files — passed for
+    **21 files**.
+- Final UI-only browser smoke against the local static frontend confirmed the
+  account chooser, labeled Student credential inputs, role-change action,
+  and no horizontal overflow at the measured responsive widths. No credentials
+  were entered. The prior Prompt 4 browser journey is the actual-backend
+  evidence for the Student/Official/DUGC workflow; it was not repeated by
+  creating new test records in this acceptance pass.
+- UI/UX review found no significant local defect that justified changing the
+  verified workflow. Existing loading, empty, retry, validation, success,
+  in-flight disabled controls, policy and programme-identity notices, and
+  responsive styles remain in place. No frontend or backend behavior change
+  was made in this acceptance pass.
+- Readiness: **`READY FOR LOCAL SYNTHETIC DEMONSTRATION`** only. This is not
+  institutional staging approval or production readiness. Trusted student
+  programme identity and routing remain `BLOCKED`; categories, eligibility,
+  and required-document policy are `NOT SPECIFIED`; deficiency
+  request/response is `MISSING`; audit visibility and institutional IdP/database
+  integration remain blocked or unverified; PGD is unsupported.
+
+## Prompt 4 real frontend/API/test-database verification — 2026-10-27
+
+- The real checked-in frontend ran at `http://127.0.0.1:5506/` against the
+  actual FastAPI application at `http://127.0.0.1:8002`, configured for
+  `DEPARTMENTAI_DATABASE_ENV=test` and the loopback-only `departmentai_test`
+  database. CORS allowed only the exact frontend origin: its preflight
+  returned HTTP 200, while a request from port 5507 returned HTTP 400. No
+  production CORS default was broadened.
+- Browser workflow used only synthetic accounts and a synthetic PDF:
+  Student sign-in and reload restoration; create/edit draft; upload and list
+  the document; submit; Official claim; permitted transitions through
+  `DOCUMENT_VALIDATION`, `PROCESSING`, `UNDER_REVIEW`, and
+  `COMMITTEE_REVIEW`; Official assignment to configured DUGC membership; DUGC
+  queue load, record/document/history review, and `APPROVED` decision; then
+  Student-visible approved status, full status history, committee outcome,
+  and next-action guidance. The dashboard accurately reported that trusted
+  programme identity is not configured. Assignment to DDPC was rejected
+  because the isolated database had no DDPC member; the configured DUGC
+  assignment succeeded.
+- The authorized Student document download returned HTTP 200 with the
+  expected 34-byte synthetic fixture. The earlier browser-download event
+  instrumentation did not capture a Playwright download event, but the
+  browser's actual API request returned 200 and a separate authenticated HTTP
+  check confirmed the attachment response. No document path was exposed.
+- Separate authenticated HTTP checks against the same running API confirmed:
+  another Student received 404 for the application, document list, and
+  download; a reviewer with only DMPC membership did not see the DUGC record
+  and received 404 for its detail, document, review, download, and decision
+  operations; duplicate submission returned 409; an invalid Official status
+  transition returned 400; and Student committee assignment returned 403.
+- Read-only database verification found the application `APPROVED`, its DUGC
+  review `COMPLETED/APPROVED`, exactly one `COMMITTEE_DECISION_RECORDED` audit
+  event attributed to the authenticated committee actor, and status history
+  ending at `APPROVED`. The Student response omitted reviewer identity.
+- Browser sign-out returned to the account chooser and cleared both local and
+  session storage. Browser instrumentation reported `net::ERR_ABORTED` during
+  navigation, but the API log recorded HTTP 204; an independent request using
+  the revoked token then received HTTP 401 from `/auth/me`.
+- Cleanup was limited to the exact synthetic application, its five
+  marker-matched test accounts, the one generated stored PDF, and its named
+  temporary upload fixture in `departmentai_test`. The shared application
+  storage directory and its unrelated pre-existing file were preserved. All
+  browser/API evidence was collected before cleanup. No AI endpoint or external
+  provider, live institutional account, or institutional database was used.
+- Automated validation from the project directory:
+  ```powershell
+  $env:DEPARTMENTAI_DATABASE_ENV = 'test'
+  .\.venv\Scripts\python.exe -m pytest backend\tests -q
+  ```
+  **31 passed**, one existing Starlette/AnyIO deprecation warning.
+  ```powershell
+  .\.venv\Scripts\python.exe -m pytest tests\test_guardrails.py -q
+  ```
+  **13 passed**. The five focused Node suites passed:
+  `node .\frontend\services\api.test.mjs`,
+  `node .\frontend\services\auth.test.mjs`,
+  `node .\frontend\components\auth\login.test.mjs`,
+  `node .\frontend\pages\role-workspaces.test.mjs`, and
+  `node .\frontend\pages\student\student-dashboard.test.mjs`. `node --check`
+  passed for all frontend `.js` and `.mjs` files.
+- Status: the generic Student → Official → committee → Student lifecycle is
+  `VERIFIED` for the tested local synthetic configuration, including browser
+  and HTTP integration. This is not institutional identity, policy, routing,
+  or deployment verification. Trusted programme identity remains
+  `BLOCKED`; application categories, eligibility, and required-document
+  policy remain `NOT SPECIFIED`; automatic programme routing remains
+  `BLOCKED`; formal deficiency request/response remains `MISSING`.
+
+## Prompt 3 committee review workspace — 2026-10-27
+
+- The existing DUGC `GET /applications` membership-filtered list is now shown
+  on the Committee Review page as well as Assigned Applications. Selecting an
+  application uses the existing record/details, document, status-history, and
+  committee-review routes. No duplicate queue endpoint was added.
+- The existing `PATCH /committee-reviews/{review_id}/decision` behavior is
+  retained. The human decision, application status transition, status-history
+  row, and `COMMITTEE_DECISION_RECORDED` audit entry now commit in one
+  database transaction. The server still derives the actor and checks matching
+  committee membership before calling the service.
+- Existing isolated HTTP/database integration verifies a member can view the
+  assigned record, a non-member cannot read or decide it, and the decision
+  status/history/audit actor and details are persisted. The frontend workspace
+  rendering test verifies that the Committee Review page contains the queue.
+- Validation from the project directory:
+  ```powershell
+  $env:DEPARTMENTAI_DATABASE_ENV = 'test'
+  .\.venv\Scripts\python.exe -m pytest backend\tests -q
+  ```
+  **31 passed**, one existing Starlette/AnyIO deprecation warning.
+  ```powershell
+  .\.venv\Scripts\python.exe -m pytest tests\test_guardrails.py -q
+  ```
+  **13 passed**. The following focused Node tests passed:
+  `node .\frontend\pages\role-workspaces.test.mjs`,
+  `node .\frontend\services\api.test.mjs`,
+  `node .\frontend\services\auth.test.mjs`,
+  `node .\frontend\components\auth\login.test.mjs`, and
+  `node .\frontend\pages\student\student-dashboard.test.mjs`.
+  `node --check .\frontend\app.js` passed.
+- Browser verification: the updated Committee Review page and queue container
+  rendered in the integrated browser using synthetic UI state. The mocked
+  application-list request remained in loading state because the temporary
+  frontend origin was not in the running API's CORS allowlist. The browser
+  journey did not reach record details or decision submission; end-to-end
+  committee browser verification is therefore `PARTIAL`, not `VERIFIED`.
+- Formal deficiency requests/applicant responses remain `MISSING`; no
+  authoritative request/response policy or endpoint was found. Trusted
+  programme identity and automatic programme-based committee routing remain
+  `BLOCKED`; application categories, eligibility, and required-document
+  policy remain `NOT SPECIFIED`. Official claim and manual committee
+  assignment are unchanged. No institutional integration or AI request was
+  performed.
+
+## Trusted programme identity and committee routing — 2026-10-27
+
+- Inspection found `auth_users` stores server-provisioned role and
+  `subject_identifier`, but there is no student programme profile, institutional
+  IdP/student-record integration, administrative provisioning role, or approved
+  profile change workflow. No programme was inferred or assigned.
+- Student login and `/auth/me` responses now state
+  `programme_identity_status: NOT_CONFIGURED` and `verified_programme: null`;
+  staff responses contain nulls. This accurately communicates the missing
+  source and is not an identity verification integration.
+- Existing inactive authentication accounts remain rejected by the backend;
+  isolated integration now checks this. An inactive/conflicting programme
+  profile cannot exist in the current schema because there is no programme
+  profile source to inspect; these cases remain blocked rather than guessed.
+- Application create/edit and committee assignment request schemas reject
+  undeclared request-body fields. Integration coverage checks attempted
+  programme, applicant, and committee-ID spoofing; programme/committee query
+  parameters do not change the server-bound applicant.
+- Existing manual Official assignment is preserved. The backend requires a
+  configured membership for the target committee and records the authenticated
+  Official in the assignment audit event in the same transaction. Existing
+  application access, committee queues, document access, and decision routes
+  remain membership/assignment scoped.
+- Authoritative committee-scope evidence: UG Ordinance §1.6 describes DUGC
+  responsibilities for UG students; the 2023 Masters Ordinance §1.3 describes
+  DMPC in the Masters programme; the 2023 Doctoral Ordinance §1.3 describes
+  DDPC in the doctoral programme. These establish the committees' academic
+  scope, but not a policy routing this portal's generic application types to
+  them. Therefore automatic UG→DUGC, Masters→DMPC, and PhD→DDPC application
+  routing remains `BLOCKED`; no mapping was activated.
+- Committee body scope is `VERIFIED` by the cited ordinance sections;
+  trusted programme identity and automatic application routing are
+  `BLOCKED`; application category and eligibility mapping is
+  `NOT SPECIFIED`. PGD remains unsupported. No live institutional identity,
+  student-record, or committee governance integration was tested.
+- The Student dashboard now shows backend-provided verified identity only
+  when the server explicitly marks it verified; otherwise it states that the
+  profile source and self-service correction are unavailable. Academic
+  Assistant programme selection remains informational.
+- Browser verification used the actual frontend and an in-page synthetic
+  `fetch` mock: Student sign-in, unverified-programme dashboard notice,
+  generic application-creation policy notice, and sign-out were exercised.
+  This did not call a live backend or database. The test did not simulate
+  verified identity or committee routing.
+- Validation: isolated backend suite
+  **31 passed**, one existing deprecation warning:
+  ```powershell
+  $env:DEPARTMENTAI_DATABASE_ENV = 'test'
+  .\.venv\Scripts\python.exe -m pytest backend\tests -q
+  ```
+  Guardrails: `.\.venv\Scripts\python.exe -m pytest tests\test_guardrails.py
+  -q` — **13 passed**. These frontend tests passed:
+  `node .\frontend\services\api.test.mjs`,
+  `node .\frontend\services\auth.test.mjs`,
+  `node .\frontend\components\auth\login.test.mjs`,
+  `node .\frontend\pages\role-workspaces.test.mjs`, and
+  `node .\frontend\pages\student\student-dashboard.test.mjs`. JavaScript
+  syntax checks passed for the changed frontend files.
+
+## Student application lifecycle completion — 2026-10-27
+
+- Reused the existing authenticated application, document, Official queue, and
+  committee workflow. Added `PATCH /applications/{application_id}` for a
+  Student to update only their own `DRAFT`; the service validates editable
+  fields, writes same-status history and an audit event transactionally, and
+  rejects edits after submission. Submission repeats the supported text
+  validation and still rejects duplicate/invalid transitions.
+- Added the draft editor and save action in the existing Student workspace,
+  field limits, status/next-action guidance, and transparent `NOT SPECIFIED`
+  messaging for categories and required-document policy. No unsupported
+  eligibility or document rules were fabricated.
+- Document storage now assigns unique generated storage names while retaining
+  sanitized display names. The existing app-scoped download authorization
+  remains in force; storage paths are not returned to the frontend.
+- Backend isolated suite — **31 passed**, one existing Starlette/AnyIO
+  deprecation warning:
+  ```powershell
+  $env:DEPARTMENTAI_DATABASE_ENV = 'test'
+  .\.venv\Scripts\python.exe -m pytest backend\tests -q
+  ```
+- Guardrails — **13 passed**:
+  `.\.venv\Scripts\python.exe -m pytest tests\test_guardrails.py -q`.
+  These frontend tests all passed:
+  `node .\frontend\services\api.test.mjs`,
+  `node .\frontend\services\auth.test.mjs`,
+  `node .\frontend\components\auth\login.test.mjs`, and
+  `node .\frontend\pages\role-workspaces.test.mjs`; the API test covers the
+  new draft-update request. `node --check .\frontend\app.js` and
+  `node --check .\frontend\services\api.js` also passed.
+- Browser verification exercised the actual frontend on port 5503 against an
+  in-memory synthetic API on port 8002: sign-in, create/save draft, edit,
+  submit, and display resulting status/next action. This was a **mocked API
+  browser journey**, not browser-to-real-backend/database verification.
+  Document upload/download and access-control behavior were covered
+  separately by the isolated backend HTTP/database integration tests. No live
+  institutional integration or external AI request was made.
+- Categories, eligibility, and required-document policy remain
+  `NOT SPECIFIED`; trusted student programme identity and automatic committee
+  routing are `BLOCKED`; formal reviewer deficiency requests/applicant
+  responses are `MISSING`. The existing Official shared queue/claim and
+  committee decision workflow is preserved. Prompt 2 requires authoritative
+  category/eligibility/document policy, trusted programme provisioning, and
+  approved routing and deficiency-response rules before programme-aware
+  behavior can be implemented.
+
+## Programme-scoped ordinance retrieval — 2026-10-26
+
+- Added an Academic Assistant source-scope choice for UG, M.Tech/Masters, and
+  Ph.D. and forwarded it to `POST /ask`. Retrieval restricts each request to
+  the exact selected ordinance source. Unsupported `PGD` is rejected.
+- Added the verified 2023 Masters and Doctoral ordinance PDFs and their
+  prepared text/structure/chunk/vector assets. Excluded synthetic committee
+  records from the reference checkouts.
+- Loaded both corpora additively into the explicitly isolated,
+  loopback-only `departmentai_dev` database. The local database contained
+  246 UG, 105 M.Tech, and 143 Ph.D. chunks after ingestion; no application
+  records were touched.
+- Direct semantic retrieval returned five results for each of UG, M.Tech, and
+  Ph.D., and every result cited only the selected corpus. Focused automated
+  tests cover the corpus assets, source filter, supported/unsupported request
+  values, and API scope forwarding with answer generation stubbed.
+- Validation rerun: backend suite **31 passed** (one existing
+  Starlette/AnyIO deprecation warning), academic-scope guardrails **13 passed**,
+  and focused frontend API/auth/login/workspace tests **4 passed**.
+- No live authenticated browser request to the updated Assistant and no
+  external AI answer-generation request were performed. The API forwarding
+  test is stubbed; direct retrieval verification is against the local database.
+- This does not add programme-aware application forms, eligibility/document
+  rules, student programme identity, or automatic committee routing. Those
+  require approved institutional policy and trusted profile provisioning.
+  See the [Module 1 coverage audit](./MODULE1_PROGRAMME_COVERAGE_AUDIT.md).
+
 ## Student-to-Official shared queue implementation and re-verification — 2026-10-25
 
 - Implemented the approved local routing policy: a Student explicitly submits an owned draft to a queue shared by authenticated Officials; the first Official to claim the submitted application becomes its assigned processor.
@@ -271,3 +714,43 @@ Before this continuation, the worktree already contained modified tracked backen
 3. Add authenticated, role/record-scoped list and workflow endpoints before implementing Student application lists, Official/DUGC queues, or enabling committee writes.
 4. Add an authenticated document-content download capability if file retrieval is required.
 5. Finish keyboard, focus, screen-reader, and responsive accessibility coverage; run only approved staging AI tests and complete M16/M17 before any deployment decision.
+
+## Prompt 4 programme retrieval and ingestion integration — 2026-10-28
+
+- The active project now routes Academic Assistant, readiness, and
+  application ordinance retrieval through one provenance-aware facade.
+  Authenticated `GET /knowledge/sources` compares indexed chunk IDs and
+  source ID/version/hash with the approved registry and processed manifest.
+  Authenticated `POST /knowledge/search` returns explicit programme-scoped
+  candidates or policy-scoped results only after application access,
+  trusted programme identity, and approved policy checks. `/ask` now requires
+  authentication and its citations carry source ID/type, programme, source
+  version, and chunk provenance.
+- The default application-policy registry contains no application-type
+  mappings and the default identity provider is unconfigured. Thus
+  application-scoped production retrieval/readiness remains fail-closed;
+  general programme search is informational, not verified applicant identity
+  or a formal determination.
+- The CLI ingestion path rejects unapproved or hash-mismatched PDFs, stores
+  source/version/hash and chunk provenance, and avoids rewriting an index
+  already matching the complete processed manifest. This uses the existing
+  programme-specific processed JSON/vector assets. PDF parsing,
+  chunking, and embedding generation are not yet generalized for all three
+  programmes.
+- Document text extraction checks application ownership before opening the
+  file, is bounded to 10 MiB, 100 pages, and 1,000,000 extracted characters,
+  and supports embedded PDF text only. Image/scanned-document OCR is not
+  configured. The active project does not include meeting scheduling or
+  minutes generation. Inspected sibling prototypes were not copied: their
+  scheduling is simulated/in-memory and their minutes/case examples do not
+  establish an approved institutional archive.
+- Final backend and guardrail suites: **76 passed**, with one existing
+  Starlette/AnyIO deprecation warning. All six frontend Node suites passed;
+  syntax checks passed for 23 frontend `.js`/`.mjs` files. Python compilation
+  and `git diff --check` passed. The isolated `departmentai_test` workflow
+  checks authenticated knowledge-source inventory and scoped retrieval,
+  verified chunk/section/source-version/hash provenance, unauthenticated
+  denial, cross-owner denial, and scope mismatch.
+- This is test-database evidence only; no browser Assistant request or
+  production integration was performed. No production policy was activated,
+  no source checkout was modified, and no commit was created.

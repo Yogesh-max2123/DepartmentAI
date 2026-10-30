@@ -1,0 +1,2254 @@
+
+================================================================================
+PAGE 1
+================================================================================
+
+Approved by the Board of Governors in its Seventy-third (73rd) meeting held
+on August 10, 2023 vide Resolution No. 73.13 (A)
+ORDINANCES FOR MASTERS’ PROGRAMMES
+
+Motilal Nehru National Institute of Technology Allahabad,
+Prayagraj India
+
+================================================================================
+PAGE 2
+================================================================================
+
+ii
+
+================================================================================
+PAGE 3
+================================================================================
+
+iii
+
+Vision and Mission
+VISION
+
+To attain a distinct identity for the Institute through technology innovation,
+knowledge creation and dissemination for the benefit of the society.
+
+MISSION
+
+To nurture an eco-system for continuous enhancement of value based
+teaching and learning process in the emerging areas of technology.
+
+To train quality human and knowledge resources in the service of society.
+
+To develop sustainable products and technologies.
+
+================================================================================
+PAGE 4
+================================================================================
+
+iv
+
+Table of Contents
+   Page No.
+
+1
+INTRODUCTION
+1
+
+1.1 Masters’ Programmes
+1
+
+1.2
+Senate Masters’ Programme Committee (SMPC)
+2
+
+1.3
+Department Masters’ Programme Committee (DMPC)
+3
+
+1.4
+Office of the Dean (Academic)
+4
+
+1.5 Board of Academic (BoAc)
+4
+2
+ACADEMIC SESSION
+4
+2.1
+Academic Calendar
+4
+3
+ADMISSION
+5
+3.1
+Admission Calendar
+5
+3.2
+Department Master’s Selection Committee(DMSC)
+5
+3.3
+Eligibility for Admission
+5
+3.3.1
+Master of Technology (M.Tech.)
+6
+3.3.2
+Master of Business Administration (MBA)
+6
+3.3.3
+Master of Computer Application (MCA)
+6
+3.3.4
+Master of Science (M.Sc.)
+6
+3.3.5
+Master of Social Works (MSW)
+6
+3.4
+Categories of Masters’ Students/Programmes
+6
+3.4.1
+Full-Time Students
+6
+3.4.1.1 Full-Time Stipendiary
+6
+3.4.1.2 Full- Time Non-Stipendiary
+7
+3.4.1.3 Full-Time Sponsored
+7
+3.4.2 Part-Time Students
+7
+3.4.3
+Conversion from M.Tech. (Full time) to M.Tech. (Part Time)
+8
+3.4.4
+Foreign Students
+8
+3.4.4.1 Sponsored Foreign students
+8
+3.4.4.2 Self-financed Foreign students
+8
+3.5.
+Admission Procedure
+8
+3.5.1
+Admission of Non-Degree Students
+9
+3.5.2
+Admission of Part-Time Students
+10
+3.5.3
+Cancellation of Admission
+10
+
+================================================================================
+PAGE 5
+================================================================================
+
+v
+
+4.
+REGISTRATION
+10
+4.1
+Late Registration
+11
+4.2
+Academic Advising
+11
+4.3
+Semester Load Requirements
+11
+5.
+LEAVE RULES
+11
+5.1
+Annual Leave
+11
+5.2
+Semester Leave
+12
+5.3.
+Medical Leave
+12
+5.4
+Absence without Sanctioned Leave
+12
+5.5
+Study Leave
+12
+6.
+PROVISION FOR JOINING OTHER ACADEMIC INSTITUTIONS AS A
+NON- DEGREE STUDENT
+
+12
+7.
+PROGRAMME REQUIREMENTS
+14
+7.1
+Attendance, Minimum Residence, Maximum Duration, and Extension
+Requirements
+14
+7.2
+Extension of Programme
+14
+8
+Teaching and Evaluation
+15
+8.1
+Teaching
+15
+8.2
+Evaluation
+16
+8.2.1
+Evaluation Process
+16
+8.2.2
+Paper Setting
+16
+8.2.3
+Schedule of Examination
+17
+8.2.4
+Grade Improvement Examination
+17
+8.2.5
+Make-up Examination
+18
+8.3.
+Grading System
+18
+8.3.1
+Grade and Grade Point
+18
+8.3.2
+Semester Performance Index (SPI)
+19
+8.3.3
+Cumulative Performance Index (CPI)
+20
+8.3.4
+Grading Online Courses
+20
+8.3.5
+Grade Report
+21
+8.3.6
+Transcript
+21
+8.3.7
+Withholding of Grade Report
+21
+
+================================================================================
+PAGE 6
+================================================================================
+
+vi
+
+9
+ACADEMIC PERFORMANCE REQUIREMENTS
+21
+10
+TERMINATION OF PROGRAMME
+22
+11 APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF
+THESIS EXAMINATION BOARD
+23
+11.1. Appointment of Thesis Supervisor(s)
+23
+11.2
+Constitution of Thesis Examination Board
+24
+12 THESIS SUBMISSION AND EXAMINATION
+24
+12.1  Thesis submission and notification
+24
+12.2
+Plagiarism
+25
+12.3.  Thesis Oral Examination
+25
+13 DEGREE REQUIREMENTS
+26
+13.1.
+Award of Degree
+26
+13.2
+Withdrawal of the Degree
+26
+14 STIPEND/ FELLOWSHIP, SCHOLARSHIPS, PRIZES AND MEDALS
+26
+14.1. Stipends/Fellowship
+27
+14.2
+Prizes, Medals, Scholarships
+27
+15 CONDUCT AND DISCIPLINE
+27
+15.1.
+Code of Conduct
+27
+15.2.
+Disciplinary Actions and Related Matter
+28
+15.3.
+Unfair Means (UFM)
+28
+16 WAIVER OF REQUIREMENTS IN SPECIAL CASES
+30
+Forms: MP 01 to MP-10
+31-42
+
+================================================================================
+PAGE 7
+================================================================================
+
+vii
+
+Preamble
+
+The provisions contained in these ordinances govern the policies and procedures for the
+admission of students, imparting instructions of courses, conduct of examinations, and
+evaluation and certification of student’s performance.
+These ordinances shall supersede all the earlier set of ordinances of the Institute, with all
+the amendments thereto, with effect from the date of approval of the Board of
+Governors, and shall be binding on the students admitted in the academic session after
+the approval. However, the students admitted in earlier years, shall be governed by the
+ordinances prevalent at the time of their admission.
+
+================================================================================
+PAGE 8
+================================================================================
+
+viii
+
+Nomenclature
+
+ACD
+ACademic Deficiency
+AS
+Academic Session
+MP
+M.Tech. Programme
+BoAc
+Board of Academics
+BoG
+Board of Governors
+BoS
+Board of Studies
+M.Tech.
+Master of Technology
+MBA
+Master of Business Administration
+MCA
+Master of Computer Application
+M.Sc.
+Master of Science
+MSW
+Master of Social Work
+CPI
+Cumulative Performance Index
+DASA
+Direct Admission of Students Abroad
+DMPC
+Department Masters’ Programme Committee
+DMSC
+Department Masters’ Selection Committee
+g
+grade points associated with the letter grades awarded to a student
+GoI
+Government of India
+ICCR
+Indian Council of Cultural Relations
+MEA
+Ministry of External Affairs
+MNNITA
+Motilal Nehru National Institute of Technology Allahabad
+MOOCs
+Massive Open Online Courses
+MoU
+Memorandum of understanding
+s/he
+she or he
+SMPC
+Senate Masters’ Programme Committee
+SPI
+Semester Performance Index
+SUGC
+Senate Under Graduate Committee
+UFM
+Unfair Means
+w
+weight or credit of the course
+
+================================================================================
+PAGE 9
+================================================================================
+
+1
+
+1. INTRODUCTION
+The objectives of the Masters’ Programmes at the Motilal Nehru National
+Institute of Technology Allahabad are:
+• To develop the scientific, engineering and managerial human
+resource of  the highest quality to cater to the needs of the society.
+• To be a leading R & D institution.
+• To be a role model for other educational institutions in the country.
+• To provide a broad grasp of the fundamental principles of sciences,
+management, and technological methods through its curriculum,
+• To provide a deep understanding of the area of specialization.
+• To provide and create an innovative ability to solve new problems.
+• To provide a capacity to learn continually and interact with
+multidisciplinary groups.
+• To develop the students with a capacity for free and objective
+enquiry, courage and integrity, and awareness and sensitivity to the
+needs and aspirations of society.
+With these goals in view, the Masters’ Programmes are designed to include
+courses of study, including theory, practical, seminars, project, industry
+internship, thesis and any other course deemed fit through which a student may
+develop his /her conceptual, analytical, and intellectual skills.
+The procedures and requirements stated in the ordinance embody the philosophy
+of the Masters’ Programmes and ensure a high standard of performance at the
+Institute.
+1.1 Masters’ Programmes
+The Institute offers following Masters’
+Programmes
+through
+different
+departments:
+1. Master of Technology (M.Tech.)
+2. Master of Business Administration (MBA)
+3. Master of Computer Application (MCA)
+4. Master of Science (M.Sc.)
+5. Master of Social Works (MSW)
+and any other Masters' Programme as approved by the Senate from time to time.
+
+================================================================================
+PAGE 10
+================================================================================
+
+2
+
+1.2 Senate Masters’ Programme Committee (SMPC)
+The Senate Masters' Programme Committee (SMPC) shall consist of Conveners of
+Department Master’s Programme Committee (DMPC) of each of the Academic
+Departments /Cells /Centers / Schools, hereafter referred  to as Department, and
+six additional members of whom one shall be the outgoing Chairperson (SMPC),
+the Chairperson SDPC (if not otherwise a member), two Senate nominees from
+amongst the senate members, and two Masters' students (one male and one
+female), preferably one from M.Tech. Programmes and one from other Masters'
+Programmes. The student members shall be nominated by the Dean (Academic).
+Two Senate nominees and Chairperson SMPC shall be nominated by the Senate
+/Chairperson Senate from amongst the members of the Senate. The tenure of the
+Chairperson SMPC and of the Senate members shall be normally of two years.
+The SMPC shall meet at least twice every Semester.
+The Senate Masters' Programme Committee (SMPC) shall have jurisdiction in
+making  suitable recommendations on the following matters concerning the
+Masters' Programme of the Institute:
+• Introduction of new Programmes of study.
+• Modification of eligibility criteria for admission to PG Programmes of the Institute.
+• Introduction of new Course(s) of instruction, Desirable modification/ deletion
+of  Courses already approved.
+• Modification of the credit value of the Courses.
+• Modification of the rules governing the conduct of oral and
+written Examinations, Award of Degrees.
+• All such functions, as mentioned in the ordinance.
+• Any other matter as may be referred to it by the Senate.
+The functions of the SMPC shall be of general policy determination, coordination
+and  review, but the Senate shall retain the power of the final decision. In the
+discharge of its responsibilities, the committee shall make full use of the
+appraisals and recommendations of the various Academic Departments. This
+Committee shall be assisted by the Department Masters' Programme Committees
+(DMPCs).
+
+================================================================================
+PAGE 11
+================================================================================
+
+3
+
+1.3 Department Masters’ Programme Committee (DMPC)
+Each Department shall have a Department Masters' Programme Committee
+(DMPC) consisting of the Head of the Department as ex-officio Chairperson, the
+Convener DUGC /DDPC, and 3 to 5 faculty members to be chosen from the
+Department, one professor from another Department and two departmental
+Masters' Programme students. One of the faculty members shall be nominated
+by the Head as convener DMPC. The student members shall be nominated for a
+period of one year by rotation. The faculty members from the department
+shall comprise of at least one Professor, one Associate Professor, and one
+Assistant Professor.
+The DMPC shall be proposed by the Head of the Department. Officer In-charge of
+each specialization shall be decided by the DMPC for smooth running of different
+programmes offered by the specific department. The duration of the Committee
+shall be two years starting from the beginning of the Academic Session. The
+student members shall not participate when the cases of Academic Evaluation
+of the concerned student are being considered, although the students' opinion
+might be sought prior to taking any decision. The proposed DMPC shall be
+approved by the  Chairperson SMPC.
+The DMPC shall be responsible for the following:
+i.
+To address the issues of the students and advising them in academic
+matters.
+ii.
+To monitor the standard and quality of the overall programme.
+iii. Proposing and implementing new courses and desirable modification of
+courses already approved.
+iv.
+The recommendations of BoAc will be considered in DMPC and SMPC
+and submitted to Senate for approval.
+
+The Chairperson DMPC shall hold at least two meetings every semester and keep
+record of the decisions/ recommendations.
+
+================================================================================
+PAGE 12
+================================================================================
+
+4
+
+1.4 Office of the Dean (Academic)
+The Dean (Academic) shall be responsible for implementing the decisions taken
+on academic matters by the Senate and the SMPC. The office of the Dean
+(Academic) shall:
+(i) receive, process, and maintain all records related to the Masters'
+Programmes including Admission, Registration, Curricula, Courses offered,
+Examinations, Grades and Award of Degrees, Medals/Prizes, Academic Calendar,
+Semester leave, and Termination.
+(ii) disseminate information pertaining to all academic matters.
+(iii) issue necessary Memoranda/Orders.
+(iv) act as an additional channel of communication between the Students,
+Instructors/Supervisor(s), Departments/ Interdisciplinary Programme/ Schools/
+Cells/ Centers and SMPC. The Masters' Programmes Section of the office of Dean
+(Academic) shall assist the SMPC in its functioning.
+1.5 Board of Academics (BoAc)
+There will be a Board of Academics, hereinafter, referred to as BoAc, for every
+Department. The constitution and role of the BoAc shall be as per guidelines of
+NIT Statutes, as amended from time to time. The BoAc will scrutinize the changes
+in existing curriculum or new proposals. The recommendations of BoAc will be
+considered in DMPC and SMPC, and submitted to Senate for approval.
+2. ACADEMIC SESSION (AS)
+The Academic Session of the Institute shall be divided into two Regular
+Semesters, termed as Odd and Even Semesters. The Odd Semester shall
+normally commence from mid-July, and the Even Semester from the last week of
+December (or the first week of January) every year. The duration of each regular
+Semester (Odd and Even) shall be normally seventy days /fourteen weeks for the
+purpose of instructions.
+2.1 Academic Calendar
+The exact dates of all the important events such as, registration, orientation, late
+registration, commencement of classes, declaration of the list of registered
+students, shortage of attendance, examinations, submission of grades, vacation,
+mid-semester break, official student activities  during the Academic Session shall
+
+================================================================================
+PAGE 13
+================================================================================
+
+5
+
+be specified in the Academic Calendar of the Institute. The Dean (Academic) will
+notify the Academic Calendar of each Semester after approval of the Senate. Any
+modification /change in the academic calendar due to an emergent situation
+shall be proposed by the Dean (Academic), approved by the Chairperson, Senate,
+and reported to Senate for ratification.
+3. ADMISSION
+3.1 Admission Calendar
+Admission shall normally be made in the odd Semester. However, the Senate
+may decide to admit students in the Even Semester in case of vacant seats (if
+any).
+3.2 Department Masters’ Selection Committee (DMSC)
+The DMSC shall be constituted every year in the month of April for admissions to
+Masters' Programmes for the forthcoming session. The DMSC shall consist of at
+least four faculty members, comprising at least two professors, one of whom
+shall be from another Department. The Head of the Department shall be the
+Chairperson DMSC (ex officio). The constitution of the Selection Committee shall
+be proposed by the Head of the Department and approved by Chairperson SMPC.
+3.3 Eligibility for Admission
+i. The eligibility conditions given below shall be considered to be the absolute
+minimum. Departments shall reserve the right to prescribe any requirements
+over and above these, subject to the approval of the Chairperson Senate.
+ii. The “specified minimum” marks/CPI (Cumulative Performance Index), referred
+to in subsequent sections, shall imply a minimum of 60% aggregate marks or
+CPI of 6.5 at the qualifying examination (institute will not apply/accept any
+conversion formula from CPI to percentage or vice versa. The grade/marks
+awarding system as appeared on candidate’s award sheet shall be
+acceptable). For SC/ST candidate’s eligibility in specified minimum marks /CPI
+shall be relaxed as per the Government of India norms).
+Eligibility of candidates under ICCR scheme of GoI will be verified by
+Department Masters' Selection Committee (DMSC) on the basis of eligibility
+criteria
+set
+up
+for
+regular
+Master’s
+programmes.
+However,
+GATE/NET/JAM/CUCET etc. qualification will not be applicable for these
+candidates, but they must have valid GRE Score.
+
+================================================================================
+PAGE 14
+================================================================================
+
+6
+
+iii. Reservation in the Programme shall be done as per the  Government of India
+rules.
+3.3.1 Master of Technology (M.Tech.)
+Bachelor's degree with minor / honours or equivalent in the appropriate
+branch of Engineering /Technology OR Master Degree in the appropriate
+discipline of Science.
+3.3.2 Master of Business Administration (MBA)
+Bachelor's degree or equivalent of a minimum three years duration in any discipline.
+3.3.3 Master of Computer Application (MCA)
+Bachelor's degree of minimum three years duration in Science with Mathematics
+as one of the main subjects.
+3.3.4 Master of Science (M.Sc.)
+Bachelor’s degree of Science (in respective discipline) /Computer Science
+/Engineering/ Technology (as per the eligibility conditions decided by the
+respective department).
+3.3.5 Master of Social Works (MSW)
+
+Bachelor's degree in any discipline with minimum of three years duration.
+
+3.4 Categories of Masters’ Students/Programmes
+Followings are different categories of Master’s programme
+3.4.1 Full-Time Students
+Full-time students are further classified as full-time stipendiary, full-time non-
+stipendiary and full-time sponsored.
+3.4.1.1 Full-Time Stipendiary
+This category of Masters' students shall be eligible for financial assistance in the
+form of stipend/fellowship at the approved rates and guidelines as notified by
+GoI from time to time. The stipend/fellowship shall be awarded to the students
+of this category on a Semester–to-Semester basis on the recommendation of the
+Head of the Department. The renewal of the stipend is dependent on the
+
+================================================================================
+PAGE 15
+================================================================================
+
+7
+
+satisfactory academic performance of the student and attendance record.
+3.4.1.2 Full-Time Non-Stipendiary
+These students do not receive any financial assistance from the Institute.
+3.4.1.3 Full-Time Sponsored
+Full-Time sponsored Masters' programmes students are those who receive
+financial support from AICTE under QIP scheme OR from Government /Semi-
+Government organizations /institutions, OR Research and Development
+organizations of national repute, OR companies listed with any of the national
+stock exchanges OR AICTE recognized educational Institutions having presence
+since last 25 years, under study leave. Such a candidate must be sponsored by
+his/her employer and must have been in employment with the sponsoring
+organization for at least two years at the time of admission date as on the last
+date of application. Candidates in service are to be releaved on authorized leave
+from the organization for full-time research work at  the Institute and must
+furnish proof of sponsorship along with No-Objection certificate from the
+employer.
+3.4.2 Part-Time Students
+These students are admitted for the Master’s programmes which are being
+offered on part-time basis. A Part-time candidate must have been in full time
+service for at least two years after completion of qualifying degree as on the last
+date of the application for admission. The part-time classes shall be held in the
+evening on working days and/or on weekends. The semester load requirements
+for course work  shall be about half of the full time course. The minimum duration
+of such course shall be of three years and maximum duration of the course shall
+be of five years. These courses are for the professionals working in Allahabad,
+Prayagraj district and adjoining districts in Government/Semi-Government
+Organizations/institutions, or Research and Development organizations of
+national repute, or companies listed with any of the national exchanges or AICTE
+recognized educational Institutions having presence  since last 25 years.
+This programme is a self-financed programme and minimum number of
+candidates required to run this programme shall be decided on cost basis by the
+School of Non Formal and Continuing Education (SNFCE). This shall be notified at
+the time of admission process.
+
+================================================================================
+PAGE 16
+================================================================================
+
+8
+
+3.4.3 Conversion from M.Tech. (Full-time) to M.Tech. (Part-Time)
+A full-time M.Tech. student, who has completed course work and is registered in
+3rd semester, may convert M.Tech. (Full-time) into M.Tech. (Part-Time), if he /she
+has got a job / any genuine reason. For conversion, the student shall fill out form
+MP-01 through the supervisor and DMPC. On approval of the Chairperson SMPC,
+his /her full-time programme may change into part-time programme. The
+candidate will be required to produce a certificate [self /organization] regarding
+engagement during the part time registration period.
+3.4.4 Foreign Students
+The eligibility of Foreign students shall be verified by DMSC as per Section 3.3 and
+other relevant sections. In addition, the candidate must have a valid GRE score in
+Place of GATE/NET.
+3.4.4.1 Sponsored Foreign students.
+Foreign students shall be sponsored by their Government or employer or
+awarded a scholarship by the Government of India, the Indian Council for Culture
+Relations (ICCR), GoI, or other such Agencies /organizations.
+3.4.4.2 Self-financed Foreign students
+These students may apply to the Institute through DASA /Ministry of External
+Affairs. Detailed guidelines satisfying the condition given in this Ordinances for
+admission of foreign students shall be proposed by Dean (Academic) and
+approved by the chairperson Senate/Senate.
+3.5. Admission Procedure
+1. All admissions except those which are made through Centralized Counseling
+Process including full-time MCA, full-time M.Tech. stipendiary and M.Sc. shall be
+made only after approval of the Chairperson Senate on the recommendations of
+the duly constituted Department Masters' Selection Committee (DMSC) and
+Chairperson SMPC.
+2. Reservation for various categories shall be applicable as per Government of
+India rules.
+3. On approval by the Chairperson Senate, the Head of the Department shall
+issue the admission letter to the candidates, by Institute admission process (not
+for the candidates who are admitted through Centralized Counseling). The
+
+================================================================================
+PAGE 17
+================================================================================
+
+9
+
+candidate shall be required to accept the offer of admission by depositing the
+prescribed fee before the specified date.
+4. In case a candidate does not accept the offer by paying the prescribed fee by
+the specified date, the offer of admission shall stand automatically withdrawn,
+and the admission may be offered to the candidates in the waiting list, if any.
+5. The offer of admission shall also stand withdrawn if the candidate fails to
+register by the last date of physical registration after accepting the offer of
+admission.
+6. The selected candidate, who has completed all the pre-requisites of qualifying
+degree before the date of registration but is unable to produce the certificate of
+proof of having passed and secured the minimum specified qualifying marks,
+shall be considered for provisional admission. However, if admitted provisionally,
+he/she shall be required to produce the evidence of his/her having passed the
+qualifying degree examination within six weeks from the last date of registration,
+failing which the admission shall automatically be cancelled. In special cases,
+relaxation to this date may be given by Chairperson Senate through Head of the
+Department and Dean Academic.
+7. Admission through the Indian Council of Cultural Relations (ICCR), Direct
+Admission of Students Abroad (DASA) and Ministry of External Affairs (MEA) shall
+be as per rules of respective scheme. Eligibility of the candidates shall be verified
+by DMSC.
+3.5.1 Admission of Non-Degree Students
+1. A non-degree student is a student who is registered for a Degree in any other
+recognized Institute or University in India or abroad, and who is officially
+sponsored by that Institute or University to complete part of his /her academic
+requirements at MNNIT Allahabad. For that purpose the non-degree student may
+carry out research /course work /and use other academic facilities. Credits
+earned by such student (if any) may be transferred to the parent Institute, if
+required.
+2. The strength of non-degree students in any programme shall not be more than
+10% of the total intake in that programme. The fee for course work and
+Infrastructure and Experimental work shall be decided by the School for Non-
+Formal and    Continuing Education (SNFCE).
+
+================================================================================
+PAGE 18
+================================================================================
+
+10
+
+3. Students so admitted will be governed by all the rules, regulations and
+discipline of the Institute.
+3.5.2 Admission of Part-Time Students
+Admission shall be done by DMSC on the basis of screening considering
+candidate’s experience, employment record and employee’s recommendation
+followed by interview. Their eligibility for admission shall be as per Clause 3.3 and
+other academic requirements for completing the degree shall remain same as
+that for full time students. The detailed procedure shall be proposed as per
+ordinances by Dean (Academic).
+3.5.3 Cancellation of Admission
+The Dean (Academic) with approval of the Senate/Chairperson Senate may
+cancel the admission of any student who fails to submit the prescribed
+documents by the specified date or fails to meet other stipulated requirement(s).
+The Senate may also cancel the admission at any later stage if it is found that the
+student had supplied some false information or suppressed relevant information
+while seeking admission.
+4. REGISTRATION
+The office of the Dean (Academic) shall coordinate the registration process with
+the assistance of the Conveners of DMPC and departments. A student shall
+register in each Semester for the Courses/Projects /Thesis Performance Credits
+that he/she intends to pursue in that Semester.
+1. The registration process shall involve payment of fees for that Semester and
+clearance of any outstanding dues of the previous Semester, and signing the
+registration roll available at the department/ office of Dean (Academic) (as
+provided by Dean (Academic) office) for physical registration without which
+registration process shall remain incomplete.
+2. All the students including those who are on authorized leave shall continue to
+register till they complete all the requirements of the programme. Those
+students who are on authorized /admissible academic leave shall be required to
+register through online process for zero credits.
+
+================================================================================
+PAGE 19
+================================================================================
+
+11
+
+3. Those students who, after registering for the Semester, desire to avail leave
+for days more than as permissible in the Ordinance must be advised for Semester
+leave.
+The sole responsibility for registration shall rest with the student concerned.
+4.1 Late Registration
+No registration shall be allowed after the notified last date of registration during
+the semester except in special cases with the permission of the Dean (Academic) /
+Chairperson, Senate.
+4.2 Academic Advising
+A student shall be advised in the selection of courses by the DMPC of the
+concerned Department. A student registering for thesis credits must have a thesis
+supervisor assigned to him /her. The request for repeat or substitution of a
+course must be  given in writing duly endorsed by the DMPC, to the Dean
+(Academic) at the time of registration.
+4.3 Semester Load Requirements
+A semester load shall be minimum 20 credits for full-time and 8-12 credits for
+part-time Masters' students.
+5. LEAVE RULES
+Full-time students may be granted leave on submission of application to the
+Head of the Department concerned through the Supervisor (if allotted) and
+Convener DMPC. Application in the prescribed format (Form: MP-02) must be
+submitted well in advance of the date of commencement of the leave requested.
+5.1 Annual Leave
+1. All non-stipendiary Masters' student shall be entitled for Institute Holidays,
+mid-semester recess and vacations as specified in the academic calendar.
+2. Stipendiary Masters' students shall be entitled to annual leave of maximum
+eight  days in a semester or maximum 15 days in an academic calendar, excluding
+Institute  holidays.
+3. In addition, the students shall be entitled to maximum 15 days on
+authorized/ admissible leave in one academic year for prescribed training, or any
+academic work related to the thesis, assigned by the Supervisor, recommended
+by Convener DMPC, and approved by the Chairperson SMPC. Any such
+
+================================================================================
+PAGE 20
+================================================================================
+
+12
+
+assignment for more than this period shall require prior approval of the
+Chairperson Senate through DMPC and SMPC.
+5.2 Semester Leave
+Semester leave up to a maximum of two Semesters may be sanctioned for valid
+reasons in the entire duration of the programme. Semester leave may be
+sanctioned on recommendation of DMPC and SMPC and approval of Dean
+(Academic). Leave for more than one semester at   a time shall not be granted.
+5.3. Medical Leave
+For serious / exceptional medical condition, accident, etc. (to be endorsed by the
+institute medical officer / Govt. Hospitals/ Specialized Hospitals), a student may
+be granted a medical leave of maximum 15 days in an academic year ( in
+addition to normal annual leave (5.1)) with a stipend (if applicable) upon
+recommendation of Supervisor(s)/Convener DMPC and approval of the
+concerned Head of the Department.
+For extraordinary situations requiring the leave beyond 15 days, the application
+may be decided by the DMPC on case to case basis.
+All other academic requirements must be fulfilled by the student.
+5.4 Absence without Sanctioned Leave
+Absence without sanctioned leave shall entail a loss of financial assistantship for
+the period of absence in case of stipendiary students.
+Long absence without sanctioned leave (as per 5.1) may result in the termination
+of the student's Programme on the recommendation of the DMPC and SMPC and
+approval of the (Dean Academic). The head of the Department shall issue the
+termination letter with a copy to the office of Dean (Academic).
+5.5 Study Leave
+An eligible student shall be allowed study leave as per Clause No. 6.
+6. PROVISION FOR JOINING OTHER ACADEMIC INSTITUTIONS AS A NON-
+DEGREE STUDENT
+Rules and procedures to join / visit other academic / research Institutions of repute, in
+India or abroad, as non-degree students are as follows:
+
+================================================================================
+PAGE 21
+================================================================================
+
+13
+
+1. Only those Masters' Students who have spent at least two semesters and
+completed course work, are eligible to proceed as non-degree students
+elsewhere. The Student’s are required to give a presentation on the research
+/industrial proposal before proceeding on non degree status.
+2. An eligible student shall submit an application to the Chairperson SMPC
+through the DMPC and the thesis supervisor in the prescribed format (Form: MP-
+03), duly supported by a statement of purpose to undertake the proposed work
+and sufficient information about the Department /Institution and acceptance
+letter from that Institute /Organization.
+3. Permission to proceed to an Institution as a non-degree student does not
+imply that the student will automatically get any waiver from the academic
+requirements of MNNIT Allahabad. However, he /she shall be treated on
+authorized leave during the absence from the Institution.
+4. The duly Constituted Thesis Examination Board (Clause 11.2) shall evaluate the
+work done by the student for establishing equivalence with the academic
+performance requirements of the Master’s programme of the Institute. The
+evaluation shall be done on the basis of the record of attendance as provided by
+the host institution/organization (where student worked as non-degree student),
+performance evaluation at the host institution (Form: MP-04) and a detailed
+report along with a presentation by the student on the work done at the host
+institution.
+5. A stipendiary student shall be entitled to receive stipend on the condition that
+he/she shall submit the proof that he/she is not receiving any financial assistance
+at the host institution. However, his/her financial assistantship shall be released
+after he/she joins back the Department and on the recommendation of the
+committee as per point 4 above.
+6. In case, the student could not physically report during registration, due to
+his/her assignment at the host Organization/Institution, he/she may be allowed
+for physical reporting at a later date. He/She shall have to complete the other
+registration steps within the time specified, if permitted by Dean Academic on
+the recommendation of Head of the Department.
+
+================================================================================
+PAGE 22
+================================================================================
+
+14
+
+7. PROGRAMME REQUIREMENTS
+7.1 Attendance, Minimum Residence, Maximum Duration and Extension
+Requirements
+Students with less than 75% attendance in a subject shall not be allowed to
+appear in the End Semester Examination of that subject. This implies that 25%
+shortage of attendance includes absence due to sports/games activity, Campus
+interviews, Medical and any other type of leaves, etc. The following table lists the
+minimum residence and maximum duration allowed in the Programme, and units
+requirements for graduation in the various programmes:
+
+Prog.
+Min.
+Total
+credits
+Min.
+credits
+through
+course
+work
+Min.
+Credits
+through
+Research
+Minimum
+Residence
+Period
+(in
+semesters) Full
+time / Part time
+Max.
+duration
+Full Time
+(in
+semester)
+Max.
+duration
+Part
+Time
+(in
+semester)
+Conver
+Ted
+From
+Full
+Time
+To part
+time
+M.Tech. 80
+40
+
+40
+Two/Four
+Seven
+Ten
+Seven
+MBA
+80
+60
+20
+Four/Five
+Seven
+Ten
+NA
+MCA
+120
+100
+20*
+Five
+Nine
+Twelve
+NA
+M.Sc.
+80
+60
+20
+Four
+Seven
+ NA
+NA
+MSW
+80
+60
+20
+Four
+Seven
+Ten
+NA
+
+*industry/academic internship or equivalent
+
+"Course Work" includes only Masters’ course credits unless otherwise stated. To
+satisfy the "Minimum Residence" requirements, registration must be completed
+over consecutive semesters; exception will be made only if the student is on
+authorized leave. "Maximum Duration" is counted from the student's first
+registration date. SPI/CPI will be calculated on the basis of all Masters’ courses
+taken by the student.
+Further, as per National Education Policy 2020 multiple exit points with some
+kind of certification may be introduced by the Senate.
+
+7.2 Extension of Programme
+No student, who has completed the prescribed maximum duration in the
+programme, shall be allowed to register in the subsequent semester, unless
+he/she has been granted extension of the programme by the Senate on the
+recommendations of the DMPC and SMPC.
+
+================================================================================
+PAGE 23
+================================================================================
+
+15
+
+8. Teaching and Evaluation
+8.1 Teaching
+(i) Medium - The medium of instruction shall be English.
+(ii) List of Courses - The list of courses to be offered by a Department
+/Interdisciplinary Programme shall be finalized before the beginning of the
+Semester by the concerned Head, taking into consideration all the requirements
+and the recommendations of the /BoAC /BoS / Chairperson SMPC, related to that
+specific specilization.
+(iii) Conduct of Courses - Each course is conducted by the Course Coordinator
+with the assistance of the required number of Faculty Members. The Course
+Coordinator is responsible for conducting the course, evaluating the performance
+of the students, and submitting the grades to the Office of the Dean (Academic)
+within the prescribed time limit.
+(iv) At the beginning of the classes, the course coordinator shall provide lecture
+plan and scheme of teacher assessment (class test) to the class under intimation
+to the Head of the department.
+(v) Teaching Assignments - The Course Coordinator and associated Faculty
+Members for all the courses offered by a Department during the Semester are
+decided by the concerned Head. For courses of interdisciplinary nature, the
+Course Coordinator and  associated Faculty Members shall be decided mutually
+by the Heads of the concerned Departments.
+(vi) Audit Courses - A student may audit a course in addition to the prescribed
+Academic Load requirement with the permission of the concerned Head of the
+Department and intimation to Dean (Academic). There will, however, be no
+obligation on the part of department to reschedule the time-table if any clash
+arises.
+Under this arrangement, the student is simply auditing the course and the grade
+(if any) awarded to him/her in such courses shall be entered in his/her Grade
+Report, but shall not be considered for SPI/CPI calculation.
+
+================================================================================
+PAGE 24
+================================================================================
+
+16
+
+8.2 Evaluation
+8.2.1 Evaluation Process
+The evaluation of students in a Theory/Practical Course shall be a continuous
+process and shall be based on their performance in the quizzes /class tests,
+tutorials, assignments, laboratory work, and any other evaluation process as
+adopted by the course coordinator along with the mid-semester examination [1.5
+Hrs] and end-semester examination [2.5 Hrs]. In order to maintain transparency,
+the course coordinator shall allow the students to see their answer books within
+the prescribed time limit.
+The relative weights of Mid-Semester Examination, End-Semester Examination,
+and Teacher Assessment in the award of Grades shall be as follows:
+
+Sl.
+No.
+Course
+Mid Semester Teachers
+Assessment
+End Semester
+1
+Theory
+25%
+25%
+50%
+2
+Practical/Seminar/
+Project/ Internship /Thesis
+-
+50% *
+
+50% **
+
+* This component has to be exclusively from the thesis supervisor.
+** This component has to be from the examination board.
+
+Teachers’ assessment marks shall be awarded on the basis of attendance,
+tutorials,  quizzes, assignments, surprise tests, competition in national level
+events, etc.
+
+Note: A Master student may be allowed to complete his /her thesis/ project in an
+industry /organization.
+8.2.2 Paper Setting
+For each Theory Course, there shall be a Course Coordinator, appointed by the
+Head of the respective Department, who shall normally set the paper in
+consultation with associated Faculty Members. Apart from this, the Dean
+(Academic), in consultation with the Head of the Department, may form a
+moderation Committee if required.
+
+================================================================================
+PAGE 25
+================================================================================
+
+17
+
+8.2.3 Schedule of Examination
+The
+Schedule
+for
+the
+Mid-Semester
+Examination,
+the
+End-Semester
+Examination, and the Grade Improvement Examination in theory courses shall be
+prepared and announced by the Dean (Academic). The schedule for laboratory
+examination shall be announced by the Head of the Department. All the
+Examinations, including laboratory examinations shall be usually held during the
+period /days specified in the Academic Calendar.
+8.2.4 Grade Improvement Examination
+There shall be a Grade Improvement Examination every year during the
+period/days specified in the academic calendar.
+For this examination, no regular teaching classes shall be held. The modalities of
+the Grade Improvement Examination shall be as follows:
+I.
+Only those students who were registered for the Courses during the regular
+semester but could not appear or were not allowed to appear in the Examination
+due to any reason or have been awarded ACD shall be eligible to appear in the
+Grade Improvement Examination.
+II.
+A student can appear for a maximum of five courses in any combination of
+theory and laboratory every year in the Grade Improvement Examination.
+III.
+The weightage of different components for the Computation of Grades of the
+Course for which the student appears in the Grade Improvement Examination,
+shall be as follows:
+
+Sl. No.
+Course
+Teachers Assessment
+Grade Improvement
+Examination
+1
+Theory
+25%
+75%
+2
+Practical/Seminar/
+Project
+50%
+50%
+
+IV. The records of the Teacher’s Assessment marks of the students will be
+retained by Head of the concerned Department for the above purpose.
+
+================================================================================
+PAGE 26
+================================================================================
+
+18
+
+8.2.5 Make-up Examination
+If a student, for bonafide reasons which are beyond control such as illness,
+demise of parents etc., fails to appear in the mid semester examination and /or
+end- semester examinations in one or more course(s), he/she may make a
+request to the SMPC Chairperson for a make-up examination within seven days of
+the last scheduled examination. Such a request must be made on the prescribed
+form. In the case of the makeup test for the mid-semester examination upper
+limit for awarding marks will be 70% of the maximum marks irrespective of marks
+secured in the make-up examination.
+8.3. Grading System
+Grades and Grade Points: At the end of the End Semester / Grade Improvement
+Examination, a student is awarded a letter grade in each of his/her Courses by
+the course coordinator, taking into account his/her performance in the various
+Examinations, Quizzes, Assignments, Laboratory Work (if any), etc. besides
+regularity of attendance in classes. The grades shall be submitted through online
+process along with the duly signed printout of the grade sheet to the office of the
+Dean (Academic) positively within the prescribed time limit after the End-
+Semester/ Grade Improvement Examination.
+8.3.1 Grade and Grade Point
+A student shall be awarded a letter grade in each Course/Research Seminar/Mini-
+project in which he/she is registered for, indicating his/her overall performance
+in that Course. There are nine Letter Grades: A+, A, B+, B, C, D, F, N and ABS. The
+correspondence between grades and points (on a 10-point scale)/rating is given
+below:
+Letter
+Grade
+A+
+A
+B+
+B
+C
+D
+F/N/ABS
+Grade
+Points
+10
+9
+8
+7
+6
+4
+0
+
+A student, who is not allowed to appear in the end-semester examination for
+any reason, such as shortage of attendance / disciplinary action / or alike, shall
+be awarded N grade. A student, who could not appear in end semester
+examination for reasons other than shortage of attendance/ disciplinary action/
+or alike shall be awarded ABS grade.
+
+================================================================================
+PAGE 27
+================================================================================
+
+19
+
+In order to have appropriate evaluation correspondence with online courses /
+courses from other institutions, etc., it is desirable that A+ may be awarded to
+the students securing more than or equal to 85% marks and a student securing
+less than 30% marks may be awarded grade F.
+In addition, there are additional three Letter Grades, viz., S, X, W which stand for
+Satisfactory, Unsatisfactory, and Withheld Temporarily, to appear in examination
+respectively.
+The system of grading to be followed shall be Relative Grading System. The HoD
+shall ensure that the course instructor/coordinator uses normal distribution
+curve to award, ensuring that majority of the students fall in the middle range of
+the grades.
+Such students shall be required to clear his/her D/N/F/ABS grade by appearing in
+the subsequent Grade Improvement examination.
+An ACD student shall be allowed to clear his/her ACD by repeating the course in
+which he/she has attained F or N or ABS or D grade; or may be advised to
+replace the course with another course on the recommendation of the
+Supervisor and DMPC, subject to:
+(i) His/her SPI/CPI is less than the prescribed minimum and the student is
+allowed to continue in the Programme, and
+(ii) He/She has completed all the courses as prescribed by the Department.
+In case a student appears in the Grade Improvement Examination, the SPI and
+CPI shall be calculated after replacing better of the old and new grades obtained
+by such a student to remove t h e academic deficiency. All the courses
+attended by the students shall appear on the transcript.
+The letter grades shall be awarded for M.Tech. thesis through an assessment
+by the  Examination Board (constituted as per para 11.2) at the end of the
+Semester.
+8.3.2 Semester Performance Index (SPI)
+The Semester Performance Index (SPI) is a weighted average of the Grade Points
+earned by a student in all the Courses credited and describes his/her Academic
+Performance in a Semester. If the grade points associated with the letter grades
+awarded to a student are g1 ,g2 ,g3 ......... gm in m Courses and the corresponding
+weights (or credits of the courses) are w1 ,w2 ,w3 , ............ ,wm , the SPI is given by
+
+================================================================================
+PAGE 28
+================================================================================
+
+20
+
+S and X grades shall not be considered in the computation of the SPI.
+8.3.3 Cumulative Performance Index (CPI)
+The Cumulative Performance Index (CPI) indicates the overall Academic
+Performance of a student in all the Courses registered up to and including the
+latest completed Semester term. It shall be computed in the same manner as the
+SPI, considering all the courses (say, n), and is given by
+
+ Whenever a student is permitted to repeat or substitute a Course, the new letter
+Grade shall replace the better of the old and new letter Grades in the
+computation of the CPI but both the Grades shall appear on his/her Grade Report
+and transcript.
+
+8.3.4 Grading Online Courses
+The grades equivalence of the marks obtained (as stated in the marks sheet of
+the student) by a student in a course work through online courses / MOOCs /
+courses offered by other Institutions under MoU shall be adopted as given
+below.
+Equivalent Grades
+A+
+A
+B+
+B
+C
+D
+F
+% Marks obtained (as
+per the marks sheet of
+the
+student)
+by
+a
+student   in a course
+work, through MOOCs
+≥85
+84-75
+74-65
+64-55
+54-45 44-40
+<40
+
+The SMPC, on the basis of recommendation of DMPC  shall decide on other matter
+pertaining to credits, duration, normalization of marks etc. of the online course.
+
+================================================================================
+PAGE 29
+================================================================================
+
+21
+
+8.3.5 Grade Report –A copy of the Grade Report shall be issued to each student
+at the end of the Semester. A duplicate copy, if required, can be
+obtained on payment of the prescribed fee.
+8.3.6 Transcript –A Transcript contains the record of the Grades obtained in each
+and all Courses, Thesis, Project and Seminar registered by a student
+during his/her entire duration of Master Programme including the
+Courses which have been repeated and/or replaced. It also includes
+the record of Semester Leave.
+8.3.7 Withholding of Grade Report –The grade report of a student shall be
+withheld if he/she has not paid his/her dues, or if there is a case of
+indiscipline pending against him/her.
+9. ACADEMIC PERFORMANCE REQUIREMENTS
+1. The minimum SPI/CPI requirement for continuing in the programme is equal to
+5.5.
+2. A student who secures SPI less than 5.5 in the first semester shall be called
+ACD. Such a student shall be allowed to register for the second semester without
+stipend /fellowship.
+3. A student will be allowed to register in the third semester and subsequent odd
+semesters if the following conditions are met by him/her.
+(a) His/Her CPI is equal to or greater than 5.5 at the end of the academic session.
+(b) He/she does not have ABS or W or F / N or X grade in any registered course.
+4. A Masters’ student who does not fulfill either or both of the above (a) and (b)
+conditions shall be categorized as “Academically Deficient (ACD)”. The following
+guidelines and rules shall be applicable to such students:
+(i) The Head of The Department and the DMPC convener shall advise the
+students regarding remedial actions to be undertaken to remove the academic
+deficiencies such as repeating a course/ replacing a course/ appearing in
+subsequent Grade Improvement examination or repeating a semester where
+applicables.
+(ii) He/She shall clear N or F grade acquired in first or second semester, in the
+subsequent Grade Improvement /semester examination until his/her SPI/CPI is
+
+================================================================================
+PAGE 30
+================================================================================
+
+22
+
+equal to or greater than 5.5 after removal of academic deficiency.
+(iii) The SPI/CPI are calculated after replacing better of old and new grades
+obtained by him/her if academic deficiency is removed. Similar rule would be
+applicable for fifth semester registration, wherever applicable.
+5. If any Masters’ (Full-time/ Part-time) student is not able to submit his/her
+thesis for evaluation due to not in completion of work at the end of final
+semester, he/she shall be granted an extension of two months (without having
+to register) by Chairperson, SMPC subject to the maximum duration allowed for
+the programme as per Clause 7.1. His/her thesis work shall be evaluated within
+two months as intermediate semester and report of examination shall be
+submitted in MP-09b form. Under this condition, the marks submitted by thesis
+oral board on MP-09b will be entered and corresponding grade will be awarded.
+The Form MP-09a shall also be used for evaluation of work in intermediate
+semesters.
+10. Termination of Programme
+1. At the end of each semester the office of the Dean [Academic] shall provide a
+copy of the results to the Head of the Departments.
+2. A student who has not been able to clear academic deficiency at the end of
+second semester (as per clause 9) shall be terminated from the programme.
+3. Long absence without sanctioned leave (as per 5.1) may result in the
+termination of the student's Programme on the recommendation of the DMPC
+and SMPC and approval of the Chairperson Senate.
+4. A student having ACD who has completed the maximum duration of the
+programme (as per Clause 7.1), shall be considered to be terminated
+automatically.
+5. A student having not registered for more than one semester shall be
+considered to be terminated automatically.
+6. Any act of indiscipline may lead to termination on recommendation of
+Proctorial Board.
+7. Chairperson SMPC shall convene a meeting of SMPC to discuss and decide
+those cases of termination which are permissible to continue in the programme
+on the recommendation of the DMPC on valid reasons.
+
+================================================================================
+PAGE 31
+================================================================================
+
+23
+
+8. The termination letter shall be issued by Head of the Department after
+approval of Chairperson Senate/Director with copy to Chairperson, SMPC,
+Dean SW and Chief Warden.
+9. A student, whose programme is terminated on account of inadequate
+Academic Performance or otherwise, may appeal to the Chairperson Senate for
+reconsideration through DMPC and SMPC (Form : MP-05). While making the
+appeal against termination, he/she shall give reasons for his/her poor Academic
+Performance and/or to explain why his/her position merits reconsideration. The
+Senate shall take a final decision after considering all the available inputs. The
+Senate shall not entertain any further appeal for review unless substantial
+additional information is brought to its notice. The Senate shall not entertain the
+appeal more than two times from the same student.
+
+11. APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF THESIS
+EXAMINATION BOARD
+11.1. Appointment of Thesis Supervisor(s)
+1. Students shall be allotted Thesis Supervisor from the faculty of the Institute
+before the registration in the second/ Third semester, in a transparent and
+uniform manner.
+2. A student shall not have more than two supervisors at any given time, and one
+of the supervisors shall be from the department where the student is enrolled.
+3. A student can have a co-supervisor from outside the Institute on the basis of
+recommendation of the DMPC & the SMPC.
+4. The change or addition of supervisor(s) shall be allowed by DMPC and shall be
+communicated to the Chairperson SMPC by the Convener DMPC within one week
+time along with the minutes of the DMPC meeting.
+5. If a faculty proceeds on long leave (for more than 6 months) or retires or
+resigns or ceases to be a faculty of the Institute and if there is only one
+supervisor, then prior to proceeding on leave, following shall be the responsibility
+of the existing supervisor in consultation with the Convener DMPC, Head of the
+Department and the student:
+(i) To appoint a Co-supervisor/ new supervisor, if thesis work is incomplete, to
+ensure that the student does not suffer in his/her absence.
+
+================================================================================
+PAGE 32
+================================================================================
+
+24
+
+(ii) To appoint a Thesis Coordinator, if all research work and related analysis is
+complete except writing of the thesis. The Thesis coordinator shall take care of
+the formalities of thesis submission and evaluation in consultation with thesis
+supervisor.
+6. If a faculty proceeds on long leave or retires or resigns or ceases to be a faculty
+of the Institute and there are two supervisors of the student, the faculty
+proceeding on leave may continue to be the supervisor if he/she so desires.
+7. The Department shall adopt a transparent system for the allotment of PG
+students amongst all the Faculty Members in the Department.
+11.2 Constitution of Thesis Examination Board
+The Thesis Examination Board shall consist of two members in addition to the
+Thesis Supervisor(s).
+Of the two:
+(i) One Faculty from the Department, preferably from the same area.
+(ii) One Faculty from outside the Department.
+Thesis supervisor may opt for an external examiner from outside the Institute in
+place of (ii) above only in the final thesis semester examination with the approval
+of the Dean (Academic).
+1. The Thesis Supervisor(s) shall propose the constitution of the Examination
+Board in prescribed format (Form: MP-07), and Convener DMPC and HOD shall
+forward the same to the Chairman SMPC, who shall approve the same.
+The examination board shall be formed in the beginning of third /fourth
+semester.
+12. THESIS SUBMISSION AND EXAMINATION
+12.1 Thesis submission and notification
+1. A student shall be allowed to submit thesis if he/she has completed academic
+requirement as per clause 9.
+2. Thesis has to be prepared according to the format prescribed in Form: GL-1,
+and sufficient copies have to be submitted (one for each examiner) in soft bound
+to Thesis Supervisor(s).
+
+================================================================================
+PAGE 33
+================================================================================
+
+25
+
+3. If a student has not been able to complete thesis writing he/she shall seek an
+extension as per clause 9 (III).
+4. The Thesis Supervisor shall issue notice for conduct of oral examination in
+advance and shall arrange to send the copies of thesis to the examiners.
+5. After the final oral examination the modifications suggested, if any, by the
+Examination Board, shall be incorporated and modified thesis along with soft
+copy in CD shall be submitted to the Departmental library through Thesis
+Supervisor(s).
+6. The final results shall be declared after the thesis supervisor uploads the
+signed soft copy of the final thesis along with plagiarism check report on the
+institute portal.
+12.2 Plagiarism
+Plagiarism is a serious offence and the Institute is committed to protecting IPR of
+everyone. To ensure this the IPR Cell of the Institute is entrusted with the task of
+checking similarity through software. The IPR Cell shall issue a certificate as per
+Form: MP-08 which shall be a pre-condition for submission of Thesis. Further a
+Certificate that states “no part of the Thesis is plagiarized” has to be submitted
+by the student in prescribed format.
+12.3. Thesis Oral Examination
+1. The Thesis Oral Examination shall be conducted within the time frame as given
+in the academic calendar.
+2. If a student, after submission of final thesis fails to appear in the Oral
+Examination on the specified date, his/her programme would be given W grade.
+He will have to register in the subsequent semester to clear W grade by
+defending the thesis. This shall be allowed till the maximum duration of the
+programme.
+3. Report of thesis evaluation of the students who have been allowed extension
+as per point 2 above shall be submitted in Format MP-09a. Final thesis
+examination report shall be submitted on MP-09b form.
+4. A thesis shall be considered to have been accepted if the student is awarded
+grade C or above and all Members of the Examination Board recommend it.
+5. If a thesis is awarded D or F grade and is rejected along with a
+
+================================================================================
+PAGE 34
+================================================================================
+
+26
+
+recommendation
+for
+resubmission
+after
+incorporating
+any
+modification/correction suggested by the Examination Board, the Oral
+Examination of the re-submitted thesis shall be conducted by the same
+Examination Board unless any member of the previous board has retired/left the
+institution/debarred by the Senate. In such a case a different board is to be
+approved by the Chairperson, SMPC. If the re-submitted thesis is rejected, the
+matter shall be reported to the Dean (Academic) through DMPC for appropriate
+action.
+13. DEGREE REQUIREMENTS
+A student shall be deemed to have completed the degree requirements, if the
+student has
+1. Defended final thesis as per clause 12.
+2. Earned at least minimum credits as specified in section 7.1.
+3. Attained the minimum required SPI/CPI with no Course having F or N or X grade
+(Clause 9).
+4. Satisfied the minimum academic and residence requirements.
+5. Satisfied all the requirements specified by the Senate and the Ordinances.
+6. Paid all the dues of the Institute and has no pending case of indiscipline.
+13.1. Award of Degree
+A student who completes all the graduation requirements specified in Section 13
+above is recommended by the Senate to the Board of Governors (BoG) for the
+Award of the appropriate Degree in the ensuing Convocation. The Degree can be
+awarded only after the BOG accords its approval. However a student may be
+provided a provisional certificate of completion of Programme by the Dean
+Academic till the Convocation is held.
+13.2 Withdrawal of the Degree
+Under extremely exceptional circumstances, where gross violation of the
+graduation requirements is detected at a later stage, the Senate may recommend
+to the Board of Governors for the withdrawal of a Degree already awarded.
+14. STIPEND/FELLOWSHIP, SCHOLARSHIPS, PRIZES AND MEDALS
+The Senate shall determine the general policy regarding recommendations for
+
+================================================================================
+PAGE 35
+================================================================================
+
+27
+
+the award of different types of Scholarships, Stipends/fellowship, Medals and
+Prizes to the students of the Institute. The detailed norms and conditions for the
+award of various Scholarships, Prizes and Medals established by the Institute or
+through endowments/grants received shall be framed by the Senate from time to
+time and approved by Board of Governors.
+14.1. Stipends/Fellowship
+1. Stipendiary Masters' students shall be getting financial assistance in the form
+of stipend/fellowship at the approved rates and guidelines as notified by the
+Government from time to time. These stipend/fellowship is liable to be
+withdrawn, partially or wholly, in case of misconduct, deliberate concealment of
+material, facts and/or giving false information.
+2. An academically deficient student [Clause 9] shall not receive stipend till
+he/she has cleared academic deficiency. The stipend for the period of ACD shall
+be released after the student clears ACD. Stipendiary students will be entitled to
+get fellowship/stipend for up to a maximum period of two years or as notified
+time to time by the funding agency.
+3. A stipendiary Masters' student leaving the Institute on his/her own accord
+without completing the programme of study may be required to refund the
+amount of stipend/fellowship, received during the Academic Session in which
+he/she leaves the programme. The Dean Students Welfare shall initiate the
+process after receiving the information from Dean Academic and Head of the
+Department.
+14.2 Prizes, Medals and Scholarships
+To promote and recognize academic excellence, constructive leadership and
+overall
+growth
+and
+development
+of
+students,
+number
+of
+scholarships/medals/awards may be established by the Institute on its own or
+through endowments/grants made by donors. Such prizes, medals, scholarships
+shall be considered by the Senate and approved by the Board of Governors.
+15. CONDUCT AND DISCIPLINE
+15.1. Code of Conduct
+Each student shall conduct himself/herself in a manner befitting his/her
+association with the Institute. He/she is expected not to indulge in any activity,
+which is likely to bring down the prestige of the Institute. He/She shall show due
+
+================================================================================
+PAGE 36
+================================================================================
+
+28
+
+respect and courtesy to the Faculty Members, Administrators, Officers and
+Employees of the Institute, and good neighborly behavior to fellow students. Due
+attention and courtesy shall be paid to visitors to the Institute and residents of
+the Campus.
+Lack of courtesy and decorum, unbecoming conduct (both within and outside the
+Institute), willful damage and/or removal of Institute property or belongings of
+fellow students, disturbing others in their studies, adoption of unfair means
+during examinations, breach of rules and regulations of the Institute, noisy and
+unseemly behavior and similar other undesirable activities shall constitute
+violation of the Code of Conduct for students.
+Ragging in any form is strictly prohibited and is considered a serious criminal
+offence and violation of the code of conduct.
+Involvement of a student in ragging and/or any of the above mentioned activities
+and/or any other act of indiscipline shall invite disciplinary action and may lead to
+his/ her expulsion from the Institute.
+
+15.2. Disciplinary Actions and Related Matter
+Violation of the Code of Conduct shall invite disciplinary action which may include
+punishment such as Reprimand, Disciplinary Probation, Fine, and Debarring from
+Examinations, Withdrawal of Scholarship and/or Placement Services, Withholding
+of Grades and/or Degrees, Cancellation of Registration and expulsion from the
+Hostel and/or Institute.
+An act of serious Violation of the Code of Conduct may be reported to Chief
+Procter for necessary disciplinary action on approval of the Director.
+For indiscipline of a student in a class, the course instructor may debar him from
+few subsequent classes for which he/she shall not be liable to get relaxation in
+attendance.
+15.3. Unfair Means (UFM)
+Unfair means shall comprise of following:
+(i) Possession of mobile phones, smart phones, smart watches, any device
+capable of storing information and any relevant material.
+(ii) Copying from the papers/mobile/electronic equipment, or materials in the
+possession of the student.
+
+================================================================================
+PAGE 37
+================================================================================
+
+29
+
+(iii) Copying from the answer book of neighboring students and/or consulting
+fellow examinees.
+(iv) Disturbing the smooth conduct of Examination.
+(v) Misbehavior with the invigilator.
+(vi) Act unbecoming of an examinee of the Institute.
+Constitution of Unfair Means Committee
+Unfair means committee shall consist of:
+(i) Dean (Academic)
+(ii) Dean (Student Welfare)
+(iii) Chief Proctor
+(iv) Concerned Head of Department/cell/school
+(v) Senate Nominee
+The procedure to deal with the cases of Unfair Means (UFM):
+1. Any use of UFM detected by Course Instructor/Invigilators /Members of
+Observer Committee/flying squad shall be reported to Dean (Academic) in the
+Form MP-10.
+2. After the student is caught using UFM his/her answer books along with
+question paper and material used in UFM will be kept in a separate envelope and
+the student shall be issued a fresh answer book and question paper on which
+he/she may continue for the remaining period of examination. However the
+mobile phone or other electronic storage devices shall be returned to the
+student and the duly filled Form MP-10 along with the answer book and question
+paper shall be kept in an envelope.
+3. Dean (Academic) shall send the sealed envelope to Head of the Department,
+who shall issue a show cause notice to the student seeking his/her clarification
+on the charges; within three days of the reporting. The clarification of the
+student may be obtained within three days and the same may be given to Course
+instructor for getting his/her comments.
+4. The Course Instructor shall present the case to the Unfair Means Committee.
+Unfair Means Committee shall meet after six days of the completion of Semester
+Examination. The committee shall give opportunity to the student concerned and
+recommend the award of punishment. The recommendation of the punishment
+may be made on the basis of following:
+
+================================================================================
+PAGE 38
+================================================================================
+
+30
+
+(i) Mere possession of any electronic storage device as mentioned above shall
+amount to usage of Unfair Means, hence may result in award of F grade in that
+subject.
+(ii) If the course instructor reports similarity in the materials in the possession of
+the student and content of the course, shall also result in award of F grade in that
+subject and/or may be debarred from appearing in the subsequent Grade
+Improvement examination of that particular session.
+(iii) Copying from the answer book of neighboring student, shall be treated on
+case to case basis.
+(iv) If the student has misbehaved with invigilator, the matter may be referred to
+the Proctorial Board for suitable recommendations.
+(v) The recommendations of the Unfair Means Committee shall be implemented
+after getting the approval of the Chairperson Senate/Director/ Dean (Academic).
+(vi) If the decision is not taken by the date of Grade entry the Grades entered
+shall be ‘W’ and the result of such student shall not be declared along with other
+students.
+A student who is not satisfied with the punishment awarded may, however,
+appeal to the Chairperson Senate stating clearly the case and explaining his/her
+position, seeking reconsideration of the decision.
+16. WAIVER OF REQUIREMENTS IN SPECIAL CASES
+The procedures and requirements stated in these Ordinances, other than those in
+section 3.3 (Eligibility for Admissions) and section 9 (Academic Performance
+Requirement) may be waived off in special circumstances by the Chairperson
+Senate on the recommendation of the DMPC and SMPC. All such exceptions shall
+be reported to the Senate.
+
+================================================================================
+PAGE 39
+================================================================================
+
+31
+
+Form: MP-01
+(Clause 3.4.3)
+
+Motilal Nehru National Institute of Technology Allahabad
+ Conversion from Full time to Part time
+
+Name of the Student:………………….…………. Reg. No:. …………………………..............................…
+
+Department:……………………………………… Date of First Registration. ……………….......................
+
+Name of the Supervisor(s):…………………………………………………………….......................……
+
+Present  Registration Status:……………………………………….………………........................……...
+
+C.P.I. in second Semester:.....................................................................................................................
+Justification/Reason for Conversion :.....................................................................................................
+
+..................................................................................................................................................
+
+(Signature of the Student)
+
+Comment and recommendation of the Supervisor(s):
+
+(Signature of the Supervisor(s))
+
+Date and Ref No of DMPC meeting*:
+
+Recommendedby:                 Convener DMPC
+            Head of theDepartment
+
+Approvedby:
+           Chairperson SMPC
+
+* Minutes of DMPC should be enclosed.
+
+================================================================================
+PAGE 40
+================================================================================
+
+32
+
+Form: MP-02
+ (Clause 5)
+Motilal Nehru National Institute of Technology Allahabad
+ Leave Application
+
+Head of the Department
+Kindly allow me to avail Leave/Leave on Duty from……………………..to………………………
+
+........………..for…………………days and station leave from date…….…time….…to………..
+
+Date……......……….Time ......................... My address during leave will be as below.
+
+Address:
+
+Yours Sincerely
+
+Name:
+
+Registratio No.
+Dated:
+For Official use
+
+Recommended/Not Recommended:
+
+Supervisor(s) / Convener DMPC
+
+Approved by: Head of the Department
+
+================================================================================
+PAGE 41
+================================================================================
+
+33
+
+Form: MP-03
+[Clause 6(2)]
+
+Motilal Nehru National Institute of Technology Allahabad
+Application for proceeding as Non-degree Student (Other Institution)
+
+Name of the Student:…………………….… … Reg. No. …………….…………………......…......
+
+Department:…………………………………… Date of First Registration:……………..…............
+
+Supervisor(s):………………………………………………………………………………………......
+
+Proposed Department & Institution:....................................................................................... ....
+
+(where the student intends to do the work):…………………………………………………….......
+
+Justification:………………………………………………………………………………………....  ...
+(If required attach a separate sheet):…………………………………………………………............
+
+Comment of the Supervisor(s):
+(Signature of the Student)
+
+(Signature of the Supervisor(s))
+
+Reference No. DMPC Meeting with date
+
+Recommended by:
+Convener-DMPC
+Head of Department
+
+Approved by:
+Chairman SMPC
+
+Enclose minutes of the DMPC Meeting.
+
+================================================================================
+PAGE 42
+================================================================================
+
+34
+
+Form: MP-04
+[Clause 6(4)]
+
+Motilal Nehru National Institute of Technology Allahabad
+Performance evaluation at host Institution/Industry
+[For Non-degree students]
+
+1. Registration No:.................................................................................................................................
+
+2. Name of the Student:.........................................................................................................................
+
+3. Program(M.Tech./MCA/MBA/MSc/MSW):........................................................................................
+
+4. Branch:...............................................................................................................................................
+
+5. Present Semester:..............................................................................................................................
+
+6. Department:........................................................................................................................................
+
+7. Thesis Title:........................................................................................................................................
+
+8. Name and address of the Host Institution/Industry.............................................................................
+
+9. Report from the host Institute/ Industry(Attach detailed report).........................................................
+
+Marks awarded in 50:.................................................................................................................
+
+Name of the Mentors and Signature with seal
+
+(Final grade to be awarded in form MP-09a/MP-09(b) by thesis evaluation board)
+
+Name and signature of the committee members
+
+================================================================================
+PAGE 43
+================================================================================
+
+35
+
+Form: MP 05
+(Clause 10.1)
+Motilal Nehru National Institute of Technology Allahabad
+APPLICATION FOR MERCY APPEAL
+
+1. Registration No. ………………………………………………………......................................
+
+2. Name of the Student ………………………………………………………...............................
+
+3. Program (M.Tech./MCA/MBA/M.Sc./MSW) ……………………………………………………….
+
+4. Branch ……………………………………………………….........................................................
+
+5. Present Semester ………………………………………………………......................................
+
+6.Academic Record
+
+7. Reason/cause for appeal:
+……………………………………………………….
+
+8. Prayer for appeal:
+……………………………………………………….
+
+Date:
+Signature of the student
+
+9. Recommendation of the Convener,
+DMPC: Signature with date
+10. Remarks of Head of the Deptt.:
+
+Signature with date
+11. Observations of Chairman SMPC:
+
+Signature with date
+12. Decision of Chairman Senate:
+
+Signature with date
+Semester
+SPI
+CPI
+
+================================================================================
+PAGE 44
+================================================================================
+
+36
+
+Form: MP-06
+(Clause 11.1(3)
+
+Motilal Nehru National Institute of Technology Allahabad
+Addition of Co-Supervisor from outside the Institute
+
+Name of the Student:………………….……….………. Reg. No.:…………….……................
+
+Department:……………………………………………………………………………………........
+Name of the Existing Supervisor(s): ……………………………………………………….......
+Present Status of thework:……………………………………………………….....................
+Suggested Supervisor(s): …………………………………………………….………...................
+Reason for change:.............................................................................................................
+.................................................................................................................................................
+
+(Signature of the Student)
+
+Comment & No objection of Existing Supervisor(s):
+
+(Signature of the Supervisor(s))
+
+Consent and signature of the suggested Supervisor(s)
+Ref. No. and Date of the DMPC meeting (minutes enclosed):
+
+Forwarded by:
+           Convener DMPC
+     Head of theDepartment
+
+Recommended by:
+Chairperson (SMPC)
+
+Approvedby:
+Chairperson Senate
+
+Enclosures: In case of a Supervisor from outside MNNITA, consent of the Supervisor and NoC from the Employer.
+
+================================================================================
+PAGE 45
+================================================================================
+
+37
+
+   Form: MP-07
+   [Clause 11.2]
+
+Motilal Nehru National Institute of Technology Allahabad
+List of Suggested Examiners for M.Tech./MCA/MBA/M.Sc./MSW Thesis
+Examination Board
+
+Name of the Student: .…………………………………………………… .....................................
+Reg No.: ………………………………………………………………………………………………
+
+Department:……………………………………………………………………………………………
+
+Thesis Title (in capitals)………………………………………………………………………………
+
+Sl.
+No.
+Name of Examiners
+Department
+1
+2
+3
+4
+5
+
+Proposed by: Thesis Supervisor(s)
+Date:
+
+Forwarded by: Convener-DMPC                                              Head of Department
+
+Date:
+Date:
+
+Approved by: Chairman SMPC
+Date:
+
+================================================================================
+PAGE 46
+================================================================================
+
+38
+
+MP-08
+(Clause 12.2)
+
+MOTILAL NEHRU NATIONAL INSTITUTE OF TECHNOLOGY ALLAHABAD
+Prayagraj-211004 (India)
+
+CERTIFICATE
+
+On
+basis
+of
+the
+“TURNITIN”
+software
+the
+thesis
+title
+“________________________________________________________________________
+___________________________________________________________________”
+by
+________________________ Reg. No. ________________ comprises ____ % of text
+similar to material against permissible limit of below <15% (as decided by the Senate).
+The thesis may be accepted for evaluation in its present form.
+OR
+The thesis may be sent back to the supervisor for review.
+
+ (Convener, DMPC)
+(Chairperson, DMPC)
+
+Copy to:
+ Supervisor(s)
+ Dean Academic
+ Head of the Department
+
+================================================================================
+PAGE 47
+================================================================================
+
+39
+
+Form: MP 09(a)
+[Clause 9(5)]
+
+Motilal Nehru National Institute of Technology Allahabad
+REPORT OF M.Tech./MCA/MBA/M.Sc./MSW THESIS EXAMINATION BOARD
+(Interim)
+
+Name of Student:
+Registration No.                        Department/
+Programme:
+
+Date of Registration in the Programme:
+
+Date of Examination:
+
+Thesis Supervisor(s):
+
+Report of the Board:
+
+Grade awarded by the Board:
+
+Examination Board
+
+Sl No.
+Name of Examiners
+Department
+Signature
+
+1.
+
+_
+2.
+
+_
+3.
+
+_
+4.
+
+_
+
+Thesis Supervisor(s)
+Convener, DMPC
+Head of Department.
+
+Date:
+Office use only: Course Units =
+Thesis Units =
+CPI in course work=
+
+The student has completed the programme
+Chairperson, SMPC  Date:
+
+================================================================================
+PAGE 48
+================================================================================
+
+40
+
+Motilal Nehru National Institute of Technology Allahabad
+REPORT OF M.Tech./MCA/MBA/M.Sc./MSW THESIS
+EXAMINATION BOARD
+Form: MP 09(b)
+(Clause 12.3)
+
+Name of Student:
+Registration No.
+
+Department/ Programme:
+
+Date of Registration in the Programme:
+
+Date of Thesis Submission:
+
+ _
+Date of Examination:
+
+Thesis Supervisor(s):
+
+_
+Report of the Board:
+
+Grade awarded by the Board:
+
+Examination Board
+
+Sl No.
+Name of Examiners
+Department
+Signature
+
+1.
+
+_
+2.
+
+_
+3.
+
+_
+4.
+
+_
+
+Thesis Supervisor(s)
+Convener, DMPC
+Head of Department.
+
+Date:
+Office use only: Course Units =
+Thesis Units =
+CPI in course work=
+The student has completed the programme
+Chairperson, SMPC
+Date:
+
+================================================================================
+PAGE 49
+================================================================================
+
+41
+
+Motilal Nehru National Institute of Technology Allahabad
+FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS
+Form: MP 10
+(Clause 15.3)
+
+Note:
+1. One form should be used for one case only.
+2. Please send one question paper alongwith the case(s)
+(A) To be filled in by the instructor/invigilators/members of observer committee/Flying Squad:
+1. Name of Examination : ………………………..…………….……………………………………………...
+2. Name of student : ………………………..…………….…………………………………………………….
+3. Registration No. : ………………………..…………….……………………………………………………
+4. Programme/Branch : ………………………..…………….……………………………………………….
+5. Room No. : ………………………..…………….………………………………………………………….
+6. Subject/ paper in which the
+student
+is
+suspected
+or
+reported to have used or
+attempted to use unfairmeans
+or shown disorderly
+conduct.
+7. Date & time of incident :
+
+8. Type of Unfair Means
+Material.
+(i) Copying from the papers / materials which
+is in the possession of the student.
+(ii)Copying from the answer book of
+neighboring student.
+(iii) Misbehaved with invigilator.
+(IV) Possession of programmable device
+
+Date......................
+Signature and Full Name of the instructor/invigilators/members of
+observer committee/Flying Squad.
+(IN BLOCK LETTERS)
+Subject Subject Code
+
+================================================================================
+PAGE 50
+================================================================================
+
+42
+
+GL-1
+Clause :12.1(2)
+
+Motilal Nehru National Institute of Technology Allahabad
+(Guidelines for Thesis submission)
+
+ Three bound copies of the Thesis should be submitted for Thesis Examination.
+ The Thesis should be in the specified format as given below:
+ The back and front cover of the Thesis copy should be in Black Colour.
+ The Thesis should be typed in double spacing using Times New Roman font with 12 font size.
+ Chapter heading: Bold/Caps 14 font size.
+ Main Heading (Section) : 12 font Bold
+ Subsection Heading 12 font, bold, italic
+ Thesis should be printed on one side.
+
+The sequence should be : Inner cover page, undertaking of the student, Certificate of the
+Supervisor(s), Acknowledgement, Abstract, Table of contents, List of figures, list of tables,
+nomenclature followed by Chapters, References, Appendix.
+
+================================================================================
+PAGE 51
+================================================================================
+
+43
+
+Notes
+
+================================================================================
+PAGE 52
+================================================================================
+
+44
+
+Notes
+
+================================================================================
+PAGE 53
+================================================================================
+
+45
+
+Notes
+
+================================================================================
+PAGE 54
+================================================================================
+
+46
+
+Notes
+
+================================================================================
+PAGE 55
+================================================================================
+
+47
+
+Notes
+
+================================================================================
+PAGE 56
+================================================================================
+
+48
+
+4
+
