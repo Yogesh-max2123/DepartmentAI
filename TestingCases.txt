@@ -1,0 +1,57 @@
+For BTECH -
+
+ORDINANCE CHATBOT - 
+1) What are the rules and additional credit requirements if a B.Tech student's branch is changed through branch sliding after the first year?
+2) When is a student allowed to opt for a slow pace of study, and what is the minimum academic load they must register for under this pace?
+3) What is the exact procedure, time limit, and required form to apply for a make-up examination if I miss my mid-semester exam due to a medical emergency?
+
+APPLICATION - 
+
+Application Type: General (ya agar drop-down me make-up exam ka option ho toh wo select karo).
+
+Title: Request for Make-up Exam for CS-302 due to Medical Emergency
+
+Description: Respected DUGC, I missed my mid-semester examination for CS-302 on Oct 10 due to severe viral fever. I am submitting Form BP-10 within the 7-day limit as per Clause 6.2.4, along with my medical certificate for your kind consideration. Please grant me permission for the make-up exam.
+
+DUMMY PDF - 
+Form: BP-10 Motilal Nehru National Institute of Technology Allahabad APPLICATION FOR MAKE-UP EXAMINATION 
+Student Name: Priya Nair
+Registration No: 2023CS101
+Programme/Branch: B.Tech / Computer Science and Engineering
+Semester: 3rd Semester
+Course Details for Make-up Exam:
+•	Course Code: CS-302 
+•	Course Name: Data Structures
+Reason for failure to appear in the mid-semester examination: Respected Sir/Madam, I missed my mid-semester examination on 10th October 2026 due to severe viral fever. As per Clause 6.2.4 of the Bachelors' Programme Ordinance, I am submitting this request within seven days of the last scheduled examination. 
+Supporting Documents Attached: Yes (Medical Certificate from Institute Medical Officer).
+Supervisor recommendation: Recommended
+Date: 15-Oct-2026
+Signature of the Student: [Signed: Priya Nair]
+(For Office Use Only) Remarks of Convenor (DUGC): Recommended Approval of Chairperson SUGC: Pending 
+
+
+
+FOR PHD - 
+1) What happens if a full-time Ph.D. scholar fails the Comprehensive Examination in their first attempt, and what is the maximum number of attempts allowed?
+2) What is the maximum permissible duration to complete the Ph.D. programme, and what is the procedure to apply for a thesis extension?
+3) What is the exact procedure, required documents, and the specific form I need to submit to apply for a change or addition of my Thesis Supervisor?
+
+FOR APPLICATION - 
+Application type: Comprehensive Examination
+
+Title: Request for Second Attempt of Comprehensive Examination
+
+Description: Respected DDPC, I failed my first Comprehensive Examination. As per Ordinance Clause 9, I am allowed a second attempt. I have attached my Form DP-09 showing the previous result. Kindly schedule my second attempt.
+
+Supporting PDFs: Apna banaya hua DP09_Failed_Report.pdf
+
+Application Type: Supervisor Allocation / General
+
+Title: Request for Addition of Co-Supervisor (Form DP-13)
+
+Description: Respected DDPC, I am submitting my request for the addition of Dr. XYZ as my Co-Supervisor to support my research work. I have attached the duly filled Form DP-13 along with the NOC from my current supervisor and the consent of the proposed supervisor. Please process my application.
+
+Upload: Upar banaya gaya Form_DP13_Supervisor.pdf attach karo aur Submit kar do.
+
+
+

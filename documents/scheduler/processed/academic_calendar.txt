@@ -1,0 +1,84 @@
+MNNIT Allahabad Academic Calendar 2026-27
+Source: academic_calendar_rotated_compressed.pdf
+Odd Semester (2026-27) and Even Semester (2026-27)
+The declared Institute holidays will be considered final
+in case of any mismatch with the proposed academic calendar.
+
+FORMAT: START[..END] | LABEL | CATEGORY | BLOCK|ALLOW | SEMESTER
+
+2026-07-07 | Declaration of Supplementary Result | result | ALLOW | odd
+2026-07-09 | Summer Vacation Ends / Online Registration Ends | vacation_end | ALLOW | odd
+2026-07-13..2026-07-17 | Physical Registration (Odd Semester) | registration | ALLOW | odd
+2026-07-20 | Start of Classes (Odd Semester) | instruction | ALLOW | odd
+2026-08-15 | Independence Day | holiday | BLOCK | odd
+2026-08-26 | Id-e-Milad | holiday | BLOCK | odd
+2026-09-04 | Janmashtami | holiday | BLOCK | odd
+2026-10-02 | Gandhi Jayanti | holiday | BLOCK | odd
+2026-10-08 | 1st Short Attendance Notification | notification | ALLOW | odd
+2026-10-09 | MID SEM Exam Start | exam | BLOCK | odd
+2026-10-16 | MID SEM Exam End | exam | BLOCK | odd
+2026-10-09..2026-10-16 | MID SEM Exam | exam | BLOCK | odd
+2026-10-17 | MID SEM Break Start | break | BLOCK | odd
+2026-10-20 | Dussehra | holiday | BLOCK | odd
+2026-10-25 | MID SEM Break End | break | BLOCK | odd
+2026-10-17..2026-10-25 | MID SEM Break | break | BLOCK | odd
+2026-11-02 | MT/PhD Evaluation Start / Practical Exam Start | exam | BLOCK | odd
+2026-11-03 | 2nd Short Attendance Notification | notification | ALLOW | odd
+2026-11-08 | Diwali | holiday | BLOCK | odd
+2026-11-13 | Practical Exam End / End of Classes | exam | BLOCK | odd
+2026-11-02..2026-11-13 | Practical Examination | exam | BLOCK | odd
+2026-11-16 | END SEM Exam Start | exam | BLOCK | odd
+2026-11-24 | Guru Nanak Jayanti | holiday | BLOCK | odd
+2026-11-30 | End Semester Exam End | exam | BLOCK | odd
+2026-11-16..2026-11-30 | END SEM Theory EXAM | exam | BLOCK | odd
+2026-12-01..2026-12-09 | Culrav + Avishkar + Gnosiomania | festival | BLOCK | odd
+2026-12-13 | Submission of Grades | admin | ALLOW | odd
+2026-12-14 | Online Registration Start (Even) / MT/PhD Evaluation End | registration | ALLOW | odd
+2026-12-21 | Winter Vacation Start | vacation | BLOCK | odd
+2026-12-24 | Declaration of Results | result | ALLOW | odd
+2026-12-25 | Christmas Day | holiday | BLOCK | odd
+2026-12-21..2027-01-01 | Winter Vacation | vacation | BLOCK | odd
+2027-01-01 | Winter Vacation End / Online Registration End | vacation_end | BLOCK | even
+2027-01-04 | Classes Start | instruction | ALLOW | even
+2027-01-26 | Republic Day | holiday | BLOCK | even
+2027-02-05..2027-02-07 | Annual Athletics Meet | institute_event | BLOCK | even
+2027-02-11 | Basant Panchami | holiday | BLOCK | even
+2027-03-10 | Eid-ul-Fitr | holiday | BLOCK | even
+2027-03-11 | 1st Short Attendance Notification | notification | ALLOW | even
+2027-03-12 | MID SEM Exam Start | exam | BLOCK | even
+2027-03-19 | MID SEM Exam End | exam | BLOCK | even
+2027-03-12..2027-03-19 | MID SEM Exam | exam | BLOCK | even
+2027-03-20 | MID SEM Break Start | break | BLOCK | even
+2027-03-23 | Holi | holiday | BLOCK | even
+2027-03-26 | Good Friday | holiday | BLOCK | even
+2027-03-28 | MID SEM Break End | break | BLOCK | even
+2027-03-20..2027-03-28 | MID SEM Break | break | BLOCK | even
+2027-04-02 | MT / PhD / MCA Evaluation Start | evaluation | BLOCK | even
+2027-04-12 | Practical Exam | exam | BLOCK | even
+2027-04-15 | Ram Navami | holiday | BLOCK | even
+2027-04-16 | 2nd Short Attendance Notification | notification | ALLOW | even
+2027-04-19 | Mahavir Jayanti | holiday | BLOCK | even
+2027-04-23 | Practical Exam End / End of Classes | exam | BLOCK | even
+2027-04-12..2027-04-23 | Practical Examination | exam | BLOCK | even
+2027-04-26 | END SEM Theory Exam Start | exam | BLOCK | even
+2027-05-07 | END SEM Theory EXAM Ends / MCA Evaluation Ends | exam | BLOCK | even
+2027-04-26..2027-05-07 | END SEM Theory EXAM | exam | BLOCK | even
+2027-05-17 | Id-Ul-Zuha | holiday | BLOCK | even
+2027-05-19 | Submission of Grades | admin | ALLOW | even
+2027-05-20 | Buddha Purnima | holiday | BLOCK | even
+2027-05-22 | Summer Vacation Start | vacation | BLOCK | even
+2027-06-04 | Declaration of Results | result | ALLOW | even
+2027-06-07 | Supplementary Registration Start | registration | ALLOW | even
+2027-06-08 | Online (Odd) Semester Registration Start | registration | ALLOW | even
+2027-06-09 | Supplementary Registration End | registration | ALLOW | even
+2027-06-14 | Supplementary Exam Start | exam | BLOCK | even
+2027-06-16 | Muharram | holiday | BLOCK | even
+2027-06-21 | Supplementary Exam End | exam | BLOCK | even
+2027-06-14..2027-06-21 | Supplementary Exam | exam | BLOCK | even
+2027-06-24 | MT/PhD Evaluation Ends | evaluation | BLOCK | even
+2027-06-25 | Submission of Supplementary Grades | admin | ALLOW | even
+2027-07-06 | Declaration of Supplementary Result | result | ALLOW | even
+2027-07-08 | Summer Vacation Ends / Online (Odd) Registration Ends | vacation_end | BLOCK | even
+2027-05-22..2027-07-08 | Summer Vacation | vacation | BLOCK | even
+2027-07-12..2027-07-16 | Physical Registration (Odd Semester) | registration | ALLOW | even
+2027-07-19 | Start of Classes | instruction | ALLOW | even

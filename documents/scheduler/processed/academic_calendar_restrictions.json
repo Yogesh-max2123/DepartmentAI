@@ -1,0 +1,2338 @@
+{
+  "document": "MNNIT Allahabad Academic Calendar Restrictions",
+  "academic_year": "2026-27",
+  "timezone": "Asia/Kolkata",
+  "source_pdf": "documents\\calendar\\academic_calendar_rotated_compressed.pdf",
+  "source_text": "documents\\scheduler\\processed\\academic_calendar.txt",
+  "pdf_text_extracted": false,
+  "parsing_notes": [
+    "The official calendar PDF is a scanned/rotated image; embedded text is empty.",
+    "Events were transcribed from the Odd and Even Semester 2026-27 calendar pages.",
+    "BLOCK dates cannot host DUGC/DMPC/DDPC meetings. Default doctoral committee is DDPC.",
+    "Weekends are not listed here; the scheduling agent also skips Saturday and Sunday.",
+    "Institute holidays override the academic calendar on mismatch, per the footer note."
+  ],
+  "meeting_policy": {
+    "allowed_weekdays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "working_hours": {
+      "start": "09:00",
+      "end": "17:00"
+    },
+    "lunch_break": {
+      "start": "13:00",
+      "end": "14:00"
+    },
+    "default_duration_minutes": 60
+  },
+  "events": [
+    {
+      "start": "2026-07-07",
+      "end": "2026-07-07",
+      "label": "Declaration of Supplementary Result",
+      "category": "result",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-07-09",
+      "end": "2026-07-09",
+      "label": "Summer Vacation Ends / Online Registration Ends",
+      "category": "vacation_end",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-07-13",
+      "end": "2026-07-17",
+      "label": "Physical Registration (Odd Semester)",
+      "category": "registration",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-07-20",
+      "end": "2026-07-20",
+      "label": "Start of Classes (Odd Semester)",
+      "category": "instruction",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-08-15",
+      "end": "2026-08-15",
+      "label": "Independence Day",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-08-26",
+      "end": "2026-08-26",
+      "label": "Id-e-Milad",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-09-04",
+      "end": "2026-09-04",
+      "label": "Janmashtami",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-02",
+      "end": "2026-10-02",
+      "label": "Gandhi Jayanti",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-08",
+      "end": "2026-10-08",
+      "label": "1st Short Attendance Notification",
+      "category": "notification",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-09",
+      "end": "2026-10-09",
+      "label": "MID SEM Exam Start",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-16",
+      "end": "2026-10-16",
+      "label": "MID SEM Exam End",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-09",
+      "end": "2026-10-16",
+      "label": "MID SEM Exam",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "label": "MID SEM Break Start",
+      "category": "break",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-20",
+      "end": "2026-10-20",
+      "label": "Dussehra",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "label": "MID SEM Break End",
+      "category": "break",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-10-17",
+      "end": "2026-10-25",
+      "label": "MID SEM Break",
+      "category": "break",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-02",
+      "end": "2026-11-02",
+      "label": "MT/PhD Evaluation Start / Practical Exam Start",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-03",
+      "end": "2026-11-03",
+      "label": "2nd Short Attendance Notification",
+      "category": "notification",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-08",
+      "end": "2026-11-08",
+      "label": "Diwali",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "label": "Practical Exam End / End of Classes",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-02",
+      "end": "2026-11-13",
+      "label": "Practical Examination",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-16",
+      "end": "2026-11-16",
+      "label": "END SEM Exam Start",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-24",
+      "end": "2026-11-24",
+      "label": "Guru Nanak Jayanti",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-30",
+      "end": "2026-11-30",
+      "label": "End Semester Exam End",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-11-16",
+      "end": "2026-11-30",
+      "label": "END SEM Theory EXAM",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-12-01",
+      "end": "2026-12-09",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "category": "festival",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-12-13",
+      "end": "2026-12-13",
+      "label": "Submission of Grades",
+      "category": "admin",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-12-14",
+      "end": "2026-12-14",
+      "label": "Online Registration Start (Even) / MT/PhD Evaluation End",
+      "category": "registration",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-12-21",
+      "end": "2026-12-21",
+      "label": "Winter Vacation Start",
+      "category": "vacation",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-12-24",
+      "end": "2026-12-24",
+      "label": "Declaration of Results",
+      "category": "result",
+      "blocks_meeting": false,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-12-25",
+      "end": "2026-12-25",
+      "label": "Christmas Day",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2026-12-21",
+      "end": "2027-01-01",
+      "label": "Winter Vacation",
+      "category": "vacation",
+      "blocks_meeting": true,
+      "semester": "odd"
+    },
+    {
+      "start": "2027-01-01",
+      "end": "2027-01-01",
+      "label": "Winter Vacation End / Online Registration End",
+      "category": "vacation_end",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-01-04",
+      "end": "2027-01-04",
+      "label": "Classes Start",
+      "category": "instruction",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-01-26",
+      "end": "2027-01-26",
+      "label": "Republic Day",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-02-05",
+      "end": "2027-02-07",
+      "label": "Annual Athletics Meet",
+      "category": "institute_event",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-02-11",
+      "end": "2027-02-11",
+      "label": "Basant Panchami",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-10",
+      "end": "2027-03-10",
+      "label": "Eid-ul-Fitr",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-11",
+      "end": "2027-03-11",
+      "label": "1st Short Attendance Notification",
+      "category": "notification",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-12",
+      "end": "2027-03-12",
+      "label": "MID SEM Exam Start",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-19",
+      "end": "2027-03-19",
+      "label": "MID SEM Exam End",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-12",
+      "end": "2027-03-19",
+      "label": "MID SEM Exam",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-20",
+      "end": "2027-03-20",
+      "label": "MID SEM Break Start",
+      "category": "break",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-23",
+      "end": "2027-03-23",
+      "label": "Holi",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-26",
+      "end": "2027-03-26",
+      "label": "Good Friday",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-28",
+      "end": "2027-03-28",
+      "label": "MID SEM Break End",
+      "category": "break",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-03-20",
+      "end": "2027-03-28",
+      "label": "MID SEM Break",
+      "category": "break",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-02",
+      "end": "2027-04-02",
+      "label": "MT / PhD / MCA Evaluation Start",
+      "category": "evaluation",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-12",
+      "end": "2027-04-12",
+      "label": "Practical Exam",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-15",
+      "end": "2027-04-15",
+      "label": "Ram Navami",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-16",
+      "end": "2027-04-16",
+      "label": "2nd Short Attendance Notification",
+      "category": "notification",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-19",
+      "end": "2027-04-19",
+      "label": "Mahavir Jayanti",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-23",
+      "end": "2027-04-23",
+      "label": "Practical Exam End / End of Classes",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-12",
+      "end": "2027-04-23",
+      "label": "Practical Examination",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-26",
+      "end": "2027-04-26",
+      "label": "END SEM Theory Exam Start",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-05-07",
+      "end": "2027-05-07",
+      "label": "END SEM Theory EXAM Ends / MCA Evaluation Ends",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-04-26",
+      "end": "2027-05-07",
+      "label": "END SEM Theory EXAM",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-05-17",
+      "end": "2027-05-17",
+      "label": "Id-Ul-Zuha",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-05-19",
+      "end": "2027-05-19",
+      "label": "Submission of Grades",
+      "category": "admin",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-05-20",
+      "end": "2027-05-20",
+      "label": "Buddha Purnima",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-05-22",
+      "end": "2027-05-22",
+      "label": "Summer Vacation Start",
+      "category": "vacation",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-04",
+      "end": "2027-06-04",
+      "label": "Declaration of Results",
+      "category": "result",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-07",
+      "end": "2027-06-07",
+      "label": "Supplementary Registration Start",
+      "category": "registration",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-08",
+      "end": "2027-06-08",
+      "label": "Online (Odd) Semester Registration Start",
+      "category": "registration",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-09",
+      "end": "2027-06-09",
+      "label": "Supplementary Registration End",
+      "category": "registration",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-14",
+      "end": "2027-06-14",
+      "label": "Supplementary Exam Start",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-16",
+      "end": "2027-06-16",
+      "label": "Muharram",
+      "category": "holiday",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-21",
+      "end": "2027-06-21",
+      "label": "Supplementary Exam End",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-14",
+      "end": "2027-06-21",
+      "label": "Supplementary Exam",
+      "category": "exam",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-24",
+      "end": "2027-06-24",
+      "label": "MT/PhD Evaluation Ends",
+      "category": "evaluation",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-06-25",
+      "end": "2027-06-25",
+      "label": "Submission of Supplementary Grades",
+      "category": "admin",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-07-06",
+      "end": "2027-07-06",
+      "label": "Declaration of Supplementary Result",
+      "category": "result",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-07-08",
+      "end": "2027-07-08",
+      "label": "Summer Vacation Ends / Online (Odd) Registration Ends",
+      "category": "vacation_end",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-05-22",
+      "end": "2027-07-08",
+      "label": "Summer Vacation",
+      "category": "vacation",
+      "blocks_meeting": true,
+      "semester": "even"
+    },
+    {
+      "start": "2027-07-12",
+      "end": "2027-07-16",
+      "label": "Physical Registration (Odd Semester)",
+      "category": "registration",
+      "blocks_meeting": false,
+      "semester": "even"
+    },
+    {
+      "start": "2027-07-19",
+      "end": "2027-07-19",
+      "label": "Start of Classes",
+      "category": "instruction",
+      "blocks_meeting": false,
+      "semester": "even"
+    }
+  ],
+  "blocked_dates": [
+    {
+      "date": "2026-08-15",
+      "weekday": "Saturday",
+      "label": "Independence Day",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-08-26",
+      "weekday": "Wednesday",
+      "label": "Id-e-Milad",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-09-04",
+      "weekday": "Friday",
+      "label": "Janmashtami",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "Friday",
+      "label": "Gandhi Jayanti",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "Friday",
+      "label": "MID SEM Exam Start; MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "Saturday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "Sunday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-12",
+      "weekday": "Monday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "Wednesday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "Thursday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "Friday",
+      "label": "MID SEM Exam End; MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-17",
+      "weekday": "Saturday",
+      "label": "MID SEM Break Start; MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "Sunday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-19",
+      "weekday": "Monday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "label": "Dussehra; MID SEM Break",
+      "categories": [
+        "holiday",
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-21",
+      "weekday": "Wednesday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-23",
+      "weekday": "Friday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-24",
+      "weekday": "Saturday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-10-25",
+      "weekday": "Sunday",
+      "label": "MID SEM Break End; MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-02",
+      "weekday": "Monday",
+      "label": "MT/PhD Evaluation Start / Practical Exam Start; Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-04",
+      "weekday": "Wednesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-05",
+      "weekday": "Thursday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-06",
+      "weekday": "Friday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-07",
+      "weekday": "Saturday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-08",
+      "weekday": "Sunday",
+      "label": "Diwali; Practical Examination",
+      "categories": [
+        "holiday",
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-09",
+      "weekday": "Monday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-10",
+      "weekday": "Tuesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": "Wednesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-12",
+      "weekday": "Thursday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-13",
+      "weekday": "Friday",
+      "label": "Practical Exam End / End of Classes; Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-16",
+      "weekday": "Monday",
+      "label": "END SEM Exam Start; END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-17",
+      "weekday": "Tuesday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-18",
+      "weekday": "Wednesday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-19",
+      "weekday": "Thursday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-20",
+      "weekday": "Friday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-21",
+      "weekday": "Saturday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-22",
+      "weekday": "Sunday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-23",
+      "weekday": "Monday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-24",
+      "weekday": "Tuesday",
+      "label": "Guru Nanak Jayanti; END SEM Theory EXAM",
+      "categories": [
+        "holiday",
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-25",
+      "weekday": "Wednesday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-26",
+      "weekday": "Thursday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-27",
+      "weekday": "Friday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-28",
+      "weekday": "Saturday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-29",
+      "weekday": "Sunday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-11-30",
+      "weekday": "Monday",
+      "label": "End Semester Exam End; END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-01",
+      "weekday": "Tuesday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-02",
+      "weekday": "Wednesday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-03",
+      "weekday": "Thursday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-04",
+      "weekday": "Friday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-05",
+      "weekday": "Saturday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-06",
+      "weekday": "Sunday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-07",
+      "weekday": "Monday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-08",
+      "weekday": "Tuesday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-09",
+      "weekday": "Wednesday",
+      "label": "Culrav + Avishkar + Gnosiomania",
+      "categories": [
+        "festival"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-21",
+      "weekday": "Monday",
+      "label": "Winter Vacation Start; Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-22",
+      "weekday": "Tuesday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-23",
+      "weekday": "Wednesday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-24",
+      "weekday": "Thursday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-25",
+      "weekday": "Friday",
+      "label": "Christmas Day; Winter Vacation",
+      "categories": [
+        "holiday",
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-26",
+      "weekday": "Saturday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-27",
+      "weekday": "Sunday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-28",
+      "weekday": "Monday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-29",
+      "weekday": "Tuesday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-30",
+      "weekday": "Wednesday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2026-12-31",
+      "weekday": "Thursday",
+      "label": "Winter Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "odd",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-01-01",
+      "weekday": "Friday",
+      "label": "Winter Vacation; Winter Vacation End / Online Registration End",
+      "categories": [
+        "vacation",
+        "vacation_end"
+      ],
+      "semester": "odd,even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-01-26",
+      "weekday": "Tuesday",
+      "label": "Republic Day",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-02-05",
+      "weekday": "Friday",
+      "label": "Annual Athletics Meet",
+      "categories": [
+        "institute_event"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-02-06",
+      "weekday": "Saturday",
+      "label": "Annual Athletics Meet",
+      "categories": [
+        "institute_event"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-02-07",
+      "weekday": "Sunday",
+      "label": "Annual Athletics Meet",
+      "categories": [
+        "institute_event"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-02-11",
+      "weekday": "Thursday",
+      "label": "Basant Panchami",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-10",
+      "weekday": "Wednesday",
+      "label": "Eid-ul-Fitr",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-12",
+      "weekday": "Friday",
+      "label": "MID SEM Exam Start; MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-13",
+      "weekday": "Saturday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-14",
+      "weekday": "Sunday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-15",
+      "weekday": "Monday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-16",
+      "weekday": "Tuesday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-17",
+      "weekday": "Wednesday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-18",
+      "weekday": "Thursday",
+      "label": "MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-19",
+      "weekday": "Friday",
+      "label": "MID SEM Exam End; MID SEM Exam",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-20",
+      "weekday": "Saturday",
+      "label": "MID SEM Break Start; MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-21",
+      "weekday": "Sunday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-22",
+      "weekday": "Monday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-23",
+      "weekday": "Tuesday",
+      "label": "Holi; MID SEM Break",
+      "categories": [
+        "holiday",
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-24",
+      "weekday": "Wednesday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-25",
+      "weekday": "Thursday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-26",
+      "weekday": "Friday",
+      "label": "Good Friday; MID SEM Break",
+      "categories": [
+        "holiday",
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-27",
+      "weekday": "Saturday",
+      "label": "MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-03-28",
+      "weekday": "Sunday",
+      "label": "MID SEM Break End; MID SEM Break",
+      "categories": [
+        "break"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-02",
+      "weekday": "Friday",
+      "label": "MT / PhD / MCA Evaluation Start",
+      "categories": [
+        "evaluation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-12",
+      "weekday": "Monday",
+      "label": "Practical Exam; Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-13",
+      "weekday": "Tuesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-14",
+      "weekday": "Wednesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-15",
+      "weekday": "Thursday",
+      "label": "Ram Navami; Practical Examination",
+      "categories": [
+        "holiday",
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-16",
+      "weekday": "Friday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-17",
+      "weekday": "Saturday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-18",
+      "weekday": "Sunday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-19",
+      "weekday": "Monday",
+      "label": "Mahavir Jayanti; Practical Examination",
+      "categories": [
+        "holiday",
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-20",
+      "weekday": "Tuesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-21",
+      "weekday": "Wednesday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-22",
+      "weekday": "Thursday",
+      "label": "Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-23",
+      "weekday": "Friday",
+      "label": "Practical Exam End / End of Classes; Practical Examination",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-26",
+      "weekday": "Monday",
+      "label": "END SEM Theory Exam Start; END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-27",
+      "weekday": "Tuesday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-28",
+      "weekday": "Wednesday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-29",
+      "weekday": "Thursday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-04-30",
+      "weekday": "Friday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-01",
+      "weekday": "Saturday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-02",
+      "weekday": "Sunday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-03",
+      "weekday": "Monday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-04",
+      "weekday": "Tuesday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-05",
+      "weekday": "Wednesday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-06",
+      "weekday": "Thursday",
+      "label": "END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-07",
+      "weekday": "Friday",
+      "label": "END SEM Theory EXAM Ends / MCA Evaluation Ends; END SEM Theory EXAM",
+      "categories": [
+        "exam"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-17",
+      "weekday": "Monday",
+      "label": "Id-Ul-Zuha",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-20",
+      "weekday": "Thursday",
+      "label": "Buddha Purnima",
+      "categories": [
+        "holiday"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-22",
+      "weekday": "Saturday",
+      "label": "Summer Vacation Start; Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-23",
+      "weekday": "Sunday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-24",
+      "weekday": "Monday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-25",
+      "weekday": "Tuesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-26",
+      "weekday": "Wednesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-27",
+      "weekday": "Thursday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-28",
+      "weekday": "Friday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-29",
+      "weekday": "Saturday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-30",
+      "weekday": "Sunday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-05-31",
+      "weekday": "Monday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-01",
+      "weekday": "Tuesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-02",
+      "weekday": "Wednesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-03",
+      "weekday": "Thursday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-04",
+      "weekday": "Friday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-05",
+      "weekday": "Saturday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-06",
+      "weekday": "Sunday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-07",
+      "weekday": "Monday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-08",
+      "weekday": "Tuesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-09",
+      "weekday": "Wednesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-10",
+      "weekday": "Thursday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-11",
+      "weekday": "Friday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-12",
+      "weekday": "Saturday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-13",
+      "weekday": "Sunday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-14",
+      "weekday": "Monday",
+      "label": "Supplementary Exam Start; Supplementary Exam; Summer Vacation",
+      "categories": [
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-15",
+      "weekday": "Tuesday",
+      "label": "Supplementary Exam; Summer Vacation",
+      "categories": [
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-16",
+      "weekday": "Wednesday",
+      "label": "Muharram; Supplementary Exam; Summer Vacation",
+      "categories": [
+        "holiday",
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-17",
+      "weekday": "Thursday",
+      "label": "Supplementary Exam; Summer Vacation",
+      "categories": [
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-18",
+      "weekday": "Friday",
+      "label": "Supplementary Exam; Summer Vacation",
+      "categories": [
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-19",
+      "weekday": "Saturday",
+      "label": "Supplementary Exam; Summer Vacation",
+      "categories": [
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-20",
+      "weekday": "Sunday",
+      "label": "Supplementary Exam; Summer Vacation",
+      "categories": [
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-21",
+      "weekday": "Monday",
+      "label": "Supplementary Exam End; Supplementary Exam; Summer Vacation",
+      "categories": [
+        "exam",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-22",
+      "weekday": "Tuesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-23",
+      "weekday": "Wednesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-24",
+      "weekday": "Thursday",
+      "label": "MT/PhD Evaluation Ends; Summer Vacation",
+      "categories": [
+        "evaluation",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-25",
+      "weekday": "Friday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-26",
+      "weekday": "Saturday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-27",
+      "weekday": "Sunday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-28",
+      "weekday": "Monday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-29",
+      "weekday": "Tuesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-06-30",
+      "weekday": "Wednesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-01",
+      "weekday": "Thursday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-02",
+      "weekday": "Friday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-03",
+      "weekday": "Saturday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-04",
+      "weekday": "Sunday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-05",
+      "weekday": "Monday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-06",
+      "weekday": "Tuesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-07",
+      "weekday": "Wednesday",
+      "label": "Summer Vacation",
+      "categories": [
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    },
+    {
+      "date": "2027-07-08",
+      "weekday": "Thursday",
+      "label": "Summer Vacation Ends / Online (Odd) Registration Ends; Summer Vacation",
+      "categories": [
+        "vacation_end",
+        "vacation"
+      ],
+      "semester": "even",
+      "blocks_meeting": true
+    }
+  ],
+  "total_events": 76,
+  "total_blocked_dates": 167,
+  "generated_at": "2026-10-27T23:11:46"
+}

@@ -1,0 +1,182 @@
+{
+  "document": "Synthetic Departmental Office Orders and Circulars",
+  "source_file": "synthetic_circulars_ug.json",
+  "chunk_type": "circular",
+  "synthetic": true,
+  "disclaimer": "Synthetic demonstration data generated from the official Bachelors Programme ordinance. Not real institutional records.",
+  "grounded_in": "MNNIT Bachelors Ordinance",
+  "source_ordinance": "Ordinances_for_Bachelors_Programme.pdf",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "ordinance_clauses_used": 68,
+  "generated_at": "2026-10-30T19:22:19.566229+00:00",
+  "total_records": 10,
+  "records": [
+    {
+      "circular_id": "CSED/DUGC/OO/2024/07",
+      "circular_type": "office_order",
+      "file_number": "CSED/DUGC/OO/2024/07",
+      "issue_date": "2024-04-02",
+      "issuing_authority": "Head of Department / Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Make-up examination procedure for mid-semester examinations",
+      "applicable_clauses": [
+        "6.2.4"
+      ],
+      "content": "In accordance with Clause 6.2.4 of the Bachelors Programme Ordinances, make-up examinations shall be coordinated by the Department as per guidelines of the office of the Dean (Academic). Students who fail to appear in the mid-semester examination shall submit Form BP-10 within seven days of the last scheduled examination with supporting documents. Applications received after the stipulated period shall not be considered except with the approval of Chairperson SUGC.",
+      "synthetic": true,
+      "record_index": 1,
+      "text": "CSED/DUGC/OO/2024/07 (office_order) file CSED/DUGC/OO/2024/07 dated 2024-04-02. Subject: Make-up examination procedure for mid-semester examinations. Clauses 6.2.4. In accordance with Clause 6.2.4 of the Bachelors Programme Ordinances, make-up examinations shall be coordinated by the Department as per guidelines of the office of the Dean (Academic). Students who fail to appear in the mid-semester examination shall submit Form BP-10 within seven days of the last scheduled examination with supporting documents. Applications received after the stipulated period shall not be considered except with the approval of Chairperson SUGC."
+    },
+    {
+      "circular_id": "CSED/DUGC/CIR/2024/11",
+      "circular_type": "circular",
+      "file_number": "CSED/DUGC/CIR/2024/11",
+      "issue_date": "2024-08-01",
+      "issuing_authority": "Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Attendance requirement of 75% and short-attendance notifications",
+      "applicable_clauses": [
+        "9.1"
+      ],
+      "content": "Attention of all B.Tech. students is drawn to Clause 9.1. A student shall not be allowed to appear in the end-semester examination of a course if attendance in that course falls below 75% and shall be awarded F grade. Extraordinary attendance relaxation, if any, shall be considered only as per Section 8. Students remain responsible for fulfilment of all other academic requirements.",
+      "synthetic": true,
+      "record_index": 2,
+      "text": "CSED/DUGC/CIR/2024/11 (circular) file CSED/DUGC/CIR/2024/11 dated 2024-08-01. Subject: Attendance requirement of 75% and short-attendance notifications. Clauses 9.1. Attention of all B.Tech. students is drawn to Clause 9.1. A student shall not be allowed to appear in the end-semester examination of a course if attendance in that course falls below 75% and shall be awarded F grade. Extraordinary attendance relaxation, if any, shall be considered only as per Section 8. Students remain responsible for fulfilment of all other academic requirements."
+    },
+    {
+      "circular_id": "CSED/DUGC/OO/2023/19",
+      "circular_type": "office_order",
+      "file_number": "CSED/DUGC/OO/2023/19",
+      "issue_date": "2023-10-12",
+      "issuing_authority": "Head of Department",
+      "department": "Computer Science and Engineering",
+      "subject": "Medical leave and conversion to semester leave / semester drop",
+      "applicable_clauses": [
+        "8.3",
+        "8.4"
+      ],
+      "content": "Medical leave for a maximum (cumulative) of 15 days in a given semester may be allowed on Form BP-12, recommended by DUGC and approved by the Head, under Clause 8.3. Where the required absence exceeds this period, the student shall compulsorily apply for Semester Leave / Semester Drop under Clause 8.4. Such leave shall not exceed two semesters during the entire programme.",
+      "synthetic": true,
+      "record_index": 3,
+      "text": "CSED/DUGC/OO/2023/19 (office_order) file CSED/DUGC/OO/2023/19 dated 2023-10-12. Subject: Medical leave and conversion to semester leave / semester drop. Clauses 8.3, 8.4. Medical leave for a maximum (cumulative) of 15 days in a given semester may be allowed on Form BP-12, recommended by DUGC and approved by the Head, under Clause 8.3. Where the required absence exceeds this period, the student shall compulsorily apply for Semester Leave / Semester Drop under Clause 8.4. Such leave shall not exceed two semesters during the entire programme."
+    },
+    {
+      "circular_id": "CSED/DUGC/CIR/2024/03",
+      "circular_type": "circular",
+      "file_number": "CSED/DUGC/CIR/2024/03",
+      "issue_date": "2024-07-15",
+      "issuing_authority": "Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Branch sliding after first year - additional credit requirement",
+      "applicable_clauses": [
+        "5.4"
+      ],
+      "content": "Students whose branches are changed under Clause 5.4 shall earn additional credits for left-out branch-specific courses of the allotted branch. Credits earned in B.Tech. I and II Semesters in the previous-branch specific courses shall not be accounted for meeting the credit requirement of the new branch.",
+      "synthetic": true,
+      "record_index": 4,
+      "text": "CSED/DUGC/CIR/2024/03 (circular) file CSED/DUGC/CIR/2024/03 dated 2024-07-15. Subject: Branch sliding after first year - additional credit requirement. Clauses 5.4. Students whose branches are changed under Clause 5.4 shall earn additional credits for left-out branch-specific courses of the allotted branch. Credits earned in B.Tech. I and II Semesters in the previous-branch specific courses shall not be accounted for meeting the credit requirement of the new branch."
+    },
+    {
+      "circular_id": "CSED/DUGC/OO/2024/15",
+      "circular_type": "office_order",
+      "file_number": "CSED/DUGC/OO/2024/15",
+      "issue_date": "2024-09-01",
+      "issuing_authority": "Head of Department / Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Mapping of online / MoU / internship credits",
+      "applicable_clauses": [
+        "6.2.6",
+        "6.3.2"
+      ],
+      "content": "Evaluation of online courses and courses offered by other Institutions under MoU shall follow the process of the respective agency as per Clause 6.2.6. Grade equivalence shall be as in Clause 6.3.2 (A+ for >=85%, F for <40%). The coordinator of online courses shall tabulate mapped grades. SUGC, on DUGC recommendation, shall decide credits, duration and normalisation.",
+      "synthetic": true,
+      "record_index": 5,
+      "text": "CSED/DUGC/OO/2024/15 (office_order) file CSED/DUGC/OO/2024/15 dated 2024-09-01. Subject: Mapping of online / MoU / internship credits. Clauses 6.2.6, 6.3.2. Evaluation of online courses and courses offered by other Institutions under MoU shall follow the process of the respective agency as per Clause 6.2.6. Grade equivalence shall be as in Clause 6.3.2 (A+ for >=85%, F for <40%). The coordinator of online courses shall tabulate mapped grades. SUGC, on DUGC recommendation, shall decide credits, duration and normalisation."
+    },
+    {
+      "circular_id": "CSED/DUGC/CIR/2023/22",
+      "circular_type": "circular",
+      "file_number": "CSED/DUGC/CIR/2023/22",
+      "issue_date": "2023-07-20",
+      "issuing_authority": "Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Late registration with fine and special-case permission",
+      "applicable_clauses": [
+        "5.1"
+      ],
+      "content": "Late registration is discouraged. Late registration with a financial fine may be permitted up to two weeks from the notified last date. No registration shall be allowed thereafter except in special cases with permission of Dean (Academic) on the recommendation of the Head of the concerned Department (Clause 5.1).",
+      "synthetic": true,
+      "record_index": 6,
+      "text": "CSED/DUGC/CIR/2023/22 (circular) file CSED/DUGC/CIR/2023/22 dated 2023-07-20. Subject: Late registration with fine and special-case permission. Clauses 5.1. Late registration is discouraged. Late registration with a financial fine may be permitted up to two weeks from the notified last date. No registration shall be allowed thereafter except in special cases with permission of Dean (Academic) on the recommendation of the Head of the concerned Department (Clause 5.1)."
+    },
+    {
+      "circular_id": "CSED/DUGC/OO/2024/05",
+      "circular_type": "office_order",
+      "file_number": "CSED/DUGC/OO/2024/05",
+      "issue_date": "2024-01-10",
+      "issuing_authority": "Head of Department",
+      "department": "Computer Science and Engineering",
+      "subject": "Honours, Research and Minor registration windows",
+      "applicable_clauses": [
+        "5.5",
+        "5.6",
+        "5.7",
+        "7.2"
+      ],
+      "content": "Registration for Minor (Forms BP-05, BP-06), Honours / Research (Forms BP-07, BP-08) shall close on the notified last date. Eligibility remains as in Clause 7.2: Honours requires first-attempt clearance of semesters I-IV and CPI not less than 8.0; Research requires the same clearance and CPI not less than 7.5. A student may register for only one of Honours or Research.",
+      "synthetic": true,
+      "record_index": 7,
+      "text": "CSED/DUGC/OO/2024/05 (office_order) file CSED/DUGC/OO/2024/05 dated 2024-01-10. Subject: Honours, Research and Minor registration windows. Clauses 5.5, 5.6, 5.7, 7.2. Registration for Minor (Forms BP-05, BP-06), Honours / Research (Forms BP-07, BP-08) shall close on the notified last date. Eligibility remains as in Clause 7.2: Honours requires first-attempt clearance of semesters I-IV and CPI not less than 8.0; Research requires the same clearance and CPI not less than 7.5. A student may register for only one of Honours or Research."
+    },
+    {
+      "circular_id": "CSED/DUGC/CIR/2024/08",
+      "circular_type": "circular",
+      "file_number": "CSED/DUGC/CIR/2024/08",
+      "issue_date": "2024-05-20",
+      "issuing_authority": "Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Academic Deficiency and Grade Improvement Examination",
+      "applicable_clauses": [
+        "7.1",
+        "6.2.5"
+      ],
+      "content": "A student is ACD if SPI and CPI are not both >= 4.0, or if ABS/N/F/X exists in any registered course (Clause 7.1). ACD students may appear in Grade Improvement Examination with a combination of F, X, ABS and N grades, maximum five courses, on Form BP-11 with the prescribed fee (Clause 6.2.5). Late registration for Grade Improvement Examination shall not be permitted except with approval of Dean (Academic).",
+      "synthetic": true,
+      "record_index": 8,
+      "text": "CSED/DUGC/CIR/2024/08 (circular) file CSED/DUGC/CIR/2024/08 dated 2024-05-20. Subject: Academic Deficiency and Grade Improvement Examination. Clauses 7.1, 6.2.5. A student is ACD if SPI and CPI are not both >= 4.0, or if ABS/N/F/X exists in any registered course (Clause 7.1). ACD students may appear in Grade Improvement Examination with a combination of F, X, ABS and N grades, maximum five courses, on Form BP-11 with the prescribed fee (Clause 6.2.5). Late registration for Grade Improvement Examination shall not be permitted except with approval of Dean (Academic)."
+    },
+    {
+      "circular_id": "CSED/DUGC/OO/2024/18",
+      "circular_type": "office_order",
+      "file_number": "CSED/DUGC/OO/2024/18",
+      "issue_date": "2024-10-10",
+      "issuing_authority": "Head of Department / Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Notice of DUGC meeting and agenda circulation",
+      "applicable_clauses": [
+        "1.6"
+      ],
+      "content": "In terms of Clause 1.6, the Department Undergraduate Committee (DUGC) shall consider student academic matters including make-up examinations, attendance condonation, semester leave, branch sliding and credit mapping. Members are requested to attend the DUGC Meeting as per the notice issued by Convener DUGC with the consent of the Head.",
+      "synthetic": true,
+      "record_index": 9,
+      "text": "CSED/DUGC/OO/2024/18 (office_order) file CSED/DUGC/OO/2024/18 dated 2024-10-10. Subject: Notice of DUGC meeting and agenda circulation. Clauses 1.6. In terms of Clause 1.6, the Department Undergraduate Committee (DUGC) shall consider student academic matters including make-up examinations, attendance condonation, semester leave, branch sliding and credit mapping. Members are requested to attend the DUGC Meeting as per the notice issued by Convener DUGC with the consent of the Head."
+    },
+    {
+      "circular_id": "CSED/DUGC/CIR/2023/14",
+      "circular_type": "circular",
+      "file_number": "CSED/DUGC/CIR/2023/14",
+      "issue_date": "2023-11-02",
+      "issuing_authority": "Convener DUGC",
+      "department": "Computer Science and Engineering",
+      "subject": "Unfair means reporting on Form BP-13",
+      "applicable_clauses": [
+        "12.5"
+      ],
+      "content": "Any use of unfair means detected by the course instructor / invigilators / observer committee shall be reported to Dean (Academic), the Head of the concerned Department and the course instructor in the prescribed format [Form BP-13] on the same day (Clause 12.5). One form shall be used for one case only.",
+      "synthetic": true,
+      "record_index": 10,
+      "text": "CSED/DUGC/CIR/2023/14 (circular) file CSED/DUGC/CIR/2023/14 dated 2023-11-02. Subject: Unfair means reporting on Form BP-13. Clauses 12.5. Any use of unfair means detected by the course instructor / invigilators / observer committee shall be reported to Dean (Academic), the Head of the concerned Department and the course instructor in the prescribed format [Form BP-13] on the same day (Clause 12.5). One form shall be used for one case only."
+    }
+  ]
+}

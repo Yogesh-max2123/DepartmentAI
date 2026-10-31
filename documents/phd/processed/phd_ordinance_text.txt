@@ -1,0 +1,3632 @@
+
+================================================================================
+PAGE 1
+================================================================================
+
+ORDINANCES FOR DOCTORAL PROGRAMMES
+
+Motilal Nehru National Institute of Technology Allahabad,
+Prayagraj India
+
+Approved by the Board of Governors in its Seventy-third (73rd) meeting held
+on August 10, 2023 vide Resolution No. 73.13 (A)
+
+================================================================================
+PAGE 2
+================================================================================
+
+ii
+
+================================================================================
+PAGE 3
+================================================================================
+
+iii
+
+Vision and Mission
+VISION
+
+To attain a distinct identity for the Institute through technology innovation,
+knowledge creation and dissemination for the benefit of the society.
+
+MISSION
+
+To nurture an eco-system for continuous enhancement of value based
+teaching and learning process in the emerging areas of technology.
+
+To train quality human and knowledge resources in the service of society.
+
+To develop sustainable products and technologies.
+
+================================================================================
+PAGE 4
+================================================================================
+
+iv
+
+TABLE OF CONTENT
+PAGE
+
+PREAMBLE
+Vii
+
+NOMENCLATURE
+Viii
+1
+INTRODUCTION
+1
+
+1.1
+Doctoral Programme
+1
+
+1.2
+Senate Doctoral Programme Committee (SDPC)
+1
+
+1.3
+Department Doctoral Programme Committee (DDPC)
+2
+
+1.4
+Office of the Dean (Academic)
+3
+
+1.5
+Board of Academics (BoAc)
+3
+
+2
+ACADEMIC SESSION
+3
+
+2.1
+Regular Semesters
+3
+
+2.2
+Summer Semester
+4
+
+2.3
+Academic Calendar
+4
+
+3
+ADMISSION
+4
+
+3.1
+Admission Calendar
+4
+
+3.2
+Selection Committee
+4
+
+3.2.1 Institute Doctoral Selection Committee (IDSC)
+4
+
+3.2.2 Department Doctoral Selection Committee (DDSC)
+5
+
+3.3
+Eligibility of admission
+5
+
+3.3.1 Ph. D. in Engineering
+5
+
+3.3.2 Ph. D. in Management, Humanities and Social Science
+6
+
+3.3.3 PhD in Sciences
+6
+
+3.3.4 Ph. D. In Geographic Information System (GIS) Cell
+6
+
+3.4
+Admission Categories of Ph.D. Research Scholars
+6
+
+3.4.1 Institute Stipendiary Full Time Research Scholars (Course Code-
+11)
+7
+
+3.4.2 Sponsored Full-time Research Scholars (Course Code-12)
+7
+
+3.4.3 Sponsored Part Time Research Scholar (Course Code-13)
+7
+
+3.4.4 Faculty/Staff/Sponsored Project Fellow of MNNIT Allahabad
+(Course Code-14)
+8
+
+3.4.5 Self-financed Full-Time Research Scholars (Course Code-15)
+8
+
+3.4.6 Students from Abroad
+8
+
+3.4.6.1 Sponsored foreign students
+8
+
+3.4.6.2 Self-financed foreign studetns
+8
+
+3.5
+Admission Procedure
+8
+
+3.5.1 Admission under different Programmes Codes
+9
+
+3.5.2 Admission of Indian Nationals Residing Abroad (INRA) and
+Foreign Nationals
+9
+
+3.5.3 Admission of Non-Degree Students
+10
+
+3.6
+Cancellation of Admission
+10
+
+4
+REGISTRATION
+10
+
+4.1
+Late Registration
+11
+
+4.2
+Academic Advising
+11
+
+4.3
+Semester Load Requirements
+11
+
+4.4
+Adding/Dropping of Courses
+12
+
+4.5
+Change of Registration from Full-Time to Part-Time
+12
+
+5
+LEAVE RULES
+12
+
+================================================================================
+PAGE 5
+================================================================================
+
+v
+
+5.1
+Annual Leave
+
+12
+
+5.2
+Semester Leave
+
+13
+
+5.3
+Medical Leave
+13
+
+5.4
+Maternity / Paternity Leave
+13
+
+5.5
+Absence without Sanctioned Leave
+13
+6
+PERMISSION TO ATTEND OTHER ACADEMIC INSTITUTIONS
+/INDUSTRY AS NON DEGREE STUDENTS
+13
+
+7
+PROGRAMME REQUIREMENTS AND GRADING SYSTEM
+14
+
+7.1
+Minimum Residence, Maximum Duration and Academic Requirements
+14
+
+7.2
+Ph. D. Credit Award Distributions
+16
+
+7.3
+Extension of Programme
+16
+
+7.4
+Audit Courses
+16
+
+7.5
+Grading System
+16
+
+7.5.1     Grade and Grade Point
+16
+
+7.5.2
+Semester Performance Index (SPI)
+17
+
+7.5.3
+Cumulative Performance Index (CPI)
+18
+
+7.5.4     Grading online courses
+18
+
+7.5.5
+Grade Report
+19
+
+7.5.6
+Transcript
+19
+
+7.5.7
+Withholding of Grade Report
+19
+
+8
+ACADEMIC PERFORMANCE REQUIREMENT
+19
+
+8.1
+Termination from the Programme
+19
+
+8.2
+Appeal against Termination
+20
+
+9
+COMPREHENSIVE EXAMINATION
+20
+10
+STATE-OF-THE-ART SEMINAR
+21
+11
+OPEN SEMINAR
+21
+12
+APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION
+OF VARIOUS COMMITTEES/ BOARDS
+22
+
+12.1
+Appointment of Thesis Supervisor(s)
+22
+
+12.2
+Constitution and Appointment of Student Research Committee (SRC)
+23
+
+12.3
+Constitution of Comprehensive Examination Board
+23
+
+12.4
+Constitution of Thesis Evaluation Board
+24
+
+12.5
+Constitution of Ph.D. Oral Board
+24
+
+12.6
+Guidelines for Institute Faculty for Supervising / Co-supervising
+students of other Institute / University
+25
+
+13
+THESIS SUBMISSION, EVALUATION AND EXAMINATION
+26
+
+13.1
+Ph.D Thesis Submission
+26
+
+13.2
+Ph.D. Thesis Evaluation
+27
+
+13.3
+Ph. D. Oral Examination
+28
+
+14
+DEGREE REQUIREMENTS
+29
+
+14.1
+Award of the Degree
+29
+
+14.1
+Withdrawal of the Degree
+29
+
+15
+STIPENDS/FELLOWSHIPS, SCHOLARSHIPS, PRIZES AND MEDALS
+29
+
+15.1
+STIPEND/FELLOWSHIPS
+30
+
+================================================================================
+PAGE 6
+================================================================================
+
+vi
+
+15.2
+Prizes, Medals, and Scholarships
+30
+
+16
+CONDUCT AND DISCIPLINE
+30
+
+16.1
+Code of Conduct
+30
+
+16.2
+Disciplinary Actions and Related Matter
+31
+
+16.3
+Unfair Means (UFM)
+31
+
+16.3.1 Constitution of Unfair Means Committee
+32
+
+16.3.2 The procedure to deal with the cases of Unfair Means (UFM):
+32
+17
+WAIVER OF REQUIREMENTS IN SPECIAL CASES
+33
+
+18
+AMENDMENTS
+33
+
+Annexure
+
+Forms: DP-01 to DP-24
+34-60
+
+GL-1
+61
+
+================================================================================
+PAGE 7
+================================================================================
+
+vii
+
+PREAMBLE
+The provisions contained in these Ordinances govern the policies and procedures on the
+admission of students, imparting instructions of Courses, conducting examinations and
+evaluation and certification of students’ performance.
+
+These ordinances shall supersede all the corresponding earlier set of ordinances of the
+Institute, with all the amendments thereto, with effect from the date of approval of
+the Board of Governors, and shall be binding on the students admitted/in the academic
+session after the approval. However, the students admitted in earlier academic session,
+shall be governed by the ordinances prevalent at the time of their admission.
+
+================================================================================
+PAGE 8
+================================================================================
+
+viii
+
+Nomenclature
+
+ACD
+Academic Deficiency
+AS
+Academic Session
+DP
+Doctoral Programme
+BoAc
+Board of Academics
+BoG
+Board of Governors
+BoS
+Board of Studies
+Ph.D.
+Doctor of Philosophy
+CPI
+Cumulative Performance Index
+DASA
+Direct Admission of Students Abroad
+DDPC
+Department Doctoral Programme Committee
+IDSC
+Institute Doctoral Selection Committee
+DDSC
+Department Doctoral Selection Committee
+g
+grade points associated with the letter grades awarded to a student
+GoI
+Government of India
+ICCR
+Indian Council of Cultural Relations
+MEA
+Ministry of External Affairs
+MNNITA
+Motilal Nehru National Institute of Technology Allahabad
+MOOCs
+Massive Open Online Courses
+MoU
+Memorandum of understanding
+s/he
+she or he
+SDPC
+Senate Doctoral Programme Committee
+SPI
+Semester Performance Index
+SUGC
+Senate Under Graduate Committee
+SMPC
+Senate Masters’ Programme Committee
+UFM
+Unfair Means
+w
+weight or credit of the course
+
+================================================================================
+PAGE 9
+================================================================================
+
+1
+
+1. INTRODUCTION
+The objectives of the Doctoral Programmes at the Motilal Nehru National Institute of Technology
+Allahabad (MNNIT Allahabad) are:
+•
+To carry out research in the frontier areas of science, technology, and management.
+•
+To nurture a capacity to learn continually and interact with multidisciplinary groups.
+•
+To develop the scientific and engineering human resources of the highest quality to cater
+the needs of the academia, industry, and society.
+•
+To inculcate intellectual habits required for successful careers in teaching, research,
+innovation, and entrepreneurship.
+•
+With these goals in view, the Doctoral Programmes are designed to include Courses of
+study, Seminars, Projects and Thesis through which a student may develop his/her
+research skills, in different emergent areas.
+The procedures and requirements stated in these Ordinances embody the philosophy of the
+Doctoral Programme and ensure a high standard of performance at the Institute.
+1.1
+Doctoral Programme
+Various Departments/Cells/Schools/Centres of the Institute offer the Doctoral Programme.
+Hereafter the Departments, Cells, Schools, Centres of the Institute shall be referred to as
+Department.
+1.2
+Senate Doctoral Programme Committee (SDPC)
+The Senate Doctoral Programme Committee (SDPC) shall consist of convener of DDPC of
+each department and six additional members of whom one shall be the outgoing Chairperson
+SDPC (if not otherwise a member), Chairperson SMPC, two Senate nominees from amongst
+the Senate members for a period of 2 years, and two doctoral students (one male and one
+female) for a period of 1 year. The student members shall be one from Engineering
+Departments and one from Non-Engineering Departments. The student members shall be
+nominated and approved by the Dean (Academic). Chairperson SDPC shall be nominated
+by the Chairperson Senate/Senate from amongst the members of the Senate.
+The tenure of Chairperson SDPC shall be normally of two years.
+The SDPC shall meet at least twice every semester.
+The Senate Doctoral Programme Committee shall have jurisdiction in the recommendation
+of the following matters concerning the Doctoral Programme of the Institute:
+
+Modification of eligibility criteria for admission,
+
+Introduction of new course(s) of instruction,
+
+================================================================================
+PAGE 10
+================================================================================
+
+2
+
+
+Desirable modification of courses already approved,
+
+Modification of the credit value of courses,
+
+Modification of the guidelines governing the form of presentation  and disposal of
+
+thesis,
+
+Conduct of oral and written examinations,
+
+Other related matters as may be referred to it by the Senate.
+The functions of the SDPC shall be of general policy determination, coordination and review,
+but the Senate shall retain the power of final decision. In the discharge of its responsibilities
+the Committee shall make full use of the appraisals and recommendations of the DDPCs of
+various Academic Departments.
+1.3
+Department Doctoral Programme Committee (DDPC)
+Each Department shall have a Department Doctoral Programme Committee (DDPC)
+consisting of, the Head of the Department as ex-officio Chairperson, Convener,
+DMPC/DUGC and three to five faculty members (with earned PhD Degree) to be chosen
+from the Department, one Professor/Associate Professor from other Department and two
+departmental Ph.D. scholars. One of the faculty members shall be nominated by head as
+Convener, DDPC. The student members shall be nominated for a period of one year by
+rotation. The DDPC shall be proposed by the Head of Department. The duration of the
+Committee shall be two years starting from the beginning of the Academic Session. The
+student members shall not participate when the cases of Academic Evaluation of the
+concerned student is being considered, although the students' opinion might be sought prior
+to taking any decision.
+The proposed DDPC shall be approved by the Chairperson SDPC.
+The DDPC shall be responsible for the following:
+(i)
+Monitoring of quality of instructions to students.
+(ii)
+Proposing and implementing new Courses and desirable modification of courses
+already approved.
+(iii)
+Board of Academics (BoAc) of each department shall scrutinize the changes in
+existing or new proposals. The recommendations of BoAc will be considered in DDPC and
+SDPC and submitted to Senate for approval.
+(iv)
+Attending to the problems of PhD students and advising them in academic matters.
+(v)
+Any other related matter as per the Ordinance.
+
+================================================================================
+PAGE 11
+================================================================================
+
+3
+
+The Department Doctoral Programme Committee (DDPC) shall ensure that all the Rules and
+Procedures given in the Ordinance are adhered to and implemented without any change.
+While considering an issue if the Ordinance does not specifically mention something, the
+same shall be forwarded to Senate through SDPC for its consideration.
+The Chairperson DDPC shall hold its meeting regularly, at least two meetings every
+semester and keep record of the decisions/ recommendations.
+
+1.4
+Office of the Dean (Academic)
+The Dean (Academic) shall be responsible for the implementation of the decisions taken on
+academic matters by the SDPC and the Senate. The office of the Dean (Academic) shall:
+(i)
+Receive, process and maintain all records related to the Doctoral Programmes including
+Curricula, Courses offered, Academic Calendar, Registration, Semester Leave,
+Examinations, Grades and Award of Degrees and Medals/Prizes,
+(ii)
+Disseminate information pertaining to all academic matters.
+(iii)
+Issue necessary Memoranda/Orders.
+(iv) Act as an additional channel of communication between the Students, Instructors/
+Supervisor(s), Departments/Interdisciplinary Programme/ Schools/ Cells/ Centres and
+SDPC.
+The Ph.D. Section of the office of Dean (Academic) shall assist the SDPC in its functioning.
+1.5
+Board of Academics (BoAc)
+There will be a Board of Academics, hereinafter, referred to as BoAc, for every Department.
+The constitution and role of the BoAc shall be as per guidelines of NIT Statutes, as amended
+from time to time. The BoAc will scrutinize the changes in existing curriculum or new
+proposals. The duly considered recommendations of the BoAc will be submitted to the
+Senate for discussion and approval.
+2.
+ACADEMIC SESSION (AS)
+The Academic Session, hereinafter, referred to as AS, of the Institute is divided into two
+Regular Semesters - Odd Semester & Even Semester, and Summer Semester (optional, as
+will be decided by the Department based on the availability of the faculty members and other
+resources) and of nearly one year of duration. Additionally, each AS should be documented
+through Academic Calendar.
+2.1
+Regular Semesters
+The Regular Semesters of AS are termed as Odd and Even Semesters.
+The Odd Semester and the Even Semester usually commence in July and January every
+year, respectively. Each regular Semester (Odd and Even) are twelve weeks in duration for
+the purpose of instructions. In addition, two weeks of each Semester are earmarked for the
+
+================================================================================
+PAGE 12
+================================================================================
+
+4
+
+End-Semester Examination and one week during the Semester is for Mid-Semester
+Examination.
+2.2
+Summer Semester
+Summer Semester is the third semester in the AS and will be conducted with the discretion
+of the Department. However, in exceptional cases, office of Dean (Academic) may take
+decision in consultation with the concerned Department for the interest of the students. For
+students, studying in Summer Semester is optional. Summer Semester runs between
+declaration of results of even semester and the commencement of the classes of next AS.
+Summer semester is of 3-4 weeks duration for teaching and evaluation and / or guidance of
+the students. The mode of evaluation will be as per the regular semester, and only the TA
+component (25%) will be carried forward. However, the upper limit for awarding marks in the
+summer semester examination will be 70% of the maximum marks (i.e., maximum 52.5 out
+of 75) irrespective of marks secured in the summer semester examination.
+2.3
+Academic Calendar
+The exact dates of all the important events, such as online registration, physical reporting in
+the Institute/ Deeksharambh, Orientation, Registration, Late Registration, Commencement
+of Classes, Adding and Dropping of Courses, Submission of Documents, Mid semester
+Examinations, Submission of Grades, Holidays, Vacation, Mid-Semester Recess, Official
+Students Activities, etc., during the AS are specified in the Academic Calendar of the Institute
+as approved by the Senate. The Dean (Academic) shall notify the Academic Calendar of
+each Semester or for an AS after approval of the Senate, before the commencement of the
+semester. Any modification / change in Academic Calendar due to an emergent situation
+shall be proposed by the Dean (Academic) for the approval by the Chairperson, Senate and
+subsequently, to be reported to the Senate for ratification.
+
+3.
+ADMISSION
+3.1
+Admission Calendar
+Admission shall normally be made for the Odd Semester. However, admissions on vacant
+seats (if any) may be made for the even semester on approval of the Chairperson Senate.
+3.2
+Selection Committee
+3.2.1
+Institute Doctoral Selection Committee (IDSC)
+The IDSC shall be constituted every year preferably in the month of January for admissions
+to Doctoral Programmes for the ensuing session. The IDSC shall consist of F.I. Admission
+Cell, F.I. Examination Cell, A.F.I Admission Cell, Registrar, SC/ST Nominee, A.R.
+(Academic) as Convener of IDSC. Chairperson SDPC shall be Chairperson of IDSC (ex
+
+================================================================================
+PAGE 13
+================================================================================
+
+5
+
+officio). The constitution of the IDSC shall be proposed by the Dean Academic and approved
+by Chairperson Senate. The roles and responsibility of IDSC shall be to:
+1. Initiate the process of Ph.D. admission.
+2. Determine the number of vacancies for Ph.d. admission in all the departments /cell
+/school.
+3. Finalize the Institute seat matrix for Ph.D. admission.
+4. Finalize and process the recommenations received from the DDSC.
+3.2.2 Department Doctoral Selection Committee (DDSC)
+The DDSC shall be constituted every year in the month of April for admissions to Doctoral
+Programmes for the ensuing session. The DDSC shall consist of at least four faculty
+members, preferably on rotation basis (all with earned Ph.D. Degree), comprising at least
+one professor, one associate professor and one assistant professor, one professor from
+other department, and a SDPC nominee. Head of the department shall be Chairperson
+DDSC (ex officio). The constitution of the Selection Committee shall be proposed by the
+Head of the Department and approved by Chairperson SDPC.
+
+3.3
+Eligibility for Admission
+1.
+The eligibility conditions given below shall be considered to be the absolute minimum.
+Department shall reserve the right to prescribe any requirements over and above these,
+subject to the approval of the SDPC.
+2.
+The “specified minimum” marks/CPI (Cumulative Performance Index), referred to in
+subsequent sections shall imply a minimum of 60% aggregate marks or CPI of 6.5 at
+qualifying Examination. For SC/ST candidate’s eligibility in specified minimum marks/CPI
+shall be relaxed as per the Government of India norms. (Institute will not apply/accept any
+conversion formula from CPI to percentage or vice versa. The grade/marks awarding system
+as appeared on candidate’s award sheet shall be acceptable).
+3.
+Reservation in the Programme shall be done as per the Government of India Rules.
+3.3.1
+Ph. D. in Engineering
+Master Degree in relevant branch of Engineering/Technology with marks not below 60% or
+CPI 6.5
+or
+B.Tech. with Research or equivalent with a minimum 70% marks or CPI 7.5, Bachelor’s
+Degree in Engineering or Master’s Degree in Science/Applied biological sciences/Computer
+Application or any appropriate discipline with a minimum 75% marks or CPI 8.0.
+
+================================================================================
+PAGE 14
+================================================================================
+
+6
+
+3.3.2
+Ph. D. in Management, Humanities and Social Science
+Master’s
+Degree
+in
+Management/Technology/
+Engineering/
+Economics/
+Commerce/Science/Computer Applications/Social Science/Humanities with a minimum 60%
+marks or equivalent CPI 6.5.
+or
+B.Tech. with Research or equivalent with a minimum 70% marks or CPI 7.5, Bachelor’s
+Degree in Engineering with a minimum 75% marks or CPI 8.0. or Qualified Chartered
+Accountant (CA) having minimum three years of professional experience as practicing
+Chartered Accountant with minimum 60% marks at both graduation level, as well as CA
+Examination.
+3.3.3
+PhD in Sciences
+Master’s Degree in relevant discipline with a minimum 60% Marks or CPI 6.5.
+or
+B.Tech. with Research or equivalent with a minimum 70% marks or CPI 7.5, Bachelor’s
+Degree in Engineering with marks not below 75% or CPI 8.0.
+3.3.4
+Ph. D. In Geographic Information System (GIS) Cell
+M.Tech. or equivalent degree in GIS & Remote Sensing or equivalent discipline/Civil
+Engineering/ Computer Science and Engineering /Electronics /Electrical Engineering /
+Mechanical Engineering /Information Technology /Agriculture Engineering /Mining
+Engineering; with minimum marks 60% or CPI 6.5.
+or
+M.Sc.
+or
+equivalent
+degree
+in
+GIS
+&
+Remote
+Sensing/Applied
+Geology/
+Geophysics/Geography/ Environmental Science/Computer Science/Mathematics with
+minimum marks 75% or CPI 8.0.
+or
+Degree in Master of Computer Application with minimum marks 75% or CPI 8.0.
+or
+Bachelor’s degree in Engineering with a minimum of 75% marks or CPI 8.0
+
+(Candidates meeting abovementioned eligibility criteria must have Mathematics as subject
+up to 10+2 level)
+3.4
+Admission Categories of Ph.D. Research Scholars
+All the Departments offer full-time and part-time Doctoral Programmes under following
+categories. The code for different admission categories is given in the Table 1 below:
+
+Table 1: Course categories and codes
+SI. No.
+Course Categories
+Code
+I.
+Institute Stipendiary Full Time Research Scholar
+11
+
+================================================================================
+PAGE 15
+================================================================================
+
+7
+
+II.
+Sponsored Full Time Research Scholar
+12
+III.
+Sponsored Part Time Research Scholar
+13
+IV.
+Faculty/Staff/Sponsored Project Fellow of MNNIT Allahabad
+14
+V.
+Self-financed Full Time Research Scholar
+15
+
+Note:
+For admission to course code 11, candidates must have successfully passed the GATE/NET
+examination in relevant discipline. For admission to course code 12, candidates must have
+fellowship from CSIR/UGC/ ICAR/ICMR/ DST/ DRDO/ NPCIL/ GPAT/similar national level
+entrance tests in relevant discipline. Candidates may also have sponsorship from any other
+organization (refer Table1).
+3.4.1
+Institute Stipendiary Full Time Research Scholars (Course Code-11):
+These scholars shall be eligible for financial assistance in the form of fellowship at the
+approved rates and guidelines as notified by Government from time to time. The maximum
+age limit of the candidate should be within 30 years. The fellowship shall be awarded to the
+students of this code on a Semester–to-Semester basis on the satisfactory academic
+performance of the scholar (DP-03) and clause 15.
+The scholar shall be eligible for enhanced financial assistance in the form of fellowship as
+per the guidelines notified by the Government of India from time to time (DP-23 & DP-24).
+The sanction of enhancement of Ph.D. Scholarship may be considered w.e.f. due date of
+enhancement of Ph.D. Scholarship, provided the performance evaluation is completed within
+one month of due date of enhancement of Ph.D. Scholarship. For all other cases the sanction
+of enhancement of Ph.D. Scholarship will be as per the date of performance evaluation.
+3.4.2
+Sponsored Full-time Research Scholars (Course code-12)
+Under this code those students who receive fellowship from other agencies such as UGC,
+CSIR, DST, AICTE, etc are covered. Such candidates shall have to fulfil the eligibility
+requirement as per section 3.3. It also includes QIP candidates. The candidate may be
+allowed to continue his/her research work with sponsored fellowship even after submission
+of the Ph.D. Thesis till the duration of the award of the fellowship.
+3.4.3 Sponsored Part Time Research Scholar (Course Code-13):
+Under this code, employees of Government/Semi-Government Organizations /R&D
+Organizations or government academic institutions shall be eligible. Further the employees
+of industry/academic institution of repute with minimum standing for 10 years shall also be
+eligible. Such candidates must fulfil the following conditions:
+
+================================================================================
+PAGE 16
+================================================================================
+
+8
+
+(A) The candidate must have a total work experience of at least 10 years with a minimum of
+05 years continuous service with any employer.
+(B) The candidate must submit a No Objection Certificate from the employer at the time of
+interview.
+Candidates may also be admitted under this code under MoU signed between the Institute
+and other University/Organization/Institution/Industry. The eligibility criteria mentioned in
+point (A), the requirement of GATE/NET, and the requirement of 10 years of standing of
+industry/academic institution of repute will not be applicable to such candidates.
+3.4.4 Faculty/Staff/Sponsored Project Fellow of MNNIT Allahabad (Course Code - 14):
+Under this code Faculty/Staff/Project Fellow of MNNIT Allahabad shall be admitted as part
+time research scholar. Project Fellows include those who are working in the various
+externally funded research projects undertaken by the Institute. Eligibility criteria shall be
+same as per clause 3.3. Project fellows shall be registered under the PI (s)/ Co- PIs in the
+same department where the Project has been sanctioned.
+
+3.4.5 Self-financed Full-Time Research Scholars (Course Code-15):
+Self-financed full-time research scholars are those who support themselves. They shall not
+receive any financial support from the Institute in any form.
+NOTE: The candidates in respective categories are required to fulfill the eligibility
+requirement mentioned in section 3.3 (Eligibility criteria for Admission).
+3.4.6
+Students from Abroad
+The eligibility of students from Abroad shall be verified by DDSC as per Section 3.3 and
+other relevant sections. Valid GRE score will be applicable for these candidates.
+3.4.6.1 Sponsored foreign students
+Foreign students shall be sponsored by their Government or employer or awarded
+scholarship by Government of India, Indian Council for Culture Relations (ICCR) or other
+such Agencies /organizations. These students may apply to the Institute through DASA/
+Ministry of External Affairs.
+3.4.6.2 Self-Financed foreign students
+These students may apply to the Institute through DASA/ Ministry of External Affairs.
+3.5
+Admission Procedure
+1. All admissions shall be made only after approval of the Chairperson, Senate on the
+recommendations of the duly constituted Department Doctoral Selection Committee (DDSC)
+and Chairperson IDSC.
+
+================================================================================
+PAGE 17
+================================================================================
+
+9
+
+2. After receiving the duly approved list of the selected candidates from the Office of the Dean
+(Academic), Head of the Department shall issue the admission letter to the candidates, who
+shall be required to accept the offer of admission by depositing the prescribed fee before the
+specified date.
+3. In case a candidate does not accept the offer by not paying the prescribed fee by the
+specified date, the offer of admission shall stand automatically withdrawn, and the admission
+may be offered to the candidates in the waiting list, if any.
+4. The offer of admission shall also stand withdrawn if the candidate fails to register by the last
+date of registration after accepting the offer of admission.
+5. The selected candidate, who has completed all the pre-requisites of qualifying degree before
+the date of registration but is unable to produce the certificate of having passed and secured
+the minimum specified qualifying marks, shall be considered for provisional admission.
+However, if admitted provisionally, he/she shall be required to produce the evidence of
+his/her having passed the qualifying degree examination within six weeks from the last date
+of registration, failing which the admission shall automatically be cancelled. In special cases
+relaxation to this date may be given by Chairperson, Senate.
+3.5.1
+Admission under different Programmes Codes
+1. Admission to the Ph.D. Programmes shall be based on evaluation (i.e. written test and/or
+interview, academic credentials) of the eligible shortlisted candidates by the DDSC.
+2. The candidates under Code 12 must fulfil the additional requirements of their
+sponsoring/funding agency, if any.
+3. For code 13, the candidates shall be evaluated on basis of a Statement of Purpose (to be
+submitted along with application form) along with interview.
+4. Project Fellow shall be required to pursue his/her Ph. D. work in the area of research project
+and with the PI and/or Co-PI only in the same department, where project has been
+sanctioned. However, another supervisor may be added as per clause 12.
+5. Foreign students shall also be admitted on basis of interview and a Statement of Purpose.
+6. Eligibility criteria as specified in clause 3.3 shall also be applicable.
+7. Reservation shall be applicable as per Government of India Rules.
+3.5.2
+Admission of Indian Nationals Residing Abroad (INRA) and Foreign Nationals
+1. INRA candidates must have been residing abroad continuously for at least five years at the
+time of applying for admission. They shall apply for admission through Indian Embassy in
+their country. Their applications shall be processed by the DDSC along with regular admission
+process during odd or even semester subject to fulfilment of eligibility requirement as per
+clause 3.3. Such candidates will be required to complete residence requirement as per
+Clause 7.
+
+================================================================================
+PAGE 18
+================================================================================
+
+10
+
+2. The applications of foreign nationals, who are sponsored by the Indian Council of Cultural
+Relations (ICCR) /Government, shall be scrutinized by the Department concerned, to assess
+their suitability for admission to the programme. Foreign students under this code shall be
+admitted through Embassy of their countries after getting approval from the Ministry of Home
+Affairs and the Ministry of Human Resource Development, Government of India.
+3.5.3  Admission of Non-Degree Students
+1. A non-degree student is registered for a Degree in any other recognized Institute or
+University in India or abroad, and is one who is officially sponsored by that Institute or
+University to complete part of his/her academic requirements at MNNIT Allahabad. For that
+purpose the non-degree student may carry out Research/Course work and use other
+academic facilities including laboratories at MNNIT Allahabad.
+2. The strength of non-degree students in any Programme shall not be more than
+10% of the Programme strength. The fee structure and other modalities may be
+decided by School for Non Formal and Continuing Education (SNFCE).
+3. Students so admitted shall be governed by all Rules and Regulations of the Institute
+during the period of stay.
+3.6
+Cancellation of Admission
+The Dean (Academic) with approval of the Director /Chairperson Senate may cancel the
+admission of any student who fails to submit the prescribed documents by the specified date
+or to meet other stipulated requirement(s). The Senate may also cancel the admission at
+any later stage if it is found that the student had supplied some false information or
+suppressed any relevant information while seeking admission, or has been found engaged
+in serious of indiscipline act.
+4.
+REGISTRATION
+The office of the Dean (Academic) shall coordinate the registration process with the
+assistance of the Conveners of DDPC. A student shall register each Semester for the
+Courses/Mini-
+projects/Comprehensive
+Examination/State-of-the-Art
+Seminar/Thesis
+Performance Credits that he/she intends to pursue in that Semester.
+1. The registration process shall involve payment of fees for that Semester and clearance of any
+outstanding dues of the previous Semester, signing the registration roll for physical
+registration and submit duly filled DP-01; without which registration process shall remain
+incomplete. For Newly admitted students completed DP-02, DP-12, and DP-13 must also be
+submitted along with DP-01 within two weeks of registration.
+2. The physical registrations of students who are not in campus due to Internship of atleast one
+semester are recommended for waiver of physical registration. However, they have to show
+ID card and, ON their video, to show their physical presence on any online media.
+
+================================================================================
+PAGE 19
+================================================================================
+
+11
+
+3. All the students shall continue to register in the semesters till they submit their Thesis. Those
+students who are on authorized leave shall also register as per institute norms.
+4. Those students who after registering the Semester have to avail leave for more than as
+admissible in the Ordinance must be either advised for Semester drop or for the reduced
+credit units on pro-rata basis.
+5. A student who has delivered his/her Open Seminar successfully shall register for zero credits
+in subsequent Semester(s) till the submission of the Thesis, and pay semester fee.
+6. A student who has submitted his Ph.D Thesis shall not be required to register in subsequent
+Semesters.
+The sole responsibility of registration shall rest with the student concerned.
+4.1
+Late Registration
+Late registration is discouraged. However, late registration will be permitted with a financial
+fine as decided from time to time up to two weeks from the notified last date of registration.
+No registration shall be allowed after the notified last date of late registration during the
+semester except in special cases with the permission of Dean (Academic) on the
+recommendation of Head of the concerned Department.
+4.2
+Academic Advising
+A student shall be advised in the selection of Courses by the Supervisor. Selected Courses
+shall be submitted on the prescribed format (Form: DP-01) at the beginning of each
+semester.
+4.3
+Semester Load Requirement
+A semester load shall be equivalent to maximum 20 credits and minimum 8 credits. The first
+or second semester should also include a compulsory course on research methodology and
+research ethics. A Student shall also deliver seminar on thesis performance at the end of
+each Semester (optional for I semester) for the purpose of evaluation of the progress made
+during that Semester. The end semester thesis performance shall be held as per the dates
+notified in academic calendar after due notification by the supervisor(s). The progress shall
+be evaluated by Student Research Committee (SRC) constituted as per section 12.2, in the
+prescribed format (Form: DP-02). The progress report shall be submitted to office of the
+concerned department in the prescribed format with a copy to Dean (Academic) office (Form:
+DP-03). There shall be no requirement of thesis performance once a Student has delivered
+Open Seminar.
+Once a Student has satisfactorily presented Open Seminar he/she shall register for zero
+credit in subsequent semesters till submission of the Thesis. The Credits earned through
+Open Seminar shall only be considered for the purpose of Award of Grades in the particular
+Semester in which Open Seminar has been successfully delivered.
+
+================================================================================
+PAGE 20
+================================================================================
+
+12
+
+4.4
+Adding/Dropping of Courses
+Adding and dropping of Courses after registration shall be permitted on the request of the
+student in the prescribed format (Form: DP-04).
+The last date of withdrawal of course work(s) will correspond to one-month calendar date
+before the last date of end semester progress presentation of the student.
+The Convener DDPC in consultation with the Course Coordinator and with the approval of
+the Chairperson SDPC may allow a student at his/her request to add/drop from one or more
+Courses during the semester. The subsequent maximum/minimum semester load shall be
+as specified in Section 7.2.
+4.5
+Change of Registration from Full-Time to Part-Time
+(i)
+A student admitted to a full-time Ph.D. programme may be permitted to change to a
+Part-time Ph.D. Programme by submitting the application in the prescribed format
+(Form: DP-05).
+(ii)
+A student requesting such a conversion must have completed the Coursework,
+passed the Comprehensive Examination, given the State-of-the- Art Seminar which is
+adjudged as satisfactory, and completed the residence requirements.
+(iii)
+Such conversion, if approved by the Chairperson SDPC, shall be subject to the
+following conditions:
+
+The student must complete his/her Thesis within 7 years counted from the date of his/her
+first registration in the Programme.
+
+
+Provision of conversion from full-time to part-time status can be availed only once by the
+student during his/her Programme.
+Further, as per National Education Policy 2020 multiple exit points with some kind of certification
+may be introduced by the Senate.
+5.
+LEAVE RULES
+Full-time students may be granted leave on submission of application to the Head of the
+Department concerned through the Supervisor and Convener DDPC, in the prescribed
+format (Form: DP-06).
+5.1
+Annual Leave
+1.
+A Ph.D. student may be allowed leave of 15 days in a Semester or maximum 30 days in an
+Academic Calendar year, excluding Institute holidays.
+2.
+The student may be allowed academic leave for a maximum of 7 days in a calendar year to
+attend conferences/seminars/workshops/training/short-term courses.
+
+================================================================================
+PAGE 21
+================================================================================
+
+13
+
+3.
+The student going for any academic work related to the Thesis work for more than 15 days
+and a duration corresponding to less than a semester duration may be sanctioned by the
+chairperson SDPC for training within India, however for the training outside India, leave will
+be sanctioned by the Dean (Academic).
+5.2
+Semester Leave
+Semester leave for up to a maximum of two Semesters may be sanctioned by the Dean
+(Academic) on recommendation of Supervisor, DDPC, SDPC for bonafide reasons and / or
+in exceptional circumstances. Leave for more than one Semester at a time shall not be
+granted. However, such student is required to register in the semester with full fee and zero
+credits. For any registered student, refund of registration fee shall not be allowed and his
+credit shall be treated as zero.
+5.3
+Medical Leave
+For serious / exceptional medical condition, accident, etc. (to be endorsed by the institute
+medical officer / Govt. Hospitals/ Specialized Hospitals), a student may be granted a medical
+leave of maximum 15 days in an academic year (in addition to normal annual leave (5.1)
+with a stipend (if, applicable) upon recommendation by Supervisor(s)/Convener DDPC and
+approved by the concerned Head of the Department.
+(i)
+For extraordinary situations requiring the leave beyond 15 days, the application may
+be recommended by the DDPC and approved by the SDPC on case to case basis.
+(ii)
+All other academic requirements must be fulfilled by the student.
+
+5.4
+Maternity / Paternity Leave
+Maternity / Paternity leave shall be governed by Government of India rules as adopted by
+the Institute from time to time.
+5.5
+Absence without Sanctioned Leave
+Absence without sanctioned leave shall entail loss of financial assistantship for the period of
+absence in case of stipendiary students. Except for part time research scholars, Convener
+DDPC shall issue a warning letter to the absent student with intimation to the Supervisor,
+Head of the Department and Chairperson SDPC. Long absence without sanction may result
+in the termination of the student's Programme on the recommendation of the supervisor,
+DDPC and SDPC and approval of the Chairperson Senate. Head of the Department shall
+issue the termination letter with copy to office of the Dean (Academic).
+6.
+Permission to Attend Other Academic Institutions / Industry As Nondegree Students
+In order to help students to broaden their horizons and enrich their cultural and academic
+experience, provision to proceed to other academic and research Institutions in India or
+
+================================================================================
+PAGE 22
+================================================================================
+
+14
+
+abroad as non-degree students is available. Rules and procedures to be followed for availing
+this provision are as follows:
+1.
+Only those Ph. D scholars who have spent at least two Semesters, completed Course
+work, passed comprehensive examination and successfully presented State of the Art
+Seminar, are eligible to proceed as non-degree students elsewhere.
+2.
+An eligible student shall make an application for approval to the Chairperson SDPC
+through the Convener DDPC, HoD, and the Thesis Supervisor in the prescribed format
+(Form: DP-07), duly supported by a statement of purpose to undertake the proposed work
+and sufficient information about the Department/Institution and, acceptance from that
+Institute/ Organisation.
+3.
+A student who has presented his/her Open Seminar shall not be entitled for this
+provision.
+4.
+The duration of stay and the work completed shall be considered for academic
+requirement.
+5.
+The performance of the student shall be evaluated by the SRC at the end of the
+semester to fulfill the academic performance requirements of the Doctoral programme of the
+Institute. The student shall also be required to produce a certificate of attendance from the
+host institution/industry.
+6.
+A student shall be entitled to receive scholarship on the condition that he/she shall
+submit the proof that he/she is not receiving any financial assistance at the host Institution.
+However, his/her financial assistantship shall be released (including that for the period of
+absence) after he/she joins back the Department on recommendation of the DDPC, through
+supervisor.
+7.
+In case, the student is not able to physically report during registration, due to his/her
+assignment at the host Organization/Institution, he/she may be allowed by Dean Academics
+for physical reporting at a later date on recommendation of the supervisor, and Head of
+Department.
+7.
+PROGRAMME REQUIREMENTS AND GRADING SYSTEM
+7.1
+Minimum Residence, Maximum Duration and Academic Requirements
+The following table lists the minimum residence and maximum duration allowed in the Ph.D.
+Programme, and credit requirements for graduation in the Ph.D programmes. "Course Work"
+includes normally Masters’/Doctoral Course credits/ or any other theory course/ laboratory
+course/mini-project unless otherwise stated. To satisfy the "Minimum Residence"
+requirements, registration must be over consecutive Semesters; exception will be made only
+
+================================================================================
+PAGE 23
+================================================================================
+
+15
+
+if the student is on authorized leave. "Maximum Duration" is counted from the student's first
+registration date. SPI/CPI will be calculated on the basis of all Courses taken by the student.
+Table 2: Credit Distribution and Residence Requirement
+Departm
+ent
+Qualifying
+Degree
+Min. Total
+Credit s
+to be
+earned
+Min.
+Credits
+through
+Course
+work/Lab
+Course
+/Mini-
+Project
+Credits
+through
+Comprehensive
+Examination
+Credits through
+State of
+Art
+Seminar
+Min Credits
+through
+Research
+Credits
+through
+Open
+Seminar
+Min.
+Duration
+(Full Time)
+in
+Semesters
+Min
+Residence
+Period in
+Semesters
+(Full Time)
+Maxim um
+Duration in
+Semesters
+for
+Full Time /
+Part
+Time
+Engine
+erring
+M.Tech /M.E
+80
+16
+8
+8
+48
+8
+6
+4
+12 / 14
+B.Tech. with
+Research or
+equivalent
+100
+24
+8
+8
+60
+8
+8
+B.Tech/
+MCA/M.Sc.
+120
+32
+8
+8
+72
+8
+8
+Manage
+ment
+MBA/MMS
+80
+16
+8
+8
+48
+8
+6
+4
+12 / 14
+B.Tech. with
+Research or
+equivalent
+100
+24
+8
+8
+60
+8
+8
+B.Tech/
+M.Sc./
+MA/M.Com./C.A.
+120
+32
+8
+8
+72
+8
+8
+Science
+/HSS
+M.Sc./MA/
+M.Com./MBA/M.Te
+ch /MCA
+80
+16
+8
+8
+48
+8
+6
+4
+12 / 14
+B.Tech.
+with
+Research
+or
+equivalent
+100
+24
+8
+8
+60
+8
+8
+B.Tech
+120
+32
+8
+8
+72
+8
+8
+
+Notes:
+1.
+Minimum 12/20/28 credits should be earned through Theory Course work out of 16/24/32
+credits (as per table above in the column 4).
+2.
+The thesis performance in each semester shall be of maximum 12 credits.
+3.
+The theory Course and Laboratory/ Mini-project shall be considered as Course Work of four
+credits each. The Mini Project shall be evaluated by the SRC (DP-22). On the
+recommendation of the Supervisor(s), the Department may prescribe, with prior approval of
+the Chairperson SDPC, additional credits of Courses/Thesis work, over and above the
+minimum specified in the Table 2.
+4.
+The student shall normally undertake course work of MNNIT Allahabad before the start of
+the semester. If any relevant course is not running in the Institute in odd/even semester, He/
+She may complete course work under special circumstances through SWAYAM/ MOOCS/
+any other online mode of instruction by MNNIT on advice of the supervisors and
+recommendation by the Head of the concerned Department. Further, if any relevant course
+is not running in the Institute in odd/even semester, He/ She may complete course work
+under special circumstances from any other institution of repute. Evaluation process of these
+courses will be made as per guidelines formulated by Dean (Academic). The student may
+be allowed to undertake online courses up to maximum 25% of course work credits.
+
+================================================================================
+PAGE 24
+================================================================================
+
+16
+
+The SDPC on the recommendation of DDPC shall decide on the matters pertaining to
+credits, duration and normalization of marks etc. of the online course.
+5.
+Part time students shall be required to be present on the campus for physical registration,
+course work (as far as possible), examinations, thesis performance presentation at the end
+of every semester till submission of the thesis.
+7.2
+Ph. D. Credit Award Distributions
+1.
+All the Ph. D. students shall be registered in every semester for minimum 8 credits
+and maximum of 20 credits.
+2.
+Credit for thesis performance/ Comprehensive examination/State of the Art/Open
+Seminar shall be submitted in the combination of S (for satisfactory) or X (for unsatisfactory),
+where one S/X is awarded for 4 credits.
+3.
+The performance credit shall be assigned by SRC in the prescribed format (Form:
+DP-03) and the same shall be forwarded to Dean (Academic) through Convener DDPC and
+Head of the department for recording the academic performance of the student.
+4.
+The credit for course work shall be awarded and submitted by respective course
+coordinator within the prescribed time limit for grade submission at the end of each semester.
+7.3
+Extension of Programme
+No student, who has completed the prescribed maximum duration in the Programme, shall
+be allowed to register in the subsequent Semester, unless he/she has been granted
+extension of the Programme by the Dean (Academic) on the recommendations of the
+supervisor, DDPC and SDPC.
+7.4
+Audit Courses
+The students are permitted to take audit Courses if proposed by Supervisor through
+Convener DDPC. Such Courses will have grade S (for Satisfactory) and X (for
+Unsatisfactory).
+7.5
+Grading System
+7.5.1
+Grade and Grade Point
+1.
+A student shall be awarded a letter grade in each Course in which he/she is
+registered for, indicating his/her overall performance in that Course. There are nine Letter
+Grades: A+, A, B+, B, C, D, F, N and ABS. The correspondence between grades and points
+(on a 10-point scale)/rating is given below:
+Letter Grade
+A+
+A
+B+
+B
+C
+D
+F/N/ABS
+Grade Points
+10
+9
+8
+7
+6
+4
+0
+
+================================================================================
+PAGE 25
+================================================================================
+
+17
+
+A student, who is not allowed to appear in the end-semester examination for any reason,
+such as shortage of attendance / disciplinary action / or alike, shall be awarded N grade. A
+student, who could not appear in end semester Examination for reasons other than Shortage
+of Attendance/ Disciplinary Action/ or alike shall be awarded ABS grade.
+In order to have appropriate evaluation correspondence with online courses / courses from
+other institutions, etc., it is desirable that A+ may be awarded to the students securing more
+than or equal to 85% marks and a student securing less than 30% marks may be awarded
+grade F.
+In addition, there are three Letter Grades, viz. S, X, and W which stand for Satisfactory,
+Unsatisfactory, and Withheld temporarily, respectively.
+2.
+The System of grading to be followed shall be Relative Grading System. The HoD
+shall ensure that the course instructor/coordinator uses normal distribution curve to award,
+ensuring that majority of the students fall in the middle range of the grades.
+3.
+A student, who does not appear/is not allowed to appear in the End-semester
+Examination for any reason, shall be awarded W grade irrespective of his/her performance
+in the Mid- Semester Examination and teacher assessment and shall be treated as ACD.
+Such student shall be required to clear his/her W grade by appearing in the subsequent
+Grade Improvement examination.
+4.
+An ACD student shall be allowed to clear his/her ACD by repeating the course in
+which he/she has attained F/N/ABS/D/C grade; or may be advised to replace the course with
+another course on the recommendation of the Supervisor and DDPC, subject to the following
+conditions:
+•
+His/her CPI is less than the prescribed minimum and the student is allowed to
+continue in the Programme (as per provisions of section 8.1), and
+•
+The SPI and CPI shall be calculated after replacing the old grades by better of the
+old and new grades obtained by such a student to remove Academic Deficiency. All the
+Courses attended by the student shall appear on the transcript.
+5.
+The grade S or X shall be awarded for Thesis performance credits as follows:
+At the end of the Semester, the Student Research Committee (SRC) shall assess the
+student's progress towards the Thesis work during the Semester and shall award the grade
+S for each set of 4 credits if the work is satisfactory and grade X for every unsatisfactory 4
+credits.
+7.5.2
+Semester Performance Index (SPI)
+The Semester Performance Index (SPI) shall be the weighted average of the Grade Points
+earned by a student in all the Courses credited and describes his/her Academic Performance
+in a Semester. If the grade points associated with the letter grades awarded to a student are
+g1,g2,g3......... gmin m Courses and the corresponding weights (or credits of the Courses) are
+w1 ,w2,w3,……,wm,the SPI is given by
+
+================================================================================
+PAGE 26
+================================================================================
+
+18
+
+S and X grades shall not be considered in the computation of the SPI.
+
+7.5.3
+Cumulative Performance Index (CPI)
+The Cumulative Performance Index (CPI) indicates the overall Academic Performance of a
+student in all the Courses registered up to and including the latest completed Semester term.
+It shall be computed in the same manner as the SPI, considering all the Courses (say, n),
+and is given by
+
+Whenever a student is permitted to repeat or substitute a Course, the new letter Grade
+replaces the better of the old and new letter Grades in the computation of the CPI, but, both
+the Grades appear on his/her Grade Report.
+
+7.5.4 Grading Online Courses
+The grades equivalence of the marks obtained (as stated in the marks sheet of the student)
+by a student in a course work through online courses / MOOCs / courses offered by other
+Institutions under MoU shall be adopted as given below.
+Equivalent Grades
+A+
+A
+B+
+B
+C
+D
+F
+% Marks obtained
+(as per the marks
+sheet of the student)
+by a student   in a
+course work, through
+MOOCs
+≥85
+84-
+75
+74-
+65
+64-
+55
+54-
+45
+44-
+40
+<40
+
+The SDPC, on the basis on recommendation of DDPC  shall decide on other matter
+pertaining to credits, duration, normalization of marks etc. of the online course.
+
+================================================================================
+PAGE 27
+================================================================================
+
+19
+
+7.5.5
+Grade Report
+A copy of the Grade Report shall be issued to each student at the end of the Semester. A
+duplicate copy, if required, can be obtained on payment of the prescribed fee.
+7.5.6
+Transcript
+A Transcript contains the record of the Grades obtained in each and all Courses, Project and
+Seminar registered by a student during his/her entire Programme. It will be provided on
+request and on payment of prescribed fee.
+7.5.7
+Withholding of Grade Report
+The grade report of a student shall be withheld if he/she has not paid his/her dues, or if there
+is a case of indiscipline pending against him/her.
+8. ACADEMIC PERFORMANCE REQUIREMENTS
+1.
+The minimum SPI/CPI requirements for continuing in the programme is equal to 6.5
+2.
+A student who secures SPI less than 6.5 in the first semester shall be allowed to
+register for second semester without stipend/fellowship. These students shall be categorized
+as “Academically deficient (ACD)”. Such student shall be advised by the supervisor to clear
+the same in Grade Improvement or makeup examination (if any).
+3.
+A student shall be allowed to register in the third semester and subsequent semester
+if following conditions are met by him/her.
+(a)
+His/Her CPI is equal to or greater than 6.5 at the end of academic session.
+(b)
+He/She does not have W / ABS or F grade in any registered course.
+(c)
+He/She has not accumulated 10X since first registration or 4X in two consecutive
+
+semesters.
+A student who does not fulfil any/all of the above conditions shall also be categorized as
+“Academically deficient” (ACD).
+4.
+If ACD is due to 3 (a) and/ or 3 (b), the student shall be allowed to clear the same in
+Grade Improvement examination / make up examination (if any).
+5.
+A warning shall be issued for every X by convener DDPC to the student.
+6.
+If a student secures more than 4X the Head of Department shall issue warning letter
+and termination letter in case of 8.3.
+
+8.1
+Termination from the Programme
+(1)
+A student shall not be allowed to continue in the programme if:
+(a)
+His/Her CPI is less than 6.5 at the end of academic session. OR
+(b)
+He/She has W or F/ ABS grade in any registered course. OR
+
+================================================================================
+PAGE 28
+================================================================================
+
+20
+
+(c)
+He/She has accumulated 10X since first registration or 4X in two consecutive
+semesters. OR
+(d)
+He/She is not able to earn prescribed minimum credits in the Maximum duration as
+specified in Section 7.1.
+(2)
+The Head shall issue termination letter in case of 8.1(1)
+
+8.2
+Appeal against Termination
+A student, whose programme is terminated on account of inadequate Academic
+Performance or otherwise, may appeal to the Chairperson Senate for reconsideration
+through DDPC and SDPC. Such student shall make appeal within 90 days. While making
+the appeal against termination, he/she shall give reasons for his/her poor Academic
+Performance and/or to explain why his/her position merits reconsideration. The Senate shall
+take a final decision after considering all the available inputs. The Senate shall not entertain
+any further appeal for review unless substantial additional information is brought to its notice.
+The Senate shall not entertain the appeal more than twice from the same student.
+
+9. COMPREHENSIVE EXAMINATION
+1.
+Students registered in the Ph.D Programme must pass a Comprehensive
+Examination with ‘SS’ grades designed to test the overall comprehension of the student in
+various subjects. A student can appear in the Comprehensive Examination only after he/she
+has completed the Course Work requirement satisfying the minimum specified CPI
+requirement.
+2.
+Students after the completion of the Course Work shall appear in the Comprehensive
+Examination in the beginning of subsequent Semester but not later than completion of that
+particular semester.
+3.
+In case a student fails to clear Comprehensive Examination within the specified
+period, extension of three months can be given by the Head of the concerned department
+on the recommendation of supervisor/ Convener DDPC.
+4.
+The Examination shall be in oral form but may be supplemented with a written part if
+the supervisor (s) so desire.
+5.
+The Comprehensive Examination shall be conducted by a board as per Clause 12.3
+(Form: DP-08). A student shall be considered to have passed the comprehensive
+examination if he/she attains SS. The report of the Comprehensive Examination must be
+sent to the Chairperson SDPC within three working days from the date of Examination in the
+prescribed format (Form: DP-09).
+
+================================================================================
+PAGE 29
+================================================================================
+
+21
+
+6.
+If a student fails to clear the Comprehensive Examination in his/her first attempt, a
+second Comprehensive Examination shall be conducted. A student shall not be allowed to
+appear in the Comprehensive Examination more than twice. In case the candidate fails to
+clear Comprehensive Examination in the second attempt, he/she shall be terminated from
+the Programme. The Head of the Department shall issue the letter in this regard. All such
+cases shall be brought to the notice of the Senate.
+10.
+STATE-OF-THE-ART SEMINAR
+(i)
+Every Ph.D. student shall be required to present a seminar in the Department
+covering the State-of-the-Art in the proposed area of research. A detailed research
+proposal (two copies) shall be submitted by the candidate at the time of delivering the State-
+of-the- Art Seminar. The State-of-the-Art Seminar shall be delivered within six months from
+the date of successful completion of the Comprehensive Examination. The supervisor shall
+notify the date of seminar at least five working days in advance.
+(ii)
+If a student is unable to deliver State-of-the-Art Seminar within this period or has
+failed to deliver the seminar satisfactorily, he/she may be given an extension of maximum
+six months by the Head of the concerned department on recommendation of the supervisor
+and Convener DDPC with valid reasons, failing which the registration shall automatically
+stand cancelled. Head of the Department shall issue the termination letter.
+(iii)
+State-of-the-Art Seminar along with research proposal shall be evaluated by Student
+Research Committee (SRC). A report of satisfactory completion of this requirement shall be
+communicated to Chairperson SDPC in the prescribed format (Form: DP-10) along with the
+research proposal duly signed by the candidate and the supervisor.
+11.
+OPEN SEMINAR
+Before submission of the Thesis, a Ph.D student shall deliver an Open Seminar before the
+SRC which shall be open to the Faculty and students. The student shall present his/her
+research work to obtain comments and criticism, which shall be incorporated in his/her
+Thesis to the satisfaction of the Supervisor(s). A notice of the Seminar must be displayed at
+least five working days in advance by the supervisor. A Thesis can be submitted only after
+the satisfactory fulfilment of this requirement. The candidate shall inform the Convener
+DDPC through the Supervisor for his/her readiness to deliver the Open Seminar. Student
+Research Committee (SRC) shall evaluate and submit report of the Open Seminar in the
+prescribed format (Form: DP-11). In case a candidate fails to deliver the Open Seminar
+satisfactorily, he/she may be given another opportunity by Chairperson SDPC on the
+recommendation of the supervisor and Convener DDPC but candidate has to deliver the
+Open Seminar satisfactorily within next two semesters. A student shall be considered having
+satisfactorily presented open seminar if he/she obtains ‘SS’ grades.
+
+================================================================================
+PAGE 30
+================================================================================
+
+22
+
+A student is eligible to deliver the Open Seminar if he/she fulfills the following:
+a.
+Passed all the prescribed courses and has attained the minimum required CPI with
+no course having N / F grade.
+b.
+Passed the Comprehensive Examination and State of the Art Seminar.
+c.
+Has earned minimum credits as specified in section 7.1.
+
+12.
+APPOINTMENT OF THESIS SUPERVISOR(S) AND CONSTITUTION OF VARIOUS
+COMMITTEES BOARDS
+12.1
+Appointment of Thesis Supervisor(s)
+1.
+Thesis Supervisor(s) of a student shall be appointed from amongst the Faculty
+Members of MNNIT Allahabad. A faculty with earned Ph.D. shall be eligible to be a
+supervisor.
+2.
+In order to ensure equitable allocation of Ph.D students among faculty of the
+department a roster shall be used in a transparent and uniform manner.
+3.
+One of the supervisors must be from the department in which the student has been
+admitted.
+4.
+The candidate shall propose the list of faculty as preferred supervisor(s) in her/his
+chosen area of research in the prescribed format (Form: DP-12(a)) along with consent of the
+faculty/faculties on Form-12 (b) within two weeks from date of first registration. Thereafter,
+the DDPC shall meet within one week to consider duly filled in Form DP-12(a) and Form-12
+(b) to forward the recommended Form(s) along with minutes of the meeting, to the
+Chairperson SDPC for approval.
+5.
+A student shall not have more than two Supervisors, including external Supervisor,
+at any time.
+6.
+A student can have a Co-Supervisor from outside the Institute (within or outside the
+country) in addition to a Supervisor from the Institute on the recommendation of the DDPC
+and the SDPC and with approval of the Dean (Academic). A copy of signed C.V. of the
+proposed supervisor and No Objection Certificate from his/her Institute must be submitted
+for consideration of DDPC and SDPC.
+7.
+Any change/addition in the existing Supervisor, if desired, shall be routed through
+DDPC. Candidate shall fill up the prescribed form (Form: DP-13) to propose the new
+Supervisor(s), with no objection from existing Supervisor(s) and consent of the proposed
+Supervisor(s) routed through DDPC. The change/addition shall be decided by the Dean
+(Academic) on the recommendation of the Chairperson SDPC. In case the new supervisor
+is from outside the Institute the modalities as referred in point 4 above shall be applicable.
+
+================================================================================
+PAGE 31
+================================================================================
+
+23
+
+8.
+In case of change/addition of Supervisor(s), the Open Seminar can be held only after
+one year from the date of approval of such change.
+9.
+If a Solo Supervisor is proceeding on leave for more than one year, he/she in
+consultation with the student shall propose an additional supervisor as per points 5& 6
+above. Further, if the candidate has already presented Open Seminar satisfactorily and the
+Supervisor proceeds on leave, the Convener DDPC shall take care of the formalities of thesis
+submission and evaluation, such as providing the list of Examiners, conducting the Oral
+Examination, etc. in consultation with the Thesis Supervisor.
+10.
+In case a solo Supervisor resigns/retires or otherwise ceases to be a Faculty Member
+of the Institute and if the candidate has delivered Open Seminar, the modalities as in point
+9 shall be applicable. In case there are two supervisors from the Institute, and one of the
+supervisors proceeds on leave for more than one year and/or retires/ ceases to be a faculty
+of the Institute, such faculty shall not continue to be the supervisor.
+11.
+A Professor/Associate Professor/ Assistant Professor shall not supervise more than
+six scholars from code 11 at a given point in time, the upper limit shall exclude the students
+who have submitted the Thesis.
+12.
+Faculty Member having less than two years’ service left before retirement shall not
+be allotted new Ph.D. student.
+13.
+In case a Faculty Member is suspended /debarred for indulging in lowering the
+prestige of the Institute, in any manner, he or she shall cease to be a Thesis Supervisor.
+12.2
+Constitution and Appointment of Student Research Committee (SRC)
+Student Research Committee (SRC) shall be formed within one month after the allotment
+of supervisor (s) in the prescribed format (Form: DP-02). SRC shall consist of Supervisor(s),
+one faculty member from the same Department and one faculty member from any other
+Department, working in the same area or related area of research. Supervisor shall be the
+Chairperson of the Committee.
+In case a particular member of SRC is not available during an examination, the supervisor
+may seek permission to replace him/her with another Faculty Member from Chairperson
+SDPC through Convener DDPC and Head of the Department. In case of any dispute, the
+matter may be decided by Chairperson SDPC. Such substitution shall be applicable for that
+particular examination only. In case a particular member of SRC is on long leave of more
+than one year or has left the Institute, the supervisor shall propose a new SRC.
+
+================================================================================
+PAGE 32
+================================================================================
+
+24
+
+12.3 Constitution of Comprehensive Examination Board
+The Comprehensive Examination Board shall consist of minimum of four Faculty Members
+including Supervisor(s) (all having earned Ph.D. Degree) with at least one from the
+concerned department (other than supervisor) and at least one from other department (other
+than supervisor), preferably those who have taught the courses. Constitution of the Board
+shall be proposed by the Thesis Supervisor(s) and forwarded by the Convener DDPC and
+Head of the Department, to the Chairperson SDPC in the prescribed format (Form: DP- 08),
+for approval. The Thesis Supervisor of the student shall be the Chairperson of the Board. In
+case the Thesis Supervisor is on long leave, Clause 12.1(7) shall apply.
+12.4 Constitution of Thesis Evaluation Board
+The Thesis Evaluation Board shall consist of two Examiners from outside the Institute, of
+which at least one must be from India. The Thesis Supervisor(s) shall be member of the
+evaluation Board. The Board shall be approved by the Dean (Academic).
+1.
+The Thesis Supervisor(s) shall propose a list of Examiners consisting of minimum of
+six experts including at least two from outside the country from Institutes of repute in
+prescribed format (Form: DP-15). A brief profile of the proposed examiners may be attached
+with Form DP-15 for consideration of Chairperson SDPC and Dean (Academic). This list
+shall be forwarded by the Convener DDPC and HoD to Chairperson SDPC at the time of
+submission of the Thesis along with synopsis in soft copy prepared according to the
+prescribed guidelines GL-1. The Dean (Academic) in consultation with the Chairperson
+SDPC shall select the members of the Thesis Evaluation Board from this list. If considered
+necessary, the Dean(Academic) may ask for additional names of experts to be submitted or
+add additional names of experts in consultation with Chairperson SDPC.
+2.
+In case Chairperson SDPC is the Supervisor of the student concerned, Dean
+(Academic) may consult Chairperson SMPC to complete the process of approval of the
+Thesis Evaluation Board.
+3.
+If Chairperson Senate and Dean (Academic) both are Supervisors, then Chairperson
+SDPC shall approve the Evaluation Board in consultation with Chairperson SMPC.
+4.
+The names of the members of the Thesis Evaluation Board shall be kept confidential
+till successful completion of the Thesis Evaluation.
+12.5
+Constitution of Ph.D. Oral Board
+On completion of Ph.D. Thesis evaluation (as detailed in section 13.2), the Chairperson
+SDPC shall send to the Thesis Supervisor(s), the names of the members who are from
+outside the Institute but are from within the country so that one of these examiners can be
+included in the proposed list of the Members of the Oral Board.
+
+================================================================================
+PAGE 33
+================================================================================
+
+25
+
+The oral board shall consist of the following,
+(i)
+One Faculty from the Department, from SRC.
+(ii)
+One Faculty from outside the Department, from SRC.
+(iii)
+One examiner from among the members of the Thesis Evaluation Board from within
+the country but outside the Institute.
+(iv)
+Thesis Supervisor(s)
+If members as stated on points (i) and (ii) are not from SRC, proper justification may be
+enclosed along with Form DP-16.
+The Thesis Supervisor(s) shall propose the constitution of the Oral Board in prescribed
+format (Form: DP-16), and Convener DDPC and HoD shall forward the same to the
+Chairperson SDPC, who shall recommend it to the Dean (Academic) for approval.
+12.6.   Guidelines for Institute Faculty for Supervising / Co-supervising students of other
+Institute / University
+1. In the Guidelines, Unless the Context otherwise requires,
+a) “Institute” means Motilal Nehru National Institute of Technology Allahabad (MNNIT
+Allahabad).
+b) “Parent Institute / University” means the Institute in which the Research Scholar is
+enrolled for the degree program.
+c) “Supervisior / Co-supervisor” means Regular Faculty of MNNIT Allahabad.
+d) “Research Scholars” means Research Scholars having enrollment in other Institute /
+University.
+2. The Faculty of MNNIT Allahabad who wish to Supervise / Co-supervise students of other
+Institute / University shall abide the following:
+a. Supervisor / Co-Supervisor shall not Supervise/Co-supervise more than two
+Research Scholars. Preferably, these two Research Scholars shall be from different
+Parent Institute/ University.
+b. The Research Scholar need to be enrolled in any of the following category of
+Institutions.
+
+Category –I Institutions:
+ IITs / NITs / IISc / IISERs / IIMs / IIITs / IIEST Shibpur.
+
+Category-II Institutions:
+ Other Centrally funded Technical Institutions.
+ State funded Technical Institutions.
+
+================================================================================
+PAGE 34
+================================================================================
+
+26
+
+
+Category-III Institutions: Any other Institutions appearing within top 100 rank of NIRF
+ranking published by MHRD in last two years.
+
+c) The Research Scholar shall submit Rs. 10,000/- per semester in Institute as
+supervision fee in lieu of facilitating the Institute faculty as his / her Supervisor / Co-
+Supervisor. This fee will include fee for utilization of research facilities such as labs,
+library, Software’s etc. to the Research Scholars on Saturdays only.
+d) Charges mentioned at point No. 2 (c) would be raised by 20% every two year.
+
+e) Supervisor / Co-Supervisor shall preferably facilitate the Research Scholar on
+Saturdays.
+
+f) The registration record of these Research Scholars would be maintained at the Office
+of Dean (Academic) and concerned departments.
+
+g) Supervisor/ Co-Supervisor would be entitled for all the IPR points generated through
+this activity.
+
+h) In case of Research Scholar belonging to a foreign university then a separate MoU
+need to be signed with the said University.
+In case the Supervisor / Co-Supervisor is required to travel to Parent Institute, then that shall
+be considered under Special Casual leave. The Institute shall not borne any expense
+incurred by the Supervisor/ Co-Supervisor in this regard.
+13.
+THESIS SUBMISSION, EVALUATION AND EXAMINATION
+13.1
+Ph.D Thesis Submission
+Ph.D. Thesis can be submitted only after satisfactory completion of the Open Seminar,
+satisfactory report from Intellectual Property Rights (IPR) Cell (DP-14), and preferably one
+paper in SCI/SCIE journals or two papers in Scopus journals accepted / published or Patent
+applied /published or Technology Transferred from the thesis and submission of no dues
+certificate. A soft copy of the Ph.D Thesis (prepared according to the prescribed guidelines:
+GL-1) in CD (as approved by IPR Cell) shall be submitted to the Office of the Dean
+(Academic).
+The student shall be required to submit the Thesis within nine months from the date of Open
+Seminar. If the candidate fails to submit the Thesis within the specified period, then an
+extension of six months can be given by Chairperson SDPC on the recommendation of
+Supervisor and Convener DDPC. If the candidate fails to submit the same within the
+
+================================================================================
+PAGE 35
+================================================================================
+
+27
+
+extended period, then he/she has to deliver Open Seminar again with approval of the
+Chairperson SDPC.
+ Plagiarism and Undertaking
+Plagiarism is a serious offence and the institute is committed to protecting IPR of everyone.
+To ensure this the IPR Cell of the Institute is entrusted with the task of checking similarity
+through software. The upper limit of similarity index is less than 15% for submission of Ph.D.
+Thesis. The IPR Cell issues a certificate as per Form: DP-14 which is a pre-condition for
+submission of Thesis. Duly signed DP-14 form shall be attached with the thesis as per
+GL-1.
+13.2
+Ph.D. Thesis Evaluation
+1.
+After submission of the thesis and constitution of Thesis Evaluation Board, Dean
+(Academic) shall process the Evaluation of thesis. Dean (Academic) shall be responsible for
+seeking consent of the approved Examiners. In case the Examiner refuses or no response
+is received from the Examiner within four weeks (with a reminder being sent after two weeks),
+steps shall be taken to appoint another Examiner.
+2.
+After receiving the consent of Examiners, the Dean (Academic) shall send the Thesis
+for evaluation to the Examiners.
+3.
+Examiners shall place their report in any of the following categories in the prescribed
+format (Form: DP-17):
+Category I: The Thesis is acceptable in the present form for the award of the Ph.D. Degree.
+ Category II: The Thesis is acceptable and the corrections, modifications and improvements
+suggested by me would be incorporated in the Thesis and presented at the time of oral
+examination.
+Category III: The Thesis needs technical improvement/modifications, which must be carried out to
+my satisfaction before I recommend the Thesis for acceptance.
+Category IV: The Thesis is rejected.
+4.
+After receiving the reports of all the Examiners, copies of the categorized reports
+(without the identity of the Examiners) shall be sent to the Thesis Supervisor(s) and the Head
+of the Department, by the Chairperson SDPC. The Supervisor(s) shall ensure and certify
+that all the suggestions (if any) have been incorporated.
+5.
+If the reports are either in Category I or Category II then Chairperson SDPC shall
+intimate the Supervisor about the name(s) of Indian Examiner(s) and also request to
+constitute the Oral Board as per Para 12.5. The Supervisor shall send the list of suggested
+Examiners for Ph.D Oral Board along with the response of student on the comments of
+
+================================================================================
+PAGE 36
+================================================================================
+
+28
+
+Examiner(s), if any, to Chairperson SDPC who shall recommend it to the Dean (Academic)
+for approval.
+6.
+If one/or more than one Examiner(s) gives his/her report in Category III then
+clarification/ modifications suggested by the Examiner shall be done by the candidate in
+consultation with Supervisor(s). The Supervisor shall send the corrected Thesis along with
+the responses and explanatory notes to Chairperson SDPC who shall advice the Dean
+(Academic) to send the corrected Thesis along with the responses and explanatory notes to
+the same Examiner with a request to respond within six weeks. If no response from the
+Examiner is received within six weeks time or the Examiner gives his/her report again in
+Category III then the matter shall be referred to Chairperson Senate for further course of
+action.
+7.
+If one of the Examiner places his/her report in Category IV the matter shall be referred
+to Chairperson Senate for the further course of action. If the reports received from more than
+one Examiner are in Category IV then the Thesis shall be rejected and the candidature of
+the student shall stand automatically terminated.
+8.
+In case, Chairperson SDPC is the Supervisor, then the processing to be done by
+Chairperson SDPC shall be done by Dean Academic.
+9.
+In case, Dean (Academic) is the Supervisor, then the processing to be done by Dean
+(Academic) shall be done by Chairperson SDPC.
+10.
+In case, Chairperson Senate and Dean (Academic) both are the Thesis Supervisors,
+then the processing to be done by them shall be done by the Chairperson SDPC.
+11.
+In case, Chairperson Senate and Chairperson SDPC both are the Thesis
+Supervisors, then the processing to be done by them shall be done by Dean Academic.
+12.
+In case, Chairperson SDPC and Dean (Academic) both are the Thesis Supervisors,
+then the processing to be done by them shall be done by Chairperson SMPC.
+13.3
+Ph. D. Oral Examination
+1.
+The candidate shall submit the requisite number of hard bound copies of the revised
+Thesis after incorporating all the modifications suggested by the Examiner(s) to the
+Supervisor, as per guidelines in GL-1.
+2.
+The Supervisor shall be the Chairperson of the Oral Board and shall fix the date of
+the Oral Examination in consultation with the members of the Oral Board and intimate the
+date to the Dean (Academic) for official communication to all the Examiners.
+
+================================================================================
+PAGE 37
+================================================================================
+
+29
+
+3.
+If the external Examiner of the Oral Board communicates his/her inability to be
+present in advance the Supervisor shall propose a revised Oral Board.
+4.
+If external examiner fails to be present on the specified date and time, the Dean
+(Academic) shall decide the further Course of action on recommendation of the Supervisor
+and Chairperson SDPC.
+5.
+The Oral Board shall
+(i)
+examine that necessary modifications, if any, suggested by the Thesis Examiners
+have been duly incorporated,
+(ii)
+judge if the presentation of the work by the student and the answers to the questions
+asked have been satisfactorily replied,
+(iii)
+submit a report of the Oral Examination in the prescribed format (Form: DP-18),
+which shall be communicated by the Supervisor(s)/Thesis Coordinator to the Chairperson
+SDPC through the Convener DDPC and Head of the Department.
+6.
+The Chairperson SDPC shall recommend the report of the Oral Examination in the
+prescribed format (Form: DP-18) to the Chairperson Senate for approval. The approval
+accorded by the Chairperson Senate shall be reported to the Senate for the award of Ph.D
+Degree to the candidate in forthcoming Convocation.
+14.
+DEGREE REQUIREMENTS & WITHDRAWL
+14.1    Award of the Degree
+A student shall be deemed to have completed the requirements for award of Degree, if
+he/she has:
+1.
+satisfied the minimum academic and residence requirements,
+2.
+satisfied all the requirements specified by the Senate and the Ordinances (Sections
+7 to 13).
+3.
+paid all the dues of the Institute and has no pending case of indiscipline.
+14.2
+Withdrawal of the Degree
+Under extremely exceptional circumstances, where gross violation of the graduation
+requirements is detected at a later stage, the Senate may recommend to the Board of
+Governors for the withdrawal of a Degree already awarded.
+15.
+STIPENDS/FELLOWSHIPS, SCHOLARSHIPS, PRIZES AND MEDALS
+The Senate shall determine the general policy regarding recommendations for the award of
+the different types of scholarships, stipends/fellowships, medals and prizes to the students
+
+================================================================================
+PAGE 38
+================================================================================
+
+30
+
+of the institute. The detailed norms and conditions for the award of various scholarships,
+prizes and medals established by the institute or through endowments/grants received shall
+be framed by the Senate from time to time and approved by the Board of Governor.
+15.1.
+STIPEND/FELLOWSHIPS
+1.
+Stipendiary Ph.D. students shall receive financial assistance in the form of
+fellowship/stipend at the approved rates and guidelines as notified by Government from time
+to time. These fellowship/stipends are liable to be withdrawn partially or wholly, in case of
+misconduct, deliberate concealment of material, facts and/or giving false information, or
+inadequate academic performance.
+2.
+An academically deficient student (student with unsatisfactory performance) [Clause
+8] shall not be entitled to receive fellowship/ stipend. The same shall be restored only after
+the student has cleared academic deficiency, as per clause 8 . If ACD is due to not fulfilment
+of clause 8, then fellowship shall be restored after successful presentation of thesis
+performance in upcoming semester(s) without further addition of X. Stipendiary students will
+be entitled to get fellowship/Stipend for up to a maximum period specified by the funding
+agency.
+3.
+A stipendiary Ph.D. student leaving the Institute on his/her own accord without
+completing the programme of study may be required to refund the amount of
+fellowship/stipend, received during the academic session in which he/she leaves the
+programme. Dean Students Welfare shall initiate the process after receiving the information
+from Dean Academic and Head of the Department.
+15.2
+Prizes, Medals, and Scholarships
+To promote and recognize academic excellence, constructive leadership and overall growth
+and development of students, number of Scholarships, Prizes and Medals may be
+established by the Institute on its own or through endowments/grants made by donors. Such
+prizes, medals, scholarships shall be considered by the Senate and approved by the Board
+of Governors.
+16.
+CONDUCT AND DISCIPLINE
+16.1
+Code of Conduct
+Each student shall conduct himself/herself in a manner befitting his/her association with the
+Institute. He/she is expected not to indulge in any activity, which is likely to bring down the
+prestige of the Institute. He/She shall show due respect and courtesy to the Faculty
+Members, Officers and Employees of the Institute and to fellow students. Due attention and
+courtesy shall be paid to visitors to the Institute and residents of the Campus. Lack of
+courtesy and decorum, unbecoming conduct (both within and outside the Institute), wilful
+
+================================================================================
+PAGE 39
+================================================================================
+
+31
+
+damage and/or removal of Institute property or belongings of fellow students, disturbing
+others in their studies, adoption of unfair means during examinations, breach of rules and
+regulations of the Institute, noisy and unseemly behavior and similar other undesirable
+activities shall constitute violation of the Code of Conduct for students.
+Ragging in any form is strictly prohibited and considered a serious criminal offence and
+violation of the code of conduct. Involvement of a student in ragging and/or any of the above
+mentioned activities and/or any other act of indiscipline shall invite disciplinary action and
+may lead to his/ her expulsion from the Institute.
+16.2
+Disciplinary Actions and Related Matter
+Violation of the Code of Conduct shall invite disciplinary action which may include
+punishment such as Reprimand, Disciplinary Probation, Fine, and Debarring from
+Examinations, Withdrawal of Scholarship, debarring from Placement Services, Withholding
+of Grades and/or Degrees, Cancellation of Registration and expulsion from the Hostel and/or
+Institute. An act of serious Violation of the Code of Conduct may be reported to Dean
+(Student Welfare) through Proctorial Board for necessary disciplinary action on approval of
+the Director.
+For indiscipline of a student in a class, the course instructor may debar him/her for a few
+subsequent classes for which he/she shall not be eligible to get relaxation in attendance or
+favorable consideration in mercy appeal.
+16.3
+Unfair Means (UFM)
+Unfair means shall comprise of following:
+(i)
+Possession of mobile phones, Smart phones, smart watches, any device capable of
+storing information and any relevant material.
+(ii)
+Copying from the papers / mobile electronic equipment, or materials in the
+possession of the student.
+(iii)
+Copying from the answer book of other students and/or consulting fellow examinees.
+(iv)
+Disturbing the smooth conduct of Examination.
+(v)
+Misbehavior with the invigilator
+(vi)
+Act unbecoming of an examinee of the Institute.
+16.3.1 Constitution of Unfair Means Committee
+The Unfair means committee shall consist of:
+(i)
+Dean (Academic)
+(ii)
+Dean (Student Welfare)
+(iii)
+Chief Proctor
+
+================================================================================
+PAGE 40
+================================================================================
+
+32
+
+(iv)
+Head of the Concerned Department
+(v)
+Senate Member to be nominated by the Chairperson Senate
+16.3.2 The procedure to deal with the cases of Unfair Means (UFM):
+1.
+Any use of UFM detected by Course Instructor/Invigilators/Members of Observer
+Committee/Flying squad shall be reported to Dean (Academic) in Form: DP-19.
+2.
+After the student is caught using UFM his/her answer book(s) along with question
+paper and material used in UFM will be kept in a separate envelope and the student shall
+be issued a fresh answer book and question paper on which he/she may continue for the
+remaining period of examination. However, the mobile phone or other electronic storage
+devices shall be returned to the student after a snap shot of relevant material and the duly
+filled Form DP- 19 along with the answer book(s) and question paper shall be kept in an
+envelope.
+3.
+Dean (Academic) shall send the sealed envelope to Head of the Department, who
+shall issue a show cause notice to the student seeking his/her clarification on the charges
+within three days of the reporting. The clarification of the student may be obtained within
+three days and the same may be given to Course instructor for getting his/her comments.
+4.
+The Course Instructor shall present the case to the Unfair Means Committee.
+5.
+Unfair Means Committee shall meet after six days of the completion of Semester
+Examination. The committee shall give opportunity to the student concerned and
+recommend the award of punishment. The recommendation of the punishment may be made
+on the basis of following:
+I.
+Mere possession of any electronic storage device as mentioned above shall amount
+to usage of Unfair Means, hence may result in award of F grade in that subject
+II.
+If the course instructor reports similarity in the materials in the possession of the
+student and content of the course shall also result in award of F grade in that subject and/or
+may be debarred from appearing in the subsequent Grade Improvement examination of that
+particular session.
+III.
+Copying from the answer book of neighbouring student shall be treated on case to
+case basis.
+IV.
+If the student has misbehaved with invigilator the matter may be referred to the
+Proctorial Board.
+6.
+If the decision is not taken by the date of Grade entry the Grades entered shall be
+‘W’ and the result of such student shall not be declared along with other students.
+
+================================================================================
+PAGE 41
+================================================================================
+
+33
+
+7.
+The recommendations of the Unfair Means Committee shall be implemented after
+getting the approval of the Dean (Academic). A student who feels aggrieved with the
+punishment awarded may, however, appeal to the Chairperson Senate stating clearly the
+case and explaining his/her position, seeking reconsideration of the decision.
+
+17.
+WAIVER OF REQUIREMENTS IN SPECIAL CASES
+The procedures and requirements stated in these Ordinances, other than those in section
+3.3 (Eligibility for Admissions) and section 8 (Academic Performance Requirement) may be
+waived off in special circumstances, by the Chairperson Senate on the recommendation of
+the DDPC and SDPC. All such exceptions shall be reported to the Senate.
+
+18.
+AMENDMENTS
+Notwithstanding anything contained in the Ordinance, the Senate of the Motilal Nehru
+National Institute of Technology Allahabad, reserves the right to modify/amend without
+notice, the Curricula, Procedures, Requirements, Examinations, Admissions and Rules
+pertaining to its Doctoral Programmes.
+
+================================================================================
+PAGE 42
+================================================================================
+
+34
+
+Form: DP-01
+(Clause 4.2)
+
+Motilal Nehru National Institute of Technology Allahabad
+ACADEMIC REGISTRATION DETAILS
+
+Name of the Student:……………………….…………………………… Reg. No. …………………………………….
+Department:…………………….…………………………………………………………………………………………
+Date of First Registration:…………………………………………………Semester……………………………………
+Name of Supervisor (s)…………………………………………………………………………………………………….
+Status: Full Time /Part Time
+
+DETAILS OF COURSES/RESEARCH-SEMINAR/MINI-PROJECT/COMPREHENSIVE EXAM. /STATE-OF-
+THE-ART SEMINAR/THESIS PERFORMANCE
+Sl. No.
+Course
+Name with
+Code
+Credit
+Department
+Course
+Coordinator(s)
+1.
+
+2.
+
+3.
+
+4.
+
+(Signature of Student)
+
+Advised by:
+
+ Supervisor(s)
+
+Forwarded by:                                          Convener DDPC                                            Head of Department
+
+Approved by:                                             Chairperson SDPC
+
+================================================================================
+PAGE 43
+================================================================================
+
+35
+
+Form: DP-02
+(Clause 4.3, 12.2)
+Motilal Nehru National Institute of Technology Allahabad
+Student Research Committee (SRC)
+
+Name of the Candidate: ………………………………………………. Registration No. :…………………………….
+Department:…………………………………………………………………………………………………………………
+Date of First Registration: …………………………………………………………………………………………………
+Area of Research:………………………………………………..…………………………………………………………
+Name of the Supervisor(s): ……………………………………………………………………………………………….
+Sl. No.
+Name of Members
+Designation
+Department
+1.
+
+2.
+
+3.
+
+4.
+
+Proposed by:
+Supervisor(s)
+
+Forwarded by:
+Convener-DDPC
+
+       Head of Department
+
+Approved by:
+Chairperson SDPC
+
+================================================================================
+PAGE 44
+================================================================================
+
+36
+
+Form: DP-03
+(Clause 4.3)
+Motilal Nehru National Institute of Technology Allahabad
+Semester Progress Report of the Candidate
+
+Name of the Student:
+………………………………………… Registration No. :………….…………….…………
+Department:…………………………………………………………Date of First Registration:…………..…………….
+Name of the Supervisor(s):………………………………………………………………………………………………...
+Topic of the Presentation………………………………………………………………………………………………...
+
+No. of Courses completed:
+
+                          Total Credits: (Till Previous Semester):
+ (a) Attempted
+
+ (b) Earned
+Comprehensive Examination Passed: Yes/No/Not Applicable
+Date of Comprehensive Examination:…………………………………………………………..……………………
+Date of State-of-the-Art Seminar: ……………………………………………………………….……………………
+Date of Presentation: ……………………………………..……………………… Semester: ………………………
+Progress of the Candidate is satisfactory:
+
+Yes/No
+Credit:
+
+Grade (S/X):
+
+Supervisor(s)
+
+       Internal Member of SRC
+
+External Member of SRC
+
+Forwarded by:
+
+       Convener-DDPC
+
+Head of Department
+
+ The candidate has to submit the progress report of the semester in one-page approved by the Supervisor(s).
+ If the candidate has given the open seminar then the presentation for assessing the progress is not required.
+
+================================================================================
+PAGE 45
+================================================================================
+
+37
+
+         Form: DP-04
+(Clause 4.4)
+Motilal Nehru National Institute of Technology Allahabad
+Adding/Dropping of Course
+
+Name of the Student:…………………..……………………………… Registration No………………………………
+Department: …………………..…………………..…………………… Date of Registration:………………………….
+COURSES TO BE ADDED
+Sl. No.
+Course Name with Code
+Credit
+Department
+Reason
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+COURSES TO BE DROPPED
+Sl. No.
+Course Name with Code
+Credit
+Department
+Reason
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+(Signature of Candidate)
+
+Advised by:
+
+             Supervisor(s)
+
+Endorsed by:
+
+Course Coordinator
+
+Forwarded by:
+
+ Convener DDPC
+
+        Head of Department
+
+Approved by:
+
+ Chairperson SDPC
+
+Note: Please enclose the approved DP-01 form
+
+================================================================================
+PAGE 46
+================================================================================
+
+38
+
+Form: DP-05
+(Clause 4.5)
+
+Motilal Nehru National Institute of Technology Allahabad
+Change of Registration Status
+
+Name of the Student:………………….…………………………………. Reg. No. ……………………………..……..
+Department:………………………………………………………………...Date of First Registration. ………………...
+Name of the Supervisor(s): ………………………………………………………………………………………………..
+Present Registration Status:……………………………………………………………………………………………
+Registration Status to be converted to:………………………………………………………………………………
+Justification/Reason:……………………………………………………………………………………………………..
+
+(Signature of the Student)
+Comment of the Supervisor(s):
+
+(Signature of the Supervisor(s))
+Date and Ref. No. of DDPC meeting*:
+
+Recommended by:
+
+ Convener DDPC*
+
+  Head of Department
+
+Approved by:
+
+  Chairman SDPC
+
+* Minutes of DDPC should be enclosed.
+
+================================================================================
+PAGE 47
+================================================================================
+
+39
+
+Form: DP-06
+(Clause 5.0)
+
+Motilal Nehru National Institute of Technology Allahabad
+Leave Application
+
+Head of the Department
+Kindly allow me to avail Leave/Leave on Duty from………………….to…………….………..for………………days
+and station leave from date…………………..time….……..to………..Date……………….Time……………….My
+address during leave will be as below.
+
+Address:
+
+Yours Sincerely
+Name:
+Registration No.
+Dated:
+
+……..…………………………………………………………………………………………………………………………
+For Official use
+
+Recommended/Not Recommended:
+
+Supervisor(s)
+
+ Convener DDPC
+
+Approved by:
+
+Head of the Department
+
+================================================================================
+PAGE 48
+================================================================================
+
+40
+
+Form: DP-07
+(Clause 6.0)
+
+Motilal Nehru National Institute of Technology Allahabad
+Permission to Proceed to other Institution as Non Degree student
+
+Name of the Student:………………………………………………………….. Reg. No. ………………………………
+Department:………………………………………………………… Date of First Registration:………………………
+Supervisor(s):………………………………………………………………………………………………………………
+Date of Comprehensive Examination:……………………………………………………………………………………
+State of the Art held on:……………………………………………………………………………………………………
+Proposed Department & Institution: …………………..………………..………………………………………………
+(where the student intends to do the work): ……………………………………………………………………………
+
+Justification: …………………………………………………………………………………………………………………
+………………………………………………………………………………..………………………………………………
+(If required attach a separate sheet): ………………………………………………………………..…………………
+
+(Signature of the Student)
+Comment of the Supervisor(s):
+
+(Signature of the Supervisor(s)
+Date and Ref. No. of DDPC Meeting: (Minutes enclosed)
+
+Recommended by:
+
+Convener-DDPC
+
+Head of Department
+
+Approved by:
+
+Chairperson SDPC
+
+================================================================================
+PAGE 49
+================================================================================
+
+41
+
+Form: DP-08
+(Clause 9, 12.3)
+Motilal Nehru National Institute of Technology Allahabad
+List of Suggested Examiners for Ph.D Comprehensive Examination
+
+Name of the Student:………………………………………………………….Reg. No. ………………………………..
+Department:…………………………………………………………Date of First Registration:………………………...
+Name of the Supervisor(s):………………………………………………………………………………………………..
+Sl. No.
+Name of Examiners
+Designation
+Department
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+Proposed by:
+Thesis Supervisor(s)
+
+Forwarded by:
+
+Convener-DDPC
+
+Head of Department
+
+Date:
+
+Date:
+
+Approved by:
+
+Chairperson SDPC
+
+Date:
+Note: Please enclose Grade sheet / mark sheet of the Course work
+
+================================================================================
+PAGE 50
+================================================================================
+
+42
+
+Form: DP-09
+(Clause 9)
+Motilal Nehru National Institute of Technology Allahabad
+Report of Examiners of the Comprehensive Examination
+
+Name of the Student:…………………………………………………………. Reg. No.: ……………………………….
+Department:…………….……………………………………………… Date of First Registration:…………………….
+Date of Examination:…………………………………………………...Semester……………………………………….
+Thesis Supervisor(s):……………………………………………………………………………………………………….
+Comments:…………………………………………………………………………………………………………………
+………………………………………………………………………………………………………………………………..
+.……………………………………………………………………………………………………………………………….
+..………………………………………………………………………………………………………………………………
+……………………………………………………………………………………………………………………………......
+
+Candidate has PASSED (SS)/FAILED (XX)
+Sl. No.
+Name of Examiners
+Department
+Signature
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+Convener-DDPC
+
+Head of Department
+
+        Chairperson SDPC
+Date:
+
+Date:
+
+Date:
+
+……..…………………………………………………………………………………………………………………………
+
+For Office use only
+
+Convener, DDPC may kindly advise the Supervisor to ensure that State of the Art Seminar is held
+before…………………. i.e., within six months of the Comprehensive Examination.
+
+Chairperson SDPC
+
+================================================================================
+PAGE 51
+================================================================================
+
+43
+
+Form: DP-10
+(Clause 10)
+Motilal Nehru National Institute of Technology Allahabad
+Report of State-of-the-Art Seminar
+
+Name of the Student:……………………………………………………… Roll No.:……………………………………
+Department:…………………………………………………………………………………………………………………
+.
+Date of First Registration:…………………………………………………Semester……………………………………
+Date of Passing the Comprehensive Examination:…………………………………………………………………
+Date of delivery of the Seminar:………………………………………………………………………………………..
+Name of Thesis Supervisor(s): …………………………………………………………………………………………..
+Topic of the Seminar: ……………………………………………………………………………………………………
+……………………………………………………………………………………….……………………………………….
+Report: Satisfactory / Unsatisfactory Comments:
+Comments: …………………………………………………………………………………………………………………
+……………………………………………………………………………………….……………………………………….
+
+Supervisor(s)
+
+ Internal SRC Member
+
+External SRC Member
+
+Forwarded by:
+
+Convener-DDPC
+
+Head of Department
+
+Approved by:
+
+Chairperson SDPC
+
+Note: Please enclose a copy of the Comprehensive examination (Form DP-09)
+
+================================================================================
+PAGE 52
+================================================================================
+
+44
+
+Form: DP-11
+(Clause 11)
+Motilal Nehru National Institute of Technology Allahabad
+Report of Open Seminar
+
+Name of Student:………………………………………………………. Reg No.:……………………………………….
+Department:……………………………………………………………. Date of First Registration:……………………
+Thesis Title…………………………………………………………………………………………………………………..
+………………………………………………………………………………………………………………………………..
+Date of Delivery of Seminar: ……………………………………………………………………………………………..
+Name(s) of Thesis Supervisor(s):………………………………………………………………………………………..
+Comments: …………………………………………………………………………………………………………………
+…………………………………………………………………………………………………………………...…………
+………………………………………………………………………………………………………………………….…….
+
+Candidate has Passed (SS) / Failed (XX)…………………………………………………………………….
+Certified that the candidate has earned the minimum credits as per clause 7.1 and has successfully delivered
+the Open Seminar required for submission of the Thesis.
+
+Supervisor(s)
+
+Internal SRC Member
+
+External SRC Member
+
+Forwarded by:
+
+Convener-DDPC
+
+Head of Department
+
+……..…………………………………………………………………………………………………………………………
+For Office use only
+Total Credits: (a) Attempted
+(b) Earned through Course Work
+(c) Earned through Others
+The Thesis must be submitted on or before…………,….i.e, nine month from the date of Open Seminar.
+
+Verified by: DR/AR (Academic)
+Approved by:
+
+          Chairperson SDPC
+Enclosures: Copy of the Approved DP-09 and DP-10 Forms
+
+================================================================================
+PAGE 53
+================================================================================
+
+45
+
+Form: DP-12 (a)
+(Clause 12.1)
+Motilal Nehru National Institute of Technology Allahabad
+Supervisor Selection
+(To be filled by the candidate)
+
+Name of the Student:………………………………………………….……. Reg. No.:…………………………………
+Department:…………………………………………………………………………………………………………………
+.
+Date of First Registration:………………………………………………….Programme Category Code…………...…
+Proposed Area/Field of Research:……………………………………………………………………………………
+…………………………………......……………...…………………………………………………………………………
+………………………………………………………………………………………………………………………………..
+
+Proposed Name of Supervisor(s) in order of preference
+
+Sl. No.
+Name of the Faculty
+Designation
+Affiliation
+1.
+
+2.
+
+3.
+
+Date:
+
+                   (Signature of the Candidate)
+
+Note: Please enclose DP 12 (b) form (s)
+
+================================================================================
+PAGE 54
+================================================================================
+
+46
+
+Form: DP-12 (b)
+(Clause 12.1)
+Motilal Nehru National Institute of Technology Allahabad
+Supervisor Selection
+(To be filled by the Faculty)
+
+Name of the Faculty:……………………………………………….……. Designation:………………………………
+Department:…………………………………………………………………………………………………………………
+
+Details of the Ph.D students being supervised at present
+
+Sl.
+No.
+Name of the Student
+Reg. No.
+Date of Registration
+Department
+in which
+registered
+Institution
+1.
+
+2.
+
+3.
+
+I am willing to supervise the Ph.D student Mr./Ms………………………………………………….Registration
+No……………………. and the number of scholars currently registered under me is less than the maximum
+number as per the ordinances.
+
+Date:
+
+                   (Signature of the Faculty)
+
+………..……………………………………………………………………………………………………………………
+For Office use only
+Name of allotted Supervisor(s):
+Ref. No. and date of DDPC Meeting:
+
+Forwarded by:
+
+Convener-DDPC
+
+Head of Department
+
+Approved by:
+
+              Chairperson SDPC
+
+================================================================================
+PAGE 55
+================================================================================
+
+47
+
+Form: DP-13
+(Clause 12.1(7))
+Motilal Nehru National Institute of Technology Allahabad
+Change / Addition of Supervisor(s)
+
+Name of the Student:………………………………………….……….………. Reg. No.:…………….………………
+Department:……………………………………………………………………………………………………………….
+Name of the Existing Supervisor(s): ………………………………………………………………………………...
+Present Status of the work:……………………………………………………………………………………………….
+Suggested Supervisor(s): ………………………………………………………………………………………………
+Reason for change:………………………………………………………………………………………………………
+……………………………………………………………………………………………………………………………….
+
+(Signature of the Student)
+Comment & No objection of Existing Supervisor(s):
+
+(Signature of the Supervisor(s))
+
+Consent and signature of the suggested Supervisor(s)
+Ref. No. and Date of the DDPC meeting (Minutes enclosed):
+
+Forwarded by:
+
+Convener-DDPC
+
+Head of Department
+
+Recommended by:
+
+Chairperson SDPC
+
+Approved by:
+
+ Dean (Academic)
+
+Enclosures: In case of a Supervisor from outside MNNITA, consent of the Supervisor and NOC from the
+employer.
+
+================================================================================
+PAGE 56
+================================================================================
+
+48
+
+Form: DP-14
+(Clause 13.1)
+Motilal Nehru National Institute of Technology Allahabad
+CERTIFICATE
+
+On basis of the “TURNITIN” software the thesis title “…………………………………………………………” by
+……………………………………….. Reg. No. ………………………. comprises ………………% of text similar
+to material against permissible limit of below 15%.
+
+The thesis may be accepted for evaluation in its present form.
+OR
+The thesis may be sent back to the supervisor for review.
+
+                                           Chairperson
+IPR Standing Committee
+
+Copy to:
+ Supervisor(s)
+ Dean Academic
+ Chairperson SDPC
+ Convener DDPC
+ Head of the Department
+
+Chairperson
+IPR Standing Committee
+
+================================================================================
+PAGE 57
+================================================================================
+
+49
+
+Form: DP-15
+(Clause 12.4)
+Motilal Nehru National Institute of Technology Allahabad
+List of Suggested Examiners for Ph.D Thesis Evaluation Board
+
+Name of the Student:……………………………………………………Reg No.: ……………………………………..
+Department:………………………………………………. Date of First Registration:………………………………..
+Date of Comprehensive Exam.: ……………………….
+ Date of-State-of-Art Seminar……………………………..
+Date of Open Seminar: ……………………………………
+Thesis Title (in capitals): ………………………………………………………………………………………………….
+……………………………………………………………………………………………………………………………….
+Name of Examiners with Address/Fax/Phone/Email:
+Sl. No.
+Name & Address
+Phone/Mob.
+Email
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+6.
+
+Name(s) and communication details of Supervisor(s)
+Sl. No.
+Name & Address
+Phone/Fax
+Email
+1.
+
+2.
+
+Proposed by:  Thesis Supervisor(s)
+
+Date:
+
+Forwarded by:  Convener-DDPC
+
+Head of Department
+
+Date:
+
+Date:
+
+Recommended by: Chairperson SDPC
+
+Date:
+
+Approved by:  Dean (Academic)
+Date:
+
+================================================================================
+PAGE 58
+================================================================================
+
+50
+
+Form: DP-16
+(Clause 12.5)
+Motilal Nehru National Institute of Technology Allahabad
+List of Suggested Examiners for Ph.D. Oral Board
+
+Name of the Student:……………………………………………………. Reg No.: …………………………………….
+Department:…………………………………………………………………………………………………………………
+.Thesis Title (in capitals):…………………………………………………………………………………………………..
+………………………………………………………………………………………………………………………………..
+Sl. No.  Name of Examiners
+Department
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+Proposed by:  Thesis Supervisor(s)
+
+ Date:
+
+Forwarded by:  Convener-DDPC
+
+ Head of Department
+Date:
+
+Date:
+
+Recommended by: Chairperson SDPC
+
+      Date:
+
+Approved by:  Dean (Academic)
+Date:
+
+Enclosure: Copy of approved Form of DP-02
+
+================================================================================
+PAGE 59
+================================================================================
+
+51
+
+Form: DP-17
+(Clause 13.2)
+Motilal Nehru National Institute of Technology Allahabad
+(Thesis Evaluation Report)
+
+1.
+Name of Student:______________________________________________________________
+
+2.
+Reg. No.______________________________________________________________________
+
+3.
+Department:__________________________________________________________________
+4.       General Features of Thesis:
+(i)
+Organisation and Get up:
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+
+__________________________________________________________________________
+(ii)
+Whether quality of work is comparablewith other universities of repute?
+(iii) Whether the Thesis has embodied any new ideas with original thoughts?
+5.
+Comments (the Examiner   may give details on additional sheet(s), if required)
+(i)
+Corrections in punctuation, grammar,
+
+Spelling or language.
+
+None
+Minor
+Require Changes
+
+(ii)
+Technical content of the Thesis
+______________________________________________________________________________________
+______________________________________________________________________________________
+______________________________________________________________________________________
+______________________________________________________________________________________
+_____________________________________________________________________________________.
+Contd.2
+Yes
+No
+Yes
+No
+
+================================================================================
+PAGE 60
+================================================================================
+
+52
+
+: 2 :
+(iii) Strong/Weak points of the Thesis
+_____________________________________________________________________________
+_____________________________________________________________________________
+_____________________________________________________________________________
+(iv) Write at least 5 questions from the area of research to be asked in the oral examination.
+
+6.
+Specific Recommendations
+
+(Please place a tick mark at any one of following category)
+
+Category I:
+The Thesis is acceptable in the present form for the award of the Ph.D degree.
+
+Category II:
+The Thesis is acceptable and the correction, modifications and improvement
+suggested by me would be incorporated in the Thesis and presented at the time of
+Oral Examination.
+
+Category III:
+The Thesis needs technical improvement/modifications, which must be carried out to
+my satisfaction before I recommend the Thesis for acceptance.
+
+Category IV:  The Thesis is rejected. (Please provide reasons for the same)
+
+(Signature of the Examiner  )
+Name
+:
+__________________________________________
+
+Designation
+:
+__________________________________________
+
+Address
+:
+ __________________________________________
+
+___________________________________________
+
+Place:
+Date:
+
+================================================================================
+PAGE 61
+================================================================================
+
+53
+
+Form: DP-18
+(Clause 13.3)
+Motilal Nehru National Institute of Technology Allahabad
+Report of Ph.D Thesis Oral Board
+Name of the Student:…………………………………………Reg No.:……………………………
+Department:……………………………  Date of  First Registration:………………………….…
+Thesis  Title  (in  capitals):……………………………………………… ………………………….
+Date of Oral  of  Examination:  ……………………………… …………………………………….
+Name  of  the  thesis Supervisor(s):……………………………………………………………….
+Report of the Oral Board
+
+Necessary modifications suggested by the thesis examiner(s) have been incorporated :
+Yes/No/NA
+
+Presentation of the work by the student and the answers to the questions asked have
+been replied: satisfactorily/unsatisfactorily.
+
+Comments, if any
+……………………………………………………………………………………………………………………
+………………………………………………………………………………………………………………………
+Award of Ph D Degree Recommended: Yes/No.
+Oral Examination Committee
+Sl. No.
+Name of the Examiners
+Department/Institute
+Signature
+1.
+2.
+3.
+4.
+5.
+
+Supervisor(s)
+Convener DDPC
+Head of the Deportment
+
+Recommended by:
+Approved by:
+Chairperson SDPC
+
+(Chairperson Senate)
+
+================================================================================
+PAGE 62
+================================================================================
+
+54
+
+Form: DP-19
+(Clause 16.3.2)
+
+Motilal Nehru National Institute of Technology Allahabad
+
+FORM FOR REPORTING CASES REGARDING UNFAIR-MEANS
+Note:
+1. One form should be used for one case only.
+2. Please send one question paper alongwith the case(s)
+
+(A) To be filled in by the instructor/invigilators/members of observer committee:
+Name of Examination
+:
+………………………………………………………...………….………..
+Name of student
+:
+………………………………………………………...………….………...
+Registration No.
+:
+………………………………………………………...………….………...
+Programme/Branch
+:
+………………………………………………………...………….………..
+Room No.
+:
+………………………………………………………...………….………..
+Subject/ paper in which the
+student is suspected or
+repo-rted to have used or
+attempt-ted to use unfair-
+means or shown disorderly
+conduct.
+
+Subject
+Subject Code
+
+Date & time of incident
+:
+………………………………………………………...………….……
+Type of Unfair Means Material.
+: Copying from the papers / materials which is in the
+possession of the student.
+
+Copying from the answer book of neighboring student.
+
+Misbehaved with invigilator.
+
+Date......................
+Signature and Full Name of the instructor/invigilators/members of observer committee
+
+(IN BLOCK LETTERS)
+
+================================================================================
+PAGE 63
+================================================================================
+
+55
+
+(B)
+Student’s Statement:
+I have read the report of the instructor/invigilators/members of observer committee made against me as given
+in column No. A and submit the following statements.
+I undertake that this statement has been given by me under no pressure or fear.
+
+  1.
+Do
+you
+agree
+with
+the
+report
+of
+the
+instructor/invigilators/members of observer committee made
+against you?
+
+Yes/ No
+2.
+If you agree with the report, then:
+
+(a) Why   did   you   bring   the material referred to in the above
+report?
+
+(b) Did you make any use of it?
+(c) What explanation have you to   offer   for   your misconduct
+/ Disorderly conduct as mentioned in the report?
+
+(d) Have any other thing to say, by    way    of    self-defense or
+clarification?  (If necessary, an extra sheet may be used).
+
+3.
+If you do not agree with the report then give your explanation,
+if   any, in your defense against the report of the
+instructor/invigilators/members of observer committee.
+
+(Signature of Student)
+
+N.B.:
+(i)
+The student shall be given extra time, before leaving the Examination Hall in order to compensate
+him/her for the loss of time spent during enquiry and filling this form.
+(C)
+Statement of Witness if any:
+Statement of the witness, if any, in case the student denies the allegations of the
+instructor/invigilators/members of observer committee or refuses to give his/her statement on the spot
+or runs away from the examination hall without giving his statement.
+
+================================================================================
+PAGE 64
+================================================================================
+
+56
+
+Form: DP-20
+
+UNDERTAKING
+
+I  declare  that  the  work  presented  in this thesis titled “ ................................... ”  submitted  to the
+Department of ................................. ,  Motilal  Nehru National  Institute of  Technology Allahabad,  (India)
+for  the award of Doctor of Philosophy Degree is my original  work.  I neither have plagiarized any part
+of the thesis nor submitted the same work for the award of any other Degree anywhere. In case this
+undertaking is found incorrect, the Degree may be withdrawn unconditionally.
+I handover the copyright of the thesis to MNNIT Allahabad, Prayagraj.
+
+Date:
+(Signature of Student)
+Place:
+Name:………………………………
+Reg.  No.: ………………………….
+
+================================================================================
+PAGE 65
+================================================================================
+
+57
+
+Form: DP-21
+(GL-1)
+Motilal Nehru National Institute of Technology Allahabad
+Report of Ph.D. Thesis Oral Board
+This is to certify that all suggested comments of the examiner(s) have been duly incorporated in the  thesis
+title …………………………………………………………………………………………………………..
+…………………………. submitted and defended by Mr./Ms. ………………………………………………….
+Reg. No. …………………………………..
+
+Name and Signature of the Student
+Name and Signature of the Supervisor(s)
+Date
+Date
+
+We are satisfied with the final thesis.
+
+Name and signature of the Oral Board Members
+
+1. ………………
+
+2………………..
+3………………..
+4……………….
+Date:
+
+Note: To be attached with the final thesis after cover page.
+
+================================================================================
+PAGE 66
+================================================================================
+
+58
+
+Form: DP-22
+(Clause: 7.1)
+Motilal Nehru National Institute of Technology Allahabad
+Marks & Grade for Mini-Project [Course Code………….]
+
+Name of Student: …………………………………………..... Reg. No.: ………………………..…...……………..
+
+Department: ……………………………………………….. Date of First Registration: ……….……………….
+Title:
+……………………………………………………………………………………………………………………………..
+
+Date of Examination:……………………………………………..
+Thesis Supervisor(s):
+………………………………………………………………………………………………………….............................
+
+Report of the SRC Board:
+………………………………………………………………………..………………………………………………….
+
+…………………………………………………………………..…………………………………………………..……
+Marks and Grade awarded by the Board:
+
+Marks: ……………… Grade: ………….
+Examination Board:
+Sl. No.
+Name of Examiners
+Department
+Signature
+1.
+
+2.
+
+3.
+
+4.
+
+5.
+
+- - - - - - - - - - - - - - - - - - - - -
+Course Coordinator(s)
+ Note:
+ The candidate has to submit the report of the Mini-Project approved by the Supervisor(s) to the SRC Board.
+ The Marks & Grade sheet has to be submitted by the Course Coordinator to Convener, DDPC.
+
+================================================================================
+PAGE 67
+================================================================================
+
+59
+
+DP-23
+(Clause 3.4.1)
+पत्र संख्या 1472 / Reg off. / 2015 दिनांक 10-11-2015 के अनुसार िो साल के बाि स्कॉलर / फेलो के
+प्रिर्शन की समीक्षा करने के दलए दनिेर्क के द्वारा समीक्षा सदमदि में नादमि के दलए अनुरोध।
+Request for Director’s Nominee in Review Committee to Review the Performance of the
+Scholar/Fellow after Two Years as per Letter No. 1472 / Reg. Off. / 2015 dated 10-11-2015.
+No.                                                                                                                                           Dated:
+
+Dean (Academic)
+Through: Head
+Subject: Request for nominating member of Review Committee
+Name of the Candidate: …………………………………. Registration No.: ………………………………….
+Department: ………………………………….         Date of First Registration: ………………………………….
+
+The constitution of the review committee will be as under:
+(a) Thesis Supervisor(s)
+
+: Convener
+(b) Concerned HOD
+
+: Member
+(c) Professor/Associate Professor from the Deptt.
+: Member
+[to be nominated by the Dean (Academic)]
+
+…………………………………………………
+(d) Professor from other Deptt.
+
+: Member
+[to be nominated by the Dean (Academic)]
+
+…………………………………………………
+(e) Chairman, SDPC
+
+: Member
+Signature of supervisor(s) with date
+
+       Signature of HOD with date
+
+   Review Committee Members Nominated
+
+                  Signature of Dean (Academic) with date
+
+================================================================================
+PAGE 68
+================================================================================
+
+60
+
+DP-24
+(Clause 3.4.1)
+Motilal Nehru National Institute of Technology Allahabad
+Report of Ph.D. Progress Review Committee
+
+Name of Student: ………………………………………….....
+Reg. No.: ………………………..…...……………..
+
+Department: ………………………………………………..
+Date of First Registration: ……….……………….
+
+Date of Comprehensive Examination: ……………………………………
+
+Date of State-of-the-Art: ……………………………………………...….
+
+Date of Progress Evaluation: ……………………………………….….
+
+Period of Report: …………………………………………………..
+
+Thesis Supervisor(s): …………………………………………………………………………………………………………...
+
+Report of the Board (Please cross out which is not applicable):
+
+The committee recommends for the continuation of Ph.D. programme with enhanced fellowship with effect from
+……………………………………………..……………….
+
+
+The committee recommends for the continuation of Ph.D. programme without enhanced fellowship with effect
+from ……………………………………………..…………
+Examination Board:
+Sl. No.
+Name of Examiners
+Committee
+Signature
+1.
+
+Chairman, SDPC
+
+2.
+
+Head of the Department
+
+3.
+
+External Member
+
+4.
+
+Internal Member
+
+5.
+
+Thesis Supervisor(s)
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Approval of DEAN (Academic) with date
+Note: The supervisor must submit this approved report to the Dean (SW).
+
+================================================================================
+PAGE 69
+================================================================================
+
+61
+
+GL-1
+Motilal Nehru National Institute of Technology Allahabad
+(Guidelines for Thesis submission)
+A.
+ Four copies of the Thesis (Spiral bound) and one CD should be submitted for Thesis Evaluation.
+
+The Thesis should be in the specified format as given below:
+
+The Thesis should be typed in double spacing using Times New Roman font with 12 font size.
+
+Chapter heading: Bold/Caps 14 font size.
+
+Main Heading (Section) : 12 font Bold
+
+Subsection Heading 12 font, bold, italic
+
+Thesis should be printed back to back (both sides) but new chapter should start from a  new page
+on the right hand.
+
+The thesis will be organized in three sections:
+(I)
+Inner cover page, undertaking of the student, Certificate of  the Supervisor(s), Certificate  of the IPR
+Cell, Acknowledgement, Abstract (not more than 8 pages), Table of contents, List of figures / tables,
+Glossary.
+(II) Thesis Chapters,
+(III) References, Appendix / Annexure brief CV of the research scholar, mentioning publications from the
+thesis and other academic achievements during PhD work.
+B.
+At the time of Oral Examination the scholar shall submit five hard-bound copies: Cover in maroon colour for
+1. Institute Library, 2. Departmental  Library,  3.  Supervisor (s)] incorporating  all the corrections suggested
+by the Thesis Examiners.
+ CD containing the final corrected copy of the Thesis in PDF (SodhGanga format) is to be
+submitted to the Dean (Academic) Office.
+ The final thesis will include a certificate as Form DP-21.
+ Following shall be printed on the back side of the title page
+“Copyright Motilal Nehru National Institute of Technology Allahabad, Prayagraj”.
+
+================================================================================
+PAGE 70
+================================================================================
+
+62
+
+Notes
+
+================================================================================
+PAGE 71
+================================================================================
+
+63
+
+Notes
+
+================================================================================
+PAGE 72
+================================================================================
+
+64
+
+Notes
+
+================================================================================
+PAGE 73
+================================================================================
+
+65
+
+Notes
+
+================================================================================
+PAGE 74
+================================================================================
+
+66
+
+Notes
+
+================================================================================
+PAGE 75
+================================================================================
+
+67
+
+4

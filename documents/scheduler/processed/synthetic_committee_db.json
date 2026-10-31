@@ -1,0 +1,930 @@
+{
+  "document": "Synthetic CSE Committee Database",
+  "disclaimer": "Synthetic demonstration data for the Meeting Scheduling Agent. Names, emails, phone numbers, timetables and WhatsApp groups are fictitious and are not real institutional records.",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "department": "Computer Science and Engineering",
+  "timezone": "Asia/Kolkata",
+  "academic_year": "2026-27",
+  "committees": {
+    "DUGC": {
+      "committee_id": "CSE-DUGC",
+      "name": "DUGC",
+      "full_name": "Departmental Undergraduate Committee",
+      "department": "Computer Science and Engineering",
+      "whatsapp_group": {
+        "name": "CSE DUGC Official",
+        "id": "whatsapp:cse-dugc-official"
+      },
+      "email_list": "dugc.cse@dept.mnnit.ac.in",
+      "hod_member_id": "CSE-HOD-201",
+      "members": [
+        {
+          "member_id": "CSE-HOD-201",
+          "name": "Prof. Meenakshi Iyer",
+          "role": "HoD",
+          "designation": "Professor and Head",
+          "email": "hod.cse@dept.mnnit.ac.in",
+          "phone": "+91-532-2279301",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Institute Directors' meeting window"
+            },
+            {
+              "day": "Tuesday",
+              "start": "10:00",
+              "end": "12:00",
+              "reason": "UG lecture CS-101"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Department academic audit"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "BoG / Senate liaison"
+            },
+            {
+              "day": "Friday",
+              "start": "15:00",
+              "end": "16:00",
+              "reason": "Department office hours"
+            }
+          ],
+          "existing_meetings": [
+            {
+              "date": "2026-09-10",
+              "start": "15:00",
+              "end": "16:30",
+              "title": "HoD-Conveners undergraduate coordination"
+            }
+          ]
+        },
+        {
+          "member_id": "CSE-DUGC-C-201",
+          "name": "Dr. Suresh Padmanabhan",
+          "role": "Convener DUGC",
+          "designation": "Associate Professor",
+          "email": "convener.dugc@dept.mnnit.ac.in",
+          "phone": "+91-532-2279302",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "B.Tech. lecture CS-301"
+            },
+            {
+              "day": "Monday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Lab CS-351"
+            },
+            {
+              "day": "Tuesday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "Tutorial CS-301"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Department UG counselling"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:00",
+              "end": "12:00",
+              "reason": "Lab CS-352"
+            },
+            {
+              "day": "Friday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "B.Tech. project evaluation"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-UGC-201",
+          "name": "Dr. Kavita Srinivasan",
+          "role": "UG Coordinator",
+          "designation": "Associate Professor",
+          "email": "ug.coordinator@dept.mnnit.ac.in",
+          "phone": "+91-532-2279303",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "B.Tech. lecture CS-201"
+            },
+            {
+              "day": "Tuesday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "UG timetable coordination"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Lab CS-251"
+            },
+            {
+              "day": "Thursday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Mentorship CS-201"
+            },
+            {
+              "day": "Friday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "B.Tech. lecture CS-401"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-201",
+          "name": "Prof. Ananya Bhattacharya",
+          "role": "Member",
+          "designation": "Professor",
+          "email": "ananya.bhattacharya@dept.mnnit.ac.in",
+          "phone": "+91-532-2279311",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Lecture CS-401"
+            },
+            {
+              "day": "Tuesday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Lab CS-451"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Lecture CS-501"
+            },
+            {
+              "day": "Thursday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "B.Tech. project reviews"
+            },
+            {
+              "day": "Friday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Office hours"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-202",
+          "name": "Dr. Vikram Chauhan",
+          "role": "Member",
+          "designation": "Associate Professor",
+          "email": "vikram.chauhan@dept.mnnit.ac.in",
+          "phone": "+91-532-2279312",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Lecture CS-302"
+            },
+            {
+              "day": "Tuesday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Lab CS-352"
+            },
+            {
+              "day": "Wednesday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "Lecture CS-202"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Tutorial CS-202"
+            },
+            {
+              "day": "Friday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "Faculty meeting window"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-203",
+          "name": "Dr. Shalini Deshmukh",
+          "role": "Member",
+          "designation": "Assistant Professor",
+          "email": "shalini.deshmukh@dept.mnnit.ac.in",
+          "phone": "+91-532-2279313",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "Lecture CS-203"
+            },
+            {
+              "day": "Tuesday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "Lab CS-253"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Lecture CS-303"
+            },
+            {
+              "day": "Thursday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Lab CS-353"
+            },
+            {
+              "day": "Friday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Office hours"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-204",
+          "name": "Dr. Rakesh Nair",
+          "role": "Member",
+          "designation": "Assistant Professor",
+          "email": "rakesh.nair@dept.mnnit.ac.in",
+          "phone": "+91-532-2279314",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Lecture CS-104"
+            },
+            {
+              "day": "Tuesday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "Lab CS-154"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:00",
+              "end": "11:00",
+              "reason": "Lecture CS-204"
+            },
+            {
+              "day": "Thursday",
+              "start": "11:00",
+              "end": "13:00",
+              "reason": "Tutorial CS-104"
+            },
+            {
+              "day": "Friday",
+              "start": "14:00",
+              "end": "16:00",
+              "reason": "B.Tech. seminar"
+            }
+          ],
+          "existing_meetings": []
+        }
+      ]
+    },
+    "DMPC": {
+      "committee_id": "CSE-DMPC",
+      "name": "DMPC",
+      "full_name": "Departmental M.Tech. Programme Committee",
+      "department": "Computer Science and Engineering",
+      "whatsapp_group": {
+        "name": "CSE DMPC Official",
+        "id": "whatsapp:cse-dmpc-official"
+      },
+      "email_list": "dmpc.cse@dept.mnnit.ac.in",
+      "hod_member_id": "CSE-HOD-101",
+      "members": [
+        {
+          "member_id": "CSE-HOD-101",
+          "name": "Prof. Leela Krishnan",
+          "role": "HoD",
+          "designation": "Professor and Head",
+          "email": "hod.cse@dept.mnnit.ac.in",
+          "phone": "+91-532-2279101",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Institute Directors' meeting window"
+            },
+            {
+              "day": "Tuesday",
+              "start": "10:30",
+              "end": "12:30",
+              "reason": "UG lecture CS-102"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Ph.D. supervision slot"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "BoG / Senate liaison"
+            },
+            {
+              "day": "Friday",
+              "start": "15:30",
+              "end": "16:30",
+              "reason": "Department office hours"
+            }
+          ],
+          "existing_meetings": [
+            {
+              "date": "2026-09-17",
+              "start": "15:30",
+              "end": "17:00",
+              "title": "HoD-Conveners doctoral coordination"
+            }
+          ]
+        },
+        {
+          "member_id": "CSE-DMPC-C-101",
+          "name": "Dr. Ritu Banerjee",
+          "role": "Convener",
+          "designation": "Associate Professor",
+          "email": "ritu.banerjee@dept.mnnit.ac.in",
+          "phone": "+91-532-2279203",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "M.Tech. lecture CS-632"
+            },
+            {
+              "day": "Tuesday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "M.Tech. lab CS-673"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "PG seminar"
+            },
+            {
+              "day": "Thursday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Thesis supervision"
+            },
+            {
+              "day": "Friday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "M.Tech. lecture CS-642"
+            }
+          ],
+          "existing_meetings": [
+            {
+              "date": "2026-09-22",
+              "start": "15:30",
+              "end": "16:30",
+              "title": "Existing DMPC pre-meeting"
+            }
+          ]
+        },
+        {
+          "member_id": "CSE-FAC-103",
+          "name": "Dr. Aisha Rahman",
+          "role": "Member",
+          "designation": "Assistant Professor",
+          "email": "aisha.rahman@dept.mnnit.ac.in",
+          "phone": "+91-532-2279213",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Lecture CS-512"
+            },
+            {
+              "day": "Tuesday",
+              "start": "14:30",
+              "end": "17:00",
+              "reason": "Lab CS-572"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:30",
+              "end": "12:30",
+              "reason": "Doctoral lab CS-805"
+            },
+            {
+              "day": "Thursday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Research slot"
+            },
+            {
+              "day": "Friday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-522"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-106",
+          "name": "Dr. Rajan Khurana",
+          "role": "Member",
+          "designation": "Associate Professor",
+          "email": "rajan.khurana@dept.mnnit.ac.in",
+          "phone": "+91-532-2279216",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-602"
+            },
+            {
+              "day": "Tuesday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Industry lecture series"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-612"
+            },
+            {
+              "day": "Thursday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Doctoral project slot"
+            },
+            {
+              "day": "Friday",
+              "start": "09:30",
+              "end": "12:30",
+              "reason": "Lab CS-652"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-104",
+          "name": "Prof. Gautam Deshpande",
+          "role": "Member",
+          "designation": "Professor",
+          "email": "gautam.deshpande@dept.mnnit.ac.in",
+          "phone": "+91-532-2279214",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:30",
+              "end": "10:30",
+              "reason": "Office hours"
+            },
+            {
+              "day": "Tuesday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-702"
+            },
+            {
+              "day": "Wednesday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Sponsored project review"
+            },
+            {
+              "day": "Thursday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Ph.D. comprehensive board"
+            },
+            {
+              "day": "Friday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Lecture CS-712"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-107",
+          "name": "Dr. Tanvi Kapoor",
+          "role": "Member Secretary",
+          "designation": "Assistant Professor",
+          "email": "tanvi.kapoor@dept.mnnit.ac.in",
+          "phone": "+91-532-2279217",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Lecture CS-223"
+            },
+            {
+              "day": "Tuesday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Lecture CS-224"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Minutes and agenda drafting"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Tutorial CS-223"
+            },
+            {
+              "day": "Friday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Department documentation"
+            }
+          ],
+          "existing_meetings": []
+        }
+      ]
+    },
+    "DDPC": {
+      "committee_id": "CSE-DDPC",
+      "name": "DDPC",
+      "full_name": "Departmental Doctoral Programme Committee",
+      "department": "Computer Science and Engineering",
+      "whatsapp_group": {
+        "name": "CSE DDPC Official",
+        "id": "whatsapp:cse-ddpc-official"
+      },
+      "email_list": "ddpc.cse@dept.mnnit.ac.in",
+      "hod_member_id": "CSE-HOD-101",
+      "members": [
+        {
+          "member_id": "CSE-HOD-101",
+          "name": "Prof. Leela Krishnan",
+          "role": "HoD",
+          "designation": "Professor and Head",
+          "email": "hod.cse@dept.mnnit.ac.in",
+          "phone": "+91-532-2279101",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Institute Directors' meeting window"
+            },
+            {
+              "day": "Tuesday",
+              "start": "10:30",
+              "end": "12:30",
+              "reason": "UG lecture CS-102"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Ph.D. supervision slot"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "BoG / Senate liaison"
+            },
+            {
+              "day": "Friday",
+              "start": "15:30",
+              "end": "16:30",
+              "reason": "Department office hours"
+            }
+          ],
+          "existing_meetings": [
+            {
+              "date": "2026-09-17",
+              "start": "15:30",
+              "end": "17:00",
+              "title": "HoD-Conveners doctoral coordination"
+            }
+          ]
+        },
+        {
+          "member_id": "CSE-DDPC-C-101",
+          "name": "Dr. Sameer Qureshi",
+          "role": "Convener",
+          "designation": "Associate Professor",
+          "email": "sameer.qureshi@dept.mnnit.ac.in",
+          "phone": "+91-532-2279204",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Ph.D. coursework CS-803"
+            },
+            {
+              "day": "Tuesday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Research group meeting"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Doctoral seminar"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Ph.D. coursework CS-804"
+            },
+            {
+              "day": "Friday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Thesis progress reviews"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-104",
+          "name": "Prof. Gautam Deshpande",
+          "role": "Member",
+          "designation": "Professor",
+          "email": "gautam.deshpande@dept.mnnit.ac.in",
+          "phone": "+91-532-2279214",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:30",
+              "end": "10:30",
+              "reason": "Office hours"
+            },
+            {
+              "day": "Tuesday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-702"
+            },
+            {
+              "day": "Wednesday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Sponsored project review"
+            },
+            {
+              "day": "Thursday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Ph.D. comprehensive board"
+            },
+            {
+              "day": "Friday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Lecture CS-712"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-103",
+          "name": "Dr. Aisha Rahman",
+          "role": "Member",
+          "designation": "Assistant Professor",
+          "email": "aisha.rahman@dept.mnnit.ac.in",
+          "phone": "+91-532-2279213",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Lecture CS-512"
+            },
+            {
+              "day": "Tuesday",
+              "start": "14:30",
+              "end": "17:00",
+              "reason": "Lab CS-572"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:30",
+              "end": "12:30",
+              "reason": "Doctoral lab CS-805"
+            },
+            {
+              "day": "Thursday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Research slot"
+            },
+            {
+              "day": "Friday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-522"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-101",
+          "name": "Dr. Nandini Rao",
+          "role": "Member",
+          "designation": "Assistant Professor",
+          "email": "nandini.rao@dept.mnnit.ac.in",
+          "phone": "+91-532-2279211",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-402"
+            },
+            {
+              "day": "Tuesday",
+              "start": "09:30",
+              "end": "12:30",
+              "reason": "Lab CS-452"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Lecture CS-502"
+            },
+            {
+              "day": "Thursday",
+              "start": "14:30",
+              "end": "17:00",
+              "reason": "Lab CS-552"
+            },
+            {
+              "day": "Friday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Doctoral mentoring"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-106",
+          "name": "Dr. Rajan Khurana",
+          "role": "Member",
+          "designation": "Associate Professor",
+          "email": "rajan.khurana@dept.mnnit.ac.in",
+          "phone": "+91-532-2279216",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-602"
+            },
+            {
+              "day": "Tuesday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Industry lecture series"
+            },
+            {
+              "day": "Wednesday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Lecture CS-612"
+            },
+            {
+              "day": "Thursday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Doctoral project slot"
+            },
+            {
+              "day": "Friday",
+              "start": "09:30",
+              "end": "12:30",
+              "reason": "Lab CS-652"
+            }
+          ],
+          "existing_meetings": []
+        },
+        {
+          "member_id": "CSE-FAC-107",
+          "name": "Dr. Tanvi Kapoor",
+          "role": "Member Secretary",
+          "designation": "Assistant Professor",
+          "email": "tanvi.kapoor@dept.mnnit.ac.in",
+          "phone": "+91-532-2279217",
+          "department": "Computer Science and Engineering",
+          "weekly_busy_slots": [
+            {
+              "day": "Monday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Lecture CS-223"
+            },
+            {
+              "day": "Tuesday",
+              "start": "11:30",
+              "end": "13:00",
+              "reason": "Lecture CS-224"
+            },
+            {
+              "day": "Wednesday",
+              "start": "14:30",
+              "end": "16:30",
+              "reason": "Minutes and agenda drafting"
+            },
+            {
+              "day": "Thursday",
+              "start": "09:30",
+              "end": "11:30",
+              "reason": "Tutorial CS-223"
+            },
+            {
+              "day": "Friday",
+              "start": "15:30",
+              "end": "17:00",
+              "reason": "Department documentation"
+            }
+          ],
+          "existing_meetings": []
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-10-27T23:11:46",
+  "notes": [
+    "DUGC membership merged from ug_rag_pipeline (Prof. Meenakshi Iyer HoD and DUGC members)."
+  ]
+}

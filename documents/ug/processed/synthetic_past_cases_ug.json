@@ -1,0 +1,299 @@
+{
+  "document": "Synthetic Previously Decided DUGC Cases",
+  "source_file": "synthetic_past_cases_ug.json",
+  "chunk_type": "past_case",
+  "synthetic": true,
+  "disclaimer": "Synthetic demonstration data generated from the official Bachelors Programme ordinance. Not real institutional records.",
+  "grounded_in": "MNNIT Bachelors Ordinance",
+  "source_ordinance": "Ordinances_for_Bachelors_Programme.pdf",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "ordinance_clauses_used": 68,
+  "generated_at": "2026-10-30T19:22:19.561890+00:00",
+  "total_records": 12,
+  "records": [
+    {
+      "case_id": "DUGC/2024/CSE/014",
+      "meeting_date": "2024-04-18",
+      "meeting_reference": "DUGC/CSE/2023-24/07",
+      "department": "Computer Science and Engineering",
+      "programme": "B.Tech. (Computer Science and Engineering)",
+      "subject": "Make-up examination due to medical reasons (mid-semester)",
+      "student_ref": "B.Tech./CSE/2022/118",
+      "applicable_clauses": [
+        "6.2.4",
+        "8.3"
+      ],
+      "applicable_forms": [
+        "BP-10",
+        "BP-12"
+      ],
+      "facts": "Third-year student missed the mid-semester examination in CS-302 and CS-353 after hospitalisation for acute appendicitis. Institute Medical Officer endorsed the discharge summary. Application on Form BP-10 was filed within seven days of the last scheduled examination, with Form BP-12 for 8 days of medical leave.",
+      "deficiencies": "None recorded.",
+      "discussion_summary": "Clause 6.2.4 permits a make-up examination coordinated by the Department. Clause 8.3 allows medical leave up to 15 days in a semester on DUGC recommendation and HoD approval. Attendance in both courses remained above 75% after the leave.",
+      "decision": "Recommended",
+      "resolution": "Resolved that B.Tech./CSE/2022/118 be permitted to appear in the make-up examination for CS-302 and CS-353 as per Clause 6.2.4, and that 8 days of medical leave be recorded under Clause 8.3 on Form BP-12. Course coordinators shall conduct the make-up as per the guidelines of the office of the Dean (Academic).",
+      "synthetic": true,
+      "record_index": 1,
+      "text": "DUGC/2024/CSE/014 dated 2024-04-18. Subject: Make-up examination due to medical reasons (mid-semester). Student B.Tech./CSE/2022/118. Clauses 6.2.4, 8.3. Forms BP-10, BP-12. Facts: Third-year student missed the mid-semester examination in CS-302 and CS-353 after hospitalisation for acute appendicitis. Institute Medical Officer endorsed the discharge summary. Application on Form BP-10 was filed within seven days of the last scheduled examination, with Form BP-12 for 8 days of medical leave. Deficiencies: None recorded. Decision: Recommended. Resolution: Resolved that B.Tech./CSE/2022/118 be permitted to appear in the make-up examination for CS-302 and CS-353 as per Clause 6.2.4, and that 8 days of medical leave be recorded under Clause 8.3 on Form BP-12. Course coordinators shall conduct the make-up as per the guidelines of the office of the Dean (Academic)."
+    },
+    {
+      "case_id": "DUGC/2024/ECE/021",
+      "meeting_date": "2024-05-09",
+      "meeting_reference": "DUGC/ECE/2023-24/09",
+      "department": "Electronics and Communication Engineering",
+      "programme": "B.Tech. (Electronics and Communication Engineering)",
+      "subject": "Attendance shortage below 75% - request for condonation",
+      "student_ref": "B.Tech./ECE/2021/067",
+      "applicable_clauses": [
+        "9.1",
+        "8.3"
+      ],
+      "applicable_forms": [
+        "BP-12"
+      ],
+      "facts": "Final-year student recorded 68% attendance in EC-412 after a documented medical episode spanning 12 days. Medical certificate from a Government hospital was endorsed by the Institute Medical Officer. The student requested extraordinary attendance relaxation under Clause 9.1 read with Section 8.",
+      "deficiencies": "Attendance in EC-412 is 68%, below the 75% threshold of Clause 9.1. Without extraordinary relaxation the student would be awarded F grade and debarred from the end-semester examination.",
+      "discussion_summary": "Clause 9.1 states that a student shall not be allowed to appear in the end-semester examination if attendance falls below 75% and shall be awarded F grade. However, as per Section 8, extraordinary attendance relaxation may be allowed; the student remains responsible for all other academic requirements. Medical leave of 12 days is within the 15-day cumulative cap of Clause 8.3.",
+      "decision": "Recommended subject to compliance",
+      "resolution": "Resolved that extraordinary attendance relaxation under Clause 9.1 read with Section 8 be recommended for B.Tech./ECE/2021/067 in EC-412 only, subject to fulfilment of all remaining academic requirements. The student shall not be debarred from the end-semester examination of EC-412.",
+      "synthetic": true,
+      "record_index": 2,
+      "text": "DUGC/2024/ECE/021 dated 2024-05-09. Subject: Attendance shortage below 75% - request for condonation. Student B.Tech./ECE/2021/067. Clauses 9.1, 8.3. Forms BP-12. Facts: Final-year student recorded 68% attendance in EC-412 after a documented medical episode spanning 12 days. Medical certificate from a Government hospital was endorsed by the Institute Medical Officer. The student requested extraordinary attendance relaxation under Clause 9.1 read with Section 8. Deficiencies: Attendance in EC-412 is 68%, below the 75% threshold of Clause 9.1. Without extraordinary relaxation the student would be awarded F grade and debarred from the end-semester examination. Decision: Recommended subject to compliance. Resolution: Resolved that extraordinary attendance relaxation under Clause 9.1 read with Section 8 be recommended for B.Tech./ECE/2021/067 in EC-412 only, subject to fulfilment of all remaining academic requirements. The student shall not be debarred from the end-semester examination of EC-412."
+    },
+    {
+      "case_id": "DUGC/2023/ME/033",
+      "meeting_date": "2023-11-16",
+      "meeting_reference": "DUGC/ME/2023-24/04",
+      "department": "Mechanical Engineering",
+      "programme": "B.Tech. (Mechanical Engineering)",
+      "subject": "Semester drop / semester leave on medical grounds",
+      "student_ref": "B.Tech./ME/2021/044",
+      "applicable_clauses": [
+        "8.3",
+        "8.4",
+        "5"
+      ],
+      "applicable_forms": [
+        "BP-12"
+      ],
+      "facts": "Student requested semester leave for Odd Semester 2023-24 following orthopaedic surgery. Treating hospital recommended 10 weeks of rest, exceeding the 15-day medical-leave cap of Clause 8.3. Form BP-12 was submitted with supporting documents.",
+      "deficiencies": "Requested absence exceeds the 15-day cumulative medical-leave limit in a given semester under Clause 8.3.",
+      "discussion_summary": "Clause 8.3 requires that medical leave longer than 15 days must convert to Semester Leave / Semester Drop, accepted by DUGC and SUGC. Clause 8.4 limits such semester leave to two semesters during the entire programme, with or without a break. This is the student's first semester leave. The student may appear in Grade Improvement Examination / Summer Semester to avoid academic loss.",
+      "decision": "Recommended",
+      "resolution": "Resolved that semester leave for Odd Semester 2023-24 be recommended for B.Tech./ME/2021/044 under Clauses 8.3 and 8.4, to be forwarded to Chairperson SUGC / Dean (Academic). The student may register for Grade Improvement Examination / Summer Semester as appropriate.",
+      "synthetic": true,
+      "record_index": 3,
+      "text": "DUGC/2023/ME/033 dated 2023-11-16. Subject: Semester drop / semester leave on medical grounds. Student B.Tech./ME/2021/044. Clauses 8.3, 8.4, 5. Forms BP-12. Facts: Student requested semester leave for Odd Semester 2023-24 following orthopaedic surgery. Treating hospital recommended 10 weeks of rest, exceeding the 15-day medical-leave cap of Clause 8.3. Form BP-12 was submitted with supporting documents. Deficiencies: Requested absence exceeds the 15-day cumulative medical-leave limit in a given semester under Clause 8.3. Decision: Recommended. Resolution: Resolved that semester leave for Odd Semester 2023-24 be recommended for B.Tech./ME/2021/044 under Clauses 8.3 and 8.4, to be forwarded to Chairperson SUGC / Dean (Academic). The student may register for Grade Improvement Examination / Summer Semester as appropriate."
+    },
+    {
+      "case_id": "DUGC/2024/CE/008",
+      "meeting_date": "2024-08-22",
+      "meeting_reference": "DUGC/CE/2024-25/02",
+      "department": "Civil Engineering",
+      "programme": "B.Tech. (Civil Engineering)",
+      "subject": "Branch sliding / branch change after first year",
+      "student_ref": "B.Tech./CE/2023/091",
+      "applicable_clauses": [
+        "5.4"
+      ],
+      "applicable_forms": [],
+      "facts": "Student admitted in Civil Engineering in 2023-24 applied for branch sliding to Computer Science and Engineering after first year. First-year SPI/CPI and Institute sliding guidelines were placed before DUGC for noting. Three CSE-specific first-year courses (aggregate 9 credits) would remain to be earned after sliding.",
+      "deficiencies": "None recorded at departmental level.",
+      "discussion_summary": "Clause 5.4 permits branch sliding based on first-year academic performance, subject to Institute guidelines. Credits of previous-branch specific courses do not count toward the new branch. The student must earn additional credits for left-out branch-specific courses of the allotted branch.",
+      "decision": "Recommended",
+      "resolution": "Resolved that the branch-sliding application of B.Tech./CE/2023/091 be forwarded as per Clause 5.4 and the Institute sliding guidelines. If allotted CSE, the student shall earn the additional first-year CSE-specific credits before becoming eligible for the B.Tech. degree.",
+      "synthetic": true,
+      "record_index": 4,
+      "text": "DUGC/2024/CE/008 dated 2024-08-22. Subject: Branch sliding / branch change after first year. Student B.Tech./CE/2023/091. Clauses 5.4. Forms None. Facts: Student admitted in Civil Engineering in 2023-24 applied for branch sliding to Computer Science and Engineering after first year. First-year SPI/CPI and Institute sliding guidelines were placed before DUGC for noting. Three CSE-specific first-year courses (aggregate 9 credits) would remain to be earned after sliding. Deficiencies: None recorded at departmental level. Decision: Recommended. Resolution: Resolved that the branch-sliding application of B.Tech./CE/2023/091 be forwarded as per Clause 5.4 and the Institute sliding guidelines. If allotted CSE, the student shall earn the additional first-year CSE-specific credits before becoming eligible for the B.Tech. degree."
+    },
+    {
+      "case_id": "DUGC/2024/EE/019",
+      "meeting_date": "2024-09-12",
+      "meeting_reference": "DUGC/EE/2024-25/03",
+      "department": "Electrical Engineering",
+      "programme": "B.Tech. (Electrical Engineering)",
+      "subject": "Credit transfer for industrial internship / online courses under MoU",
+      "student_ref": "B.Tech./EE/2021/052",
+      "applicable_clauses": [
+        "6.2.6",
+        "6.3.2"
+      ],
+      "applicable_forms": [],
+      "facts": "Seventh-semester student completed a 12-week industrial internship and two NPTEL/MOOC courses offered under an Institute MoU. Marks sheets were submitted for mapping to the Institute grading system by the coordinator of online courses.",
+      "deficiencies": "One MOOC certificate did not state percentage marks required for Clause 6.3.2 grade equivalence.",
+      "discussion_summary": "Clause 6.2.6 applies the evaluation process of the respective agency / Institution. Clause 6.3.2 maps percentage marks to Institute letter grades (A+ at >=85, F below 40). SUGC, on DUGC recommendation, decides credits, duration and normalisation of online courses.",
+      "decision": "Recommended subject to compliance",
+      "resolution": "Resolved that credit mapping for the internship and the complete MOOC be recommended under Clauses 6.2.6 and 6.3.2. The incomplete certificate shall be resubmitted with percentage marks before tabulation. The recommendation shall be forwarded to SUGC.",
+      "synthetic": true,
+      "record_index": 5,
+      "text": "DUGC/2024/EE/019 dated 2024-09-12. Subject: Credit transfer for industrial internship / online courses under MoU. Student B.Tech./EE/2021/052. Clauses 6.2.6, 6.3.2. Forms None. Facts: Seventh-semester student completed a 12-week industrial internship and two NPTEL/MOOC courses offered under an Institute MoU. Marks sheets were submitted for mapping to the Institute grading system by the coordinator of online courses. Deficiencies: One MOOC certificate did not state percentage marks required for Clause 6.3.2 grade equivalence. Decision: Recommended subject to compliance. Resolution: Resolved that credit mapping for the internship and the complete MOOC be recommended under Clauses 6.2.6 and 6.3.2. The incomplete certificate shall be resubmitted with percentage marks before tabulation. The recommendation shall be forwarded to SUGC."
+    },
+    {
+      "case_id": "DUGC/2023/CHE/011",
+      "meeting_date": "2023-10-05",
+      "meeting_reference": "DUGC/CHE/2023-24/03",
+      "department": "Chemical Engineering",
+      "programme": "B.Tech. (Chemical Engineering)",
+      "subject": "Late registration beyond the notified window",
+      "student_ref": "B.Tech./CHE/2022/027",
+      "applicable_clauses": [
+        "5.1"
+      ],
+      "applicable_forms": [],
+      "facts": "Student reported 18 days after the last date of registration due to delay in issuance of a visa for a family emergency abroad. Late registration with fine is permitted only up to two weeks from the notified last date.",
+      "deficiencies": "Application is beyond the two-week late-registration window of Clause 5.1.",
+      "discussion_summary": "Clause 5.1 discourages late registration. After the notified last date of late registration, no registration is allowed except in special cases with permission of Dean (Academic) on the recommendation of the Head of the concerned Department.",
+      "decision": "Recommended subject to compliance",
+      "resolution": "Resolved that late registration of B.Tech./CHE/2022/027 be recommended as a special case under Clause 5.1, to be forwarded by the Head to Dean (Academic) with the supporting visa documents.",
+      "synthetic": true,
+      "record_index": 6,
+      "text": "DUGC/2023/CHE/011 dated 2023-10-05. Subject: Late registration beyond the notified window. Student B.Tech./CHE/2022/027. Clauses 5.1. Forms None. Facts: Student reported 18 days after the last date of registration due to delay in issuance of a visa for a family emergency abroad. Late registration with fine is permitted only up to two weeks from the notified last date. Deficiencies: Application is beyond the two-week late-registration window of Clause 5.1. Decision: Recommended subject to compliance. Resolution: Resolved that late registration of B.Tech./CHE/2022/027 be recommended as a special case under Clause 5.1, to be forwarded by the Head to Dean (Academic) with the supporting visa documents."
+    },
+    {
+      "case_id": "DUGC/2024/BT/006",
+      "meeting_date": "2024-02-15",
+      "meeting_reference": "DUGC/BT/2023-24/06",
+      "department": "Biotechnology",
+      "programme": "B.Tech. (Biotechnology)",
+      "subject": "Registration for B.Tech. Honours (CPI eligibility)",
+      "student_ref": "B.Tech./BT/2021/014",
+      "applicable_clauses": [
+        "5.6",
+        "7.2"
+      ],
+      "applicable_forms": [
+        "BP-07",
+        "BP-08"
+      ],
+      "facts": "Student cleared all courses of first to fourth semester in first attempts with CPI 8.4 and applied for Honours registration from the fifth semester on Forms BP-07 and BP-08.",
+      "deficiencies": "None recorded.",
+      "discussion_summary": "Clause 7.2(C) requires first-attempt clearance of semesters I-IV and CPI not less than 8.0 for Honours. Clause 5.6 and Forms BP-07 / BP-08 govern registration of the Honours programme and credit courses.",
+      "decision": "Recommended",
+      "resolution": "Resolved that B.Tech./BT/2021/014 be permitted to register for B.Tech. Honours as per Clauses 5.6 and 7.2(C). Allotment of Honours courses shall be on merit as decided by the Department.",
+      "synthetic": true,
+      "record_index": 7,
+      "text": "DUGC/2024/BT/006 dated 2024-02-15. Subject: Registration for B.Tech. Honours (CPI eligibility). Student B.Tech./BT/2021/014. Clauses 5.6, 7.2. Forms BP-07, BP-08. Facts: Student cleared all courses of first to fourth semester in first attempts with CPI 8.4 and applied for Honours registration from the fifth semester on Forms BP-07 and BP-08. Deficiencies: None recorded. Decision: Recommended. Resolution: Resolved that B.Tech./BT/2021/014 be permitted to register for B.Tech. Honours as per Clauses 5.6 and 7.2(C). Allotment of Honours courses shall be on merit as decided by the Department."
+    },
+    {
+      "case_id": "DUGC/2024/PI/003",
+      "meeting_date": "2024-03-07",
+      "meeting_reference": "DUGC/PI/2023-24/05",
+      "department": "Production and Industrial Engineering",
+      "programme": "B.Tech. (Production and Industrial Engineering)",
+      "subject": "Academic Deficiency (ACD) and Grade Improvement Examination",
+      "student_ref": "B.Tech./PI/2022/073",
+      "applicable_clauses": [
+        "7.1",
+        "6.2.5"
+      ],
+      "applicable_forms": [
+        "BP-11"
+      ],
+      "facts": "Student obtained SPI 3.7 in Even Semester 2023-24 with one F grade in PI-204, meeting the definition of Academic Deficiency under Clause 7.1. Application on Form BP-11 sought Grade Improvement Examination in three courses.",
+      "deficiencies": "SPI below 4.0 and an F grade in a registered course; student is ACD.",
+      "discussion_summary": "Clause 7.1 categorises a student as ACD if SPI/CPI is below 4.0 or if ABS/N/F/X exists in any registered course. Clause 6.2.5 permits ACD students to appear in Grade Improvement Examination with a combination of F, X, ABS and N grades, maximum five courses, with prescribed fee on Form BP-11.",
+      "decision": "Recommended",
+      "resolution": "Resolved that B.Tech./PI/2022/073 be permitted to register for Grade Improvement Examination in the three applied courses under Clause 6.2.5, subject to payment of the prescribed fee. Academic performance requirements for the award of degree remain unaltered.",
+      "synthetic": true,
+      "record_index": 8,
+      "text": "DUGC/2024/PI/003 dated 2024-03-07. Subject: Academic Deficiency (ACD) and Grade Improvement Examination. Student B.Tech./PI/2022/073. Clauses 7.1, 6.2.5. Forms BP-11. Facts: Student obtained SPI 3.7 in Even Semester 2023-24 with one F grade in PI-204, meeting the definition of Academic Deficiency under Clause 7.1. Application on Form BP-11 sought Grade Improvement Examination in three courses. Deficiencies: SPI below 4.0 and an F grade in a registered course; student is ACD. Decision: Recommended. Resolution: Resolved that B.Tech./PI/2022/073 be permitted to register for Grade Improvement Examination in the three applied courses under Clause 6.2.5, subject to payment of the prescribed fee. Academic performance requirements for the award of degree remain unaltered."
+    },
+    {
+      "case_id": "DUGC/2023/CSE/041",
+      "meeting_date": "2023-12-14",
+      "meeting_reference": "DUGC/CSE/2023-24/05",
+      "department": "Computer Science and Engineering",
+      "programme": "B.Tech. (Computer Science and Engineering)",
+      "subject": "Registration for Minor programme",
+      "student_ref": "B.Tech./CSE/2022/009",
+      "applicable_clauses": [
+        "5.5",
+        "7.2"
+      ],
+      "applicable_forms": [
+        "BP-05",
+        "BP-06"
+      ],
+      "facts": "Student cleared all first-year courses in first attempt with CPI 7.2 and applied for a Minor in Electronics on Forms BP-05 and BP-06. Preference list of ten minor disciplines was attached.",
+      "deficiencies": "None recorded.",
+      "discussion_summary": "Clause 5.5 governs registration for Minors (maximum two). Clause 7.2 requires the applicable SPI/CPI threshold and first-attempt clearance where prescribed. Allotment is purely on merit decided by the Department offering the Minor.",
+      "decision": "Recommended",
+      "resolution": "Resolved that the Minor application of B.Tech./CSE/2022/009 be forwarded to the office of the Dean (Academic) as per Clause 5.5. Allotment shall be on merit by the target Department.",
+      "synthetic": true,
+      "record_index": 9,
+      "text": "DUGC/2023/CSE/041 dated 2023-12-14. Subject: Registration for Minor programme. Student B.Tech./CSE/2022/009. Clauses 5.5, 7.2. Forms BP-05, BP-06. Facts: Student cleared all first-year courses in first attempt with CPI 7.2 and applied for a Minor in Electronics on Forms BP-05 and BP-06. Preference list of ten minor disciplines was attached. Deficiencies: None recorded. Decision: Recommended. Resolution: Resolved that the Minor application of B.Tech./CSE/2022/009 be forwarded to the office of the Dean (Academic) as per Clause 5.5. Allotment shall be on merit by the target Department."
+    },
+    {
+      "case_id": "DUGC/2024/ECE/044",
+      "meeting_date": "2024-10-03",
+      "meeting_reference": "DUGC/ECE/2024-25/04",
+      "department": "Electronics and Communication Engineering",
+      "programme": "B.Tech. (Electronics and Communication Engineering)",
+      "subject": "Make-up examination request filed after seven-day window",
+      "student_ref": "B.Tech./ECE/2023/102",
+      "applicable_clauses": [
+        "6.2.4"
+      ],
+      "applicable_forms": [
+        "BP-10"
+      ],
+      "facts": "Student missed the mid-semester examination citing a family function and submitted Form BP-10 eleven days after the last scheduled examination. No medical certificate was attached.",
+      "deficiencies": "Form BP-10 requires submission within seven days of the last scheduled examination. Reason is not a documented medical or exceptional ground contemplated by the ordinance.",
+      "discussion_summary": "Clause 6.2.4 and Form BP-10 together require timely application with supporting documents. DUGC noted that a family function is not an extraordinary situation of the kind addressed in Section 8.",
+      "decision": "Not recommended",
+      "resolution": "Resolved that the make-up examination request of B.Tech./ECE/2023/102 be not recommended, the application having been filed beyond the seven-day window of Form BP-10 without acceptable supporting documents.",
+      "synthetic": true,
+      "record_index": 10,
+      "text": "DUGC/2024/ECE/044 dated 2024-10-03. Subject: Make-up examination request filed after seven-day window. Student B.Tech./ECE/2023/102. Clauses 6.2.4. Forms BP-10. Facts: Student missed the mid-semester examination citing a family function and submitted Form BP-10 eleven days after the last scheduled examination. No medical certificate was attached. Deficiencies: Form BP-10 requires submission within seven days of the last scheduled examination. Reason is not a documented medical or exceptional ground contemplated by the ordinance. Decision: Not recommended. Resolution: Resolved that the make-up examination request of B.Tech./ECE/2023/102 be not recommended, the application having been filed beyond the seven-day window of Form BP-10 without acceptable supporting documents."
+    },
+    {
+      "case_id": "DUGC/2024/ME/027",
+      "meeting_date": "2024-01-25",
+      "meeting_reference": "DUGC/ME/2023-24/06",
+      "department": "Mechanical Engineering",
+      "programme": "B.Tech. (Mechanical Engineering)",
+      "subject": "Slow pace of study - reduction of semester load",
+      "student_ref": "B.Tech./ME/2022/055",
+      "applicable_clauses": [
+        "5.2.2",
+        "9.2"
+      ],
+      "applicable_forms": [
+        "BP-04"
+      ],
+      "facts": "Student applied on Form BP-04 to opt out of two theory courses in Even Semester 2023-24 citing health and to remain on slow pace. Current registration was 22 credits; proposed load 16 credits.",
+      "deficiencies": "None recorded.",
+      "discussion_summary": "Clause 5.2.2 permits slow pace of study. Clause 9.2 sets maximum duration of seven years for slow pace. Form BP-04 requires remarks of Convener DUGC and approval of HoD, with a copy to Dean (Academic).",
+      "decision": "Recommended",
+      "resolution": "Resolved that slow pace of study for B.Tech./ME/2022/055 be approved under Clause 5.2.2 on Form BP-04. The student is advised that maximum duration under Clause 9.2 (slow pace) is seven years.",
+      "synthetic": true,
+      "record_index": 11,
+      "text": "DUGC/2024/ME/027 dated 2024-01-25. Subject: Slow pace of study - reduction of semester load. Student B.Tech./ME/2022/055. Clauses 5.2.2, 9.2. Forms BP-04. Facts: Student applied on Form BP-04 to opt out of two theory courses in Even Semester 2023-24 citing health and to remain on slow pace. Current registration was 22 credits; proposed load 16 credits. Deficiencies: None recorded. Decision: Recommended. Resolution: Resolved that slow pace of study for B.Tech./ME/2022/055 be approved under Clause 5.2.2 on Form BP-04. The student is advised that maximum duration under Clause 9.2 (slow pace) is seven years."
+    },
+    {
+      "case_id": "DUGC/2023/CE/022",
+      "meeting_date": "2023-09-21",
+      "meeting_reference": "DUGC/CE/2023-24/02",
+      "department": "Civil Engineering",
+      "programme": "B.Tech. (Civil Engineering)",
+      "subject": "Appeal against termination for Academic Deficiency",
+      "student_ref": "B.Tech./CE/2020/088",
+      "applicable_clauses": [
+        "7.4",
+        "7.5"
+      ],
+      "applicable_forms": [
+        "BP-11b"
+      ],
+      "facts": "Student was terminated after continued ACD and failure to meet minimum performance requirements. Appeal on Form BP-11b cited prolonged illness in 2022-23 and attached medical records. This is the first appeal.",
+      "deficiencies": "Prior SPI/CPI remained below the Clause 7.1 thresholds; termination was processed under Clause 7.4.",
+      "discussion_summary": "Clause 7.5 permits appeal against termination. Chairperson Senate shall not entertain any further appeal unless substantial additional information is brought to notice. An appeal shall not be entertained more than twice from the same student.",
+      "decision": "Deferred",
+      "resolution": "Resolved that the appeal of B.Tech./CE/2020/088 be forwarded to Chairperson SUGC / Chairperson Senate under Clause 7.5 with DUGC remarks, without a departmental recommendation on the merits, pending verification of the medical records by the Institute Medical Officer.",
+      "synthetic": true,
+      "record_index": 12,
+      "text": "DUGC/2023/CE/022 dated 2023-09-21. Subject: Appeal against termination for Academic Deficiency. Student B.Tech./CE/2020/088. Clauses 7.4, 7.5. Forms BP-11b. Facts: Student was terminated after continued ACD and failure to meet minimum performance requirements. Appeal on Form BP-11b cited prolonged illness in 2022-23 and attached medical records. This is the first appeal. Deficiencies: Prior SPI/CPI remained below the Clause 7.1 thresholds; termination was processed under Clause 7.4. Decision: Deferred. Resolution: Resolved that the appeal of B.Tech./CE/2020/088 be forwarded to Chairperson SUGC / Chairperson Senate under Clause 7.5 with DUGC remarks, without a departmental recommendation on the merits, pending verification of the medical records by the Institute Medical Officer."
+    }
+  ]
+}

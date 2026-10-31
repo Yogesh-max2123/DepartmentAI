@@ -1,0 +1,237 @@
+{
+  "synthetic": true,
+  "disclaimer": "Synthetic demonstration data generated from the official Doctoral Programme ordinance. Not real institutional records.",
+  "grounded_in": "MNNIT Doctoral Ordinance",
+  "source_ordinance": "Ordinances_for_Doctoral_Programm2023.pdf",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "generated_at": "2026-10-24T04:48:09.695410+00:00",
+  "document": "Synthetic Previous Minutes of DDPC Meetings",
+  "source_file": "synthetic_ddpc_minutes.json",
+  "chunk_type": "meeting_minute",
+  "ordinance_clauses_used": 18,
+  "total_records": 10,
+  "records": [
+    {
+      "minute_id": "DDPC/MIN/2024/07-01",
+      "meeting_number": "7th DDPC meeting, AY 2023-24",
+      "meeting_date": "2024-04-18",
+      "department": "Computer Science and Engineering",
+      "agenda_item_number": "1",
+      "agenda_item": "Confirmation of the minutes of the previous DDPC meeting",
+      "attendance": [
+        "Chairperson / HoD: Prof. Leela Krishnan",
+        "Convener DDPC: Dr. Sameer Qureshi",
+        "Member Secretary: Dr. Tanvi Kapoor",
+        "Member: Prof. Gautam Deshpande"
+      ],
+      "applicable_clauses": [
+        "1.3"
+      ],
+      "discussion": "The minutes of the previous meeting were circulated. No comments were received.",
+      "resolution": "The minutes of the previous DDPC meeting were confirmed.",
+      "action_by": "Convener DDPC",
+      "text": "DDPC/MIN/2024/07-01 dated 2024-04-18. Agenda: confirmation of previous minutes. Clause 1.3. Resolution: confirmed.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2024/07-03",
+      "meeting_number": "7th DDPC meeting, AY 2023-24",
+      "meeting_date": "2024-04-18",
+      "department": "Computer Science and Engineering",
+      "agenda_item_number": "3",
+      "agenda_item": "Second Comprehensive Examination of Ph.D./CSE/2022/014",
+      "attendance": [
+        "Chairperson / HoD: Prof. Leela Krishnan",
+        "Convener DDPC: Dr. Sameer Qureshi",
+        "Member: Prof. Gautam Deshpande",
+        "Member: Dr. Aisha Rahman"
+      ],
+      "applicable_clauses": [
+        "9",
+        "12.3"
+      ],
+      "discussion": "The first Comprehensive Examination was unsuccessful. Clause 9 allows one second attempt only. The Supervisor tabled Form DP-08.",
+      "resolution": "DDPC recommended a second Comprehensive Examination board under Clause 12.3. A second failure shall lead to termination.",
+      "action_by": "Thesis Supervisor / Convener DDPC",
+      "text": "DDPC/MIN/2024/07-03 dated 2024-04-18. Agenda: second Comprehensive Examination. Clauses 9 and 12.3. Resolution: second attempt permitted; second failure terminates.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2024/09-02",
+      "meeting_number": "9th DDPC meeting, AY 2023-24",
+      "meeting_date": "2024-05-09",
+      "department": "Electronics and Communication Engineering",
+      "agenda_item_number": "2",
+      "agenda_item": "Allocation of doctoral supervisor for Ph.D./ECE/2024/003",
+      "attendance": [
+        "Chairperson / HoD: Head of Department",
+        "Convener DDPC: Department Convener",
+        "Member: Faculty Member 1",
+        "Member: Faculty Member 2"
+      ],
+      "applicable_clauses": [
+        "12.1",
+        "12.2"
+      ],
+      "discussion": "Roster and six-scholar Code-11 cap under Clause 12.1(11) were applied. DP-12(a)/(b) examined.",
+      "resolution": "Second-preference faculty appointed as Supervisor. SRC to be formed on DP-02 within one month.",
+      "action_by": "Convener DDPC",
+      "text": "DDPC/MIN/2024/09-02 dated 2024-05-09. Agenda: supervisor allocation. Clauses 12.1, 12.2. Resolution: second-preference faculty appointed; SRC within one month.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2023/04-04",
+      "meeting_number": "4th DDPC meeting, AY 2023-24",
+      "meeting_date": "2023-11-16",
+      "department": "Mechanical Engineering",
+      "agenda_item_number": "4",
+      "agenda_item": "Thesis submission extension and similarity index of Ph.D./ME/2019/011",
+      "attendance": [
+        "Chairperson / HoD: Head of Department",
+        "Convener DDPC: Department Convener",
+        "Member Secretary: Faculty Member"
+      ],
+      "applicable_clauses": [
+        "13.1",
+        "7.3"
+      ],
+      "discussion": "Draft similarity 18% exceeds the below-15% limit. DP-14 cannot be issued. Extension without a plan was considered premature.",
+      "resolution": "Extension deferred until similarity is below 15% and a dated plan is filed.",
+      "action_by": "Thesis Supervisor",
+      "text": "DDPC/MIN/2023/04-04 dated 2023-11-16. Agenda: thesis extension and plagiarism. Clauses 13.1, 7.3. Resolution: deferred; 15% similarity cap must be met.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2024/05-02",
+      "meeting_number": "5th DDPC meeting, AY 2023-24",
+      "meeting_date": "2024-02-12",
+      "department": "Civil Engineering",
+      "agenda_item_number": "2",
+      "agenda_item": "Addition of supervisor for Ph.D./CE/2021/006",
+      "attendance": [
+        "Chairperson / HoD: Head of Department",
+        "Convener DDPC: Department Convener",
+        "Member: Faculty Member"
+      ],
+      "applicable_clauses": [
+        "12.1"
+      ],
+      "discussion": "Solo supervisor on leave exceeding one year. DP-13 with no-objection received. Revised SRC pending.",
+      "resolution": "Additional supervisor approved subject to revised DP-02 within two weeks.",
+      "action_by": "Scholar / existing Supervisor",
+      "text": "DDPC/MIN/2024/05-02 dated 2024-02-12. Agenda: addition of supervisor. Clause 12.1. Resolution: approved subject to revised SRC.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2024/06-03",
+      "meeting_number": "6th DDPC meeting, AY 2023-24",
+      "meeting_date": "2024-03-07",
+      "department": "Electrical Engineering",
+      "agenda_item_number": "3",
+      "agenda_item": "Academic performance of Ph.D./EE/2023/017 (SPI 6.1)",
+      "attendance": [
+        "Chairperson / HoD: Head of Department",
+        "Convener DDPC: Department Convener",
+        "Member: Faculty Member"
+      ],
+      "applicable_clauses": [
+        "8",
+        "15.1"
+      ],
+      "discussion": "Minimum SPI/CPI for continuation is 6.5. Fellowship of academically deficient scholars is liable to withdrawal.",
+      "resolution": "Scholar placed under academic watch to restore SPI/CPI to 6.5 next semester.",
+      "action_by": "Scholar / Supervisor",
+      "text": "DDPC/MIN/2024/06-03 dated 2024-03-07. Agenda: SPI 6.1 academic deficiency. Clauses 8, 15.1. Resolution: academic watch; restore 6.5.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2024/10-05",
+      "meeting_number": "10th DDPC meeting, AY 2023-24",
+      "meeting_date": "2024-06-13",
+      "department": "Chemical Engineering",
+      "agenda_item_number": "5",
+      "agenda_item": "Open Seminar request of Ph.D./CHE/2020/009",
+      "attendance": [
+        "Chairperson / HoD: Head of Department",
+        "Convener DDPC: Department Convener",
+        "Member: SRC nominee"
+      ],
+      "applicable_clauses": [
+        "11",
+        "7.1"
+      ],
+      "discussion": "Coursework, Comprehensive and SOA complete, but Section 7.1 research credits not earned.",
+      "resolution": "Open Seminar not permitted until Section 7.1 credits are earned.",
+      "action_by": "Supervisor",
+      "text": "DDPC/MIN/2024/10-05 dated 2024-06-13. Agenda: Open Seminar. Clauses 11, 7.1. Resolution: not permitted until minimum credits earned.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2024/01-04",
+      "meeting_number": "1st DDPC meeting, AY 2024-25",
+      "meeting_date": "2024-07-11",
+      "department": "Physics",
+      "agenda_item_number": "4",
+      "agenda_item": "Oral Board of Ph.D./PHY/2018/002",
+      "attendance": [
+        "Chairperson / HoD: Head of Department",
+        "Convener DDPC: Department Convener",
+        "Member Secretary: Faculty Member"
+      ],
+      "applicable_clauses": [
+        "12.5",
+        "13.3"
+      ],
+      "discussion": "Category I/II reports received. DP-16 lists SRC members and one Indian external examiner.",
+      "resolution": "Oral Board forwarded to Chairperson SDPC and Dean (Academic).",
+      "action_by": "Convener DDPC / HoD",
+      "text": "DDPC/MIN/2024/01-04 dated 2024-07-11. Agenda: Oral Board. Clauses 12.5, 13.3. Resolution: forwarded to SDPC / Dean (Academic).",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2024/02-02",
+      "meeting_number": "2nd DDPC meeting, AY 2024-25",
+      "meeting_date": "2024-08-22",
+      "department": "Computer Science and Engineering",
+      "agenda_item_number": "2",
+      "agenda_item": "Termination after second Comprehensive Examination failure of Ph.D./CSE/2021/028",
+      "attendance": [
+        "Chairperson / HoD: Prof. Leela Krishnan",
+        "Convener DDPC: Dr. Sameer Qureshi",
+        "Member Secretary: Dr. Tanvi Kapoor"
+      ],
+      "applicable_clauses": [
+        "9",
+        "8.1",
+        "8.2"
+      ],
+      "discussion": "Two unsuccessful attempts. Clause 9 requires termination by the Head, reported to the Senate. Appeal window is 90 days.",
+      "resolution": "Continuation not recommended. Head to issue termination letter and report to the Senate.",
+      "action_by": "Head of Department",
+      "text": "DDPC/MIN/2024/02-02 dated 2024-08-22. Agenda: second Comprehensive failure. Clauses 9, 8.1, 8.2. Resolution: termination letter by Head; Senate to be informed.",
+      "synthetic": true
+    },
+    {
+      "minute_id": "DDPC/MIN/2023/03-06",
+      "meeting_number": "3rd DDPC meeting, AY 2023-24",
+      "meeting_date": "2023-10-05",
+      "department": "School of Management Studies",
+      "agenda_item_number": "6",
+      "agenda_item": "Special-case waiver under Clause 17 for Ph.D./SMS/2019/015",
+      "attendance": [
+        "Chairperson / HoD: Head of Department",
+        "Convener DDPC: Department Convener",
+        "Member: Faculty Member"
+      ],
+      "applicable_clauses": [
+        "17"
+      ],
+      "discussion": "Hospitalization after Open Seminar delayed documentation. Eligibility and Clause 8 not involved.",
+      "resolution": "Limited procedural waiver recommended to SDPC and Chairperson Senate under Clause 17.",
+      "action_by": "Convener DDPC",
+      "text": "DDPC/MIN/2023/03-06 dated 2023-10-05. Agenda: Clause 17 waiver. Resolution: limited procedural waiver recommended to SDPC / Chairperson Senate.",
+      "synthetic": true
+    }
+  ]
+}

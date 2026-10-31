@@ -1,0 +1,250 @@
+{
+  "document": "Synthetic Previous Minutes of DUGC Meetings",
+  "source_file": "synthetic_dugc_minutes.json",
+  "chunk_type": "meeting_minute",
+  "synthetic": true,
+  "disclaimer": "Synthetic demonstration data generated from the official Bachelors Programme ordinance. Not real institutional records.",
+  "grounded_in": "MNNIT Bachelors Ordinance",
+  "source_ordinance": "Ordinances_for_Bachelors_Programme.pdf",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "ordinance_clauses_used": 68,
+  "generated_at": "2026-10-30T19:22:19.565117+00:00",
+  "total_records": 10,
+  "records": [
+    {
+      "minute_id": "DUGC/MIN/2024/07-01",
+      "meeting_number": "7th DUGC meeting, AY 2023-24",
+      "meeting_date": "2024-04-18",
+      "department": "Computer Science and Engineering",
+      "agenda_item_number": "1",
+      "agenda_item": "Confirmation of the minutes of the 6th DUGC meeting",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "UG Coordinator",
+        "Member Professor 1",
+        "Member Professor 2"
+      ],
+      "applicable_clauses": [
+        "1.6"
+      ],
+      "discussion": "The minutes of the previous DUGC meeting were circulated. No comments were received. Clause 1.6 describes the constitution and functions of DUGC.",
+      "resolution": "Resolved that the minutes of the 6th DUGC meeting be confirmed.",
+      "action_by": "Convener DUGC",
+      "synthetic": true,
+      "record_index": 1,
+      "text": "DUGC/MIN/2024/07-01 dated 2024-04-18. 7th DUGC meeting, AY 2023-24. Agenda 1: Confirmation of the minutes of the 6th DUGC meeting. Clauses 1.6. Discussion: The minutes of the previous DUGC meeting were circulated. No comments were received. Clause 1.6 describes the constitution and functions of DUGC. Resolution: Resolved that the minutes of the 6th DUGC meeting be confirmed. Action by: Convener DUGC."
+    },
+    {
+      "minute_id": "DUGC/MIN/2024/07-02",
+      "meeting_number": "7th DUGC meeting, AY 2023-24",
+      "meeting_date": "2024-04-18",
+      "department": "Computer Science and Engineering",
+      "agenda_item_number": "2",
+      "agenda_item": "Make-up examination on medical grounds - CS-302 / CS-353",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "UG Coordinator",
+        "Member Professor 1"
+      ],
+      "applicable_clauses": [
+        "6.2.4",
+        "8.3"
+      ],
+      "discussion": "Application of B.Tech./CSE/2022/118 on Forms BP-10 and BP-12 was considered. Medical endorsement and attendance above 75% were noted.",
+      "resolution": "Resolved that make-up examination be permitted under Clause 6.2.4 and medical leave of 8 days be recorded under Clause 8.3.",
+      "action_by": "Course Coordinators CS-302 and CS-353",
+      "synthetic": true,
+      "record_index": 2,
+      "text": "DUGC/MIN/2024/07-02 dated 2024-04-18. 7th DUGC meeting, AY 2023-24. Agenda 2: Make-up examination on medical grounds - CS-302 / CS-353. Clauses 6.2.4, 8.3. Discussion: Application of B.Tech./CSE/2022/118 on Forms BP-10 and BP-12 was considered. Medical endorsement and attendance above 75% were noted. Resolution: Resolved that make-up examination be permitted under Clause 6.2.4 and medical leave of 8 days be recorded under Clause 8.3. Action by: Course Coordinators CS-302 and CS-353."
+    },
+    {
+      "minute_id": "DUGC/MIN/2024/09-03",
+      "meeting_number": "9th DUGC meeting, AY 2023-24",
+      "meeting_date": "2024-05-09",
+      "department": "Electronics and Communication Engineering",
+      "agenda_item_number": "3",
+      "agenda_item": "Attendance shortage condonation below 75%",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "UG Coordinator",
+        "Member from another Department"
+      ],
+      "applicable_clauses": [
+        "9.1",
+        "8.3"
+      ],
+      "discussion": "Attendance of 68% in EC-412 after 12 days of documented medical leave was examined against the 75% rule of Clause 9.1 and the extraordinary relaxation permitted by Section 8.",
+      "resolution": "Resolved that extraordinary attendance relaxation be recommended for EC-412 only, subject to fulfilment of all other academic requirements.",
+      "action_by": "Convener DUGC / Course Coordinator EC-412",
+      "synthetic": true,
+      "record_index": 3,
+      "text": "DUGC/MIN/2024/09-03 dated 2024-05-09. 9th DUGC meeting, AY 2023-24. Agenda 3: Attendance shortage condonation below 75%. Clauses 9.1, 8.3. Discussion: Attendance of 68% in EC-412 after 12 days of documented medical leave was examined against the 75% rule of Clause 9.1 and the extraordinary relaxation permitted by Section 8. Resolution: Resolved that extraordinary attendance relaxation be recommended for EC-412 only, subject to fulfilment of all other academic requirements. Action by: Convener DUGC / Course Coordinator EC-412."
+    },
+    {
+      "minute_id": "DUGC/MIN/2023/04-04",
+      "meeting_number": "4th DUGC meeting, AY 2023-24",
+      "meeting_date": "2023-11-16",
+      "department": "Mechanical Engineering",
+      "agenda_item_number": "4",
+      "agenda_item": "Semester leave / semester drop on medical grounds",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "Member Professor 1",
+        "Member Professor 2"
+      ],
+      "applicable_clauses": [
+        "8.3",
+        "8.4"
+      ],
+      "discussion": "Request for 10 weeks of rest exceeded the 15-day medical-leave cap. DUGC discussed conversion to semester leave under Clauses 8.3 and 8.4, noting this is the first such leave.",
+      "resolution": "Resolved that semester leave for Odd Semester 2023-24 be recommended to Chairperson SUGC / Dean (Academic).",
+      "action_by": "HoD / Convener DUGC",
+      "synthetic": true,
+      "record_index": 4,
+      "text": "DUGC/MIN/2023/04-04 dated 2023-11-16. 4th DUGC meeting, AY 2023-24. Agenda 4: Semester leave / semester drop on medical grounds. Clauses 8.3, 8.4. Discussion: Request for 10 weeks of rest exceeded the 15-day medical-leave cap. DUGC discussed conversion to semester leave under Clauses 8.3 and 8.4, noting this is the first such leave. Resolution: Resolved that semester leave for Odd Semester 2023-24 be recommended to Chairperson SUGC / Dean (Academic). Action by: HoD / Convener DUGC."
+    },
+    {
+      "minute_id": "DUGC/MIN/2024/02-02",
+      "meeting_number": "2nd DUGC meeting, AY 2024-25",
+      "meeting_date": "2024-08-22",
+      "department": "Civil Engineering",
+      "agenda_item_number": "2",
+      "agenda_item": "Branch sliding applications after first year",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "UG Coordinator"
+      ],
+      "applicable_clauses": [
+        "5.4"
+      ],
+      "discussion": "Applications for branch sliding were tabulated with first-year SPI/CPI. Clause 5.4 additional-credit implications were explained.",
+      "resolution": "Resolved that eligible applications be forwarded as per Clause 5.4 and Institute sliding guidelines.",
+      "action_by": "Office of the Dean (Academic)",
+      "synthetic": true,
+      "record_index": 5,
+      "text": "DUGC/MIN/2024/02-02 dated 2024-08-22. 2nd DUGC meeting, AY 2024-25. Agenda 2: Branch sliding applications after first year. Clauses 5.4. Discussion: Applications for branch sliding were tabulated with first-year SPI/CPI. Clause 5.4 additional-credit implications were explained. Resolution: Resolved that eligible applications be forwarded as per Clause 5.4 and Institute sliding guidelines. Action by: Office of the Dean (Academic)."
+    },
+    {
+      "minute_id": "DUGC/MIN/2024/03-05",
+      "meeting_number": "3rd DUGC meeting, AY 2024-25",
+      "meeting_date": "2024-09-12",
+      "department": "Electrical Engineering",
+      "agenda_item_number": "5",
+      "agenda_item": "Credit transfer for internship and MOOC courses",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "UG Coordinator",
+        "Member Professor 1"
+      ],
+      "applicable_clauses": [
+        "6.2.6",
+        "6.3.2"
+      ],
+      "discussion": "Internship and MOOC marksheets were mapped to Institute grades. One certificate lacked percentage marks required by Clause 6.3.2.",
+      "resolution": "Resolved that complete records be recommended to SUGC under Clauses 6.2.6 and 6.3.2, and the incomplete certificate be returned for compliance.",
+      "action_by": "Coordinator of online courses",
+      "synthetic": true,
+      "record_index": 6,
+      "text": "DUGC/MIN/2024/03-05 dated 2024-09-12. 3rd DUGC meeting, AY 2024-25. Agenda 5: Credit transfer for internship and MOOC courses. Clauses 6.2.6, 6.3.2. Discussion: Internship and MOOC marksheets were mapped to Institute grades. One certificate lacked percentage marks required by Clause 6.3.2. Resolution: Resolved that complete records be recommended to SUGC under Clauses 6.2.6 and 6.3.2, and the incomplete certificate be returned for compliance. Action by: Coordinator of online courses."
+    },
+    {
+      "minute_id": "DUGC/MIN/2024/06-03",
+      "meeting_number": "6th DUGC meeting, AY 2023-24",
+      "meeting_date": "2024-02-15",
+      "department": "Biotechnology",
+      "agenda_item_number": "3",
+      "agenda_item": "Honours registration from fifth semester",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "Member Professor 1"
+      ],
+      "applicable_clauses": [
+        "5.6",
+        "7.2"
+      ],
+      "discussion": "CPI 8.4 with first-attempt clearance of semesters I-IV was verified against Clause 7.2(C). Forms BP-07 and BP-08 were in order.",
+      "resolution": "Resolved that Honours registration be permitted and course allotment be made on merit.",
+      "action_by": "Convener DUGC",
+      "synthetic": true,
+      "record_index": 7,
+      "text": "DUGC/MIN/2024/06-03 dated 2024-02-15. 6th DUGC meeting, AY 2023-24. Agenda 3: Honours registration from fifth semester. Clauses 5.6, 7.2. Discussion: CPI 8.4 with first-attempt clearance of semesters I-IV was verified against Clause 7.2(C). Forms BP-07 and BP-08 were in order. Resolution: Resolved that Honours registration be permitted and course allotment be made on merit. Action by: Convener DUGC."
+    },
+    {
+      "minute_id": "DUGC/MIN/2024/05-04",
+      "meeting_number": "5th DUGC meeting, AY 2023-24",
+      "meeting_date": "2024-03-07",
+      "department": "Production and Industrial Engineering",
+      "agenda_item_number": "4",
+      "agenda_item": "ACD students - Grade Improvement Examination",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "UG Coordinator"
+      ],
+      "applicable_clauses": [
+        "7.1",
+        "6.2.5"
+      ],
+      "discussion": "List of ACD students and Form BP-11 applications (maximum five courses) were reviewed against Clauses 7.1 and 6.2.5.",
+      "resolution": "Resolved that eligible ACD students be permitted to register for Grade Improvement Examination subject to the prescribed fee.",
+      "action_by": "Convener DUGC / Office of Dean (Academic)",
+      "synthetic": true,
+      "record_index": 8,
+      "text": "DUGC/MIN/2024/05-04 dated 2024-03-07. 5th DUGC meeting, AY 2023-24. Agenda 4: ACD students - Grade Improvement Examination. Clauses 7.1, 6.2.5. Discussion: List of ACD students and Form BP-11 applications (maximum five courses) were reviewed against Clauses 7.1 and 6.2.5. Resolution: Resolved that eligible ACD students be permitted to register for Grade Improvement Examination subject to the prescribed fee. Action by: Convener DUGC / Office of Dean (Academic)."
+    },
+    {
+      "minute_id": "DUGC/MIN/2024/04-06",
+      "meeting_number": "4th DUGC meeting, AY 2024-25",
+      "meeting_date": "2024-10-03",
+      "department": "Electronics and Communication Engineering",
+      "agenda_item_number": "6",
+      "agenda_item": "Time-barred make-up examination application",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "Member Professor 2"
+      ],
+      "applicable_clauses": [
+        "6.2.4"
+      ],
+      "discussion": "Form BP-10 was filed 11 days after the last scheduled examination without medical documents. Members noted the seven-day window.",
+      "resolution": "Resolved that the make-up examination request be not recommended.",
+      "action_by": "Convener DUGC",
+      "synthetic": true,
+      "record_index": 9,
+      "text": "DUGC/MIN/2024/04-06 dated 2024-10-03. 4th DUGC meeting, AY 2024-25. Agenda 6: Time-barred make-up examination application. Clauses 6.2.4. Discussion: Form BP-10 was filed 11 days after the last scheduled examination without medical documents. Members noted the seven-day window. Resolution: Resolved that the make-up examination request be not recommended. Action by: Convener DUGC."
+    },
+    {
+      "minute_id": "DUGC/MIN/2023/02-07",
+      "meeting_number": "2nd DUGC meeting, AY 2023-24",
+      "meeting_date": "2023-09-21",
+      "department": "Civil Engineering",
+      "agenda_item_number": "7",
+      "agenda_item": "Appeal against termination - first appeal",
+      "attendance": [
+        "HoD (Chairperson)",
+        "Convener DUGC",
+        "UG Coordinator",
+        "Member from another Department"
+      ],
+      "applicable_clauses": [
+        "7.4",
+        "7.5"
+      ],
+      "discussion": "First appeal on Form BP-11b with medical records was placed. DUGC noted Clause 7.5 limits (not more than twice) and the need for Institute Medical Officer verification.",
+      "resolution": "Resolved that the appeal be forwarded to Chairperson SUGC / Chairperson Senate without a departmental finding on merits, pending medical verification.",
+      "action_by": "HoD / Institute Medical Officer",
+      "synthetic": true,
+      "record_index": 10,
+      "text": "DUGC/MIN/2023/02-07 dated 2023-09-21. 2nd DUGC meeting, AY 2023-24. Agenda 7: Appeal against termination - first appeal. Clauses 7.4, 7.5. Discussion: First appeal on Form BP-11b with medical records was placed. DUGC noted Clause 7.5 limits (not more than twice) and the need for Institute Medical Officer verification. Resolution: Resolved that the appeal be forwarded to Chairperson SUGC / Chairperson Senate without a departmental finding on merits, pending medical verification. Action by: HoD / Institute Medical Officer."
+    }
+  ]
+}

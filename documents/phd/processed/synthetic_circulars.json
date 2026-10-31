@@ -1,0 +1,173 @@
+{
+  "synthetic": true,
+  "disclaimer": "Synthetic demonstration data generated from the official Doctoral Programme ordinance. Not real institutional records.",
+  "grounded_in": "MNNIT Doctoral Ordinance",
+  "source_ordinance": "Ordinances_for_Doctoral_Programm2023.pdf",
+  "institute": "Motilal Nehru National Institute of Technology Allahabad",
+  "embedding_hint": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "generated_at": "2026-10-24T04:48:09.695410+00:00",
+  "document": "Synthetic Departmental Office Orders and Circulars",
+  "source_file": "synthetic_circulars.json",
+  "chunk_type": "circular",
+  "ordinance_clauses_used": 18,
+  "total_records": 10,
+  "records": [
+    {
+      "circular_id": "CSED/DDPC/OO/2024/07",
+      "circular_type": "office_order",
+      "file_number": "CSED/DDPC/OO/2024/07",
+      "issue_date": "2024-04-02",
+      "issuing_authority": "Head of Department / Convener DDPC",
+      "department": "Computer Science and Engineering",
+      "subject": "Notification of Comprehensive Examination boards for Odd Semester 2023-24 leftover cases",
+      "applicable_clauses": [
+        "9",
+        "12.3"
+      ],
+      "content": "Supervisors shall propose Comprehensive Examination Boards on Form DP-08. A scholar may appear at most twice. Second failure shall be reported for termination under Clause 9.",
+      "text": "CSED/DDPC/OO/2024/07 dated 2024-04-02. Subject: Comprehensive Examination boards. Clauses 9, 12.3. Form DP-08. Maximum two attempts.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/CIR/2024/03",
+      "circular_type": "circular",
+      "file_number": "CSED/DDPC/CIR/2024/03",
+      "issue_date": "2024-01-12",
+      "issuing_authority": "Convener DDPC",
+      "department": "Computer Science and Engineering",
+      "subject": "Roster-based allocation of Ph.D. supervisors and SRC constitution",
+      "applicable_clauses": [
+        "12.1",
+        "12.2"
+      ],
+      "content": "New scholars shall file DP-12(a). Faculty shall confirm on DP-12(b). A Professor/Associate/Assistant Professor shall not supervise more than six Code-11 scholars at a time. SRC on DP-02 within one month of allotment.",
+      "text": "CSED/DDPC/CIR/2024/03 dated 2024-01-12. Subject: supervisor roster and SRC. Clauses 12.1, 12.2. Forms DP-12a, DP-12b, DP-02. Cap of six Code-11 scholars.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/OO/2024/11",
+      "circular_type": "office_order",
+      "file_number": "CSED/DDPC/OO/2024/11",
+      "issue_date": "2024-05-20",
+      "issuing_authority": "Head of Department",
+      "department": "Computer Science and Engineering",
+      "subject": "Similarity index limit for Ph.D. thesis submission",
+      "applicable_clauses": [
+        "13.1"
+      ],
+      "content": "Thesis submission requires IPR Cell certificate on Form DP-14 with similarity index below 15%. GL-1 packing norms apply. DP-14 shall be bound with the thesis.",
+      "text": "CSED/DDPC/OO/2024/11 dated 2024-05-20. Subject: plagiarism / similarity below 15%. Clause 13.1. Forms DP-14 and GL-1.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/CIR/2023/18",
+      "circular_type": "circular",
+      "file_number": "CSED/DDPC/CIR/2023/18",
+      "issue_date": "2023-08-14",
+      "issuing_authority": "Convener DDPC",
+      "department": "Computer Science and Engineering",
+      "subject": "Minimum SPI/CPI for continuation and fellowship",
+      "applicable_clauses": [
+        "8",
+        "15.1"
+      ],
+      "content": "Minimum SPI/CPI for continuing in the Doctoral Programme is 6.5. Academically deficient scholars shall not receive stipend/fellowship under Clause 15.1(2).",
+      "text": "CSED/DDPC/CIR/2023/18 dated 2023-08-14. Subject: SPI/CPI 6.5 and fellowship. Clauses 8, 15.1.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/OO/2023/22",
+      "circular_type": "office_order",
+      "file_number": "CSED/DDPC/OO/2023/22",
+      "issue_date": "2023-09-04",
+      "issuing_authority": "Head of Department",
+      "department": "Computer Science and Engineering",
+      "subject": "Late registration of Ph.D. scholars",
+      "applicable_clauses": [
+        "4.1",
+        "4.2"
+      ],
+      "content": "Late registration shall follow the Academic Calendar. Academic advising and DP-01 registration details must be completed. Unregistered scholars shall not be evaluated for the semester.",
+      "text": "CSED/DDPC/OO/2023/22 dated 2023-09-04. Subject: late registration. Clauses 4.1, 4.2. Form DP-01.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/CIR/2024/06",
+      "circular_type": "circular",
+      "file_number": "CSED/DDPC/CIR/2024/06",
+      "issue_date": "2024-03-01",
+      "issuing_authority": "Convener DDPC",
+      "department": "Computer Science and Engineering",
+      "subject": "Leave rules for doctoral scholars",
+      "applicable_clauses": [
+        "5.1",
+        "5.2",
+        "5.5"
+      ],
+      "content": "Leave shall be applied on Form DP-06 through the Supervisor and Convener DDPC. Absence without sanctioned leave is a misconduct under Clause 5.5.",
+      "text": "CSED/DDPC/CIR/2024/06 dated 2024-03-01. Subject: leave rules. Clauses 5.1, 5.2, 5.5. Form DP-06.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/OO/2024/15",
+      "circular_type": "office_order",
+      "file_number": "CSED/DDPC/OO/2024/15",
+      "issue_date": "2024-06-03",
+      "issuing_authority": "Head of Department",
+      "department": "Computer Science and Engineering",
+      "subject": "Open Seminar eligibility checklist",
+      "applicable_clauses": [
+        "11",
+        "7.1"
+      ],
+      "content": "Open Seminar on Form DP-11 is permitted only if the scholar has passed all courses with no N/F grade, passed Comprehensive Examination and SOA Seminar, and earned minimum credits in Section 7.1.",
+      "text": "CSED/DDPC/OO/2024/15 dated 2024-06-03. Subject: Open Seminar eligibility. Clauses 11, 7.1. Form DP-11.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/CIR/2024/09",
+      "circular_type": "circular",
+      "file_number": "CSED/DDPC/CIR/2024/09",
+      "issue_date": "2024-07-08",
+      "issuing_authority": "Convener DDPC",
+      "department": "Computer Science and Engineering",
+      "subject": "DDPC meeting notice cycle for AY 2024-25",
+      "applicable_clauses": [
+        "1.3"
+      ],
+      "content": "DDPC shall meet at least twice every semester. Agenda notes must reach the Convener five working days in advance. Student members shall recuse from evaluation of their own cases.",
+      "text": "CSED/DDPC/CIR/2024/09 dated 2024-07-08. Subject: DDPC meeting cycle. Clause 1.3. At least two meetings per semester.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/OO/2023/29",
+      "circular_type": "office_order",
+      "file_number": "CSED/DDPC/OO/2023/29",
+      "issue_date": "2023-12-11",
+      "issuing_authority": "Head of Department",
+      "department": "Computer Science and Engineering",
+      "subject": "Change of registration from full-time to part-time",
+      "applicable_clauses": [
+        "4.5"
+      ],
+      "content": "Requests shall be filed on Form DP-05 with Supervisor comments and employer NOC where applicable, for DDPC recommendation and SDPC approval.",
+      "text": "CSED/DDPC/OO/2023/29 dated 2023-12-11. Subject: full-time to part-time. Clause 4.5. Form DP-05.",
+      "synthetic": true
+    },
+    {
+      "circular_id": "CSED/DDPC/CIR/2024/12",
+      "circular_type": "circular",
+      "file_number": "CSED/DDPC/CIR/2024/12",
+      "issue_date": "2024-08-01",
+      "issuing_authority": "Convener DDPC",
+      "department": "Computer Science and Engineering",
+      "subject": "Waiver procedure in special cases",
+      "applicable_clauses": [
+        "17"
+      ],
+      "content": "Procedures other than Section 3.3 (Eligibility) and Section 8 (Academic Performance Requirement) may be waived by Chairperson Senate on DDPC and SDPC recommendation. All exceptions shall be reported to the Senate.",
+      "text": "CSED/DDPC/CIR/2024/12 dated 2024-08-01. Subject: Clause 17 waiver procedure. Sections 3.3 and 8 cannot be waived.",
+      "synthetic": true
+    }
+  ]
+}
