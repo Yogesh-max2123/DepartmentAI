@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.routes import router
 from backend.api.scheduler_routes import router as scheduler_router
+from backend.api.workflow_routes import router as workflow_router
+from backend.workflow.db import initialize_workflow_db
 
 
 app = FastAPI(
@@ -24,3 +26,9 @@ app.add_middleware(
 
 app.include_router(router)
 app.include_router(scheduler_router)
+app.include_router(workflow_router)
+
+
+@app.on_event("startup")
+def initialize_workflow_database() -> None:
+    initialize_workflow_db()

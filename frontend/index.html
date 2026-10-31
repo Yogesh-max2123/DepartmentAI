@@ -3,41 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DepartmentAI - M.Tech.</title>
-
+    <meta name="theme-color" content="#10233f">
+    <title>DepartmentAI | M.Tech. Governance Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div class="chat-container">
-
-        <header class="chat-header">
-            <h1>DepartmentAI</h1>
-            <p>Masters' Programmes Ordinance Assistant</p>
-        </header>
-
-        <main id="chat-box" class="chat-box">
-            <div class="message bot-message">
-                Hello! I am DepartmentAI. Ask me about the Masters'
-                Programmes ordinance.
-            </div>
-        </main>
-
-        <div class="input-area">
-            <input
-                type="text"
-                id="question-input"
-                placeholder="Ask a question..."
-                autocomplete="off"
-            >
-
-            <button id="send-button">Send</button>
-        </div>
-
-    </div>
-
-    <script src="app.js?v=2"></script>
-
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+    <main id="app" class="app-root">
+        <section class="loading-screen" aria-label="Loading portal">
+            <div class="brand-mark">D</div>
+            <p>Loading DepartmentAI portal…</p>
+        </section>
+    </main>
+    <script src="app.js?v=5"></script>
 </body>
 </html>
