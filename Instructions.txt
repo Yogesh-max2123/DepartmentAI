@@ -1,0 +1,108 @@
+📖 Module 2: Faculty Profiles, Publications & Accreditation Export System
+Yeh module MNNIT CSE Department ke faculty profiles, unke research publications, thesis supervision records, aur academic achievements ko scrape, process, store aur query karne ke liye banaya gaya hai. Isme ek RAG-based AI Assistant (Gemini) aur NBA/Ministry reporting ke liye ek dedicated Data Export UI shamil hai.
+
+⚠️ CRITICAL RULE FOR EXECUTION:
+Is module ki kisi bhi file ko direct path se run mat karna (e.g., python folder/file.py). Hamesha root directory (E:\module2-temp) se -m (module) flag ka use karna hai taaki ModuleNotFoundError na aaye.
+
+🛠️ 1. Environment & Dependencies Setup
+Sabse pehle isolated environment me dependencies install karein. Dhyan rahe ki legacy google-generativeai package use nahi karna hai, uski jagah naya google-genai install karna hai.
+
+PowerShell
+# Purana package hata dein (agar installed hai)
+pip uninstall -y google-generativeai
+
+# Naye aur zaroori packages install karein
+pip install google-genai psycopg-binary python-dotenv fastapi uvicorn pandas
+🗄️ 2. Database Initialization
+System ek isolated PostgreSQL database (departmentai_m2) ka use karta hai jisme 13 m2_ prefix wali tables hain.
+
+PostgreSQL me departmentai_m2 naam ka naya database create karein.
+
+Root directory se CMD/PowerShell me schema execute karein:
+
+PowerShell
+psql -U postgres -d departmentai_m2 -f schema.sql
+(Ensure karein ki .env file me database credentials aur GEMINI_API_KEY set hain).
+
+📥 3. Data Ingestion Pipeline (The Exact Sequence)
+Data ko database me permanently save karne ke liye in commands ko strictly isi sequence me run karein. Dry runs (test runs) avoid karne ke liye exact flags (--persist, --apply) ka dhyan rakhein.
+
+Step 3.1: Faculty Profiles & Achievements Insert Karein(Yeh 46 faculty profiles aur unke achievements database me dalega)
+
+PowerShell
+python -m module2.ingestion.faculty_persistence
+Step 3.2: Publication Matching Fix Apply Karein(Source files aur database me naam ke mismatch ko fix karne ke liye yeh patch zaroori hai. Yeh directly root me hai isliye ise bina -m ke run kar sakte hain)
+
+PowerShell
+python fix_module2_publication_matching.py
+Step 3.3: Bulk Publications Insert Karein (With Persist Flag)(Yeh script 2000+ publications ko parse karegi aur database me save karegi. --persist flag missing hone par data save nahi hoga)
+
+PowerShell
+python -m module2.ingestion.publication_bulk_ingestion --persist
+Step 3.4: Thesis Supervision Records Fix & Save Karein(Thesis data me missing years aur metadata fix karne ke liye --apply flag zaroori hai)
+
+PowerShell
+python -m module2.repair_thesis_supervision --apply
+🤖 4. Running the Assistants (RAG Chatbots)
+Tumhare paas system se interact karne ke do tarike hain:
+
+A. CLI Faculty Assistant (Main RAG System)
+Yeh direct SQL queries aur vector search ko combine karta hai. Testing ke liye best hai.
+
+PowerShell
+python -m module2.retrieval.faculty_assistant
+Effective Test Queries:
+
+"List the recent publications for Prof MANOJ MADHAVA GORE" (Note: Use full exact names as stored in DB).
+
+"Who is Dr. Vibhav Prakash Singh?"
+
+"Show the Ph.D. thesis supervision records for Prof RAMA SHANKAR YADAV."
+
+B. Chatbot Web UI (Temporary Demo)
+PowerShell
+python -m module2.chatbot_ui.server
+Server start hone ke baad browser me [http://127.0.0.1:8001](http://127.0.0.1:8001) open karein.
+
+Note: Yeh sirf conversational UI hai. Heavy list-based queries (jaise all publications) ke liye Data Export ya CLI ka use karein.
+
+📊 5. Data Export for NBA/Ministry (Swagger UI)
+Jab tumhe publications ya thesis ka poora CSV/Excel data chahiye ho, toh Chatbot UI ke andar 404 error aayega kyunki usme export routes nahi hain. Export ke liye ek dedicated temporary server banana hoga.
+
+Step 5.1: Create run_export.py
+Root folder me ek nayi file run_export.py banayein aur yeh code paste karein:
+
+Python
+import uvicorn
+from fastapi import FastAPI
+from module2.data_export.router import router
+
+app = FastAPI(title="Module 2 Export Testing")
+app.include_router(router, prefix="/module2/export")
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8002)
+Step 5.2: Start Export Server
+
+PowerShell
+python run_export.py
+Step 5.3: Download CSV/Excel
+
+Browser me [http://127.0.0.1:8002/docs](http://127.0.0.1:8002/docs) open karein.
+
+GET /module2/export/datasets -> Try it out -> Execute (Available tables dekhne ke liye).
+
+GET /module2/export/{dataset}/download -> Try it out.
+
+Dataset field me m2_publications (ya m2_thesis_supervision) type karein aur Execute dabayein.
+
+"Download file" link par click karein aur apna 2000+ rows ka structured CSV data receive karein.
+
+⚠️ 6. Troubleshooting & Common Pitfalls
+ImportError: cannot import name 'genai' from 'google': Yeh legacy package error hai. google-generativeai ko uninstall karein aur sirf google-genai install rakhein.
+
+Zero Rows in Database after Ingestion: Ingestion scripts by default "DRY RUN" mode me chalti hain. Make sure ki tumne publication_bulk_ingestion ke aage --persist aur repair_thesis_supervision ke aage --apply lagaya hai.
+
+"No records matched" for Faculty in CLI: RAG exact entity matching par chalta hai. "Dr. Prakash Singh" (dummy name) ya abbreviations ki jagah database me available exact full name (e.g., "Dr. Vibhav Prakash Singh" ya "Prof MANOJ MADHAVA GORE") use karein.
+
+404 Not Found on Export UI: Chatbot UI server (port 8001) me export routes shamil nahi hain. Hamesha Data Export ke liye run_export.py (port 8002) ka use karein.
